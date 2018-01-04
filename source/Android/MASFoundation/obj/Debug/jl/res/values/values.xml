@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="scim_operators">
+        <item>co</item>
+        <item>eq</item>
+        <item>ne</item>
+        <item>sw</item>
+        <item>ew</item>
+        <item>pr</item>
+        <item>gt</item>
+        <item>lt</item>
+        <item>le</item>
+    </string-array>
+    <string name="acc_name">MAS_ELS</string>
+    <string name="app_name">Invoke Test</string>
+    <string name="attempting_to_connect">Attempting to connect...</string>
+    <string name="client_already_connected">Already connected</string>
+    <string name="client_already_disconnected">Already disconnected</string>
+    <string name="connect_error">Connection Error in Client.</string>
+    <string name="connected">CONNECTED</string>
+    <string name="connection_attempt">Attempting to connect with URL \'%s\'</string>
+    <string name="connection_lost">Connection was lost</string>
+    <string name="could_not_connect">Could not connect to the message broker</string>
+    <string name="could_not_disconnect">Could not disconnect from the message broker</string>
+    <string name="could_not_publish">Could not publish the message</string>
+    <string name="could_not_subscribe">Could not subscribe to the topic \'%s\'.</string>
+    <string name="could_not_unsubscribe">Could not unsubscribe from the topic \'%s\'.</string>
+    <string name="delivery_failed">Delivery failed</string>
+    <string name="delivery_succeeded">Delivery succeeded</string>
+    <string name="disconnected">DISCONNECTED</string>
+    <string name="login_not_connected_error">You need to log in and connect to the message broker before sending a message.</string>
+    <string name="published">PUBLISHED</string>
+    <string name="resources">Resources</string>
+    <string name="subscribe_success">Subscribed to the topic \'%s\'.</string>
+    <string name="subscribed">SUBSCRIBED</string>
+    <string name="unsubscribed">UNSUBSCRIBED</string>
+    <string name="uri_create_failed">The request resulted in an invalid URI. Please check your parameters and try again.</string>
+</resources>

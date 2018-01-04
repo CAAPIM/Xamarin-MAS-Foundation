@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <!--    
+        Java Bindings Metadata
+        https://developer.xamarin.com/guides/android/advanced_topics/binding-a-java-library/customizing-bindings/java-bindings-metadata/
+    -->
+    
+    <!--    Error CS0507: can occur if a class attempts to override a method marked as protected. In this situation, the overriding method should be marked as protected. -->
+    <attr path="/api/package[@name='com.ca.mas.core.auth.ble']/class[@name='BluetoothLeCentralRenderer']/method[@name='onError']" name="visibility">protected</attr>
+    <attr path="/api/package[@name='com.ca.mas.core.auth']/class[@name='NFCRenderer']/method[@name='onError']" name="visibility">protected</attr>
+    <attr path="/api/package[@name='com.ca.mas.core.auth']/class[@name='QRCodeRenderer']/method[@name='onError']" name="visibility">protected</attr>
+        
+    <attr path="/api/package[@name='sun.util.calendar']/class[@name='BaseCalendar']/method[@name='getCalendarDateFromFixedDate']" name="visibility">protected</attr>
+    <attr path="/api/package[@name='sun.util.calendar']/class[@name='BaseCalendar']/method[@name='getFixedDate']" name="visibility">protected</attr>
+
+    <!--    Error CS0738: the return value of an implementing method in a class must match the return value of the interface member that it implements. -->    
+    <attr path="/api/package[@name='com.ca.mas.core.datasource']/class[@name='LocalStoreDataSource']/method[@name='getKeys' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]" name="return">java.util.List</attr>
+<!--    <attr path="/api/package[@name='sun.security.action']/class[@name='GetBooleanAction']/method[@name='run' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>-->
+<!--    <attr path="/api/package[@name='sun.security.action']/class[@name='GetPropertyAction']/method[@name='run' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>    -->
+<!--    <attr path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASResponse']/method[@name='getBody' and count(parameter)=0]" name="return">com.ca.mas.foundation.MASResponseBody</attr>-->
+
+    <!--    Error CS0534: a class is required to implement all the abstract members in the base class, unless the class is also abstract. -->  
+    <!--<attr path="/api/package[@name='sun.util.calendar']/class[@name='ZoneInfo']/method[@name='setRawOffset' and count(parameter)=1 and parameter[1][@type='java.lang.Integer']]/parameter[1]" name="managedType">Java.Lang.Object</attr>-->
+
+    <!--    Error CS0535: 'SomeClass' does not implement interface member 'SomeMethod' (CS0535) -->
+    <attr path="/api/package[@name='com.ca.mas.core.auth']/class[@name='NfcResultReceiver']/method[@name='setData' and count(parameter)=1 and parameter[1][@type='org.json.JSONObject']]" name="propertyName"></attr>
+    
+    <!--    Errors CS0534, CS0535, CS1715, CS0234, CS0115 - Removing exposure of classes that are causing those errors -->    
+    <remove-node path="/api/package[@name='sun.util.calendar']/class[@name='ZoneInfo']" />
+    <remove-node path="/api/package[@name='sun.util.calendar']/class[@name='Gregorian']" />
+    <remove-node path="/api/package[@name='sun.util.calendar']/class[@name='LocalGregorianCalendar']" />
+    <remove-node path="/api/package[@name='sun.security.provider.certpath']/class[@name='X509CertPath']" />
+    <remove-node path="/api/package[@name='sun.security.util']/class[@name='ByteArrayTagOrder']" />
+    <remove-node path="/api/package[@name='sun.security.util']/class[@name='ByteArrayLexOrder']" />
+    <remove-node path="/api/package[@name='sun.security.util']/class[@name='DerValue']" />
+    <remove-node path="/api/package[@name='sun.security.action']/class[@name='GetPropertyAction']" />
+    <remove-node path="/api/package[@name='sun.security.action']/class[@name='GetBooleanAction']" />
+    
+    <remove-node path="/api/package[@name='com.ca.mas.core.http']/class[@name='MAGResponseBody']" />
+    
+</metadata>

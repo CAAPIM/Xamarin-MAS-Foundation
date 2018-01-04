@@ -1,0 +1,2 @@
+android.app.Application
+com.ca.mas.xamarin.BasicAuthSample
