@@ -1,28 +1,39 @@
 MASFoundation is the core Xamarin framework of the iOS and Android Mobile SDKs, which is part of CA Mobile API Gateway. MASFoundation handles the communication and authentication layer of the iOS Mobile SDK, making it easy for developers to establish a secure connection (TLS, Mutual SSL) to any CA Mobile API Gateway (MAG).
 
+## Prerequisites
+
+Visual Studio is installed.
+
 ## Get Started
 
-To start to work with MAS for Xamarin.iOS/Xamarin.Android, you have to add the Mobile SDK DLLs to your Visual Studio project. Note that you must download the files from the `lib` folder in this repository before continue. For complete MAS functionality, install all of the MAS libraries as shown.
+You can create a project from scratch, or use the sample project with sample app (easiest and quickest).
 
-1. Open your project in Visual Studio.
-2. With the project open in Visual Studio, right-click on the **References** folder in the Solution Pad and select `Edit References...`.
-3. Select **.Net Assemblies** and click on **Browse** button to locate the dowloaded DLLs.
-4. Mark the MASFoundation dll and click on **OK** to add it to the project.
+### Project From Scratch
 
+This method lets you view the Mobile SDK methods. You'll need a CA Mobile API Gateway if you want to create a secure working app.
 
-## Quick Start with Sample App
+1. In the MASFoundation repo, select **Clone or download**, click **Download ZIP**, and unzip the file.
+2. Open your solution in Visual Studio.
+3. In the Solution Pad, right-click the project and select, Add, Add Existing Project.
+3. From your Downloads folder, select /source/**[platform]**/MASFoundation/MASFoundation.csproj, and click **Open**.
+4. In your **project_name** folder, right-click the **References** folder, and select **Edit References...**.
+5. Select the **Projects** tab, highlight MASFoundation, and click **OK** to add this reference to your project.
 
-### Pre-requisites
+1. In the MASFoundation repo, select **Clone or download**, click **Download ZIP**, and unzip the file.
+2. Open your solution in Visual Studio.
+3. In the Solution Pad, right-click the References folder, and select **Edit References...**
+4. Click the folder, .Net Assemblies and click the Browse button (lower right corner), and locate the DLLs. 
+5. Highlight MASFoundation DLL and click OK to add it to the project. 
 
-You need to have access to CA Mobile API Gateway server in order to test this sample app and obtain a msso_config file for your app. For more information, please check this [link][prerequisites].
+### Xamarin Sample Project With Sample App
 
-### Open the sample in Visual Studio
+The sample project and app is the easiest way to create a secure working app that uses the power of the Mobile SDK. It requires a CA Mobile API Gateway (MAG) and an app configuration file (msso_config.json). If you haven't purchased the product yet, you can download the trial version of the MAG. For help, see [Prerequisites][prerequisites].
 
-1. Download the sample project from the `sample` folder in this repository.
-2. Open the project with Visual studio by opening /sample/**[platform]**/BasicAuthSample/BasicAuthSample.csproj.
-3. Add the MASFoundation.**[platform]**.dll into the project.
-4. Right-click on the project folder in the Solution Pad and select `File->Add Files...`
-5. Locate the msso_config.json file and click on **Open**. Select the option, `Copy the file to the directory`.
+1. In the MASFoundation repo, select **Clone or download**, click **Download ZIP**, and unzip the file. 
+2. Open the project in Visual Studio:  File, Open, .zip /sample/**[platform]**/BasicAuthSample/BasicAuthSample.csproj.
+3. Add the MASFoundation.**[platform]**.dll to the project.
+4. In the Solution Pad, right-click the **project folder** and select **File, Add Files...**.
+5. Find the msso_config.json file and click **Open**. Select the option, `Copy the file to the directory`.
 6. Build and Run the project.
 
 ## Communication
