@@ -34,6 +34,7 @@ namespace BasicAuthSample
                 invokeApi();
             };
 
+            MAS.SetAuthenticationListener(new MyAuthenticationListener(this));
             // MAS - start
             MAS.Start(Application.Context, true);
 
@@ -41,6 +42,7 @@ namespace BasicAuthSample
                 Alert("MAS", "MAS SDK started successfully!!");
             else
                 Alert("MAS", "MAS SDK NOT started!!");
+
         }
 
         public void login()
@@ -49,9 +51,10 @@ namespace BasicAuthSample
             if (MASUser.CurrentUser != null && MASUser.CurrentUser.IsAuthenticated)
             {
                 Alert("MAS", "User already authenticated as " + MASUser.CurrentUser.UserName);
+            } else {
+                MASUser.Login("admin", "7layer".ToCharArray(), new LoginCallback(this));
             }
-
-            MASUser.Login("admin", "7layer", null);
+ 
 
         }
 
@@ -68,14 +71,18 @@ namespace BasicAuthSample
             {
                 Alert("MAS", "User is not authenticated.");
             }    
-
-
         }
 
 
         public void invokeApi()
         {
-            
+            MAS.Debug();
+            Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
+            uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
+            MASRequestMASRequestBuilder builder = new MASRequestMASRequestBuilder(uriBuilder.Build());
+            builder.ResponseBody(MASResponseBody.JsonBody());
+            MAS.Invoke(builder.Build(), new ProtectAPICallback(this));
+
         }
 
         public void Alert(string Title, string Message)
@@ -90,10 +97,6 @@ namespace BasicAuthSample
             });  
             alert.Show(); 
         }
-
-
-
-
 
     }
 }
