@@ -8,22 +8,18 @@ Visual Studio is installed.
 
 You can create a project from scratch, or use the sample project with sample app (easiest and quickest).
 
-### Project From Scratch
+### Build Binding DLLs
 
 This method lets you view the Mobile SDK methods. You'll need a CA Mobile API Gateway if you want to create a secure working app.
 
-1. In the MASFoundation repo, select **Clone or download**, click **Download ZIP**, and unzip the file.
+1. In the Xamarin-MAS-Foundation repo, select **Clone or download**, click **Download ZIP**, and unzip the file.
 2. Open your solution in Visual Studio.
 3. In the Solution Pad, right-click the project and select, Add, Add Existing Project.
-3. From your Downloads folder, select /source/**[platform]**/MASFoundation/MASFoundation.csproj, and click **Open**.
-4. In your **project_name** folder, right-click the **References** folder, and select **Edit References...**.
-5. Select the **Projects** tab, highlight MASFoundation, and click **OK** to add this reference to your project.
-
-1. In the MASFoundation repo, select **Clone or download**, click **Download ZIP**, and unzip the file.
-2. Open your solution in Visual Studio.
-3. In the Solution Pad, right-click the References folder, and select **Edit References...**
-4. Click the folder, .Net Assemblies and click the Browse button (lower right corner), and locate the DLLs. 
-5. Highlight MASFoundation DLL and click OK to add it to the project. 
+3. From your Downloads folder, select Xamarin-MAS-Foundation/source/**[platform]**/MASFoundation/MASFoundation.csproj, and click **Open**.
+4. Include **[Platform]** library to the project
+5. For Android, right click on Jars folder and select **add files**, add the aar file to the Jars directory
+6. Rebuild the project
+7. The dll file can be found under  Xamarin-MAS-Foundation/source/**[platform]**/MASFoundation/bin/Debug
 
 ### Xamarin Sample Project With Sample App
 
@@ -31,10 +27,12 @@ The sample project and app is the easiest way to create a secure working app tha
 
 1. In the MASFoundation repo, select **Clone or download**, click **Download ZIP**, and unzip the file. 
 2. Open the project in Visual Studio:  File, Open, .zip /sample/**[platform]**/BasicAuthSample/BasicAuthSample.csproj.
-3. Add the MASFoundation.**[platform]**.dll to the project.
-4. In the Solution Pad, right-click the **project folder** and select **File, Add Files...**.
-5. Find the msso_config.json file and click **Open**. Select the option, `Copy the file to the directory`.
-6. Build and Run the project.
+3. In the Solution Pad, right-click the Project folder, and select **Edit References...**
+4. Click the folder, .Net Assemblies and click the Browse button (lower right corner), and locate the DLLs. 
+5. Add the MASFoundation.**[platform]**.dll to the project.
+6. In the Solution Pad, right-click the **project folder** and select **File, Add Files...**.
+7. Find the msso_config.json file and click **Open**. Select the option, `Copy the file to the directory`.
+8. Build and Run the project.
 
 ## Communication
 
