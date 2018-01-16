@@ -47,6 +47,9 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoginCallback.cs" />
+    <Compile Include="MyAuthenticationListener.cs" />
+    <Compile Include="ProtectAPICallback.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
