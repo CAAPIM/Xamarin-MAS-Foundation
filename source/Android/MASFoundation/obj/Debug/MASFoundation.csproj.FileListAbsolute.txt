@@ -1,5 +1,0 @@
-/Users/reiro10/CA/Xamarin-Projects/Xamarin-MASFoundation-Android/source/MASFoundation/bin/Debug/MASFoundation.dll
-/Users/reiro10/CA/Xamarin-Projects/Xamarin-MASFoundation-Android/source/MASFoundation/bin/Debug/MASFoundation.pdb
-/Users/reiro10/CA/Xamarin-Projects/Xamarin-MASFoundation-Android/source/MASFoundation/obj/Debug/MASFoundation.csproj.CoreCompileInputs.cache
-/Users/reiro10/CA/Xamarin-Projects/Xamarin-MASFoundation-Android/source/MASFoundation/obj/Debug/MASFoundation.dll
-/Users/reiro10/CA/Xamarin-Projects/Xamarin-MASFoundation-Android/source/MASFoundation/obj/Debug/MASFoundation.pdb
