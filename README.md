@@ -59,10 +59,6 @@ Scroll down under Java Bindings Metadata and verify the added packages (for exam
 Verify there are no errors.
 11. To verify the dll, open the terminal and go to: **source,** **<platform>,** **MASFoundation,** **bin,** **Debug**.  
 You should see **MASFoundation.dll**. 
-
-::: alert info
-**Next steps...**If you have your own app, you are done. If you want to test and play with the Xamarin sample app, go to Step 2.
-::: 
  
 ## Communication
 
