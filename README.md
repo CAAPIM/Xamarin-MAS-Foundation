@@ -3,7 +3,6 @@
 
 Xamarin MASFoundation is the core framework of the iOS and Android Mobile SDKs, which is part of CA Mobile API Gateway. MASFoundation handles the communication and authentication layer of the Mobile SDK, making it easy for developers to establish a secure connection (TLS, Mutual SSL) to any CA Mobile API Gateway (MAG).
 
-
 ## Get Started
 
 These instructions are for both iOS and Android developers. All you need to get started is:
@@ -14,7 +13,7 @@ If you haven't purchased the product yet, you can download the trial version of 
 
 ### Step 1: Generate the Xamarin DLL
 
-1. In the Xamarin-MAS-Foundation repo, select **Clone or download** and click the icon to highlight the github URL.
+1. In the the CA APIM **Xamarin-MAS-Foundation** github repo, select **Clone or download** and click the icon to highlight the github URL.
 2. Open a terminal window and enter: git clone <github URL>.  
 After cloning, you should have /source directory with .aar files.
 3. In Visual Studio, open your project.
