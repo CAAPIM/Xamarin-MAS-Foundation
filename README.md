@@ -31,7 +31,7 @@ Verify there are no errors.
 11. To verify the dll, open the terminal and navigate to: **source,** **<platform>,** **MASFoundation,** **bin,** **Debug**.  
 You should see **MASFoundation.dll**. 
 
-### Step 2: Get Xamarin Sample App and 
+### Step 2: Test Basic Authentication with Xamarin Sample App
 
 The sample project with sample app is the easiest way to test basic authentication with a CA Mobile API Gateway (MAG). The Xamarin sample app lets you:
 
