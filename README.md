@@ -1,22 +1,18 @@
 
 ## About Xamarin MASFoundation
 
-Xamarin MASFoundation is the core framework of the iOS and Android Mobile SDKs, which is part of CA Mobile API Gateway. MASFoundation handles the communication and authentication layer of the iOS Mobile SDK, making it easy for developers to establish a secure connection (TLS, Mutual SSL) to any CA Mobile API Gateway (MAG).
+Xamarin MASFoundation is the core framework of the iOS and Android Mobile SDKs, which is part of CA Mobile API Gateway. MASFoundation handles the communication and authentication layer of the Mobile SDK, making it easy for developers to establish a secure connection (TLS, Mutual SSL) to any CA Mobile API Gateway (MAG).
 
-## Prerequisites
-
-Visual Studio is installed
 
 ## Get Started
 
-These instructions are for iOS and Android developers. There are two ways to get started:
+These instructions are for both iOS and Android developers. All you need to get started is:
 
-- From scratch by adding .aar files with DLLs to a new or existing app.  
-Good choice if you already have an app, or want to manually control set up.
-- Use the Xamarin sample project with sample app 
-Quick and easy way to use a sample app and verify basic authentication with a MAG server.
+- Visual Studio installed
+- If you are using the Xamarin sample app, you'll need a CA Mobile API Gateway and an app configuration file (msso_config.json).  
+If you haven't purchased the product yet, you can download the trial version of the MAG. For help, see [Prerequisites][prerequisites].
 
-### From Scratch (.aar files and DLL)
+### Step 1: Generate the Xamarin DLL
 
 1. In the Xamarin-MAS-Foundation repo, select **Clone or download** and click the icon to highlight the github URL.
 2. Open a terminal window and enter: git clone <github URL>.  
@@ -29,21 +25,19 @@ After cloning, you should have /source directory with .aar files.
 8. Select **Copy the file to the directory**, and click OK.  
 The .aar is added to the Jars folder.
 9. To verify the packages are added, open **Transforms folder, metadata.xml**.  
-Scroll down under Java Bindings Metadata to see the added packages with names like: "@name='com.ca.mas.core"
+Scroll down under Java Bindings Metadata to see the added packages ("@name='com.ca.mas.core")
 10. Select Reference folder and select **Build All**.  
 Verify there are no errors.
-11. To verify the dll, open the terminal and navigate to: **source/**, **<platform>**, **MASFoundation/**, **bin**, **Debug**.  
-You should see MASFoundation.dll 
+11. To verify the dll, open the terminal and navigate to: **source,** **<platform>,** **MASFoundation,** **bin,** **Debug**.  
+You should see **MASFoundation.dll**. 
 
-### Xamarin Sample Project With Sample App
+### Step 2: Get Xamarin Sample App and 
 
-The sample project with sample app is the easiest way to test basic authentication with an app. With the sample app, you can:
+The sample project with sample app is the easiest way to test basic authentication with a CA Mobile API Gateway (MAG). The Xamarin sample app lets you:
 
 - Login
 - Logout
 - Invoke a protected API 
-
-The sample apps requires a CA Mobile API Gateway (MAG) and an app configuration file (msso_config.json). If you haven't purchased the product yet, you can download the trial version of the MAG. For help, see [Prerequisites][prerequisites].
 
 1. In the Xamarin-MAS-Foundation repo, select **Clone or download** button and click the icon to highlight the github URL.
 2. Open a terminal window, and in a directory of your choice, enter: git clone <github URL>   
