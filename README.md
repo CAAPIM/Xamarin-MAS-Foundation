@@ -45,7 +45,7 @@ Now you can login, logout, and invoke a protected API.
 2. Open a terminal window and enter: git clone <github URL>.  
 After cloning, you should have /source directory with .aar files.
 3. In Visual Studio, open your project.
-4. Open MASFoundation.csproj. 
+4. Open **MASFoundation.csproj**. 
 5. Open MASFoundation and right-click the destination folder (Jars for Android, Lib for iOS) and select: **Add,** **Add Files**.
 6. Open your project folder. 
 7. Highlight **mas-foundation-release.aar** and click the **Open** button.
