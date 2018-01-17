@@ -13,39 +13,43 @@ If you haven't purchased the product yet, you can download the trial version of 
 
 ### Step 1: Generate the Xamarin DLL
 
-1. In the the CA APIM **Xamarin-MAS-Foundation** github repo, select **Clone or download** and click the icon to highlight the github URL.
+1. In the the CAAPIM **Xamarin-MAS-Foundation** github repo, select **Clone or download** and click the icon to highlight the github URL.
 2. Open a terminal window and enter: git clone <github URL>.  
 After cloning, you should have /source directory with .aar files.
 3. In Visual Studio, open your project.
 4. Open MASFoundation.csproj. 
-5. Open MASFoundation and right-lick the Jars folder and select: **Add**, **Add New Files**.
+5. Open MASFoundation and right-click the **Jars** folder and select: **Add,** **Add Files**.
 6. Open your project folder. 
-7. Highlight **mas-foundation-release.aar** and click the Open button.
+7. Highlight **mas-foundation-release.aar** and click the **Open** button.
 8. Select **Copy the file to the directory**, and click OK.  
-The .aar is added to the Jars folder.
-9. To verify the packages are added, open **Transforms folder, metadata.xml**.  
-Scroll down under Java Bindings Metadata to see the added packages ("@name='com.ca.mas.core")
-10. Select Reference folder and select **Build All**.  
+Verify that the .aar is added to the Jars folder.
+9. To verify the packages are added, open **Transforms folder**, metadata.xml.  
+Scroll down under Java Bindings Metadata and verify the added packages (for example, "@name='com.ca.mas.core")
+10. Select the **Reference** folder and select **Build All**.  
 Verify there are no errors.
-11. To verify the dll, open the terminal and navigate to: **source,** **<platform>,** **MASFoundation,** **bin,** **Debug**.  
+11. To verify the dll, open the terminal and go to: **source,** **<platform>,** **MASFoundation,** **bin,** **Debug**.  
 You should see **MASFoundation.dll**. 
+
+::: alert info
+**Next steps...**If you have your own app, you are done. If you want to test and play with the Xamarin sample app, go to Step 2.
+:::
 
 ### Step 2: Test Basic Authentication with Xamarin Sample App
 
-The sample project with sample app is the easiest way to test basic authentication with a CA Mobile API Gateway (MAG). The Xamarin sample app lets you:
+The sample sample app is the easiest way to test basic authentication with a CA Mobile API Gateway (MAG). The Xamarin sample app lets you:
 
 - Login
 - Logout
 - Invoke a protected API 
 
-1. In the Xamarin-MAS-Foundation repo, select **Clone or download** button and click the icon to highlight the github URL.
-2. Open a terminal window, and in a directory of your choice, enter: git clone <github URL>   
-3. Verify the clone her: **Xamarin-MAS-Foundation**, **sample/**
+1. In the CAAPIM **Xamarin-MAS-Foundation** repo, select **Clone or download** button and click the icon to highlight the github URL.
+2. Open a terminal window and in a directory of your choice, enter: **git clone <github URL>**     
+Verify that you have both Android and iOS directories: **Xamarin-MAS-Foundation,** **sample**.
 3. In Visual Studio, open your project.
-4. In your download directory folder, go to: Xamarin-MAS-Foundation, /sample, <platform>, BasicAuthSample/, highlight **BasicAuthSample.csproj** and click Open. 
-5. Open the **BasicAuthSample** folder, and go to: Resources/, and open MainActivity.cs.  
-You should see the basic sample app for your platform.
-6. Open the **References** folder, and right-click to select **Edit References**. 
+4. In your download directory folder, go to: **Xamarin-MAS-Foundation**, **sample**, <platform>, **BasicAuthSample**, highlight **BasicAuthSample.csproj**, and click Open. 
+5. Open the **BasicAuthSample** folder and open the **Resources** folder.  
+You will see the four sample app components. The MainActivity.cs should have
+6.Right-click the **References** folder and select **Edit References**. 
 7. Click the **.Net Assembly** tab, and click the **Browse** button (bottom right).
 8. Go to **Downloads** folder, highlight **MASFoundation.dll**, click **Open**, and click **OK**. 
 9. Right-click the **Assets** folder, and select **Add Files**.
