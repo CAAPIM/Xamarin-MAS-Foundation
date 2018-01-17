@@ -9,7 +9,7 @@ These instructions are for **both iOS and Android developers**. All you need to 
 
 ### Quick Start with Sample App
 
-[Video](https://tbd)
+[Video version of steps below](https://tbd)
 
 The Xamarin-MASFoundation sample app lets you test the following with a CA Mobile API Gateway:
 
@@ -41,7 +41,7 @@ Now you can login, logout, and invoke a protected API.
 
 ### Customize Xamarin Plugin 
 
-[Video](https://tbd)
+[Video version of steps below](https://tbd)
 
 1. In the CAAPIM **Xamarin-MAS-Foundation** github repo, select **Clone or download** and click the icon to highlight the github URL.
 2. Open a terminal window and enter: git clone <github URL>.  
