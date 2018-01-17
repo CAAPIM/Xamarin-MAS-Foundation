@@ -13,7 +13,7 @@ Good choice if you already have an app, or want to manually control set up.
 - Use the Xamarin sample project with sample app 
 Quick and easy way to use a sample app and verify basic authentication with a MAG server.
 
-### From Scratch: .aar files and DLLs
+### From Scratch (.aar files and DLL)
 
 1. In the Xamarin-MAS-Foundation repo, select **Clone or download** and click the icon to highlight the github URL.
 2. Open a terminal window and enter: git clone <github URL>.  
