@@ -9,7 +9,9 @@ These instructions are for **both iOS and Android developers**. All you need to 
 
 ### Quick Start with Sample App
 
-The Xamarin sample app lets you:
+[Video](https://tbd)
+
+The Xamarin-MASFoundation sample app lets you test the following with a CA Mobile API Gateway:
 
 - Login
 - Logout
@@ -19,12 +21,12 @@ The Xamarin sample app lets you:
 If you haven't purchased the product yet, you can download the trial version of the MAG. For help, see [Prerequisites][prerequisites].
 2. In the CAAPIM **Xamarin-MAS-Foundation** repo, select **Clone or download** button and click the icon to highlight the github URL.
 3. Open a terminal window and in a directory of your choice, enter: **git clone <github URL>**     
-Verify that you have both Android and iOS directories: **Xamarin-MAS-Foundation,** **sample**.
+Verify that you have both Android and iOS directories here: **Xamarin-MAS-Foundation,** **sample**.
 4. In Visual Studio, open your project.
 5. In your download directory folder, go to: **Xamarin-MAS-Foundation**, **sample**, <platform>, **BasicAuthSample**, highlight **BasicAuthSample.csproj**, and click Open. 
 6. Open the **BasicAuthSample** folder and open the **Resources** folder.  
-You will see the four sample app components. The MainActivity.cs should have
-7.Right-click the **References** folder and select **Edit References**. 
+You will see the four sample app components.
+7. Right-click the **References** folder and select **Edit References**. 
 8. Click the **.Net Assembly** tab, and click the **Browse** button (bottom right).
 9. Go to **Downloads** folder, highlight **MASFoundation.dll**, click **Open**, and click **OK**. 
 10. Right-click the destination folder (Assets for Android, TBD for iOS), and select **Add Files**.
@@ -32,14 +34,16 @@ You will see the four sample app components. The MainActivity.cs should have
 Verify that the msso_config.json file is in the Assets folder. 
 12. Highlight the MainActivity.cs file and select, **Rebuild All**.  
 Verify that you get "Build successful" confirmation.
-13. In your platform emulator, open BasicAuthSample app.  
+13. In your emulator, open **BasicAuthSample** app.  
 If the msso_config.json file is valid, you should get the confirmation: **MAS SDK started successfully**.
 
 Now you can login, logout, and invoke a protected API. 
 
 ### Customize Xamarin Plugin 
 
-1. In the the CAAPIM **Xamarin-MAS-Foundation** github repo, select **Clone or download** and click the icon to highlight the github URL.
+[Video](https://tbd)
+
+1. In the CAAPIM **Xamarin-MAS-Foundation** github repo, select **Clone or download** and click the icon to highlight the github URL.
 2. Open a terminal window and enter: git clone <github URL>.  
 After cloning, you should have /source directory with .aar files.
 3. In Visual Studio, open your project.
