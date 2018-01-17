@@ -3,7 +3,7 @@
 
 ## Get Started
 
-These instructions are for **both iOS and Android developers**. All you need to get started is install Visual Studio. 
+These instructions are for **both iOS and Android developers**. If Visual Studio is installed, you are ready to go. 
 
 ### Quick Start with Sample App
 
