@@ -2,6 +2,8 @@
 using Android.Widget;
 using Android.OS;
 using Com.CA.Mas.Foundation;
+using Xamarin.Forms;
+
 
 namespace BasicAuthSample
 {
@@ -11,24 +13,25 @@ namespace BasicAuthSample
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Forms.Init(this, savedInstanceState);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
             // Get our UI controls from the loaded layout
-            Button loginButton = FindViewById<Button>(Resource.Id.login);
+           Android.Widget.Button loginButton = FindViewById<Android.Widget.Button>(Resource.Id.login);
             loginButton.Click += (sender, e) =>
             {
                 login();
             };
 
-            Button logoutButton = FindViewById<Button>(Resource.Id.logout);
+            Android.Widget.Button logoutButton = FindViewById<Android.Widget.Button>(Resource.Id.logout);
             logoutButton.Click += (sender, e) =>
             {
                 logout();
             };
 
-            Button invokeApiButton = FindViewById<Button>(Resource.Id.invokeApi);
+            Android.Widget.Button invokeApiButton = FindViewById<Android.Widget.Button>(Resource.Id.invokeApi);
             invokeApiButton.Click += (sender, e) =>
             {
                 invokeApi();
@@ -36,9 +39,9 @@ namespace BasicAuthSample
 
             MAS.SetAuthenticationListener(new MyAuthenticationListener(this));
             // MAS - start
-            MAS.Start(Application.Context, true);
+            MAS.Start(Android.App.Application.Context, true);
 
-            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
+            if (MAS.GetState(Android.App.Application.Context) == MASConstants.MasStateStarted)
                 Alert("MAS", "MAS SDK started successfully!!");
             else
                 Alert("MAS", "MAS SDK NOT started!!");
@@ -52,7 +55,8 @@ namespace BasicAuthSample
             {
                 Alert("MAS", "User already authenticated as " + MASUser.CurrentUser.UserName);
             } else {
-                MASUser.Login("admin", "7layer".ToCharArray(), new LoginCallback(this));
+                // Used only to trigger authentication with no callback
+                MASUser.Login(null);
             }
  
 
@@ -76,6 +80,7 @@ namespace BasicAuthSample
 
         public void invokeApi()
         {
+
             MAS.Debug();
             Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
             uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");

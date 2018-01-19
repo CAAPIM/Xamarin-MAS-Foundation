@@ -26,6 +26,8 @@ namespace BasicAuthSample
         {
             Console.WriteLine("Fail Login!!");
             Console.WriteLine(p0);
+            Alert("Error", p0.ToString());
+            MAS.CancelAllRequests();
         }
 
         public override void OnSuccess(Java.Lang.Object user)
