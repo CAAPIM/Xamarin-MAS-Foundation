@@ -18,7 +18,7 @@ The Xamarin-MASFoundation sample app lets you test the following with a CA Mobil
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (msso_config.json).  
 If you haven't purchased the product yet, you can download the trial version of the MAG. For help, see [Prerequisites][prerequisites].
 2. In the CAAPIM **Xamarin-MAS-Foundation** repo, select **Clone or download** button and click the icon to highlight the github URL.
-3. Open a terminal window and in a directory of your choice, enter: **git clone [github URL]**     
+3. Open a terminal window and in a directory of your choice, enter: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
 Verify that you have both Android and iOS directories in both the sample and source directories.
 4. In Visual Studio, select File/Open.
 5. Select the project under Downloads/Xamarin-MAS-Foundation/sample/iOS/BasicAuthSample/BasicAuthSample.csproj or Downloads/Xamarin-MAS-Foundation/sample/Android/BasicAuthSample/BasicAuthSample.csproj. Then click open.
@@ -37,17 +37,17 @@ Now you can login, logout, and invoke a protected API.
 ### Customize Xamarin Plugin 
 
 [Video version of steps below](https://tbd)
+Ensure you have the latest MASFoundation framework from http://mas.ca.com/docs/ios/1.6.00/guides/
 
 1. In the CAAPIM **Xamarin-MAS-Foundation** github repo, select **Clone or download** and click the icon to highlight the github URL.
-2. Open a terminal window and enter: git clone <github URL>.  
+2. Open a terminal window and enter: git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git.  
 After cloning, you should have /source directory with .aar files.
 3. In Visual Studio, open your project.
 4. Open **MASFoundation.csproj**. 
-5. Open MASFoundation and right-click the destination folder (Jars for Android, Lib for iOS) and select: **Add,** **Add Files**.
+5. Open MASFoundation and right-click the destination folder (Jars for Android, Native References for iOS) and select: **Add,** **Add Files**.
 6. Open your project folder. 
-7. Highlight **mas-foundation-release.aar** and click the **Open** button.
+7. Highlight **mas-foundation-release.aar** for Android or **MASFoundation.framework** for iOS and click the **Open** button.
 8. Select **Copy the file to the directory**, and click OK.  
-Verify that the .aar is added to the folder.
 9. To verify the packages are added, open **Transforms folder**, metadata.xml.  
 Scroll down under Java Bindings Metadata and verify the added packages (for example, "@name='com.ca.mas.core")
 10. Select the **Reference** folder and select **Build All**.  
@@ -87,4 +87,3 @@ of the MIT license. See the [LICENSE][license-link] file for details.
  [contributing]: https://github.com/CAAPIM/iOS-MAS-Foundation/blob/develop/CONTRIBUTING.md
  [license-link]: /LICENSE
  [prerequisites]: http://mas.ca.com/docs/ios/1.6.00/guides/#prerequisites
- [github URL]: https://github.com/CAAPIM/Xamarin-MAS-Foundation.git
