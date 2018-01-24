@@ -25,11 +25,12 @@ Verify that you have both Android and iOS directories in both the sample and sou
 6. Open the **BasicAuthSample** folder and open the **Resources** folder.  
 7. Right-click the **References** folder and select **Edit References**. 
 8. Click the **.Net Assembly** tab, and click the **Browse** button (bottom right).
-9. Go to **Downloads/Xamarin-MAS-Foundation** folder, highlight **MASFoundation.iOS.dll** or **MASFoundation.Android.dll**, click **Open**, and click **OK**. 
-10. Right-click the (Assets for Android, BasicAuthSample for iOS) folder , and select **Add Files**.
-11. Navigate to the folder with your app configuration file (msso_config.json), and select **Copy the file to the directory**  12. Select **Build/Rebuild All**.  
+9. Rename the .dll you are using as MASFoundation.dll.
+10. Go to **Downloads/Xamarin-MAS-Foundation** folder, highlight **MASFoundation.iOS.dll** or **MASFoundation.Android.dll**, click **Open**, and click **OK**.
+11. Right-click the (Assets for Android, BasicAuthSample for iOS) folder , and select **Add Files**.
+12. Navigate to the folder with your app configuration file (msso_config.json), and select **Copy the file to the directory**  13. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
-13. In your emulator, open **BasicAuthSample** app.  
+14. In your emulator, open **BasicAuthSample** app.  
 If the msso_config.json file is valid, you should get the confirmation: **MAS SDK started successfully**.
 
 Now you can login, logout, and invoke a protected API. 
