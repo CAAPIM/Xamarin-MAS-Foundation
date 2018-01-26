@@ -4,7 +4,6 @@ using Com.CA.Mas.Foundation;
 using Com.CA.Mas.Foundation.Auth;
 using Android.App;
 using Android.Widget;
-using Xamarin.Forms;
 
 namespace BasicAuthSample
 {
@@ -17,39 +16,8 @@ namespace BasicAuthSample
         }
 
         public void OnAuthenticateRequest(Context p0, long p1, MASAuthenticationProviders p2)
-        {
-
-            Device.BeginInvokeOnMainThread(()=> {
-                AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-                EditText username = new EditText(context);
-                EditText password = new EditText(context);
-                LinearLayout layout = new LinearLayout(context);
-
-                username.Hint = "Username";
-                password.Hint = "Password";
-
-                layout.AddView(username);
-                layout.AddView(password);
-                layout.Orientation = Orientation.Vertical;
-
-                AlertDialog alert = dialog.Create();
-                alert.SetView(layout);
-                alert.SetTitle("Login");
-                alert.SetCancelable(true);
-
-                alert.SetButton("Login", (c, ev) => {
-                    MASUser.Login(username.Text, password.Text.ToCharArray(), new LoginCallback(context));
-
-                });
-
-                alert.SetButton2("Cancel", (c, ev) =>
-                {
-                    MAS.CancelAllRequests();
-                    alert.Cancel();
-                });
-
-                alert.Show();
-            });
+        {      
+            context.RunOnUiThread(new ShowPopUp(context));
         }
 
         public void OnOtpAuthenticateRequest(Context p0, MASOtpAuthenticationHandler p1)
@@ -58,5 +26,48 @@ namespace BasicAuthSample
         }
 
   
+    }
+
+    public class ShowPopUp : Java.Lang.Object, Java.Lang.IRunnable
+    {
+        private Activity context;
+
+        public ShowPopUp(Activity activity)
+        {
+            this.context = activity;
+        }
+
+        public void Run()
+        {
+            AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+            EditText username = new EditText(context);
+            EditText password = new EditText(context);
+            LinearLayout layout = new LinearLayout(context);
+
+            username.Hint = "Username";
+            password.Hint = "Password";
+
+            layout.AddView(username);
+            layout.AddView(password);
+            layout.Orientation = Orientation.Vertical;
+
+            AlertDialog alert = dialog.Create();
+            alert.SetView(layout);
+            alert.SetTitle("Login");
+            alert.SetCancelable(true);
+
+            alert.SetButton("Login", (c, ev) => {
+                MASUser.Login(username.Text, password.Text.ToCharArray(), new LoginCallback(context));
+
+            });
+
+            alert.SetButton2("Cancel", (c, ev) =>
+            {
+                MAS.CancelAllRequests();
+                alert.Cancel();
+            });
+
+            alert.Show();
+        }
     }
 }
