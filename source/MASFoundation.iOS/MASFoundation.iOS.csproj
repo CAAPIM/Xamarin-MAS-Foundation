@@ -41,7 +41,7 @@
     <ObjcBindingCoreSource Include="Structs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="..\..\Resources\iOS_SDK\MASFoundation.framework">
+    <NativeReference Include="..\..\..\..\..\..\Resources\iOS_SDK\MASFoundation.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
