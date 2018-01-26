@@ -24,7 +24,7 @@ Verify that you have "Android" and "iOS" directories both in "sample" and "sourc
 5. Select the `BasicAuthSample.csproj` project file under `Xamarin-MAS-Foundation/sample/iOS/BasicAuthSample` or `Xamarin-MAS-Foundation/sample/Android/BasicAuthSample` folder and click **Open**. 
 6. Right-click the **References** folder and select **Edit References**. 
 7. Select the **.Net Assembly** tab, and click the **Browse** button.
-8. Go to the `Xamarin-MAS-Foundation/lib/` folder for Android, or the `Xamarin-MAS-Foundation/lib/` folder iOS, highlight the `MASFoundation.<platform>.dll` file, click **Open**, and then **OK**.
+8. Go to the `Xamarin-MAS-Foundation/lib/` folder, highlight the `MASFoundation.<platform>.dll` file, click **Open**, and then **OK**.
 9. Right-click the `Assets` folder for Android, or the `BasicAuthSample` folder for iOS, and select **Add Files**.
 10. Navigate to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.
 11. Select **Build/Rebuild All**; Verify that you get "Build successful" confirmation.
