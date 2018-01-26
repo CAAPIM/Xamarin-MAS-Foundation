@@ -33,7 +33,7 @@ namespace BasicAuthSample
             base.ViewDidLoad();
 
             //MAS.SetGatewayNetworkActivityLogging(true);
-
+            MAS.GrantFlow = MASGrantFlow.Password;
 
             MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
             {
@@ -52,26 +52,32 @@ namespace BasicAuthSample
 
         private void invokeProtectedAPI()
         {
-            MAS.GetFrom(@"/protected/resource/products?operation=listProducts", null, null, MASRequestResponseType.Json, MASRequestResponseType.Json, completion: (responseInfo, error) =>
+            if (MASUser.CurrentUser != null)
             {
-            if (error != null)
-            {
-                ShowAlert("MAS.GetFrom", "ERROR: " + error.LocalizedDescription);
-            }
-            else if (responseInfo != null)
-            {
-                string value = "No value";
-                if (responseInfo.ContainsKey(new NSString("MASResponseInfoBodyInfoKey")))
+                MAS.GetFrom(@"/protected/resource/products?operation=listProducts", null, null, MASRequestResponseType.Json, MASRequestResponseType.Json, completion: (responseInfo, error) =>
                 {
-                    NSDictionary values = responseInfo;
-                    value = values[NSObject.FromObject("MASResponseInfoBodyInfoKey")].ToString();
-                }
+                    if (error != null)
+                    {
+                        ShowAlert("MAS.GetFrom", "ERROR: " + error.LocalizedDescription);
+                    }
+                    else if (responseInfo != null)
+                    {
+                        string value = "No value";
+                        if (responseInfo.ContainsKey(new NSString("MASResponseInfoBodyInfoKey")))
+                        {
+                            NSDictionary values = responseInfo;
+                            value = values[NSObject.FromObject("MASResponseInfoBodyInfoKey")].ToString();
+                        }
 
 
-                ShowAlert("MAS.GetFrom", "Endpoint result: " + value);
+                        ShowAlert("MAS.GetFrom", "Endpoint result: " + value);
 
-                }
-            });
+                    }
+                });
+            } 
+            else {
+                ShowAlert("MAS.InvokeApi", "User not logged in");
+            }
         }
 
         private void Login(string user,string password)
