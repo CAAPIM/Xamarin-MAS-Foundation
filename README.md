@@ -1,5 +1,11 @@
 
-**Xamarin MASFoundation** is the core framework of the iOS and Android Mobile SDKs, which is part of CA Mobile API Gateway. MASFoundation handles the communication and authentication layer of the Mobile SDK, making it easy for developers to establish a secure connection (TLS, Mutual SSL) to any CA Mobile API Gateway (MAG).
+The Mobile SDK provide simple and secure access to the services of the CA Mobile API Gateway (MAG). MASFoundation is the core framework which handles the communication and authentication layer, making it easy for Xamarin developers to establish a secure connection.
+
+With MASFoundation for Xamarin you will be able to quickly build secure iOS and Android apps by leveraging our built-in capabilities to:
+- Authenticate users
+- Securely access to protected APIs with oAuth 2.0 protocol
+
+This framework is for **evaluation purposes only** and currently not supported by CA.
 
 ## Get Started
 
