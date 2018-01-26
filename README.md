@@ -1,30 +1,44 @@
-MASFoundation is the core Xamarin framework of the iOS and Android Mobile SDKs, which is part of CA Mobile API Gateway. MASFoundation handles the communication and authentication layer of the iOS Mobile SDK, making it easy for developers to establish a secure connection (TLS, Mutual SSL) to any CA Mobile API Gateway (MAG).
+
+**Xamarin MASFoundation** is the core framework of the iOS and Android Mobile SDKs, which is part of CA Mobile API Gateway. MASFoundation handles the communication and authentication layer of the Mobile SDK, making it easy for developers to establish a secure connection (TLS, Mutual SSL) to any CA Mobile API Gateway (MAG).
 
 ## Get Started
 
-To start to work with MAS for Xamarin.iOS/Xamarin.Android, you have to add the Mobile SDK DLLs to your Visual Studio project. Note that you must download the files from the `lib` folder in this repository before continue. For complete MAS functionality, install all of the MAS libraries as shown.
+These instructions are for **both iOS and Android developers**. If Visual Studio is installed, you are ready to go. 
 
-1. Open your project in Visual Studio.
-2. With the project open in Visual Studio, right-click on the **References** folder in the Solution Pad and select `Edit References...`.
-3. Select **.Net Assemblies** and click on **Browse** button to locate the dowloaded DLLs.
-4. Mark the MASFoundation dll and click on **OK** to add it to the project.
+### Quick Start with Sample App
 
+Video version of the steps below: 
+Password: **MASFoundation**
+  
+- [Android](https://vimeo.com/252969575)
+- [iOS](https://vimeo.com/252970911)
 
-## Quick Start with Sample App
+The Xamarin-MASFoundation "BasicAuthSample" app lets you test the following with a CA Mobile API Gateway:
 
-### Pre-requisites
+- Login
+- Logout
+- Invoke a protected API 
 
-You need to have access to CA Mobile API Gateway server in order to test this sample app and obtain a msso_config file for your app. For more information, please check this [link][prerequisites].
+1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).  
+If you haven't purchased the product yet, you can download the trial version of the MAG. For help, see [Prerequisites][prerequisites].
+2. Clone the CAAPIM **Xamarin-MAS-Foundation** repo - select **Clone or download** button and click the icon to highlight the github URL.
+3. Open a terminal window in a directory of your choice, enter: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
+Verify that you have "Android" and "iOS" directories both in "sample" and "source" directories.
+4. In Visual Studio, select File/Open.
+5. Select the `BasicAuthSample.csproj` project file under `Xamarin-MAS-Foundation/sample/iOS/BasicAuthSample` or `Xamarin-MAS-Foundation/sample/Android/BasicAuthSample` folder and click **Open**. 
+6. Right-click the **References** folder and select **Edit References**. 
+7. Select the **.Net Assembly** tab, and click the **Browse** button.
+8. Go to the `Xamarin-MAS-Foundation/lib/` folder, highlight the `MASFoundation.<platform>.dll` file, click **Open**, and then **OK**.
+9. Right-click the `Assets` folder for Android, or the `BasicAuthSample` folder for iOS, and select **Add Files**.
+10. Navigate to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.
+11. Select **Build/Rebuild All**; Verify that you get "Build successful" confirmation.
+12. Deploy and install the application on an emulator.
+13. In your emulator launch the **BasicAuthSample** app.
 
-### Open the sample in Visual Studio
+You should get the confirmation: **MAS SDK started successfully**.
 
-1. Download the sample project from the `sample` folder in this repository.
-2. Open the project with Visual studio by opening /sample/**[platform]**/BasicAuthSample/BasicAuthSample.csproj.
-3. Add the MASFoundation.**[platform]**.dll into the project.
-4. Right-click on the project folder in the Solution Pad and select `File->Add Files...`
-5. Locate the msso_config.json file and click on **Open**. Select the option, `Copy the file to the directory`.
-6. Build and Run the project.
-
+Now you can **login**, **logout**, and **invoke** a protected API. 
+ 
 ## Communication
 
 - *Have general questions or need help?*, use [Stack Overflow][StackOverflow]. (Tag 'massdk')

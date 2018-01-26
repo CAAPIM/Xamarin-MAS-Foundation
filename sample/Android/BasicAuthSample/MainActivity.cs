@@ -3,6 +3,7 @@ using Android.Widget;
 using Android.OS;
 using Com.CA.Mas.Foundation;
 
+
 namespace BasicAuthSample
 {
     [Activity(Label = "BasicAuthSample", MainLauncher = true)]
@@ -16,31 +17,33 @@ namespace BasicAuthSample
             SetContentView(Resource.Layout.Main);
 
             // Get our UI controls from the loaded layout
-            Button loginButton = FindViewById<Button>(Resource.Id.login);
+           Android.Widget.Button loginButton = FindViewById<Android.Widget.Button>(Resource.Id.login);
             loginButton.Click += (sender, e) =>
             {
                 login();
             };
 
-            Button logoutButton = FindViewById<Button>(Resource.Id.logout);
+            Android.Widget.Button logoutButton = FindViewById<Android.Widget.Button>(Resource.Id.logout);
             logoutButton.Click += (sender, e) =>
             {
                 logout();
             };
 
-            Button invokeApiButton = FindViewById<Button>(Resource.Id.invokeApi);
+            Android.Widget.Button invokeApiButton = FindViewById<Android.Widget.Button>(Resource.Id.invokeApi);
             invokeApiButton.Click += (sender, e) =>
             {
                 invokeApi();
             };
 
+            MAS.SetAuthenticationListener(new MyAuthenticationListener(this));
             // MAS - start
-            MAS.Start(Application.Context, true);
+            MAS.Start(Android.App.Application.Context, true);
 
-            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
+            if (MAS.GetState(Android.App.Application.Context) == MASConstants.MasStateStarted)
                 Alert("MAS", "MAS SDK started successfully!!");
             else
                 Alert("MAS", "MAS SDK NOT started!!");
+
         }
 
         public void login()
@@ -49,9 +52,11 @@ namespace BasicAuthSample
             if (MASUser.CurrentUser != null && MASUser.CurrentUser.IsAuthenticated)
             {
                 Alert("MAS", "User already authenticated as " + MASUser.CurrentUser.UserName);
+            } else {
+                // Used only to trigger authentication with no callback
+                MASUser.Login(null);
             }
-
-            MASUser.Login("admin", "7layer", null);
+ 
 
         }
 
@@ -68,14 +73,19 @@ namespace BasicAuthSample
             {
                 Alert("MAS", "User is not authenticated.");
             }    
-
-
         }
 
 
         public void invokeApi()
         {
-            
+
+            MAS.Debug();
+            Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
+            uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
+            MASRequestMASRequestBuilder builder = new MASRequestMASRequestBuilder(uriBuilder.Build());
+            builder.ResponseBody(MASResponseBody.JsonBody());
+            MAS.Invoke(builder.Build(), new ProtectAPICallback(this));
+
         }
 
         public void Alert(string Title, string Message)
@@ -90,10 +100,6 @@ namespace BasicAuthSample
             });  
             alert.Show(); 
         }
-
-
-
-
 
     }
 }
