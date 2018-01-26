@@ -2,7 +2,6 @@
 using Android.Widget;
 using Android.OS;
 using Com.CA.Mas.Foundation;
-using Xamarin.Forms;
 
 
 namespace BasicAuthSample
@@ -13,7 +12,6 @@ namespace BasicAuthSample
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            Forms.Init(this, savedInstanceState);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
