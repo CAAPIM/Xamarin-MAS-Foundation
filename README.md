@@ -7,7 +7,11 @@ These instructions are for **both iOS and Android developers**. If Visual Studio
 
 ### Quick Start with Sample App
 
-[Video version of steps below](https://tbd)
+Video version of the steps below: 
+Password: **MASFoundation**
+  
+- [Android](https://vimeo.com/252969575)
+- [iOS](https://vimeo.com/252970911)
 
 The Xamarin-MASFoundation "BasicAuthSample" app lets you test the following with a CA Mobile API Gateway:
 
