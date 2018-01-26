@@ -15,25 +15,26 @@ The Xamarin-MASFoundation sample app lets you test the following with a CA Mobil
 - Logout
 - Invoke a protected API 
 
-1. Verify that you have a CA Mobile API Gateway and an app configuration file (msso_config.json).  
+1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).  
 If you haven't purchased the product yet, you can download the trial version of the MAG. For help, see [Prerequisites][prerequisites].
 2. In the CAAPIM **Xamarin-MAS-Foundation** repo, select **Clone or download** button and click the icon to highlight the github URL.
-3. Open a terminal window and in a directory of your choice, enter: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
-Verify that you have both Android and iOS directories in both the sample and source directories.
+3. Open a terminal window in a directory of your choice, enter: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
+Verify that you have "Android" and "iOS" directories both in "sample" and "source" directories.
 4. In Visual Studio, select File/Open.
-5. Select the project under Downloads/Xamarin-MAS-Foundation/sample/iOS/BasicAuthSample/BasicAuthSample.csproj or Downloads/Xamarin-MAS-Foundation/sample/Android/BasicAuthSample/BasicAuthSample.csproj. Then click open.
-6. Open the **BasicAuthSample** folder and open the **Resources** folder.  
+5. Select the `BasicAuthSample.csproj` project file under `Xamarin-MAS-Foundation/sample/iOS/BasicAuthSample` or `Xamarin-MAS-Foundation/sample/Android/BasicAuthSample` folder and click **Open**. 
+6. Select **Project/Add NuGet Packages** and select the **Xamarin.Forms** package. Click **Add Package**.
 7. Right-click the **References** folder and select **Edit References**. 
-8. Click the **.Net Assembly** tab, and click the **Browse** button (bottom right).
-9. Rename the .dll you are using as MASFoundation.dll.
-10. Go to **Downloads/Xamarin-MAS-Foundation** folder, highlight **MASFoundation.iOS.dll** or **MASFoundation.Android.dll**, click **Open**, and click **OK**.
-11. Right-click the (Assets for Android, BasicAuthSample for iOS) folder , and select **Add Files**.
-12. Navigate to the folder with your app configuration file (msso_config.json), and select **Copy the file to the directory**  13. Select **Build/Rebuild All**.  
-Verify that you get "Build successful" confirmation.
-14. In your emulator, open **BasicAuthSample** app.  
-If the msso_config.json file is valid, you should get the confirmation: **MAS SDK started successfully**.
+8. Select the **.Net Assembly** tab, and click the **Browse** button.
+9. Go to the `Xamarin-MAS-Foundation/sample/Android` folder for Android, or the `Xamarin-MAS-Foundation/sample/iOS` folder iOS, highlight the `MASFoundation.dll` file, click **Open**, and then **OK**.
+10. Right-click the `Assets` folder for Android, or the `BasicAuthSample` folder for iOS, and select **Add Files**.
+11. Navigate to the folder containing your `msso_config.json` APP configuration file, select it, and click **Copy the file to the directory**.
+12. Select **Build/Rebuild All**; Verify that you get "Build successful" confirmation.
+13. Deploy and install the application on an emulator.
+13. In your emulator launch the **BasicAuthSample** app.
 
-Now you can login, logout, and invoke a protected API. 
+You should get the confirmation: **MAS SDK started successfully**.
+
+Now you can **login**, **logout**, and **invoke** a protected API. 
 
 ### Customize Xamarin Plugin 
 
@@ -48,7 +49,7 @@ After cloning, you should have /source directory with .aar files.
 5. Open MASFoundation and right-click the destination folder (Jars for Android, Native References for iOS) and select: **Add,** **Add Files**.
 6. Open your project folder. 
 7. Highlight **mas-foundation-release.aar** for Android or **MASFoundation.framework** for iOS and click the **Open** button.
-8. Select **Copy the file to the directory**, and click OK.  
+8. Select **Copy the file to the directory**, and click **OK**.  
 9. To verify the packages are added, open **Transforms folder**, metadata.xml.  
 Scroll down under Java Bindings Metadata and verify the added packages (for example, "@name='com.ca.mas.core")
 10. Select the **Reference** folder and select **Build All**.  
