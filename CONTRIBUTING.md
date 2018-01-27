@@ -43,13 +43,15 @@ Before filing a new issue, check Known Issues to see if your problem already exi
 * What version are you running when reproducing issue? What was the last version that the feature worked?
 * Anything else that seems relevant. 
 
-## License
-By contributing to iOS Mobile SDK, you agree that your contributions will be licensed under its [license][license-link].
+### Pre-release Agreement
+
+Copyright (c) 2018 CA. All rights reserved.
+This software is provided under the terms of CA’s Pre-Release Agreement. See the [AGREEMENT][agreement-link] file for details. This software is for evaluation purposes only and currently not supported by CA.
+
 
 
 [guidelines]: /GUIDELINES.md
 [community]: https://communities.ca.com/community/ca-api-management-community/content?filterID=contentstatus%5Bpublished%5D~category%5Bca-mobile-api-gateway%5D
-[license-link]: /LICENSE
 [cla]: https://www.clahub.com/agreements/CAAPIM/Xamarin-MAS-Foundation
 [casupport]: https://support.ca.com/irj/portal/implsvcnewcase
-
+[agreement-link]: https://github.com/CAAPIM/Xamarin-MAS-Foundation/raw/LicenseEdits/CA%20Beta%20%20Pre-Release%20Agreement.docx
