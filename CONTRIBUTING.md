@@ -1,4 +1,4 @@
-# Contribute to Xamarin Mobile SDK
+# Contribute to CA Mobile API Gateway SDK for Xamarin
 Contributions are welcome and much appreciated. Just follow these easy steps to contribute.
 
 ## Code Standard and Guideline
