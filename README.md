@@ -9,7 +9,10 @@ This framework is for **evaluation purposes only** and currently not supported b
 
 ## Get Started
 
-These instructions are for **both iOS and Android developers**. If Visual Studio is installed, you are ready to go. 
+These instructions are for **both iOS and Android developers**. 
+
+## Prerequisites
+This sample app was created using Visual Studio Community 2017 build 7.3.3. It was created for Android 4.4 and above, and iOS 9 and above.
 
 ### Quick Start with Sample App
 
