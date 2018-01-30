@@ -45,9 +45,9 @@ namespace BasicAuthSample
             MAS.Start(Android.App.Application.Context, true);
 
             if (MAS.GetState(Android.App.Application.Context) == MASConstants.MasStateStarted)
-                Alert("MAS", "MAS SDK started successfully!!");
+                Alert("MAS", "CA Mobile SDK started successfully!!");
             else
-                Alert("MAS", "MAS SDK NOT started!!");
+                Alert("MAS", "CA Mobile SDK did not start!!");
 
         }
 
@@ -72,11 +72,11 @@ namespace BasicAuthSample
             {
                 MASUser.CurrentUser.Logout(null);
 
-                Alert("MAS", "User logged out.");
+                Alert("MAS", "User logged out");
             }
             else
             {
-                Alert("MAS", "User is not authenticated.");
+                Alert("MAS", "User is not authenticated");
             }    
         }
 
