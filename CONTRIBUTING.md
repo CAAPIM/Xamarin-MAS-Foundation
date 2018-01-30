@@ -54,4 +54,4 @@ This software is provided under the terms of CA’s Pre-Release Agreement. See t
 [community]: https://communities.ca.com/community/ca-api-management-community/content?filterID=contentstatus%5Bpublished%5D~category%5Bca-mobile-api-gateway%5D
 [cla]: https://www.clahub.com/agreements/CAAPIM/Xamarin-MAS-Foundation
 [casupport]: https://support.ca.com/irj/portal/implsvcnewcase
-[agreement-link]: https://github.com/CAAPIM/Xamarin-MAS-Foundation/raw/LicenseEdits/CA%20Beta%20%20Pre-Release%20Agreement.docx
+[agreement-link]: /CA-Beta-Pre-Release-Agreement
