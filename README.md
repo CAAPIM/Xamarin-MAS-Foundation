@@ -55,7 +55,7 @@ Now you can **login**, **logout**, and **invoke** a protected API.
 
 ## How You Can Contribute
 
-Contributions are welcome and much appreciated. To learn more, link Coming Soon. [Contribution Guidelines][contributing].
+Contributions are welcome and much appreciated. Guidelines Coming Soon. [Contribution Guidelines][contributing].
 
 ## Documentation
 
@@ -71,7 +71,7 @@ This software is provided under the terms of CA’s Pre-Release Agreement. See t
  [docs]: http://mas.ca.com/docs/
  [StackOverflow]: http://stackoverflow.com/questions/tagged/massdk
  [download]: https://github.com/CAAPIM/iOS-MAS-Foundation/archive/master.zip
- [contributing]: https://github.com/CAAPIM/iOS-MAS-Foundation/blob/develop/CONTRIBUTING.md
+ [contributing]: /CONTRIBUTING
  [license-link]: /LICENSE
  [prerequisites]: http://mas.ca.com/docs/ios/1.6.00/guides/#prerequisites
  [agreement-link]: /CA-Beta-Pre-Release-Agreement
