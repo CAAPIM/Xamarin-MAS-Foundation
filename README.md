@@ -74,4 +74,4 @@ This software is provided under the terms of CA’s Pre-Release Agreement. See t
  [contributing]: https://github.com/CAAPIM/iOS-MAS-Foundation/blob/develop/CONTRIBUTING.md
  [license-link]: /LICENSE
  [prerequisites]: http://mas.ca.com/docs/ios/1.6.00/guides/#prerequisites
- [agreement-link]: https://github.com/CAAPIM/Xamarin-MAS-Foundation/raw/LicenseEdits/CA%20Beta%20%20Pre-Release%20Agreement.docx
+ [agreement-link]: /CA-Beta-Pre-Release-Agreement
