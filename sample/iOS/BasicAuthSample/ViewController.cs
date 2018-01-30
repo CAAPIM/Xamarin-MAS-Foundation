@@ -44,7 +44,7 @@ namespace BasicAuthSample
             {
                 if(completed)
                 {
-                    ShowAlert("MAS.Start", "MAS SDK started successfully!!");
+                    ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
                 }    
 
                 if(error != null)
