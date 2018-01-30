@@ -55,7 +55,7 @@ Now you can **login**, **logout**, and **invoke** a protected API.
 
 ## How You Can Contribute
 
-Contributions are welcome and much appreciated. To learn more, see the [Contribution Guidelines][contributing].
+Contributions are welcome and much appreciated. To learn more, link Coming Soon. [Contribution Guidelines][contributing].
 
 ## Documentation
 
