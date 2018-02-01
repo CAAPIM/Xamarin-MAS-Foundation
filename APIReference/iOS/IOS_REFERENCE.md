@@ -1,5 +1,3 @@
-
-\
 ## iOS Reference Documentation for Xamarin
 
 
