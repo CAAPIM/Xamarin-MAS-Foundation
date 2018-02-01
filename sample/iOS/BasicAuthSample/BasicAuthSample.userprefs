@@ -1,5 +1,10 @@
 ﻿<Properties StartupConfiguration="{235A4381-47F2-442D-9846-D7C52A21C6E9}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../source/MASFoundation.iOS/ApiDefinition.cs">
+    <Files>
+      <File FileName="../../../source/MASFoundation.iOS/ApiDefinition.cs" Line="13" Column="2" />
+      <File FileName="../../../source/MASFoundation.iOS/Structs.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

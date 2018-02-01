@@ -69,5 +69,11 @@
     <Folder Include="Resources\mipmap-xxxhdpi\" />
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\source\MASFoundation.Android\MASFoundation.Android.csproj">
+      <Project>{C52D9BE8-2753-4BF1-A91B-40B2396FB1DE}</Project>
+      <Name>MASFoundation.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

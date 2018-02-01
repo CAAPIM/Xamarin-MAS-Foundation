@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAuthSample", "BasicAuthSample.csproj", "{BB63AD99-253A-4B2D-A5D9-08D8FD237FA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MASFoundation.Android", "..\..\..\source\MASFoundation.Android\MASFoundation.Android.csproj", "{C52D9BE8-2753-4BF1-A91B-40B2396FB1DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB63AD99-253A-4B2D-A5D9-08D8FD237FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB63AD99-253A-4B2D-A5D9-08D8FD237FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB63AD99-253A-4B2D-A5D9-08D8FD237FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB63AD99-253A-4B2D-A5D9-08D8FD237FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C52D9BE8-2753-4BF1-A91B-40B2396FB1DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C52D9BE8-2753-4BF1-A91B-40B2396FB1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C52D9BE8-2753-4BF1-A91B-40B2396FB1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C52D9BE8-2753-4BF1-A91B-40B2396FB1DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
