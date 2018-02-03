@@ -6,7 +6,7 @@ The Mobile SDK for Xamarin provides simple and secure access to the services of 
 
 ### Features
 
-The Mobile SDK for Xaramin includes **MASFoundation** -- the core framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure iOS and Android apps using these built-in features:
+The Mobile SDK for Xaramin includes **MASFoundation** -- the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
  
 - Authenticate and authorize
   - Device registration
@@ -18,31 +18,33 @@ The Mobile SDK for Xaramin includes **MASFoundation** -- the core framework that
 
 ## Support and Prerequisites
 
-
 ### Supported Versions 
 
-If you have existing apps that you want to extend in Xamarin, here's what we support:
+To extend existing apps in Xamarin, here are the app versions we support:
 
-- Android 8.1.0 apps
-  [Prerequisites](http://mas.ca.com/docs/android)
-
-- iOS 11.0 apps
-  [Prerequisites](http://mas.ca.com/docs/ios)
-
+- Android 8.1.0
+- iOS 11.0 
 
 ### Prerequisites
 
-#### If you have not purchased CA Mobile API Gateway
+To use the Mobile SDK for Xamarin, you need:
+
+#### CA Mobile API Gateway
 
 [Start a trial using docker image](https://www.ca.com/us/developers/mas/get-started.html?returnURL=%2Fcontent%2Fcacom%2Fen_us%2Fdevelopers%2Fmas.html%3Fintcmp%3Dheadernav). The docker image includes MAG, OAuth Toolkit, and the Mobile App services. This allows you to test the Mobile SDK with the MAG backend server.
 
-If you are not using the docker image, here are the requirements for the server:
+If you are not using the docker image, the server requirements are:
 
    - CA API Gateway 9.3 
    - CA Mobile API Gateway 4.1 
    - OTK 4.2
 
-#### If you have purchased the product, get started!
+#### UI framework  
+
+ In this release, THE MASUI framework is not supported so you'll need your own UI framework if you need to show a fit & finished mobile app.
+
+
+#### App configuration file   
 
 **If you have an Administrator...**
 Easy. Just tell your Admin which Mobile SDK libraries that you need for your app. Then, ask your Admin for the app configuration file (called msso_config.json), which handle communication between the Mobile SDK and MAGs. (You'll add it to your project in later steps.)
@@ -176,6 +178,7 @@ The sample app was created using Visual Studio Community 2017 build 7.3.3. It is
 
 Password: **MASFoundation**
 
+
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).  
 2. Open a terminal window in a directory of your choice and copy and past the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**.  
 Verify that you have "Android" and "iOS" directories in both "sample" and "source" directories.
@@ -192,6 +195,13 @@ Verify that you have "Android" and "iOS" directories in both "sample" and "sourc
 You should get the confirmation: **MAS SDK started successfully**.
 
 Now you can **login**, **logout**, and **invoke** a protected API. 
+
+## 
+
+## Start the Xamarin SDK
+
+## Login: User Authentication and Authorization
+
 
 ## Pre-release Agreement
 
