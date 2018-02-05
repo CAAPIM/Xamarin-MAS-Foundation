@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{235A4381-47F2-442D-9846-D7C52A21C6E9}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="ViewController.cs">
     <Files>
-      <File FileName="../../../source/MASFoundation.iOS/ApiDefinition.cs" Line="1508" Column="8" />
-      <File FileName="ViewController.cs" Line="43" Column="13" />
+      <File FileName="../../../source/MASFoundation.iOS/ApiDefinition.cs" Line="1577" Column="1" />
+      <File FileName="ViewController.cs" Line="46" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

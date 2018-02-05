@@ -1,7 +1,7 @@
 
 ## iOS Guides MASFoundation for Xamarin
 
-If you want to get started with our sample app or add the SDK to an existing Android app, you are in the right place.
+If you want to get started with our sample app or add the SDK to an existing iOS app, you are in the right place.
 
 ## Prerequisites
 
@@ -36,12 +36,20 @@ You should get the confirmation: **MAS SDK started successfully**.
 
 Now you can **login**, **logout**, and **invoke** a protected API. 
 
-## Start the SDK
 
 ## Login: User Authentication and Authorization
 
- MASGrantFlow GrantFlow { get; set; }
+**Library**: MASFoundation
+**Description**: Authorize and Authenticate
 
+
+### Client Credential Flow (Default)
+
+Client credential is used when user permission to access data is not required. For example, an app that requests access to an API. In the SDK, the app requests an access token by sending its credentials (client ID and client secret) to the CA Mobile API Gateway. If the app credentials are valid, the MAG returns an access token to the app.
+
+```C#
+void StartWithDefaultConfiguration(bool shouldUseDefault, [NullAllowed] MASCompletionErrorBlock completion);
+```
 
 ## Pre-release Agreement
 

@@ -2,7 +2,7 @@
 
 ## CA Mobile SDK for Xamarin
 
-The Mobile SDK for Xamarin provides simple and secure access to the services of the CA Mobile API Gateway (MAG). 
+The Mobile SDK for Xamarin provides simple and secure access to CA Mobile API Gateway (MAG) services. 
 
 ## What's in this Release
 
@@ -15,15 +15,15 @@ In this release, you get **MASFoundation** -- the core MAS framework that handle
   - Single Sign-On
 - Securely access protected APIs that are configured with OAuth 2.0
 
-In this release, you get:
+The SDK contains:
 
-- MASFoundation framework with the above features 
-- A sample app so you can test log in, log out, and invoke an API
-- Steps to start MASFoundation using your own app
+- MASFoundation framework for iOS and Android with the above features 
+- A sample app for each framework so you can test log in, log out, and invoke an API
+- Steps to add MASFoundation an existing app
 - API reference documentation
 
 ::: alert info
-**Note**:  Your own UI framework (if you need to produce a fit & finished mobile app)
+**Note**:  You'll need your own UI framework for a fit & finished app
 :::
 
 ## Requirements
@@ -35,8 +35,8 @@ In this release, you get:
 If you are not using the docker image, the server requirements are:
 
    - CA API Gateway 9.3 
-   - CA Mobile API Gateway 4.1 
    - OTK 4.2
+   - CA Mobile API Gateway 4.1 
 
 #### App configuration file   
 
@@ -153,12 +153,10 @@ This a valid msso_config.json file that was exported from a MAG.
 ```
 
                                                  
+## Start Your App
 
- 
-## Start the SDK
-
-- [Android Guide](http://mas.ca.com/docs/xamarin-android/1.7.00/guides/)
-- [iOS Guide](http://mas.ca.com/docs/xamarin-ios/1.7.00/guides/)
+- [Android Xamarin Guide](http://mas.ca.com/docs/xamarin-android/1.7.00/guides/)
+- [iOS Xamarin Guide](http://mas.ca.com/docs/xamarin-ios/1.7.00/guides/)
 - [Android Xamarin API Reference](http://mas.ca.com//xamarin-android/1.7.00/sdk/)
 - [iOS Xamarin API Reference](http://mas.ca.com//xamarin-ios/1.7.00/sdk/)
 
