@@ -5,7 +5,7 @@ The libraries in the Xamarin SDK include:
 
 **MASFoundation** -- the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
  
-- Authenticate and authorize with:
+- Authenticate with:
   - Device registration
   - User login and client credentials
   - Fingerprint session lock
@@ -38,10 +38,10 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **login**, **logout**, and **invoke** a protected API. 
 
-## Login: Authentication and Authorization
+## Login: Authentication
 
 **Library**: MASFoundation
-**Description**: Authenticate and authorize 
+**Description**: Methods to start the SDK with default login flow, stop the SDK, and methods to log in/log out with various grant flows.
 
 ### Start the SDK and set default login flow
 
@@ -60,7 +60,13 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
-#### Login: client credential
+### Stop the SDK
+
+```c#
+void Stop([NullAllowed] MASCompletionErrorBlock completion);
+```
+
+#### Log in: client credential
 
 Use the client credential method when user permission is not required to access data. For example, an app that requests access to an API. In the SDK, the app requests an access token by sending its credentials (client ID and client secret) to the CA Mobile API Gateway. If the app credentials are valid, the MAG returns an access token to the app.
 
@@ -69,7 +75,7 @@ Use the client credential method when user permission is not required to access 
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 ```
 
-#### Login: username and password
+#### Log in: username and password
 
 ```c#
 MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
@@ -87,7 +93,7 @@ private class LoginCallback : MASCallback
         }
  ```
  
-#### Login: user authentication
+#### Log in: user authentication
 
 ```c#
 private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
@@ -116,14 +122,14 @@ private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationLis
  }
 ```
 
-##### Get currently authenticated user
+##### Get authenticated user (or no user)
 
 ```c#
 // Returns the current authenticated user or null if there is no authenticated user.
 MASUser.CurrentUser
 ```
 
-#### Logout
+#### Log out
 
 ```MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
 private class LoginCallback : MASCallback

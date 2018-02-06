@@ -1,7 +1,16 @@
 
 ## iOS Guides MASFoundation for Xamarin
 
-If you want to get started with our sample app or add the SDK to an existing iOS app, you are in the right place.
+The libraries in the Xamarin SDK include:
+
+**MASFoundation** -- the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
+ 
+- Authenticate with:
+  - Device registration
+  - User login and client credentials
+  - Fingerprint session lock
+  - Single Sign-On
+- Securely access protected APIs that are configured with OAuth 2.0
 
 ## Prerequisites
 
