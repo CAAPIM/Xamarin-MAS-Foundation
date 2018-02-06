@@ -1,4 +1,4 @@
-﻿#r @"packages/FAKE.4.64.4/tools/FakeLib.dll"
+﻿#r @"packages/FAKE/tools/FakeLib.dll"
 open Fake
 open Fake.XamarinHelper
 
