@@ -60,12 +60,6 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
-### Stop the SDK
-
-```c#
-void Stop([NullAllowed] MASCompletionErrorBlock completion);
-```
-
 #### Log in: client credential
 
 Use the client credential method when user permission is not required to access data. For example, an app that requests access to an API. In the SDK, the app requests an access token by sending its credentials (client ID and client secret) to the CA Mobile API Gateway. If the app credentials are valid, the MAG returns an access token to the app.
