@@ -3,7 +3,7 @@
 
 The libraries in the Xamarin SDK include:
 
-**MASFoundation** -- the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
+**MASFoundation** is the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
  
 - Authenticate with:
   - Device registration
@@ -44,12 +44,198 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **login**, **logout**, and **invoke** a protected API. 
 
-## Login: User Authentication and Authorization
+## Login: Authentication
 
 **Library**: MASFoundation
-**Description**: Authorize and Authenticate
+**Description**: Methods to log in/log out using various authentication flows. Includes methods to start the SDK with default login flow. Backed by OAuth 2.0 protocol on the MAG server, you can securely consume APIs on mobile devices. 
+
+#### Log in: authenticate access to an API
+
+**Scenario**: User accesses their mobile bank website. In this case, user permission is not required to access any data. and can view the bank services presented. Under the covers, the Mobile SDK requests access to the API using client ID and client secret. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential**.
+
+```
+// Set grant flow to client credentials
+
+MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
+```
+
+#### Log in: authenticate user with username and password
+
+**Scenario**: User logs into the banking app to check accounts. In this flow, the user must provide credentials to the app. The Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
+
+```c#
+
+//
+//  Login with username and password
+//
+MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, error) => {
+     
+    if (error != null)
+    {
+        Console.WriteLine("Error: {0}", error.LocalizedDescription);
+    } else {
+        Console.WriteLine("Success: User login");
+    }
+});
+ ```
+ 
+#### Log in: user authentication with implicit trust
+
+**Scenario**: The user session in the bank app has timed out. Because the bank mobile app is owned by the bank so there is implicit trust between parties. The MAG
+
+```c#
+//
+//  MAS.GrantFlow must be set to MASGrantFlow.Password in order to trigger implicit login flow
+//  MAS.SetUserAuthCredentials block must be set before invoking an API
+// 
+MAS.SetUserAuthCredentials( (authCredentialsBlock) => {
+ 
+    //  Build MASAuthCredentialsPassword with username and password
+    MASAuthCredentialsPassword passwordCredentials = MASAuthCredentialsPassword.InitWithUsername("USER_NAME", "USER_PASSWORD");
+ 
+    //  Invoke callback block, authCredentialsBlock, with MASAuthCredentialsPassword object
+    authCredentialsBlock(passwordCredentials, false, (bool completed, NSError error) =>
+    {
+        if (error != null)
+        {
+            Console.WriteLine("Error {0}", error.LocalizedDescription);
+        }
+        else
+        {
+            Console.WriteLine("Success: User login");
+        }
+    });
+});
+```
+
+#### Log out: authenticated user
+
+```MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
+private class LoginCallback : MASCallback
+       {
+            public override void OnError(Throwable e)
+            {
+                //Logout failed
+            }
+ 
+            public override void OnSuccess(Java.Lang.Object obj)
+            {
+                //Success Logout
+            }
+        }
+ ```
 
 
+##### Return authenticated user/no user
+
+```c#
+// Returns the current authenticated user or null if there is no authenticated user.
+MASUser.CurrentUser
+```
+
+### Start the SDK with default authentication flow
+
+Start the SDK with a default authentication flow of your choice. The default flow is authenticate access to API.
+
+```c#
+//  Set grantFlow to Password
+MAS.GrantFlow = MASGrantFlow.Password;
+ 
+//  Set grantFlow to Client Credentials
+MAS.GrantFlow = MASGrantFlow.ClientCredentials;
+ 
+//
+//  Initialize SDK with default or last active configuration
+// 
+MAS.Start(completion: (completed, error) => {
+     
+    if (error)
+    {
+        //  SDK initialized with an error
+    } else {
+        //  SDK initialized without an error
+    }
+});
+ 
+//
+//  Initialize SDK always with default configuration
+//
+MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
+     
+    if (error)
+    {
+        //  SDK initialized with an error
+    } else {
+        //  SDK initialized without an error
+    }
+});
+```
+
+### Get current user
+
+```
+//
+// Returns the currently authenticated user or null if there is no authenticated user.
+//
+MASUser currentUser = MASUser.CurrentUser;
+```
+
+### Log out: currently authenticated user
+
+```
+//
+//  Logout currently authenticated user
+//
+MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) => {
+     
+    if (error != null)
+    {
+        Console.WriteLine("Error: {0}", error.LocalizedDescription);
+    } else {
+        Console.WriteLine("Success: User logout");
+    }
+});
+```
+
+
+## Access APIs
+
+```
+//  Create MASRequestBuilder with HTTP method 
+MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
+ 
+//
+//  Specify an endpoint path, any parameters or headers, and request/response type
+//
+requestBuilder.EndPoint = "/protected/resource/products";
+requestBuilder.SetQueryParameter("operation", "listProducts");
+requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
+requestBuilder.ResponseType = MASRequestResponseType.Json;
+ 
+//  Build MASRequestBuilder to convert into MASRequest object
+MASRequest request = requestBuilder.Build();
+ 
+//  Using MASRequest object, invoke API
+MAS.Invoke(request, completion: (responseInfo, error) => {
+    if (error != null)
+    {
+        //  If an error was returned
+        Console.WriteLine("Error: {0}", error.LocalizedDescription);
+    }
+    else if (responseInfo != null)
+    {
+        //  If a response is returned
+        string value = "No value";
+        //  MAG iOS Mobile SDK's response structure in JSON
+        if (responseInfo.ContainsKey(new NSString("MASResponseInfoBodyInfoKey")))
+        {
+            NSDictionary values = responseInfo;
+            value = values[NSObject.FromObject("MASResponseInfoBodyInfoKey")].ToString();
+        }
+        Console.WriteLine("Success: {0}", value);
+    }
+});
+```
 
 
 ## Pre-release Agreement

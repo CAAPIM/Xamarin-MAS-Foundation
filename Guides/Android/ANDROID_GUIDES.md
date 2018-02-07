@@ -1,9 +1,9 @@
 
 ## Android Mobile SDK for Xamarin
 
-The libraries in the Xamarin SDK include:
+The Xamarin SDK libraries are:
 
-**MASFoundation** -- the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
+**MASFoundation** is the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
  
 - Authenticate with:
   - Device registration
@@ -16,7 +16,7 @@ The libraries in the Xamarin SDK include:
 
 - [Requirements for CA Mobile API Gateway](http://mas.ca.com/aka Common)
 - Android 8.1.0 for new apps written in C#
-- Android 4.4 and later to use the sample app                                     
+- Android 4.4 and later to run the sample app                                  
  
 ## Quick Start with Sample App
 
@@ -24,7 +24,7 @@ The Android **BasicAuthSample** sample app lets you test the following with a CA
 
 - Log in
 - Log out
-- Invoke a protected API 
+- Invoke a protected API using the default login flow 
    
 1. Open a terminal window in a directory of your choice and clone the MAS Foundation repo: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**.  
 After cloning, you will have /sample and /source directories for "Android" and "iOS".
@@ -41,45 +41,26 @@ If you get an error, the most likely cause is an invalid app configuration file.
 ## Login: Authentication
 
 **Library**: MASFoundation
-**Description**: Methods to start the SDK with default login flow, and methods to log in/log out with various authentication flows. Backed by OAuth 2.0 protocol on the MAG server, you can securely consume APIs on mobile devices. 
+**Description**: Methods for authentication flows. Includes methods to start the SDK with a default flow. Backed by OAuth 2.0 protocol on the MAG server, you can securely consume APIs on mobile devices. 
 
-### Start the SDK and set login flow
+For a deep dive into the Mobile SDK and MAG security flows, see [Blog](http://TBD)
 
-You can start the SDK with a default authentication flow of your choice. The default flow is client credential. 
+#### Log in: authenticate access to an API
 
-```c#
-//MAS.Start(Context context, bool shouldUseDefault);
-MAS.Start(Application.Context, true);
-//MAS.SetGrantFlow(int type);
-```
-
-**Example**: Set default to client credential
-
-```c#
-// Set grant flow to client credentials
-MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
-```
-
-**Example**: Set default to username and password
-```
-// Set grant flow to username and password
-MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
-```
-
-#### Log inL client credential
-
-**Scenario**: User accesses bank website home page. In this case, user permission is not required to access data. Everyone coming to the site can view the bank services without logging in. Under the covers, the mobile app requests access to API using client ID and client secret. If the app credentials are valid, the MAG returns an access token.
+**Scenario**: User accesses their bank website with your mobile app. Because the home page doesn't contain sensitive data, user permission is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential**.
 
 ```
 // Set grant flow to client credentials
+
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 ```
 
-#### Log in: Explicit username and password
+#### Log in: authenticate user with username and password
 
-**Scenario**: User logs into the banking app with username and password. In this flow, the user gives their credentials to the app. There is no need for a client secret. The app requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
+**Scenario**: User logs into the banking app to check account statements. In this flow, the user must provide credentials to the app because it is sensitive data. The Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
 
 ```c#
+
 MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
 private class LoginCallback : MASCallback
         {
@@ -95,9 +76,9 @@ private class LoginCallback : MASCallback
         }
  ```
  
-#### Log in: Implicit username and password
+#### Log in: user authentication with implicit trust
 
-**Scenario**: 
+**Scenario**: User just won the lottery and wants to interac money to a list of friends on Facebook. In this flow, the user needs temporary access to Facebook to get some data. In an implicit trust flow, your app is implicitly trusting Facebook to secure and store information. Th user logs into your app and is presented with authorization screen "BestBank app is requesting access to Facebook, do you want to grant access?" 
 
 ```c#
 private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
@@ -126,7 +107,14 @@ private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationLis
  }
 ```
 
-#### Log out: user authentication
+##### Get current user
+
+```c#
+// Returns the current authenticated user or null if there is no authenticated user.
+MASUser.CurrentUser
+```
+
+#### Log out: authenticated user
 
 ```MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
 private class LoginCallback : MASCallback
@@ -143,13 +131,22 @@ private class LoginCallback : MASCallback
         }
  ```
 
-##### Return authenticated user/no user
+
+### Start the SDK with default authentication flow
+
+Start the SDK with a default authentication flow of your choice. The default flow is client credential.
 
 ```c#
-// Returns the current authenticated user or null if there is no authenticated user.
-MASUser.CurrentUser
-```
+// MAS.Start(Context context, bool shouldUseDefault);
+MAS.Start(Application.Context, true);
+// MAS.SetGrantFlow(int type);
+ 
+// Set Grant Flow to Client Credentials
+MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 
+// Set Grant Flow to Password
+MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
+```
 
 ## Access APIs
 
@@ -166,7 +163,8 @@ The endpoint passed to these methods should be a relative path. For example, if 
 Use Uri.Builder() to build the `Uri` and pass it into a `MASRequestBuilder`.
 
 ```
-//Use Uri.Builder() to build the Uri and pass it into a MASRequestBuilder.
+// Use Uri.Builder() to build the Uri and pass it into a MASRequestBuilder.
+
 Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
 uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
 ```
@@ -174,7 +172,8 @@ uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts
 #### Create MASRequestBuilder
 
 ```
-//Create MASRequestBuilder
+// Create MASRequestBuilder
+
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
 ```
 
@@ -183,7 +182,8 @@ MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
 Parameters are encoded according to various standards defined by the HTTP verb type.
 
 ```
-//Add Query Parameter
+// Add Query Parameter
+
 uriBuilder.AppendQueryParameter("key","value");
 ```
 #### Headers
@@ -191,7 +191,8 @@ uriBuilder.AppendQueryParameter("key","value");
 Add headers only if they are neede to customize a call. The Mobile SDK adds any necessary security credentials.
 
 ```
-//Add Header
+// Add Header
+
 builder.Header("test", "test");
 ```
 
@@ -200,20 +201,23 @@ builder.Header("test", "test");
 Based on the response content type, the SDK handles data to Object conversion; for example, with content type application/json, the SDK converts the body content to a JSONObject and returns it to the caller. The SDK predefined string, bytes, and JSONObject data type conversion.
 
 ```
-//The response Type
-//This is optional if the response content type is **application/json**
+// The response Type
+// This is optional if the response content type is **application/json**
 builder.ResponseBody(MASResponseBody.JsonBody());
-//This is optional if the response content type is **text/plain**
+
+// This is optional if the response content type is **text/plain**
 builder.ResponseBody(MASResponseBody.StringBody());
-//Response as raw data without data to object conversion
-//This is optional if the response content type is neither **application/json** or **text/plain**
+
+// Response as raw data without data to object conversion
+// This is optional if the response content type is neither **application/json** or **text/plain**
 builder.ResponseBody(MASResponseBody.ByteArrayBody());
 ```
 
 #### Custom response
 
 ```
-//Example implementation of a custom response class
+// Example implementation of a custom response class
+
 private class JSONArrayResponse : MASResponseBody
 {
     public override Java.Lang.Object Content
@@ -227,7 +231,7 @@ private class JSONArrayResponse : MASResponseBody
     }
 }
  
-//Example usage of the custom response class
+// Example usage of the custom response class
     MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
     builder.ResponseBody(new JSONArrayResponse());
 ```
@@ -237,9 +241,10 @@ private class JSONArrayResponse : MASResponseBody
 The `MASCallback` defined in *MAS* returns a `IMASResponse`. Within the `IMASResponse`, you can access the HTTP response and body content:
 
 ```
-//The Callback
-//The MASCallback defined in MAS returns a IMASResponse.
-//Within the IMASResponse, you can access the http response and the body content:
+// The Callback
+// The MASCallback defined in MAS returns a IMASResponse.
+// Within the IMASResponse, you can access the http response and the body content:
+
 IMASResponse response = (IMASResponse)result;
 int responseCode = response.ResponseCode;
 string responseMessage = response.ResponseMessage;
@@ -251,7 +256,8 @@ JSONObject jsonObject = (JSONObject)response.Body.Content;
 #### Make HTTP request
 
 ```
-//This method makes HTTP GET calls to an endpoint.
+// This method makes HTTP GET calls to an endpoint.
+
 builder.Get();
 
 ```
@@ -259,7 +265,8 @@ builder.Get();
 #### Cancel HTTP request
 
 ```
-//This method cancels the HTTP request.
+// This method cancels the HTTP request.
+
 long id = MAS.Invoke(builder.Build(), new ProtectAPICallback());
 MAS.CancelRequest(id);
 MAS.CancelAllRequests();
@@ -268,7 +275,8 @@ MAS.CancelAllRequests();
 #### Example: Invoke an API with HTTP Get with IMASResponse in JSON
 
 ```
-//An example to invoke an API with Http Get and response with JSON:
+// An example to invoke an API with Http Get and response with JSON:
+
 Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
 uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
