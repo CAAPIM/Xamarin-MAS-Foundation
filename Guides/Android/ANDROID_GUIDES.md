@@ -63,7 +63,7 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 
 ### Authenticate user with username and password
 
-**Scenario 2**: You have a specialized mobile app just to check account statements. requires user authentication before they see any data. In this flow, the user must provide credentials to the app because it is sensitive data. The Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
+**Scenario 2**: You created a specialized mobile app just to check account statements. In this case, you want users authenticated before they see any data. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
 
 ```c#
 
