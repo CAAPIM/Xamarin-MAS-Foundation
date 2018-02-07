@@ -13,6 +13,21 @@ namespace BasicAuthSample
 {
     public partial class ViewController : UIViewController
     {
+        partial void GrantFlowToPassword_TouchUpInside(UIButton sender)
+        {
+            SetGrantFlowToPassword();
+        }
+
+        partial void GrantFlowToClientCredentials_TouchUpInside(UIButton sender)
+        {
+            SetGrantFlowToClientCredentials();
+        }
+
+        partial void StartSDK_TouchUpInside(UIButton sender)
+        {
+            StartSDK();
+        }
+
         partial void InvokeAPIButton_TouchUpInside(UIButton sender)
         {
             invokeProtectedAPI();
@@ -40,6 +55,9 @@ namespace BasicAuthSample
             //MAS.SetGatewayNetworkActivityLogging(true);
             MAS.GrantFlow = MASGrantFlow.Password;
 
+            //
+            //  Initialize SDK always with default configuration
+            // 
             MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
             {
                 if(completed)
@@ -57,31 +75,44 @@ namespace BasicAuthSample
 
         private void invokeProtectedAPI()
         {
-            if (MASUser.CurrentUser != null)
+            if (MASUser.CurrentUser != null || MAS.GrantFlow == MASGrantFlow.ClientCredentials)
             {
-                MAS.GetFrom(@"/protected/resource/products?operation=listProducts", null, null, MASRequestResponseType.Json, MASRequestResponseType.Json, completion: (responseInfo, error) =>
+                //  Create MASRequestBuilder with HTTP method 
+                MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
+
+                //
+                //  Specify an endpoint path, any parameters or headers, and request/response type
+                //
+                requestBuilder.EndPoint = "/protected/resource/products";
+                requestBuilder.SetQueryParameter("operation", "listProducts");
+                requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
+                requestBuilder.ResponseType = MASRequestResponseType.Json;
+
+                //  Build MASRequestBuilder to convert into MASRequest object
+                MASRequest request = requestBuilder.Build();
+
+                //  Using MASRequest object, invoke API
+                MAS.Invoke(request, completion: (responseInfo, error) =>
                 {
                     if (error != null)
                     {
-                        ShowAlert("MAS.GetFrom", "ERROR: " + error.LocalizedDescription);
+                        //  If an error was returned
+                        Console.WriteLine("Error: {0}", error.LocalizedDescription);
                     }
                     else if (responseInfo != null)
                     {
+                        //  If a response is returned
                         string value = "No value";
+                        //  MAG iOS Mobile SDK's response structure in JSON
                         if (responseInfo.ContainsKey(new NSString("MASResponseInfoBodyInfoKey")))
                         {
                             NSDictionary values = responseInfo;
                             value = values[NSObject.FromObject("MASResponseInfoBodyInfoKey")].ToString();
                         }
-
-
-                        ShowAlert("MAS.GetFrom", "Endpoint result: " + value);
-
+                        Console.WriteLine("Success: {0}", value);
+                        ShowAlert("MAS.Invoke", value);
                     }
                 });
-            } 
-            else {
-                ShowAlert("MAS.InvokeApi", "User not logged in");
             }
         }
 
@@ -117,6 +148,36 @@ namespace BasicAuthSample
                     }
                 });               
             }
+        }
+
+        private void StartSDK()
+        {
+            //
+            //  Initialize SDK always with default configuration
+            // 
+            MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
+            {
+                if(completed)
+                {
+                    ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
+                }
+                if(error!=null)
+                {
+                    ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
+                }
+            });
+        }
+
+        private void SetGrantFlowToPassword()
+        {
+            MAS.GrantFlow = MASGrantFlow.Password;
+            ShowAlert("MAS.GrantFlow", "Flow is now Password Flow");
+        }
+
+        private void SetGrantFlowToClientCredentials()
+        {
+            MAS.GrantFlow = MASGrantFlow.ClientCredentials;
+            ShowAlert("MAS.GrantFlow", "Flow is now Client Credentials");
         }
 
         private void ShowAlert(string title, string message)
