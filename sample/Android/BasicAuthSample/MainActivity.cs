@@ -3,10 +3,13 @@
 // See the LICENSE [https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/LICENSE.md] file for details. 
 // This software is for evaluation purposes only and currently not supported by CA.
 
+using System;
 using Android.App;
 using Android.Widget;
 using Android.OS;
 using Com.CA.Mas.Foundation;
+using Org.Json;
+using Java.Lang;
 
 
 namespace BasicAuthSample
@@ -22,7 +25,7 @@ namespace BasicAuthSample
             SetContentView(Resource.Layout.Main);
 
             // Get our UI controls from the loaded layout
-           Android.Widget.Button loginButton = FindViewById<Android.Widget.Button>(Resource.Id.login);
+            Android.Widget.Button loginButton = FindViewById<Android.Widget.Button>(Resource.Id.login);
             loginButton.Click += (sender, e) =>
             {
                 login();
@@ -40,7 +43,7 @@ namespace BasicAuthSample
                 invokeApi();
             };
 
-            MAS.SetAuthenticationListener(new MyAuthenticationListener(this));
+            MAS.SetAuthenticationListener(new MyAuthenticationListener());
             // MAS - start
             MAS.Start(Android.App.Application.Context, true);
 
@@ -57,11 +60,13 @@ namespace BasicAuthSample
             if (MASUser.CurrentUser != null && MASUser.CurrentUser.IsAuthenticated)
             {
                 Alert("MAS", "User already authenticated as " + MASUser.CurrentUser.UserName);
-            } else {
+            }
+            else
+            {
                 // Used only to trigger authentication with no callback
                 MASUser.Login(null);
             }
- 
+
 
         }
 
@@ -77,7 +82,7 @@ namespace BasicAuthSample
             else
             {
                 Alert("MAS", "User is not authenticated");
-            }    
+            }
         }
 
 
@@ -87,7 +92,7 @@ namespace BasicAuthSample
             MAS.Debug();
             Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
             uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
-            MASRequestMASRequestBuilder builder = new MASRequestMASRequestBuilder(uriBuilder.Build());
+            MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
             builder.ResponseBody(MASResponseBody.JsonBody());
             MAS.Invoke(builder.Build(), new ProtectAPICallback(this));
 
@@ -95,17 +100,83 @@ namespace BasicAuthSample
 
         public void Alert(string Title, string Message)
         {
-            AlertDialog.Builder dialog = new AlertDialog.Builder(this);  
-            AlertDialog alert = dialog.Create();  
-            alert.SetTitle(Title);  
-            alert.SetMessage(Message);  
-            alert.SetButton("OK", (c, ev) =>  
-            {  
-            // Ok button click 
-            });  
-            alert.Show(); 
+            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+            AlertDialog alert = dialog.Create();
+            alert.SetTitle(Title);
+            alert.SetMessage(Message);
+            alert.SetButton("OK", (c, ev) =>
+            {
+                // Ok button click 
+            });
+            alert.Show();
         }
 
+
+        private class ProtectAPICallback : MASCallback
+        {
+            
+            private MainActivity activity;
+            public ProtectAPICallback(MainActivity activity)
+            {
+                this.activity = activity;
+            }
+
+            public override Android.OS.Handler Handler
+            {
+                //run the callback on main thread
+                get
+                {
+                    return new Android.OS.Handler(Looper.MainLooper);
+                }
+            }
+
+            public override void OnError(Throwable e)
+            {
+                Console.WriteLine(e);
+            }
+
+            public override void OnSuccess(Java.Lang.Object result)
+            {
+                IMASResponse response = (IMASResponse)result;
+                JSONObject jsonObject = (JSONObject)response.Body.Content;
+                activity.Alert("Result", jsonObject.ToString(4));
+            }
+
+        }
+
+        private class LoginCallback : MASCallback
+        {
+
+            private MainActivity activity;
+            public LoginCallback(MainActivity activity)
+            {
+                this.activity = activity;
+            }
+
+            public override Android.OS.Handler Handler
+            {
+                //run the callback on main thread
+                get
+                {
+                    return new Android.OS.Handler(Looper.MainLooper);
+                }
+            }
+
+            public override void OnError(Throwable e)
+            {
+                Console.WriteLine("Fail Login!!");
+                Console.WriteLine(e);
+                activity.Alert("Error", e.ToString());
+                MAS.CancelAllRequests();
+            }
+
+            public override void OnSuccess(Java.Lang.Object result)
+            {
+                Console.WriteLine("Success Login!!");
+                activity.Alert(((MASUser)result).DisplayName, ((MASUser)result).AsJSONObject.ToString(4));
+
+            }
+        }
     }
 }
 
