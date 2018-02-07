@@ -41,7 +41,7 @@ If you get an error, the most likely cause is an invalid app configuration file.
 ## Login: Authentication
 
 **Library**: MASFoundation
-**Description**: Methods to start the SDK with default login flow, and methods to log in/log out with various authentication flows.
+**Description**: Methods to start the SDK with default login flow, and methods to log in/log out with various authentication flows. Backed by OAuth 2.0 protocol on the MAG server, you can securely consume APIs on mobile devices. 
 
 ### Start the SDK and set login flow
 
@@ -66,9 +66,9 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
-#### Log in: client credential
+#### Log inL client credential
 
-Use the client credential method when user permission is not required to access data. For example, an app that requests access to an API. In the SDK, the app requests an access token by sending its credentials (client ID and client secret) to the CA Mobile API Gateway. If the app credentials are valid, the MAG authenticates by returning an access token to the app.
+**Scenario**: User accesses bank website home page. In this case, user permission is not required to access data. Everyone coming to the site can view the bank services without logging in. Under the covers, the mobile app requests access to API using client ID and client secret. If the app credentials are valid, the MAG returns an access token.
 
 ```
 // Set grant flow to client credentials
@@ -77,7 +77,7 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 
 #### Log in: Explicit username and password
 
-In this flow, the user gives their credentials (username and password) directly to the app. There is no need for a client secret. The app requests an access token from the MAG. If the username and password are valid, the MAG authenticates by returning an access token to the app.
+**Scenario**: User logs into the banking app with username and password. In this flow, the user gives their credentials to the app. There is no need for a client secret. The app requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
 
 ```c#
 MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
@@ -97,7 +97,7 @@ private class LoginCallback : MASCallback
  
 #### Log in: Implicit username and password
 
-In this flow, the user is asked to authorize the app. This is great for single-page web apps that cannot keep client secrets for security reasons. After the access token expires and no longer works, it reprompts the user for username and password. 
+**Scenario**: 
 
 ```c#
 private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
