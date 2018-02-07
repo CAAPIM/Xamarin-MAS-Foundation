@@ -9,37 +9,32 @@ using Com.CA.Mas.Foundation;
 using Com.CA.Mas.Foundation.Auth;
 using Android.App;
 using Android.Widget;
+using Org.Json;
+using Java.Lang;
+using Android.OS;
 
 namespace BasicAuthSample
 {
     public class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
     {
-        private Activity context;
-        public MyAuthenticationListener(Activity activity)
+        public void OnAuthenticateRequest(Context context, long requestId, MASAuthenticationProviders providers)
         {
-            this.context = activity;
+            
+            ((Activity)context).RunOnUiThread(new ShowPopUp((Activity)context));
         }
 
-        public void OnAuthenticateRequest(Context p0, long p1, MASAuthenticationProviders p2)
-        {      
-            context.RunOnUiThread(new ShowPopUp(context));
-        }
-
-        public void OnOtpAuthenticateRequest(Context p0, MASOtpAuthenticationHandler p1)
+        public void OnOtpAuthenticateRequest(Context context, MASOtpAuthenticationHandler handler)
         {
             throw new NotImplementedException();
         }
-
-  
     }
 
     public class ShowPopUp : Java.Lang.Object, Java.Lang.IRunnable
     {
-        private Activity context;
-
-        public ShowPopUp(Activity activity)
+        private Context context;
+        public ShowPopUp(Context context)
         {
-            this.context = activity;
+            this.context = context;
         }
 
         public void Run()
@@ -62,7 +57,7 @@ namespace BasicAuthSample
             alert.SetCancelable(true);
 
             alert.SetButton("Login", (c, ev) => {
-                MASUser.Login(username.Text, password.Text.ToCharArray(), new LoginCallback(context));
+                MASUser.Login(username.Text, password.Text.ToCharArray(), new LoginCallback((MainActivity)context));
 
             });
 
@@ -73,6 +68,40 @@ namespace BasicAuthSample
             });
 
             alert.Show();
+        }
+
+        private class LoginCallback : MASCallback
+        {
+
+            private MainActivity activity;
+            public LoginCallback(MainActivity activity)
+            {
+                this.activity = activity;
+            }
+
+            public override Android.OS.Handler Handler
+            {
+                //run the callback on main thread
+                get
+                {
+                    return new Android.OS.Handler(Looper.MainLooper);
+                }
+            }
+
+            public override void OnError(Throwable e)
+            {
+                Console.WriteLine("Fail Login!!");
+                Console.WriteLine(e);
+                activity.Alert("Error", e.ToString());
+                MAS.CancelAllRequests();
+            }
+
+            public override void OnSuccess(Java.Lang.Object result)
+            {
+                Console.WriteLine("Success Login!!");
+                activity.Alert(((MASUser)result).DisplayName, ((MASUser)result).AsJSONObject.ToString(4));
+
+            }
         }
     }
 }
