@@ -12,110 +12,194 @@ using WebKit;
 namespace MASFoundation
 {
     // typedef void (^MASCompletionErrorBlock)(BOOL, NSError * _Nullable);
+    /// <summary>
+    /// A standard (BOOL completed, NSError *error) block.
+    /// </summary>
     delegate void MASCompletionErrorBlock(bool arg0, [NullAllowed] NSError arg1);
 
     // typedef void (^MASObjectResponseErrorBlock)(id _Nullable, NSError * _Nullable);
+    /// <summary>
+    /// A standard (id objects, NSError *error) block.  The response object could potentially be any type of MASObject.
+    /// </summary>
     delegate void MASObjectResponseErrorBlock([NullAllowed] NSObject arg0, [NullAllowed] NSError arg1);
 
     // typedef void (^MASObjectsResponseErrorBlock)(NSArray<id> * _Nullable, NSError * _Nullable);
+    /// <summary>
+    /// A standard (NSArray *objects, NSError *error) block.  The response objects could potentially be any type of MASObject.
+    /// </summary>
     delegate void MASObjectsResponseErrorBlock([NullAllowed] NSObject[] arg0, [NullAllowed] NSError arg1);
 
     // typedef void (^MASResponseInfoErrorBlock)(NSDictionary<NSString *,id> * _Nullable, NSError * _Nullable);
+    /// <summary>
+    /// A standard (NSDictionary *responseInfo, NSError *error) block.  The response object could potentially be any type of object.  It is most often used to return NSString JSON responses from HTTP calls for example.
+    /// </summary>
     delegate void MASResponseInfoErrorBlock([NullAllowed] NSDictionary<NSString, NSObject> arg0, [NullAllowed] NSError arg1);
 
     // typedef void (^MASUserResponseErrorBlock)(MASUser * _Nullable, NSError * _Nullable);
+    /// <summary>
+    /// The MASUser specific (MASUser *user, NSError *error) block.
+    /// </summary>
     delegate void MASUserResponseErrorBlock([NullAllowed] MASUser arg0, [NullAllowed] NSError arg1);
 
     // typedef void (^MASAuthCredentialsBlock)(MASAuthCredentials * _Nullable, BOOL, MASCompletionErrorBlock _Nullable);
+    /// <summary>
+    /// The MASAuthCredentialsBlcok to provide auth credentials for device registration and/or user authentication.
+    /// </summary>
     delegate void MASAuthCredentialsBlock([NullAllowed] MASAuthCredentials arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
 
     // typedef void (^MASUserAuthCredentialsBlock)(MASAuthCredentialsBlock _Nonnull);
+    /// <summary>
+    /// The user auth credentials blcok that will be invoked by SDK to notify developers to provide auth credentials.
+    /// </summary>
     delegate void MASUserAuthCredentialsBlock([BlockCallback] MASAuthCredentialsBlock arg0);
 
-    // typedef void (^MASOTPGenerationBlock)(NSArray * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
-    delegate void MASOTPGenerationBlock(NSObject[] arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
+    //// typedef void (^MASOTPGenerationBlock)(NSArray * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
+    //delegate void MASOTPGenerationBlock(NSObject[] arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
 
-    // typedef void (^MASOTPFetchCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
-    delegate void MASOTPFetchCredentialsBlock(string arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
+    //// typedef void (^MASOTPFetchCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
+    //delegate void MASOTPFetchCredentialsBlock(string arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
 
-    // typedef void (^MASOTPChannelSelectionBlock)(NSArray * _Nonnull, MASOTPGenerationBlock _Nonnull);
-    delegate void MASOTPChannelSelectionBlock(NSObject[] arg0, [BlockCallback] MASOTPGenerationBlock arg1);
+    //// typedef void (^MASOTPChannelSelectionBlock)(NSArray * _Nonnull, MASOTPGenerationBlock _Nonnull);
+    //delegate void MASOTPChannelSelectionBlock(NSObject[] arg0, [BlockCallback] MASOTPGenerationBlock arg1);
 
-    // typedef void (^MASOTPCredentialsBlock)(MASOTPFetchCredentialsBlock _Nonnull, NSError * _Nullable);
-    delegate void MASOTPCredentialsBlock([BlockCallback] MASOTPFetchCredentialsBlock arg0, [NullAllowed] NSError arg1);
+    //// typedef void (^MASOTPCredentialsBlock)(MASOTPFetchCredentialsBlock _Nonnull, NSError * _Nullable);
+    //delegate void MASOTPCredentialsBlock([BlockCallback] MASOTPFetchCredentialsBlock arg0, [NullAllowed] NSError arg1);
 
-    // typedef void (^MASBiometricModalitiesBlock)(NSArray * _Nullable, BOOL, MASCompletionErrorBlock _Nullable);
-    delegate void MASBiometricModalitiesBlock([NullAllowed] NSObject[] arg0, bool arg1, [NullAllowed] MASCompletionErrorBlock arg2);
+    //// typedef void (^MASBiometricModalitiesBlock)(NSArray * _Nullable, BOOL, MASCompletionErrorBlock _Nullable);
+    //delegate void MASBiometricModalitiesBlock([NullAllowed] NSObject[] arg0, bool arg1, [NullAllowed] MASCompletionErrorBlock arg2);
 
-    // typedef void (^MASBiometricRegistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
-    delegate void MASBiometricRegistrationModalitiesSelectionBlock(NSObject[] arg0, MASBiometricModalitiesBlock arg1);
+    //// typedef void (^MASBiometricRegistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
+    //delegate void MASBiometricRegistrationModalitiesSelectionBlock(NSObject[] arg0, MASBiometricModalitiesBlock arg1);
 
-    // typedef void (^MASBiometricDeregistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
-    delegate void MASBiometricDeregistrationModalitiesSelectionBlock(NSObject[] arg0, MASBiometricModalitiesBlock arg1);
+    //// typedef void (^MASBiometricDeregistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
+    //delegate void MASBiometricDeregistrationModalitiesSelectionBlock(NSObject[] arg0, MASBiometricModalitiesBlock arg1);
 
     // typedef void (^MASGatewayMonitorStatusBlock)(MASGatewayMonitoringStatus);
+    /// <summary>
+    /// MThe Gateway monitor status block that will receive a MASGatewayMonitoringStatus update when a new status value change is triggered.
+    /// </summary>
+    /// <code>
+    /// MASGatewayMonitoringStatusNotReachable
+    /// MASGatewayMonitoringStatusReachableViaWWAN
+    /// MASGatewayMonitoringStatusReachableViaWiFi
+    /// </code>
     delegate void MASGatewayMonitorStatusBlock(MASGatewayMonitoringStatus arg0);
 
-    // typedef void (^MASBasicCredentialsBlock)(NSString * _Nonnull, NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
-    delegate void MASBasicCredentialsBlock(string arg0, string arg1, bool arg2, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg3);
+    //// typedef void (^MASBasicCredentialsBlock)(NSString * _Nonnull, NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
+    //delegate void MASBasicCredentialsBlock(string arg0, string arg1, bool arg2, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg3);
 
-    // typedef void (^MASAuthorizationCodeCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
-    delegate void MASAuthorizationCodeCredentialsBlock(string arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
+    //// typedef void (^MASAuthorizationCodeCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
+    //delegate void MASAuthorizationCodeCredentialsBlock(string arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
 
-    // typedef void (^MASUserLoginWithUserCredentialsBlock)(MASBasicCredentialsBlock _Nonnull, MASAuthorizationCodeCredentialsBlock _Nonnull);
-    delegate void MASUserLoginWithUserCredentialsBlock([BlockCallback] MASBasicCredentialsBlock arg0, [BlockCallback] MASAuthorizationCodeCredentialsBlock arg1);
+    //// typedef void (^MASUserLoginWithUserCredentialsBlock)(MASBasicCredentialsBlock _Nonnull, MASAuthorizationCodeCredentialsBlock _Nonnull);
+    //delegate void MASUserLoginWithUserCredentialsBlock([BlockCallback] MASBasicCredentialsBlock arg0, [BlockCallback] MASAuthorizationCodeCredentialsBlock arg1);
 
     // @interface MASObject : NSObject <NSCopying, NSCoding>
+    /// <summary>
+    /// The `MASObject` class is a local representation of data persisted to the MAS cloud. This is the main class that is used to interact with objects in your app.
+    /// </summary>
     [BaseType(typeof(NSObject))]
     interface MASObject : INSCopying, INSCoding
     {
         // -(instancetype _Nullable)initWithAttributes:(NSDictionary<NSString *,NSString *> * _Nonnull)attributes;
+        /// <summary>
+        /// Init the object with passed attributes in a form of NSDictionary
+        /// </summary>
+        /// <returns>The instance of the MASObject object</returns>
+        /// <param name="attributes">NSDictionary to be used as attributes</param>
         [Export("initWithAttributes:")]
         IntPtr Constructor(NSDictionary<NSString, NSString> attributes);
 
         // +(instancetype _Nullable)objectWithClassName:(NSString * _Nonnull)className;
+        /// <summary>
+        /// Creates a new MASObject with a class name
+        /// </summary>
+        /// <returns>MASObject that is instantiated with the given class name.</returns>
+        /// <param name="className">A class name can be any alphanumeric string that begins with a letter. It represents an object in your app, like a 'User' or a 'Document'.</param>
         [Static]
         [Export("objectWithClassName:")]
         [return: NullAllowed]
         MASObject ObjectWithClassName(string className);
 
         // +(instancetype _Nullable)objectWithClassName:(NSString * _Nonnull)className withData:(NSDictionary<NSString *,NSString *> * _Nonnull)dictionary;
+        /// <summary>
+        /// Creates a new MASObject with a class name and a dictionary as the data
+        /// </summary>
+        /// <returns>MASObject that is instantiated with the given class name and dictionary.</returns>
+        /// <param name="className">A class name can be any alphanumeric string that begins with a letter. It represents an object in your app, like a 'User' or a 'Document'.</param>
+        /// <param name="dictionary">A disctionary that will be used as a data.</param>
         [Static]
         [Export("objectWithClassName:withData:")]
         [return: NullAllowed]
         MASObject ObjectWithClassName(string className, NSDictionary<NSString, NSString> dictionary);
 
         // @property (readonly, copy, nonatomic) NSString * _Nonnull className;
+        /// <summary>
+        /// The class name of the object.
+        /// </summary>
+        /// <value>The name of the class.</value>
         [Export("className")]
         string ClassName { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nonnull objectId;
+        /// <summary>
+        /// The id of the object.
+        /// </summary>
+        /// <value>The object identifier.</value>
         [Export("objectId")]
         string ObjectId { get; }
 
         // @property (readonly, copy, nonatomic) NSMutableDictionary<NSString *,NSString *> * _Nonnull _attributes;
+        /// <summary>
+        /// List of attributes of the object.
+        /// </summary>
+        /// <value>The attributes.</value>
         [Export("_attributes", ArgumentSemantic.Copy)]
         NSMutableDictionary<NSString, NSString> _attributes { get; }
 
         // -(id _Nullable)objectForKey:(id _Nonnull)key;
+        /// <summary>
+        /// Returns the value associated with a given key.
+        /// </summary>
+        /// <returns>The value associated with a given key.</returns>
+        /// <param name="key">The given identifying key for which to return the corresponding value.</param>
         [Export("objectForKey:")]
         [return: NullAllowed]
         NSObject ObjectForKey(NSObject key);
 
         // -(void)setObject:(id _Nonnull)object forKey:(id<NSCopying> _Nonnull)key;
+        /// <summary>
+        /// Sets the object associated with a given key.
+        /// </summary>
+        /// <param name="object">The object for `key`. A strong reference to the object is maintaned by MASObject. Raises an `NSInvalidArgumentException` if `object` is `nil`. If you need to represent a `nil` value - use `NSNull`.</param>
+        /// <param name="key">The key for `object`. Raises an `NSInvalidArgumentException` if `key` is `nil`.</param>
         [Export("setObject:forKey:")]
         void SetObjectForKey(NSObject @object, NSCopying key);
 
         // -(id _Nullable)objectForKeyedSubscript:(id _Nonnull)key;
+        /// <summary>
+        /// Returns the value associated with a given key.
+        /// </summary>
+        /// <returns>The value associated with a given key.</returns>
+        /// <param name="key">The key for which to return the corresponding value.</param>
         [Export("objectForKeyedSubscript:")]
         [return: NullAllowed]
         NSObject ObjectForKeyedSubscript(NSObject key);
 
         // -(void)setObject:(id _Nonnull)object forKeyedSubscript:(id<NSCopying> _Nonnull)key;
+        /// <summary>
+        /// Returns the value associated with a given key.
+        /// @discussion This method enables usage of literal syntax on `MASObject`. E.g. `object[@"key"] = @"value";`
+        /// </summary>
+        /// <param name="object">The object for `key`. A strong reference to the object is maintaned by PFObject. Raises an `NSInvalidArgumentException` if `object` is `nil`. If you need to represent a `nil` value - use `NSNull`.</param>
+        /// <param name="key">The key for `object`. Raises an `NSInvalidArgumentException` if `key` is `nil`.</param>
         [Export("setObject:forKeyedSubscript:")]
         void SetObjectForKeyedSubscript(NSObject @object, NSCopying key);
 
         // -(void)listAttributes;
+        /// <summary>
+        /// List all attributes from the Object
+        /// </summary>
         [Export("listAttributes")]
         void ListAttributes();
     }
@@ -1132,54 +1216,105 @@ namespace MASFoundation
     }
 
     // @interface MASUser : MASObject
+    /// <summary>
+    /// The `MASUser` class is a local representation of user data.
+    /// </summary>
     [BaseType(typeof(MASObject))]
     interface MASUser
     {
         // @property (readonly, assign, nonatomic) BOOL isCurrentUser;
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MASUser"/> is current user.
+        /// </summary>
+        /// <value><c>true</c> if is current user; otherwise, <c>false</c>.</value>
         [Export("isCurrentUser")]
         bool IsCurrentUser { get; }
 
         // @property (readonly, assign, nonatomic) BOOL isAuthenticated;
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MASUser"/> is authenticated.
+        /// </summary>
+        /// <value><c>true</c> if is authenticated; otherwise, <c>false</c>.</value>
         [Export("isAuthenticated")]
         bool IsAuthenticated { get; }
 
         // @property (readonly, assign, nonatomic) BOOL isSessionLocked;
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MASUser"/>'s session is locked.
+        /// </summary>
+        /// <value><c>true</c> if is session locked; otherwise, <c>false</c>.</value>
         [Export("isSessionLocked")]
         bool IsSessionLocked { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nonnull userName;
+        /// <summary>
+        /// Gets the string value of the username.
+        /// </summary>
+        /// <value>The string value of the username.</value>
         [Export("userName")]
         string UserName { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable familyName;
+        /// <summary>
+        /// Gets the string value of family name.
+        /// </summary>
+        /// <value>The string value of family name.</value>
         [NullAllowed, Export("familyName")]
         string FamilyName { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable givenName;
+        /// <summary>
+        /// Gets the string value of given name.
+        /// </summary>
+        /// <value>The string value of given name.</value>
         [NullAllowed, Export("givenName")]
         string GivenName { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable formattedName;
+        /// <summary>
+        /// Gets the string value of formatted name.
+        /// </summary>
+        /// <value>The string value of formatted name.</value>
         [NullAllowed, Export("formattedName")]
         string FormattedName { get; }
 
         // @property (readonly, copy, nonatomic) NSDictionary<NSString *,NSString *> * _Nullable emailAddresses;
+        /// <summary>
+        /// Gets the email addresses.
+        /// </summary>
+        /// <value>The email addresses.</value>
         [NullAllowed, Export("emailAddresses", ArgumentSemantic.Copy)]
         NSDictionary<NSString, NSString> EmailAddresses { get; }
 
         // @property (readonly, copy, nonatomic) NSDictionary<NSString *,NSString *> * _Nullable phoneNumbers;
+        /// <summary>
+        /// Gets the phone numbers.
+        /// </summary>
+        /// <value>The phone numbers.</value>
         [NullAllowed, Export("phoneNumbers", ArgumentSemantic.Copy)]
         NSDictionary<NSString, NSString> PhoneNumbers { get; }
 
         // @property (readonly, copy, nonatomic) NSDictionary<NSString *,NSString *> * _Nullable addresses;
+        /// <summary>
+        /// Gets the addresses.
+        /// </summary>
+        /// <value>The addresses.</value>
         [NullAllowed, Export("addresses", ArgumentSemantic.Copy)]
         NSDictionary<NSString, NSString> Addresses { get; }
 
         // @property (readonly, copy, nonatomic) NSDictionary<NSString *,id> * _Nullable photos;
+        /// <summary>
+        /// Gets the photos.
+        /// </summary>
+        /// <value>The photos.</value>
         [NullAllowed, Export("photos", ArgumentSemantic.Copy)]
         NSDictionary<NSString, NSObject> Photos { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable groups;
+        /// <summary>
+        /// Gets the groups.
+        /// </summary>
+        /// <value>The groups.</value>
         [NullAllowed, Export("groups", ArgumentSemantic.Copy)]
         string[] Groups { get; }
 
@@ -1188,67 +1323,164 @@ namespace MASFoundation
         bool Active { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable accessToken;
+        /// <summary>
+        /// Gets the access token of the user, if authenticated.
+        /// </summary>
+        /// <value>The access token.</value>
         [NullAllowed, Export("accessToken")]
         string AccessToken { get; }
 
         // +(MASUser * _Nullable)currentUser;
+        /// <summary>
+        /// GeThe authenticated user for the application, if any. Nil returned if none. This is a singleton object.
+        /// </summary>
+        /// <value>A singleton 'MASUser' object.</value>
         [Static]
         [NullAllowed, Export("currentUser")]
         //[Verify(MethodToProperty)]
         MASUser CurrentUser { get; }
 
         // +(NSString * _Nullable)authCredentialsType;
+        /// <summary>
+        /// Previously, or currently used authCredentialsType for the session.
+        /// If the SDK is not properly initialized, nil will be returned regardless of the authentication status of the SDK.
+        /// If the SDK was never authenticated before, SDK will also return nil as a result.
+        /// </summary>
+        /// <value>NSString of previously, or currently used authCredentialsType as in String.</value>
         [Static]
         [NullAllowed, Export("authCredentialsType")]
         //[Verify(MethodToProperty)]
         string AuthCredentialsType { get; }
 
         // -(void)lockSessionWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Lock currently authenticated user session with device's local authentication (Device's Passcode or Biometric Authentication).
+        /// 
+        /// This will lock current user session and block most of operations except for [[MASUser currentUser] logoutWithCompletion:] 
+        /// and[[MASDevice currentDevice] deregisterWithCompletion:].
+        /// Alternatively, locked user session can be removed by[[MASUser currentUser] removeSessionLock] 
+        /// which will remove credentials from protected stroage of the device with local authentication.
+        /// 
+        /// After locking user session, [MASUser currentUser] will still exists; 
+        /// however, [MASUser currentUser].isAuthenticated property will reflect the lock status and will return false until it's unlocked.
+        /// Session lock status can also be checked through[MASUser currentUser].isSessionLocked property.
+        /// </summary>
+        /// <param name="completion">The MASCompletionErrorBlock block that receives the results.</param>
         [Export("lockSessionWithCompletion:")]
         void LockSessionWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)unlockSessionWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Unlcok currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
+        /// 
+        /// This will unlock current user session and unblock all of the operations through SDK.
+        /// 
+        /// After unlocking user session, [MASUser currentUser] will reflect correct authentication and lock status.
+        /// </summary>
+        /// <param name="completion">MASCompletionErrorBlock block that receives the results.</param>
         [Export("unlockSessionWithCompletion:")]
         void UnlockSessionWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)unlockSessionWithUserOperationPromptMessage:(NSString * _Nonnull)userOperationPrompt completion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication) and specified message on system local authentication dialog.
+        /// 
+        /// This will unlock current user session and unblock all of the operations through SDK.
+        /// 
+        /// After unlocking user session, [MASUser currentUser] will reflect correct authentication and lock status.
+        /// </summary>
+        /// <param name="userOperationPrompt">NSString message that will be displayed on system local authentication dialog.</param>
+        /// <param name="completion">MASCompletionErrorBlock block that receives the results.</param>
         [Export("unlockSessionWithUserOperationPromptMessage:completion:")]
         void UnlockSessionWithUserOperationPromptMessage(string userOperationPrompt, [NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)removeSessionLock;
+        /// <summary>
+        /// Remove user session that had been protected device's local authentication.
+        /// 
+        /// This interface can be used when end-user chooses to not provide local authentication and clean up the session.
+        /// </summary>
         [Export("removeSessionLock")]
         void RemoveSessionLock();
 
         // +(void)loginWithUserName:(NSString * _Nonnull)userName password:(NSString * _Nonnull)password completion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Authenticate a user via asynchronous request with basic credentials.
+        /// 
+        /// This will create an [MAUser currentUser] upon a successful result.  
+        /// </summary>
+        /// <param name="userName">The userName of the user.</param>
+        /// <param name="password">The password of the user.</param>
+        /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via [MASUser currentUser] has been updated with the new information.</param>
         [Static]
         [Export("loginWithUserName:password:completion:")]
         void LoginWithUserName(string userName, string password, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithAuthorizationCode:(NSString * _Nonnull)authorizationCode completion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Authenticate a user via asynchronous request with authorization code.
+        /// 
+        /// This will create an [MAUser currentUser] upon a successful result.  
+        /// </summary>
+        /// <param name="authorizationCode">The authorization code for the user.</param>
+        /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via [MASUser currentUser] has been updated with the new information.</param>
         [Static]
         [Export("loginWithAuthorizationCode:completion:")]
         void LoginWithAuthorizationCode(string authorizationCode, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithIdToken:(NSString * _Nonnull)idToken tokenType:(NSString * _Nonnull)tokenType completion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Authenticate a user via asynchronous request with id_token.
+        /// 
+        /// This will create an [MAUser currentUser] upon a successful result.  
+        /// </summary>
+        /// <param name="idToken">The id_token for the user.</param>
+        /// <param name="tokenType">Token type of id_token.</param>
+        /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via [MASUser currentUser] has been updated with the new information.</param>
         [Static]
         [Export("loginWithIdToken:tokenType:completion:")]
         void LoginWithIdToken(string idToken, string tokenType, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithAuthCredentials:(MASAuthCredentials * _Nonnull)authCredentials completion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        ///  Authenticate a user via asynchronous request with MASAuthCredentials object.
+        /// This will accept any objects that inherites from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
+        /// on backend services.
+        /// 
+        /// This will create an [MAUser currentUser] upon a successful result.  
+        /// </summary>
+        /// <param name="authCredentials">MASAuthCredentials object that contains credentials.</param>
+        /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via [MASUser currentUser] has been updated with the new information.</param>
         [Static]
         [Export("loginWithAuthCredentials:completion:")]
         void LoginWithAuthCredentials(MASAuthCredentials authCredentials, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)initializeBrowserBasedAuthenticationWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Authenticate a user by launching a Browser which in turn loads a URL (templatized).
+        /// </summary>
+        /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via[MASUser currentUser] has been updated with the new information.</param>
         [Static]
         [Export("initializeBrowserBasedAuthenticationWithCompletion:")]
         void InitializeBrowserBasedAuthenticationWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)requestUserInfoWithCompletion:(MASUserResponseErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Requesting userInfo for the MASUser object.
+        /// This method will retrieve additional information on the MASUser object.
+        /// </summary>
+        /// <param name="completion">The MASUserResponseErrorBlock block that returns MASUSer object with updated value which is also available through the current MASUser object that is making this request, and NSError object in case any error is encountered during the process.</param>
         [Export("requestUserInfoWithCompletion:")]
         void RequestUserInfoWithCompletion([NullAllowed] MASUserResponseErrorBlock completion);
 
         // -(void)logoutWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Logout an already authenticated user via asynchronous request.
+        /// 
+        /// This will return YES upon a successful result.
+        /// </summary>
+        /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user 
+        /// available via[MASUser currentUser] has been updated with the new information.</param>
         [Export("logoutWithCompletion:")]
         void LogoutWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
     }
@@ -1492,212 +1724,850 @@ namespace MASFoundation
     }
 
     // @interface MAS : NSObject
+    /// <summary>
+    /// The top level MAS object represents the Mobile App Services SDK in it's entirety.  
+    /// It is where the framework lifecycle begins, and ends if necessary.It is the front
+    /// facing class where many of the configuration settings for the SDK as a whole can be
+    /// found and utilized.
+    /// </summary>
     [BaseType(typeof(NSObject))]
     interface MAS
     {
         // +(void)setConfigurationFileName:(NSString * _Nonnull)fileName;
+        /// <summary>
+        /// Set the name of the configuration file.  This gives the ability to set the file's name to a custom value.
+        /// </summary>
+        /// <param name="fileName">The NSString name of the configuration file.</param>
         [Static]
         [Export("setConfigurationFileName:")]
         void SetConfigurationFileName(string fileName);
 
         // +(MASGrantFlow)grantFlow;
         // +(void)setGrantFlow:(MASGrantFlow)grantFlow;
+        /// <summary>
+        /// MASGrantFlow property.  The default is MASGrantFlowClientCredentials.
+        /// </summary>
+        /// <value>The grant flow of MAG SDK.</value>
         [Static]
         [Export("grantFlow")]
         //[Verify(MethodToProperty)]
         MASGrantFlow GrantFlow { get; set; }
 
         // +(void)enablePKCE:(BOOL)enable;
+        /// <summary>
+        /// Sets BOOL indicator of PKCE (Proof KEy for Code Exchange) enabled or not for authorization process in Social Login, and Proximity Login.
+        /// By default, PKCE is enabled and enforced in authorization process; it can be opted-out.
+        /// 
+        /// @since MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.
+        /// @dependency Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification.
+        /// </summary>
+        /// <param name="enable">BOOL value of indicating whether PKCE is enabled or not.</param>
         [Static]
         [Export("enablePKCE:")]
         void EnablePKCE(bool enable);
 
         // +(BOOL)isPKCEEnabled;
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MAS"/> is PKCEE nabled.
+        /// 
+        /// @since MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.
+        /// @dependency Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification.
+        /// </summary>
+        /// <value>
+        /// BOOL value of indicating whether PKCE is enabled or not.
+        /// <c>true</c> if is PKCEE nabled; otherwise, <c>false</c>.
+        /// </value>
         [Static]
         [Export("isPKCEEnabled")]
         //[Verify(MethodToProperty)]
         bool IsPKCEEnabled { get; }
 
         // +(void)setUserAuthCredentials:(MASUserAuthCredentialsBlock _Nullable)userAuthCredentialsBlock;
+        /// <summary>
+        /// Set a user auth credential block to handle the case where SDK requires auth credentials.
+        /// When MASGrantFlow is set to MASGrantFlowPassword, and auth credentials is required, SDK will invoke this block
+        /// to obtain MASAuthCredentials to proceed authentication process.
+        /// </summary>
+        /// <param name="userAuthCredentialsBlock">MASUserAuthCredentialsBlock that contains callback block to be invoked with MASAuthCredentials.</param>
         [Static]
         [Export("setUserAuthCredentials:")]
         void SetUserAuthCredentials([NullAllowed] MASUserAuthCredentialsBlock userAuthCredentialsBlock);
 
-        // +(void)setOTPChannelSelectionBlock:(MASOTPChannelSelectionBlock _Nullable)OTPChannelSelector;
-        [Static]
-        [Export("setOTPChannelSelectionBlock:")]
-        void SetOTPChannelSelectionBlock([NullAllowed] MASOTPChannelSelectionBlock OTPChannelSelector);
+        //// +(void)setOTPChannelSelectionBlock:(MASOTPChannelSelectionBlock _Nullable)OTPChannelSelector;
+        //[Static]
+        //[Export("setOTPChannelSelectionBlock:")]
+        //void SetOTPChannelSelectionBlock([NullAllowed] MASOTPChannelSelectionBlock OTPChannelSelector);
 
-        // +(void)setOTPCredentialsBlock:(MASOTPCredentialsBlock _Nullable)oneTimePassword;
-        [Static]
-        [Export("setOTPCredentialsBlock:")]
-        void SetOTPCredentialsBlock([NullAllowed] MASOTPCredentialsBlock oneTimePassword);
+        //// +(void)setOTPCredentialsBlock:(MASOTPCredentialsBlock _Nullable)oneTimePassword;
+        //[Static]
+        //[Export("setOTPCredentialsBlock:")]
+        //void SetOTPCredentialsBlock([NullAllowed] MASOTPCredentialsBlock oneTimePassword);
 
         // +(void)enableBrowserBasedAuthentication:(BOOL)enable;
+        /// <summary>
+        /// Sets Bool indicator of Browser Based Authentication (templatized login) enabled or not for authorization process.
+        /// By default, it is disabled.
+        /// </summary>
+        /// <param name="enable">BOOL value indicating whether Browser Based Authentication is enabled or not.</param>
         [Static]
         [Export("enableBrowserBasedAuthentication:")]
         void EnableBrowserBasedAuthentication(bool enable);
 
         // +(void)setGatewayMonitor:(MASGatewayMonitorStatusBlock _Nullable)monitor;
+        /// <summary>
+        /// Sets the gateway monitoring block defined by the GatewayMonitorStatusBlock type.
+        /// This block will be triggered when any change to the current monitoring status
+        /// takes place with a MASGatewayMonitoringStatus.
+        /// 
+        /// This is optional and it can be set to nil at any time to stop receiving the notifications.
+        /// </summary>
+        /// <remarks>
+        /// The gateway monitoring status enumerated values are:
+        /// *      MASGatewayMonitoringStatusNotReachable
+        /// *      MASGatewayMonitoringStatusReachableViaWWAN
+        /// *      MASGatewayMonitoringStatusReachableViaWiFi
+        /// </remarks>
+        /// <param name="monitor">The MASGatewayMonitorStatusBlock that will receive the status updates.</param>
         [Static]
         [Export("setGatewayMonitor:")]
         void SetGatewayMonitor([NullAllowed] MASGatewayMonitorStatusBlock monitor);
 
         // +(MASState)MASState;
+        /// <summary>
+        /// Returns current MASState enumeration value.  The value can be used to determine which state SDK is currently at.
+        /// </summary>
+        /// <value>MASState of current state.</value>
         [Static]
         [Export("MASState")]
         //[Verify(MethodToProperty)]
         MASState MASState { get; }
 
         // +(void)setGatewayNetworkActivityLogging:(BOOL)enabled;
+        /// <summary>
+        /// Turn on or off the logging of the network activity with the Gateway.
+        /// </summary>
+        /// <param name="enabled">If set to <c>true</c> enabled.</param>
         [Static]
         [Export("setGatewayNetworkActivityLogging:")]
         void SetGatewayNetworkActivityLogging(bool enabled);
 
         // +(void)setKeychainSynchronizable:(BOOL)enabled;
+        /// <summary>
+        /// Sets BOOL indicator whether the Keychain is synchronized through iCloud.
+        /// By default, the Keychain is not synchronized through iCloud.
+        /// </summary>
+        /// <param name="enabled">If set to <c>true</c> enabled.</param>
         [Static]
         [Export("setKeychainSynchronizable:")]
         void SetKeychainSynchronizable(bool enabled);
 
         // +(BOOL)isKeychainSynchronizable;
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MAS"/> is keychain synchronizable.
+        /// </summary>
+        /// <value><c>true</c> if is keychain synchronizable; otherwise, <c>false</c>.</value>
         [Static]
         [Export("isKeychainSynchronizable")]
         //[Verify(MethodToProperty)]
         bool IsKeychainSynchronizable { get; }
 
         // +(void)start:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Starts the lifecycle of the MAS processes.  
+        /// 
+        /// Although an asynchronous block callback parameter is provided for response usage,
+        /// optionally you can set that to nil and the caller can observe the lifecycle 
+        /// notifications instead.
+        /// 
+        /// This will load the last used JSON configuration from keychain storage.If there was none,
+        /// it will load from default JSON configuration file (msso_config.json)
+        /// or JSON file with file name set through[MAS setConfigurationFileName:].
+        /// </summary>
+        /// <remarks>
+        /// The MAS lifecycle notifications are:
+        /// 
+        ///  *      MASWillStartNotification
+        ///  *      MASDidFailToStartNotification
+        ///  *      MASDidStartNotification
+        /// 
+        /// The application registration notifications are:
+        /// 
+        ///  *      MASApplicationWillRegisterNotification
+        ///  *      MASApplicationDidFailToRegisterNotification
+        ///  *      MASApplicationDidRegisterNotification
+        /// </remarks>
+        /// <param name="completion">An MASCompletionErrorBlock type (BOOL completed, NSError *error) that will
+        /// receive a YES or NO BOOL indicating the completion state and/or an NSError object if there
+        /// is a failure.
+        /// </param>
         [Static]
         [Export("start:")]
         void Start([NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithDefaultConfiguration:(BOOL)shouldUseDefault completion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Starts the lifecycle of the MAS processes.
+        /// 
+        /// Although an asynchronous block callback parameter is provided for response usage,
+        /// optionally you can set that to nil and the caller can observe the lifecycle
+        /// notifications instead.
+        /// 
+        /// This will load the default JSON configuration rather than from keychain storage; if the SDK was already initialized, this method will fully stop and re-start the SDK.
+        /// The default JSON configuration file should be msso_config.json or file name defined through[MAS setConfigurationFileName:].
+        /// This will ignore the JSON configuration in keychain storage and replace with the default configuration.
+        /// </summary>
+        /// <remarks>
+        /// The MAS lifecycle notifications are:
+        /// 
+        ///  *      MASWillStartNotification
+        ///  *      MASDidFailToStartNotification
+        ///  *      MASDidStartNotification
+        /// 
+        /// The application registration notifications are:
+        /// 
+        ///  *      MASApplicationWillRegisterNotification
+        ///  *      MASApplicationDidFailToRegisterNotification
+        ///  *      MASApplicationDidRegisterNotification
+        /// </remarks>
+        /// <param name="shouldUseDefault">Boolean value of using default configuration rather than the one in keychain storage.</param>
+        /// <param name="completion">
+        /// An MASCompletionErrorBlock type (BOOL completed, NSError *error) that will
+        /// receive a YES or NO BOOL indicating the completion state and/or an NSError object if there
+        /// is a failure.
+        /// </param>
         [Static]
         [Export("startWithDefaultConfiguration:completion:")]
         void StartWithDefaultConfiguration(bool shouldUseDefault, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithJSON:(NSDictionary * _Nonnull)jsonConfiguration completion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Starts the lifecycle of the MAS processes with given JSON configuration data.
+        /// This method will overwrite JSON configuration(if they are different) that was stored in keychain.
+        /// 
+        /// Although an asynchronous block callback parameter is provided for response usage,
+        /// optionally you can set that to nil and the caller can observe the lifecycle
+        /// </summary>
+        /// <remarks>
+        /// The MAS lifecycle notifications are:
+        /// 
+        ///  *      MASWillStartNotification
+        ///  *      MASDidFailToStartNotification
+        ///  *      MASDidStartNotification
+        /// 
+        /// The application registration notifications are:
+        /// 
+        ///  *      MASApplicationWillRegisterNotification
+        ///  *      MASApplicationDidFailToRegisterNotification
+        ///  *      MASApplicationDidRegisterNotification
+        /// </remarks>
+        /// <param name="jsonConfiguration">NSDictionary of JSON configuration object.</param>
+        /// <param name="completion">An MASCompletionErrorBlock type (BOOL completed, NSError *error) that will
+        /// receive a YES or NO BOOL indicating the completion state and/or an NSError object if there
+        /// is a failure.</param>
         [Static]
         [Export("startWithJSON:completion:")]
         void StartWithJSON(NSDictionary jsonConfiguration, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithURL:(NSURL * _Nullable)url completion:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Starts the lifecycle of the MAS processes with given JSON configuration file path, enrolment URL or nil.
+        /// This method will overwrite JSON configuration(if they are different) that was stored in keychain when configuration file path or enrolment URL is provided.
+        /// 
+        /// When URL is recognized as nil, this method will initialize SDK by using last used JSON configuration that is stored in keychain storage,
+        /// or load JSON configuration from defined default configuration file name.
+        /// 
+        /// 
+        /// Enrolment URL is an URL from gateway containing some of credentials required to establish secure connection.
+        /// 
+        /// The gateway must be configured to generate and handle enrolment process with client side SDK.
+        /// The enrolment URL can be retrieved in many ways which has to be configured properly along with the gateway in regards of the enrolment process.
+        /// 
+        /// MASFoundation SDK does not request, or retrieve the enrolment URL by itself.
+        /// 
+        /// Although an asynchronous block callback parameter is provided for response usage,
+        /// 
+        /// optionally you can set that to nil and the caller can observe the lifecycle
+        /// </summary>
+        /// <remarks>
+        /// The MAS lifecycle notifications are:
+        /// 
+        /// *      MASWillStartNotification
+        /// *      MASDidFailToStartNotification
+        /// *      MASDidStartNotification
+        /// 
+        /// The application registration notifications are:
+        /// 
+        /// *      MASApplicationWillRegisterNotification
+        /// *      MASApplicationDidFailToRegisterNotification
+        /// *      MASApplicationDidRegisterNotification
+        /// </remarks>
+        /// <param name="url">NSURL of JSON configuration file path or enrolment URL.</param>
+        /// <param name="completion">An MASCompletionErrorBlock type (BOOL completed, NSError *error) that will receive a YES or NO BOOL indicating the completion state and/or an NSError object if there is a failure.</param>
         [Static]
         [Export("startWithURL:completion:")]
         void StartWithURL([NullAllowed] NSUrl url, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)stop:(MASCompletionErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Stops the lifecycle of all MAS processes.
+        /// 
+        /// Although an asynchronous block callback parameter is provided for response usage,
+        /// optionally you can set that to nil and the caller can observe the lifecycle 
+        /// notifications instead.
+        /// </summary>
+        /// <remarks>
+        /// The lifecycle notifications are:
+        /// 
+        /// *      MASWillStopNotification
+        /// *      MASDidFailToStopNotification
+        /// *      MASDidStopNotification
+        /// </remarks>
+        /// <param name="completion">
+        /// An MASCompletionErrorBlock type (BOOL completed, NSError *error) that will
+        /// receive a YES or NO BOOL indicating the completion state and/or an NSError object if there
+        /// is a failure.
+        /// </param>
         [Static]
         [Export("stop:")]
         void Stop([NullAllowed] MASCompletionErrorBlock completion);
 
         // +(BOOL)gatewayIsReachable;
+        /// <summary>
+        /// Retrieves a simple boolean indicator if the gateway is currently reachable or not.
+        /// </summary>
+        /// <value><c>true</c> if gateway is reachable; otherwise, <c>false</c>.</value>
         [Static]
         [Export("gatewayIsReachable")]
         //[Verify(MethodToProperty)]
         bool GatewayIsReachable { get; }
 
         // +(NSString * _Nonnull)gatewayMonitoringStatusAsString;
+        /// <summary>
+        /// Retrieves the current gateway monitoring status of the Gateway connection.
+        /// </summary>
+        /// <remarks>
+        /// The monitoring status enumerated values to their string equivalents are:
+        /// 
+        /// *      MASGatewayMonitoringStatusNotReachable = "Not Reachable"
+        /// *      MASGatewayMonitoringStatusReachableViaWWAN = "Reachable Via WWAN"
+        /// *      MASGatewayMonitoringStatusReachableViaWiFi = "Reachable Via WiFi"
+        /// </remarks>
+        /// <value>The gateway monitoring status as string.</value>
         [Static]
         [Export("gatewayMonitoringStatusAsString")]
         //[Verify(MethodToProperty)]
         string GatewayMonitoringStatusAsString { get; }
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP DELETE call from the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// 
+        /// This version defaults the request/response content type encoding to JSON.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("deleteFrom:withParameters:andHeaders:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP DELETE call from the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// 
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        /// <param name="responseType">The mime type expected in the body of the response.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("deleteFrom:withParameters:andHeaders:requestType:responseType:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP DELETE call from the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// 
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        /// <param name="responseType">The mime type expected in the body of the response.</param>
+        /// <param name="isPublic">Boolean value whether the request is being made outside of primary gateway. When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("deleteFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP GET call from the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// 
+        /// This version defaults the request/response content type encoding to JSON.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("getFrom:withParameters:andHeaders:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP GET call from the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        /// <param name="responseType">The mime type expected in the body of the response.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("getFrom:withParameters:andHeaders:requestType:responseType:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP GET call from the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        /// <param name="responseType">The mime type expected in the body of the response.</param>
+        /// <param name="isPublic">Boolean value whether the request is being made outside of primary gateway. When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("getFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP PATCH call to the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// 
+        /// This version defaults the request/response content type encoding to JSON.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("patchTo:withParameters:andHeaders:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP PATCH call to the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        /// <param name="responseType">The mime type expected in the body of the response.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("patchTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP PATCH call to the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        /// <param name="responseType">The mime type expected in the body of the response.</param>
+        /// <param name="isPublic">Boolean value whether the request is being made outside of primary gateway. When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("patchTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP POST call to the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// 
+        /// This version defaults the request/response content type encoding to JSON.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("postTo:withParameters:andHeaders:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP POST call to the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        /// <param name="responseType">The mime type expected in the body of the response.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("postTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP PATCH call to the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        /// <param name="responseType">The mime type expected in the body of the response.</param>
+        /// <param name="isPublic">Boolean value whether the request is being made outside of primary gateway. When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("postTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP PUT call to the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// 
+        /// This version defaults the request/response content type encoding to JSON.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("putTo:withParameters:andHeaders:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP PUT call to the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        /// <param name="responseType">The mime type expected in the body of the response.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("putTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Request method for an HTTP PUT call to the Gateway.  This type of HTTP Method type
+        /// places it's parameters within the NSURL itself as an HTTP query extension as so:
+        /// 
+        /// https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        /// Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        /// which can be configured in JSON configuration.</param>
+        /// <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        /// <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        /// <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        /// <param name="responseType">The mime type expected in the body of the response.</param>
+        /// <param name="isPublic">Boolean value whether the request is being made outside of primary gateway. When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("putTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)invoke:(MASRequest * _Nonnull)request completion:(MASResponseInfoErrorBlock _Nullable)completion;
+        /// <summary>
+        /// Invoke the endpoint with the parameters defined in the MASRequest object
+        /// 
+        /// If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        /// provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        /// 
+        /// ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        /// subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        /// 
+        /// When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        /// 
+        /// If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        /// to the primary gateway or not.  To ensure bypass the user session validation for public API, use[MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method
+        /// with isPublic being YES.
+        /// </summary>
+        /// <param name="request">MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request..</param>
+        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary *responseInfo, NSError *error) that will receive the JSON response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("invoke:completion:")]
         void Invoke(MASRequest request, [NullAllowed] MASResponseInfoErrorBlock completion);
 
-        // +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
-        [Static]
-        [Export("signWithClaims:error:")]
-        [return: NullAllowed]
-        string SignWithClaims(MASClaims claims, [NullAllowed] out NSError error);
+        //// +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
+        //[Static]
+        //[Export("signWithClaims:error:")]
+        //[return: NullAllowed]
+        //string SignWithClaims(MASClaims claims, [NullAllowed] out NSError error);
 
-        // +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims privateKey:(NSData * _Nonnull)privateKey error:(NSError * _Nullable * _Nullable)error;
-        [Static]
-        [Export("signWithClaims:privateKey:error:")]
-        [return: NullAllowed]
-        string SignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
+        //// +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims privateKey:(NSData * _Nonnull)privateKey error:(NSError * _Nullable * _Nullable)error;
+        //[Static]
+        //[Export("signWithClaims:privateKey:error:")]
+        //[return: NullAllowed]
+        //string SignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
 
-        // +(void)setUserLoginBlock:(MASUserLoginWithUserCredentialsBlock _Nullable)login __attribute__((deprecated("[MAS setUserLoginBlock:] is deprecated as of MAS 1.5. Use [MAS setAuthCredentials:] instead.")));
-        [Static]
-        [Export("setUserLoginBlock:")]
-        void SetUserLoginBlock([NullAllowed] MASUserLoginWithUserCredentialsBlock login);
+        //// +(void)setUserLoginBlock:(MASUserLoginWithUserCredentialsBlock _Nullable)login __attribute__((deprecated("[MAS setUserLoginBlock:] is deprecated as of MAS 1.5. Use [MAS setAuthCredentials:] instead.")));
+        //[Static]
+        //[Export("setUserLoginBlock:")]
+        //void SetUserLoginBlock([NullAllowed] MASUserLoginWithUserCredentialsBlock login);
     }
 
     // @interface MASApplication : MASObject
