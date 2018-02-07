@@ -68,14 +68,16 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 
 #### Log in: client credential
 
-Use the client credential method when user permission is not required to access data. For example, an app that requests access to an API. In the SDK, the app requests an access token by sending its credentials (client ID and client secret) to the CA Mobile API Gateway. If the app credentials are valid, the MAG returns an access token to the app.
+Use the client credential method when user permission is not required to access data. For example, an app that requests access to an API. In the SDK, the app requests an access token by sending its credentials (client ID and client secret) to the CA Mobile API Gateway. If the app credentials are valid, the MAG authenticates by returning an access token to the app.
 
 ```
 // Set grant flow to client credentials
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 ```
 
-#### Log in: username and password
+#### Log in: Explicit username and password
+
+In this flow, the user gives their credentials (username and password) directly to the app. There is no need for a client secret. The app requests an access token from the MAG. If the username and password are valid, the MAG authenticates by returning an access token to the app.
 
 ```c#
 MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
@@ -93,7 +95,9 @@ private class LoginCallback : MASCallback
         }
  ```
  
-#### Log in: user authentication
+#### Log in: Implicit username and password
+
+In this flow, the user is asked to authorize the app. This is great for single-page web apps that cannot keep client secrets for security reasons. After the access token expires and no longer works, it reprompts the user for username and password. 
 
 ```c#
 private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
@@ -206,7 +210,7 @@ builder.ResponseBody(MASResponseBody.StringBody());
 builder.ResponseBody(MASResponseBody.ByteArrayBody());
 ```
 
-#### Custom Response
+#### Custom response
 
 ```
 //Example implementation of a custom response class
