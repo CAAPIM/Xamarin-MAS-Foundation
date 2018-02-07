@@ -53,7 +53,7 @@ Complete these tasks:
 
 **Sample msso_config.json file**
 
-This a valid msso_config.json file that was exported from a MAG.
+This a valid msso_config.json file exported from a MAG.
 
 ```json
 {
