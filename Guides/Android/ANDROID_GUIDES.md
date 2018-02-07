@@ -41,11 +41,13 @@ If you get an error, the most likely cause is an invalid app configuration file.
 8. Now you can **login**, **logout**, and **invoke** a protected API. 
 
 
-## Start the SDK and Display Registered App
+## Start the SDK With Your Own App
 
 [graphic]
 
-**Scenario**: User accesses your mobile bank app. On the app home page, there is no sensitive data so user permission is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API. 
+**Scenario 1**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user permission (login) is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API. 
+
+**Scenario 2**: You have a specialized mobile app that requires user authentication before they see any data. In this case, you could set the default to the username and password flow. 
 
 ```c#
 // MAS.Start(Context context, bool shouldUseDefault);
@@ -64,9 +66,11 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 **Library**: MASFoundation<br>
 **Description**: Methods for user authentication flows. Backed by OAuth 2.0 protocol on the MAG server, you can securely consume APIs on mobile devices.</br>
 
-For a deep dive into the Mobile SDK and MAG security flows, see [Blog](https://www.ca.com/us/developers/mas/blog.html?id=2)
+For a deep dive into how CA Mobile API Gateway secures data through OAuth and OpenIDConnect, see [Blog](https://www.ca.com/us/developers/mas/blog.html?id=2)
 
 ### Log in: username and password
+
+[graphic]
 
 **Scenario**: User logs into the banking app to check account statements. In this flow, the user must provide credentials to the app because it is sensitive data. The Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
 
@@ -88,6 +92,8 @@ private class LoginCallback : MASCallback
  ```
  
 #### Log in: to another trusted app
+
+[graphic]
 
 **Scenario**: Our bank app user just won the lottery and wants to transfer money to a list of friends on Facebook. (What a friend indeed!) In this flow, the user needs temporary access to Facebook to get some data. In an implicit flow, your app implicitly trusts Facebook to securely store the user information. The user logs into your app, clicks the Facebook icon, and is presented with authorization screen "MyBankApp" is requesting access to Facebook, do you want to grant access?" 
 
