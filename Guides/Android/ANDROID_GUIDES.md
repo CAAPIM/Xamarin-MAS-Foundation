@@ -56,13 +56,13 @@ MAS.Start(Application.Context, true);
 **Example**: Set default to client credential
 
 ```c#
-// Set Grant Flow to Client Credentials
+// Set grant flow to client credentials
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 ```
 
 **Example**: Set default to username and password
 ```
-// Set Grant Flow to Password
+// Set grant flow to username and password
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
@@ -71,7 +71,7 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 Use the client credential method when user permission is not required to access data. For example, an app that requests access to an API. In the SDK, the app requests an access token by sending its credentials (client ID and client secret) to the CA Mobile API Gateway. If the app credentials are valid, the MAG returns an access token to the app.
 
 ```
-// Set Grant Flow to Client Credentials
+// Set grant flow to client credentials
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 ```
 
@@ -204,6 +204,28 @@ builder.ResponseBody(MASResponseBody.StringBody());
 //Response as raw data without data to object conversion
 //This is optional if the response content type is neither **application/json** or **text/plain**
 builder.ResponseBody(MASResponseBody.ByteArrayBody());
+```
+
+#### Custom Response
+
+```
+//Example implementation of a custom response class
+private class JSONArrayResponse : MASResponseBody
+{
+    public override Java.Lang.Object Content
+    {
+        get
+        {
+            JSONObject jObject = (JSONObject) base.Content;
+            JSONArray jArray = jObject.GetJSONArray("products");
+            return jArray;
+        }
+    }
+}
+ 
+//Example usage of the custom response class
+    MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
+    builder.ResponseBody(new JSONArrayResponse());
 ```
 
 #### Callback 
