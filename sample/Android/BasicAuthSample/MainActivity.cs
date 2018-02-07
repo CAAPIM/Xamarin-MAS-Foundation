@@ -25,6 +25,32 @@ namespace BasicAuthSample
             SetContentView(Resource.Layout.Main);
 
             // Get our UI controls from the loaded layout
+            Button startSDKButton = FindViewById<Button>(Resource.Id.startSDKButton);
+            startSDKButton.Click += (sender, e) =>
+            {
+                // MAS - start
+                MAS.Start(this, true);
+
+                if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
+                    Alert("MAS", "CA Mobile SDK started successfully!!");
+                else
+                    Alert("MAS", "CA Mobile SDK did not start!!");
+            };
+
+            Button setClientCredentialsFlowButton = FindViewById<Button>(Resource.Id.setClientCredentialsFlow);
+            setClientCredentialsFlowButton.Click += (sender, e) =>
+            {
+                MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
+                Alert("MAS", "Grant flow set to Client Credentials Flow!");
+            };
+
+            Button setPasswordFlowButton = FindViewById<Button>(Resource.Id.setPasswordFlow);
+            setPasswordFlowButton.Click += (sender, e) =>
+            {
+                MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
+                Alert("MAS", "Grant flow set to Password Flow!");
+            };
+
             Android.Widget.Button loginButton = FindViewById<Android.Widget.Button>(Resource.Id.login);
             loginButton.Click += (sender, e) =>
             {
@@ -44,13 +70,7 @@ namespace BasicAuthSample
             };
 
             MAS.SetAuthenticationListener(new MyAuthenticationListener());
-            // MAS - start
-            MAS.Start(Android.App.Application.Context, true);
 
-            if (MAS.GetState(Android.App.Application.Context) == MASConstants.MasStateStarted)
-                Alert("MAS", "CA Mobile SDK started successfully!!");
-            else
-                Alert("MAS", "CA Mobile SDK did not start!!");
 
         }
 
