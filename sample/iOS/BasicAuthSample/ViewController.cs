@@ -60,17 +60,15 @@ namespace BasicAuthSample
             // 
             MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
             {
-                if(completed)
+                if (completed)
                 {
                     ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
-                }    
-
-                if(error != null)
+                }
+                if (error != null)
                 {
                     ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
-                }    
+                }
             });
-
         }
 
         private void invokeProtectedAPI()
@@ -118,18 +116,25 @@ namespace BasicAuthSample
 
         private void Login(string user,string password)
         {
-            MASUser.LoginWithUserName(user, password, completion: (completed, error) =>
+            if (MASUser.CurrentUser != null)
             {
-                if (completed)
+                ShowAlert("MAS.LoginWithUserName", "Already authenticated as " + MASUser.CurrentUser.UserName);
+            }
+            else
+            {
+                MASUser.LoginWithUserName(user, password, completion: (completed, error) =>
                 {
-                    ShowAlert("MAS.LoginWithUserName", "Welcome " + MASUser.CurrentUser.UserName);
-                }
+                    if (completed)
+                    {
+                        ShowAlert("MAS.LoginWithUserName", "Welcome " + MASUser.CurrentUser.UserName);
+                    }
 
-                if (error != null)
-                {
-                    ShowAlert("MAS.LoginWithUserName", "ERROR: " + error.LocalizedDescription);
-                }
-            });
+                    if (error != null)
+                    {
+                        ShowAlert("MAS.LoginWithUserName", "ERROR: " + error.LocalizedDescription);
+                    }
+                });
+            }
         }
 
         private void Logout()
@@ -148,24 +153,33 @@ namespace BasicAuthSample
                     }
                 });               
             }
+            else
+            {
+                ShowAlert("MAS.LogoutWithCompletion", "No user logged in.");
+            }
         }
 
         private void StartSDK()
         {
-            //
-            //  Initialize SDK always with default configuration
-            // 
-            MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
+            if (MAS.MASState.Equals(MASState.NotInitialized))
             {
-                if(completed)
+                MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
                 {
-                    ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
-                }
-                if(error!=null)
-                {
-                    ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
-                }
-            });
+                    if (completed)
+                    {
+                        ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
+                    }
+                    if (error != null)
+                    {
+                        ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
+                    }
+                });
+            }
+            else
+            {
+                ShowAlert("MAS.Start", "CA Mobile SDK already initialized.");
+            }
+
         }
 
         private void SetGrantFlowToPassword()
