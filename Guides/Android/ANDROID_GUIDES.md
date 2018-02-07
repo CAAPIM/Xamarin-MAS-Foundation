@@ -14,7 +14,7 @@ The Xamarin SDK libraries are:
 
 ## Prerequisites
 
-- [Requirements for CA Mobile API Gateway](http://mas.ca.com/aka Common)
+- [Requirements for CA Mobile API Gateway](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
 - Android 8.1.0 for new apps written in C#
 - Android 4.4 and later to run the sample app                                  
  
@@ -22,9 +22,11 @@ The Xamarin SDK libraries are:
 
 The Android **BasicAuthSample** sample app lets you test the following with a CA Mobile API Gateway. The app was created using Visual Studio Community 2017 build 7.3.3. 
 
+- Define authentication flow 
+- Start the SDK 
 - Log in
+- Invoke a protected API 
 - Log out
-- Invoke a protected API using the default login flow 
    
 1. Open a terminal window in a directory of your choice and clone the MAS Foundation repo: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**.  
 After cloning, you will have /sample and /source directories for "Android" and "iOS".
@@ -38,24 +40,31 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **login**, **logout**, and **invoke** a protected API. 
 
-## Login: Authentication
 
-**Library**: MASFoundation
-**Description**: Methods for authentication flows. Includes methods to start the SDK with a default flow. Backed by OAuth 2.0 protocol on the MAG server, you can securely consume APIs on mobile devices. 
+## Start the SDK and Display Mobile App Home Page
 
-For a deep dive into the Mobile SDK and MAG security flows, see [Blog](http://TBD)
+**Scenario**: User accesses your mobile bank app. Upon starting the app, there is no sensitive data, so user permission is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API. 
 
-#### Log in: authenticate access to an API
-
-**Scenario**: User accesses their bank website with your mobile app. Because the home page doesn't contain sensitive data, user permission is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential**.
-
-```
-// Set grant flow to client credentials
-
+```c#
+// MAS.Start(Context context, bool shouldUseDefault);
+MAS.Start(Application.Context, true);
+// MAS.SetGrantFlow(int type);
+ 
+// Set Grant Flow to Client Credentials
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
+
+// Set Grant Flow to Password
+MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
-#### Log in: authenticate user with username and password
+## Log in: Authentication 
+
+**Library**: MASFoundation<br>
+**Description**: Methods for authentication flows. Backed by OAuth 2.0 protocol on the MAG server, you can securely consume APIs on mobile devices.</br>
+
+For a deep dive into the Mobile SDK and MAG security flows, see [Blog](https://www.ca.com/us/developers/mas/blog.html?id=2)
+
+### Log in: authenticate user with username and password
 
 **Scenario**: User logs into the banking app to check account statements. In this flow, the user must provide credentials to the app because it is sensitive data. The Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
 
@@ -78,7 +87,7 @@ private class LoginCallback : MASCallback
  
 #### Log in: user authentication with implicit trust
 
-**Scenario**: User just won the lottery and wants to interac money to a list of friends on Facebook. In this flow, the user needs temporary access to Facebook to get some data. In an implicit trust flow, your app is implicitly trusting Facebook to secure and store information. Th user logs into your app and is presented with authorization screen "BestBank app is requesting access to Facebook, do you want to grant access?" 
+**Scenario**: Th user just won the lottery and wants to interac money to a list of friends on Facebook. In this flow, the user needs temporary access to Facebook to get some data. In an implicit trust flow, your app is implicitly trusting Facebook to secure and store information. Th user logs into your app and is presented with authorization screen "BestBank app is requesting access to Facebook, do you want to grant access?" 
 
 ```c#
 private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
@@ -131,22 +140,6 @@ private class LoginCallback : MASCallback
         }
  ```
 
-
-### Start the SDK with default authentication flow
-
-Start the SDK with a default authentication flow of your choice. The default flow is client credential.
-
-```c#
-// MAS.Start(Context context, bool shouldUseDefault);
-MAS.Start(Application.Context, true);
-// MAS.SetGrantFlow(int type);
- 
-// Set Grant Flow to Client Credentials
-MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
-
-// Set Grant Flow to Password
-MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
-```
 
 ## Access APIs
 
