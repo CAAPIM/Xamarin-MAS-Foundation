@@ -41,9 +41,11 @@ If you get an error, the most likely cause is an invalid app configuration file.
 ## Login: Authentication
 
 **Library**: MASFoundation
-**Description**: Methods to start the SDK with default login flow, stop the SDK, and methods to log in/log out with various grant flows.
+**Description**: Methods to start the SDK with default login flow, and methods to log in/log out with various authentication flows.
 
-### Start the SDK and set default login flow
+### Start the SDK and set login flow
+
+You can start the SDK with a default authentication flow of your choice. The default flow is client credential. 
 
 ```c#
 //MAS.Start(Context context, bool shouldUseDefault);
@@ -51,11 +53,15 @@ MAS.Start(Application.Context, true);
 //MAS.SetGrantFlow(int type);
 ```
 
-**Example**: 
+**Example**: Set default to client credential
 
 ```c#
 // Set Grant Flow to Client Credentials
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
+```
+
+**Example**: Set default to username and password
+```
 // Set Grant Flow to Password
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
@@ -116,14 +122,7 @@ private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationLis
  }
 ```
 
-##### Get authenticated user (or no user)
-
-```c#
-// Returns the current authenticated user or null if there is no authenticated user.
-MASUser.CurrentUser
-```
-
-#### Log out
+#### Log out: user authentication
 
 ```MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
 private class LoginCallback : MASCallback
@@ -139,6 +138,14 @@ private class LoginCallback : MASCallback
             }
         }
  ```
+
+##### Return authenticated user/no user
+
+```c#
+// Returns the current authenticated user or null if there is no authenticated user.
+MASUser.CurrentUser
+```
+
 
 ## Access APIs
 
