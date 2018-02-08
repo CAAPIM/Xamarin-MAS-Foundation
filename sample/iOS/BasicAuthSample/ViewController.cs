@@ -115,7 +115,7 @@ namespace BasicAuthSample
 
         private void invokeProtectedAPI()
         {
-            if (MAS.MASState == MASState.DidStart)
+            if (MAS.MASState != MASState.NotInitialized)
             {
                 //  Create MASRequestBuilder with HTTP method 
                 MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
