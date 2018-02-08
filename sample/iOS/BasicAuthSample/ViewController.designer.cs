@@ -37,6 +37,18 @@ namespace BasicAuthSample
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void LogoutButton_TouchUpInside (UIKit.UIButton sender);
 
+        [Action ("UIButton10140_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void GrantFlowToClientCredentials_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("UIButton3556_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void GrantFlowToPassword_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("UIButton4035_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void StartSDK_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (InvokeAPIButton != null) {
