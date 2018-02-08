@@ -32,7 +32,7 @@
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3335" fixedFrame="YES">
-                                <rect key="frame" x="71" y="353.5" width="233" height="57"/>
+                                <rect key="frame" x="71" y="421" width="233" height="57"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,7 +43,7 @@
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3336" fixedFrame="YES">
-                                <rect key="frame" x="70" y="415.5" width="234" height="56.5"/>
+                                <rect key="frame" x="70" y="357" width="234" height="56"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Invoke Protected API">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,19 +54,20 @@
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3556" fixedFrame="YES">
-                                <rect key="frame" x="70" y="231" width="235" height="57"/>
+                                <rect key="frame" x="70" y="163" width="235" height="57"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Set Grant Flow to Password">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="InvokeAPIButton_TouchUpInside:" destination="3558" eventType="touchUpInside" id="3557"/>
-                                    <action selector="UIButton3556_TouchUpInside:" destination="BYZ-38-t0r" id="3559" eventType="touchUpInside"/>
+                                    <action selector="GrantFlowToPassword_TouchUpInside:" destination="BYZ-38-t0r" id="11190" eventType="touchUpInside"/>
                                 </connections>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4035" fixedFrame="YES">
-                                <rect key="frame" x="70" y="109" width="235" height="56.5"/>
+                                <rect key="frame" x="70" y="228" width="235" height="56"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
                                 <state key="normal" title="Start SDK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,29 +75,22 @@
                                 <connections>
                                     <action selector="InvokeAPIButton_TouchUpInside:" destination="4037" eventType="touchUpInside" id="4036"/>
                                     <action selector="UIButton3556_TouchUpInside:" destination="4039" id="4038" eventType="touchUpInside"/>
-                                    <action selector="UIButton4035_TouchUpInside:" destination="BYZ-38-t0r" id="4040" eventType="touchUpInside"/>
+                                    <action selector="StartSDKButton_TouchUpInside:" destination="BYZ-38-t0r" id="11187" eventType="touchUpInside"/>
                                 </connections>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="10140" fixedFrame="YES" hasAttributedTitle="YES">
-                                <rect key="frame" x="70" y="170.5" width="235" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="10140" fixedFrame="YES">
+                                <rect key="frame" x="70" y="99" width="235" height="56"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
                                     <action selector="InvokeAPIButton_TouchUpInside:" destination="10142" eventType="touchUpInside" id="10141"/>
                                     <action selector="UIButton3556_TouchUpInside:" destination="10144" id="10143" eventType="touchUpInside"/>
-                                    <action selector="UIButton10140_TouchUpInside:" destination="BYZ-38-t0r" id="10151" eventType="touchUpInside"/>
+                                    <action selector="GrantFlowToClientCredentials_TouchUpInside:" destination="BYZ-38-t0r" id="11189" eventType="touchUpInside"/>
                                 </connections>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Set Grant Flow to Client Credentials">
-                                            <attributes>
-                                                <color key="NSColor" colorSpace="calibratedRGB" red="0.89803921568627454" green="0.97254901960784312" blue="0.90196078431372551" alpha="1"/>
-                                                <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="17"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Set Grant Flow to Client Credentials">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                             </button>
                         </subviews>
@@ -106,6 +100,9 @@
                         <outlet property="InvokeAPIButton" destination="3336" id="name-outlet-3336"/>
                         <outlet property="LoginButton" destination="3334" id="name-outlet-3334"/>
                         <outlet property="LogoutButton" destination="3335" id="name-outlet-3335"/>
+                        <outlet property="StartSDKButton" destination="4035" id="name-outlet-4035"/>
+                        <outlet property="GrantFlowToClientCredentials" destination="10140" id="name-outlet-10140"/>
+                        <outlet property="GrantFlowToPassword" destination="3556" id="name-outlet-3556"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

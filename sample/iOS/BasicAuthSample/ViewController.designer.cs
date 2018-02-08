@@ -15,6 +15,14 @@ namespace BasicAuthSample
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton GrantFlowToClientCredentials { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton GrantFlowToPassword { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton InvokeAPIButton { get; set; }
 
         [Outlet]
@@ -24,6 +32,18 @@ namespace BasicAuthSample
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton LogoutButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton StartSDKButton { get; set; }
+
+        [Action ("GrantFlowToClientCredentials_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void GrantFlowToClientCredentials_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("GrantFlowToPassword_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void GrantFlowToPassword_TouchUpInside (UIKit.UIButton sender);
 
         [Action ("InvokeAPIButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -37,20 +57,22 @@ namespace BasicAuthSample
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void LogoutButton_TouchUpInside (UIKit.UIButton sender);
 
-        [Action ("UIButton10140_TouchUpInside:")]
+        [Action ("StartSDKButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void GrantFlowToClientCredentials_TouchUpInside (UIKit.UIButton sender);
-
-        [Action ("UIButton3556_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void GrantFlowToPassword_TouchUpInside (UIKit.UIButton sender);
-
-        [Action ("UIButton4035_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void StartSDK_TouchUpInside (UIKit.UIButton sender);
+        partial void StartSDKButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
+            if (GrantFlowToClientCredentials != null) {
+                GrantFlowToClientCredentials.Dispose ();
+                GrantFlowToClientCredentials = null;
+            }
+
+            if (GrantFlowToPassword != null) {
+                GrantFlowToPassword.Dispose ();
+                GrantFlowToPassword = null;
+            }
+
             if (InvokeAPIButton != null) {
                 InvokeAPIButton.Dispose ();
                 InvokeAPIButton = null;
@@ -64,6 +86,11 @@ namespace BasicAuthSample
             if (LogoutButton != null) {
                 LogoutButton.Dispose ();
                 LogoutButton = null;
+            }
+
+            if (StartSDKButton != null) {
+                StartSDKButton.Dispose ();
+                StartSDKButton = null;
             }
         }
     }

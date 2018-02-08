@@ -23,7 +23,7 @@ namespace BasicAuthSample
             SetGrantFlowToClientCredentials();
         }
 
-        partial void StartSDK_TouchUpInside(UIButton sender)
+        partial void StartSDKButton_TouchUpInside(UIButton sender)
         {
             StartSDK();
         }
