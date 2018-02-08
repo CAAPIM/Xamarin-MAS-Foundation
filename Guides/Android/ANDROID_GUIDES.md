@@ -49,6 +49,8 @@ If you get an error, the most likely cause is an invalid app configuration file.
 
 **Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user permission (login) is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API. 
 
+#### Client Credential 
+
 ```c#
 // MAS.Start(Context context, bool shouldUseDefault);
 MAS.Start(Application.Context, true);
@@ -61,11 +63,12 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
-### Authenticate user with username and password
+#### Authenticate user with password (explicit)
 
-**Scenario 2**: You created a specialized mobile app just to check account statements. In this case, you want users authenticated before they see any data. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
+**Scenario 2**: You created a specialized mobile app just to check account statements. In this case, you want users authenticated to see anything so you present a login screen. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
 
 ```c#
+// 
 
 MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
 private class LoginCallback : MASCallback
@@ -82,13 +85,12 @@ private class LoginCallback : MASCallback
         }
  ```
 
-### Access trusted app that user authorizes
-
-[graphic]
-
-**Scenario**: Our bank app user just won the lottery and wants to transfer money to a list of friends on Facebook. (What a friend indeed!) In this flow, the user needs temporary access to Facebook to get some data. In an implicit flow, your app implicitly trusts Facebook to securely store the user information. The user logs into your app, clicks the Facebook icon, and is presented with authorization screen "MyBankApp" is requesting access to Facebook, do you want to grant access?" 
+### Authenticate user with password (log in again) 
 
 ```c#
+
+// Token has expired. Trigger event to device that login is required to access API
+
 private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
  {
      public void OnAuthenticateRequest(Context context, long requestId, MASAuthenticationProviders providers)
@@ -115,7 +117,7 @@ private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationLis
  }
 ```
 
-### Other User/Login Methods 
+### Other Authentication Methods 
 
 #### Get current user
 
