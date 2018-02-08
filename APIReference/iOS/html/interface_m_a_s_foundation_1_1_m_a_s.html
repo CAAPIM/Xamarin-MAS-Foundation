@@ -117,7 +117,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOTPCredentialsBloc
 <tr class="memdesc:a232c49373a1f81a3b50ad49eeafbc675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the lifecycle of the <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> processes with given JSON configuration data. This method will overwrite JSON configuration(if they are different) that was stored in keychain.  <a href="#a232c49373a1f81a3b50ad49eeafbc675">More...</a><br /></td></tr>
 <tr class="separator:a232c49373a1f81a3b50ad49eeafbc675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6432ae8ac9fc8e203eb20af5d431ab7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#ac6432ae8ac9fc8e203eb20af5d431ab7">StartWithURL</a> ([NullAllowed] NSUrl url, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d">MASCompletionErrorBlock</a> completion)</td></tr>
-<tr class="memdesc:ac6432ae8ac9fc8e203eb20af5d431ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the lifecycle of the <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> processes with given JSON configuration file path, enrolment URL or nil. This method will overwrite JSON configuration(if they are different) that was stored in keychain when configuration file path or enrolment URL is provided.  <a href="#ac6432ae8ac9fc8e203eb20af5d431ab7">More...</a><br /></td></tr>
+<tr class="memdesc:ac6432ae8ac9fc8e203eb20af5d431ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the lifecycle of the <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> processes with given JSON configuration file path, enrolment URL or null. This method will overwrite JSON configuration(if they are different) that was stored in keychain when configuration file path or enrolment URL is provided.  <a href="#ac6432ae8ac9fc8e203eb20af5d431ab7">More...</a><br /></td></tr>
 <tr class="separator:ac6432ae8ac9fc8e203eb20af5d431ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eca812d254767d1e15a7a2b14d31667"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a8eca812d254767d1e15a7a2b14d31667">Stop</a> ([NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d">MASCompletionErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:a8eca812d254767d1e15a7a2b14d31667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the lifecycle of all <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> processes.  <a href="#a8eca812d254767d1e15a7a2b14d31667">More...</a><br /></td></tr>
@@ -455,7 +455,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 <dl class="section since"><dt>Since</dt><dd><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.  Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable</td><td>BOOL value of indicating whether PKCE is enabled or not.</td></tr>
+    <tr><td class="paramname">enable</td><td>bool value of indicating whether PKCE is enabled or not.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1361,8 +1361,8 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 </div><div class="memdoc">
 
 <p>Sets the gateway monitoring block defined by the GatewayMonitorStatusBlock type. This block will be triggered when any change to the current monitoring status takes place with a MASGatewayMonitoringStatus. </p>
-<p>This is optional and it can be set to nil at any time to stop receiving the notifications. </p>
-<p>The gateway monitoring status enumerated values are: MASGatewayMonitoringStatus.ewayMonitoringStatusNotReachable MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWWAN MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWiFi </p>
+<p>This is optional and it can be set to null at any time to stop receiving the notifications. </p>
+<p>The gateway monitoring status enumerated values are: MASGatewayMonitoringStatus.NotReachable MASGatewayMonitoringStatus.ReachableViaWWAN MASGatewayMonitoringStatus.ReachableViaWiFi </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">monitor</td><td>The MASGatewayMonitorStatusBlock that will receive the status updates.</td></tr>
@@ -1467,7 +1467,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 </div><div class="memdoc">
 
 <p>Starts the lifecycle of the <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> processes. </p>
-<p>Although an asynchronous block callback parameter is provided for response usage, optionally you can set that to nil and the caller can observe the lifecycle notifications instead.</p>
+<p>Although an asynchronous block callback parameter is provided for response usage, optionally you can set that to null and the caller can observe the lifecycle notifications instead.</p>
 <p>This will load the last used JSON configuration from keychain storage.If there was none, it will load from default JSON configuration file (msso_config.json) or JSON file with file name set through[<a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> setConfigurationFileName:]. </p>
 <p>The <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> lifecycle notifications are:</p>
 <ul>
@@ -1483,7 +1483,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">completion</td><td>An MASCompletionErrorBlock type (bool completed, NSError error) that will receive a <code>true</code> or <code>false</code> BOOL indicating the completion state and/or an NSError object if there is a failure. </td></tr>
+    <tr><td class="paramname">completion</td><td>An MASCompletionErrorBlock type (bool completed, NSError error) that will receive a <code>true</code> or <code>false</code> bool indicating the completion state and/or an NSError object if there is a failure. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1517,7 +1517,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 </div><div class="memdoc">
 
 <p>Starts the lifecycle of the <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> processes. </p>
-<p>Although an asynchronous block callback parameter is provided for response usage, optionally you can set that to nil and the caller can observe the lifecycle notifications instead.</p>
+<p>Although an asynchronous block callback parameter is provided for response usage, optionally you can set that to null and the caller can observe the lifecycle notifications instead.</p>
 <p>This will load the default JSON configuration rather than from keychain storage; if the SDK was already initialized, this method will fully stop and re-start the SDK. The default JSON configuration file should be msso_config.json or file name defined through <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#acf382815c1d2bca8060b09a8ac47f5b2" title="Set the name of the configuration file. This gives the ability to set the file&#39;s name to a custom val...">MAS.SetConfigurationFileName()</a>. This will ignore the JSON configuration in keychain storage and replace with the default configuration. </p>
 <p>The <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> lifecycle notifications are:</p>
 <ul>
@@ -1534,7 +1534,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">shouldUseDefault</td><td>Boolean value of using default configuration rather than the one in keychain storage.</td></tr>
-    <tr><td class="paramname">completion</td><td>An MASCompletionErrorBlock type (bool completed, NSError error) that will receive a <code>true</code> or <code>false</code> BOOL indicating the completion state and/or an NSError object if there is a failure. </td></tr>
+    <tr><td class="paramname">completion</td><td>An MASCompletionErrorBlock type (bool completed, NSError error) that will receive a <code>true</code> or <code>false</code> bool indicating the completion state and/or an NSError object if there is a failure. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1568,7 +1568,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 </div><div class="memdoc">
 
 <p>Starts the lifecycle of the <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> processes with given JSON configuration data. This method will overwrite JSON configuration(if they are different) that was stored in keychain. </p>
-<p>Although an asynchronous block callback parameter is provided for response usage, optionally you can set that to nil and the caller can observe the lifecycle </p>
+<p>Although an asynchronous block callback parameter is provided for response usage, optionally you can set that to null and the caller can observe the lifecycle </p>
 <p>The <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> lifecycle notifications are:</p>
 <ul>
 <li>MASWillStartNotification</li>
@@ -1584,7 +1584,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">jsonConfiguration</td><td>NSDictionary of JSON configuration object.</td></tr>
-    <tr><td class="paramname">completion</td><td>An MASCompletionErrorBlock type (bool completed, NSError error) that will receive a <code>true</code> or <code>false</code> BOOL indicating the completion state and/or an NSError object if there is a failure.</td></tr>
+    <tr><td class="paramname">completion</td><td>An MASCompletionErrorBlock type (bool completed, NSError error) that will receive a <code>true</code> or <code>false</code> bool indicating the completion state and/or an NSError object if there is a failure.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1617,13 +1617,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
       </table>
 </div><div class="memdoc">
 
-<p>Starts the lifecycle of the <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> processes with given JSON configuration file path, enrolment URL or nil. This method will overwrite JSON configuration(if they are different) that was stored in keychain when configuration file path or enrolment URL is provided. </p>
-<p>When URL is recognized as nil, this method will initialize SDK by using last used JSON configuration that is stored in keychain storage, or load JSON configuration from defined default configuration file name.</p>
+<p>Starts the lifecycle of the <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> processes with given JSON configuration file path, enrolment URL or null. This method will overwrite JSON configuration(if they are different) that was stored in keychain when configuration file path or enrolment URL is provided. </p>
+<p>When URL is recognized as null, this method will initialize SDK by using last used JSON configuration that is stored in keychain storage, or load JSON configuration from defined default configuration file name.</p>
 <p>Enrolment URL is an URL from gateway containing some of credentials required to establish secure connection.</p>
 <p>The gateway must be configured to generate and handle enrolment process with client side SDK. The enrolment URL can be retrieved in many ways which has to be configured properly along with the gateway in regards of the enrolment process.</p>
 <p><a class="el" href="namespace_m_a_s_foundation.html">MASFoundation</a> SDK does not request, or retrieve the enrolment URL by itself.</p>
 <p>Although an asynchronous block callback parameter is provided for response usage,</p>
-<p>optionally you can set that to nil and the caller can observe the lifecycle </p>
+<p>optionally you can set that to null and the caller can observe the lifecycle </p>
 <p>The <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> lifecycle notifications are:</p>
 <ul>
 <li>MASWillStartNotification</li>
@@ -1639,7 +1639,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">url</td><td>NSURL of JSON configuration file path or enrolment URL.</td></tr>
-    <tr><td class="paramname">completion</td><td>An MASCompletionErrorBlock type (BOOL completed, NSError *error) that will receive a <code>true</code> or <code>false</code> BOOL indicating the completion state and/or an NSError object if there is a failure.</td></tr>
+    <tr><td class="paramname">completion</td><td>An MASCompletionErrorBlock type (bool completed, NSError *error) that will receive a <code>true</code> or <code>false</code> bool indicating the completion state and/or an NSError object if there is a failure.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1663,7 +1663,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 </div><div class="memdoc">
 
 <p>Stops the lifecycle of all <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> processes. </p>
-<p>Although an asynchronous block callback parameter is provided for response usage, optionally you can set that to nil and the caller can observe the lifecycle notifications instead. </p>
+<p>Although an asynchronous block callback parameter is provided for response usage, optionally you can set that to null and the caller can observe the lifecycle notifications instead. </p>
 <p>The lifecycle notifications are:</p>
 <ul>
 <li>MASWillStopNotification</li>
@@ -1672,7 +1672,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">completion</td><td>An MASCompletionErrorBlock type (bool completed, NSError error) that will receive a <code>true</code> or <code>false</code> BOOL indicating the completion state and/or an NSError object if there is a failure. </td></tr>
+    <tr><td class="paramname">completion</td><td>An MASCompletionErrorBlock type (bool completed, NSError error) that will receive a <code>true</code> or <code>false</code> bool indicating the completion state and/or an NSError object if there is a failure. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1727,7 +1727,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 
 <p>Retrieves the current gateway monitoring status of the Gateway connection. </p>
 <p>The monitoring status enumerated values to their string equivalents are:</p>
-<p>MASGatewayMonitoringStatus.ewayMonitoringStatusNotReachable MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWWAN MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWiFi </p>
+<p>MASGatewayMonitoringStatus.NotReachable MASGatewayMonitoringStatus.ReachableViaWWAN MASGatewayMonitoringStatus.ReachableViaWiFi </p>
 <p>The gateway monitoring status as string.</p>
 
 </div>
@@ -1804,7 +1804,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 
 <p>Gets a value indicating whether this T:MASFoundation.MAS is PKCEE nabled. </p>
 <dl class="section since"><dt>Since</dt><dd><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html" title="The top level MAS object represents the Mobile App Services SDK in it&#39;s entirety.  It is where the fr...">MAS</a> Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.  Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification. </dd></dl>
-<p>BOOL value of indicating whether PKCE is enabled or not. <code>true</code> if is PKCEE nabled; otherwise, <code>false</code>. </p>
+<p>bool value of indicating whether PKCE is enabled or not. <code>true</code> if is PKCEE nabled; otherwise, <code>false</code>. </p>
 
 </div>
 </div>

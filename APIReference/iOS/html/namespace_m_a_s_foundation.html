@@ -150,9 +150,9 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ac90097c304764a6f2d21cd2b94f1045b"><td class="memItemLeft" align="right" valign="top"><a id="ac90097c304764a6f2d21cd2b94f1045b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MASAuthenticationStatus</b> { <b>MASAuthenticationStatusNotLoggedIn</b> = -1, 
-<b>MASAuthenticationStatusLoginWithUser</b>, 
-<b>MASAuthenticationStatusLoginAnonymously</b>
+<tr class="memitem:ac90097c304764a6f2d21cd2b94f1045b"><td class="memItemLeft" align="right" valign="top"><a id="ac90097c304764a6f2d21cd2b94f1045b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MASAuthenticationStatus</b> { <b>NotLoggedIn</b> = -1, 
+<b>LoginWithUser</b>, 
+<b>LoginAnonymously</b>
  }</td></tr>
 <tr class="separator:ac90097c304764a6f2d21cd2b94f1045b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ea786f9007576a08ffb403784010ada"><td class="memItemLeft" align="right" valign="top"><a id="a4ea786f9007576a08ffb403784010ada"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MASGrantFlow</b> { <b>Unknown</b> = -1, 
@@ -324,12 +324,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="separator:a3abda6f533b5762a31bec221da1121c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b37d69c15fcf31c429f6024431cd856"><td class="memItemLeft" align="right" valign="top"><a id="a4b37d69c15fcf31c429f6024431cd856"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MASGatewayMonitoringStatus</b> { <br />
-&#160;&#160;<b>ewayMonitoringStatusUnknown</b> = -1, 
-<b>ewayMonitoringStatusNotReachable</b>, 
-<b>ewayMonitoringStatusReachableViaWWAN</b>, 
-<b>ewayMonitoringStatusReachableViaWiFi</b>, 
+&#160;&#160;<b>Unknown</b> = -1, 
+<b>NotReachable</b>, 
+<b>ReachableViaWWAN</b>, 
+<b>ReachableViaWiFi</b>, 
 <br />
-&#160;&#160;<b>weayMonitoringStatusCount</b>
+&#160;&#160;<b>Count</b>
 <br />
  }</td></tr>
 <tr class="separator:a4b37d69c15fcf31c429f6024431cd856"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -411,9 +411,39 @@ Functions</h2></td></tr>
 <tr class="memitem:a07259ec9d36007fb05e12a62356f71f2"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_m_a_s_foundation.html#a07259ec9d36007fb05e12a62356f71f2">MASUserAuthCredentialsBlock</a> ([BlockCallback] <a class="el" href="namespace_m_a_s_foundation.html#a1bd7d34d07e332e514505e41ef634b1b">MASAuthCredentialsBlock</a> arg0)</td></tr>
 <tr class="memdesc:a07259ec9d36007fb05e12a62356f71f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user auth credentials blcok that will be invoked by SDK to notify developers to provide auth credentials.  <a href="#a07259ec9d36007fb05e12a62356f71f2">More...</a><br /></td></tr>
 <tr class="separator:a07259ec9d36007fb05e12a62356f71f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310092394470df286657e2d3f2e20db4"><td class="memItemLeft" align="right" valign="top"><a id="a310092394470df286657e2d3f2e20db4"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MASOTPGenerationBlock</b> (NSObject[] arg0, bool arg1, [BlockCallback, NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d">MASCompletionErrorBlock</a> arg2)</td></tr>
+<tr class="separator:a310092394470df286657e2d3f2e20db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b76d75b080f9d115fa876dfe5806d9"><td class="memItemLeft" align="right" valign="top"><a id="a52b76d75b080f9d115fa876dfe5806d9"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MASOTPFetchCredentialsBlock</b> (string arg0, bool arg1, [BlockCallback, NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d">MASCompletionErrorBlock</a> arg2)</td></tr>
+<tr class="separator:a52b76d75b080f9d115fa876dfe5806d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd3b245b0cd0f220e574549aa96cd50"><td class="memItemLeft" align="right" valign="top"><a id="afdd3b245b0cd0f220e574549aa96cd50"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MASOTPChannelSelectionBlock</b> (NSObject[] arg0, [BlockCallback] MASOTPGenerationBlock arg1)</td></tr>
+<tr class="separator:afdd3b245b0cd0f220e574549aa96cd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d6ecbbd3da4bcc7d09109555ac0fc2"><td class="memItemLeft" align="right" valign="top"><a id="af9d6ecbbd3da4bcc7d09109555ac0fc2"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MASOTPCredentialsBlock</b> ([BlockCallback] MASOTPFetchCredentialsBlock arg0, [NullAllowed] NSError arg1)</td></tr>
+<tr class="separator:af9d6ecbbd3da4bcc7d09109555ac0fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0dda2da545d7e0ca99ebfaec1be04ff"><td class="memItemLeft" align="right" valign="top"><a id="ad0dda2da545d7e0ca99ebfaec1be04ff"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MASBiometricModalitiesBlock</b> ([NullAllowed] NSObject[] arg0, bool arg1, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d">MASCompletionErrorBlock</a> arg2)</td></tr>
+<tr class="separator:ad0dda2da545d7e0ca99ebfaec1be04ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac214f8f1585bc58d8db653ad3943a235"><td class="memItemLeft" align="right" valign="top"><a id="ac214f8f1585bc58d8db653ad3943a235"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MASBiometricRegistrationModalitiesSelectionBlock</b> (NSObject[] arg0, MASBiometricModalitiesBlock arg1)</td></tr>
+<tr class="separator:ac214f8f1585bc58d8db653ad3943a235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ed5035f551a5bb13b081c20d95b5b6"><td class="memItemLeft" align="right" valign="top"><a id="a56ed5035f551a5bb13b081c20d95b5b6"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MASBiometricDeregistrationModalitiesSelectionBlock</b> (NSObject[] arg0, MASBiometricModalitiesBlock arg1)</td></tr>
+<tr class="separator:a56ed5035f551a5bb13b081c20d95b5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ff2795b6b11eec74ee5b57d38146517"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_m_a_s_foundation.html#a3ff2795b6b11eec74ee5b57d38146517">MASGatewayMonitorStatusBlock</a> (MASGatewayMonitoringStatus arg0)</td></tr>
 <tr class="memdesc:a3ff2795b6b11eec74ee5b57d38146517"><td class="mdescLeft">&#160;</td><td class="mdescRight">MThe Gateway monitor status block that will receive a MASGatewayMonitoringStatus update when a new status value change is triggered.  <a href="#a3ff2795b6b11eec74ee5b57d38146517">More...</a><br /></td></tr>
 <tr class="separator:a3ff2795b6b11eec74ee5b57d38146517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67a6dd19bf78493ded1458fe186a5ee8"><td class="memItemLeft" align="right" valign="top"><a id="a67a6dd19bf78493ded1458fe186a5ee8"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MASBasicCredentialsBlock</b> (string arg0, string arg1, bool arg2, [BlockCallback, NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d">MASCompletionErrorBlock</a> arg3)</td></tr>
+<tr class="separator:a67a6dd19bf78493ded1458fe186a5ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a178d3b4f5f21ec1c7de16601ced50d71"><td class="memItemLeft" align="right" valign="top"><a id="a178d3b4f5f21ec1c7de16601ced50d71"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MASAuthorizationCodeCredentialsBlock</b> (string arg0, bool arg1, [BlockCallback, NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d">MASCompletionErrorBlock</a> arg2)</td></tr>
+<tr class="separator:a178d3b4f5f21ec1c7de16601ced50d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c61f4c888cfdf72b5928113ff6a28d"><td class="memItemLeft" align="right" valign="top"><a id="a45c61f4c888cfdf72b5928113ff6a28d"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MASUserLoginWithUserCredentialsBlock</b> ([BlockCallback] MASBasicCredentialsBlock arg0, [BlockCallback] MASAuthorizationCodeCredentialsBlock arg1)</td></tr>
+<tr class="separator:a45c61f4c888cfdf72b5928113ff6a28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bac2966d7138c1dba190777577a90e0"><td class="memItemLeft" align="right" valign="top"><a id="a9bac2966d7138c1dba190777577a90e0"></a>
 delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MQTTSubscriptionCompletionHandler</b> (NSObject[] arg0)</td></tr>
 <tr class="separator:a9bac2966d7138c1dba190777577a90e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -517,7 +547,7 @@ delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>MQTTDisconne
 </div><div class="memdoc">
 
 <p>MThe Gateway monitor status block that will receive a MASGatewayMonitoringStatus update when a new status value change is triggered. </p>
-<p><code> MASGatewayMonitoringStatus.ewayMonitoringStatusNotReachable MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWWAN MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWiFi </code> </p>
+<p><code> MASGatewayMonitoringStatus.NotReachable MASGatewayMonitoringStatus.ReachableViaWWAN MASGatewayMonitoringStatus.ReachableViaWiFi </code> </p>
 
 </div>
 </div>
