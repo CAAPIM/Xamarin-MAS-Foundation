@@ -88,26 +88,24 @@ namespace BasicAuthSample
                                  {
                                      if (error != null)
                                      {
-                                         Console.WriteLine("Error {0}", error.LocalizedDescription);
+                                        ShowAlert("MAS.SetUserAuthCredentials", "ERROR: " + error.LocalizedDescription);
                                      }
                                      else
                                      {
-                                         Console.WriteLine("Success: User login");
+                                        ShowAlert("MAS.SetUserAuthCredentials", "Welcome " + MASUser.CurrentUser.UserName);
                                      }
                                  });
                             }
                             else
                             {
-                                // Cancel button
+                             // Cancel button
+                             authCredentialsBlock(null, true, null);
+
                             }
 
                         });
                 alert.Show();
-
-
             });
-
-
 
             //
             //  Initialize SDK always with default configuration
@@ -267,15 +265,21 @@ namespace BasicAuthSample
 
         private void ShowLogin()
         {
-            UIAlertView alert = new UIAlertView();
 
-            alert.AlertViewStyle = UIAlertViewStyle.LoginAndPasswordInput;
-            alert.Title = "MAS.LoginWithUserName";
-            alert.AddButton("Login");
-            alert.AddButton("Cancel");
-            alert.Message = "Please enter your username and password";
-            alert.Clicked += ProcessLogin;
-            alert.Show();
+            if (MASUser.CurrentUser != null) {
+                ShowAlert("MAS.LoginWithUserName", "User already logged in");
+            } else
+            {
+                UIAlertView alert = new UIAlertView();
+
+                alert.AlertViewStyle = UIAlertViewStyle.LoginAndPasswordInput;
+                alert.Title = "MAS.LoginWithUserName";
+                alert.AddButton("Login");
+                alert.AddButton("Cancel");
+                alert.Message = "Please enter your username and password";
+                alert.Clicked += ProcessLogin;
+                alert.Show();   
+            }
         }
 
         public void ProcessLogin(object sender, UIButtonEventArgs e)
