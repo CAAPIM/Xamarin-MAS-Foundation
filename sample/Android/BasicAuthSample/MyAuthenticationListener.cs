@@ -56,8 +56,16 @@ namespace BasicAuthSample
             alert.SetTitle("Login");
             alert.SetCancelable(true);
 
-            alert.SetButton("Login", (c, ev) => {
-                MASUser.Login(username.Text, password.Text.ToCharArray(), new LoginCallback((MainActivity)context));
+            alert.SetButton("Login", (c, ev) =>
+            {
+                if (username.Text.Length > 0 && password.Text.Length > 0)
+                {
+                    MASUser.Login(username.Text, password.Text.ToCharArray(), new LoginCallback((MainActivity)context));
+                }
+                else
+                {
+                    Toast.MakeText(context, "Error: Empty Username or Password field!", ToastLength.Short).Show();
+                }
 
             });
 
