@@ -49,7 +49,7 @@ If you get an error, the most likely cause is an invalid app configuration file.
 
 **Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user permission (login) is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API. 
 
-#### Client Credential 
+### Client Credential 
 
 ```c#
 // MAS.Start(Context context, bool shouldUseDefault);
@@ -63,7 +63,7 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
-#### Authenticate user with password (explicit)
+### Authenticate user with password 
 
 **Scenario 2**: You created a specialized mobile app just to check account statements. In this case, you want users authenticated to see anything so you present a login screen. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
 
@@ -117,16 +117,14 @@ private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationLis
  }
 ```
 
-### Other Authentication Methods 
-
-#### Get current user
+### Get current user
 
 ```c#
 // Returns the current authenticated user or null if there is no authenticated user.
 MASUser.CurrentUser
 ```
 
-#### Log out authenticated user
+### Log out authenticated user
 
 ```MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
 private class LoginCallback : MASCallback
