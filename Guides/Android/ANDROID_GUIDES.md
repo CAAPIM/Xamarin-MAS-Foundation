@@ -40,12 +40,10 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **login**, **logout**, and **invoke** a protected API. 
 
-## Start the SDK with Your Own App
 
-[later sprint here: steps to start SDK with binaries/NuGet]<br> 
-For details on how the Mobile SDK secures your APIs, see [Blog](https://www.ca.com/us/developers/mas/blog.html?id=2)</br>
+## Start the SDK 
 
-### Step 1: Determine SDK Start Method 
+### Step 1: Determine Start Method 
 
 Before you start the SDK, you need determine the authentication flow for starting your app. You can choose:
 - Start, no user authentication (default)
@@ -67,7 +65,7 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 
 #### Start, user authentication with password
 
-**What**: Explicit login. Always present login screen.<br>
+**What**: Always start with login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
 
 ```c#
@@ -116,7 +114,7 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 #### Authenticate user with password (event-based)
 
 **What**: Event-based user authentication
-**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication. In OAuth, this is called **implicit grant** flow.
+**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.
 
 ```c#
 
@@ -145,6 +143,7 @@ private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationLis
      }
  }
  ```
+
 #### Get current user
 
 This method gets all of the properties of the currently authenticaticated user.
