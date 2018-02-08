@@ -56,6 +56,60 @@ namespace BasicAuthSample
             MAS.GrantFlow = MASGrantFlow.Password;
 
             //
+            //  MAS.GrantFlow must be set to MASGrantFlow.Password in order to trigger implicit login flow
+            //  MAS.SetUserAuthCredentials block must be set before invoking an API
+            // 
+            MAS.SetUserAuthCredentials((authCredentialsBlock) => {
+
+                var userName = String.Empty;
+                var password = String.Empty;
+
+                UIAlertView alert = new UIAlertView();
+                alert.AlertViewStyle = UIAlertViewStyle.LoginAndPasswordInput;
+                alert.Title = "MAS.LoginWithUserName";
+                alert.AddButton("Login");
+                alert.AddButton("Cancel");
+                alert.Message = "Please enter your username and password";
+                alert.Clicked += ((object sender, UIButtonEventArgs e) =>
+                     {
+                            UIAlertView parent_alert = (UIAlertView)sender;
+
+                            if (e.ButtonIndex == 0)
+                            {
+                                // OK button
+                                userName = parent_alert.GetTextField(0).Text;
+                                password = parent_alert.GetTextField(1).Text;
+
+                                 //  Build MASAuthCredentialsPassword with username and password
+                                 MASAuthCredentialsPassword passwordCredentials = MASAuthCredentialsPassword.InitWithUsername(userName, password);
+
+                                 //  Invoke callback block, authCredentialsBlock, with MASAuthCredentialsPassword object
+                                 authCredentialsBlock(passwordCredentials, false, (bool completed, NSError error) =>
+                                 {
+                                     if (error != null)
+                                     {
+                                         Console.WriteLine("Error {0}", error.LocalizedDescription);
+                                     }
+                                     else
+                                     {
+                                         Console.WriteLine("Success: User login");
+                                     }
+                                 });
+                            }
+                            else
+                            {
+                                // Cancel button
+                            }
+
+                        });
+                alert.Show();
+
+
+            });
+
+
+
+            //
             //  Initialize SDK always with default configuration
             // 
             StartSDK();
@@ -151,6 +205,12 @@ namespace BasicAuthSample
                     }
                 });               
             }
+            else
+            {
+                // Logged out without an error
+                ShowAlert("MAS.LogoutWithCompletion", "No user logged in");
+            }
+
         }
 
         private void StartSDK()
