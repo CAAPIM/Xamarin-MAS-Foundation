@@ -1,31 +1,32 @@
 
 ## iOS Guides MASFoundation for Xamarin
 
-The libraries in the Xamarin SDK include:
-
-**MASFoundation** is the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
+**MASFoundation** is the core MAS framework that handles the communication and authentication layer. Quickly build secure Xamarin apps using these built-in features:
  
 - Authenticate with:
   - Device registration
-  - User login and client credentials
+  - User login and registered app
   - Fingerprint session lock
   - Single Sign-On
 - Securely access protected APIs that are configured with OAuth 2.0
 
 ## Prerequisites
 
-- [General Requirements](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
-- iOS 11.0 for new apps, and TBD and later to run the Sample App                                     
+- [Requirements for CA Mobile API Gateway](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
+- iOS 11.0 for new apps written in C#                                     
  
 ## Quick Start with Sample App
 
-The **BasicAuthSample** sample app for iOS lets you test the following with a CA Mobile API Gateway. The app was created using Visual Studio Community 2017 build 7.3.3. 
+The iOS **BasicAuthSample** app:
 
--- Define authentication flow 
-- Start the SDK 
-- Log in
-- Access a protected API 
-- Log out
+ Lets you test the following with a CA Mobile API Gateway:  
+  - Define authentication flow 
+  - Start the SDK 
+  - Log in
+  - Access a protected API 
+  - Log out
+- Was created using Visual Studio Community 2017 build 7.3.3
+- Requires iOS 8.0 or later to run the app
 
 1. Open a terminal window in a directory of your choice and clone the MASFoundation repo: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**.  
 After cloning, you will have /sample and /source directories for "Android" and "iOS".
@@ -37,17 +38,53 @@ After cloning, you will have /sample and /source directories for "Android" and "
 7. In your emulator, launch the **BasicAuthSample** app.  
 You should get the confirmation: **MAS SDK started successfully**.  
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
-8. Now you can **login**, **logout**, and **invoke** a protected API. 
+8. Now you can **log in**, **log out**, and **access a protected API**. 
 
-## Start the SDK With Your Own App
+## Start the SDK 
 
-[graphic]
+### Step 1: Determine Start Method 
 
-### Access an API
+Before you start the SDK, you need determine the authentication flow for starting your app. You can choose:
+- Start, no user authentication (default)
+<br>or</br> 
+- Start, user authentication with password
 
-**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user permission (login) is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API. 
+#### Start, no user authentication
 
-### Client Credential
+**What**: No user authentication, just access an API. <br>
+**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
+
+```c#
+//  Set grantFlow to Client Credentials
+MAS.GrantFlow = MASGrantFlow.ClientCredentials;
+
+```
+
+#### Start, user authentication with password
+
+**What**: Always start with login screen.<br>
+**Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
+
+```c#
+//
+//  Login with username and password
+//
+MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, error) => {
+     
+    if (error != null)
+    {
+        Console.WriteLine("Error: {0}", error.LocalizedDescription);
+    } else {
+        Console.WriteLine("Success: User login");
+    }
+});
+```
+
+### Step 2: Start the SDK 
+
+The method that starts the SDK is **MAS.start**. You can put it anywhere in your app, but we suggest that you call this method as soon as possible (first screen of your app). This ensures that the SDK is ready to handle all security and communication with the MAG server.
+
+Add your authentication method (from the previous step) to start the SDK.
 
 ```c#
 //  Set grantFlow to Password
@@ -83,29 +120,12 @@ MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
 });
 ```
 
-### Authenticate user with password 
+### More Authentication Methods
 
-**Scenario 2**: You created a specialized mobile app that just checks bank account balances. In this case, you want users to log in immediately. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
+#### Authenticate user with password (event-based)
 
-```c#
-
-//
-//  Login with username and password
-//
-MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, error) => {
-     
-    if (error != null)
-    {
-        Console.WriteLine("Error: {0}", error.LocalizedDescription);
-    } else {
-        Console.WriteLine("Success: User login");
-    }
-});
- ```
- 
-### Authenticate user with password for single sign-on 
-
-**Scenario 3**: You are designing a chat app with the single sign-on feature. If a user has not signed into an app for days/hours, you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication. In OAuth, this is called **implicit grant** flow. 
+**What**: Event-based user authentication<br>
+**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
 
 ```c#
 //
