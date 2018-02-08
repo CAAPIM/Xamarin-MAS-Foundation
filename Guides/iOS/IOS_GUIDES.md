@@ -14,23 +14,18 @@ The libraries in the Xamarin SDK include:
 
 ## Prerequisites
 
-- [General Requirements](http://mas.ca.com/TBD)
-- iOS 11.0 for new apps, and 4.4 and TBD and later to use the Sample App                                     
+- [General Requirements](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
+- iOS 11.0 for new apps, and TBD and later to run the Sample App                                     
  
 ## Quick Start with Sample App
 
-The **BasicAuthSample** sample app for iOS lets you test the following with a CA Mobile API Gateway:
+The **BasicAuthSample** sample app for iOS lets you test the following with a CA Mobile API Gateway. The app was created using Visual Studio Community 2017 build 7.3.3. 
 
+-- Define authentication flow 
+- Start the SDK 
 - Log in
+- Access a protected API 
 - Log out
-- Invoke a protected API 
-
-The sample app was created using Visual Studio Community 2017 build 7.3.3. 
-
-**Video version of the steps below**: 
-  
-[iOS](https://vimeo.com/252969575)<br>
-Password: **MASFoundation**</br>
 
 1. Open a terminal window in a directory of your choice and clone the MASFoundation repo: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**.  
 After cloning, you will have /sample and /source directories for "Android" and "iOS".
@@ -44,98 +39,15 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **login**, **logout**, and **invoke** a protected API. 
 
-## Login: Authentication
+## Start the SDK With Your Own App
 
-**Library**: MASFoundation
-**Description**: Methods to log in/log out using various authentication flows. Includes methods to start the SDK with default login flow. Backed by OAuth 2.0 protocol on the MAG server, you can securely consume APIs on mobile devices. 
+[graphic]
 
-#### Log in: authenticate access to an API
+### Access an API
 
-**Scenario**: User accesses their mobile bank website. In this case, user permission is not required to access any data. and can view the bank services presented. Under the covers, the Mobile SDK requests access to the API using client ID and client secret. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential**.
+**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user permission (login) is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API. 
 
-```
-// Set grant flow to client credentials
-
-MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
-```
-
-#### Log in: authenticate user with username and password
-
-**Scenario**: User logs into the banking app to check accounts. In this flow, the user must provide credentials to the app. The Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
-
-```c#
-
-//
-//  Login with username and password
-//
-MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, error) => {
-     
-    if (error != null)
-    {
-        Console.WriteLine("Error: {0}", error.LocalizedDescription);
-    } else {
-        Console.WriteLine("Success: User login");
-    }
-});
- ```
- 
-#### Log in: user authentication with implicit trust
-
-**Scenario**: The user session in the bank app has timed out. Because the bank mobile app is owned by the bank so there is implicit trust between parties. The MAG
-
-```c#
-//
-//  MAS.GrantFlow must be set to MASGrantFlow.Password in order to trigger implicit login flow
-//  MAS.SetUserAuthCredentials block must be set before invoking an API
-// 
-MAS.SetUserAuthCredentials( (authCredentialsBlock) => {
- 
-    //  Build MASAuthCredentialsPassword with username and password
-    MASAuthCredentialsPassword passwordCredentials = MASAuthCredentialsPassword.InitWithUsername("USER_NAME", "USER_PASSWORD");
- 
-    //  Invoke callback block, authCredentialsBlock, with MASAuthCredentialsPassword object
-    authCredentialsBlock(passwordCredentials, false, (bool completed, NSError error) =>
-    {
-        if (error != null)
-        {
-            Console.WriteLine("Error {0}", error.LocalizedDescription);
-        }
-        else
-        {
-            Console.WriteLine("Success: User login");
-        }
-    });
-});
-```
-
-#### Log out: authenticated user
-
-```MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
-private class LoginCallback : MASCallback
-       {
-            public override void OnError(Throwable e)
-            {
-                //Logout failed
-            }
- 
-            public override void OnSuccess(Java.Lang.Object obj)
-            {
-                //Success Logout
-            }
-        }
- ```
-
-
-##### Return authenticated user/no user
-
-```c#
-// Returns the current authenticated user or null if there is no authenticated user.
-MASUser.CurrentUser
-```
-
-### Start the SDK with default authentication flow
-
-Start the SDK with a default authentication flow of your choice. The default flow is authenticate access to API.
+### Client Credential
 
 ```c#
 //  Set grantFlow to Password
@@ -171,6 +83,55 @@ MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
 });
 ```
 
+### Authenticate user with password 
+
+**Scenario 2**: You created a specialized mobile app that just checks bank account balances. In this case, you want users to log in immediately. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
+
+```c#
+
+//
+//  Login with username and password
+//
+MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, error) => {
+     
+    if (error != null)
+    {
+        Console.WriteLine("Error: {0}", error.LocalizedDescription);
+    } else {
+        Console.WriteLine("Success: User login");
+    }
+});
+ ```
+ 
+### Authenticate user with password (login again) 
+
+**Scenario 3**: TBD
+
+```c#
+//
+//  MAS.GrantFlow must be set to MASGrantFlow.Password in order to trigger implicit login flow
+//  MAS.SetUserAuthCredentials block must be set before invoking an API
+// 
+MAS.SetUserAuthCredentials( (authCredentialsBlock) => {
+ 
+    //  Build MASAuthCredentialsPassword with username and password
+    MASAuthCredentialsPassword passwordCredentials = MASAuthCredentialsPassword.InitWithUsername("USER_NAME", "USER_PASSWORD");
+ 
+    //  Invoke callback block, authCredentialsBlock, with MASAuthCredentialsPassword object
+    authCredentialsBlock(passwordCredentials, false, (bool completed, NSError error) =>
+    {
+        if (error != null)
+        {
+            Console.WriteLine("Error {0}", error.LocalizedDescription);
+        }
+        else
+        {
+            Console.WriteLine("Success: User login");
+        }
+    });
+});
+```
+
 ### Get current user
 
 ```
@@ -180,7 +141,7 @@ MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
 MASUser currentUser = MASUser.CurrentUser;
 ```
 
-### Log out: currently authenticated user
+### Log out authenticated user
 
 ```
 //
