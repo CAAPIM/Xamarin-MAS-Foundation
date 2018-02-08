@@ -58,26 +58,12 @@ namespace BasicAuthSample
             //
             //  Initialize SDK always with default configuration
             // 
-            MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
-            {
-                if(completed)
-                {
-                    //  SDK initialized without an error
-                    ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
-                }    
-
-                if(error != null)
-                {
-                    //  SDK initialized with an error
-                    ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
-                }    
-            });
-
+            StartSDK();
         }
 
         private void invokeProtectedAPI()
         {
-            if (MASUser.CurrentUser != null || MAS.GrantFlow == MASGrantFlow.ClientCredentials)
+            if (MAS.MASState == MASState.DidStart)
             {
                 //  Create MASRequestBuilder with HTTP method 
                 MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
@@ -115,6 +101,9 @@ namespace BasicAuthSample
                         ShowAlert("MAS.Invoke", value);
                     }
                 });
+            } else 
+            {
+                ShowAlert("MAS.Invoke", "You must initialize the SDK before calling API");
             }
         }
 
@@ -169,19 +158,26 @@ namespace BasicAuthSample
             //
             //  Initialize SDK always with default configuration
             // 
-            MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
+            if (MAS.MASState == MASState.DidStart) 
             {
-                if(completed)
+                ShowAlert("MAS.Start", "CA Mobile SDK already started.");
+            } else 
+            {
+                MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
                 {
-                    //  SDK initialized without an error
-                    ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
-                }
-                if(error!=null)
-                {
-                    //  SDK initialized with an error
-                    ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
-                }
-            });
+                    if (completed)
+                    {
+                        //  SDK initialized without an error
+                        ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
+                    }
+                    if (error != null)
+                    {
+                        //  SDK initialized with an error
+                        ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
+                    }
+                });  
+            }
+
         }
 
         private void SetGrantFlowToPassword()
