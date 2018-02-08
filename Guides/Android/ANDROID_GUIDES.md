@@ -96,17 +96,11 @@ Add your authentication method (from the previous step) to start the SDK.
 ```c#
 //MAS.Start(Context context, bool shouldUseDefault);
 MAS.Start(Application.Context, true);
-//MAS.SetGrantFlow(int type);
-
-//MAS.Start(Context context, bool shouldUseDefault);
-MAS.Start(Application.Context, true);
-//MAS.SetGrantFlow(int type);
  
 // Set Grant Flow to Client Credentials
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 // Set Grant Flow to Password
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
-
 ```
 
 ### More Authentication Methods
