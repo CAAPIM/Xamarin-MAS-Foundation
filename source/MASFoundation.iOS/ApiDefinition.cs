@@ -53,46 +53,46 @@ namespace MASFoundation
     /// </summary>
     delegate void MASUserAuthCredentialsBlock([BlockCallback] MASAuthCredentialsBlock arg0);
 
-    //// typedef void (^MASOTPGenerationBlock)(NSArray * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
-    //delegate void MASOTPGenerationBlock(NSObject[] arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
+    // typedef void (^MASOTPGenerationBlock)(NSArray * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
+    delegate void MASOTPGenerationBlock(NSObject[] arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
 
-    //// typedef void (^MASOTPFetchCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
-    //delegate void MASOTPFetchCredentialsBlock(string arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
+    // typedef void (^MASOTPFetchCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
+    delegate void MASOTPFetchCredentialsBlock(string arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
 
-    //// typedef void (^MASOTPChannelSelectionBlock)(NSArray * _Nonnull, MASOTPGenerationBlock _Nonnull);
-    //delegate void MASOTPChannelSelectionBlock(NSObject[] arg0, [BlockCallback] MASOTPGenerationBlock arg1);
+    // typedef void (^MASOTPChannelSelectionBlock)(NSArray * _Nonnull, MASOTPGenerationBlock _Nonnull);
+    delegate void MASOTPChannelSelectionBlock(NSObject[] arg0, [BlockCallback] MASOTPGenerationBlock arg1);
 
-    //// typedef void (^MASOTPCredentialsBlock)(MASOTPFetchCredentialsBlock _Nonnull, NSError * _Nullable);
-    //delegate void MASOTPCredentialsBlock([BlockCallback] MASOTPFetchCredentialsBlock arg0, [NullAllowed] NSError arg1);
+    // typedef void (^MASOTPCredentialsBlock)(MASOTPFetchCredentialsBlock _Nonnull, NSError * _Nullable);
+    delegate void MASOTPCredentialsBlock([BlockCallback] MASOTPFetchCredentialsBlock arg0, [NullAllowed] NSError arg1);
 
-    //// typedef void (^MASBiometricModalitiesBlock)(NSArray * _Nullable, BOOL, MASCompletionErrorBlock _Nullable);
-    //delegate void MASBiometricModalitiesBlock([NullAllowed] NSObject[] arg0, bool arg1, [NullAllowed] MASCompletionErrorBlock arg2);
+    // typedef void (^MASBiometricModalitiesBlock)(NSArray * _Nullable, BOOL, MASCompletionErrorBlock _Nullable);
+    delegate void MASBiometricModalitiesBlock([NullAllowed] NSObject[] arg0, bool arg1, [NullAllowed] MASCompletionErrorBlock arg2);
 
-    //// typedef void (^MASBiometricRegistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
-    //delegate void MASBiometricRegistrationModalitiesSelectionBlock(NSObject[] arg0, MASBiometricModalitiesBlock arg1);
+    // typedef void (^MASBiometricRegistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
+    delegate void MASBiometricRegistrationModalitiesSelectionBlock(NSObject[] arg0, MASBiometricModalitiesBlock arg1);
 
-    //// typedef void (^MASBiometricDeregistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
-    //delegate void MASBiometricDeregistrationModalitiesSelectionBlock(NSObject[] arg0, MASBiometricModalitiesBlock arg1);
+    // typedef void (^MASBiometricDeregistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
+    delegate void MASBiometricDeregistrationModalitiesSelectionBlock(NSObject[] arg0, MASBiometricModalitiesBlock arg1);
 
     // typedef void (^MASGatewayMonitorStatusBlock)(MASGatewayMonitoringStatus);
     /// <summary>
     /// MThe Gateway monitor status block that will receive a MASGatewayMonitoringStatus update when a new status value change is triggered.
     /// </summary>
     /// <code>
-    /// MASGatewayMonitoringStatus.ewayMonitoringStatusNotReachable
-    /// MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWWAN
-    /// MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWiFi
+    /// MASGatewayMonitoringStatus.NotReachable
+    /// MASGatewayMonitoringStatus.ReachableViaWWAN
+    /// MASGatewayMonitoringStatus.ReachableViaWiFi
     /// </code>
     delegate void MASGatewayMonitorStatusBlock(MASGatewayMonitoringStatus arg0);
 
-    //// typedef void (^MASBasicCredentialsBlock)(NSString * _Nonnull, NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
-    //delegate void MASBasicCredentialsBlock(string arg0, string arg1, bool arg2, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg3);
+    // typedef void (^MASBasicCredentialsBlock)(NSString * _Nonnull, NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
+    delegate void MASBasicCredentialsBlock(string arg0, string arg1, bool arg2, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg3);
 
-    //// typedef void (^MASAuthorizationCodeCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
-    //delegate void MASAuthorizationCodeCredentialsBlock(string arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
+    // typedef void (^MASAuthorizationCodeCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
+    delegate void MASAuthorizationCodeCredentialsBlock(string arg0, bool arg1, [BlockCallback, NullAllowed] MASCompletionErrorBlock arg2);
 
-    //// typedef void (^MASUserLoginWithUserCredentialsBlock)(MASBasicCredentialsBlock _Nonnull, MASAuthorizationCodeCredentialsBlock _Nonnull);
-    //delegate void MASUserLoginWithUserCredentialsBlock([BlockCallback] MASBasicCredentialsBlock arg0, [BlockCallback] MASAuthorizationCodeCredentialsBlock arg1);
+    // typedef void (^MASUserLoginWithUserCredentialsBlock)(MASBasicCredentialsBlock _Nonnull, MASAuthorizationCodeCredentialsBlock _Nonnull);
+    delegate void MASUserLoginWithUserCredentialsBlock([BlockCallback] MASBasicCredentialsBlock arg0, [BlockCallback] MASAuthorizationCodeCredentialsBlock arg1);
 
     // @interface MASObject : NSObject <NSCopying, NSCoding>
     /// <summary>
@@ -2092,9 +2092,9 @@ namespace MASFoundation
         /// </summary>
         /// <remarks>
         /// The gateway monitoring status enumerated values are:
-        /// MASGatewayMonitoringStatus.ewayMonitoringStatusNotReachable
-        /// MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWWAN
-        /// MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWiFi
+        /// MASGatewayMonitoringStatus.NotReachable
+        /// MASGatewayMonitoringStatus.ReachableViaWWAN
+        /// MASGatewayMonitoringStatus.ReachableViaWiFi
         /// </remarks>
         /// <param name="monitor">The MASGatewayMonitorStatusBlock that will receive the status updates.</param>
         [Static]
@@ -2315,9 +2315,9 @@ namespace MASFoundation
         /// <remarks>
         /// The monitoring status enumerated values to their string equivalents are:
         /// 
-        /// MASGatewayMonitoringStatus.ewayMonitoringStatusNotReachable
-        /// MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWWAN
-        /// MASGatewayMonitoringStatus.ewayMonitoringStatusReachableViaWiFi
+        /// MASGatewayMonitoringStatus.NotReachable
+        /// MASGatewayMonitoringStatus.ReachableViaWWAN
+        /// MASGatewayMonitoringStatus.ReachableViaWiFi
         /// </remarks>
         /// <value>The gateway monitoring status as string.</value>
         [Static]
