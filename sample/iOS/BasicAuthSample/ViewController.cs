@@ -138,6 +138,7 @@ namespace BasicAuthSample
                     {
                         //  If an error was returned
                         Console.WriteLine("Error: {0}", error.LocalizedDescription);
+                        ShowAlert("MAS.Invoke", error.LocalizedDescription);
                     }
                     else if (responseInfo != null)
                     {
