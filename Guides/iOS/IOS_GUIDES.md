@@ -183,6 +183,12 @@ MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) => {
 
 ## Access APIs
 
+This section provides methods to call APIs. 
+
+### Sent HTTP Requests to APIs
+
+If you have custom endpoints installed on the MAG, you can make direct and secure HTTPS calls to them using the following methods. 
+
 ```c#
 //  Create MASRequestBuilder with HTTP method 
 MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
