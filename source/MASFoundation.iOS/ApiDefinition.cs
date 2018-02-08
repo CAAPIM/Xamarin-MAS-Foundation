@@ -1009,7 +1009,7 @@ namespace MASFoundation
         /// the user what will occur and allow them to cancel the operation or proceed.
         /// 
         /// Although an asynchronous block callback parameter is provided for detecting the response,
-        /// optionally you can set that to nil and the caller can observe the lifecycle notifications instead.
+        /// optionally you can set that to null and the caller can observe the lifecycle notifications instead.
         /// </summary>
         /// <param name="completion">Completion.</param>
         [Export("deregisterWithCompletion:")]
@@ -1429,8 +1429,8 @@ namespace MASFoundation
         // +(NSString * _Nullable)authCredentialsType;
         /// <summary>
         /// Previously, or currently used authCredentialsType for the session.
-        /// If the SDK is not properly initialized, nil will be returned regardless of the authentication status of the SDK.
-        /// If the SDK was never authenticated before, SDK will also return nil as a result.
+        /// If the SDK is not properly initialized, null will be returned regardless of the authentication status of the SDK.
+        /// If the SDK was never authenticated before, SDK will also return null as a result.
         /// </summary>
         /// <value>NSString of previously, or currently used authCredentialsType as in String.</value>
         [Static]
@@ -1845,7 +1845,7 @@ namespace MASFoundation
 
         // @property (readonly, assign) BOOL isPublic;
         /// <summary>
-        /// BOOL value that determines whether or not to include credentials of primary gateway in the request.
+        /// bool value that determines whether or not to include credentials of primary gateway in the request.
         /// </summary>
         /// <value><c>true</c> if is public; otherwise, <c>false</c>.</value>
         [Export("isPublic")]
@@ -2030,7 +2030,7 @@ namespace MASFoundation
         /// @since MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.
         /// @dependency Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification.
         /// </summary>
-        /// <param name="enable">BOOL value of indicating whether PKCE is enabled or not.</param>
+        /// <param name="enable">bool value of indicating whether PKCE is enabled or not.</param>
         [Static]
         [Export("enablePKCE:")]
         void EnablePKCE(bool enable);
@@ -2043,7 +2043,7 @@ namespace MASFoundation
         /// @dependency Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification.
         /// </summary>
         /// <value>
-        /// BOOL value of indicating whether PKCE is enabled or not.
+        /// bool value of indicating whether PKCE is enabled or not.
         /// <c>true</c> if is PKCEE nabled; otherwise, <c>false</c>.
         /// </value>
         [Static]
@@ -2088,7 +2088,7 @@ namespace MASFoundation
         /// This block will be triggered when any change to the current monitoring status
         /// takes place with a MASGatewayMonitoringStatus.
         /// 
-        /// This is optional and it can be set to nil at any time to stop receiving the notifications.
+        /// This is optional and it can be set to null at any time to stop receiving the notifications.
         /// </summary>
         /// <remarks>
         /// The gateway monitoring status enumerated values are:
@@ -2145,7 +2145,7 @@ namespace MASFoundation
         /// Starts the lifecycle of the MAS processes.  
         /// 
         /// Although an asynchronous block callback parameter is provided for response usage,
-        /// optionally you can set that to nil and the caller can observe the lifecycle 
+        /// optionally you can set that to null and the caller can observe the lifecycle 
         /// notifications instead.
         /// 
         /// This will load the last used JSON configuration from keychain storage.If there was none,
@@ -2166,7 +2166,7 @@ namespace MASFoundation
         ///  *      MASApplicationDidRegisterNotification
         /// </remarks>
         /// <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError error) that will
-        /// receive a <c>true</c> or <c>false</c> BOOL indicating the completion state and/or an NSError object if there
+        /// receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there
         /// is a failure.
         /// </param>
         [Static]
@@ -2178,7 +2178,7 @@ namespace MASFoundation
         /// Starts the lifecycle of the MAS processes.
         /// 
         /// Although an asynchronous block callback parameter is provided for response usage,
-        /// optionally you can set that to nil and the caller can observe the lifecycle
+        /// optionally you can set that to null and the caller can observe the lifecycle
         /// notifications instead.
         /// 
         /// This will load the default JSON configuration rather than from keychain storage; if the SDK was already initialized, this method will fully stop and re-start the SDK.
@@ -2200,7 +2200,7 @@ namespace MASFoundation
         /// </remarks>
         /// <param name="shouldUseDefault">Boolean value of using default configuration rather than the one in keychain storage.</param>
         /// <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError error) that will
-        /// receive a <c>true</c> or <c>false</c> BOOL indicating the completion state and/or an NSError object if there
+        /// receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there
         /// is a failure.
         /// </param>
         [Static]
@@ -2213,7 +2213,7 @@ namespace MASFoundation
         /// This method will overwrite JSON configuration(if they are different) that was stored in keychain.
         /// 
         /// Although an asynchronous block callback parameter is provided for response usage,
-        /// optionally you can set that to nil and the caller can observe the lifecycle
+        /// optionally you can set that to null and the caller can observe the lifecycle
         /// </summary>
         /// <remarks>
         /// The MAS lifecycle notifications are:
@@ -2230,7 +2230,7 @@ namespace MASFoundation
         /// </remarks>
         /// <param name="jsonConfiguration">NSDictionary of JSON configuration object.</param>
         /// <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError error) that will
-        /// receive a <c>true</c> or <c>false</c> BOOL indicating the completion state and/or an NSError object if there
+        /// receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there
         /// is a failure.</param>
         [Static]
         [Export("startWithJSON:completion:")]
@@ -2238,10 +2238,10 @@ namespace MASFoundation
 
         // +(void)startWithURL:(NSURL * _Nullable)url completion:(MASCompletionErrorBlock _Nullable)completion;
         /// <summary>
-        /// Starts the lifecycle of the MAS processes with given JSON configuration file path, enrolment URL or nil.
+        /// Starts the lifecycle of the MAS processes with given JSON configuration file path, enrolment URL or null.
         /// This method will overwrite JSON configuration(if they are different) that was stored in keychain when configuration file path or enrolment URL is provided.
         /// 
-        /// When URL is recognized as nil, this method will initialize SDK by using last used JSON configuration that is stored in keychain storage,
+        /// When URL is recognized as null, this method will initialize SDK by using last used JSON configuration that is stored in keychain storage,
         /// or load JSON configuration from defined default configuration file name.
         /// 
         /// 
@@ -2254,7 +2254,7 @@ namespace MASFoundation
         /// 
         /// Although an asynchronous block callback parameter is provided for response usage,
         /// 
-        /// optionally you can set that to nil and the caller can observe the lifecycle
+        /// optionally you can set that to null and the caller can observe the lifecycle
         /// </summary>
         /// <remarks>
         /// The MAS lifecycle notifications are:
@@ -2270,7 +2270,7 @@ namespace MASFoundation
         /// *      MASApplicationDidRegisterNotification
         /// </remarks>
         /// <param name="url">NSURL of JSON configuration file path or enrolment URL.</param>
-        /// <param name="completion">An MASCompletionErrorBlock type (BOOL completed, NSError *error) that will receive a <c>true</c> or <c>false</c> BOOL indicating the completion state and/or an NSError object if there is a failure.</param>
+        /// <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError *error) that will receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there is a failure.</param>
         [Static]
         [Export("startWithURL:completion:")]
         void StartWithURL([NullAllowed] NSUrl url, [NullAllowed] MASCompletionErrorBlock completion);
@@ -2280,7 +2280,7 @@ namespace MASFoundation
         /// Stops the lifecycle of all MAS processes.
         /// 
         /// Although an asynchronous block callback parameter is provided for response usage,
-        /// optionally you can set that to nil and the caller can observe the lifecycle 
+        /// optionally you can set that to null and the caller can observe the lifecycle 
         /// notifications instead.
         /// </summary>
         /// <remarks>
@@ -2291,7 +2291,7 @@ namespace MASFoundation
         /// *      MASDidStopNotification
         /// </remarks>
         /// <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError error) that will
-        /// receive a <c>true</c> or <c>false</c> BOOL indicating the completion state and/or an NSError object if there
+        /// receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there
         /// is a failure.
         /// </param>
         [Static]
