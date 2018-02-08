@@ -116,6 +116,11 @@ namespace BasicAuthSample
                     }
                 });
             }
+            else
+            {
+                // Must be logged in to invoke API
+                ShowAlert("MAS.Invoke", "User must be logged in to invoke API");
+            }
         }
 
 
@@ -124,6 +129,13 @@ namespace BasicAuthSample
         //
         private void Login(string user,string password)
         {
+            if(MASUser.CurrentUser != null)
+            {
+                // User already logged in
+                ShowAlert("MAS.LoginWithUserName", "User already logged in");
+
+            }
+
             MASUser.LoginWithUserName(user, password, completion: (completed, error) =>
             {
                 if (completed)
@@ -146,6 +158,12 @@ namespace BasicAuthSample
         //
         private void Logout()
         {
+            if (MASUser.CurrentUser == null)
+            {
+                // No user logged in
+                ShowAlert("MAS.LogoutWithCompletion", "No user logged in");
+            }
+
             if(MASUser.CurrentUser != null)
             {
                 MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) =>
@@ -166,6 +184,12 @@ namespace BasicAuthSample
 
         private void StartSDK()
         {
+            if (MAS.MASState == MASState.DidStart)
+            {
+                // SDK already initialized
+                ShowAlert("MAS.Start", "SDK already initialized");
+
+            }
             //
             //  Initialize SDK always with default configuration
             // 
