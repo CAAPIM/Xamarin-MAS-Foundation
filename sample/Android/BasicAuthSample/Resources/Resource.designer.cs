@@ -79,14 +79,23 @@ namespace BasicAuthSample
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080002
-			public const int invokeApi = 2131230722;
+			// aapt resource value: 0x7f080005
+			public const int invokeApi = 2131230725;
 			
-			// aapt resource value: 0x7f080000
-			public const int login = 2131230720;
+			// aapt resource value: 0x7f080003
+			public const int login = 2131230723;
+			
+			// aapt resource value: 0x7f080004
+			public const int logout = 2131230724;
 			
 			// aapt resource value: 0x7f080001
-			public const int logout = 2131230721;
+			public const int setClientCredentialsFlow = 2131230721;
+			
+			// aapt resource value: 0x7f080002
+			public const int setPasswordFlow = 2131230722;
+			
+			// aapt resource value: 0x7f080000
+			public const int startSDKButton = 2131230720;
 			
 			static Id()
 			{

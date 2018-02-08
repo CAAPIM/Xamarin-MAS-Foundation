@@ -25,33 +25,62 @@ namespace BasicAuthSample
             SetContentView(Resource.Layout.Main);
 
             // Get our UI controls from the loaded layout
-            Android.Widget.Button loginButton = FindViewById<Android.Widget.Button>(Resource.Id.login);
+            Button startSDKButton = FindViewById<Button>(Resource.Id.startSDKButton);
+            startSDKButton.Click += (sender, e) =>
+            {
+                startSDK();
+            };
+
+            Button setClientCredentialsFlowButton = FindViewById<Button>(Resource.Id.setClientCredentialsFlow);
+            setClientCredentialsFlowButton.Click += (sender, e) =>
+            {
+                // MAS.SetGrantFlow(int type)
+                // Set Grant flow to Client Credentials
+                MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
+                Alert("MAS", "Grant flow set to Client Credentials Flow!");
+            };
+
+            Button setPasswordFlowButton = FindViewById<Button>(Resource.Id.setPasswordFlow);
+            setPasswordFlowButton.Click += (sender, e) =>
+            {
+                // MAS.SetGrantFlow(int type);
+                // Set Grant flow to Password
+                MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
+                Alert("MAS", "Grant flow set to Password Flow!");
+            };
+
+            Button loginButton = FindViewById<Button>(Resource.Id.login);
             loginButton.Click += (sender, e) =>
             {
                 login();
             };
 
-            Android.Widget.Button logoutButton = FindViewById<Android.Widget.Button>(Resource.Id.logout);
+            Button logoutButton = FindViewById<Button>(Resource.Id.logout);
             logoutButton.Click += (sender, e) =>
             {
                 logout();
             };
 
-            Android.Widget.Button invokeApiButton = FindViewById<Android.Widget.Button>(Resource.Id.invokeApi);
+            Button invokeApiButton = FindViewById<Button>(Resource.Id.invokeApi);
             invokeApiButton.Click += (sender, e) =>
             {
                 invokeApi();
             };
 
             MAS.SetAuthenticationListener(new MyAuthenticationListener());
-            // MAS - start
-            MAS.Start(Android.App.Application.Context, true);
 
-            if (MAS.GetState(Android.App.Application.Context) == MASConstants.MasStateStarted)
+
+        }
+
+        public void startSDK()
+        {
+            // MAS.Start(Context, context, bool shouldUseDefault);
+            MAS.Start(this, true);
+
+            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
                 Alert("MAS", "CA Mobile SDK started successfully!!");
             else
                 Alert("MAS", "CA Mobile SDK did not start!!");
-
         }
 
         public void login()
@@ -66,8 +95,6 @@ namespace BasicAuthSample
                 // Used only to trigger authentication with no callback
                 MASUser.Login(null);
             }
-
-
         }
 
         public void logout()
@@ -90,10 +117,20 @@ namespace BasicAuthSample
         {
 
             MAS.Debug();
+
+            //Use Uri.Builder() to build the Uri and pass it into a MASRequestBuilder.
             Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
+
+            //Append path
             uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
+
+            //Create MASRequestBuilder
             MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
+
+            //Add Response type
             builder.ResponseBody(MASResponseBody.JsonBody());
+
+            //Invoke the API with builder and API Callback
             MAS.Invoke(builder.Build(), new ProtectAPICallback(this));
 
         }
@@ -121,17 +158,18 @@ namespace BasicAuthSample
                 this.activity = activity;
             }
 
-            public override Android.OS.Handler Handler
+            public override Handler Handler
             {
                 //run the callback on main thread
                 get
                 {
-                    return new Android.OS.Handler(Looper.MainLooper);
+                    return new Handler(Looper.MainLooper);
                 }
             }
 
             public override void OnError(Throwable e)
             {
+                //Handle error
                 Console.WriteLine(e);
             }
 
@@ -153,17 +191,18 @@ namespace BasicAuthSample
                 this.activity = activity;
             }
 
-            public override Android.OS.Handler Handler
+            public override Handler Handler
             {
                 //run the callback on main thread
                 get
                 {
-                    return new Android.OS.Handler(Looper.MainLooper);
+                    return new Handler(Looper.MainLooper);
                 }
             }
 
             public override void OnError(Throwable e)
             {
+                //Handle error
                 Console.WriteLine("Fail Login!!");
                 Console.WriteLine(e);
                 activity.Alert("Error", e.ToString());

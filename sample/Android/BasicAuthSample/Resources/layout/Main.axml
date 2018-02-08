@@ -10,6 +10,26 @@
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
+        android:id="@+id/startSDKButton"
+        android:backgroundTint="#ff000000"
+        android:text="Start SDK" />
+    <Button
+        android:layout_width="250.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/setClientCredentialsFlow"
+        android:backgroundTint="#ff000000"
+        android:text="Set Grant Flow to Client Credentials"
+        android:autoText="true" />
+    <Button
+        android:layout_width="250.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/setPasswordFlow"
+        android:backgroundTint="#ff000000"
+        android:text="Set Grant Flow to Password"
+        android:autoText="true" />
+    <Button
+        android:layout_width="250.0dp"
+        android:layout_height="wrap_content"
         android:id="@+id/login"
         android:text="Login"
         android:backgroundTint="#ff000000" />
