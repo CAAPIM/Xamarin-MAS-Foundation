@@ -25,7 +25,7 @@ The Android **BasicAuthSample** sample app lets you test the following with a CA
 - Define authentication flow 
 - Start the SDK 
 - Log in
-- Invoke a protected API 
+- Access a protected API 
 - Log out
    
 1. Open a terminal window in a directory of your choice and clone the MAS Foundation repo: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**.  
@@ -65,7 +65,7 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 
 ### Authenticate user with password 
 
-**Scenario 2**: You created a specialized mobile app just to check account statements. In this case, you want users authenticated to see anything so you present a login screen. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
+**Scenario 2**: You created a specialized mobile app that just checks bank account balances. In this case, you want users to log in immediately. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
 
 ```c#
 // 
@@ -85,7 +85,9 @@ private class LoginCallback : MASCallback
         }
  ```
 
-### Authenticate user with password (log in again) 
+### Authenticate user with password (login again) 
+
+**Scenario 3**: TBD
 
 ```c#
 
