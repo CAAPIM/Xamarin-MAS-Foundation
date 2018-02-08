@@ -70,18 +70,25 @@ namespace BasicAuthSample
 
             MAS.SetAuthenticationListener(new MyAuthenticationListener());
 
-
+            startSDK();
         }
 
         public void startSDK()
         {
-            // MAS.Start(Context, context, bool shouldUseDefault);
-            MAS.Start(this, true);
-
             if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-                Alert("MAS", "CA Mobile SDK started successfully!!");
-            else
-                Alert("MAS", "CA Mobile SDK did not start!!");
+            {
+                Alert("MAS", "CA Mobile SDK has already been started.");
+            } else
+            {
+                // MAS.Start(Context, context, bool shouldUseDefault);
+                MAS.Start(this, true);
+
+                if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
+                    Alert("MAS", "CA Mobile SDK started successfully!!");
+                else
+                    Alert("MAS", "CA Mobile SDK did not start!!");
+            }
+
         }
 
         public void login()
