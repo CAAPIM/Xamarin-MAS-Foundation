@@ -76,18 +76,19 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 
 MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
 private class LoginCallback : MASCallback
-        {
-            public override void OnError(Throwable e)
-            {
-                MAS.CancelAllRequests();
-            }
- 
-            public override void OnSuccess(Java.Lang.Object user)
-            {
-                Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
-            }
-        }
- ```
+{
+    public override void OnError(Throwable e)
+    {
+        //Cancel all request in the queue.
+        MAS.CancelAllRequests();
+    }
+
+    public override void OnSuccess(Java.Lang.Object user)
+    {
+        Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
+    }
+}
+```
 
 ### Authenticate user with password (implicit, event-based)
 
@@ -96,30 +97,32 @@ private class LoginCallback : MASCallback
 ```c#
 
 private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
- {
-     public void OnAuthenticateRequest(Context context, long requestId, MASAuthenticationProviders providers)
-     {
-         MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
-     }
+{
+    public void OnAuthenticateRequest(Context context, long requestId, MASAuthenticationProviders providers)
+    {
+        MASUser.Login("username", "password".ToCharArray(), loginCallback);
+    }
+
+    public void OnOtpAuthenticateRequest(Context context, MASOtpAuthenticationHandler handler)
+    {
+        throw new NotImplementedException();
+    }
+}
+
+private class LoginCallback : MASCallback
+{
+    public override void OnError(Throwable e)
+    {
+       //Cancel all request in the queue.
+       MAS.CancelAllRequests();
+    }
  
-     public void OnOtpAuthenticateRequest(Context context, MASOtpAuthenticationHandler handler)
-     {
-         throw new NotImplementedException();
-     }
- }
- private class LoginCallback : MASCallback
- {
-     public override void OnError(Throwable e)
-     {
-         MAS.CancelAllRequests();
-     }
- 
-     public override void OnSuccess(Java.Lang.Object user)
-     {
-         Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
-     }
- }
- ```
+    public override void OnSuccess(Java.Lang.Object user)
+    {
+        Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
+    }
+}
+```
 
 ### Get current user
 
@@ -133,24 +136,23 @@ MASUser.CurrentUser
 
 ### Log out authenticated user
 
-```
+```c#
 // Log out currently authenticated user
 
-MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
+MASUser.CurrentUser.Logout(new LogoutCallback());
 private class LogoutCallback : MASCallback
-       {
-            public override void OnError(Throwable e)
-            {
-                //Logout failed
-            }
+{
+    public override void OnError(Throwable e)
+    {
+        //Logout failed
+    }
  
-            public override void OnSuccess(Java.Lang.Object obj)
-            {
-                //Success Logout
-            }
-        }
+    public override void OnSuccess(Java.Lang.Object obj)
+    {
+        //Success Logout
+    }
+}
  ```
-
 
 ## Access APIs
 
@@ -166,7 +168,7 @@ The endpoint passed to these methods should be a relative path. For example, if 
 
 Use Uri.Builder() to build the `Uri` and pass it into a `MASRequestBuilder`.
 
-```
+```c#
 // Use Uri.Builder() to build the Uri and pass it into a MASRequestBuilder.
 
 Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
@@ -175,7 +177,7 @@ uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts
 
 #### Create MASRequestBuilder
 
-```
+```c#
 // Create MASRequestBuilder
 
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
@@ -185,16 +187,17 @@ MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
 
 Parameters are encoded according to various standards defined by the HTTP verb type.
 
-```
+```c#
 // Add Query Parameter
 
 uriBuilder.AppendQueryParameter("key","value");
 ```
+
 #### Headers
 
 Add headers only if they are neede to customize a call. The Mobile SDK adds any necessary security credentials.
 
-```
+```c#
 // Add Header
 
 builder.Header("test", "test");
@@ -204,7 +207,7 @@ builder.Header("test", "test");
 
 Based on the response content type, the SDK handles data to Object conversion; for example, with content type application/json, the SDK converts the body content to a JSONObject and returns it to the caller. The SDK predefined string, bytes, and JSONObject data type conversion.
 
-```
+```c#
 // The response Type
 // This is optional if the response content type is **application/json**
 builder.ResponseBody(MASResponseBody.JsonBody());
@@ -219,7 +222,7 @@ builder.ResponseBody(MASResponseBody.ByteArrayBody());
 
 #### Custom response
 
-```
+```c#
 // Sample implementation of a custom response class
 
 private class JSONArrayResponse : MASResponseBody
@@ -236,15 +239,16 @@ private class JSONArrayResponse : MASResponseBody
 }
  
 // Sample usage of the custom response class
-    MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
-    builder.ResponseBody(new JSONArrayResponse());
+MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
+builder.ResponseBody(new JSONArrayResponse());
+
 ```
 
 #### Callback 
 
 The `MASCallback` defined in *MAS* returns a `IMASResponse`. Within the `IMASResponse`, you can access the HTTP response and body content:
 
-```
+```c#
 // The Callback
 // The MASCallback defined in MAS returns a IMASResponse.
 // Within the IMASResponse, you can access the http response and the body content:
@@ -259,7 +263,7 @@ JSONObject jsonObject = (JSONObject)response.Body.Content;
 
 #### Make HTTP request
 
-```
+```c#
 // This method makes HTTP GET calls to an endpoint.
 
 builder.Get();
@@ -268,26 +272,28 @@ builder.Get();
 
 #### Cancel HTTP request
 
-```
+```c#
 // This method cancels the HTTP request.
 
 long id = MAS.Invoke(builder.Build(), new ProtectAPICallback());
 MAS.CancelRequest(id);
 MAS.CancelAllRequests();
+
 ```
 
 #### Example: Invoke an API with HTTP Get with IMASResponse in JSON
 
-```
+```c#
 // An example to invoke an API with Http Get and response with JSON:
 
 Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
 uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
 MAS.Invoke(builder.Build(), new ProtectAPICallback());
+
 private class ProtectAPICallback : MASCallback
 {
-    public override void OnError(Throwable p0)
+    public override void OnError(Throwable e)
     {
         //handle error
     }
