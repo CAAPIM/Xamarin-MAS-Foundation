@@ -73,17 +73,17 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 
 MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
 private class LoginCallback : MASCallback
-        {
-            public override void OnError(Throwable e)
-            {
-                MAS.CancelAllRequests();
-            }
+{
+    public override void OnError(Throwable e)
+    {
+        MAS.CancelAllRequests();
+    }
  
-            public override void OnSuccess(Java.Lang.Object user)
-            {
-                Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
-            }
-        }
+    public override void OnSuccess(Java.Lang.Object user)
+    {
+        Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
+    }
+}
  ```
 
 
@@ -93,7 +93,7 @@ The method that starts the SDK is **MAS.start**. You can put it anywhere in your
 
 Add your authentication method (from the previous step) to start the SDK.
 
-```
+```c#
 //MAS.Start(Context context, bool shouldUseDefault);
 MAS.Start(Application.Context, true);
 //MAS.SetGrantFlow(int type);
@@ -119,29 +119,29 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```c#
 
 private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
- {
-     public void OnAuthenticateRequest(Context context, long requestId, MASAuthenticationProviders providers)
-     {
-         MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
-     }
+{
+    public void OnAuthenticateRequest(Context context, long requestId, MASAuthenticationProviders providers)
+    {
+        MASUser.Login("username", "password".ToCharArray(), new LoginCallback());
+    }
  
-     public void OnOtpAuthenticateRequest(Context context, MASOtpAuthenticationHandler handler)
-     {
-         throw new NotImplementedException();
-     }
- }
- private class LoginCallback : MASCallback
- {
-     public override void OnError(Throwable e)
-     {
-         MAS.CancelAllRequests();
-     }
+    public void OnOtpAuthenticateRequest(Context context, MASOtpAuthenticationHandler handler)
+    {
+        throw new NotImplementedException();
+    }
+}
+private class LoginCallback : MASCallback
+{
+    public override void OnError(Throwable e)
+    {
+        MAS.CancelAllRequests();
+    }
  
-     public override void OnSuccess(Java.Lang.Object user)
-     {
-         Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
-     }
- }
+    public override void OnSuccess(Java.Lang.Object user)
+    {
+        Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
+    }
+}
  ```
 
 #### Get current user
@@ -150,8 +150,8 @@ This method gets all of the properties of the currently authenticaticated user.
 
 ```c#
 // Returns the current authenticated user or null if there is no authenticated user.
-
 MASUser.CurrentUser
+
 ```
 
 #### Log out authenticated user
@@ -159,20 +159,21 @@ MASUser.CurrentUser
 ```c#
 // Log out currently authenticated user
 
-MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
+MASUser.CurrentUser.Logout(new LogoutCallback());
+
 private class LogoutCallback : MASCallback
-       {
-            public override void OnError(Throwable e)
-            {
-                //Logout failed
-            }
+{
+    public override void OnError(Throwable e)
+    {
+        //Logout failed
+    }
  
-            public override void OnSuccess(Java.Lang.Object obj)
-            {
-                //Success Logout
-            }
-        }
- ```
+    public override void OnSuccess(Java.Lang.Object obj)
+    {
+        //Success Logout
+    }
+}
+```
 
 
 ## Access APIs
@@ -260,7 +261,7 @@ private class JSONArrayResponse : MASResponseBody
  
 // Sample usage of the custom response class
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
-    builder.ResponseBody(new JSONArrayResponse());
+builder.ResponseBody(new JSONArrayResponse());
 ```
 
 #### Callback 
@@ -297,6 +298,7 @@ builder.Get();
 long id = MAS.Invoke(builder.Build(), new ProtectAPICallback());
 MAS.CancelRequest(id);
 MAS.CancelAllRequests();
+
 ```
 
 #### Example: Invoke an API with HTTP Get with IMASResponse in JSON
@@ -321,8 +323,6 @@ private class ProtectAPICallback : MASCallback
     }
 }
 ```
-
-
 
 ## Pre-release Agreement
 
