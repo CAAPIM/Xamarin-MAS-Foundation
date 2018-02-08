@@ -38,7 +38,7 @@ After cloning, you will have /sample and /source directories for "Android" and "
 7. In your emulator, launch the **BasicAuthSample** app.  
 You should get the confirmation: **MAS SDK started successfully**.  
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
-8. Now you can **login**, **logout**, and **invoke** a protected API. 
+8. Now you can **log in**, **log out**, and **access a protected API**. 
 
 
 ## Start the SDK 
@@ -91,7 +91,7 @@ private class LoginCallback : MASCallback
 
 The method that starts the SDK is **MAS.start**. You can put it anywhere in your app, but we suggest that you call this method as soon as possible (first screen of your app). This ensures that the SDK is ready to handle all security and communication with the MAG server.
 
-Add your authentication method to start the SDK.
+Add your authentication method (from the previous step) to start the SDK.
 
 ```
 //MAS.Start(Context context, bool shouldUseDefault);
@@ -113,8 +113,8 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 
 #### Authenticate user with password (event-based)
 
-**What**: Event-based user authentication
-**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.
+**What**: Event-based user authentication<br>
+**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
 
 ```c#
 
