@@ -106,11 +106,6 @@ namespace BasicAuthSample
                         });
                 alert.Show();
             });
-
-            //
-            //  Initialize SDK always with default configuration
-            // 
-            StartSDK();
         }
 
         private void invokeProtectedAPI()
