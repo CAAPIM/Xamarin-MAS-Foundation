@@ -20,3 +20,4 @@ Target "android" (fun () ->
     MSBuild "" "SignAndroidPackage" androidPrameters [ androidproject ] |> ignore
     TeamCityHelper.PublishArtifact (androidproject + "/bin/Debug/*-Signed.apk")
 )
+
