@@ -79,12 +79,12 @@ namespace BasicAuthSample
                 this.activity = activity;
             }
 
-            public override Android.OS.Handler Handler
+            public override Handler Handler
             {
                 //run the callback on main thread
                 get
                 {
-                    return new Android.OS.Handler(Looper.MainLooper);
+                    return new Handler(Looper.MainLooper);
                 }
             }
 
