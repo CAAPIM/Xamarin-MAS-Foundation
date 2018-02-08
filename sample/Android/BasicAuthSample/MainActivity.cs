@@ -25,12 +25,6 @@ namespace BasicAuthSample
             SetContentView(Resource.Layout.Main);
 
             // Get our UI controls from the loaded layout
-            Button startSDKButton = FindViewById<Button>(Resource.Id.startSDKButton);
-            startSDKButton.Click += (sender, e) =>
-            {
-                startSDK();
-            };
-
             Button setClientCredentialsFlowButton = FindViewById<Button>(Resource.Id.setClientCredentialsFlow);
             setClientCredentialsFlowButton.Click += (sender, e) =>
             {
@@ -49,22 +43,29 @@ namespace BasicAuthSample
                 Alert("MAS", "Grant flow set to Password Flow!");
             };
 
+            Button startSDKButton = FindViewById<Button>(Resource.Id.startSDKButton);
+            startSDKButton.Click += (sender, e) =>
+            {
+                startSDK();
+            };
+
             Button loginButton = FindViewById<Button>(Resource.Id.login);
             loginButton.Click += (sender, e) =>
             {
                 login();
             };
 
-            Button logoutButton = FindViewById<Button>(Resource.Id.logout);
-            logoutButton.Click += (sender, e) =>
-            {
-                logout();
-            };
-
             Button invokeApiButton = FindViewById<Button>(Resource.Id.invokeApi);
             invokeApiButton.Click += (sender, e) =>
             {
                 invokeApi();
+            };
+
+
+            Button logoutButton = FindViewById<Button>(Resource.Id.logout);
+            logoutButton.Click += (sender, e) =>
+            {
+                logout();
             };
 
             MAS.SetAuthenticationListener(new MyAuthenticationListener());
