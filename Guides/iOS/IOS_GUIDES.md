@@ -103,9 +103,9 @@ MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, 
 });
  ```
  
-### Authenticate user with password (login again) 
+### Authenticate user with password for single sign-on 
 
-**Scenario 3**: TBD
+**Scenario 3**: You are designing a chat app with the single sign-on feature. If a user has not signed into an app for days/hours, you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication. In OAuth, this is called **implicit grant** flow. 
 
 ```c#
 //
@@ -133,6 +133,8 @@ MAS.SetUserAuthCredentials( (authCredentialsBlock) => {
 ```
 
 ### Get current user
+
+This method gets all of the properties of the currently authenticaticated user.
 
 ```
 //

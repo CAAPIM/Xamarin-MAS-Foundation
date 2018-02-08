@@ -1,13 +1,11 @@
 
 ## Android Mobile SDK for Xamarin
 
-The Xamarin SDK libraries are:
-
-**MASFoundation**is the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
+**MASFoundation**is the core MAS framework that handles the communication and authentication layer. Quickly build secure Xamarin apps using these built-in features:
  
 - Authenticate with:
   - Device registration
-  - User login and client credentials
+  - User login and registered app
   - Fingerprint session lock
   - Single Sign-On
 - Securely access protected APIs that are configured with OAuth 2.0
@@ -16,17 +14,21 @@ The Xamarin SDK libraries are:
 
 - [Requirements for CA Mobile API Gateway](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
 - Android 8.1.0 for new apps written in C#
-- Android 4.4 and later to run the sample app                                  
+- Android 4.4 and later (to run the sample app)                                 
  
 ## Quick Start with Sample App
 
-The Android **BasicAuthSample** sample app lets you test the following with a CA Mobile API Gateway. The app was created using Visual Studio Community 2017 build 7.3.3. 
+The Android **BasicAuthSample** app:
 
-- Define authentication flow 
-- Start the SDK 
-- Log in
-- Access a protected API 
-- Log out
+- Lets you test the following with a CA Mobile API Gateway:  
+  - Define authentication flow 
+  - Start the SDK 
+  - Log in
+  - Access a protected API 
+  - Log out
+- Was created using Visual Studio Community 2017 build 7.3.3
+- Requires Android 4.4 or later to run the app
+
    
 1. Open a terminal window in a directory of your choice and clone the MAS Foundation repo: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**.  
 After cloning, you will have /sample and /source directories for "Android" and "iOS".
@@ -43,32 +45,34 @@ If you get an error, the most likely cause is an invalid app configuration file.
 
 ## Start the SDK With Your Own App
 
-[graphic]
+[later sprint here: steps to start SDK with binaries/NuGet] 
+For details on how the Mobile SDK secures your APIs, see [Blog](https://www.ca.com/us/developers/mas/blog.html?id=2)
 
 ### Access an API
 
-**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user permission (login) is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API. 
+**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API. 
 
 ### Client Credential 
 
 ```c#
-// MAS.Start(Context context, bool shouldUseDefault);
+
+//MAS.Start(Context context, bool shouldUseDefault);
 MAS.Start(Application.Context, true);
-// MAS.SetGrantFlow(int type);
+//MAS.SetGrantFlow(int type);
  
 // Set Grant Flow to Client Credentials
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
-
 // Set Grant Flow to Password
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
+
 ```
 
-### Authenticate user with password 
+### Authenticate user with password (explicit, always)
 
-**Scenario 2**: You created a specialized mobile app that just checks bank account balances. In this case, you want users to log in immediately. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
+**Scenario 2**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.
 
 ```c#
-// 
+// Authenticate user with password, explicit
 
 MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
 private class LoginCallback : MASCallback
@@ -85,13 +89,11 @@ private class LoginCallback : MASCallback
         }
  ```
 
-### Authenticate user with password (login again) 
+### Authenticate user with password (implicit, event-based)
 
-**Scenario 3**: TBD
+**Scenario 3**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication. In OAuth, this is called **implicit grant** flow.
 
 ```c#
-
-// Token has expired. Trigger event to device that login is required to access API
 
 private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
  {
@@ -117,19 +119,25 @@ private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationLis
          Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
      }
  }
-```
+ ```
 
 ### Get current user
 
+This method gets all of the properties of the currently authenticaticated user.
+
 ```c#
 // Returns the current authenticated user or null if there is no authenticated user.
+
 MASUser.CurrentUser
 ```
 
 ### Log out authenticated user
 
-```MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
-private class LoginCallback : MASCallback
+```
+// Log out currently authenticated user
+
+MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
+private class LogoutCallback : MASCallback
        {
             public override void OnError(Throwable e)
             {
@@ -212,7 +220,7 @@ builder.ResponseBody(MASResponseBody.ByteArrayBody());
 #### Custom response
 
 ```
-// Example implementation of a custom response class
+// Sample implementation of a custom response class
 
 private class JSONArrayResponse : MASResponseBody
 {
@@ -227,7 +235,7 @@ private class JSONArrayResponse : MASResponseBody
     }
 }
  
-// Example usage of the custom response class
+// Sample usage of the custom response class
     MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
     builder.ResponseBody(new JSONArrayResponse());
 ```
