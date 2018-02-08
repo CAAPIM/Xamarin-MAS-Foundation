@@ -136,7 +136,7 @@ MAS.SetUserAuthCredentials( (authCredentialsBlock) => {
 
 This method gets all of the properties of the currently authenticaticated user.
 
-```
+```c#
 //
 // Returns the currently authenticated user or null if there is no authenticated user.
 //
@@ -145,7 +145,7 @@ MASUser currentUser = MASUser.CurrentUser;
 
 ### Log out authenticated user
 
-```
+```c#
 //
 //  Logout currently authenticated user
 //
@@ -163,7 +163,7 @@ MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) => {
 
 ## Access APIs
 
-```
+```c#
 //  Create MASRequestBuilder with HTTP method 
 MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
  
