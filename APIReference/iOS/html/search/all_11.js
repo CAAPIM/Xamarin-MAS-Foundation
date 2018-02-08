@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['setbodyparameter',['SetBodyParameter',['../interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a5321df24fa7dfcfc11ac07a565b5d377',1,'MASFoundation::MASRequestBuilder']]],
+  ['setconfigurationfilename',['SetConfigurationFileName',['../interface_m_a_s_foundation_1_1_m_a_s.html#acf382815c1d2bca8060b09a8ac47f5b2',1,'MASFoundation::MAS']]],
+  ['setgatewaymonitor',['SetGatewayMonitor',['../interface_m_a_s_foundation_1_1_m_a_s.html#a38658a6dd2afc3ea82fa016c19eb2892',1,'MASFoundation::MAS']]],
+  ['setgatewaynetworkactivitylogging',['SetGatewayNetworkActivityLogging',['../interface_m_a_s_foundation_1_1_m_a_s.html#ae90686d8e6135e0c3375ca4d0e22315d',1,'MASFoundation::MAS']]],
+  ['setheaderparameter',['SetHeaderParameter',['../interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a376b2171a575779a3d6f4ab2e3d12e66',1,'MASFoundation::MASRequestBuilder']]],
+  ['setkeychainsynchronizable',['SetKeychainSynchronizable',['../interface_m_a_s_foundation_1_1_m_a_s.html#ac6074847b8c9972da49ea9e380402d53',1,'MASFoundation::MAS']]],
+  ['setobjectforkey',['SetObjectForKey',['../interface_m_a_s_foundation_1_1_m_a_s_object.html#a602ea3b2694f89216103a769af53fa25',1,'MASFoundation::MASObject']]],
+  ['setobjectforkeyedsubscript',['SetObjectForKeyedSubscript',['../interface_m_a_s_foundation_1_1_m_a_s_object.html#a09f75b6c5a4da84a60df01545bcae122',1,'MASFoundation::MASObject']]],
+  ['setqueryparameter',['SetQueryParameter',['../interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#ac2a67980777316ff07932b0029ec1f4d',1,'MASFoundation::MASRequestBuilder']]],
+  ['setsignwithclaims',['SetSignWithClaims',['../interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a6d34aebefad1e25cef34b53515c421cf',1,'MASFoundation.MASRequestBuilder.SetSignWithClaims(MASClaims claims, [NullAllowed] out NSError error)'],['../interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a64480ef1a9a1077f6ec88b706f322bb7',1,'MASFoundation.MASRequestBuilder.SetSignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error)']]],
+  ['setsignwitherror',['SetSignWithError',['../interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a123dd3c65600e7a62b24218d507b57c2',1,'MASFoundation::MASRequestBuilder']]],
+  ['setuserauthcredentials',['SetUserAuthCredentials',['../interface_m_a_s_foundation_1_1_m_a_s.html#a55f1cb92b69dfbdfe6acd4c8465fab52',1,'MASFoundation::MAS']]],
+  ['sign',['Sign',['../interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a740351a7ab495f3494ee72bef086abd7',1,'MASFoundation.MASRequestBuilder.Sign()'],['../interface_m_a_s_foundation_1_1_m_a_s_request.html#a0cf05ba9ab0cc7676f56c2c7d4c60e44',1,'MASFoundation.MASRequest.Sign()']]],
+  ['start',['Start',['../interface_m_a_s_foundation_1_1_m_a_s.html#ab99b1cd3209a1e2d7315f3a27a1e3dfb',1,'MASFoundation::MAS']]],
+  ['startasbluetoothcentral',['StartAsBluetoothCentral',['../interface_m_a_s_foundation_1_1_m_a_s_device.html#aba8431532ff78f7916b0c495b33e2bdc',1,'MASFoundation::MASDevice']]],
+  ['startasbluetoothcentralwithauthenticationprovider',['StartAsBluetoothCentralWithAuthenticationProvider',['../interface_m_a_s_foundation_1_1_m_a_s_device.html#ab56c39794b624a17d6dafee150559127',1,'MASFoundation::MASDevice']]],
+  ['startasbluetoothperipheral',['StartAsBluetoothPeripheral',['../interface_m_a_s_foundation_1_1_m_a_s_device.html#a96087c3743763d52ede679525f66c3b4',1,'MASFoundation::MASDevice']]],
+  ['startwithdefaultconfiguration',['StartWithDefaultConfiguration',['../interface_m_a_s_foundation_1_1_m_a_s.html#aecd17546b91ed8b1e51823df55daeaf8',1,'MASFoundation::MAS']]],
+  ['startwithjson',['StartWithJSON',['../interface_m_a_s_foundation_1_1_m_a_s.html#a232c49373a1f81a3b50ad49eeafbc675',1,'MASFoundation::MAS']]],
+  ['startwithurl',['StartWithURL',['../interface_m_a_s_foundation_1_1_m_a_s.html#ac6432ae8ac9fc8e203eb20af5d431ab7',1,'MASFoundation::MAS']]],
+  ['status',['Status',['../interface_m_a_s_foundation_1_1_m_a_s_device.html#a8c824ff5bc6a785ac715f6504cbfb076',1,'MASFoundation::MASDevice']]],
+  ['stop',['Stop',['../interface_m_a_s_foundation_1_1_m_a_s.html#a8eca812d254767d1e15a7a2b14d31667',1,'MASFoundation::MAS']]],
+  ['stopasbluetoothcentral',['StopAsBluetoothCentral',['../interface_m_a_s_foundation_1_1_m_a_s_device.html#a5613ac5295a88c2212ae8424135fefb3',1,'MASFoundation::MASDevice']]],
+  ['stopasbluetoothperipheral',['StopAsBluetoothPeripheral',['../interface_m_a_s_foundation_1_1_m_a_s_device.html#aaed7b6558141a48fe3da4b1c35cb49a4',1,'MASFoundation::MASDevice']]]
+];
