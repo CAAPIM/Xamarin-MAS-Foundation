@@ -6,11 +6,11 @@ The Mobile SDK for Xamarin provides simple and secure access to CA Mobile API Ga
 
 ## What's in this Release
 
-In this release, you get **MASFoundation** -- the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
+In this release, you get **MASFoundation** -- the core MAS framework that handles the communication and authentication layer. Quickly build secure Xamarin apps using these built-in features:
  
 - Authenticate with:
   - Device registration
-  - User login and client credentials
+  - User login and registered app
   - Fingerprint session lock
   - Single Sign-On
 - Securely access protected APIs that are configured with OAuth 2.0
@@ -18,7 +18,7 @@ In this release, you get **MASFoundation** -- the core MAS framework that handle
 The SDK contains:
 
 - MASFoundation framework for iOS and Android with the above features 
-- A sample app for each framework so you can test log in, log out, and invoke an API
+- A sample app for each framework so you can test basic authentication flows with a CA Mobile API Gateway
 - Steps to add MASFoundation an existing app
 - API reference documentation
 
