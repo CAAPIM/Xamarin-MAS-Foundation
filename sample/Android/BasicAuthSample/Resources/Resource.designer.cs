@@ -82,6 +82,9 @@ namespace BasicAuthSample
 			// aapt resource value: 0x7f080005
 			public const int invokeApi = 2131230725;
 			
+			// aapt resource value: 0x7f080006
+			public const int lockSession = 2131230726;
+			
 			// aapt resource value: 0x7f080003
 			public const int login = 2131230723;
 			
@@ -96,6 +99,9 @@ namespace BasicAuthSample
 			
 			// aapt resource value: 0x7f080000
 			public const int startSDKButton = 2131230720;
+			
+			// aapt resource value: 0x7f080007
+			public const int unlockSession = 2131230727;
 			
 			static Id()
 			{
