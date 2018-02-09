@@ -1,7 +1,7 @@
 
 ## Android Mobile SDK for Xamarin
 
-**MASFoundation**is the core MAS framework that handles the communication and authentication layer. Quickly build secure Xamarin apps using these built-in features:
+**MASFoundation** is the core MAS framework that handles the communication and authentication layer. Quickly build secure Xamarin apps using these built-in features:
  
 - Authenticate with:
   - Device registration
@@ -40,7 +40,6 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **log in**, **log out**, and **access a protected API**. 
 
-
 ## Start the SDK 
 
 ### Step 1: Determine Start Method 
@@ -73,17 +72,17 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 
 MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
 private class LoginCallback : MASCallback
-{
-    public override void OnError(Throwable e)
-    {
-        MAS.CancelAllRequests();
-    }
+        {
+            public override void OnError(Throwable e)
+            {
+                MAS.CancelAllRequests();
+            }
  
-    public override void OnSuccess(Java.Lang.Object user)
-    {
-        Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
-    }
-}
+            public override void OnSuccess(Java.Lang.Object user)
+            {
+                Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
+            }
+        }
  ```
 
 
@@ -93,14 +92,20 @@ The method that starts the SDK is **MAS.start**. You can put it anywhere in your
 
 Add your authentication method (from the previous step) to start the SDK.
 
-```c#
+```
 //MAS.Start(Context context, bool shouldUseDefault);
 MAS.Start(Application.Context, true);
+//MAS.SetGrantFlow(int type);
+
+//MAS.Start(Context context, bool shouldUseDefault);
+MAS.Start(Application.Context, true);
+//MAS.SetGrantFlow(int type);
  
 // Set Grant Flow to Client Credentials
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 // Set Grant Flow to Password
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
+
 ```
 
 ### More Authentication Methods
@@ -113,29 +118,29 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```c#
 
 private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationListener
-{
-    public void OnAuthenticateRequest(Context context, long requestId, MASAuthenticationProviders providers)
-    {
-        MASUser.Login("username", "password".ToCharArray(), new LoginCallback());
-    }
+ {
+     public void OnAuthenticateRequest(Context context, long requestId, MASAuthenticationProviders providers)
+     {
+         MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
+     }
  
-    public void OnOtpAuthenticateRequest(Context context, MASOtpAuthenticationHandler handler)
-    {
-        throw new NotImplementedException();
-    }
-}
-private class LoginCallback : MASCallback
-{
-    public override void OnError(Throwable e)
-    {
-        MAS.CancelAllRequests();
-    }
+     public void OnOtpAuthenticateRequest(Context context, MASOtpAuthenticationHandler handler)
+     {
+         throw new NotImplementedException();
+     }
+ }
+ private class LoginCallback : MASCallback
+ {
+     public override void OnError(Throwable e)
+     {
+         MAS.CancelAllRequests();
+     }
  
-    public override void OnSuccess(Java.Lang.Object user)
-    {
-        Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
-    }
-}
+     public override void OnSuccess(Java.Lang.Object user)
+     {
+         Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
+     }
+ }
  ```
 
 #### Get current user
@@ -144,8 +149,8 @@ This method gets all of the properties of the currently authenticaticated user.
 
 ```c#
 // Returns the current authenticated user or null if there is no authenticated user.
-MASUser.CurrentUser
 
+MASUser.CurrentUser
 ```
 
 #### Log out authenticated user
@@ -153,21 +158,20 @@ MASUser.CurrentUser
 ```c#
 // Log out currently authenticated user
 
-MASUser.CurrentUser.Logout(new LogoutCallback());
-
+MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
 private class LogoutCallback : MASCallback
-{
-    public override void OnError(Throwable e)
-    {
-        //Logout failed
-    }
+       {
+            public override void OnError(Throwable e)
+            {
+                //Logout failed
+            }
  
-    public override void OnSuccess(Java.Lang.Object obj)
-    {
-        //Success Logout
-    }
-}
-```
+            public override void OnSuccess(Java.Lang.Object obj)
+            {
+                //Success Logout
+            }
+        }
+ ```
 
 
 ## Access APIs
@@ -255,7 +259,7 @@ private class JSONArrayResponse : MASResponseBody
  
 // Sample usage of the custom response class
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
-builder.ResponseBody(new JSONArrayResponse());
+    builder.ResponseBody(new JSONArrayResponse());
 ```
 
 #### Callback 
@@ -292,7 +296,6 @@ builder.Get();
 long id = MAS.Invoke(builder.Build(), new ProtectAPICallback());
 MAS.CancelRequest(id);
 MAS.CancelAllRequests();
-
 ```
 
 #### Example: Invoke an API with HTTP Get with IMASResponse in JSON
@@ -317,6 +320,8 @@ private class ProtectAPICallback : MASCallback
     }
 }
 ```
+
+
 
 ## Pre-release Agreement
 
