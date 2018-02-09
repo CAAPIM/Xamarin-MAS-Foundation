@@ -10,6 +10,7 @@ using Android.OS;
 using Com.CA.Mas.Foundation;
 using Org.Json;
 using Java.Lang;
+using Android.Content;
 
 
 namespace BasicAuthSample
@@ -66,6 +67,17 @@ namespace BasicAuthSample
             logoutButton.Click += (sender, e) =>
             {
                 logout();
+            };
+
+            Button lockSessionButton = FindViewById<Button>(Resource.Id.lockSession);
+            lockSessionButton.Click += (sender, e) =>
+            {
+                lockSession();
+            };
+            Button unlockSessionButton = FindViewById<Button>(Resource.Id.unlockSession);
+            unlockSessionButton.Click += (sender, e) =>
+            {
+                unLockSession();
             };
 
             MAS.SetAuthenticationListener(new MyAuthenticationListener());
@@ -143,6 +155,56 @@ namespace BasicAuthSample
 
         }
 
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            if (requestCode == 1)
+            {
+                // Credentials entered successfully!
+                if (resultCode == Result.Ok)
+                {
+                    MASUser.CurrentUser.UnlockSession(new UnlockCallback(this));
+                }
+            }
+        }
+
+        private void unLockSession()
+        {
+            MASUser.CurrentUser.UnlockSession(new UnlockCallback(this));
+        }
+
+        private class UnlockCallback : MASSessionUnlockCallback
+        {
+            private MainActivity activity;
+            public UnlockCallback(MainActivity activity)
+            {
+                this.activity = activity;
+            }
+
+            public override void OnError(Throwable e)
+            {
+                activity.Alert("Session Unlock", "Session Unlocked Failed!");
+            }
+
+            public override void OnSuccess(Java.Lang.Object result)
+            {
+                activity.Alert("Session Unlock", "Session Unlocked!");
+            }
+
+            public override void OnUserAuthenticationRequired()
+            {
+                KeyguardManager keyguardManager = (KeyguardManager)Application.Context.GetSystemService(Context.KeyguardService);
+                Intent intent = keyguardManager.CreateConfirmDeviceCredentialIntent("Session Unlock", "Provide PIN or FingerPrint to unlock session.");
+                activity.StartActivityForResult(intent, 1);
+            }
+        }
+
+
+        private void lockSession()
+        {
+            MASUser.CurrentUser.LockSession(new LockSessionCallback(this));
+        }
+
+
         public void Alert(string Title, string Message)
         {
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
@@ -178,6 +240,7 @@ namespace BasicAuthSample
             public override void OnError(Throwable e)
             {
                 //Handle error
+                activity.Alert("Access API", e.ToString());
                 Console.WriteLine(e);
             }
 
@@ -223,6 +286,37 @@ namespace BasicAuthSample
                 activity.Alert(((MASUser)result).DisplayName, ((MASUser)result).AsJSONObject.ToString(4));
 
             }
+        }
+
+        private class LockSessionCallback : MASCallback
+        {
+
+            private MainActivity activity;
+            public LockSessionCallback(MainActivity activity)
+            {
+                this.activity = activity;
+            }
+
+            public override Handler Handler
+            {
+                //run the callback on main thread
+                get
+                {
+                    return new Handler(Looper.MainLooper);
+                }
+            }
+
+            public override void OnError(Throwable e)
+            {
+                //Handle error
+                activity.Alert("Session Lock", "Session Lock Failed!");
+            }
+
+            public override void OnSuccess(Java.Lang.Object result)
+            {
+                activity.Alert("Session Lock", "Session Locked!");
+            }
+
         }
     }
 }
