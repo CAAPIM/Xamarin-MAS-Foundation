@@ -45,4 +45,16 @@
         android:id="@+id/logout"
         android:text="Logout"
         android:backgroundTint="#ff000000" />
+    <Button
+        android:layout_width="250.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lockSession"
+        android:text="Lock Session"
+        android:backgroundTint="#ff000000" />
+    <Button
+        android:layout_width="250.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/unlockSession"
+        android:text="Unlock Session"
+        android:backgroundTint="#ff000000" />
 </LinearLayout>
