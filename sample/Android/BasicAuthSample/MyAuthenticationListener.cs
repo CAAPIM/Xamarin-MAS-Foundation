@@ -64,7 +64,7 @@ namespace BasicAuthSample
                 }
                 else
                 {
-                    Toast.MakeText(context, "Error: Empty Username or Password field!", ToastLength.Short).Show();
+                    Toast.MakeText(context, "Log In Failed: Empty Username or Password field!", ToastLength.Short).Show();
                 }
 
             });

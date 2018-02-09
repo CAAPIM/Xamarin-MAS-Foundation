@@ -23,7 +23,7 @@ namespace BasicAuthSample
             SetGrantFlowToClientCredentials();
         }
 
-        partial void StartSDK_TouchUpInside(UIButton sender)
+        partial void StartSDKButton_TouchUpInside(UIButton sender)
         {
             StartSDK();
         }
@@ -56,28 +56,61 @@ namespace BasicAuthSample
             MAS.GrantFlow = MASGrantFlow.Password;
 
             //
-            //  Initialize SDK always with default configuration
+            //  MAS.GrantFlow must be set to MASGrantFlow.Password in order to trigger implicit login flow
+            //  MAS.SetUserAuthCredentials block must be set before invoking an API
             // 
-            MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
-            {
-                if(completed)
-                {
-                    //  SDK initialized without an error
-                    ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
-                }    
+            MAS.SetUserAuthCredentials((authCredentialsBlock) => {
 
-                if(error != null)
-                {
-                    //  SDK initialized with an error
-                    ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
-                }    
+                var userName = String.Empty;
+                var password = String.Empty;
+
+                UIAlertView alert = new UIAlertView();
+                alert.AlertViewStyle = UIAlertViewStyle.LoginAndPasswordInput;
+                alert.Title = "MAS.LoginWithUserName";
+                alert.AddButton("Login");
+                alert.AddButton("Cancel");
+                alert.Message = "Please enter your username and password";
+                alert.Clicked += ((object sender, UIButtonEventArgs e) =>
+                     {
+                            UIAlertView parent_alert = (UIAlertView)sender;
+
+                            if (e.ButtonIndex == 0)
+                            {
+                                // OK button
+                                userName = parent_alert.GetTextField(0).Text;
+                                password = parent_alert.GetTextField(1).Text;
+
+                                 //  Build MASAuthCredentialsPassword with username and password
+                                 MASAuthCredentialsPassword passwordCredentials = MASAuthCredentialsPassword.InitWithUsername(userName, password);
+
+                                 //  Invoke callback block, authCredentialsBlock, with MASAuthCredentialsPassword object
+                                 authCredentialsBlock(passwordCredentials, false, (bool completed, NSError error) =>
+                                 {
+                                     if (error != null)
+                                     {
+                                        ShowAlert("MAS.SetUserAuthCredentials", "ERROR: " + error.LocalizedDescription);
+                                     }
+                                     else
+                                     {
+                                        ShowAlert("MAS.SetUserAuthCredentials", "Welcome " + MASUser.CurrentUser.UserName);
+                                     }
+                                 });
+                            }
+                            else
+                            {
+                             // Cancel button
+                             authCredentialsBlock(null, true, null);
+
+                            }
+
+                        });
+                alert.Show();
             });
-
         }
 
         private void invokeProtectedAPI()
         {
-            if (MASUser.CurrentUser != null || MAS.GrantFlow == MASGrantFlow.ClientCredentials)
+            if (MAS.MASState != MASState.NotInitialized)
             {
                 //  Create MASRequestBuilder with HTTP method 
                 MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
@@ -100,6 +133,7 @@ namespace BasicAuthSample
                     {
                         //  If an error was returned
                         Console.WriteLine("Error: {0}", error.LocalizedDescription);
+                        ShowAlert("MAS.Invoke", error.LocalizedDescription);
                     }
                     else if (responseInfo != null)
                     {
@@ -115,6 +149,9 @@ namespace BasicAuthSample
                         ShowAlert("MAS.Invoke", value);
                     }
                 });
+            } else 
+            {
+                ShowAlert("MAS.Invoke", "You must initialize the SDK before calling API");
             }
         }
 
@@ -162,6 +199,12 @@ namespace BasicAuthSample
                     }
                 });               
             }
+            else
+            {
+                // Logged out without an error
+                ShowAlert("MAS.LogoutWithCompletion", "No user logged in");
+            }
+
         }
 
         private void StartSDK()
@@ -169,19 +212,26 @@ namespace BasicAuthSample
             //
             //  Initialize SDK always with default configuration
             // 
-            MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
+            if (MAS.MASState == MASState.DidStart) 
             {
-                if(completed)
+                ShowAlert("MAS.Start", "CA Mobile SDK already started.");
+            } else 
+            {
+                MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
                 {
-                    //  SDK initialized without an error
-                    ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
-                }
-                if(error!=null)
-                {
-                    //  SDK initialized with an error
-                    ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
-                }
-            });
+                    if (completed)
+                    {
+                        //  SDK initialized without an error
+                        ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
+                    }
+                    if (error != null)
+                    {
+                        //  SDK initialized with an error
+                        ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
+                    }
+                });  
+            }
+
         }
 
         private void SetGrantFlowToPassword()
@@ -211,15 +261,21 @@ namespace BasicAuthSample
 
         private void ShowLogin()
         {
-            UIAlertView alert = new UIAlertView();
 
-            alert.AlertViewStyle = UIAlertViewStyle.LoginAndPasswordInput;
-            alert.Title = "MAS.LoginWithUserName";
-            alert.AddButton("Login");
-            alert.AddButton("Cancel");
-            alert.Message = "Please enter your username and password";
-            alert.Clicked += ProcessLogin;
-            alert.Show();
+            if (MASUser.CurrentUser != null) {
+                ShowAlert("MAS.LoginWithUserName", "User already logged in");
+            } else
+            {
+                UIAlertView alert = new UIAlertView();
+
+                alert.AlertViewStyle = UIAlertViewStyle.LoginAndPasswordInput;
+                alert.Title = "MAS.LoginWithUserName";
+                alert.AddButton("Login");
+                alert.AddButton("Cancel");
+                alert.Message = "Please enter your username and password";
+                alert.Clicked += ProcessLogin;
+                alert.Show();   
+            }
         }
 
         public void ProcessLogin(object sender, UIButtonEventArgs e)

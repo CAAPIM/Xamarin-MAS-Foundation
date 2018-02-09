@@ -25,12 +25,6 @@ namespace BasicAuthSample
             SetContentView(Resource.Layout.Main);
 
             // Get our UI controls from the loaded layout
-            Button startSDKButton = FindViewById<Button>(Resource.Id.startSDKButton);
-            startSDKButton.Click += (sender, e) =>
-            {
-                startSDK();
-            };
-
             Button setClientCredentialsFlowButton = FindViewById<Button>(Resource.Id.setClientCredentialsFlow);
             setClientCredentialsFlowButton.Click += (sender, e) =>
             {
@@ -49,16 +43,16 @@ namespace BasicAuthSample
                 Alert("MAS", "Grant flow set to Password Flow!");
             };
 
+            Button startSDKButton = FindViewById<Button>(Resource.Id.startSDKButton);
+            startSDKButton.Click += (sender, e) =>
+            {
+                startSDK();
+            };
+
             Button loginButton = FindViewById<Button>(Resource.Id.login);
             loginButton.Click += (sender, e) =>
             {
                 login();
-            };
-
-            Button logoutButton = FindViewById<Button>(Resource.Id.logout);
-            logoutButton.Click += (sender, e) =>
-            {
-                logout();
             };
 
             Button invokeApiButton = FindViewById<Button>(Resource.Id.invokeApi);
@@ -67,20 +61,34 @@ namespace BasicAuthSample
                 invokeApi();
             };
 
+
+            Button logoutButton = FindViewById<Button>(Resource.Id.logout);
+            logoutButton.Click += (sender, e) =>
+            {
+                logout();
+            };
+
             MAS.SetAuthenticationListener(new MyAuthenticationListener());
 
-
+            startSDK();
         }
 
         public void startSDK()
         {
-            // MAS.Start(Context, context, bool shouldUseDefault);
-            MAS.Start(this, true);
-
             if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-                Alert("MAS", "CA Mobile SDK started successfully!!");
-            else
-                Alert("MAS", "CA Mobile SDK did not start!!");
+            {
+                Alert("MAS", "CA Mobile SDK has already been started.");
+            } else
+            {
+                // MAS.Start(Context, context, bool shouldUseDefault);
+                MAS.Start(this, true);
+
+                if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
+                    Alert("MAS", "CA Mobile SDK started successfully!!");
+                else
+                    Alert("MAS", "CA Mobile SDK did not start!!");
+            }
+
         }
 
         public void login()
