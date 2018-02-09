@@ -40,6 +40,11 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **log in**, **log out**, and **access a protected API**. 
 
+[TBD - Will we improve sample or use slick demo by Microsoft consultant?]
+[Sample app improvements: spelling errors Log in/Log out, human error messages, human text for grant flows, sample app should be something useful and interesting for enterprise.]
+
+[Section here for manual get started with .dlls and dependency manager flow (NuGet)]
+
 ## Start the SDK 
 
 ### Step 1: Determine Start Method 
