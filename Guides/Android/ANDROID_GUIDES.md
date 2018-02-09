@@ -64,13 +64,13 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 
 #### Start, user authentication with password
 
-**What**: Always start with login screen.<br>
+**What**: Always start with user login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
 
 ```c#
 // Authenticate user with password, explicit
 
-MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
+MASUser.Login("admin", "mysecretpassword7".ToCharArray(), loginCallback);
 private class LoginCallback : MASCallback
         {
             public override void OnError(Throwable e)
@@ -92,7 +92,7 @@ The method that starts the SDK is **MAS.start**. You can put it anywhere in your
 
 Add your authentication method (from the previous step) to start the SDK.
 
-```
+```c#
 //MAS.Start(Context context, bool shouldUseDefault);
 MAS.Start(Application.Context, true);
 //MAS.SetGrantFlow(int type);
