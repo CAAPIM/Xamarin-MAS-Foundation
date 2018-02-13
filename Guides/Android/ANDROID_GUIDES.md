@@ -83,7 +83,7 @@ private class LoginCallback : MASCallback
 #### Start, no user authentication
 
 **What**: No user authentication, just access an API.<br>
-**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. 
+**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required.</br><br>
 **Description**: Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential**. In a nutshell, client credentials authenticates access to an API.</br>
 
 ```c#
