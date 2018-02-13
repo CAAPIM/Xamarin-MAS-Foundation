@@ -52,23 +52,9 @@ If you get an error, the most likely cause is an invalid app configuration file.
 ### Step 1: Determine Start Method 
 
 Before you start the SDK, you need determine the authentication flow for starting your app. You can choose:
-- Start, no user authentication
-<br>or</br> 
 - Start, user authentication with password (default)
-
-#### Start, no user authentication
-
-**What**: No user authentication, just access an API. <br>
-**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. 
-**Description**: Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential**. In a nutshell, client credentials authenticates access to an API.</br>
-
-```c#
-// Set Grant Flow to Client Credentials
-MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
-// Set Grant Flow to Password
-MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
-
-```
+<br>or</br> 
+- Start, no user authentication
 
 #### Start, user authentication with password
 
@@ -94,6 +80,19 @@ private class LoginCallback : MASCallback
         }
  ```
 
+#### Start, no user authentication
+
+**What**: No user authentication, just access an API. <br>
+**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. 
+**Description**: Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential**. In a nutshell, client credentials authenticates access to an API.</br>
+
+```c#
+// Set Grant Flow to Client Credentials
+MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
+// Set Grant Flow to Password
+MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
+
+```
 
 ### Step 2: Start the SDK 
 
