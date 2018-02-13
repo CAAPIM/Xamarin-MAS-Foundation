@@ -59,7 +59,7 @@ Before you start the SDK, you need determine the authentication flow for startin
 #### Start, user authentication with password
 
 **What**: Always start with user login screen.<br>
-**Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. 
+**Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive.<br>
 **Description**: Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access. The username/password flow is the default flow. </br>
 
 ```c#
@@ -121,7 +121,7 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 #### Authenticate user with password (event-based)
 
 **What**: Event-based user authentication<br>
-**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. 
+**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed.<br>
 **Description**: The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
 
 ```c#
@@ -186,7 +186,7 @@ private class LogoutCallback : MASCallback
 ## Fingerprint Sessions Lock
 
 **Library**: MASFoundation<br>
-**Scenario**: You are creating a door security app and you want fingerprint recognition biometrics as part of the identification process (in addition to a PIN and password). You want the device to prompt for fingerprint, and if fingerprint fails, you want the screen lock authentication with Pattern/PIN/Password. And if screen lock fails, you want the device to lock out the user for xx number of seconds. 
+**Scenario**: You are creating a door security app and you want fingerprint recognition biometrics as part of the identification process (in addition to a PIN and password). You want the device to prompt for fingerprint, and if fingerprint fails, you want the screen lock authentication with Pattern/PIN/Password. And if screen lock fails, you want the device to lock out the user for xx number of seconds.<br>
 **Description**: The Mobile SDK supports fingerprint authentication only on the local device. That is, the user's fingerprint is compared against the image that is stored in the secure area on the chipset. If the unique characteristics of the fingerprints match, the user is authenticated, and the phone is unlocked.</br> 
 
 The Mobile SDK supports using Fingerprint Session Lock with device Screen Lock with Pattern/PIN/Password. Because the app user can use one, both, or no locking method at all, you need to handle all of these scenarios. If the device is configured without any lock method, the Mobile SDK returns an error that device lock security is missing.
