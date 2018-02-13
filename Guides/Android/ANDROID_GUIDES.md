@@ -43,9 +43,11 @@ If you get an error, the most likely cause is an invalid app configuration file.
 [TBD - Will we improve sample or use slick demo by Microsoft consultant?]
 [Sample app improvements: spelling errors Log in/Log out, human error messages, human text for grant flows, sample app should be something useful and interesting for enterprise.]
 
-[Section here for manual get started with .dlls and dependency manager flow (NuGet)]
+[tBD - Section here for manual get started with .dlls and dependency manager flow (NuGet)]
 
-## Start the SDK 
+## Login: Authentication
+
+[add authorization later]
 
 ### Step 1: Determine Start Method 
 
@@ -57,7 +59,8 @@ Before you start the SDK, you need determine the authentication flow for startin
 #### Start, no user authentication
 
 **What**: No user authentication, just access an API. <br>
-**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential**. In a nutshell, client credentials authenticates access to an API.</br>
+**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. 
+**Description**: Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential**. In a nutshell, client credentials authenticates access to an API.</br>
 
 ```c#
 // Set Grant Flow to Client Credentials
@@ -70,7 +73,8 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 #### Start, user authentication with password
 
 **What**: Always start with user login screen.<br>
-**Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access. The username/password flow is the default flow. </br>
+**Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. 
+**Description**: Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access. The username/password flow is the default flow. </br>
 
 ```c#
 // Authenticate user with password, explicit
@@ -118,7 +122,8 @@ MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 #### Authenticate user with password (event-based)
 
 **What**: Event-based user authentication<br>
-**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
+**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. 
+**Description**: The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
 
 ```c#
 
@@ -178,6 +183,104 @@ private class LogoutCallback : MASCallback
         }
  ```
 
+
+## Fingerprint Sessions Lock
+
+**Library**: MASFoundation<br>
+**Scenario**: You are creating a door security app and you want fingerprint recognition biometrics as part of the identification process (in addition to a PIN and password). You want the device to prompt for fingerprint, and if fingerprint fails, you want the screen lock authentication with Pattern/PIN/Password. And if screen lock fails, you want the device to lock out the user for xx number of seconds. 
+**Description**: The Mobile SDK supports fingerprint authentication only on the local device. That is, the user's fingerprint is compared against the image that is stored in the secure area on the chipset. If the unique characteristics of the fingerprints match, the user is authenticated, and the phone is unlocked. 
+
+The Mobile SDK supports using Fingerprint Session Lock with device Screen Lock with Pattern/PIN/Password. Because the app user can use one, both, or no locking method at all, you need to handle all of these scenarios. If the device is configured without any lock method, the Mobile SDK returns an error that device lock security is missing.
+
+::: alert info
+**Note**: Multiple fingerprints can be stored on the device, including the owner and people who the owner trusts. If you store multiple fingerprints on the device, all users can access the app and any API call. If you implement fingerprint with Single Sign-On enabled, all apps using SSO are blocked and require a fingerprint match to unlock.
+:::
+
+::: alert danger 
+**Important!** Currently, the Mobile SDK does not support fingerprint using multi-factor authentication, which is often mandated in government and enterprises (FIDO protocol). Specifically, the Mobile SDK does not match the device's fingerprint against an image that is stored on a secure server, and where the original fingerprint was scanned using a third-party fingerprint scanner. If you use the local device authentication using fingerprints, understand the inherent security limitations for this feature that are documented by your device vendor.
+:::
+
+**Supported**: Android M+ only with fingerprint device<br> 
+
+**Sample App**:
+<br><a href="https://github.com/CAAPIM/Releases/blob/develop/MAS-1.6.00/Android/Samples/Android%20-%20Fingerprint%20Sessions%20Lock.zip?raw=true" title="With a Title">Download sample app</a></br>
+
+#### Lock user session
+
+```
+//Lock User Session
+MASUser.CurrentUser.LockSession(new SessionLockCallback());
+private class SessionLockCallback : MASCallback
+{
+    public override void OnError(Throwable e)
+    {
+        //lock session failed
+    }
+ 
+    public override void OnSuccess(Java.Lang.Object obj)
+    {
+        //lock session success
+    }
+```
+
+#### Verify locked user session
+
+```//Verify that the user session is locked.
+MASUser.CurrentUser.IsSessionLocked
+```
+
+#### Unlock user session
+
+```//Unlock User Session
+MASUser.CurrentUser.UnlockSession(new UnlockCallback());
+private class UnlockCallback : MASSessionUnlockCallback
+{
+    public override void OnError(Throwable e)
+    {
+        //Unlock session failed
+    }
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        //Unlock session success
+    }
+    public override void OnUserAuthenticationRequired()
+    {
+        KeyguardManager keyguardManager = (KeyguardManager)Application.Context.GetSystemService(Context.KeyguardService);
+        Intent intent = keyguardManager.CreateConfirmDeviceCredentialIntent("Title","key");
+        activity.StartActivityForResult(intent, 1);
+    }
+}
+protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+{
+    if (requestCode == 1)
+    {
+        // Credentials entered successfully!
+        if (resultCode == Result.Ok)
+        {
+            //Call unlock again after activity result.
+            MASUser.CurrentUser.UnlockSession(new UnlockCallback(this));
+        }
+    }
+}
+```
+
+#### Remove locked user session
+
+```//Remove Locked User Session
+MASUser.CurrentUser.RemoveSessionLock(new RemoveLockCallback());
+private class RemoveLockCallback : MASCallback
+{
+    public override void OnError(Throwable e)
+    {
+        //remove lock failed
+    }
+ 
+    public override void OnSuccess(Java.Lang.Object obj)
+    {
+        //remove lock  success
+    }
+}
+```
 
 ## Access APIs
 
