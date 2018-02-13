@@ -188,7 +188,7 @@ private class LogoutCallback : MASCallback
 
 **Library**: MASFoundation<br>
 **Scenario**: You are creating a door security app and you want fingerprint recognition biometrics as part of the identification process (in addition to a PIN and password). You want the device to prompt for fingerprint, and if fingerprint fails, you want the screen lock authentication with Pattern/PIN/Password. And if screen lock fails, you want the device to lock out the user for xx number of seconds. 
-**Description**: The Mobile SDK supports fingerprint authentication only on the local device. That is, the user's fingerprint is compared against the image that is stored in the secure area on the chipset. If the unique characteristics of the fingerprints match, the user is authenticated, and the phone is unlocked. 
+**Description**: The Mobile SDK supports fingerprint authentication only on the local device. That is, the user's fingerprint is compared against the image that is stored in the secure area on the chipset. If the unique characteristics of the fingerprints match, the user is authenticated, and the phone is unlocked.</br> 
 
 The Mobile SDK supports using Fingerprint Session Lock with device Screen Lock with Pattern/PIN/Password. Because the app user can use one, both, or no locking method at all, you need to handle all of these scenarios. If the device is configured without any lock method, the Mobile SDK returns an error that device lock security is missing.
 
@@ -200,10 +200,9 @@ The Mobile SDK supports using Fingerprint Session Lock with device Screen Lock w
 **Important!** Currently, the Mobile SDK does not support fingerprint using multi-factor authentication, which is often mandated in government and enterprises (FIDO protocol). Specifically, the Mobile SDK does not match the device's fingerprint against an image that is stored on a secure server, and where the original fingerprint was scanned using a third-party fingerprint scanner. If you use the local device authentication using fingerprints, understand the inherent security limitations for this feature that are documented by your device vendor.
 :::
 
-**Supported**: Android M+ only with fingerprint device<br> 
-
+**Supported**: Android M+ only with fingerprint device<br>
 **Sample App**:
-<br><a href="https://github.com/CAAPIM/Releases/blob/develop/MAS-1.6.00/Android/Samples/Android%20-%20Fingerprint%20Sessions%20Lock.zip?raw=true" title="With a Title">Download sample app</a></br>
+<a href="https://github.com/CAAPIM/Releases/blob/develop/MAS-1.6.00/Android/Samples/Android%20-%20Fingerprint%20Sessions%20Lock.zip?raw=true" title="With a Title">Download sample app</a></br>
 
 #### Lock user session
 
