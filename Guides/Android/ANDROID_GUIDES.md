@@ -52,9 +52,9 @@ If you get an error, the most likely cause is an invalid app configuration file.
 ### Step 1: Determine Start Method 
 
 Before you start the SDK, you need determine the authentication flow for starting your app. You can choose:
-- Start, no user authentication (default)
+- Start, no user authentication
 <br>or</br> 
-- Start, user authentication with password
+- Start, user authentication with password (default)
 
 #### Start, no user authentication
 
