@@ -43,11 +43,9 @@ If you get an error, the most likely cause is an invalid app configuration file.
 [TBD - Will we improve sample or use slick demo by Microsoft consultant?]
 [Sample app improvements: spelling errors Log in/Log out, human error messages, human text for grant flows, sample app should be something useful and interesting for enterprise.]
 
-[tBD - Section here for manual get started with .dlls and dependency manager flow (NuGet)]
+[TBD - Section here for manual get started with .dlls and dependency manager flow (NuGet)]
 
 ## Login: Authentication
-
-[add authorization later]
 
 ### Step 1: Determine Start Method 
 
@@ -318,9 +316,10 @@ Parameters are encoded according to various standards defined by the HTTP verb t
 
 uriBuilder.AppendQueryParameter("key","value");
 ```
+
 #### Headers
 
-Add headers only if they are neede to customize a call. The Mobile SDK adds any necessary security credentials.
+Add headers only if they are needed to customize a call. The Mobile SDK adds any necessary security credentials.
 
 ```c#
 // Add Header

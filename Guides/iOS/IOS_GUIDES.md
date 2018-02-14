@@ -194,10 +194,14 @@ This section provides methods to call APIs.
 
 If you have custom endpoints installed on the MAG, you can make direct and secure HTTPS calls to them using the following methods. 
 
+#### Build Request with MASRequestBuilder
+
+The MASRequestBuilder lets you programatically customize a request with the MASRequest object. 
+
 ```c#
 //  Create MASRequestBuilder with HTTP method 
 MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
- 
+
 //
 //  Specify an endpoint path, any parameters or headers, and request/response type
 //
@@ -230,6 +234,13 @@ MAS.Invoke(request, completion: (responseInfo, error) => {
     }
 });
 ```
+
+#### MASRequest methods
+
+HTTP Get method
+HTTP Delete method
+HTTP Post method
+HTTP Put method
 
 
 ## Pre-release Agreement
