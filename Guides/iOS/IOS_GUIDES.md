@@ -245,7 +245,7 @@ The Mobile SDK uses the following standards for a secure an SSO implementation:
 
 There are no SDK methods. Simply get your Admin to configure the MAG for Single Sign-On, and enable the feature in your app using the following steps. The mobile apps must be using the same MAG. </br>  
 
-1. In Visual Studio, enable your app by selecting the main project, the main app target, select the Capabilities tab, enable the Key Sharing option. 
+1. In Xcode, enable your app by selecting the main project, the main app target, select the Capabilities tab, enable the Key Sharing option. 
 2. Add two groups:
 - One for your app in the first slot
 - A shared keychain group identifier to enable single sign-on
