@@ -184,7 +184,7 @@ private class LogoutCallback : MASCallback
 ### Fingerprint Sessions Lock
 
 **Library**: MASFoundation<br>
-**Scenario**: You are creating a door security app and you want fingerprint recognition biometrics as part of the identification process (in addition to a PIN and password). 
+**Scenario**: You are creating a door security app and you want fingerprint recognition biometrics as part of the identification process (in addition to a PIN and password).<br>
 **Description**: The Mobile SDK supports fingerprint authentication only on the local device. That is, the user's fingerprint is compared against the image that is stored in the secure area on the chipset. If the unique characteristics of the fingerprints match, the user is authenticated, and the phone is unlocked.</br> 
 
 The Mobile SDK supports using fingerprint session lock with device screen lock with Pattern/PIN/Password. Because the app user can use one, both, or no locking method at all, you need to handle all of these scenarios. If the device is configured without any lock method, the Mobile SDK returns an error that device lock security is missing.
@@ -192,8 +192,8 @@ The Mobile SDK supports using fingerprint session lock with device screen lock w
 If you have configured both fingerprint session lock and pattern/PIN/password, the interaction is:
 - App is active
 - Device prompts user for fingerprint login
-- If fingerprint fails authentication x times, the prompts for pattern/PIN/password
-- If the pattern/PIN/password fail authentication x times, the device OS locks out the user for 30 seconds.
+- If fingerprint fails authentication TBD times, the prompts for pattern/PIN/password
+- If the pattern/PIN/password fail authentication TBD times, the device OS locks out the user for 30 seconds.
 
 ::: alert info
 **Note**: Multiple fingerprints can be stored on the device, including the owner and people who the owner trusts. If you store multiple fingerprints on the device, all users can access the app and any API call. If you implement fingerprint with Single Sign-On enabled, all apps using SSO require a fingerprint match to unlock.
