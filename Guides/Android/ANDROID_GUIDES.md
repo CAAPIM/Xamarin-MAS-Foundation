@@ -181,7 +181,7 @@ private class LogoutCallback : MASCallback
  ```
 
 
-## Fingerprint Sessions Lock
+### Fingerprint Sessions Lock
 
 **Library**: MASFoundation<br>
 **Scenario**: You are creating a door security app and you want fingerprint recognition biometrics as part of the identification process (in addition to a PIN and password). 
@@ -203,9 +203,7 @@ If you have configured both fingerprint session lock and pattern/PIN/password, t
 **Important!** Currently, the Mobile SDK does not support fingerprint using multi-factor authentication, which is often mandated in government and enterprises (FIDO protocol). Specifically, the Mobile SDK does not match the device's fingerprint against an image that is stored on a secure server, and where the original fingerprint was scanned using a third-party fingerprint scanner. If you use the local device authentication using fingerprints, understand the inherent security limitations for this feature that are documented by your device vendor.
 :::
 
-**Supported**: Android M+ only with fingerprint device<br>
-**Sample App**:
-<a href="https://github.com/CAAPIM/Releases/blob/develop/MAS-1.6.00/Android/Samples/Android%20-%20Fingerprint%20Sessions%20Lock.zip?raw=true" title="With a Title">Download sample app</a></br>
+**Supported**: Android M, 6.0+ [API level 22+] only with fingerprint device
 
 #### Lock user session
 
@@ -283,6 +281,34 @@ private class RemoveLockCallback : MASCallback
     }
 }
 ```
+
+### Single Sign-On (SSO)
+
+**Library**: MASFoundation<br>
+**Scenario**: You are developing two bank apps that you want to work seamlessly together. You want to share credentials between the apps to reduce the number of times the user has to log in on a device.<br> 
+**Description:** Single Sign-On is a session and user authentication process that allows a user to enter a single username and password to access multiple apps. 
+
+The Mobile SDK uses the following standards for a secure an SSO implementation:
+- An OAuth access token is granted for each application
+- An OpenID Connect user token is granted for user verification of the SSO session
+- PKI provisioning for certificate‐based validation of device
+
+There are no SDK methods. Simply get your Admin to configure the MAG for Single Sign-On, and enable the feature in your app using the following steps. The mobile apps must be using the same MAG. </br>  
+
+1. Add android:sharedUserId in AndroidManifest.xml.
+2. Sign your apps with the same signature.
+
+The shared keychain group identifier that you specify in both apps must be the same and use the same prefix as the participating apps, e.g. 'com.ca.{some shared group name}'. The following shows an AndroidManifest.xml example in one of the apps:   
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ca.mas.sample.singlesignonsample"
+    android:sharedUserId="com.ca.mas.sample.singlesignonsample.shared"
+    android:sharedUserLabel="@string/sharedUserLabel">
+
+```
+
+That's it! The MASFoundation library detects your shared keychain group settings (if set) and responds accordingly. 
 
 ## Access APIs
 

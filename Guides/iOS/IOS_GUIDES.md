@@ -157,7 +157,7 @@ MAS.SetUserAuthCredentials( (authCredentialsBlock) => {
 });
 ```
 
-### Get current user
+#### Get current user
 
 This method gets all of the properties of the currently authenticaticated user.
 
@@ -168,7 +168,7 @@ This method gets all of the properties of the currently authenticaticated user.
 MASUser currentUser = MASUser.CurrentUser;
 ```
 
-### Log out authenticated user
+#### Log out authenticated user
 
 ```c#
 //
@@ -186,7 +186,7 @@ MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) => {
 ```
 
 
-## Fingerprint Sessions Lock
+### Fingerprint Sessions Lock
 
 **Library**: MASFoundation<br>
 **Scenario**: You are creating a door security app and you want fingerprint recognition biometrics as part of the identification process (in addition to a PIN and password). 
@@ -201,7 +201,7 @@ If you have configured both fingerprint session lock and passcode, the interacti
 - If the passcode fail authentication x times, the device OS locks out the user for 30 seconds.
 
 ::: alert info
-**Note**: Multiple fingerprints can be stored on the device, including the owner and people who the owner trusts. If you store multiple fingerprints on the device, all users can access the app and any API call. If you implement fingerprint with Single Sign-On enabled, all apps using SSO require a fingerprint match to unlock.
+**Note**: Multiple fingerprints can be stored on the device, including the user and people who the user trusts. If you store multiple fingerprints on the device, all users can access the app and any API call. If you implement fingerprint with Single Sign-On enabled, all apps using SSO require a fingerprint match to unlock.
 :::
 
 ::: alert danger 
@@ -231,6 +231,35 @@ If you have configured both fingerprint session lock and passcode, the interacti
 
 ```
 ```
+
+### Single Sign-On (SSO)
+
+**Library**: MASFoundation<br>
+**Scenario**: You are developing two bank apps that you want to work seamlessly together. You want to share credentials between the apps to reduce the number of times the user has to log in on a device.<br> 
+**Description:** Single Sign-On is a session and user authentication process that allows a user to enter a single username and password to access multiple apps. 
+
+The Mobile SDK uses the following standards for a secure an SSO implementation:
+- An OAuth access token is granted for each application
+- An OpenID Connect user token is granted for user verification of the SSO session
+- PKI provisioning for certificate‐based validation of device
+
+There are no SDK methods. Simply get your Admin to configure the MAG for Single Sign-On, and enable the feature in your app using the following steps. The mobile apps must be using the same MAG. </br>  
+
+1. In Visual Studio, enable your app by selecting the main project, the main app target, select the Capabilities tab, enable the Key Sharing option. 
+2. Add two groups:
+- One for your app in the first slot
+- A shared keychain group identifier to enable single sign-on
+
+::: alert info
+**Note:** The prefix of the group identifier must match the prefix of the bundle identifier of the app. Also, all apps that share the keychain must have their bundle identifiers match this prefix. The suffix should be 'singleSignOn'
+:::
+
+The shared keychain group identifier that you specify in both apps must be the same and use the same prefix as the participating apps, for example: `com.ca.singleSignOn`. The following screenshot shows an example in one of the apps:
+
+![Shared Keychain Setting](images/shared-keychain-screenshot.jpg)
+
+That's it! The MASFoundation library detects your shared keychain group settings (if set) and responds accordingly. 
+
 
 ## Access APIs
 
