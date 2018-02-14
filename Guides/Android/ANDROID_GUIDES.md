@@ -295,10 +295,14 @@ The Mobile SDK uses the following standards for a secure an SSO implementation:
 
 There are no SDK methods. Simply get your Admin to configure the MAG for Single Sign-On, and enable the feature in your app using the following steps. The mobile apps must be using the same MAG. </br>  
 
-1. Add android:sharedUserId in AndroidManifest.xml.
+1. In Android studio, open the AndroidManifest.xml, and add: android:sharedUserId
 2. Sign your apps with the same signature.
 
-The shared keychain group identifier that you specify in both apps must be the same and use the same prefix as the participating apps, e.g. 'com.ca.{some shared group name}'. The following shows an AndroidManifest.xml example in one of the apps:   
+::: alert info
+The shared keychain group identifier that you specify in both apps must be the same and use the same prefix as the participating apps, for example, 'com.ca.{some shared group name}'. 
+:::
+
+The following shows an AndroidManifest.xml example in one of the apps:   
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
