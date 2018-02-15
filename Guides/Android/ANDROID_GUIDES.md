@@ -65,17 +65,17 @@ Before you start the SDK, you need determine the authentication flow for startin
 
 MASUser.Login("admin", "mysecretpassword7".ToCharArray(), loginCallback);
 private class LoginCallback : MASCallback
-        {
-            public override void OnError(Throwable e)
-            {
-                MAS.CancelAllRequests();
-            }
+{
+    public override void OnError(Throwable e)
+    {
+         MAS.CancelAllRequests();
+    }
  
-            public override void OnSuccess(Java.Lang.Object user)
-            {
-                Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
-            }
-        }
+    public override void OnSuccess(Java.Lang.Object user)
+    {
+        Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
+    }
+}
  ```
 
 #### Start, no user authentication
@@ -128,7 +128,7 @@ private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationLis
  {
      public void OnAuthenticateRequest(Context context, long requestId, MASAuthenticationProviders providers)
      {
-         MASUser.Login("admin", "7layer".ToCharArray(), loginCallback);
+         MASUser.Login("admin", "mysecretpassword7".ToCharArray(), loginCallback);
      }
  
      public void OnOtpAuthenticateRequest(Context context, MASOtpAuthenticationHandler handler)
