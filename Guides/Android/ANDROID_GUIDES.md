@@ -456,9 +456,7 @@ private class ProtectAPICallback : MASCallback
 }
 ```
 
-#### MASRequest methods
-
-Contains the HTTP methods to call an endpoint.
+#### MASRequest static methods
 
 ##### Get method
 
@@ -494,6 +492,52 @@ IMASRequest postRequest = builder.Build();
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
 builder.Put(MASRequestBody.JsonBody(new JSONObject()));
 IMASRequest putRequest = builder.Build();
+```
+
+#### MASRequest body
+
+Predefined MASRequestBody objects. 
+
+##### Post a JSON object
+
+```c#
+//Post a JSON Object
+MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
+builder.Post(MASRequestBody.JsonBody(new JSONObject()));
+IMASRequest postRequest = builder.Build();
+```
+
+##### Post a string
+
+```c#
+//Post a String
+MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
+builder.Post("Test string here");
+IMASRequest postRequest = builder.Build();
+```
+
+##### Post a byte
+
+```c#
+//Post a byte[]
+MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
+builder.Post(MASRequestBody.JsonBody(System.Text.Encoding.ASCII.GetBytes("Test byte array here")));
+IMASRequest postRequest = builder.Build();
+```
+
+##### Post a form
+
+```c#
+//Post a form
+Pair pair1 = new Pair("var1", "val1");
+Pair pair2 = new Pair("var2", "val2");
+List<Pair> form = new List<Pair>();
+form.Add(pair1);
+form.Add(pair2);
+ 
+MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
+builder.Post(form);
+IMASRequest postRequest = builder.Build();
 ```
 
 

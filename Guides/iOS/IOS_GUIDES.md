@@ -265,7 +265,7 @@ If you have custom endpoints installed on the MAG, you can make direct and secur
 
 #### Build request with MASRequestBuilder
 
-The MASRequestBuilder lets you programatically customize a request with the MASRequest object. 
+The MASRequestBuilder constructs the MASRequest object with options that can be modified for the request. This lets you customize and programmatically build a request and call the MAS.invoke method after MASRequest is built.
 
 ```c#
 //  Create MASRequestBuilder with HTTP method 
@@ -306,9 +306,13 @@ MAS.Invoke(request, completion: (responseInfo, error) => {
 
 #### MASRequest methods
 
-Contains the HTTP methods to call an endpoint.
+MASRequest also provides static methods to construct the request directly with MASRequestBuilder in the parameter of the block.
 
 ##### Get method
+
+This method makes HTTP GET calls to an endpoint.
+
+Parameters are encoded into the endpoint URL as query parameters.
 
 ```c#
 
@@ -316,17 +320,30 @@ Contains the HTTP methods to call an endpoint.
 
 ##### Delete method
 
+This method makes HTTP DELETE calls to an endpoint.
+
+Parameters are encoded into the endpoint URL as query parameters.
+
 ```c#
 
 ```
 
 ##### Post method
 
+This method makes HTTP POST calls to an endpoint.
+
+Parameters are encoded into the HTTP body.
+
+
 ```c#
 
 ```
 
 ##### Put method
+
+This method makes HTTP PUT calls to an endpoint.
+
+Parameters are encoded into the HTTP body.
 
 ```c#
 
