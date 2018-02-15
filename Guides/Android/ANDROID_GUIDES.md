@@ -279,7 +279,7 @@ private class RemoveLockCallback : MASCallback
 ### Single Sign-On (SSO)
 
 **Library**: MASFoundation<br>
-**Scenario**: You are developing two bank apps that you want to work seamlessly together. You want to share credentials between the apps to reduce the number of times the user has to log in on a device.<br> 
+**Scenario**: You are developing two bank apps that you want to work seamlessly together. You want to share credentials between the apps to reduce the number of times the user has to log in.<br> 
 **Description:** Single Sign-On is a session and user authentication process that allows a user to enter a single username and password to access multiple apps. 
 
 The Mobile SDK uses the following standards for a secure an SSO implementation:
@@ -458,10 +458,11 @@ private class ProtectAPICallback : MASCallback
 
 #### MASRequest methods
 
+Contains the HTTP methods to call an endpoint.
+
 ##### Get method
 
 ```c#
-
 //Get
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
 builder.Get();
@@ -471,7 +472,6 @@ IMASRequest getRequest = builder.Build();
 ##### Delete method
 
 ```c#
-
 //Delete
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
 builder.Delete(null);

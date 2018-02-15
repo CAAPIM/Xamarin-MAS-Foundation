@@ -229,7 +229,7 @@ The Mobile SDK supports using fingerprint session lock with device screen lock w
 ### Single Sign-On (SSO)
 
 **Library**: MASFoundation<br>
-**Scenario**: You are developing two bank apps that you want to work seamlessly together. You want to share credentials between the apps to reduce the number of times the user has to log in on a device.<br> 
+**Scenario**: You are developing two bank apps that you want to work seamlessly together. You want to share credentials between the apps to reduce the number of times the user has to log in.<br> 
 **Description:** Single Sign-On is a session and user authentication process that allows a user to enter a single username and password to access multiple apps. 
 
 The Mobile SDK uses the following standards for a secure an SSO implementation:
@@ -263,7 +263,7 @@ This section provides methods to call APIs.
 
 If you have custom endpoints installed on the MAG, you can make direct and secure HTTPS calls to them using the following methods. 
 
-#### Build Request with MASRequestBuilder
+#### Build request with MASRequestBuilder
 
 The MASRequestBuilder lets you programatically customize a request with the MASRequest object. 
 
@@ -306,10 +306,31 @@ MAS.Invoke(request, completion: (responseInfo, error) => {
 
 #### MASRequest methods
 
-HTTP Get method
-HTTP Delete method
-HTTP Post method
-HTTP Put method
+Contains the HTTP methods to call an endpoint.
+
+##### Get method
+
+```c#
+
+```
+
+##### Delete method
+
+```c#
+
+```
+
+##### Post method
+
+```c#
+
+```
+
+##### Put method
+
+```c#
+
+```
 
 
 ## Pre-release Agreement
