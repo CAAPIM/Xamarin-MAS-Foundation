@@ -167,17 +167,17 @@ MASUser.CurrentUser
 
 MASUser.CurrentUser.Logout(new LogoutCallback("Logout"));
 private class LogoutCallback : MASCallback
-       {
-            public override void OnError(Throwable e)
-            {
-                //Logout failed
-            }
+{
+    public override void OnError(Throwable e)
+    {
+        //Logout failed
+    }
  
-            public override void OnSuccess(Java.Lang.Object obj)
-            {
-                //Success Logout
-            }
-        }
+    public override void OnSuccess(Java.Lang.Object obj)
+    {
+        //Success Logout
+    }
+}
  ```
 
 
@@ -519,7 +519,7 @@ builder.Post("Test string here");
 IMASRequest postRequest = builder.Build();
 ```
 
-##### Post a byte
+##### Post byte[]
 
 ```c#
 //Post a byte[]
