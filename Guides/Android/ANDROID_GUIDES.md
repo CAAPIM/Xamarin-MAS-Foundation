@@ -201,7 +201,7 @@ The Mobile SDK supports using fingerprint session lock with device screen lock w
 
 #### Lock user session
 
-```
+```c#
 //Lock User Session
 MASUser.CurrentUser.LockSession(new SessionLockCallback());
 private class SessionLockCallback : MASCallback
@@ -219,13 +219,15 @@ private class SessionLockCallback : MASCallback
 
 #### Verify locked user session
 
-```//Verify that the user session is locked.
+```c#
+//Verify that the user session is locked.
 MASUser.CurrentUser.IsSessionLocked
 ```
 
 #### Unlock user session
 
-```//Unlock User Session
+```c#
+//Unlock User Session
 MASUser.CurrentUser.UnlockSession(new UnlockCallback());
 private class UnlockCallback : MASSessionUnlockCallback
 {
@@ -260,7 +262,8 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 
 #### Remove locked user session
 
-```//Remove Locked User Session
+```c#
+//Remove Locked User Session
 MASUser.CurrentUser.RemoveSessionLock(new RemoveLockCallback());
 private class RemoveLockCallback : MASCallback
 {
