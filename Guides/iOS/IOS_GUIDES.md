@@ -194,12 +194,6 @@ MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) => {
 
 The Mobile SDK supports using fingerprint session lock with device screen lock with passcode. Because the app user can use one, both, or no locking method at all, you need to handle all of these scenarios. If the device is configured without any lock method, the Mobile SDK returns an error that device lock security is missing.
 
-If you have configured both fingerprint session lock and passcode, the interaction is:
-- App is active
-- Device prompts user for fingerprint login
-- If fingerprint fails authentication TBD times, the prompts for pattern/PIN/password
-- If the passcode fail authentication TBD times, the device OS locks out the user for 30 seconds.
-
 ::: alert info
 **Note**: Multiple fingerprints can be stored on the device, including the user and people who the user trusts. If you store multiple fingerprints on the device, all users can access the app and any API call. If you implement fingerprint with Single Sign-On enabled, all apps using SSO require a fingerprint match to unlock.
 :::
