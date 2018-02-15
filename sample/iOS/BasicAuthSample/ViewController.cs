@@ -43,6 +43,16 @@ namespace BasicAuthSample
             ShowLogin();
         }
 
+        partial void LockButton_TouchUpInside(UIButton sender)
+        {
+            LockSession();
+        }
+
+        partial void UnlockButton_TouchUpInside(UIButton sender)
+        {
+            UnlockSession();
+        }
+
         protected ViewController(IntPtr handle) : base(handle)
         {
             // Note: this .ctor should not contain any initialization logic.
@@ -261,7 +271,6 @@ namespace BasicAuthSample
 
         private void ShowLogin()
         {
-
             if (MASUser.CurrentUser != null) {
                 ShowAlert("MAS.LoginWithUserName", "User already logged in");
             } else
@@ -295,6 +304,62 @@ namespace BasicAuthSample
                 // Cancel button
             }
 
+        }
+
+        public void LockSession()
+        {
+            if (MASUser.CurrentUser != null)
+            {
+                // Lock Session
+                MASUser.CurrentUser.LockSessionWithCompletion(completion:(completed, error) => {
+                    if (error != null)
+                    {
+                        // Error
+                        ShowAlert("MAS.LockSessionWithCompletion", "ERROR: " + error.LocalizedDescription);
+                    }
+                    else if (completed)
+                    {
+                        // Session locked without an error
+                        ShowAlert("MAS.LockSessionWithCopmletion", "Session Locked!");
+                    }
+                });
+            }
+            else
+            {
+                ShowAlert("MAS", "User is not authenticated");
+            }
+        }
+
+        public void UnlockSession()
+        {
+            if (MASUser.CurrentUser != null)
+            {
+                if (MASUser.CurrentUser.IsSessionLocked)
+                {
+                    // Unlock Session
+                    MASUser.CurrentUser.UnlockSessionWithCompletion(completion: (completed, error) =>
+                     {
+                         if (error != null)
+                         {
+                             // Error
+                             ShowAlert("MAS.UnlockSessionWithCompletion", "ERROR: " + error.LocalizedDescription);
+                         }
+                         else if (completed)
+                         {
+                             // Session unlocked without error
+                             ShowAlert("MAS.UnlockedSessionWithCompletion", "Session Unlocked!");
+                         }
+                     });
+                }
+                else
+                {
+                    ShowAlert("MAS", "Session is not locked!");
+                }
+            }
+            else
+            {
+                ShowAlert("MAS", "User is not authenticated");
+            }
         }
 
         public override void DidReceiveMemoryWarning()

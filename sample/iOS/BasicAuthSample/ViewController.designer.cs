@@ -27,6 +27,10 @@ namespace BasicAuthSample
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton LockButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton LoginButton { get; set; }
 
         [Outlet]
@@ -36,6 +40,10 @@ namespace BasicAuthSample
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton StartSDKButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton UnlockButton { get; set; }
 
         [Action ("GrantFlowToClientCredentials_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -49,6 +57,10 @@ namespace BasicAuthSample
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void InvokeAPIButton_TouchUpInside (UIKit.UIButton sender);
 
+        [Action ("LockButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void LockButton_TouchUpInside (UIKit.UIButton sender);
+
         [Action ("LoginButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void LoginButton_TouchUpInside (UIKit.UIButton sender);
@@ -60,6 +72,10 @@ namespace BasicAuthSample
         [Action ("StartSDKButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void StartSDKButton_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("UnlockButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void UnlockButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -78,6 +94,11 @@ namespace BasicAuthSample
                 InvokeAPIButton = null;
             }
 
+            if (LockButton != null) {
+                LockButton.Dispose ();
+                LockButton = null;
+            }
+
             if (LoginButton != null) {
                 LoginButton.Dispose ();
                 LoginButton = null;
@@ -91,6 +112,11 @@ namespace BasicAuthSample
             if (StartSDKButton != null) {
                 StartSDKButton.Dispose ();
                 StartSDKButton = null;
+            }
+
+            if (UnlockButton != null) {
+                UnlockButton.Dispose ();
+                UnlockButton = null;
             }
         }
     }
