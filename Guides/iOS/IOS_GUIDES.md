@@ -198,6 +198,10 @@ The Mobile SDK supports using fingerprint session lock with device screen lock w
 **Note**: Multiple fingerprints can be stored on the device, including the user and people who the user trusts. If you store multiple fingerprints on the device, all users can access the app and any API call. If you implement fingerprint with Single Sign-On enabled, all apps using SSO require a fingerprint match to unlock.
 :::
 
+::: alert info
+**Note**: Fingerprint session lock is locking the currently authenticated session by using `id_token` granted through user authentication. If Mobile SDK, or server side does not return the `id_token` on successful authentication, Mobile SDK will not be able to lock the session.
+:::
+
 ::: alert danger 
 **Important!** Currently, the Mobile SDK does not support fingerprint using multi-factor authentication, which is often mandated in government and enterprises (FIDO protocol). Specifically, the Mobile SDK does not match the device's fingerprint against an image that is stored on a secure server, and where the original fingerprint was scanned using a third-party fingerprint scanner. If you use the local device authentication using fingerprints, understand the inherent security limitations for this feature that are documented by your device vendor.
 :::
@@ -206,24 +210,72 @@ The Mobile SDK supports using fingerprint session lock with device screen lock w
 
 #### Lock user session
 
-```
-
+```c#
+//
+//	Lock the currently authenticated user with fingerprint local authentication.
+//	This will prevent Mobile SDK to consume API, and will return an error saying
+//	"User session is currently locked" on the response of API request.
+//
+//	If the local authentication is not registered and/or available, Mobile SDK will return an error
+//
+MASUser.CurrentUser.LockSessionWithCompletion(completion: (completed, error) => {
+    
+    if (completed)
+    {
+    	//	session lock successful
+    }
+    else {
+    	// an error occurred while locking the session
+    }
+});
 ```
 
 #### Verify locked user session
 
-```
+```c#
+if (MASUser.CurrentUser.IsSessionLocked)
+{
+	//	currently authenticated user's session is locked
+}
+else if (MASUser.CurrentUser.IsAuthenticated) {
+	// currently authenticated user's session is not locked
+}
 ```
 
 #### Unlock user session
 
-```
+```c#
+//
+//	Unlock the currently locked user session.
+//
+MASUser.CurrentUser.UnlockSessionWithCompletion(completion: (completed, error) => {
     
+    if (completed)
+    {
+    	//	session unlock successful
+    }
+    else {
+    	// an error occurred while unlocking the session
+    }
+}); 
+
+
+//
+//	Unlock the currently locked user session with customizable description text which will appear on device's local authentication screen.
+//
+MASUser.CurrentUser.UnlockSessionWithUserOperationPromptMessage("DESCRIPTION TEXT", completion: (completed, error) => { 
+     ....       
+});
 ```
 
 #### Remove locked user session
 
 ```
+//
+//	Removes currently locked user's session, and also removes all credentials.
+//	It will work like logging out the user locally.
+//
+MASUser.CurrentUser.RemoveSessionLock();
 ```
 
 ### Single Sign-On (SSO)
@@ -239,7 +291,7 @@ The Mobile SDK uses the following standards for a secure an SSO implementation:
 
 There are no SDK methods. Simply get your Admin to configure the MAG for Single Sign-On, and enable the feature in your app using the following steps. The mobile apps must be using the same MAG. </br>  
 
-1. In Xcode, enable your app by selecting the main project, the main app target, select the Capabilities tab, enable the Key Sharing option. 
+1. In Visual Studio, enable your app by selecting the main project, the `Entitlements.plist`, check the Enable Keychain checkbox under Keychain section. 
 2. Add two groups:
 - One for your app in the first slot
 - A shared keychain group identifier to enable single sign-on
@@ -250,7 +302,7 @@ There are no SDK methods. Simply get your Admin to configure the MAG for Single 
 
 The shared keychain group identifier that you specify in both apps must be the same and use the same prefix as the participating apps, for example: `com.ca.singleSignOn`. The following screenshot shows an example in one of the apps:
 
-![Shared Keychain Setting](images/shared-keychain-screenshot.jpg)
+![Shared Keychain Setting](images/shared-keychain-screenshot.png)
 
 That's it! The MASFoundation library detects your shared keychain group settings (if set) and responds accordingly. 
 
