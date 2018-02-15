@@ -271,19 +271,28 @@ namespace BasicAuthSample
 
         private void ShowLogin()
         {
-            if (MASUser.CurrentUser != null) {
-                ShowAlert("MAS.LoginWithUserName", "User already logged in");
-            } else
+            if (MAS.MASState == MASState.DidStart)
             {
-                UIAlertView alert = new UIAlertView();
+                if (MASUser.CurrentUser != null)
+                {
+                    ShowAlert("MAS.LoginWithUserName", "User already logged in");
+                }
+                else
+                {
+                    UIAlertView alert = new UIAlertView();
 
-                alert.AlertViewStyle = UIAlertViewStyle.LoginAndPasswordInput;
-                alert.Title = "MAS.LoginWithUserName";
-                alert.AddButton("Login");
-                alert.AddButton("Cancel");
-                alert.Message = "Please enter your username and password";
-                alert.Clicked += ProcessLogin;
-                alert.Show();   
+                    alert.AlertViewStyle = UIAlertViewStyle.LoginAndPasswordInput;
+                    alert.Title = "MAS.LoginWithUserName";
+                    alert.AddButton("Login");
+                    alert.AddButton("Cancel");
+                    alert.Message = "Please enter your username and password";
+                    alert.Clicked += ProcessLogin;
+                    alert.Show();
+                }
+            }
+            else
+            {
+                ShowAlert("MAS.LoginWithUserName", "You must initialize the SDK before logging in");
             }
         }
 
@@ -311,7 +320,8 @@ namespace BasicAuthSample
             if (MASUser.CurrentUser != null)
             {
                 // Lock Session
-                MASUser.CurrentUser.LockSessionWithCompletion(completion:(completed, error) => {
+                MASUser.CurrentUser.LockSessionWithCompletion(completion: (completed, error) =>
+                {
                     if (error != null)
                     {
                         // Error
