@@ -106,7 +106,7 @@ namespace BasicAuthSample
         public void login()
         {
             // Check if user is already authenticated
-            if (MASUser.CurrentUser != null && MASUser.CurrentUser.IsAuthenticated)
+            if (MASUser.CurrentUser != null)
             {
                 Alert("MAS", "User already authenticated as " + MASUser.CurrentUser.UserName);
             }
@@ -120,7 +120,7 @@ namespace BasicAuthSample
         public void logout()
         {
             // Check if user is already authenticated
-            if (MASUser.CurrentUser != null && MASUser.CurrentUser.IsAuthenticated)
+            if (MASUser.CurrentUser != null)
             {
                 MASUser.CurrentUser.Logout(null);
 
@@ -162,6 +162,7 @@ namespace BasicAuthSample
                 // Credentials entered successfully!
                 if (resultCode == Result.Ok)
                 {
+                    //Call unlock again after activity
                     MASUser.CurrentUser.UnlockSession(new UnlockCallback(this));
                 }
             }
@@ -169,7 +170,21 @@ namespace BasicAuthSample
 
         private void unLockSession()
         {
-            MASUser.CurrentUser.UnlockSession(new UnlockCallback(this));
+            if (MASUser.CurrentUser != null)
+            {
+                if (MASUser.CurrentUser.IsSessionLocked)
+                {
+                    //Unlock session
+                    MASUser.CurrentUser.UnlockSession(new UnlockCallback(this));
+                }
+                else
+                {
+                    Alert("MAS", "Session not locked!");
+                }
+            }
+            else {
+                Alert("MAS", "User not authenticated");
+            }
         }
 
         private class UnlockCallback : MASSessionUnlockCallback
@@ -182,6 +197,7 @@ namespace BasicAuthSample
 
             public override void OnError(Throwable e)
             {
+                //Handle error
                 activity.Alert("Session Unlock", "Session Unlocked Failed!");
             }
 
@@ -201,7 +217,16 @@ namespace BasicAuthSample
 
         private void lockSession()
         {
-            MASUser.CurrentUser.LockSession(new LockSessionCallback(this));
+            //Check that a user is logged in
+            if (MASUser.CurrentUser != null)
+            {
+                //Lock session
+                MASUser.CurrentUser.LockSession(new LockSessionCallback(this));
+            }
+            else
+            {
+                Alert("MAS", "User is not authenticated");
+            }
         }
 
 
