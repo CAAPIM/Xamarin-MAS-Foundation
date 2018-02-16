@@ -93,6 +93,30 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11400" fixedFrame="YES">
+                                <rect key="frame" x="71" y="486" width="233" height="57"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Lock Session">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LogoutButton_TouchUpInside:" destination="11402" eventType="touchUpInside" id="11401"/>
+                                    <action selector="LockButton_TouchUpInside:" destination="BYZ-38-t0r" id="11406" eventType="touchUpInside"/>
+                                </connections>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11403" fixedFrame="YES">
+                                <rect key="frame" x="71" y="551" width="233" height="57"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Unlock Session">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LogoutButton_TouchUpInside:" destination="11405" eventType="touchUpInside" id="11404"/>
+                                    <action selector="UnlockButton_TouchUpInside:" destination="BYZ-38-t0r" id="11407" eventType="touchUpInside"/>
+                                </connections>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1"/>
                     </view>
@@ -103,6 +127,8 @@
                         <outlet property="StartSDKButton" destination="4035" id="name-outlet-4035"/>
                         <outlet property="GrantFlowToClientCredentials" destination="10140" id="name-outlet-10140"/>
                         <outlet property="GrantFlowToPassword" destination="3556" id="name-outlet-3556"/>
+                        <outlet property="LockButton" destination="11400" id="name-outlet-11400"/>
+                        <outlet property="UnlockButton" destination="11403" id="name-outlet-11403"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
