@@ -367,7 +367,23 @@ This method makes HTTP GET calls to an endpoint.
 Parameters are encoded into the endpoint URL as query parameters.
 
 ```c#
+//
+//	Construct MASRequest with static method
+//
+MASRequest request = MASRequest.GetFrom((requestBuilder) => {
+	//
+	//	Define request builder's properties within block
+	//
+   requestBuilder.EndPoint = "/protected/resource/products";
+   requestBuilder.SetQueryParameter("operation", "listProducts");
+   requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
+   requestBuilder.ResponseType = MASRequestResponseType.Json;
+});
 
+//
+//	Use the request object to invoke an API
+//
+MAS.Invoke(request, completion: (responseInfo, error) => {});
 ```
 
 ##### Delete method
@@ -377,7 +393,23 @@ This method makes HTTP DELETE calls to an endpoint.
 Parameters are encoded into the endpoint URL as query parameters.
 
 ```c#
+//
+//	Construct MASRequest with static method
+//
+MASRequest request = MASRequest.DeleteFrom((requestBuilder) => {
+	//
+	//	Define request builder's properties within block
+	//
+   requestBuilder.EndPoint = "/protected/resource/products";
+   requestBuilder.SetQueryParameter("operation", "listProducts");
+   requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
+   requestBuilder.ResponseType = MASRequestResponseType.Json;
+});
 
+//
+//	Use the request object to invoke an API
+//
+MAS.Invoke(request, completion: (responseInfo, error) => {});
 ```
 
 ##### Post method
@@ -386,9 +418,24 @@ This method makes HTTP POST calls to an endpoint.
 
 Parameters are encoded into the HTTP body.
 
-
 ```c#
+//
+//	Construct MASRequest with static method
+//
+MASRequest request = MASRequest.PostTo((requestBuilder) => {
+	//
+	//	Define request builder's properties within block
+	//
+   requestBuilder.EndPoint = "/protected/resource/products";
+   requestBuilder.SetQueryParameter("operation", "listProducts");
+   requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
+   requestBuilder.ResponseType = MASRequestResponseType.Json;
+});
 
+//
+//	Use the request object to invoke an API
+//
+MAS.Invoke(request, completion: (responseInfo, error) => {});
 ```
 
 ##### Put method
@@ -397,7 +444,23 @@ This method makes HTTP PUT calls to an endpoint.
 Parameters are encoded into the HTTP body.
 
 ```c#
+//
+//	Construct MASRequest with static method
+//
+MASRequest request = MASRequest.PutTooh((requestBuilder) => {
+	//
+	//	Define request builder's properties within block
+	//
+   requestBuilder.EndPoint = "/protected/resource/products";
+   requestBuilder.SetQueryParameter("operation", "listProducts");
+   requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
+   requestBuilder.ResponseType = MASRequestResponseType.Json;
+});
 
+//
+//	Use the request object to invoke an API
+//
+MAS.Invoke(request, completion: (responseInfo, error) => {});
 ```
 
 
