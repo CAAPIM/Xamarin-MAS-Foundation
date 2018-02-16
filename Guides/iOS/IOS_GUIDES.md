@@ -189,7 +189,7 @@ MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) => {
 ### Fingerprint Sessions Lock
 
 **Library**: MASFoundation<br>
-**Scenario**: You are creating a door security app and you want fingerprint recognition biometrics as part of the identification process (in addition to a PIN and password).<br>
+**Scenario**: You are creating an app that requires fingerprint recognition, or you just want to provide it as an alternative login method to a PIN and password.<br>
 **Description**: The Mobile SDK supports fingerprint authentication only on the local device. That is, the user's fingerprint is compared against the image that is stored in the secure area on the chipset. If the unique characteristics of the fingerprints match, the user is authenticated, and the phone is unlocked.</br> 
 
 The Mobile SDK supports using fingerprint session lock with device screen lock with passcode. Because the app user can use one, both, or no locking method at all, you need to handle all of these scenarios. If the device is configured without any lock method, the Mobile SDK returns an error that device lock security is missing.
@@ -268,7 +268,7 @@ MASUser.CurrentUser.UnlockSessionWithUserOperationPromptMessage("DESCRIPTION TEX
 });
 ```
 
-#### Remove locked user session
+#### Remove user session lock
 
 ```
 //
@@ -289,7 +289,7 @@ The Mobile SDK uses the following standards for a secure an SSO implementation:
 - An OpenID Connect user token is granted for user verification of the SSO session
 - PKI provisioning for certificate‐based validation of device
 
-There are no SDK methods. Simply get your Admin to configure the MAG for Single Sign-On, and enable the feature in your app using the following steps. The mobile apps must be using the same MAG. </br>  
+There are no SDK methods. Simply get your Admin to configure the MAG for Single Sign-On, and enable the feature in your app using the following steps. The mobile apps must be using the same MAG.</br>  
 
 1. In Visual Studio, enable your app by selecting the main project, the `Entitlements.plist`, check the Enable Keychain checkbox under Keychain section. 
 2. Add two groups:
@@ -392,7 +392,6 @@ Parameters are encoded into the HTTP body.
 ```
 
 ##### Put method
-
 This method makes HTTP PUT calls to an endpoint.
 
 Parameters are encoded into the HTTP body.

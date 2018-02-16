@@ -260,7 +260,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 }
 ```
 
-#### Remove locked user session
+#### Remove user session lock
 
 ```c#
 //Remove Locked User Session
@@ -470,7 +470,7 @@ builder.Get();
 IMASRequest getRequest = builder.Build();
 ```
 
-##### Delete method
+##### Delete 
 
 ```c#
 //Delete
@@ -479,7 +479,7 @@ builder.Delete(null);
 IMASRequest deleteRequest = builder.Build();
 ```
 
-##### Post method
+##### Post
 
 ```c#
 //Post
@@ -488,7 +488,7 @@ builder.Post(MASRequestBody.JsonBody(new JSONObject()));
 IMASRequest postRequest = builder.Build();
 ```
 
-##### Put method
+##### Put
 
 ```c#
 //Put
