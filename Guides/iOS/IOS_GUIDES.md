@@ -447,7 +447,7 @@ Parameters are encoded into the HTTP body.
 //
 //	Construct MASRequest with static method
 //
-MASRequest request = MASRequest.PutTooh((requestBuilder) => {
+MASRequest request = MASRequest.PutTo((requestBuilder) => {
 	//
 	//	Define request builder's properties within block
 	//
