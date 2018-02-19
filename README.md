@@ -45,7 +45,7 @@ Verify that you have "Android" and "iOS" directories both in "sample" and "sourc
 
 You should get the confirmation: **MAS SDK started successfully**.
 
-Now you can **login**, **logout**, and **invoke** a protected API. 
+Now you can **log in**, **log out**, and **invoke** a protected API. 
  
 ## Communication
 
