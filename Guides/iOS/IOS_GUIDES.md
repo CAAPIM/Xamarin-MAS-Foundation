@@ -10,11 +10,18 @@
   - Single Sign-On
 - Securely access protected APIs that are configured with OAuth 2.0
 
-## Prerequisites
+## Support and Prerequisites
 
 - [Requirements for CA Mobile API Gateway](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
-- iOS 11.0 for new apps written in C#                                     
- 
+- iOS 11.0 for new apps written in C#   
+
+## Create an App: Choose a Method
+
+|| Create your app using...                 | Benefits                                 |
+| ---------------------------------------- | ---------------------------------------- |
+| [Quick start with sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods, or building a real app.</li></ul> |
+| [Create app scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch for maximum control, or to integrate an existing Xamarin app. <li>Download a dynamic-link library. (.dll)</li></ul> |                                  
+
 ## Quick Start with Sample App
 
 The iOS **BasicAuthSample** app:
@@ -43,62 +50,39 @@ If you get an error, the most likely cause is an invalid app configuration file.
 [TBD - Will we improve sample or use slick demo by Microsoft consultant?]
 [Sample app improvements: spelling errors Log in/Log out, human error messages, human text for grant flows, sample app should be something useful and interesting for enterprise.]
 
-[Section here for manual get started with .dlls and dependency manager flow (NuGet)]
+## Create App from Scratch or Integrate an Existing App into the Mobile SDK
 
-## Start the SDK 
+If you have a new or existing Xamarin app that you want to integrate into the Mobile SDK, or simply want to have full control over app set up, these steps are for you.
 
-### Step 1: Determine Start Method 
+::: alert info
+**Note**: You cannot use an existing iOS Mobile SDK app. You must start from scratch using c#.
+::: 
 
-Before you start the SDK, you need determine the authentication flow for starting your app. You can choose:
-- Start, no user authentication (default)
-<br>or</br> 
-- Start, user authentication with password
+### Step 1: Set up Project in Visual Studio
 
-#### Start, no user authentication
+1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`). 
+2. Open a terminal window in a directory of your choice and copy and past the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
+Verify that you have both "Android" and "iOS" source directories. 
+3. Open your app in Visual Studio.
+4. Right-click the **References** folder and select **Edit References**. 
+6. Select the **.Net Assembly** tab, and click the **Browse** button.
+7. Go to: Xamarin-MAS-Foundation/lib/<your platform dll> and click Open and OK.
+8. Go to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.
+10. Select **Build/Rebuild All**.  
+Verify that you get "Build successful" confirmation.
 
-**What**: No user authentication, just access an API. <br>
-**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
+## Step 2: Start the SDK 
 
-```c#
-//  Set grantFlow to Client Credentials
-MAS.GrantFlow = MASGrantFlow.ClientCredentials;
+After your project is properly configured, you must start the SDK to establish a secure connection with the backend services. The startup process includes: initialize necessary services for the SDK library and network services, and load the configuration. Ideally, SDK startup should be processed before app startup (during the splash/loading screen of your app). We recommended that you process any communication with the backend services upon successful completion of the startup method. Otherwise, the secure communication is not guaranteed and may fail.
 
-```
+The method that starts the SDK is **MAS.start**. You can put MAS.start anywhere in your app, but we suggest that you call this method as soon as possible (first screen of your app). This ensures that the SDK is ready to handle all security and communication with the MAG server.
 
-#### Start, user authentication with password
+### Start with standard method
 
-**What**: Always start with login screen.<br>
-**Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
+This method starts the SDK with the currently-active configuration. A currently-active configuration is: 1) the last successfully used configuration, 2) the default JSON configuration file (i.e. msso_config.json in your app bundle) or 3) the custom JSON configuration file defined in [MAS setConfigurationFileName:].<br>
+**Recommended for**: Most environments, including production.</br>
 
-```c#
-//
-//  Login with username and password
-//
-MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, error) => {
-     
-    if (error != null)
-    {
-        Console.WriteLine("Error: {0}", error.LocalizedDescription);
-    } else {
-        Console.WriteLine("Success: User login");
-    }
-});
-```
-
-### Step 2: Start the SDK 
-
-The method that starts the SDK is **MAS.start**. You can put it anywhere in your app, but we suggest that you call this method as soon as possible (first screen of your app). This ensures that the SDK is ready to handle all security and communication with the MAG server.
-
-Add your authentication method (from the previous step) to start the SDK.
-
-```c#
-//  Set grantFlow to Password
-MAS.GrantFlow = MASGrantFlow.Password;
- 
-//  Set grantFlow to Client Credentials
-MAS.GrantFlow = MASGrantFlow.ClientCredentials;
- 
-//
+```//
 //  Initialize SDK with default or last active configuration
 // 
 MAS.Start(completion: (completed, error) => {
@@ -111,6 +95,14 @@ MAS.Start(completion: (completed, error) => {
     }
 });
  
+```
+
+###  Start with default configuration
+
+This method starts the SDK with the currently-active configuration, or the default configuration (depending on the parameter). If you specify the YES parameter, this overwrites the currently-active configuration with the default configuration (if two configurations are different.). If you pass the NO parameter, this behaves the same as [MAS start:];. If the SDK is already started, this method: stops the SDK, then restarts it with the custom JSON object.<br>
+**Recommended for**: Development environments where configurations change often.</br>
+
+``` 
 //
 //  Initialize SDK always with default configuration
 //
@@ -125,9 +117,55 @@ MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
 });
 ```
 
-### More Authentication Methods
+## Login: User Authentication 
 
-#### Authenticate user with password (event-based)
+**Library**: MASFoundation<br>
+**Description**: Authentication methods to use with the MAG and backend services.</br>
+
+### No user authentication, default SDK flow
+
+**What**: No user authentication, just access an API. <br>
+**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
+
+Use the following flow to set the default login flow to no user authentication.
+
+```c#
+//  Set grantFlow to Client Credentials
+MAS.GrantFlow = MASGrantFlow.ClientCredentials;
+
+```
+
+### Authenticate user with password, make default flow
+
+**What**: Always start with login screen.<br>
+**Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
+
+Use the following method to change the default login flow to password.
+
+```c#
+//  Set grantFlow to Password
+MAS.GrantFlow = MASGrantFlow.Password;
+```
+
+### Authentication user with password method
+
+```c#
+//
+//  Log in with username and password
+//
+MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, error) => {
+     
+    if (error != null)
+    {
+        Console.WriteLine("Error: {0}", error.LocalizedDescription);
+    } else {
+        Console.WriteLine("Success: User login");
+    }
+});
+```
+
+
+### Authenticate user with password, event-based
 
 **What**: Event-based user authentication<br>
 **Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
@@ -157,7 +195,7 @@ MAS.SetUserAuthCredentials( (authCredentialsBlock) => {
 });
 ```
 
-#### Get current user
+#### Get current authenticated user
 
 This method gets all of the properties of the currently authenticaticated user.
 
@@ -362,9 +400,7 @@ MASRequest also provides static methods to construct the request directly with M
 
 ##### Get method
 
-This method makes HTTP GET calls to an endpoint.
-
-Parameters are encoded into the endpoint URL as query parameters.
+This method makes HTTP GET calls to an endpoint. Parameters are encoded into the endpoint URL as query parameters.
 
 ```c#
 //
@@ -388,9 +424,7 @@ MAS.Invoke(request, completion: (responseInfo, error) => {});
 
 ##### Delete method
 
-This method makes HTTP DELETE calls to an endpoint.
-
-Parameters are encoded into the endpoint URL as query parameters.
+This method makes HTTP DELETE calls to an endpoint. Parameters are encoded into the endpoint URL as query parameters.
 
 ```c#
 //
@@ -414,9 +448,7 @@ MAS.Invoke(request, completion: (responseInfo, error) => {});
 
 ##### Post method
 
-This method makes HTTP POST calls to an endpoint.
-
-Parameters are encoded into the HTTP body.
+This method makes HTTP POST calls to an endpoint. Parameters are encoded into the HTTP body.
 
 ```c#
 //
@@ -439,9 +471,8 @@ MAS.Invoke(request, completion: (responseInfo, error) => {});
 ```
 
 ##### Put method
-This method makes HTTP PUT calls to an endpoint.
 
-Parameters are encoded into the HTTP body.
+This method makes HTTP PUT calls to an endpoint. Parameters are encoded into the HTTP body.
 
 ```c#
 //
@@ -465,9 +496,9 @@ MAS.Invoke(request, completion: (responseInfo, error) => {});
 
 #### Simplified request methods
 
-MAS also provides static methods to construct and send request directly without constructing `MASRequest` object.
+The Mobile SDK also provides static methods to construct and send request directly without using the `MASRequest` object.
 
-All of GET, DELETE, POST, and PUT MAS static methods also have following sets of parameters for convenient use.
+All GET, DELETE, POST, and PUT MAS static methods also have the following set of parameters.
 
 ```c#
 //
@@ -484,6 +515,7 @@ All of GET, DELETE, POST, and PUT MAS static methods also have following sets of
 ```
 
 ##### Get method
+
 ```c#
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
@@ -497,6 +529,7 @@ MAS.GetFrom(@"/protected/resource/products", param, null, MASRequestResponseType
 ```
 
 ##### Delete method
+
 ```c#
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
@@ -510,6 +543,7 @@ MAS.DeleteFrom(@"/protected/resource/products", param, null, MASRequestResponseT
 ```
 
 ##### Post method
+
 ```c#
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
@@ -523,6 +557,7 @@ MAS.PostTo(@"/protected/resource/products", param, null, MASRequestResponseType.
 ```
 
 ##### Put method
+
 ```c#
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
