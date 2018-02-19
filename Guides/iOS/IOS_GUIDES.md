@@ -427,8 +427,8 @@ MASRequest request = MASRequest.PostTo((requestBuilder) => {
 	//	Define request builder's properties within block
 	//
    requestBuilder.EndPoint = "/protected/resource/products";
-   requestBuilder.SetQueryParameter("operation", "listProducts");
-   requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
+   requestBuilder.SetBodyParameter("operation", "listProducts");
+   requestBuilder.RequestType = MASRequestResponseType.Json;
    requestBuilder.ResponseType = MASRequestResponseType.Json;
 });
 
@@ -452,8 +452,8 @@ MASRequest request = MASRequest.PutTo((requestBuilder) => {
 	//	Define request builder's properties within block
 	//
    requestBuilder.EndPoint = "/protected/resource/products";
-   requestBuilder.SetQueryParameter("operation", "listProducts");
-   requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
+   requestBuilder.SetBodyParameter("operation", "listProducts");
+   requestBuilder.RequestType = MASRequestResponseType.Json;
    requestBuilder.ResponseType = MASRequestResponseType.Json;
 });
 
@@ -461,6 +461,78 @@ MASRequest request = MASRequest.PutTo((requestBuilder) => {
 //	Use the request object to invoke an API
 //
 MAS.Invoke(request, completion: (responseInfo, error) => {});
+```
+
+#### Simplified request methods
+
+MAS also provides static methods to construct and send request directly without constructing `MASRequest` object.
+
+All of GET, DELETE, POST, and PUT MAS static methods also have following sets of parameters for convenient use.
+
+```c#
+//
+//	Default request, and response type are JSON in this method signature
+//
+(string endPointPath, NSDictionary parameterInfo, NSDictionary headerInfo, MASResponseInfoErrorBlock completion);
+
+//
+//	Default value for isPublic parameter is false in this method signature 
+//
+(string endPointPath, NSDictionary parameterInfo, NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, MASResponseInfoErrorBlock completion);
+
+(string endPointPath, NSDictionary parameterInfo, NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, MASResponseInfoErrorBlock completion);
+```
+
+##### Get method
+```c#
+NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
+param.Add(new NSString("operation"), new NSString("listProducts"));
+
+MAS.GetFrom(@"/protected/resource/products", param, null, MASRequestResponseType.WwwFormUrlEncoded, MASRequestResponseType.Json, completion: (responseInfo, error) =>
+{
+	//
+	//	Handle response here
+	//
+});
+```
+
+##### Delete method
+```c#
+NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
+param.Add(new NSString("operation"), new NSString("listProducts"));
+
+MAS.DeleteFrom(@"/protected/resource/products", param, null, MASRequestResponseType.WwwFormUrlEncoded, MASRequestResponseType.Json, completion: (responseInfo, error) =>
+{
+	//
+	//	Handle response here
+	//
+});
+```
+
+##### Post method
+```c#
+NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
+param.Add(new NSString("operation"), new NSString("listProducts"));
+
+MAS.PostTo(@"/protected/resource/products", param, null, MASRequestResponseType.Json, MASRequestResponseType.Json, completion: (responseInfo, error) =>
+{
+	//
+	//	Handle response here
+	//
+});
+```
+
+##### Put method
+```c#
+NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
+param.Add(new NSString("operation"), new NSString("listProducts"));
+
+MAS.PutTo(@"/protected/resource/products", param, null, MASRequestResponseType.Json, MASRequestResponseType.Json, completion: (responseInfo, error) =>
+{
+	//
+	//	Handle response here
+	//
+});
 ```
 
 
