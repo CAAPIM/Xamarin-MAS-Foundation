@@ -17,10 +17,10 @@
 
 ## Create an App: Choose a Method
 
-|| Create your app using...                 | Benefits                                 |
+| Create your app using...                 | Benefits                                 |
 | ---------------------------------------- | ---------------------------------------- |
-| [Quick start with sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods, or building a real app.</li></ul> |
-| [Create app scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch for maximum control, or to integrate an existing Xamarin app. <li>Download a dynamic-link library. (.dll)</li></ul> |                                  
+| [Sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods, or building a real app.</li></ul> |
+| [Create app scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Just download the dynamic-link library (.dll) and add your app configuration file.</li></ul> |                                  
 
 ## Quick Start with Sample App
 
@@ -52,10 +52,10 @@ If you get an error, the most likely cause is an invalid app configuration file.
 
 ## Create App from Scratch or Integrate an Existing App into the Mobile SDK
 
-If you have a new or existing Xamarin app that you want to integrate into the Mobile SDK, or simply want to have full control over app set up, these steps are for you.
+If you have an existing Xamarin app that you want to integrate into the Mobile SDK, or simply want full control to set up a new app, these steps are for you.
 
 ::: alert info
-**Note**: You cannot use an existing iOS Mobile SDK app. You must start from scratch using c#.
+**Note**: You cannot use an existing iOS Mobile SDK app. You must redo the app using c#.
 ::: 
 
 ### Step 1: Set up Project in Visual Studio
@@ -71,11 +71,13 @@ Verify that you have both "Android" and "iOS" source directories.
 10. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
 
-## Step 2: Start the SDK 
+### Step 2: Start the SDK 
 
-After your project is properly configured, you must start the SDK to establish a secure connection with the backend services. The startup process includes: initialize necessary services for the SDK library and network services, and load the configuration. Ideally, SDK startup should be processed before app startup (during the splash/loading screen of your app). We recommended that you process any communication with the backend services upon successful completion of the startup method. Otherwise, the secure communication is not guaranteed and may fail.
+After your project is properly configured, you must start the SDK to establish a secure connection with the backend services. The method that starts the SDK is **MAS.start**. Note the following:
 
-The method that starts the SDK is **MAS.start**. You can put MAS.start anywhere in your app, but we suggest that you call this method as soon as possible (first screen of your app). This ensures that the SDK is ready to handle all security and communication with the MAG server.
+- You can put MAS.Start anywhere in your app
+- MAS.Start should be processed before app startup (during the splash/loading screen of your app). 
+- We recommended that you process any communication with the backend services after successful completion of the startup method, or the secure communication is not guaranteed and may fail.
 
 ### Start with standard method
 
@@ -117,17 +119,17 @@ MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
 });
 ```
 
-## Login: User Authentication 
+## Login: User Authentication and Authorization
 
 **Library**: MASFoundation<br>
 **Description**: Authentication methods to use with the MAG and backend services.</br>
 
-### No user authentication, default SDK flow
+### No user authentication (default SDK flow)
 
 **What**: No user authentication, just access an API. <br>
 **Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
 
-Use the following flow to set the default login flow to no user authentication.
+Use `Set grantFlow` to set the default flow to no user authentication.
 
 ```c#
 //  Set grantFlow to Client Credentials
@@ -135,19 +137,19 @@ MAS.GrantFlow = MASGrantFlow.ClientCredentials;
 
 ```
 
-### Authenticate user with password, make default flow
+### Authenticate user with password, change default
 
 **What**: Always start with login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
 
-Use the following method to change the default login flow to password.
+Use the `Set grantFlow` to change the default login flow to password.
 
 ```c#
 //  Set grantFlow to Password
 MAS.GrantFlow = MASGrantFlow.Password;
 ```
 
-### Authentication user with password method
+### Authenticate user with password method
 
 ```c#
 //
