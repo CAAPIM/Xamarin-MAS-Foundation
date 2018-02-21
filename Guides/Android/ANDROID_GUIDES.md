@@ -80,7 +80,7 @@ After your project is properly configured, you must start the SDK to establish a
 - We recommended that you process any communication with the backend services after successful completion of the startup method, or the secure communication is not guaranteed and may fail.
 
 ```c#
-//MAS.Start(Context context, bool shouldUseDefault);
+// Start the SDK
 MAS.Start(Application.Context, true);
 
 ```
