@@ -3,7 +3,7 @@ The Mobile SDK provides simple and secure access to the services of the CA Mobil
 
 With MASFoundation for Xamarin you will be able to quickly build secure iOS and Android apps by leveraging our built-in capabilities to:
 - Authenticate users
-- Securely access to protected APIs with oAuth 2.0 protocol
+- Securely access to protected APIs with OAuth 2.0 protocol
 
 This framework is for **evaluation purposes only** and currently not supported by CA.
 
@@ -18,8 +18,8 @@ This sample app was created using Visual Studio Community 2017 build 7.3.3. It i
 
 The MASFoundation implementation for use with Xamarin "BasicAuthSample" app lets you test the following with a CA Mobile API Gateway:
 
-- Login
-- Logout
+- Log in
+- Log out
 - Invoke a protected API 
 
 Video version of the steps below: 
