@@ -82,7 +82,6 @@ namespace BasicAuthSample
 
             MAS.SetAuthenticationListener(new MyAuthenticationListener());
 
-            startSDK();
         }
 
         public void startSDK()

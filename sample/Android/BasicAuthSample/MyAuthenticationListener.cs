@@ -12,6 +12,7 @@ using Android.Widget;
 using Org.Json;
 using Java.Lang;
 using Android.OS;
+using Android.Text;
 
 namespace BasicAuthSample
 {
@@ -46,6 +47,7 @@ namespace BasicAuthSample
 
             username.Hint = "Username";
             password.Hint = "Password";
+            password.InputType = InputTypes.TextVariationPassword | InputTypes.ClassText;
 
             layout.AddView(username);
             layout.AddView(password);
