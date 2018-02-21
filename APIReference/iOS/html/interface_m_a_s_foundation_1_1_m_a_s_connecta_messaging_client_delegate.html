@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Xamarin MASFoundation.iOS: MASFoundation.MASConnectaMessagingClientDelegate Interface Reference</title>
+<title>MASFoundation.iOS: MASFoundation.MASConnectaMessagingClientDelegate Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,8 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="caLogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xamarin MASFoundation.iOS
+   <div id="projectname">MASFoundation.iOS
    </div>
   </td>
  </tr>
@@ -75,21 +76,90 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a954b6a1021b695c232152876d0875a66"><td class="memItemLeft" align="right" valign="top"><a id="a954b6a1021b695c232152876d0875a66"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnMessageReceived</b> (<a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_m_q_t_t_message.html">MASMQTTMessage</a> message)</td></tr>
+<tr class="memitem:a954b6a1021b695c232152876d0875a66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_connecta_messaging_client_delegate.html#a954b6a1021b695c232152876d0875a66">OnMessageReceived</a> (<a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_m_q_t_t_message.html">MASMQTTMessage</a> message)</td></tr>
 <tr class="separator:a954b6a1021b695c232152876d0875a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a445ee24e04b56d9bfed9158b67fa278f"><td class="memItemLeft" align="right" valign="top"><a id="a445ee24e04b56d9bfed9158b67fa278f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPublishMessage</b> (NSNumber messageId)</td></tr>
+<tr class="memitem:a445ee24e04b56d9bfed9158b67fa278f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_connecta_messaging_client_delegate.html#a445ee24e04b56d9bfed9158b67fa278f">OnPublishMessage</a> (NSNumber messageId)</td></tr>
 <tr class="separator:a445ee24e04b56d9bfed9158b67fa278f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada0aabcdc4f542c440ed2373a15988ce"><td class="memItemLeft" align="right" valign="top"><a id="ada0aabcdc4f542c440ed2373a15988ce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnConnected</b> (MQTTConnectionReturnCode rc)</td></tr>
+<tr class="memitem:ada0aabcdc4f542c440ed2373a15988ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_connecta_messaging_client_delegate.html#ada0aabcdc4f542c440ed2373a15988ce">OnConnected</a> (<a class="el" href="namespace_m_a_s_foundation.html#a248af824ae53406f3822706f69a38986">MQTTConnectionReturnCode</a> rc)</td></tr>
 <tr class="separator:ada0aabcdc4f542c440ed2373a15988ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23fd57b9a95397ffb6d439042a176243"><td class="memItemLeft" align="right" valign="top"><a id="a23fd57b9a95397ffb6d439042a176243"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisconnect</b> (MQTTConnectionReturnCode rc)</td></tr>
+<tr class="memitem:a23fd57b9a95397ffb6d439042a176243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_connecta_messaging_client_delegate.html#a23fd57b9a95397ffb6d439042a176243">OnDisconnect</a> (<a class="el" href="namespace_m_a_s_foundation.html#a248af824ae53406f3822706f69a38986">MQTTConnectionReturnCode</a> rc)</td></tr>
 <tr class="separator:a23fd57b9a95397ffb6d439042a176243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ada0aabcdc4f542c440ed2373a15988ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada0aabcdc4f542c440ed2373a15988ce">&#9670;&nbsp;</a></span>OnConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MASConnectaMessagingClientDelegate.OnConnected </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#a248af824ae53406f3822706f69a38986">MQTTConnectionReturnCode</a>&#160;</td>
+          <td class="paramname"><em>rc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23fd57b9a95397ffb6d439042a176243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fd57b9a95397ffb6d439042a176243">&#9670;&nbsp;</a></span>OnDisconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MASConnectaMessagingClientDelegate.OnDisconnect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#a248af824ae53406f3822706f69a38986">MQTTConnectionReturnCode</a>&#160;</td>
+          <td class="paramname"><em>rc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a954b6a1021b695c232152876d0875a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954b6a1021b695c232152876d0875a66">&#9670;&nbsp;</a></span>OnMessageReceived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MASConnectaMessagingClientDelegate.OnMessageReceived </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_m_q_t_t_message.html">MASMQTTMessage</a>&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a445ee24e04b56d9bfed9158b67fa278f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a445ee24e04b56d9bfed9158b67fa278f">&#9670;&nbsp;</a></span>OnPublishMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MASConnectaMessagingClientDelegate.OnPublishMessage </td>
+          <td>(</td>
+          <td class="paramtype">NSNumber&#160;</td>
+          <td class="paramname"><em>messageId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>ApiDefinition.cs</li>
+<li><a class="el" href="_api_definition_8cs.html">ApiDefinition.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

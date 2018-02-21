@@ -1,6 +1,27 @@
 var searchData=
 [
-  ['removesessionlock',['RemoveSessionLock',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#aa2581e95b92c89265e3bacc2e65c6229',1,'MASFoundation::MASUser']]],
-  ['requestuserinfowithcompletion',['RequestUserInfoWithCompletion',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#a320dc7dc8be0ae3b75caeddc637907ea',1,'MASFoundation::MASUser']]],
-  ['resetlocally',['ResetLocally',['../interface_m_a_s_foundation_1_1_m_a_s_device.html#ac174fdc81bcf8a8e3d3643f95d10c6c0',1,'MASFoundation::MASDevice']]]
+  ['masauthcredentialsblock',['MASAuthCredentialsBlock',['../namespace_m_a_s_foundation.html#a1bd7d34d07e332e514505e41ef634b1b',1,'MASFoundation']]],
+  ['masauthorizationcodecredentialsblock',['MASAuthorizationCodeCredentialsBlock',['../namespace_m_a_s_foundation.html#a178d3b4f5f21ec1c7de16601ced50d71',1,'MASFoundation']]],
+  ['masbasiccredentialsblock',['MASBasicCredentialsBlock',['../namespace_m_a_s_foundation.html#a67a6dd19bf78493ded1458fe186a5ee8',1,'MASFoundation']]],
+  ['masbiometricderegistrationmodalitiesselectionblock',['MASBiometricDeregistrationModalitiesSelectionBlock',['../namespace_m_a_s_foundation.html#a56ed5035f551a5bb13b081c20d95b5b6',1,'MASFoundation']]],
+  ['masbiometricmodalitiesblock',['MASBiometricModalitiesBlock',['../namespace_m_a_s_foundation.html#ad0dda2da545d7e0ca99ebfaec1be04ff',1,'MASFoundation']]],
+  ['masbiometricregistrationmodalitiesselectionblock',['MASBiometricRegistrationModalitiesSelectionBlock',['../namespace_m_a_s_foundation.html#ac214f8f1585bc58d8db653ad3943a235',1,'MASFoundation']]],
+  ['mascompletionerrorblock',['MASCompletionErrorBlock',['../namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d',1,'MASFoundation']]],
+  ['masgatewaymonitorstatusblock',['MASGatewayMonitorStatusBlock',['../namespace_m_a_s_foundation.html#a3ff2795b6b11eec74ee5b57d38146517',1,'MASFoundation']]],
+  ['masobjectresponseerrorblock',['MASObjectResponseErrorBlock',['../namespace_m_a_s_foundation.html#aacd751513514e28b9f71ee1ded72a707',1,'MASFoundation']]],
+  ['masobjectsresponseerrorblock',['MASObjectsResponseErrorBlock',['../namespace_m_a_s_foundation.html#a91ec413c6c714be7a0bef608899e1d0f',1,'MASFoundation']]],
+  ['masotpchannelselectionblock',['MASOTPChannelSelectionBlock',['../namespace_m_a_s_foundation.html#afdd3b245b0cd0f220e574549aa96cd50',1,'MASFoundation']]],
+  ['masotpcredentialsblock',['MASOTPCredentialsBlock',['../namespace_m_a_s_foundation.html#af9d6ecbbd3da4bcc7d09109555ac0fc2',1,'MASFoundation']]],
+  ['masotpfetchcredentialsblock',['MASOTPFetchCredentialsBlock',['../namespace_m_a_s_foundation.html#a52b76d75b080f9d115fa876dfe5806d9',1,'MASFoundation']]],
+  ['masotpgenerationblock',['MASOTPGenerationBlock',['../namespace_m_a_s_foundation.html#a310092394470df286657e2d3f2e20db4',1,'MASFoundation']]],
+  ['masresponseinfoerrorblock',['MASResponseInfoErrorBlock',['../namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f',1,'MASFoundation']]],
+  ['masuserauthcredentialsblock',['MASUserAuthCredentialsBlock',['../namespace_m_a_s_foundation.html#a07259ec9d36007fb05e12a62356f71f2',1,'MASFoundation']]],
+  ['masuserloginwithusercredentialsblock',['MASUserLoginWithUserCredentialsBlock',['../namespace_m_a_s_foundation.html#a45c61f4c888cfdf72b5928113ff6a28d',1,'MASFoundation']]],
+  ['masuserresponseerrorblock',['MASUserResponseErrorBlock',['../namespace_m_a_s_foundation.html#a4f41c3991087ec2d0577b2f65965c454',1,'MASFoundation']]],
+  ['mqttcompletionerrorblock',['MQTTCompletionErrorBlock',['../namespace_m_a_s_foundation.html#ae3f670e3a513a3c2760ef4f14a16b295',1,'MASFoundation']]],
+  ['mqttdisconnectionhandler',['MQTTDisconnectionHandler',['../namespace_m_a_s_foundation.html#af82a77f3adf2beaeaf2470566b9d2869',1,'MASFoundation']]],
+  ['mqttmessagehandler',['MQTTMessageHandler',['../namespace_m_a_s_foundation.html#a1d1979863dd81f7b84bed1081fb11ddd',1,'MASFoundation']]],
+  ['mqttpublishingcompletionblock',['MQTTPublishingCompletionBlock',['../namespace_m_a_s_foundation.html#a9ccbd4a6037e0bb5bf0178d876929370',1,'MASFoundation']]],
+  ['mqttsubscriptioncompletionblock',['MQTTSubscriptionCompletionBlock',['../namespace_m_a_s_foundation.html#a41e36bcf7a6e3360e9720573b3ef9803',1,'MASFoundation']]],
+  ['mqttsubscriptioncompletionhandler',['MQTTSubscriptionCompletionHandler',['../namespace_m_a_s_foundation.html#a9bac2966d7138c1dba190777577a90e0',1,'MASFoundation']]]
 ];

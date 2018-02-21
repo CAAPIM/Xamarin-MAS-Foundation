@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Xamarin MASFoundation.iOS: MASFoundation.MAS Interface Reference</title>
+<title>MASFoundation.iOS: MASFoundation.MAS Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,8 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="caLogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xamarin MASFoundation.iOS
+   <div id="projectname">MASFoundation.iOS
    </div>
   </td>
  </tr>
@@ -87,13 +88,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ada81822fcc9194aced573c4aec6db0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets bool indicator of PKCE (Proof Key for Code Exchange) enabled or not for authorization process in Social Login, and Proximity Login. By default, PKCE is enabled and enforced in authorization process; it can be opted-out.  <a href="#ada81822fcc9194aced573c4aec6db0a4">More...</a><br /></td></tr>
 <tr class="separator:ada81822fcc9194aced573c4aec6db0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55f1cb92b69dfbdfe6acd4c8465fab52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a55f1cb92b69dfbdfe6acd4c8465fab52">SetUserAuthCredentials</a> ([NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a07259ec9d36007fb05e12a62356f71f2">MASUserAuthCredentialsBlock</a> userAuthCredentialsBlock)</td></tr>
-<tr class="memdesc:a55f1cb92b69dfbdfe6acd4c8465fab52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a user auth credential block to handle the case where SDK requires auth credentials. When MASGrantFlow is set to MASGrantFlowPassword, and auth credentials is required, SDK will invoke this block to obtain <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_auth_credentials.html">MASAuthCredentials</a> to proceed authentication process.  <a href="#a55f1cb92b69dfbdfe6acd4c8465fab52">More...</a><br /></td></tr>
+<tr class="memdesc:a55f1cb92b69dfbdfe6acd4c8465fab52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a user auth credential block to handle the case where SDK requires auth credentials. When MASGrantFlow is set to MASGrantFlowPassword, and auth credentials is required, SDK will invoke this block to obtain <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_auth_credentials.html" title="The MASAuthCredentials class is a base class of all other auth credentials types supported in MASFoun...">MASAuthCredentials</a> to proceed authentication process.  <a href="#a55f1cb92b69dfbdfe6acd4c8465fab52">More...</a><br /></td></tr>
 <tr class="separator:a55f1cb92b69dfbdfe6acd4c8465fab52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae961af377506eba67a9f9529044f8cb9"><td class="memItemLeft" align="right" valign="top"><a id="ae961af377506eba67a9f9529044f8cb9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOTPChannelSelectionBlock</b> ([NullAllowed] MASOTPChannelSelectionBlock OTPChannelSelector)</td></tr>
+<tr class="memitem:ae961af377506eba67a9f9529044f8cb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#ae961af377506eba67a9f9529044f8cb9">SetOTPChannelSelectionBlock</a> ([NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#afdd3b245b0cd0f220e574549aa96cd50">MASOTPChannelSelectionBlock</a> OTPChannelSelector)</td></tr>
 <tr class="separator:ae961af377506eba67a9f9529044f8cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44a2461b58b4f566f376d6c2996d7d1c"><td class="memItemLeft" align="right" valign="top"><a id="a44a2461b58b4f566f376d6c2996d7d1c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOTPCredentialsBlock</b> ([NullAllowed] MASOTPCredentialsBlock oneTimePassword)</td></tr>
+<tr class="memitem:a44a2461b58b4f566f376d6c2996d7d1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a44a2461b58b4f566f376d6c2996d7d1c">SetOTPCredentialsBlock</a> ([NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#af9d6ecbbd3da4bcc7d09109555ac0fc2">MASOTPCredentialsBlock</a> oneTimePassword)</td></tr>
 <tr class="separator:a44a2461b58b4f566f376d6c2996d7d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9965bbfcdcfadb2c1a46804fb4a18c41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a9965bbfcdcfadb2c1a46804fb4a18c41">EnableBrowserBasedAuthentication</a> (bool enable)</td></tr>
 <tr class="memdesc:a9965bbfcdcfadb2c1a46804fb4a18c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets bool indicator of Browser Based Authentication (templatized login) enabled or not for authorization process. By default, it is disabled.  <a href="#a9965bbfcdcfadb2c1a46804fb4a18c41">More...</a><br /></td></tr>
@@ -125,70 +124,69 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOTPCredentialsBloc
 <tr class="memitem:a5dbc4a389d08e8cac480dbcf8a5574a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a5dbc4a389d08e8cac480dbcf8a5574a7">DeleteFrom</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:a5dbc4a389d08e8cac480dbcf8a5574a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP DELETE call from the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#a5dbc4a389d08e8cac480dbcf8a5574a7">More...</a><br /></td></tr>
 <tr class="separator:a5dbc4a389d08e8cac480dbcf8a5574a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ad03c1cf3d2cff1942587a0efd19e35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a5ad03c1cf3d2cff1942587a0efd19e35">DeleteFrom</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
+<tr class="memitem:a5ad03c1cf3d2cff1942587a0efd19e35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a5ad03c1cf3d2cff1942587a0efd19e35">DeleteFrom</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> requestType, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> responseType, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:a5ad03c1cf3d2cff1942587a0efd19e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP DELETE call from the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#a5ad03c1cf3d2cff1942587a0efd19e35">More...</a><br /></td></tr>
 <tr class="separator:a5ad03c1cf3d2cff1942587a0efd19e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb7eddaf7afd05d9f0e38a43ec59b63e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#afb7eddaf7afd05d9f0e38a43ec59b63e">DeleteFrom</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
+<tr class="memitem:afb7eddaf7afd05d9f0e38a43ec59b63e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#afb7eddaf7afd05d9f0e38a43ec59b63e">DeleteFrom</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> requestType, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> responseType, bool isPublic, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:afb7eddaf7afd05d9f0e38a43ec59b63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP DELETE call from the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#afb7eddaf7afd05d9f0e38a43ec59b63e">More...</a><br /></td></tr>
 <tr class="separator:afb7eddaf7afd05d9f0e38a43ec59b63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab41843de38ecfba278a60408c7e05600"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#ab41843de38ecfba278a60408c7e05600">GetFrom</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:ab41843de38ecfba278a60408c7e05600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP GET call from the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#ab41843de38ecfba278a60408c7e05600">More...</a><br /></td></tr>
 <tr class="separator:ab41843de38ecfba278a60408c7e05600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2c3c7687b55abe17cd1a80002d689ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#aa2c3c7687b55abe17cd1a80002d689ed">GetFrom</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
+<tr class="memitem:aa2c3c7687b55abe17cd1a80002d689ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#aa2c3c7687b55abe17cd1a80002d689ed">GetFrom</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> requestType, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> responseType, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:aa2c3c7687b55abe17cd1a80002d689ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP GET call from the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#aa2c3c7687b55abe17cd1a80002d689ed">More...</a><br /></td></tr>
 <tr class="separator:aa2c3c7687b55abe17cd1a80002d689ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad664644f68929b006fe1f417dd4a2257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#ad664644f68929b006fe1f417dd4a2257">GetFrom</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
+<tr class="memitem:ad664644f68929b006fe1f417dd4a2257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#ad664644f68929b006fe1f417dd4a2257">GetFrom</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> requestType, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> responseType, bool isPublic, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:ad664644f68929b006fe1f417dd4a2257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP GET call from the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#ad664644f68929b006fe1f417dd4a2257">More...</a><br /></td></tr>
 <tr class="separator:ad664644f68929b006fe1f417dd4a2257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90b41dfd5586563b8a2d9ec6438de60f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a90b41dfd5586563b8a2d9ec6438de60f">PatchTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:a90b41dfd5586563b8a2d9ec6438de60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP PATCH call to the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#a90b41dfd5586563b8a2d9ec6438de60f">More...</a><br /></td></tr>
 <tr class="separator:a90b41dfd5586563b8a2d9ec6438de60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fcc374619891a69c1867546342ce8d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a7fcc374619891a69c1867546342ce8d6">PatchTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
+<tr class="memitem:a7fcc374619891a69c1867546342ce8d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a7fcc374619891a69c1867546342ce8d6">PatchTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> requestType, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> responseType, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:a7fcc374619891a69c1867546342ce8d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP PATCH call to the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#a7fcc374619891a69c1867546342ce8d6">More...</a><br /></td></tr>
 <tr class="separator:a7fcc374619891a69c1867546342ce8d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63e6e810adfe4e39735f296e623df702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a63e6e810adfe4e39735f296e623df702">PatchTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
+<tr class="memitem:a63e6e810adfe4e39735f296e623df702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a63e6e810adfe4e39735f296e623df702">PatchTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> requestType, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> responseType, bool isPublic, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:a63e6e810adfe4e39735f296e623df702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP PATCH call to the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#a63e6e810adfe4e39735f296e623df702">More...</a><br /></td></tr>
 <tr class="separator:a63e6e810adfe4e39735f296e623df702"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eae0ffcc69a35fde5133d34f42a11cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a1eae0ffcc69a35fde5133d34f42a11cb">PostTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:a1eae0ffcc69a35fde5133d34f42a11cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP POST call to the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#a1eae0ffcc69a35fde5133d34f42a11cb">More...</a><br /></td></tr>
 <tr class="separator:a1eae0ffcc69a35fde5133d34f42a11cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a639638d23082eeb22a985f75633c46b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a639638d23082eeb22a985f75633c46b2">PostTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
+<tr class="memitem:a639638d23082eeb22a985f75633c46b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a639638d23082eeb22a985f75633c46b2">PostTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> requestType, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> responseType, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:a639638d23082eeb22a985f75633c46b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP POST call to the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#a639638d23082eeb22a985f75633c46b2">More...</a><br /></td></tr>
 <tr class="separator:a639638d23082eeb22a985f75633c46b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff65a01777d0e5ee3aae0d9d50a9e1ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#aff65a01777d0e5ee3aae0d9d50a9e1ab">PostTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
+<tr class="memitem:aff65a01777d0e5ee3aae0d9d50a9e1ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#aff65a01777d0e5ee3aae0d9d50a9e1ab">PostTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> requestType, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> responseType, bool isPublic, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:aff65a01777d0e5ee3aae0d9d50a9e1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP PATCH call to the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#aff65a01777d0e5ee3aae0d9d50a9e1ab">More...</a><br /></td></tr>
 <tr class="separator:aff65a01777d0e5ee3aae0d9d50a9e1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1387c034e0e4f57e3bc67650ce9ede6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#aa1387c034e0e4f57e3bc67650ce9ede6">PutTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:aa1387c034e0e4f57e3bc67650ce9ede6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP PUT call to the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#aa1387c034e0e4f57e3bc67650ce9ede6">More...</a><br /></td></tr>
 <tr class="separator:aa1387c034e0e4f57e3bc67650ce9ede6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff863db2994c020745a8ae866361d735"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#aff863db2994c020745a8ae866361d735">PutTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
+<tr class="memitem:aff863db2994c020745a8ae866361d735"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#aff863db2994c020745a8ae866361d735">PutTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> requestType, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> responseType, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:aff863db2994c020745a8ae866361d735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP PUT call to the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#aff863db2994c020745a8ae866361d735">More...</a><br /></td></tr>
 <tr class="separator:aff863db2994c020745a8ae866361d735"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac82da138b0eaa4afff29e1eb5949101f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#ac82da138b0eaa4afff29e1eb5949101f">PutTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
+<tr class="memitem:ac82da138b0eaa4afff29e1eb5949101f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#ac82da138b0eaa4afff29e1eb5949101f">PutTo</a> (string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> requestType, <a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> responseType, bool isPublic, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:ac82da138b0eaa4afff29e1eb5949101f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request method for an HTTP PUT call to the Gateway. This type of HTTP Method type places it's parameters within the NSURL itself as an HTTP query extension as so:  <a href="#ac82da138b0eaa4afff29e1eb5949101f">More...</a><br /></td></tr>
 <tr class="separator:ac82da138b0eaa4afff29e1eb5949101f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25d17f5f68a85cf1b5f2160ce4880937"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a25d17f5f68a85cf1b5f2160ce4880937">Invoke</a> (<a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request.html">MASRequest</a> request, [NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a31ae754c44fae85eed9fd47fa180b55f">MASResponseInfoErrorBlock</a> completion)</td></tr>
 <tr class="memdesc:a25d17f5f68a85cf1b5f2160ce4880937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the endpoint with the parameters defined in the <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request.html" title="MASRequest class is an object created by MASRequestBuilder. It contains all necessary information to ...">MASRequest</a> object  <a href="#a25d17f5f68a85cf1b5f2160ce4880937">More...</a><br /></td></tr>
 <tr class="separator:a25d17f5f68a85cf1b5f2160ce4880937"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8368201adc3693418a7a3ef3817f8761"><td class="memItemLeft" align="right" valign="top"><a id="a8368201adc3693418a7a3ef3817f8761"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>SignWithClaims</b> (<a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html">MASClaims</a> claims, [NullAllowed] out NSError error)</td></tr>
+<tr class="memitem:a8368201adc3693418a7a3ef3817f8761"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a8368201adc3693418a7a3ef3817f8761">SignWithClaims</a> (<a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html">MASClaims</a> claims, [NullAllowed] out NSError error)</td></tr>
+<tr class="memdesc:a8368201adc3693418a7a3ef3817f8761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signs <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html" title="MASClaims class is a helper class to build JWT signed with key pairs. ">MASClaims</a> object with default private key from device registration against primary gateway. Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.  <a href="#a8368201adc3693418a7a3ef3817f8761">More...</a><br /></td></tr>
 <tr class="separator:a8368201adc3693418a7a3ef3817f8761"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdd3d8768e14622ccb953e243c148921"><td class="memItemLeft" align="right" valign="top"><a id="acdd3d8768e14622ccb953e243c148921"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>SignWithClaims</b> (<a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html">MASClaims</a> claims, NSData privateKey, [NullAllowed] out NSError error)</td></tr>
+<tr class="memitem:acdd3d8768e14622ccb953e243c148921"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#acdd3d8768e14622ccb953e243c148921">SignWithClaims</a> (<a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html">MASClaims</a> claims, NSData privateKey, [NullAllowed] out NSError error)</td></tr>
+<tr class="memdesc:acdd3d8768e14622ccb953e243c148921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signs <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html" title="MASClaims class is a helper class to build JWT signed with key pairs. ">MASClaims</a> object with custom private key in NSData format. Private key should be in NSData format and should have been signed using RS256 algorithm. Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.  <a href="#acdd3d8768e14622ccb953e243c148921">More...</a><br /></td></tr>
 <tr class="separator:acdd3d8768e14622ccb953e243c148921"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a495213b0178e388a4bcac247c75f9ba2"><td class="memItemLeft" align="right" valign="top"><a id="a495213b0178e388a4bcac247c75f9ba2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetUserLoginBlock</b> ([NullAllowed] MASUserLoginWithUserCredentialsBlock login)</td></tr>
+<tr class="memitem:a495213b0178e388a4bcac247c75f9ba2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a495213b0178e388a4bcac247c75f9ba2">SetUserLoginBlock</a> ([NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a45c61f4c888cfdf72b5928113ff6a28d">MASUserLoginWithUserCredentialsBlock</a> login)</td></tr>
 <tr class="separator:a495213b0178e388a4bcac247c75f9ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:ab829c36e3abbd66dcd36993ea5370536"><td class="memItemLeft" align="right" valign="top">MASGrantFlow&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#ab829c36e3abbd66dcd36993ea5370536">GrantFlow</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:ab829c36e3abbd66dcd36993ea5370536"><td class="mdescLeft">&#160;</td><td class="mdescRight">MASGrantFlow property. The default is MASGrantFlow.ClientCredentials.  <a href="#ab829c36e3abbd66dcd36993ea5370536">More...</a><br /></td></tr>
+<tr class="memitem:ab829c36e3abbd66dcd36993ea5370536"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_m_a_s_foundation.html#a4ea786f9007576a08ffb403784010ada">MASGrantFlow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#ab829c36e3abbd66dcd36993ea5370536">GrantFlow</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ab829c36e3abbd66dcd36993ea5370536"><td class="mdescLeft">&#160;</td><td class="mdescRight">MASGrantFlow property. The default is <a class="el" href="namespace_m_a_s_foundation.html#a4ea786f9007576a08ffb403784010adaa1b7bf8972c098bd8b87cdf8050bffad5">MASGrantFlow.ClientCredentials</a>.  <a href="#ab829c36e3abbd66dcd36993ea5370536">More...</a><br /></td></tr>
 <tr class="separator:ab829c36e3abbd66dcd36993ea5370536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492f919118ee9c32bbe962c9684e0581"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a492f919118ee9c32bbe962c9684e0581">IsPKCEEnabled</a><code> [get]</code></td></tr>
 <tr class="memdesc:a492f919118ee9c32bbe962c9684e0581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a value indicating whether this T:MASFoundation.MAS is PKCEE nabled.  <a href="#a492f919118ee9c32bbe962c9684e0581">More...</a><br /></td></tr>
 <tr class="separator:a492f919118ee9c32bbe962c9684e0581"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49b6f0d1ca2b10e1cb48c03dc750e37d"><td class="memItemLeft" align="right" valign="top">MASState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a49b6f0d1ca2b10e1cb48c03dc750e37d">MASState</a><code> [get]</code></td></tr>
+<tr class="memitem:a49b6f0d1ca2b10e1cb48c03dc750e37d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_m_a_s_foundation.html#a6713868230c20ddc8fe91ab97ede0ba5">MASState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a49b6f0d1ca2b10e1cb48c03dc750e37d">MASState</a><code> [get]</code></td></tr>
 <tr class="memdesc:a49b6f0d1ca2b10e1cb48c03dc750e37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns current MASState enumeration value. The value can be used to determine which state SDK is currently at.  <a href="#a49b6f0d1ca2b10e1cb48c03dc750e37d">More...</a><br /></td></tr>
 <tr class="separator:a49b6f0d1ca2b10e1cb48c03dc750e37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a5b8e7a7923d1a4dc10988d56de7f0f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s.html#a1a5b8e7a7923d1a4dc10988d56de7f0f">IsKeychainSynchronizable</a><code> [get]</code></td></tr>
@@ -289,13 +287,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>requestType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>responseType</em>, </td>
         </tr>
         <tr>
@@ -359,13 +357,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>requestType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>responseType</em>, </td>
         </tr>
         <tr>
@@ -546,13 +544,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>requestType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>responseType</em>, </td>
         </tr>
         <tr>
@@ -616,13 +614,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>requestType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>responseType</em>, </td>
         </tr>
         <tr>
@@ -790,13 +788,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>requestType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>responseType</em>, </td>
         </tr>
         <tr>
@@ -860,13 +858,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>requestType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>responseType</em>, </td>
         </tr>
         <tr>
@@ -994,13 +992,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>requestType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>responseType</em>, </td>
         </tr>
         <tr>
@@ -1064,13 +1062,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>requestType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>responseType</em>, </td>
         </tr>
         <tr>
@@ -1198,13 +1196,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>requestType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>responseType</em>, </td>
         </tr>
         <tr>
@@ -1268,13 +1266,13 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>requestType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MASRequestResponseType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td>
           <td class="paramname"><em>responseType</em>, </td>
         </tr>
         <tr>
@@ -1362,7 +1360,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 
 <p>Sets the gateway monitoring block defined by the GatewayMonitorStatusBlock type. This block will be triggered when any change to the current monitoring status takes place with a MASGatewayMonitoringStatus. </p>
 <p>This is optional and it can be set to null at any time to stop receiving the notifications. </p>
-<p>The gateway monitoring status enumerated values are: MASGatewayMonitoringStatus.NotReachable MASGatewayMonitoringStatus.ReachableViaWWAN MASGatewayMonitoringStatus.ReachableViaWiFi </p>
+<p>The gateway monitoring status enumerated values are: <a class="el" href="namespace_m_a_s_foundation.html#a4b37d69c15fcf31c429f6024431cd856aa74377c8265d2a2a5a23e9eb15e8f5c2">MASGatewayMonitoringStatus.NotReachable</a> <a class="el" href="namespace_m_a_s_foundation.html#a4b37d69c15fcf31c429f6024431cd856a8d390d2cdac2e58858d1160c93320422">MASGatewayMonitoringStatus.ReachableViaWWAN</a> <a class="el" href="namespace_m_a_s_foundation.html#a4b37d69c15fcf31c429f6024431cd856a424b14bf30f2f354e2c1cfdacd3b979f">MASGatewayMonitoringStatus.ReachableViaWiFi</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">monitor</td><td>The MASGatewayMonitorStatusBlock that will receive the status updates.</td></tr>
@@ -1424,6 +1422,42 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 
 </div>
 </div>
+<a id="ae961af377506eba67a9f9529044f8cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae961af377506eba67a9f9529044f8cb9">&#9670;&nbsp;</a></span>SetOTPChannelSelectionBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MAS.SetOTPChannelSelectionBlock </td>
+          <td>(</td>
+          <td class="paramtype">[NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#afdd3b245b0cd0f220e574549aa96cd50">MASOTPChannelSelectionBlock</a>&#160;</td>
+          <td class="paramname"><em>OTPChannelSelector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44a2461b58b4f566f376d6c2996d7d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a2461b58b4f566f376d6c2996d7d1c">&#9670;&nbsp;</a></span>SetOTPCredentialsBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MAS.SetOTPCredentialsBlock </td>
+          <td>(</td>
+          <td class="paramtype">[NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#af9d6ecbbd3da4bcc7d09109555ac0fc2">MASOTPCredentialsBlock</a>&#160;</td>
+          <td class="paramname"><em>oneTimePassword</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a55f1cb92b69dfbdfe6acd4c8465fab52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55f1cb92b69dfbdfe6acd4c8465fab52">&#9670;&nbsp;</a></span>SetUserAuthCredentials()</h2>
 
@@ -1440,10 +1474,111 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
       </table>
 </div><div class="memdoc">
 
-<p>Set a user auth credential block to handle the case where SDK requires auth credentials. When MASGrantFlow is set to MASGrantFlowPassword, and auth credentials is required, SDK will invoke this block to obtain <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_auth_credentials.html">MASAuthCredentials</a> to proceed authentication process. </p>
+<p>Set a user auth credential block to handle the case where SDK requires auth credentials. When MASGrantFlow is set to MASGrantFlowPassword, and auth credentials is required, SDK will invoke this block to obtain <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_auth_credentials.html" title="The MASAuthCredentials class is a base class of all other auth credentials types supported in MASFoun...">MASAuthCredentials</a> to proceed authentication process. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">userAuthCredentialsBlock</td><td>MASUserAuthCredentialsBlock that contains callback block to be invoked with <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_auth_credentials.html">MASAuthCredentials</a>.</td></tr>
+    <tr><td class="paramname">userAuthCredentialsBlock</td><td>MASUserAuthCredentialsBlock that contains callback block to be invoked with <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_auth_credentials.html" title="The MASAuthCredentials class is a base class of all other auth credentials types supported in MASFoun...">MASAuthCredentials</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a495213b0178e388a4bcac247c75f9ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495213b0178e388a4bcac247c75f9ba2">&#9670;&nbsp;</a></span>SetUserLoginBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MAS.SetUserLoginBlock </td>
+          <td>(</td>
+          <td class="paramtype">[NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#a45c61f4c888cfdf72b5928113ff6a28d">MASUserLoginWithUserCredentialsBlock</a>&#160;</td>
+          <td class="paramname"><em>login</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8368201adc3693418a7a3ef3817f8761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8368201adc3693418a7a3ef3817f8761">&#9670;&nbsp;</a></span>SignWithClaims() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MASFoundation.MAS.SignWithClaims </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html">MASClaims</a>&#160;</td>
+          <td class="paramname"><em>claims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[NullAllowed] out NSError&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Signs <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html" title="MASClaims class is a helper class to build JWT signed with key pairs. ">MASClaims</a> object with default private key from device registration against primary gateway. Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared. </p>
+<dl class="section return"><dt>Returns</dt><dd>string of JWT.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">claims</td><td><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html" title="MASClaims class is a helper class to build JWT signed with key pairs. ">MASClaims</a> object containing claims for JWT.</td></tr>
+    <tr><td class="paramname">error</td><td>NSError error reference object that returns any error occurred during JWT construction.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acdd3d8768e14622ccb953e243c148921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd3d8768e14622ccb953e243c148921">&#9670;&nbsp;</a></span>SignWithClaims() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MASFoundation.MAS.SignWithClaims </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html">MASClaims</a>&#160;</td>
+          <td class="paramname"><em>claims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NSData&#160;</td>
+          <td class="paramname"><em>privateKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[NullAllowed] out NSError&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Signs <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html" title="MASClaims class is a helper class to build JWT signed with key pairs. ">MASClaims</a> object with custom private key in NSData format. Private key should be in NSData format and should have been signed using RS256 algorithm. Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared. </p>
+<dl class="section return"><dt>Returns</dt><dd>string of JWT.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">claims</td><td><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_claims.html" title="MASClaims class is a helper class to build JWT signed with key pairs. ">MASClaims</a> object containing claims for JWT.</td></tr>
+    <tr><td class="paramname">privateKey</td><td>Custom private key in NSData format signed using RS256 algorithm.</td></tr>
+    <tr><td class="paramname">error</td><td>NSError error reference object that returns any error occurred during JWT construction.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1727,7 +1862,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 
 <p>Retrieves the current gateway monitoring status of the Gateway connection. </p>
 <p>The monitoring status enumerated values to their string equivalents are:</p>
-<p>MASGatewayMonitoringStatus.NotReachable MASGatewayMonitoringStatus.ReachableViaWWAN MASGatewayMonitoringStatus.ReachableViaWiFi </p>
+<p><a class="el" href="namespace_m_a_s_foundation.html#a4b37d69c15fcf31c429f6024431cd856aa74377c8265d2a2a5a23e9eb15e8f5c2">MASGatewayMonitoringStatus.NotReachable</a> <a class="el" href="namespace_m_a_s_foundation.html#a4b37d69c15fcf31c429f6024431cd856a8d390d2cdac2e58858d1160c93320422">MASGatewayMonitoringStatus.ReachableViaWWAN</a> <a class="el" href="namespace_m_a_s_foundation.html#a4b37d69c15fcf31c429f6024431cd856a424b14bf30f2f354e2c1cfdacd3b979f">MASGatewayMonitoringStatus.ReachableViaWiFi</a> </p>
 <p>The gateway monitoring status as string.</p>
 
 </div>
@@ -1742,7 +1877,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MASGrantFlow MASFoundation.MAS.GrantFlow</td>
+          <td class="memname"><a class="el" href="namespace_m_a_s_foundation.html#a4ea786f9007576a08ffb403784010ada">MASGrantFlow</a> MASFoundation.MAS.GrantFlow</td>
         </tr>
       </table>
   </td>
@@ -1752,7 +1887,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 </table>
 </div><div class="memdoc">
 
-<p>MASGrantFlow property. The default is MASGrantFlow.ClientCredentials. </p>
+<p>MASGrantFlow property. The default is <a class="el" href="namespace_m_a_s_foundation.html#a4ea786f9007576a08ffb403784010adaa1b7bf8972c098bd8b87cdf8050bffad5">MASGrantFlow.ClientCredentials</a>. </p>
 <p>The grant flow of MAG SDK.</p>
 
 </div>
@@ -1818,7 +1953,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MASState MASFoundation.MAS.MASState</td>
+          <td class="memname"><a class="el" href="namespace_m_a_s_foundation.html#a6713868230c20ddc8fe91ab97ede0ba5">MASState</a> MASFoundation.MAS.MASState</td>
         </tr>
       </table>
   </td>
@@ -1834,7 +1969,7 @@ It is where the framework lifecycle begins, and ends if necessary.It is the fron
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>ApiDefinition.cs</li>
+<li><a class="el" href="_api_definition_8cs.html">ApiDefinition.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

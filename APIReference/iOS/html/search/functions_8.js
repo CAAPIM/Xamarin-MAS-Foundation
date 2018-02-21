@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['objectforkey',['ObjectForKey',['../interface_m_a_s_foundation_1_1_m_a_s_object.html#a98e41f906a8f4f43921bdc18a8a4419b',1,'MASFoundation::MASObject']]],
-  ['objectforkeyedsubscript',['ObjectForKeyedSubscript',['../interface_m_a_s_foundation_1_1_m_a_s_object.html#ac0dad4a34870a3980b7957cec4273f83',1,'MASFoundation::MASObject']]],
-  ['objectwithclassname',['ObjectWithClassName',['../interface_m_a_s_foundation_1_1_m_a_s_object.html#a378b36e20289a15d03945d435ceba1ac',1,'MASFoundation.MASObject.ObjectWithClassName(string className)'],['../interface_m_a_s_foundation_1_1_m_a_s_object.html#a27165e08c34ee79cd50406d66095b56b',1,'MASFoundation.MASObject.ObjectWithClassName(string className, NSDictionary&lt; NSString, NSString &gt; dictionary)']]]
+  ['initializebrowserbasedauthenticationwithcompletion',['InitializeBrowserBasedAuthenticationWithCompletion',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#ab40232e078d8b91c1672b73f47f588f4',1,'MASFoundation::MASUser']]],
+  ['initwithauthorizationcode',['InitWithAuthorizationCode',['../interface_m_a_s_foundation_1_1_m_a_s_auth_credentials_authorization_code.html#ab205c51f6d39411fbdc79ebd998d36c1',1,'MASFoundation::MASAuthCredentialsAuthorizationCode']]],
+  ['initwithjwt',['InitWithJWT',['../interface_m_a_s_foundation_1_1_m_a_s_auth_credentials_j_w_t.html#a7baf880a6b43b24dff11f63633329be1',1,'MASFoundation::MASAuthCredentialsJWT']]],
+  ['initwithusername',['InitWithUsername',['../interface_m_a_s_foundation_1_1_m_a_s_auth_credentials_password.html#a1ec467c6dee73b79b815276fedfb67f0',1,'MASFoundation::MASAuthCredentialsPassword']]],
+  ['invoke',['Invoke',['../interface_m_a_s_foundation_1_1_m_a_s.html#a25d17f5f68a85cf1b5f2160ce4880937',1,'MASFoundation::MAS']]]
 ];

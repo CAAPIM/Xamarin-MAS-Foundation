@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['phonenumbers',['PhoneNumbers',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#ac7454195b0f99d4460a9bc186fabfbd2',1,'MASFoundation::MASUser']]],
-  ['photos',['Photos',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#abdf4dbc1dab40f4194eb3e04a707cfe5',1,'MASFoundation::MASUser']]],
-  ['privatekey',['PrivateKey',['../interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a24fac86f94de99cb9d3716c2379a35de',1,'MASFoundation.MASRequestBuilder.PrivateKey()'],['../interface_m_a_s_foundation_1_1_m_a_s_request.html#a78eeff2b03525ec86208f0c790483572',1,'MASFoundation.MASRequest.PrivateKey()']]],
-  ['proximitylogindelegate',['ProximityLoginDelegate',['../interface_m_a_s_foundation_1_1_m_a_s_device.html#a18fb6e6a4298b4bbaae2163e883001ea',1,'MASFoundation::MASDevice']]]
+  ['masfoundationversionnumber',['MASFoundationVersionNumber',['../interface_m_a_s_foundation_1_1_constants.html#aed7524d99c3f86dd932e66cedaaf1283',1,'MASFoundation::Constants']]],
+  ['masfoundationversionstring',['MASFoundationVersionString',['../interface_m_a_s_foundation_1_1_constants.html#a689285d51660b31fa3a998348d523af5',1,'MASFoundation::Constants']]],
+  ['masstate',['MASState',['../interface_m_a_s_foundation_1_1_m_a_s.html#a49b6f0d1ca2b10e1cb48c03dc750e37d',1,'MASFoundation::MAS']]],
+  ['members',['Members',['../interface_m_a_s_foundation_1_1_m_a_s_group.html#acf980dfe55c47123b50ce31a1228f80c',1,'MASFoundation::MASGroup']]],
+  ['messagehandler',['MessageHandler',['../interface_m_a_s_foundation_1_1_m_a_s_m_q_t_t_client.html#a4b2767f18a5b38146c700b0830982e05',1,'MASFoundation::MASMQTTClient']]],
+  ['mid',['Mid',['../interface_m_a_s_foundation_1_1_m_a_s_m_q_t_t_message.html#a00d4f620d58151a2e6f660f2c8b96369',1,'MASFoundation::MASMQTTMessage']]]
 ];

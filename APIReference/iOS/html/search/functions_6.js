@@ -1,10 +1,4 @@
 var searchData=
 [
-  ['listattributes',['ListAttributes',['../interface_m_a_s_foundation_1_1_m_a_s_object.html#a81825122f0a5dcdc100aa00237d764e0',1,'MASFoundation::MASObject']]],
-  ['locksessionwithcompletion',['LockSessionWithCompletion',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#a13d5e50e07898ec56dc9bf64a94da526',1,'MASFoundation::MASUser']]],
-  ['loginwithauthcredentials',['LoginWithAuthCredentials',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#a6c59571cf21831a328a283232ae495a6',1,'MASFoundation::MASUser']]],
-  ['loginwithauthorizationcode',['LoginWithAuthorizationCode',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#adefab39eb07a793f03f54ae0e69b88b5',1,'MASFoundation::MASUser']]],
-  ['loginwithidtoken',['LoginWithIdToken',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#ab8a8093fca783f59fcb900d16c8eb21d',1,'MASFoundation::MASUser']]],
-  ['loginwithusername',['LoginWithUserName',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#aa217a20f27259671340ffff80c48a0bc',1,'MASFoundation::MASUser']]],
-  ['logoutwithcompletion',['LogoutWithCompletion',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#a527dd8291d67b7edb7f388262f2f77c3',1,'MASFoundation::MASUser']]]
+  ['getfrom',['GetFrom',['../interface_m_a_s_foundation_1_1_m_a_s_request.html#a364879432ef94d7c363b864e3d1ebc23',1,'MASFoundation.MASRequest.GetFrom()'],['../interface_m_a_s_foundation_1_1_m_a_s.html#ab41843de38ecfba278a60408c7e05600',1,'MASFoundation.MAS.GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion)'],['../interface_m_a_s_foundation_1_1_m_a_s.html#aa2c3c7687b55abe17cd1a80002d689ed',1,'MASFoundation.MAS.GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion)'],['../interface_m_a_s_foundation_1_1_m_a_s.html#ad664644f68929b006fe1f417dd4a2257',1,'MASFoundation.MAS.GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion)']]]
 ];

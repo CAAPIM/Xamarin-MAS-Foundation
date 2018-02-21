@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['bbanotenabled',['BBANotEnabled',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2ae583f99425b99c23964432301173ad13',1,'MASFoundation']]],
+  ['bleauthorizationfailed',['BLEAuthorizationFailed',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a200374e9973ac14e561cb6a6ab5b9f43',1,'MASFoundation']]],
+  ['bleauthorizationpollingfailed',['BLEAuthorizationPollingFailed',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a057590ab4a9ed2a32f389f6cafab6fff',1,'MASFoundation']]],
+  ['blecentral',['BLECentral',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2aaee9bc5c34aedc10057806fccb102e0f',1,'MASFoundation']]],
+  ['blecentraldevicenotfound',['BLECentralDeviceNotFound',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a1855a1abdea70e657c9ff567d8d4b123',1,'MASFoundation']]],
+  ['bledelegatenotdefined',['BLEDelegateNotDefined',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a6ba30865c672b6ec86bc5c1258d0a586',1,'MASFoundation']]],
+  ['bleinvalidauthenticationprovider',['BLEInvalidAuthenticationProvider',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a75aa79789e3070c4b831d4b4d66aded1',1,'MASFoundation']]],
+  ['bleperipheral',['BLEPeripheral',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2adca28aa388b3f9433e8eb3adbdb360ae',1,'MASFoundation']]],
+  ['bleperipheralcharacteristics',['BLEPeripheralCharacteristics',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a260c27de1602aacf3afd060f356ad433',1,'MASFoundation']]],
+  ['bleperipheralservices',['BLEPeripheralServices',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a3dfa8aa6a4fcc96924c371125959d1a1',1,'MASFoundation']]],
+  ['blepoweredoff',['BLEPoweredOff',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2aca17ed11929898cfcd826d14f86a4bf8',1,'MASFoundation']]],
+  ['blerestting',['BLERestting',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2aece69f24d77530a4f2566874ae8d7ce7',1,'MASFoundation']]],
+  ['blerssinotinrange',['BLERSSINotInRange',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a79862e90ee6545e8d292316f45201156',1,'MASFoundation']]],
+  ['bleunauthorized',['BLEUnauthorized',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a2dce4ad982afe974d44a0fda4c08e361',1,'MASFoundation']]],
+  ['bleunknownstate',['BLEUnknownState',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2af69019519597272e110690bb4d4cacd7',1,'MASFoundation']]],
+  ['bleunsupported',['BLEUnSupported',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a5dc299050b0798c8adee2c1648433384',1,'MASFoundation']]],
+  ['bleuserdeclined',['BLEUserDeclined',['../namespace_m_a_s_foundation.html#a3abda6f533b5762a31bec221da1121c2a830ad5aef4657d80d90316637005cc45',1,'MASFoundation']]]
+];

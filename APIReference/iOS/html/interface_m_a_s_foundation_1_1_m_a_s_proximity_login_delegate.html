@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Xamarin MASFoundation.iOS: MASFoundation.MASProximityLoginDelegate Interface Reference</title>
+<title>MASFoundation.iOS: MASFoundation.MASProximityLoginDelegate Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,8 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="caLogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xamarin MASFoundation.iOS
+   <div id="projectname">MASFoundation.iOS
    </div>
   </td>
  </tr>
@@ -75,21 +76,100 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad5e4a148c355cc07f2ade714bf8451c3"><td class="memItemLeft" align="right" valign="top"><a id="ad5e4a148c355cc07f2ade714bf8451c3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleBLEProximityLoginUserConsent</b> ([NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d">MASCompletionErrorBlock</a> completion, string deviceName)</td></tr>
+<tr class="memitem:ad5e4a148c355cc07f2ade714bf8451c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_proximity_login_delegate.html#ad5e4a148c355cc07f2ade714bf8451c3">HandleBLEProximityLoginUserConsent</a> ([NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d">MASCompletionErrorBlock</a> completion, string deviceName)</td></tr>
 <tr class="separator:ad5e4a148c355cc07f2ade714bf8451c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93c0de57a3608d0c8993fc2cfe0fc498"><td class="memItemLeft" align="right" valign="top"><a id="a93c0de57a3608d0c8993fc2cfe0fc498"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DidReceiveAuthorizationCode</b> (string authorizationCode)</td></tr>
+<tr class="memitem:a93c0de57a3608d0c8993fc2cfe0fc498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_proximity_login_delegate.html#a93c0de57a3608d0c8993fc2cfe0fc498">DidReceiveAuthorizationCode</a> (string authorizationCode)</td></tr>
 <tr class="separator:a93c0de57a3608d0c8993fc2cfe0fc498"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb228106648a05e6715d66b171dca73c"><td class="memItemLeft" align="right" valign="top"><a id="acb228106648a05e6715d66b171dca73c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DidReceiveBLEProximityLoginStateUpdate</b> (MASBLEServiceState state)</td></tr>
+<tr class="memitem:acb228106648a05e6715d66b171dca73c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_proximity_login_delegate.html#acb228106648a05e6715d66b171dca73c">DidReceiveBLEProximityLoginStateUpdate</a> (<a class="el" href="namespace_m_a_s_foundation.html#a43ef70e45ec55dbf501bbd1c8a319a92">MASBLEServiceState</a> state)</td></tr>
 <tr class="separator:acb228106648a05e6715d66b171dca73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b72630e0ddf949d9e04daf601fb171d"><td class="memItemLeft" align="right" valign="top"><a id="a2b72630e0ddf949d9e04daf601fb171d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DidReceiveProximityLoginError</b> (NSError error)</td></tr>
+<tr class="memitem:a2b72630e0ddf949d9e04daf601fb171d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_proximity_login_delegate.html#a2b72630e0ddf949d9e04daf601fb171d">DidReceiveProximityLoginError</a> (NSError error)</td></tr>
 <tr class="separator:a2b72630e0ddf949d9e04daf601fb171d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a93c0de57a3608d0c8993fc2cfe0fc498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93c0de57a3608d0c8993fc2cfe0fc498">&#9670;&nbsp;</a></span>DidReceiveAuthorizationCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MASProximityLoginDelegate.DidReceiveAuthorizationCode </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>authorizationCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb228106648a05e6715d66b171dca73c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb228106648a05e6715d66b171dca73c">&#9670;&nbsp;</a></span>DidReceiveBLEProximityLoginStateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MASProximityLoginDelegate.DidReceiveBLEProximityLoginStateUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_m_a_s_foundation.html#a43ef70e45ec55dbf501bbd1c8a319a92">MASBLEServiceState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b72630e0ddf949d9e04daf601fb171d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b72630e0ddf949d9e04daf601fb171d">&#9670;&nbsp;</a></span>DidReceiveProximityLoginError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MASProximityLoginDelegate.DidReceiveProximityLoginError </td>
+          <td>(</td>
+          <td class="paramtype">NSError&#160;</td>
+          <td class="paramname"><em>error</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5e4a148c355cc07f2ade714bf8451c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e4a148c355cc07f2ade714bf8451c3">&#9670;&nbsp;</a></span>HandleBLEProximityLoginUserConsent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MASFoundation.MASProximityLoginDelegate.HandleBLEProximityLoginUserConsent </td>
+          <td>(</td>
+          <td class="paramtype">[NullAllowed] <a class="el" href="namespace_m_a_s_foundation.html#aa23c8412a5a869add3d8d7e2b1e0471d">MASCompletionErrorBlock</a>&#160;</td>
+          <td class="paramname"><em>completion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>deviceName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>ApiDefinition.cs</li>
+<li><a class="el" href="_api_definition_8cs.html">ApiDefinition.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
