@@ -66,7 +66,7 @@ Verify that you have both "Android" and "iOS" source directories.
 3. Open your app in Visual Studio.
 4. Right-click the **References** folder and select **Edit References**. 
 6. Select the **.Net Assembly** tab, and click the **Browse** button.
-7. Go to: Xamarin-MAS-Foundation/lib/<your platform dll> and click Open and OK.
+7. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.iOS.dll` file, click Open and then OK.
 8. Go to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.
 10. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
@@ -129,7 +129,7 @@ MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
 **What**: No user authentication, just access an API. <br>
 **Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
 
-Use `Set grantFlow` to set the default flow to no user authentication.
+Set the `MAS.GrantFlow` propery to `MASGrantFlow.ClientCredentials` to set the default flow to no user authentication.
 
 ```c#
 //  Set grantFlow to Client Credentials
@@ -142,7 +142,7 @@ MAS.GrantFlow = MASGrantFlow.ClientCredentials;
 **What**: Always start with login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
 
-Use the `Set grantFlow` to change the default login flow to password.
+Set the `MAS.GrantFlow` propery to `MASGrantFlow.Password` to  change the default flow to user authentication with password.
 
 ```c#
 //  Set grantFlow to Password
