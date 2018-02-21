@@ -39,7 +39,7 @@ The Android **BasicAuthSample** app:
 After cloning, you will have /sample and /source directories for "Android" and "iOS".
 2. In Visual Studio, select File, Open. 
 3. Go to:`Xamarin-MAS-Foundation/sample/Android/BasicAuthSample`, select **BasicAuthSample.csproj**, and click **Open**. 
-4. Open the Assets folder and add your `msso_config.json` app configuration file.
+4. Open the `Assets` folder and add your `msso_config.json` app configuration file.
 5. Select **Build, Build All**, and verify "Build successful".
 6. Deploy and install the application on an emulator.
 7. In your emulator, launch the **BasicAuthSample** app.  
@@ -67,8 +67,8 @@ Verify that you have both "Android" and "iOS" source directories.
 4. Right-click the **References** folder and select **Edit References**. 
 6. Select the **.Net Assembly** tab, and click the **Browse** button.
 7. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.Android.dll` file, click Open and then OK.
-8. Go to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.
-10. Select **Build/Rebuild All**.  
+8. Select the `Assets` folder and add your `msso_config.json` app configuration file.
+9. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
 
 ### Step 2: Start the SDK 
