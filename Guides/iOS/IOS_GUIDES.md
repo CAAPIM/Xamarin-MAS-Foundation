@@ -112,7 +112,7 @@ In Visual Studio, verify/changes these settings:
 **Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes. 
 :::
 
-3. Select **Build/Rebuild All**.  
+2. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
 
 ### Step 4: Start the SDK 
