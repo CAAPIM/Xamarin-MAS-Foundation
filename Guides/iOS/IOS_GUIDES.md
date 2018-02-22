@@ -77,9 +77,9 @@ Verify that you get "Build successful" confirmation.
 1. Open Info.plist.
 2. At the bottom, click the Source tab. 
 3. Add the following properties:  
-  - **Location When In Use Usage Description** = "Program requires GPS"
-  - **NSLocationAlwaysAndWhenInUseUsageDescription** = "Program requires GPS"
-  - **NSAppTransportSecurity, NSAllowsArbitraryLoads** = "Yes"
+    - **Location When In Use Usage Description** = "Program requires GPS"
+    - **NSLocationAlwaysAndWhenInUseUsageDescription** = "Program requires GPS"
+    - **NSAppTransportSecurity, NSAllowsArbitraryLoads** = "Yes"
 
 ::: Container width="300" align="left"
 ![Xcode Properties](images/info-plist.png)
