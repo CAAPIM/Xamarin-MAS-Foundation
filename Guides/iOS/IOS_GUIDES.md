@@ -59,7 +59,7 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 **Note**: You cannot use an existing iOS Mobile SDK app. You must redo the app using c#.
 ::: 
 
-### Step 1: Set Up Project in Visual Studio
+### Step 1: Add Mobile SDK Libraries to Visual Studio
 
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`). 
 2. Open a terminal window in a directory of your choice and copy and past the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
@@ -68,9 +68,10 @@ Verify that you have both "Android" and "iOS" source directories.
 4. Right-click the **References** folder and select **Edit References**. 
 6. Select the **.Net Assembly** tab, and click the **Browse** button.
 7. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.iOS.dll` file, click Open and then OK.
-8. Go to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.
-10. Select **Build/Rebuild All**.  
-Verify that you get "Build successful" confirmation.
+
+### Step 2: Configure Xcode Setting for the Mobile SDK
+
+In Visual Studio, verify/changes these settings:
 
 **Update Info.plist**
 
@@ -99,7 +100,22 @@ Verify that you get "Build successful" confirmation.
 1. Go to: Preferences, Publishing, Apple Developer Accounts.
 2. Add your Apple ID. 
 
-### Step 2: Start the SDK 
+### Step 3: Add the app configuration file and build 
+
+1. Go to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.  
+
+::: alert danger
+**Important**: The msso_config.json file must use a valid JSON format with the required data. If the file is not found, you'll get an error message and your app will not run. Do not change any of the contents without assistance from your Admin; if you remove or alter required values, your app may not be able to connect or interact with the MAG.
+:::
+
+::: alert note
+**Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes. 
+:::
+
+3. Select **Build/Rebuild All**.  
+Verify that you get "Build successful" confirmation.
+
+### Step 4: Start the SDK 
 
 After your project is properly configured, you must start the SDK to establish a secure connection with the backend services. The method that starts the SDK is **MAS.start**. Note the following:
 
