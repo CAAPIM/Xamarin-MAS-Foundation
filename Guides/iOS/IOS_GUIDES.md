@@ -73,6 +73,7 @@ Verify that you have both "Android" and "iOS" source directories.
 Verify that you get "Build successful" confirmation.
 
 **Update Info.plist**
+
 1 Open Info.plist.
 2. At the bottom, click the Source tab. 
 3. Add the following properties:  
@@ -83,16 +84,18 @@ Verify that you get "Build successful" confirmation.
 ::: Container width="300" align="left"
 ![Xcode Properties](images/info-plist.png)
 :::
-    
- **Update Entitlements.plist**
+
+**Update Entitlements.plist**
+
  1. Open Entitlements.plist.
- 2. Make these changes:  
+ 2. Verify/change these settings:  
      - **Wallet**: Select "Enable Wallet"
      - **Keychain**: deselect "Enable Keychain" 
      - **Apple Pay**: deselect
      - **In-App Purchases**: deselect 
  
 **Add Apple ID**
+
 1. Go to: Preferences, Publishing, Apple Developer Accounts.
 2. Add your Apple ID. 
 
