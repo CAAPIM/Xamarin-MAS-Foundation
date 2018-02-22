@@ -80,7 +80,7 @@ Verify that you get "Build successful" confirmation.
   - NSLocationAlwaysAndWhenInUseUsageDescription = "Program requires GPS"
   - NSAppTransportSecurity, sNSAllowsArbitraryLoads = "Yes"
 
-::: Container width="300" aling="left"
+::: Container width="300" align="left"
 ![Xcode Properties](images/info-plist.png)
 :::
     
@@ -367,7 +367,7 @@ There are no SDK methods. Simply get your Admin to configure the MAG for Single 
 
 The shared keychain group identifier that you specify in both apps must be the same and use the same prefix as the participating apps, for example: `com.ca.singleSignOn`. The following screenshot shows an example in one of the apps:
 
-::: Container width="300" aling="left"
+::: Container width="300" align="left"
 ![Shared Keychain Setting](images/shared-keychain-screenshot.png)
 :::
 
