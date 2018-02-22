@@ -27,7 +27,7 @@
 
 The iOS **BasicAuthSample** app:
 
- Lets you test the following with a CA Mobile API Gateway:  
+ - Lets you test the following with a CA Mobile API Gateway:    
   - Define authentication flow 
   - Start the SDK 
   - Log in
