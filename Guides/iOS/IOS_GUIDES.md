@@ -80,18 +80,20 @@ Verify that you get "Build successful" confirmation.
   - NSLocationAlwaysAndWhenInUseUsageDescription = "Program requires GPS"
   - NSAppTransportSecurity, sNSAllowsArbitraryLoads = "Yes"
 
- ![Xcode Properties](images/info-plist.png)  
- 
+::: Container width="300" aling="left"
+![Xcode Properties](images/info-plist.png)
+:::
+    
  **Update Entitlements.plist**
  1. Open Entitlements.plist.
  2. Make these changes:  
-   - Wallet: Select "Enable Wallet"
-   - Keychain: deselect "Enable Keychain" 
-   - Apple Pay: deselect
-   - In-App Purchases: deselect 
+     - **Wallet**: Select "Enable Wallet"
+     - **Keychain**: deselect "Enable Keychain" 
+     - **Apple Pay**: deselect
+     - **In-App Purchases**: deselect 
  
 **Add Apple ID**
-1. Go to: Preferences, Publishing, Apple Developer Accounts
+1. Go to: Preferences, Publishing, Apple Developer Accounts.
 2. Add your Apple ID. 
 
 ### Step 2: Start the SDK 
@@ -365,7 +367,9 @@ There are no SDK methods. Simply get your Admin to configure the MAG for Single 
 
 The shared keychain group identifier that you specify in both apps must be the same and use the same prefix as the participating apps, for example: `com.ca.singleSignOn`. The following screenshot shows an example in one of the apps:
 
+::: Container width="300" aling="left"
 ![Shared Keychain Setting](images/shared-keychain-screenshot.png)
+:::
 
 That's it! The MASFoundation library detects your shared keychain group settings (if set) and responds accordingly. 
 
