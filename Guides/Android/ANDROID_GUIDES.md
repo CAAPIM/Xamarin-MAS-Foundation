@@ -58,7 +58,7 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 **Note**: You cannot use an existing Android Mobile SDK app. You must redo the app using c#.
 ::: 
 
-### Step 1: Set up Project in Visual Studio
+### Step 1: Set Up Project in Visual Studio 
 
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`). 
 2. Open a terminal window in a directory of your choice and copy and past the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
@@ -67,9 +67,12 @@ Verify that you have both "Android" and "iOS" source directories.
 4. Right-click the **References** folder and select **Edit References**. 
 6. Select the **.Net Assembly** tab, and click the **Browse** button.
 7. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.Android.dll` file, click Open and then OK.
-8. Select the `Assets` folder and add your `msso_config.json` app configuration file.
+8. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
+If you have multiple MAGs, you will have more than one file.
 9. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
+10. In the manifests folder, open the file, `AndroidManifest.xml`.
+11. Before the application definition, add the permission, **android.permission.INTERNET** so your app can access the internet.
 
 ### Step 2: Start the SDK 
 

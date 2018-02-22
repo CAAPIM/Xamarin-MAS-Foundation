@@ -13,7 +13,8 @@
 ## Support and Prerequisites
 
 - [Requirements for CA Mobile API Gateway](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
-- iOS 11.0 for new apps written in C#   
+- iOS 11.0 for new apps written in C# 
+- Apple account ID  
 
 ## Create an App: Choose a Method
 
@@ -58,7 +59,7 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 **Note**: You cannot use an existing iOS Mobile SDK app. You must redo the app using c#.
 ::: 
 
-### Step 1: Set up Project in Visual Studio
+### Step 1: Set Up Project in Visual Studio
 
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`). 
 2. Open a terminal window in a directory of your choice and copy and past the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
@@ -70,6 +71,28 @@ Verify that you have both "Android" and "iOS" source directories.
 8. Go to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.
 10. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
+
+**Update Info.plist**
+1 Open Info.plist.
+2. At the bottom, click the Source tab. 
+3. Add the following properties:  
+  - Location When In Use Usage Description = "Program requires GPS"
+  - NSLocationAlwaysAndWhenInUseUsageDescription = "Program requires GPS"
+  - NSAppTransportSecurity, sNSAllowsArbitraryLoads = "Yes"
+
+ ![Xcode Properties](images/info-plist.png)  
+ 
+ **Update Entitlements.plist**
+ 1. Open Entitlements.plist.
+ 2. Make these changes:  
+   - Wallet: Select "Enable Wallet"
+   - Keychain: deselect "Enable Keychain" 
+   - Apple Pay: deselect
+   - In-App Purchases: deselect 
+ 
+**Add Apple ID**
+1. Go to: Preferences, Publishing, Apple Developer Accounts
+2. Add your Apple ID. 
 
 ### Step 2: Start the SDK 
 
