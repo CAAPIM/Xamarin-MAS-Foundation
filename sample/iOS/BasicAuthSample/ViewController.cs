@@ -4,10 +4,12 @@
 // This software is for evaluation purposes only and currently not supported by CA.
 
 using System;
-
+using System.Net.Http;
+using System.Net.Http.Headers;
 using UIKit;
 using MASFoundation;
 using Foundation;
+using System.Collections.Generic;
 
 namespace BasicAuthSample
 {
@@ -56,6 +58,42 @@ namespace BasicAuthSample
         protected ViewController(IntPtr handle) : base(handle)
         {
             // Note: this .ctor should not contain any initialization logic.
+        }
+
+        //
+        //  Usage: 
+        //  string result = this.GetEnrollmentURLAsync("https://mobile-staging-iosautomation.l7tech.com:8443", "3d6fcaf7-2146-4bf7-8f57-0a8c8e425198");
+        //
+        public string GetEnrollmentURLAsync(string gatewayUrl, string clientId)
+        {
+            System.Net.ServicePointManager.ServerCertificateValidationCallback +=
+            (sender, cert, chain, sslPolicyErrors) =>
+            {
+                if (cert != null) System.Diagnostics.Debug.WriteLine(cert);
+                return true;
+            };
+
+            string responseString = "";
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(gatewayUrl);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
+                var content = new FormUrlEncodedContent(new[]
+                {
+                    new KeyValuePair<string, string>("username", "admin"),
+                    new KeyValuePair<string, string>("sub", "administrator"),
+                    new KeyValuePair<string, string>("client_id", clientId)
+                });
+                var response = client.PostAsync("/connect/device/enrollment", content).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = response.Content;
+                    responseString = responseContent.ReadAsStringAsync().Result;
+                }
+            }
+
+            return responseString;
         }
 
         public override void ViewDidLoad()
@@ -217,16 +255,21 @@ namespace BasicAuthSample
 
         }
 
+        // This method demonstrates the various ways to start the Mobile SDK
+        // Simple uncomment whichever segment you wish to use and comment the 
+        // all others including segment 0
         private void StartSDK()
         {
             //
             //  Initialize SDK always with default configuration
             // 
-            if (MAS.MASState == MASState.DidStart) 
+            if (MAS.MASState == MASState.DidStart)
             {
                 ShowAlert("MAS.Start", "CA Mobile SDK already started.");
-            } else 
+            }
+            else
             {
+                // --------------------- START OF SEGMENT 0 --------------------------------------
                 MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
                 {
                     if (completed)
@@ -239,9 +282,100 @@ namespace BasicAuthSample
                         //  SDK initialized with an error
                         ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
                     }
-                });  
-            }
+                });
+                // --------------------- START OF SEGMENT 0 --------------------------------------
 
+
+                // The following code segment demonstrates how to start the Mobile SDK
+                // using the contents of an msso_config file saved in the projects root directory
+                // To use a different file, simply change the file open in the next line
+                // Alternatively, you could use a custom json hard coded into mssoString variable
+
+                // --------------------- START OF SEGMENT 1 --------------------------------------
+                //var file = System.IO.File.Open("msso_config.json", System.IO.FileMode.Open);
+
+                //NSString mssoString;
+                //using (System.IO.StreamReader reader = new System.IO.StreamReader(file))
+                //{
+                //    mssoString = new NSString(reader.ReadToEnd());
+                //}
+                //NSData mssoData = NSData.FromString(mssoString);
+                //NSError parsingError;
+                //NSDictionary thisobject = (NSDictionary)NSJsonSerialization.Deserialize(mssoData, NSJsonReadingOptions.MutableLeaves, out parsingError);
+
+                //MAS.StartWithJSON(thisobject, completion: (startCompletedSuccessfully, error) =>
+                //{
+                //    if (startCompletedSuccessfully)
+                //        //  SDK initialized without an error
+                //        ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
+                //    else
+                //        Console.WriteLine("MAS Started did not start successfully." + error);
+                //});
+                // --------------------- END OF SEGMENT 1 --------------------------------------
+
+
+                // The following code segment demonstrates how to start the Mobile SDK
+                // with the url of a file containing the msso_config you wish to use.
+                // For this segment, you must either have a config named msso_config.json
+                // in the root directory of your project or rename the NSUrl
+
+                // --------------------- START OF SEGMENT 2 --------------------------------------
+                //NSUrl nSUrl = new NSUrl("msso_config.json", false);
+                //MAS.StartWithURL(nSUrl, completion: (startCompletedSuccessfully, error) =>
+                //{
+                //    if (startCompletedSuccessfully)
+                ////  SDK initialized without an error
+                //          ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
+                //    else
+                //        Console.WriteLine("MAS Started did not start successfully." + error);
+                //});
+                // --------------------- END OF SEGMENT 2--------------------------------------
+
+
+                // The following code segment demonstrates how to change the 
+                // default configuration file used whenever you call
+                // the MAS.StartWithDefaultConfiguration method
+
+                // --------------------- START OF SEGMENT 3 --------------------------------------
+                //MAS.SetConfigurationFileName("msso_config2");
+                //MAS.StartWithDefaultConfiguration(true, completion: (completed, error) =>
+                //{
+                //    if (completed)
+                //    {
+                //        //  SDK initialized without an error
+                //        ShowAlert("MAS.Start", "CA Mobile SDK started successfully with secondary configuration!!");
+                //    }
+                //    if (error != null)
+                //    {
+                //        //  SDK initialized with an error
+                //        ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
+                //    }
+                //});
+                // --------------------- END OF SEGMENT 3 --------------------------------------
+
+
+                // The following code segment shows how to start the Mobile SDK using an enrolment URL
+
+                // --------------------- START OF SEGMENT 4 --------------------------------------
+                //NSUrl nsUrl = new NSUrl(GetEnrollmentURLAsync("https://mobile-staging-xamarinautomation.l7tech.com:8443",
+                //                                              // This client id must match the client id of the config you are using
+                //                                              "44fd840b-45e6-439f-9ff9-9976947d9e26"));
+
+                //MAS.StartWithURL(nsUrl, completion: (startCompletedSuccessfully, error) =>
+                //{
+                //    if (startCompletedSuccessfully)
+                //    {
+                //        //  SDK initialized without an error
+                //        ShowAlert("MAS.Start", "CA Mobile SDK started successfully with enrolment URL!!");
+                //    }
+                //    if (error != null)
+                //    {
+                //        //  SDK initialized with an error
+                //        ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
+                //    }
+                //});
+                // --------------------- END OF SEGMENT 4 --------------------------------------
+            }
         }
 
         private void SetGrantFlowToPassword()
