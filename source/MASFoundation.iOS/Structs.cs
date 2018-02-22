@@ -11,9 +11,9 @@ namespace MASFoundation
     //[Native]
     public enum MASAuthenticationStatus //: nint
     {
-        MASAuthenticationStatusNotLoggedIn = -1,
-        MASAuthenticationStatusLoginWithUser,
-        MASAuthenticationStatusLoginAnonymously
+        NotLoggedIn = -1,
+        LoginWithUser,
+        LoginAnonymously
     }
 
     //[Native]
@@ -167,11 +167,11 @@ namespace MASFoundation
     //[Native]
     public enum MASGatewayMonitoringStatus //: nint
     {
-        ewayMonitoringStatusUnknown = -1,
-        ewayMonitoringStatusNotReachable,
-        ewayMonitoringStatusReachableViaWWAN,
-        ewayMonitoringStatusReachableViaWiFi,
-        weayMonitoringStatusCount
+        Unknown = -1,
+        NotReachable,
+        ReachableViaWWAN,
+        ReachableViaWiFi,
+        Count
     }
 
     //[Native]
