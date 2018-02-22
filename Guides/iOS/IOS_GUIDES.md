@@ -27,12 +27,12 @@
 
 The iOS **BasicAuthSample** app:
 
- - Lets you test the following with a CA Mobile API Gateway:    
+- Lets you test the following with a CA Mobile API Gateway:    
   - Define authentication flow 
   - Start the SDK 
   - Log in
   - Access a protected API 
-  - Log out
+- Log out
 - Was created using Visual Studio Community 2017 build 7.3.3
 - Requires iOS 8.0 or later to run the app
 
