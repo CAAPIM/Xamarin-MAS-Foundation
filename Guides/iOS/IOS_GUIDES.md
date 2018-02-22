@@ -74,7 +74,7 @@ Verify that you get "Build successful" confirmation.
 
 **Update Info.plist**
 
-1 Open Info.plist.
+1. Open Info.plist.
 2. At the bottom, click the Source tab. 
 3. Add the following properties:  
   - Location When In Use Usage Description = "Program requires GPS"
