@@ -79,15 +79,16 @@ If you have multiple MAGs, you will have more than one file.
 :::
 
 8. In the manifests folder, open the file, `AndroidManifest.xml`.  
-Before the application definition, add the permission, **android.permission.INTERNET** so your app can access the internet. For example:  
-`<?xml version="1.0" encoding="utf-8"?>
+Before the application definition, add the permission, **android.permission.INTERNET** so your app can access the internet. For example: 
+
+```<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.BabsTestApp">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-sdk android:minSdkVersion="15" />
     <application android:label="BabsTestApp">
     </application>
 </manifest>
-`
+```
 9. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
 
