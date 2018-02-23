@@ -275,11 +275,11 @@ namespace BasicAuthSample
                     if (completed)
                     {
                         //  SDK initialized without an error
-                        ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
+                        ShowAlert("MAS.Start", "CA Mobile SDK started successfully!");
                     }
                     if (error != null)
                     {
-                        //  SDK initialized with an error
+                        // SDK initialized with an error
                         ShowAlert("MAS.Start", "ERROR: " + error.LocalizedDescription);
                     }
                 });
@@ -301,13 +301,13 @@ namespace BasicAuthSample
                 //}
                 //NSData mssoData = NSData.FromString(mssoString);
                 //NSError parsingError;
-                //NSDictionary thisobject = (NSDictionary)NSJsonSerialization.Deserialize(mssoData, NSJsonReadingOptions.MutableLeaves, out parsingError);
+                //NSDictionary jsonConfig = (NSDictionary)NSJsonSerialization.Deserialize(mssoData, NSJsonReadingOptions.MutableLeaves, out parsingError);
 
-                //MAS.StartWithJSON(thisobject, completion: (startCompletedSuccessfully, error) =>
+                //MAS.StartWithJSON(jsonConfig, completion: (startCompletedSuccessfully, error) =>
                 //{
                 //    if (startCompletedSuccessfully)
-                //        //  SDK initialized without an error
-                //        ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
+                //        // SDK initialized without an error
+                //        ShowAlert("MAS.Start", "CA Mobile SDK started successfully!");
                 //    else
                 //        Console.WriteLine("MAS Started did not start successfully." + error);
                 //});
@@ -316,8 +316,9 @@ namespace BasicAuthSample
 
                 // The following code segment demonstrates how to start the Mobile SDK
                 // with the url of a file containing the msso_config you wish to use.
-                // For this segment, you must either have a config named msso_config.json
-                // in the root directory of your project or rename the NSUrl
+                // For this segment, you must either have a config file named msso_config.json
+                // in the root directory of your project or change the the file name in the 
+                // NSUrl constructor.
 
                 // --------------------- START OF SEGMENT 2 --------------------------------------
                 //NSUrl nSUrl = new NSUrl("msso_config.json", false);
@@ -325,7 +326,7 @@ namespace BasicAuthSample
                 //{
                 //    if (startCompletedSuccessfully)
                 ////  SDK initialized without an error
-                //          ShowAlert("MAS.Start", "CA Mobile SDK started successfully!!");
+                //          ShowAlert("MAS.Start", "CA Mobile SDK started successfully with file url!");
                 //    else
                 //        Console.WriteLine("MAS Started did not start successfully." + error);
                 //});
@@ -343,7 +344,7 @@ namespace BasicAuthSample
                 //    if (completed)
                 //    {
                 //        //  SDK initialized without an error
-                //        ShowAlert("MAS.Start", "CA Mobile SDK started successfully with secondary configuration!!");
+                //        ShowAlert("MAS.Start", "CA Mobile SDK started successfully with secondary configuration!");
                 //    }
                 //    if (error != null)
                 //    {
@@ -366,7 +367,7 @@ namespace BasicAuthSample
                 //    if (startCompletedSuccessfully)
                 //    {
                 //        //  SDK initialized without an error
-                //        ShowAlert("MAS.Start", "CA Mobile SDK started successfully with enrolment URL!!");
+                //        ShowAlert("MAS.Start", "CA Mobile SDK started successfully with enrolment URL!");
                 //    }
                 //    if (error != null)
                 //    {
