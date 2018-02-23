@@ -256,7 +256,7 @@ namespace BasicAuthSample
         }
 
         // This method demonstrates the various ways to start the Mobile SDK
-        // Simple uncomment whichever segment you wish to use and comment the 
+        // Simply uncomment whichever segment you wish to use and comment out 
         // all others including segment 0
         private void StartSDK()
         {
