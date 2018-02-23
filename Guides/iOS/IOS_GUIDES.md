@@ -69,7 +69,7 @@ Verify that you have both "Android" and "iOS" source directories.
 6. Select the **.Net Assembly** tab, and click the **Browse** button.
 7. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.iOS.dll` file, click Open and then OK.
 
-### Step 2: Update the Information Property List File of your APP
+### Step 2: Update the Information Property List File
 
 In Visual Studio, verify/change these settings:
 
@@ -86,7 +86,7 @@ In Visual Studio, verify/change these settings:
 ![Xcode Properties](images/info-plist.png)
 :::
 
-### Step 3: Update/Extend the system sapabilities of your APP
+### Step 3: Update System Settings
 
 In Visual Studio, verify/change these settings:
 
@@ -101,12 +101,12 @@ In Visual Studio, verify/change these settings:
 
 ### Step 4: Configure Apple Developer Accounts (Apple ID)
 
-In Visual Studio
+In Visual Studio:
 
 1. Go to: Preferences, Publishing, Apple Developer Accounts.
 2. Add your Apple ID. 
 
-### Step 5: Add the app configuration file and build 
+### Step 5: Add the App Configuration File and Build 
 
 1. Go to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.  
 
