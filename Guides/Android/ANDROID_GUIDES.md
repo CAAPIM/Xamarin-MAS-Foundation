@@ -61,7 +61,7 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 ### Step 1: Set Up Project in Visual Studio 
 
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`). 
-2. Open a terminal window in a directory of your choice and copy and past the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
+2. Open a terminal window in a directory of your choice and copy and paste the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
 Verify that you have both "Android" and "iOS" source directories. 
 3. Open your app in Visual Studio.
 4. Right-click the **References** folder and select **Edit References**. 
