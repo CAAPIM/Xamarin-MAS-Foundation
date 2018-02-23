@@ -1,26 +1,25 @@
 {
   "server": {
-    "hostname": "mobile-staging-xamarinautomation.l7tech.com",
+    "hostname": "mobile-staging-32.l7tech.com",
     "port": 8443,
     "prefix": "",
     "server_certs": [
       [
         "-----BEGIN CERTIFICATE-----",
-        "MIIDMDCCAhigAwIBAgIINjKYIRM1eakwDQYJKoZIhvcNAQEMBQAwNjE0MDIGA1UEAxMrbW9iaWxl",
-        "LXN0YWdpbmcteGFtYXJpbmF1dG9tYXRpb24ubDd0ZWNoLmNvbTAeFw0xODAyMTMyMTUzMjZaFw0y",
-        "ODAyMTEyMTUzMjZaMDYxNDAyBgNVBAMTK21vYmlsZS1zdGFnaW5nLXhhbWFyaW5hdXRvbWF0aW9u",
-        "Lmw3dGVjaC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCNZmXIk7i0X71x+tQU",
-        "SxqQPKljhP6C4QDVRZw/TabQW7aN8hJTT3kV44KOYhlBOZ9apzdPQmB9p+yq2vrfjWXtnBZIfFiC",
-        "y59xhVoFLqzFL7SppH3n17P3SkVhhgC70fMBllD/X0sQlngWqGxP3xiZCtOvIs+436TMZuzcXTLl",
-        "qFn9PupyRMjT2e5yOv4GOmfYVfzKs6LLTz1JCnI9X3hQLMl2qR9j/vWVeMo6FdJ0Sk+wktDQMnM1",
-        "8VfI9kicizURMNYbC2lys+9KwR5njcZ0ZatEUYQCn7GCeONbog5xs3nLOUi33wATRPfJG4OW2V5q",
-        "7AkFLoSCyqIQtQNs2Y9tAgMBAAGjQjBAMB0GA1UdDgQWBBQt4QXstBI8S5j/8hV7/cDDCyLmHzAf",
-        "BgNVHSMEGDAWgBQt4QXstBI8S5j/8hV7/cDDCyLmHzANBgkqhkiG9w0BAQwFAAOCAQEAYZfnIyGb",
-        "N9OFEgxPFXqgnhsTjgh+73dTPem/3uhIGhvhk18cGU6Py1sCP80Z4j2kcKQiWgF3C5WDDOMU5TwN",
-        "X61CWuhXmcqYDzRvsYRWayLGQ/CI39CTjxIrbiZUbFQoEH9KYgc7AXxSHjNAJdsQlhRM+d8HdeKP",
-        "NPy1oLzgeV1Kj12MfbgLBg+eifHbc66LLKBfhbTbmXv3oYNy4eFf1qEcbVVnERK/E16JwmkQABv/",
-        "XBFyC/plnPQMxYKKUtnFWy4dzqmggLj1TGTGplhoMWbAIKrYB6PVlTd+qHdW7yo2u7t1zO/EKt7m",
-        "g6AyzJMzoRLqUgmrGHoPDxOFO/ixiQ==",
+        "MIIDEzCCAfugAwIBAgIJALQ8tJO6a7w0MA0GCSqGSIb3DQEBDAUAMCcxJTAjBgNVBAMTHG1vYmls",
+        "ZS1zdGFnaW5nLTMyLmw3dGVjaC5jb20wHhcNMTcwODAyMjAxMzE1WhcNMjcwNzMxMjAxMzE1WjAn",
+        "MSUwIwYDVQQDExxtb2JpbGUtc3RhZ2luZy0zMi5sN3RlY2guY29tMIIBIjANBgkqhkiG9w0BAQEF",
+        "AAOCAQ8AMIIBCgKCAQEAhwQbJfPsGP0bO9pANius4vHX9apHLNPAFIF4L+0oCIupOYLmEfdZlCKp",
+        "/yMr1mk8tqmmVp/mZy0UfAgiAFxz1Nzqkh9rYZfqfW8uZmuLp9XA27sLKButh0cENmzAkpwihVRf",
+        "OUc8O43ewocsxKQLzqtrOhele7hk+I2NRfzIy5WQwzsQvVMGUTYJbwlcaZYHf+TKBNvIWcAufUXS",
+        "UO+iLTkJvHlpeWvQcByQyb0U90D7xz4q/RCXEAoyToUdkHsVXnz6jWlZUjZIWuuPjbCQUFKxxh/I",
+        "uE8tny1rWBYcR2CwjIOq42lrml4jgExNrJ1jzVTR8Q2b44dN2nYS7XMNwwIDAQABo0IwQDAdBgNV",
+        "HQ4EFgQUC8+unNVL58wB+wp56qbrSj9avrYwHwYDVR0jBBgwFoAUC8+unNVL58wB+wp56qbrSj9a",
+        "vrYwDQYJKoZIhvcNAQEMBQADggEBACMgA8kFnXmmPx32xdgsTkS6iLLOxnyBmxkSOOU6CHX9qMt3",
+        "BoydXZPJEE0u1Rt5Oh0svmBcBJ3WeQqAXM5YV4zglqwQwJlyTgwq33QDjewe0LmAo8qLjg+lVYPi",
+        "cXil4kM3Qwe1r1/SL3QrbPWvEEnIvSkdB6tlRzw9PUgkegtYkYVwEJDuhc20jjhFjw3fpyf9jxaQ",
+        "4iER6Qa+e0lF/Mt86aS8FKw6NNPEKv5Cuaxutl7QSUfN9yIWuvy02DYkPwcDMF96sjwe9nHzMaE2",
+        "F2e2LHtfi64UohQ2kUDlbDkG9o/vhvxkMScZQDBekDeahxaUNsBWSkqeW8MTde2UwUE=",
         "-----END CERTIFICATE-----"
       ]
     ]
@@ -28,19 +27,18 @@
   "oauth": {
     "client": {
       "organization": "CA Technologies",
-      "description": "Test MASFoundation",
-      "client_name": "Xamarin-iOS",
+      "description": "PhoneGap example application for Mobile SSO demonstrations",
+      "client_name": "AppC",
       "client_type": "confidential",
       "registered_by": "admin",
       "client_custom": {},
       "client_ids": [
-
         {
-          "client_id": "44fd840b-45e6-439f-9ff9-9976947d9e26",
+          "client_id": "8298bc51-f242-4c6d-b547-d1d8e8519cb4",
           "client_secret": "",
-          "scope": "openid msso phone profile address email msso_client_register msso_register mas_messaging mas_storage mas_identity mas_identity_retrieve_users mas_identity_create_users mas_identity_update_users mas_identity_delete_users mas_identity_retrieve_groups mas_identity_create_groups mas_identity_update_groups mas_identity_delete_groups",
-          "redirect_uri": "masunit://",
-          "environment": "ALL",
+          "scope": "openid msso phone profile address email msso_register",
+          "redirect_uri": "https://android.ssosdk.ca.com/android",
+          "environment": "Android",
           "status": "ENABLED",
           "registered_by": "admin",
           "service_ids": "",
@@ -67,12 +65,11 @@
   "mag": {
     "system_endpoints": {
       "device_register_endpoint_path": "/connect/device/register",
-      "device_renew_endpoint_path": "/connect/device/renew",
       "device_client_register_endpoint_path": "/connect/device/register/client",
       "device_remove_endpoint_path": "/connect/device/remove",
       "client_credential_init_endpoint_path": "/connect/client/initialize",
       "authenticate_otp_endpoint_path": "/auth/generateOTP"
-    },
+   },
     "oauth_protected_endpoints": {
       "enterprise_browser_endpoint_path": "/connect/enterprise/browser",
       "device_list_endpoint_path": "/connect/device/list"
@@ -85,12 +82,15 @@
       "enable_public_key_pinning": false,
       "trusted_public_pki": false,
       "trusted_cert_pinned_public_key_hashes": [],
-      "client_cert_rsa_keybits": 1024
+      "client_cert_rsa_keybits": 1024,
+      "storage": {
+        "class": "com.ca.mas.core.datasource.AccountManagerStoreDataSource"
+      }
     },
     "ble": {
       "msso_ble_service_uuid": "980c2f36-bde3-11e4-8dfc-aa07a5b093db",
       "msso_ble_characteristic_uuid": "980c34cc-bde3-11e4-8dfc-aa07a5b093db",
-      "msso_ble_rssi": -80
+      "msso_ble_rssi": -35
     }
   },
   "custom": {
