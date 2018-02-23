@@ -62,20 +62,20 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 ### Step 1: Add Mobile SDK Libraries to Visual Studio
 
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`). 
-2. Open a terminal window in a directory of your choice and copy and past the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
+2. Open a terminal window in a directory of your choice and copy and paste the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
 Verify that you have both "Android" and "iOS" source directories. 
 3. Open your app in Visual Studio.
 4. Right-click the **References** folder and select **Edit References**. 
 6. Select the **.Net Assembly** tab, and click the **Browse** button.
 7. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.iOS.dll` file, click Open and then OK.
 
-### Step 2: Configure Xcode Setting for the Mobile SDK
+### Step 2: Update the Information Property List File of your APP
 
-In Visual Studio, verify/changes these settings:
+In Visual Studio, verify/change these settings:
 
 **Update Info.plist**
 
-1. Open Info.plist.
+1. Open the `Info.plist` file
 2. At the bottom, click the Source tab. 
 3. Add the following properties:  
     - **Location When In Use Usage Description** = "Program requires GPS"
@@ -86,21 +86,27 @@ In Visual Studio, verify/changes these settings:
 ![Xcode Properties](images/info-plist.png)
 :::
 
+### Step 3: Update/Extend the system sapabilities of your APP
+
+In Visual Studio, verify/change these settings:
+
 **Update Entitlements.plist**
 
- 1. Open Entitlements.plist.
+ 1. Open the `Entitlements.plist` file.
  2. Verify/change these settings:  
      - **Keychain** = "Enable Keychain"
      - **Wallet**: deselect "Enable Wallet"
      - **Apple Pay**: deselect "Apple Pay"
      - **In-App Purchases**: deselect "In-App Purchases"
- 
-**Add Apple ID**
+
+### Step 4: Configure Apple Developer Accounts (Apple ID)
+
+In Visual Studio
 
 1. Go to: Preferences, Publishing, Apple Developer Accounts.
 2. Add your Apple ID. 
 
-### Step 3: Add the app configuration file and build 
+### Step 5: Add the app configuration file and build 
 
 1. Go to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.  
 
@@ -115,7 +121,7 @@ In Visual Studio, verify/changes these settings:
 2. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
 
-### Step 4: Start the SDK 
+### Step 6: Start the SDK 
 
 After your project is properly configured, you must start the SDK to establish a secure connection with the backend services. The method that starts the SDK is **MAS.start**. Note the following:
 
