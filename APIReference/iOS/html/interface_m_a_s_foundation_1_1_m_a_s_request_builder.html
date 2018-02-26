@@ -134,16 +134,16 @@ Properties</h2></td></tr>
 <tr class="memitem:aa1067848ebedc2d45f8969bd656d249b"><td class="memItemLeft" align="right" valign="top">NSDictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#aa1067848ebedc2d45f8969bd656d249b">Query</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:aa1067848ebedc2d45f8969bd656d249b"><td class="mdescLeft">&#160;</td><td class="mdescRight">NSDictionary of type/value parameters to put into the URL of a request.  <a href="#aa1067848ebedc2d45f8969bd656d249b">More...</a><br /></td></tr>
 <tr class="separator:aa1067848ebedc2d45f8969bd656d249b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54e0894022305962d965a9d0b1bf0dfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a54e0894022305962d965a9d0b1bf0dfc">RequestType</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a54e0894022305962d965a9d0b1bf0dfc"><td class="memItemLeft" align="right" valign="top">MASRequestResponseType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a54e0894022305962d965a9d0b1bf0dfc">RequestType</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a54e0894022305962d965a9d0b1bf0dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">MASRequestResponseType value that specifies what type formatting is required for request body.  <a href="#a54e0894022305962d965a9d0b1bf0dfc">More...</a><br /></td></tr>
 <tr class="separator:a54e0894022305962d965a9d0b1bf0dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45d4b3363f964e8d40b1aa5433f49219"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a45d4b3363f964e8d40b1aa5433f49219">ResponseType</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a45d4b3363f964e8d40b1aa5433f49219"><td class="memItemLeft" align="right" valign="top">MASRequestResponseType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request_builder.html#a45d4b3363f964e8d40b1aa5433f49219">ResponseType</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a45d4b3363f964e8d40b1aa5433f49219"><td class="mdescLeft">&#160;</td><td class="mdescRight">MASRequestResponseType value that specifies what type formatting is required for response body.  <a href="#a45d4b3363f964e8d40b1aa5433f49219">More...</a><br /></td></tr>
 <tr class="separator:a45d4b3363f964e8d40b1aa5433f49219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request_builder.html" title="MASRequestBuilder class is an object that allows developers to progressively build a request as neede...">MASRequestBuilder</a> class is an object that allows developers to progressively build a request as needed. The class is mainly responsible to receive parameters and create a <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request.html" title="MASRequest class is an object created by MASRequestBuilder. It contains all necessary information to ...">MASRequest</a> object. </p>
-<p>Default configuration value for designated initializer, new <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request_builder.html" title="MASRequestBuilder class is an object that allows developers to progressively build a request as neede...">MASRequestBuilder</a>("GET/PUT/POST/DELETE"), would be: isPublic: <code>false</code>, sign: <code>false</code>, requestType:<a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920aeed8d85b888a6c015834240885ee6333">MASRequestResponseType.Json</a>, responseType:<a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920aeed8d85b888a6c015834240885ee6333">MASRequestResponseType.Json</a>. </p>
+<p>Default configuration value for designated initializer, new <a class="el" href="interface_m_a_s_foundation_1_1_m_a_s_request_builder.html" title="MASRequestBuilder class is an object that allows developers to progressively build a request as neede...">MASRequestBuilder</a>("GET/PUT/POST/DELETE"), would be: isPublic: <code>false</code>, sign: <code>false</code>, requestType:MASRequestResponseType.Json, responseType:MASRequestResponseType.Json. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a30a3888df592dbe5e70542b47fca721d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30a3888df592dbe5e70542b47fca721d">&#9670;&nbsp;</a></span>Build()</h2>
@@ -621,7 +621,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> MASFoundation.MASRequestBuilder.RequestType</td>
+          <td class="memname">MASRequestResponseType MASFoundation.MASRequestBuilder.RequestType</td>
         </tr>
       </table>
   </td>
@@ -646,7 +646,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_m_a_s_foundation.html#adcabc7c9aacaf0e8a466edd99eaa9920">MASRequestResponseType</a> MASFoundation.MASRequestBuilder.ResponseType</td>
+          <td class="memname">MASRequestResponseType MASFoundation.MASRequestBuilder.ResponseType</td>
         </tr>
       </table>
   </td>
@@ -687,7 +687,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li><a class="el" href="_api_definition_8cs.html">ApiDefinition.cs</a></li>
+<li>ApiDefinition.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

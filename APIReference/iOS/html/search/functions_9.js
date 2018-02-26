@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['lifecyclestatustostring',['LifecycleStatusToString',['../interface_m_a_s_foundation_1_1_m_a_s_service.html#a1fd65fc032b3197aa26a55b09528c116',1,'MASFoundation::MASService']]],
-  ['listattributes',['ListAttributes',['../interface_m_a_s_foundation_1_1_m_a_s_object.html#a81825122f0a5dcdc100aa00237d764e0',1,'MASFoundation::MASObject']]],
-  ['loadwebapp',['LoadWebApp',['../interface_m_a_s_foundation_1_1_m_a_s_application.html#a8954ff37730bc92ebed51061888b7e3d',1,'MASFoundation::MASApplication']]],
-  ['locksessionwithcompletion',['LockSessionWithCompletion',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#a13d5e50e07898ec56dc9bf64a94da526',1,'MASFoundation::MASUser']]],
-  ['loginwithauthcredentials',['LoginWithAuthCredentials',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#a6c59571cf21831a328a283232ae495a6',1,'MASFoundation::MASUser']]],
-  ['loginwithauthorizationcode',['LoginWithAuthorizationCode',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#adefab39eb07a793f03f54ae0e69b88b5',1,'MASFoundation::MASUser']]],
-  ['loginwithidtoken',['LoginWithIdToken',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#ab8a8093fca783f59fcb900d16c8eb21d',1,'MASFoundation::MASUser']]],
-  ['loginwithusername',['LoginWithUserName',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#aa217a20f27259671340ffff80c48a0bc',1,'MASFoundation::MASUser']]],
-  ['logoutwithcompletion',['LogoutWithCompletion',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#a527dd8291d67b7edb7f388262f2f77c3',1,'MASFoundation::MASUser']]]
+  ['objectforkey',['ObjectForKey',['../interface_m_a_s_foundation_1_1_m_a_s_object.html#a98e41f906a8f4f43921bdc18a8a4419b',1,'MASFoundation::MASObject']]],
+  ['objectforkeyedsubscript',['ObjectForKeyedSubscript',['../interface_m_a_s_foundation_1_1_m_a_s_object.html#ac0dad4a34870a3980b7957cec4273f83',1,'MASFoundation::MASObject']]],
+  ['objectwithclassname',['ObjectWithClassName',['../interface_m_a_s_foundation_1_1_m_a_s_object.html#a378b36e20289a15d03945d435ceba1ac',1,'MASFoundation.MASObject.ObjectWithClassName(string className)'],['../interface_m_a_s_foundation_1_1_m_a_s_object.html#a27165e08c34ee79cd50406d66095b56b',1,'MASFoundation.MASObject.ObjectWithClassName(string className, NSDictionary&lt; NSString, NSString &gt; dictionary)']]]
 ];

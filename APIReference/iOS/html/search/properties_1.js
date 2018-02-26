@@ -1,7 +1,6 @@
 var searchData=
 [
   ['accesstoken',['AccessToken',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#ac668b0114a906a3d13cc79e430241b03',1,'MASFoundation::MASUser']]],
-  ['active',['Active',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#a19fd4e5b9382980c937c20e9241b5a29',1,'MASFoundation::MASUser']]],
   ['addresses',['Addresses',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#a05398b641ba8ec8dc145f04b26e331d7',1,'MASFoundation::MASUser']]],
   ['applicationclients',['ApplicationClients',['../interface_m_a_s_foundation_1_1_m_a_s_configuration.html#a2f4d93e2dea5ee24e17bb0fc1a640ad5',1,'MASFoundation::MASConfiguration']]],
   ['applicationcredentialsaredynamic',['ApplicationCredentialsAreDynamic',['../interface_m_a_s_foundation_1_1_m_a_s_configuration.html#abd54211a9a3ed101f58135c4b8fe27d0',1,'MASFoundation::MASConfiguration']]],
@@ -14,7 +13,6 @@ var searchData=
   ['authcredentialstype',['AuthCredentialsType',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#af7b5399058eea03172baaf46c2d5c21d',1,'MASFoundation::MASUser']]],
   ['authenticateotpendpointpath',['AuthenticateOTPEndpointPath',['../interface_m_a_s_foundation_1_1_m_a_s_configuration.html#a1bcd0ab6c357060757c647462aa0ea13',1,'MASFoundation::MASConfiguration']]],
   ['authenticationstatus',['AuthenticationStatus',['../interface_m_a_s_foundation_1_1_m_a_s_application.html#a4beb3198b24904c259b04f991c11ff7c',1,'MASFoundation::MASApplication']]],
-  ['authenticationurl',['AuthenticationUrl',['../interface_m_a_s_foundation_1_1_m_a_s_authentication_provider.html#a7f5a2ea09166aed1e6be6f79d3c46898',1,'MASFoundation.MASAuthenticationProvider.AuthenticationUrl()'],['../interface_m_a_s_foundation_1_1_m_a_s_proximity_login_q_r_code.html#a8a930c754f4dcab153084d1bb4153aba',1,'MASFoundation.MASProximityLoginQRCode.AuthenticationUrl()']]],
   ['authorizationcode',['AuthorizationCode',['../interface_m_a_s_foundation_1_1_m_a_s_auth_credentials_authorization_code.html#adf1416846da0b9cd048ce58d99c6d3be',1,'MASFoundation::MASAuthCredentialsAuthorizationCode']]],
   ['authorizationendpointpath',['AuthorizationEndpointPath',['../interface_m_a_s_foundation_1_1_m_a_s_configuration.html#af868f2bb29e954b1a446f924e4b3c9fe',1,'MASFoundation::MASConfiguration']]],
   ['authurl',['AuthUrl',['../interface_m_a_s_foundation_1_1_m_a_s_application.html#ad30c4045342b1f89775c7da3fa675064',1,'MASFoundation::MASApplication']]]

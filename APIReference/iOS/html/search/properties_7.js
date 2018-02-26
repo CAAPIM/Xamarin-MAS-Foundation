@@ -11,7 +11,5 @@ var searchData=
   ['gatewayurl',['GatewayUrl',['../interface_m_a_s_foundation_1_1_m_a_s_configuration.html#ae39d927798b1d0aee480d79068139b8e',1,'MASFoundation::MASConfiguration']]],
   ['givenname',['GivenName',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#ae0da3223f2a80a75ae2d82fc86c40325',1,'MASFoundation::MASUser']]],
   ['grantflow',['GrantFlow',['../interface_m_a_s_foundation_1_1_m_a_s.html#ab829c36e3abbd66dcd36993ea5370536',1,'MASFoundation::MAS']]],
-  ['group',['Group',['../interface_m_a_s_foundation_1_1_m_a_s_group.html#a51fbbe8eb536df627b28f4aa04d53c5e',1,'MASFoundation::MASGroup']]],
-  ['groupname',['GroupName',['../interface_m_a_s_foundation_1_1_m_a_s_group.html#a0c304e96b8b028f6b5ab7f6048078f0b',1,'MASFoundation::MASGroup']]],
   ['groups',['Groups',['../interface_m_a_s_foundation_1_1_m_a_s_user.html#ab33857706c067a934b83d2dab6e39d91',1,'MASFoundation::MASUser']]]
 ];
