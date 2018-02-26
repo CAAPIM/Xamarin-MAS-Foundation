@@ -35,6 +35,12 @@ namespace MASFoundation
     /// </summary>
     delegate void MASResponseInfoErrorBlock([NullAllowed] NSDictionary<NSString, NSObject> arg0, [NullAllowed] NSError arg1);
 
+    // typedef void (^MASResponseObjectErrorBlock)(NSHTTPURLResponse * _Nullable, id _Nullable, NSError * _Nullable);
+    /// <summary>
+    /// A standard (NSHttpUrlResponse arg0, NSObject arg1, NSError arg2) block.  The response object (arg1) could potentially be any type of object.  The response object has to properly perform type casting based on the Content-type in NSHttpUrlResponse's response header value.
+    /// </summary>
+    delegate void MASResponseObjectErrorBlock([NullAllowed] NSHttpUrlResponse arg0, [NullAllowed] NSObject arg1, [NullAllowed] NSError arg2);
+
     // typedef void (^MASUserResponseErrorBlock)(MASUser * _Nullable, NSError * _Nullable);
     /// <summary>
     /// The MASUser specific (MASUser arg0, NSError arg1) block.
@@ -3229,10 +3235,10 @@ namespace MASFoundation
         /// 
         /// </summary>
         /// <param name="request">MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request..</param>
-        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        /// <param name="completion">An MASResponseObjectErrorBlock (NSHttpUrlResponse response, NSObject responseObject, NSError error) that will receive any type of response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("invoke:completion:")]
-        void Invoke(MASRequest request, [NullAllowed] MASResponseInfoErrorBlock completion);
+        void Invoke(MASRequest request, [NullAllowed] MASResponseObjectErrorBlock completion);
 
         // +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
         /// <summary>
