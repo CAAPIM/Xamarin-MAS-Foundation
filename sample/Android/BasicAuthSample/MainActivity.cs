@@ -11,7 +11,8 @@ using Com.CA.Mas.Foundation;
 using Org.Json;
 using Java.Lang;
 using Android.Content;
-
+using System.IO;
+using System.Net;
 
 namespace BasicAuthSample
 {
@@ -47,7 +48,12 @@ namespace BasicAuthSample
             Button startSDKButton = FindViewById<Button>(Resource.Id.startSDKButton);
             startSDKButton.Click += (sender, e) =>
             {
+                // Comment/Uncomment desired start method (One uncommented at a time)
                 startSDK();
+                //startSDKChangeDefaultConfig();
+                //startSDKCustomJson();
+                //startSDKFileUrl();
+                //startSDKEnrolmentURL();
             };
 
             Button loginButton = FindViewById<Button>(Resource.Id.login);
@@ -86,21 +92,93 @@ namespace BasicAuthSample
 
         public void startSDK()
         {
-            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
+            if (!checkSDKAlreadyInitialized())
             {
-                Alert("MAS", "CA Mobile SDK has already been started.");
-            } else
-            {
-                // MAS.Start(Context, context, bool shouldUseDefault);
+                // MAS.Start(Context context, bool shouldUseDefault);
                 MAS.Start(this, true);
 
-                if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-                    Alert("MAS", "CA Mobile SDK started successfully!!");
-                else
-                    Alert("MAS", "CA Mobile SDK did not start!!");
+                checkSDKInitialized();
             }
 
         }
+
+        // Start SDK with default after changing the default configuration file
+        public void startSDKChangeDefaultConfig() {
+
+            if (!checkSDKAlreadyInitialized())
+            {
+
+                // Change the default Configuration
+                MAS.SetConfigurationFileName("custom.json");
+                // MAS.Start(Context context, bool shouldUseDefault);
+                MAS.Start(this, true);
+
+                checkSDKInitialized();
+            }
+        }
+
+        // Start SDK with a custom JSON Object
+        public void startSDKCustomJson() {
+
+            if (!checkSDKAlreadyInitialized())
+            {
+                //Reads existing msso config file and saves as a JSONObject
+                string mssoString = "";
+                Stream inputStream = Application.Context.Assets.Open("msso_config.json");
+                using (StreamReader reader = new StreamReader(inputStream))
+                {
+                    mssoString = reader.ReadToEnd();
+                }
+                JSONObject mssoJson = new JSONObject(mssoString);
+
+                // MAS.Start(Context context, JSONObject mssoJSON);
+                MAS.Start(this, mssoJson);
+
+                checkSDKInitialized();
+            }
+        }
+
+        // Start SDK with a File URL
+        public void startSDKFileUrl() {
+
+            if (!checkSDKAlreadyInitialized())
+            {
+                //Reads existing msso config and saves as a JSONObject
+                string mssoString = "";
+                Stream inputStream = Application.Context.Assets.Open("msso_config.json");
+                using (StreamReader reader = new StreamReader(inputStream))
+                {
+                    mssoString = reader.ReadToEnd();
+                }
+                JSONObject mssoJson = new JSONObject(mssoString);
+
+                //Saves JSONObject as a new json file in file directory
+                var path = Path.Combine(Application.Context.FilesDir.Path, "test.json");
+                var fs = new FileStream(path, System.IO.FileMode.Create);
+                var outputWriter = new Java.IO.OutputStreamWriter(fs);
+                outputWriter.Write(mssoString);
+                outputWriter.Close();
+
+                // MAS.Start(Context context, URL fileUrl);
+                MAS.Start(this, new Java.Net.URL("file:" + path));
+
+                checkSDKInitialized();
+            }
+        }
+
+        // Start SDK with an enrolment URL
+        public void startSDKEnrolmentURL() {
+
+            if (!checkSDKAlreadyInitialized())
+            {
+                // Get Enrolment URL
+                Java.Net.URL enrolmentUrl = new Java.Net.URL(this.GetEnrollmentURLAsync("https://mobile-staging-xamarinautomation.l7tech.com:8443", "65437eae-a3fb-4c9c-843c-16a876064e07"));
+
+                // MAS.Start(Context context, URL enrolmentUrl, MASCallback callback);
+                MAS.Start(this, enrolmentUrl, new StartWithEnrollmentCallback(this));
+            }
+        }
+
 
         public void login()
         {
@@ -242,6 +320,23 @@ namespace BasicAuthSample
             alert.Show();
         }
 
+        protected void checkSDKInitialized()
+        {
+            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
+                Alert("MAS", "CA Mobile SDK started successfully!!");
+            else
+                Alert("MAS", "CA Mobile SDK did not start!!");
+        }
+
+        protected bool checkSDKAlreadyInitialized() {
+            bool isInitialized = MAS.GetState(Application.Context) == MASConstants.MasStateStarted;
+            if (isInitialized)
+            {
+                Alert("MAS", "CA Mobile SDK has already been started.");
+            }
+            return isInitialized;
+        }
+
 
         private class ProtectAPICallback : MASCallback
         {
@@ -274,7 +369,6 @@ namespace BasicAuthSample
                 JSONObject jsonObject = (JSONObject)response.Body.Content;
                 activity.Alert("Result", jsonObject.ToString(4));
             }
-
         }
 
         private class LoginCallback : MASCallback
@@ -341,6 +435,74 @@ namespace BasicAuthSample
                 activity.Alert("Session Lock", "Session Locked!");
             }
 
+        }
+
+        //
+        //  Usage: 
+        //  string result = this.GetEnrollmentURLAsync("https://mobile-staging-iosautomation.l7tech.com:8443", "3d6fcaf7-2146-4bf7-8f57-0a8c8e425198");
+        //
+        public string GetEnrollmentURLAsync(string gatewayUrl, string clientId)
+        {
+            System.Net.ServicePointManager.ServerCertificateValidationCallback +=
+            (sender, cert, chain, sslPolicyErrors) =>
+            {
+                if (cert != null) System.Diagnostics.Debug.WriteLine(cert);
+                return true;
+            };
+            string thisUri = gatewayUrl + "/connect/device/enrollment";
+            string postData = "username=admin&sub=administrator&client_id=" + clientId;
+
+            string responseString = "";
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(thisUri);
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.Method = "POST";
+
+            byte[] data = System.Text.Encoding.ASCII.GetBytes(postData);
+            request.ContentLength = data.Length;
+            Stream requestStream = request.GetRequestStream();
+            requestStream.Write(data, 0, data.Length);
+            requestStream.Close();
+
+            //request
+
+            HttpWebResponse myResp = (HttpWebResponse)request.GetResponse();
+
+            using (var response = request.GetResponse())
+            {
+                using (var reader = new StreamReader(response.GetResponseStream()))
+                {
+                    responseString = reader.ReadToEnd();
+                }
+            }
+            return responseString;
+        }
+
+        private class StartWithEnrollmentCallback : MASCallback
+        {
+            private MainActivity activity;
+            public StartWithEnrollmentCallback(MainActivity activity) {
+                this.activity = activity;
+            }
+
+            public override Handler Handler
+            {
+                //run the callback on main thread
+                get
+                {
+                    return new Handler(Looper.MainLooper);
+                }
+            }
+
+            public override void OnError(Throwable e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+
+            public override void OnSuccess(Java.Lang.Object result)
+            {
+                activity.checkSDKInitialized();
+            }
         }
     }
 }
