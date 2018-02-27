@@ -11,7 +11,8 @@ using Com.CA.Mas.Foundation;
 using Org.Json;
 using Java.Lang;
 using Android.Content;
-
+using System.IO;
+using System.Net;
 
 namespace BasicAuthSample
 {
@@ -91,8 +92,57 @@ namespace BasicAuthSample
                 Alert("MAS", "CA Mobile SDK has already been started.");
             } else
             {
-                // MAS.Start(Context, context, bool shouldUseDefault);
+                //
+                // Start Methods
+                //  Comment out/in different Start methods
+                //
+
+                // *
+                // MAS.Start(Context context, bool shouldUseDefault);
+                // *
                 MAS.Start(this, true);
+
+                // *
+                // MAS.Start(Context context, bool shouldUseDefault);
+                //  With different default config.
+                // *
+                //MAS.SetConfigurationFileName("custom.json");
+                //MAS.Start(this, true);
+
+                // *
+                // MAS.Start(Context context, JSONObject mssoJSON);
+                // *
+                //string mssoString = "";
+                //System.IO.Stream inputStream = Application.Context.Assets.Open("msso_config.json");
+                //using (System.IO.StreamReader reader = new System.IO.StreamReader(inputStream))
+                //{
+                //    mssoString = reader.ReadToEnd();
+                //}
+                //JSONObject mssoJson = new JSONObject(mssoString);
+                //MAS.Start(this, mssoJson);
+
+                // *
+                // MAS.Start(Context context, URL fileUrl);
+                // *
+                //string mssoString = "";
+                //System.IO.Stream inputStream = Application.Context.Assets.Open("msso_config.json");
+                //using (System.IO.StreamReader reader = new System.IO.StreamReader(inputStream))
+                //{
+                //    mssoString = reader.ReadToEnd();
+                //}
+                //JSONObject mssoJson = new JSONObject(mssoString);
+                //var path = System.IO.Path.Combine(Application.Context.FilesDir.Path, "test.json");
+                //var fs = new System.IO.FileStream(path, System.IO.FileMode.Create);
+                //var outputWriter = new Java.IO.OutputStreamWriter(fs);
+                //outputWriter.Write(mssoString);
+                //outputWriter.Close();
+                //MAS.Start(this, new Java.Net.URL("file:" + path));
+
+                // *
+                // MAS.Start(Context context, URL enrolmentUrl, MASCallback callback);
+                // *
+                //Java.Net.URL enrolmentUrl = new Java.Net.URL(this.GetEnrollmentURLAsync("https://mobile-staging-xamarinautomation.l7tech.com:8443", "65437eae-a3fb-4c9c-843c-16a876064e07"));
+                //MAS.Start(this, enrolmentUrl, new StartWithEnrollmentCallback());
 
                 if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
                     Alert("MAS", "CA Mobile SDK started successfully!!");
@@ -342,6 +392,61 @@ namespace BasicAuthSample
             }
 
         }
+
+        //
+        //  Usage: 
+        //  string result = this.GetEnrollmentURLAsync("https://mobile-staging-iosautomation.l7tech.com:8443", "3d6fcaf7-2146-4bf7-8f57-0a8c8e425198");
+        //
+        public string GetEnrollmentURLAsync(string gatewayUrl, string clientId)
+        {
+            System.Net.ServicePointManager.ServerCertificateValidationCallback +=
+            (sender, cert, chain, sslPolicyErrors) =>
+            {
+                if (cert != null) System.Diagnostics.Debug.WriteLine(cert);
+                return true;
+            };
+            string thisUri = gatewayUrl + "/connect/device/enrollment";
+            string postData = "username=admin&sub=administrator&client_id=" + clientId;
+
+            string responseString = "";
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(thisUri);
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.Method = "POST";
+
+            byte[] data = System.Text.Encoding.ASCII.GetBytes(postData);
+            request.ContentLength = data.Length;
+            Stream requestStream = request.GetRequestStream();
+            requestStream.Write(data, 0, data.Length);
+            requestStream.Close();
+
+            //request
+
+            HttpWebResponse myResp = (HttpWebResponse)request.GetResponse();
+
+            using (var response = request.GetResponse())
+            {
+                using (var reader = new StreamReader(response.GetResponseStream()))
+                {
+                    responseString = reader.ReadToEnd();
+                }
+            }
+            return responseString;
+        }
+
+        private class StartWithEnrollmentCallback : MASCallback
+        {
+            public override void OnError(Throwable e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+
+            public override void OnSuccess(Java.Lang.Object result)
+            {
+                Console.WriteLine("############### MAS Started With Enrolment URL ###############");
+            }
+        }
+
     }
 }
 
