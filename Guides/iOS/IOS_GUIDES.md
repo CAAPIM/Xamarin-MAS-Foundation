@@ -131,10 +131,11 @@ After your project is properly configured, you must start the SDK to establish a
 
 ### Start with standard method
 
-This method starts the SDK with the currently-active configuration. A currently-active configuration is: 1) the last successfully used configuration, 2) the default JSON configuration file (i.e. msso_config.json in your app bundle) or 3) the custom JSON configuration file defined in [MAS setConfigurationFileName:].<br>
+This method starts the SDK with the currently-active configuration. A currently-active configuration is: 1) the last successfully used configuration, 2) the default JSON configuration file (i.e. msso_config.json in your app bundle) or 3) the custom JSON configuration file defined in `MAS.SetConfigurationFileName("YOUR_JSON.json");`.<br>
 **Recommended for**: Most environments, including production.</br>
 
-```//
+```
+//
 //  Initialize SDK with default or last active configuration
 // 
 MAS.Start(completion: (completed, error) => {
@@ -151,7 +152,7 @@ MAS.Start(completion: (completed, error) => {
 
 ###  Start with default configuration
 
-This method starts the SDK with the currently-active configuration, or the default configuration (depending on the parameter). If you specify the YES parameter, this overwrites the currently-active configuration with the default configuration (if two configurations are different.). If you pass the NO parameter, this behaves the same as [MAS start:];. If the SDK is already started, this method: stops the SDK, then restarts it with the custom JSON object.<br>
+This method starts the SDK with the currently-active configuration, or the default configuration (depending on the parameter). If you specify the YES parameter, this overwrites the currently-active configuration with the default configuration (if two configurations are different.). If you pass the NO parameter, this behaves the same as `MAS.Start();`. If the SDK is already started, this method: stops the SDK, then restarts it with the custom JSON object.<br>
 **Recommended for**: Development environments where configurations change often.</br>
 
 ``` 
@@ -168,6 +169,99 @@ MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
     }
 });
 ```
+
+#### Start with custom JSON
+
+This method starts the SDK with the custom JSON object in jsonObject. This method overwrites the currently-active configuration with the custom JSON object, and stores it as the active configuration. If the SDK is already initialized, this method stops the SDK, then restarts it with the custom JSON object.
+**Recommended for**: Using multiple MAG servers so that you can dynamically change the configuration during runtime. Note that the backend servers must have a version of the product that supports dynamic client configuration. 
+
+```c#
+//	Get NSDictionary of the configuration file
+NSDictionary jsonConfiguration = ....;
+MAS.StartWithJSON(jsonConfiguration, completion: (completed, error) => {
+    if (error)
+    {
+        //  SDK initialized with an error
+    } else {
+        //  SDK initialized without an error
+    }
+});
+
+```
+
+#### Start with file URL
+
+This method starts the SDK with the custom JSON configuration file. The custom file can be defined as a URL which indicates the path of the custom file. This method overwrites the currently-active configuration with the custom JSON file, and stores it as the active configuration. If the SDK is already initialized, this method stops the SDK, then restarts it with the custom JSON file. The SDK accepts the URL only with a __file__ protocol. If an internet URL is provided, the initialization method will fail.
+**Recommended for**: Using multiple MAG servers that so you can dynamically change the configuration during runtime. Note: The backend servers must have a version of the product that supports dynamic client configuration. 
+
+```c#
+//	Get NSUrl of the configuration file
+NSUrl configUrl = new NSUrl("msso_config.json", false);
+MAS.StartWithURL(configUrl, completion: (startCompletedSuccessfully, error) => {
+    if (error)
+    {
+        //  SDK initialized with an error
+    } else {
+        //  SDK initialized without an error
+    }
+});
+
+```
+ 
+#### Start with enrollment URL
+
+This method dynamically initializes the SDK without having the the msso_config.json within the app bundle. This lets you dynamically update the msso_config.json file without having to reinstall the app when the file is updated. As a developer, you can easily switch between MAGs.
+
+```c#
+//	Get the enrollment URL
+NSUrl enrollmentUrl = new NSUrl("https://YOUR_GATEWAY:8443/connect/device/config?sessionData=...&subjectKeyHash=...");
+MAS.StartWithURL(enrollmentUrl, completion: (startCompletedSuccessfully, error) => {
+    if (error)
+    {
+        //  SDK initialized with an error
+    } else {
+        //  SDK initialized without an error
+    }
+});
+```
+
+The Mobile SDK retrieves the `msso_config.json` configuration using an enrollment URL to a target MAG server. You can provide enrollment URL to the Mobile SDK through app linking with an application's custom URL scheme, or any other method. After the Mobile SDK retrieves the enrollment URL, it makes a request to the enrollment URL to download the msso_cconfig.json file, and then puts in the storage.
+
+The enrollment URL is a customizable endpoint that contains the following data: publicKeyHash for SSL pinning (required by the Mobile SDK), and a signed JWT to secure session data. For example:
+
+`https://YOUR_HOSTNAME:8443/connect/device/config?sessionData=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9[…….]HMuAtMeG-MrA&subjectKeyHash=kqWXaaCtYDm2Xbmd0VdL-hDF8szTTuNRe6Dk_EY9-64%3D`
+
+The enrollment URL can be in the following format:
+  - `NSUrl`: the enrollment URL from the MAG server. SDK validates subjectKeyHash
+  - `null`: SDK initializes with default or currently-active config
+
+This initialization method overwrites the currently-active configuration with the configuration received using the enrollment URL, and stores it as the active configuration. If the SDK is already started, this method: stops the SDK, then restarts it with the configuration retrieved via the enrollment URL.
+
+**About Implementation**
+
+As stated, the enrollment URL must be generated from the MAG server and passed to Mobile SDK using a mutually-agreed upon process. The URL can be generated and passed in several ways, for example:
+
+* A system administrator can request an enrollment URL from the MAG server and distribute it to the end user using SMS or email. The app can handle the enrollment URL through app linking with a custom URL scheme and the SDK is initialized.
+* The application layer can handle the request for the enrollment URL from the MAG server. The app can perform user authentication without going through the SDK.
+
+Whatever method you choose for the enrollment URL, customizations are required in the Mobile SDK and on the MAG server. Depending on your implementation and workflow, you may need to reauthenticate users multiple times to create a secure solution.
+
+**To get started**:
+
+- Talk with your Admin and determine 1) your enrollment URL process 2) the user authentication workflows.
+- For the POST request (to request the enrollment URL), see the SDK Reference section.
+- When implementing your app, use `MAS.MASState` to check the Mobile SDK status during the enrollment process to ensure success.
+- For security reasons, the enrollment URL can only be used once (as expected for a one-time password). 
+
+### Update Scopes for the Client App
+
+When new scopes are added to the API, a new master client key must also be generated on the MAG. To update scopes for a client app:
+
+Use the new msso_config.json by calling one of the following MAS.start interfaces (described in the previous section):
+   - Start with default configuration (with true for shouldUseDefault)
+   - Start with custom JSON
+   - Start with file URL
+   - Start with enrollment URL
 
 ## Login: User Authentication and Authorization
 
