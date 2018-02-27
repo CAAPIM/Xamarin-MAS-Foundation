@@ -92,18 +92,12 @@ namespace BasicAuthSample
 
         public void startSDK()
         {
-            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-            {
-                Alert("MAS", "CA Mobile SDK has already been started.");
-            } else
+            if (!checkSDKAlreadyInitialized())
             {
                 // MAS.Start(Context context, bool shouldUseDefault);
                 MAS.Start(this, true);
 
-                if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-                    Alert("MAS", "CA Mobile SDK started successfully!!");
-                else
-                    Alert("MAS", "CA Mobile SDK did not start!!");
+                checkSDKInitialized();
             }
 
         }
@@ -111,11 +105,7 @@ namespace BasicAuthSample
         // Start SDK with default after changing the default configuration file
         public void startSDKChangeDefaultConfig() {
 
-            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-            {
-                Alert("MAS", "CA Mobile SDK has already been started.");
-            }
-            else
+            if (!checkSDKAlreadyInitialized())
             {
 
                 // Change the default Configuration
@@ -123,21 +113,14 @@ namespace BasicAuthSample
                 // MAS.Start(Context context, bool shouldUseDefault);
                 MAS.Start(this, true);
 
-                if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-                    Alert("MAS", "CA Mobile SDK started successfully!!");
-                else
-                    Alert("MAS", "CA Mobile SDK did not start!!");
+                checkSDKInitialized();
             }
         }
 
         // Start SDK with a custom JSON Object
         public void startSDKCustomJson() {
 
-            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-            {
-                Alert("MAS", "CA Mobile SDK has already been started.");
-            }
-            else
+            if (!checkSDKAlreadyInitialized())
             {
                 //Reads existing msso config file and saves as a JSONObject
                 string mssoString = "";
@@ -151,21 +134,14 @@ namespace BasicAuthSample
                 // MAS.Start(Context context, JSONObject mssoJSON);
                 MAS.Start(this, mssoJson);
 
-                if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-                    Alert("MAS", "CA Mobile SDK started successfully!!");
-                else
-                    Alert("MAS", "CA Mobile SDK did not start!!");
+                checkSDKInitialized();
             }
         }
 
         // Start SDK with a File URL
         public void startSDKFileUrl() {
 
-            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-            {
-                Alert("MAS", "CA Mobile SDK has already been started.");
-            }
-            else
+            if (!checkSDKAlreadyInitialized())
             {
                 //Reads existing msso config and saves as a JSONObject
                 string mssoString = "";
@@ -186,29 +162,20 @@ namespace BasicAuthSample
                 // MAS.Start(Context context, URL fileUrl);
                 MAS.Start(this, new Java.Net.URL("file:" + path));
 
-                if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-                    Alert("MAS", "CA Mobile SDK started successfully!!");
-                else
-                    Alert("MAS", "CA Mobile SDK did not start!!");
+                checkSDKInitialized();
             }
         }
 
         // Start SDK with an enrolment URL
         public void startSDKEnrolmentURL() {
 
-            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-            {
-                Alert("MAS", "CA Mobile SDK has already been started.");
-            }
-            else
+            if (!checkSDKAlreadyInitialized())
             {
                 // Get Enrolment URL
                 Java.Net.URL enrolmentUrl = new Java.Net.URL(this.GetEnrollmentURLAsync("https://mobile-staging-xamarinautomation.l7tech.com:8443", "65437eae-a3fb-4c9c-843c-16a876064e07"));
 
                 // MAS.Start(Context context, URL enrolmentUrl, MASCallback callback);
                 MAS.Start(this, enrolmentUrl, new StartWithEnrollmentCallback(this));
-
-                // Alert messages in callback method.
             }
         }
 
@@ -353,6 +320,23 @@ namespace BasicAuthSample
             alert.Show();
         }
 
+        protected void checkSDKInitialized()
+        {
+            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
+                Alert("MAS", "CA Mobile SDK started successfully!!");
+            else
+                Alert("MAS", "CA Mobile SDK did not start!!");
+        }
+
+        protected bool checkSDKAlreadyInitialized() {
+            bool isInitialized = MAS.GetState(Application.Context) == MASConstants.MasStateStarted;
+            if (isInitialized)
+            {
+                Alert("MAS", "CA Mobile SDK has already been started.");
+            }
+            return isInitialized;
+        }
+
 
         private class ProtectAPICallback : MASCallback
         {
@@ -385,7 +369,6 @@ namespace BasicAuthSample
                 JSONObject jsonObject = (JSONObject)response.Body.Content;
                 activity.Alert("Result", jsonObject.ToString(4));
             }
-
         }
 
         private class LoginCallback : MASCallback
@@ -518,13 +501,9 @@ namespace BasicAuthSample
 
             public override void OnSuccess(Java.Lang.Object result)
             {
-                if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
-                    activity.Alert("MAS", "CA Mobile SDK started successfully!!");
-                else
-                    activity.Alert("MAS", "CA Mobile SDK did not start!!");
+                activity.checkSDKInitialized();
             }
         }
-
     }
 }
 
