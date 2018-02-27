@@ -2,7 +2,7 @@
 ## Android Mobile SDK for Xamarin
 
 **MASFoundation** is the core MAS framework that handles the communication and authentication layer. Quickly build secure Xamarin apps using these built-in features:
- 
+
 - Authenticate with:
   - Device registration
   - User login and registered app
@@ -21,31 +21,31 @@
 | ---------------------------------------- | ---------------------------------------- |
 | [Sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods, or building a real app.</li></ul> |
 | [No sample app, from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Just download the dynamic-link library (.dll) and add your app configuration file.</li></ul> |                             
- 
+
 ## Quick Start with Sample App
 
 The Android **BasicAuthSample** app:
 
 - Lets you test the following with a CA Mobile API Gateway:  
-  - Define authentication flow 
-  - Start the SDK 
+  - Define authentication flow
+  - Start the SDK
   - Log in
-  - Access a protected API 
+  - Access a protected API
   - Log out
 - Was created using Visual Studio Community 2017 build 7.3.3
 - Requires Android 4.4 or later to run the app
-   
+
 1. Open a terminal window in a directory of your choice and clone the MAS Foundation repo: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**.  
 After cloning, you will have /sample and /source directories for "Android" and "iOS".
-2. In Visual Studio, select File, Open. 
-3. Go to:`Xamarin-MAS-Foundation/sample/Android/BasicAuthSample`, select **BasicAuthSample.csproj**, and click **Open**. 
+2. In Visual Studio, select File, Open.
+3. Go to:`Xamarin-MAS-Foundation/sample/Android/BasicAuthSample`, select **BasicAuthSample.csproj**, and click **Open**.
 4. Open the `Assets` folder and add your `msso_config.json` app configuration file.
 5. Select **Build, Build All**, and verify "Build successful".
 6. Deploy and install the application on an emulator.
 7. In your emulator, launch the **BasicAuthSample** app.  
 You should get the confirmation: **MAS SDK started successfully**.  
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
-8. Now you can **log in**, **log out**, and **access a protected API**. 
+8. Now you can **log in**, **log out**, and **access a protected API**.
 
 [TBD - Will we improve sample or use slick demo by Microsoft consultant?]
 [Sample app improvements: spelling errors Log in/Log out, human error messages, human text for grant flows, sample app should be something useful and interesting for enterprise.]
@@ -56,15 +56,15 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 
 ::: alert info
 **Note**: You cannot use an existing Android Mobile SDK app. You must redo the app using c#.
-::: 
+:::
 
-### Step 1: Set Up Project in Visual Studio 
+### Step 1: Set Up Project in Visual Studio
 
-1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`). 
+1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).
 2. Open a terminal window in a directory of your choice and copy and paste the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
-Verify that you have both "Android" and "iOS" source directories. 
+Verify that you have both "Android" and "iOS" source directories.
 3. Open your app in Visual Studio.
-4. Right-click the **References** folder and select **Edit References**. 
+4. Right-click the **References** folder and select **Edit References**.
 5. Select the **.Net Assembly** tab, and click the **Browse** button.
 6. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.Android.dll` file, click Open and then OK.
 7. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
@@ -75,13 +75,14 @@ If you have multiple MAGs, you will have more than one file.
 :::
 
 ::: alert note
-**Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes. 
+**Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes.
 :::
 
 8. In the manifests folder, open the file, `AndroidManifest.xml`.  
-Before the application definition, add the permission, **android.permission.INTERNET** so your app can access the internet. For example: 
+Before the application definition, add the permission, **android.permission.INTERNET** so your app can access the internet. For example:
 
-```<?xml version="1.0" encoding="utf-8"?>
+```
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.BabsTestApp">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-sdk android:minSdkVersion="15" />
@@ -94,66 +95,70 @@ Verify that you get "Build successful" confirmation.
 
 That's it! You can now start building out your app.
 
-### Step 2: Start the SDK 
+### Step 2: Start the SDK
 
 After your project is properly configured, you must start the SDK to establish a secure connection with the backend services. The method that starts the SDK is **MAS.start**. Note the following:
 
 - You can put MAS.Start anywhere in your app
-- MAS.Start should be processed before app startup (during the splash/loading screen of your app). 
+- MAS.Start should be processed before app startup (during the splash/loading screen of your app).
 - We recommended that you process any communication with the backend services after successful completion of the startup method, or the secure communication is not guaranteed and may fail.
 
-```c#
-// Start the SDK
-MAS.Start(Application.Context, true);
-
-```
 
 #### Start with standard method
 
-This method starts the SDK with the currently-active configuration. A currently-active configuration is: 
-1. The last successfully used configuration. 
+```c#
+// Start the SDK
+MAS.Start(Context context, true);
+
+```
+
+This method starts the SDK with the currently-active configuration. A currently-active configuration is:
+1. The last successfully used configuration.
 2. The default JSON configuration file (i.e. msso_config.json under the *assets* directory).
 3. The custom JSON configuration file defined in `MAS.setConfigurationFileName`.
 **Recommended for**: Most environments, including production.
 
-```c#
-
-```
-
 #### Start with default configuration
+
+```c#
+MAS.Start(Context context, boolean shouldUseDefault);
+```
 
 This method starts the SDK with the currently-active configuration, or the default configuration (depending on the parameter value). If you specify the **true** parameter, this overwrites the currently-active configuration with the default configuration (if two configurations are different.). If you pass the **false** parameter, this behaves the same as `MAS.start(Context context)`. If the SDK is already initialized, this method stops the SDK, then restarts it with the custom JSON object.
 **Recommended for**: Development environments where configurations change often.
 
-```c#
-
-```
-
 #### Start with custom JSON
 
-This method starts the SDK with the custom JSON object in jsonObject. This method overwrites the currently-active configuration with the custom JSON object, and stores it as the active configuration. If the SDK is already initialized, this method stops the SDK, then restarts it with the custom JSON object.
-**Recommended for**: Using multiple MAG servers so that you can dynamically change the configuration during runtime. Note that the backend servers must have a version of the product that supports dynamic client configuration. 
-
 ```c#
+//Your custom JSON object.
+JSONObject jsonObject = new JSONObject("{...}");
 
+//Initializing the SDK with custom JSON object.
+MAS.Start(Context context, jsonObject);
 ```
+
+This method starts the SDK with the custom JSON object in jsonObject. This method overwrites the currently-active configuration with the custom JSON object, and stores it as the active configuration. If the SDK is already initialized, this method stops the SDK, then restarts it with the custom JSON object.
+**Recommended for**: Using multiple MAG servers so that you can dynamically change the configuration during runtime. Note that the backend servers must have a version of the product that supports dynamic client configuration.
 
 #### Start with file URL
 
-This method starts the SDK with the custom JSON configuration file. The custom file can be defined as a URL which indicates the path of the custom file. This method overwrites the currently-active configuration with the custom JSON file, and stores it as the active configuration. If the SDK is already initialized, this method stops the SDK, then restarts it with the custom JSON file. The SDK accepts the URL only with a __file__ protocol. If an internet URL is provided, the initialization method will fail.
-**Recommended for**: Using multiple MAG servers that so you can dynamically change the configuration during runtime. Note: The backend servers must have a version of the product that supports dynamic client configuration. 
-
 ```c#
+Path path = new Path.Combine(Application.Context.FilesDir.Path, "test.json");
 
+//Initializing the SDK with file URL of JSON configuration
+MAS.Start(Context context, new Java.Net.URL("file:" + path));
 ```
- 
+
+This method starts the SDK with the custom JSON configuration file. The custom file can be defined as a URL which indicates the path of the custom file. This method overwrites the currently-active configuration with the custom JSON file, and stores it as the active configuration. If the SDK is already initialized, this method stops the SDK, then restarts it with the custom JSON file. The SDK accepts the URL only with a __file__ protocol. If an internet URL is provided, the initialization method will fail.
+**Recommended for**: Using multiple MAG servers that so you can dynamically change the configuration during runtime. Note: The backend servers must have a version of the product that supports dynamic client configuration.
+
 #### Start with enrollment URL
 
-This method dynamically initializes the SDK without having the the msso_config.json within the app bundle. This lets you dynamically update the msso_config.json file without having to reinstall the app when the file is updated. As a developer, you can easily switch between MAGs.
-
 ```c#
-
+MAS.Start(Context context, URL enrolmentUrl, new MASCallback callback);
 ```
+
+This method dynamically initializes the SDK without having the the msso_config.json within the app bundle. This lets you dynamically update the msso_config.json file without having to reinstall the app when the file is updated. As a developer, you can easily switch between MAGs.
 
 The Mobile SDK retrieves the `msso_config.json` configuration using an enrollment URL to a target MAG server. You can provide enrollment URL to the Mobile SDK through app linking with an application's custom URL scheme, or any other method. After the Mobile SDK retrieves the enrollment URL, it makes a request to the enrollment URL to download the msso_cconfig.json file, and then puts in the storage.
 
@@ -181,7 +186,7 @@ Whatever method you choose for the enrollment URL, customizations are required i
 - Talk with your Admin and determine 1) your enrollment URL process 2) the user authentication workflows.
 - For the POST request (to request the enrollment URL), see the SDK Reference section.
 - When implementing your app, use `MAS.getState(Context)` to check the Mobile SDK status during the enrollment process to ensure success.
-- For security reasons, the enrollment URL can only be used once (as expected for a one-time password). 
+- For security reasons, the enrollment URL can only be used once (as expected for a one-time password).
 
 ### Update Scopes for the Client App
 
@@ -210,7 +215,7 @@ Use the `MAS.SetGrantFlow` method to set the default flow to user authentication
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
-### No user authentication 
+### No user authentication
 
 **What**: No user authentication, just access an API. <br>
 **Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
@@ -238,7 +243,7 @@ private class LoginCallback : MASCallback
     {
          MAS.CancelAllRequests();
     }
- 
+
     public override void OnSuccess(Java.Lang.Object user)
     {
         Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
@@ -259,7 +264,7 @@ private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationLis
      {
          MASUser.Login("admin", "mysecretpassword7".ToCharArray(), loginCallback);
      }
- 
+
      public void OnOtpAuthenticateRequest(Context context, MASOtpAuthenticationHandler handler)
      {
          throw new NotImplementedException();
@@ -271,7 +276,7 @@ private class MyAuthenticationListener : Java.Lang.Object, IMASAuthenticationLis
      {
          MAS.CancelAllRequests();
      }
- 
+
      public override void OnSuccess(Java.Lang.Object user)
      {
          Console.WriteLine(((MASUser)user).AsJSONObject.ToString(4));
@@ -301,7 +306,7 @@ private class LogoutCallback : MASCallback
     {
         //Logout failed
     }
- 
+
     public override void OnSuccess(Java.Lang.Object obj)
     {
         //Success Logout
@@ -314,7 +319,7 @@ private class LogoutCallback : MASCallback
 
 **Library**: MASFoundation<br>
 **Scenario**: You are creating an app that requires fingerprint recognition, or you just want to provide it as an alternative login method to Pattern/PIN/Password.<br>
-**Description**: The Mobile SDK supports fingerprint authentication only on the local device. That is, the user's fingerprint is compared against the image that is stored in the secure area on the chipset. If the unique characteristics of the fingerprints match, the user is authenticated, and the phone is unlocked.</br> 
+**Description**: The Mobile SDK supports fingerprint authentication only on the local device. That is, the user's fingerprint is compared against the image that is stored in the secure area on the chipset. If the unique characteristics of the fingerprints match, the user is authenticated, and the phone is unlocked.</br>
 
 The Mobile SDK supports using fingerprint session lock with device screen lock with Pattern/PIN/Password. Because the app user can use one, both, or no locking method at all, you need to handle all of these scenarios. If the device is configured without any lock method, the Mobile SDK returns an error that device lock security is missing.
 
@@ -322,7 +327,7 @@ The Mobile SDK supports using fingerprint session lock with device screen lock w
 **Note**: Multiple fingerprints can be stored on the device, including the owner and people who the owner trusts. If you store multiple fingerprints on the device, all users can access the app and any API call. If you implement fingerprint with Single Sign-On enabled, all apps using SSO require a fingerprint match to unlock.
 :::
 
-::: alert danger 
+::: alert danger
 **Important!** Currently, the Mobile SDK does not support fingerprint using multi-factor authentication, which is often mandated in government and enterprises (FIDO protocol). Specifically, the Mobile SDK does not match the device's fingerprint against an image that is stored on a secure server, and where the original fingerprint was scanned using a third-party fingerprint scanner. If you use the local device authentication using fingerprints, understand the inherent security limitations for this feature that are documented by your device vendor.
 :::
 
@@ -339,7 +344,7 @@ private class SessionLockCallback : MASCallback
     {
         //lock session failed
     }
- 
+
     public override void OnSuccess(Java.Lang.Object obj)
     {
         //lock session success
@@ -400,7 +405,7 @@ private class RemoveLockCallback : MASCallback
     {
         //remove lock failed
     }
- 
+
     public override void OnSuccess(Java.Lang.Object obj)
     {
         //remove lock  success
@@ -411,8 +416,8 @@ private class RemoveLockCallback : MASCallback
 ### Single Sign-On (SSO)
 
 **Library**: MASFoundation<br>
-**Scenario**: You are developing two bank apps that you want to work seamlessly together. You want to share credentials between the apps to reduce the number of times the user has to log in.<br> 
-**Description:** Single Sign-On is a session and user authentication process that allows a user to enter a single username and password to access multiple apps. 
+**Scenario**: You are developing two bank apps that you want to work seamlessly together. You want to share credentials between the apps to reduce the number of times the user has to log in.<br>
+**Description:** Single Sign-On is a session and user authentication process that allows a user to enter a single username and password to access multiple apps.
 
 The Mobile SDK uses the following standards for a secure an SSO implementation:
 - An OAuth access token is granted for each application
@@ -425,7 +430,7 @@ There are no SDK methods. Simply get your Admin to configure the MAG for Single 
 2. Sign your apps with the same signature.
 
 ::: alert info
-The shared keychain group identifier that you specify in both apps must be the same and use the same prefix as the participating apps, for example, 'com.ca.{some shared group name}'. 
+The shared keychain group identifier that you specify in both apps must be the same and use the same prefix as the participating apps, for example, 'com.ca.{some shared group name}'.
 :::
 
 The following shows an AndroidManifest.xml example in one of the apps:   
@@ -438,15 +443,15 @@ The following shows an AndroidManifest.xml example in one of the apps:
 
 ```
 
-That's it! The MASFoundation library detects your shared keychain group settings (if set) and responds accordingly. 
+That's it! The MASFoundation library detects your shared keychain group settings (if set) and responds accordingly.
 
 ## Access APIs
 
-This section provides methods to call APIs. 
+This section provides methods to call APIs.
 
 ### Send HTTP Requests to APIs
 
-If you have custom endpoints installed on the MAG, you can make direct and secure HTTPS calls to them using the following methods. 
+If you have custom endpoints installed on the MAG, you can make direct and secure HTTPS calls to them using the following methods.
 
 #### Endpoint
 
@@ -523,13 +528,13 @@ private class JSONArrayResponse : MASResponseBody
         }
     }
 }
- 
+
 // Sample usage of the custom response class
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
     builder.ResponseBody(new JSONArrayResponse());
 ```
 
-#### Callback 
+#### Callback
 
 The `MASCallback` defined in *MAS* returns a `IMASResponse`. Within the `IMASResponse`, you can access the HTTP response and body content:
 
@@ -599,7 +604,7 @@ builder.Get();
 IMASRequest getRequest = builder.Build();
 ```
 
-##### Delete 
+##### Delete
 
 ```c#
 //Delete
@@ -628,7 +633,7 @@ IMASRequest putRequest = builder.Build();
 
 #### MASRequest body
 
-Predefined MASRequestBody objects. 
+Predefined MASRequestBody objects.
 
 ##### Post a JSON object
 
@@ -666,7 +671,7 @@ Pair pair2 = new Pair("var2", "val2");
 List<Pair> form = new List<Pair>();
 form.Add(pair1);
 form.Add(pair2);
- 
+
 MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
 builder.Post(form);
 IMASRequest postRequest = builder.Build();
@@ -687,4 +692,3 @@ This software is provided under the terms of CA’s Pre-Release Agreement. See t
  [license-link]: /LICENSE
  [prerequisites]: http://mas.ca.com/docs/ios/1.6.00/guides/#prerequisites
  [agreement-link]: /CA-Beta-Pre-Release-Agreement
-
