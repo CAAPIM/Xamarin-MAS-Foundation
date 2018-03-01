@@ -6,7 +6,7 @@ The Mobile SDK for Xamarin provides simple and secure access to CA Mobile API Ga
 
 ## What's in this Release
 
-**NOTE**: This version is for  **evaluation purposes only** and currently not supported by CA. Documentation is a work in progress.
+**NOTE**: This version is for **evaluation purposes only** and is not supported by CA Technologies. Documentation is a work in progress.
 
 In this release, you get **MASFoundation** -- the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
  
@@ -20,21 +20,19 @@ In this release, you get **MASFoundation** -- the core MAS framework that handle
 The SDK contains:
 
 - MASFoundation framework for iOS and Android with the above features 
-- A sample app for each framework so you can test basic authentication flows with a CA Mobile API Gateway
+- A sample app so you can test basic authentication flows with a CA Mobile API Gateway (MAG)
 - Steps to add MASFoundation an existing app
 - API reference documentation
 
 ::: alert info
-**Note**:  You'll need your own UI framework for a fit & finished app
+**Note**:  You'll need your own UI framework for a fit and finished app.
 :::
 
 ## Requirements
 
 ### CA Mobile API Gateway
 
-[Start a trial using docker image](https://www.ca.com/us/developers/mas/get-started.html?returnURL=%2Fcontent%2Fcacom%2Fen_us%2Fdevelopers%2Fmas.html%3Fintcmp%3Dheadernav). The docker image includes MAG, OAuth Toolkit, and the Mobile App services. This allows you to test the Mobile SDK with the MAG backend server.
-
-If you are not using the docker image, the server requirements are:
+To test your app with the MAG server, you need:
 
    - CA API Gateway 9.3 
    - OTK 4.2
@@ -43,7 +41,7 @@ If you are not using the docker image, the server requirements are:
 #### App configuration file   
 
 **If you have an Administrator...**
-Easy. Just tell your Admin which Mobile SDK libraries that you need for your app. Then, ask your Admin for the app configuration file (called msso_config.json), which handle communication between the Mobile SDK and MAGs. (You'll add it to your project in later steps.)
+Easy. Just tell your Admin which Mobile SDK libraries that you need for your app. Then, ask your Admin for the app configuration file (called msso_config.json), which handles communication between the Mobile SDK and MAGs. (You'll add it to your project in later steps.)
 
 **If you ARE the Administrator...**
 
@@ -51,7 +49,6 @@ Complete these tasks:
 - Install and configure the [CA Mobile API Gateway (MAG)](https://docops.ca.com/mag) server and [OAuth Toolkit](https://docops.ca.com/otk)
 - [Prepare devices and apps for developers](https://docops.ca.com/mag)
 - [Export MAG Configuration from OAuth Manager](https://docops.ca.com/mag)
-
 
 **Sample msso_config.json file**
 
@@ -153,14 +150,13 @@ This a valid msso_config.json file exported from a MAG.
 }
 
 ```
-
                                                  
 ## Start Your App
 
 - [Android Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
 - [iOS Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
-- [Android Xamarin API Reference](http://mas.ca.com//xamarin-android/1.7.00/sdk/)
-- [iOS Xamarin API Reference](http://mas.ca.com//xamarin-ios/1.7.00/sdk/)
+- [Android Xamarin API Reference](http://mas.ca.com//xamarin-android/1.6.10/sdk/)
+- [iOS Xamarin API Reference](http://mas.ca.com//xamarin-ios/1.6.10/sdk/)
 
 ## Pre-release Agreement
 
@@ -174,5 +170,5 @@ This software is provided under the terms of CA’s Pre-Release Agreement. See t
  [download]: https://github.com/CAAPIM/iOS-MAS-Foundation/archive/master.zip
  [contributing]: /CONTRIBUTING
  [license-link]: /LICENSE
- [prerequisites]: http://mas.ca.com/docs/ios/1.6.00/guides/#prerequisites
+ [prerequisites]: http://mas.ca.com/docs/ios/1.6.10/guides/#prerequisites
  [agreement-link]: /CA-Beta-Pre-Release-Agreement
