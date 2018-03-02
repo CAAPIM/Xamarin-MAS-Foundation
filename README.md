@@ -1,65 +1,160 @@
 
-The Mobile SDK provides simple and secure access to the services of the CA Mobile API Gateway (MAG). MASFoundation is the core framework which handles the communication and authentication layer, making it easy for Xamarin developers to establish a secure connection.
 
-With MASFoundation for Xamarin you will be able to quickly build secure iOS and Android apps by leveraging our built-in capabilities to:
-- Authenticate users
-- Securely access to protected APIs with OAuth 2.0 protocol
+## CA Mobile SDK for Xamarin
 
-This framework is for **evaluation purposes only** and currently not supported by CA.
+The Mobile SDK for Xamarin provides simple and secure access to CA Mobile API Gateway (MAG) services. 
 
-## Get Started
+## What's in this Release
 
-These instructions are for **both iOS and Android developers**. 
+**NOTE**: This version is for **evaluation purposes only** and is not supported by CA Technologies. Documentation is a work in progress.
 
-## Prerequisites
-This sample app was created using Visual Studio Community 2017 build 7.3.3. It is compatible with Android 4.4 and above, and iOS 9 and above.
-
-### Quick Start with Sample App
-
-The MASFoundation implementation for use with Xamarin "BasicAuthSample" app lets you test the following with a CA Mobile API Gateway:
-
-- Log in
-- Log out
-- Invoke a protected API 
-
-Video version of the steps below: 
-Password: **MASFoundation**
-  
-- [Android](https://vimeo.com/252969575)
-- [iOS](https://vimeo.com/252970911) 
-
-1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).  
-If you haven't purchased the product yet, you can download the trial version of the MAG. For help, see [Prerequisites][prerequisites].
-2. Open a terminal window in a directory of your choice and copy and past the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
-Verify that you have "Android" and "iOS" directories both in "sample" and "source" directories.
-3. In Visual Studio, select File/Open.
-4. Select the `BasicAuthSample.csproj` project file under `Xamarin-MAS-Foundation/sample/iOS/BasicAuthSample` or `Xamarin-MAS-Foundation/sample/Android/BasicAuthSample` folder and click **Open**. 
-5. Right-click the **References** folder and select **Edit References**. 
-6. Select the **.Net Assembly** tab, and click the **Browse** button.
-7. Go to the `Xamarin-MAS-Foundation/lib/` folder, highlight the `MASFoundation.<platform>.dll` file, click **Open**, and then **OK**.
-8. Right-click the `Assets` folder for Android, or the `BasicAuthSample` folder for iOS, and select **Add Files**.
-9. Navigate to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.
-10. Select **Build/Rebuild All**; Verify that you get "Build successful" confirmation.
-11. Deploy and install the application on an emulator.
-12. In your emulator launch the **BasicAuthSample** app.
-
-You should get the confirmation: **MAS SDK started successfully**.
-
-Now you can **log in**, **log out**, and **invoke** a protected API. 
+In this release, you get **MASFoundation** -- the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
  
-## Communication
+- Authenticate with:
+  - Device registration
+  - User login and registered app
+  - Fingerprint session lock
+  - Single Sign-On
+- Securely access protected APIs that are configured with OAuth 2.0
 
-- *Have general questions or need help?*, use [Stack Overflow][StackOverflow]. (Tag 'massdk')
-- *Find a bug?*, open an issue with the steps to reproduce it.
-- *Request a feature or have an idea?*, open an issue.
+The SDK contains:
 
-## How You Can Contribute
+- MASFoundation framework for iOS and Android with the above features 
+- A sample app so you can test basic authentication flows with a CA Mobile API Gateway (MAG)
+- Steps to add MASFoundation an existing app
+- API reference documentation
 
-Contributions are welcome and much appreciated. Guidelines Coming Soon. [Contribution Guidelines][contributing].
+::: alert info
+**Note**:  You'll need your own UI framework for a fit and finished app.
+:::
 
-## Documentation
+## Requirements
 
-For more documentation and API references for Mobile SDK iOS and Android, go to our [main website][docs]
+### CA Mobile API Gateway
+
+To test your app with the MAG server, you need:
+
+   - CA API Gateway 9.3 
+   - OTK 4.2
+   - CA Mobile API Gateway 4.1 
+
+#### App configuration file   
+
+**If you have an Administrator...**
+Easy. Just tell your Admin which Mobile SDK libraries that you need for your app. Then, ask your Admin for the app configuration file (called msso_config.json), which handles communication between the Mobile SDK and MAGs. (You'll add it to your project in later steps.)
+
+**If you ARE the Administrator...**
+
+Complete these tasks: 
+- Install and configure the [CA Mobile API Gateway (MAG)](https://docops.ca.com/mag) server and [OAuth Toolkit](https://docops.ca.com/otk)
+- [Prepare devices and apps for developers](https://docops.ca.com/mag)
+- [Export MAG Configuration from OAuth Manager](https://docops.ca.com/mag)
+
+**Sample msso_config.json file**
+
+This a valid msso_config.json file exported from a MAG.
+
+```json
+{
+    "server":
+    {
+        "hostname": "gatewayhostname.example.com",
+        "port": 8443,
+        "prefix": "",
+        "server_certs":
+        [
+            [
+                "-----BEGIN CERTIFICATE-----","MIIDADCCAeigAwIBAgIIW3j/9QFwgk8wDQYJKoZIhvcNAQEMBQAwHjEcMBoGA1UEAxMTbWF0LWRl","=","-----END CERTIFICATE-----"
+            ]
+        ]
+    },
+    
+    "mag":
+    {
+        "system_endpoints":
+        {
+            "device_register_endpoint_path": "/connect/device/register",
+            "device_remove_endpoint_path": "/connect/device/remove",
+            "client_credential_init_endpoint_path": "/connect/client/initialize"
+        },
+        
+        "oauth_protected_endpoints":
+        {
+            "enterprise_browser_endpoint_path": "/connect/enterprise/browser",
+            "device_list_endpoint_path": "/connect/device/list"
+        },
+        
+        "mobile_sdk":
+        {
+            "sso_enabled": true,
+            "location_enabled": true,
+            "location_provider": "network",
+            "msisdn_enabled": true,
+            "enable_public_key_pinning": false,
+            "trusted_public_pki":false,
+            "trusted_cert_pinned_public_key_hashes" :[],
+            "client_cert_rsa_keybits": 1024
+        },
+        
+        "ble":
+        {
+            "msso_ble_service_uuid":"980c2f36-bde3-11e4-8dfc-aa07a5b089db",
+            "msso_ble_characteristic_uuid":"980c34cc-bde3-11r6-8dfc-aa07a5b093db",
+            "msso_ble_rssi": -35
+        }
+    },
+    
+    "oauth":
+    {
+        "client":
+        {
+            "organization": "Example Organization Inc.",
+            "description": "Example App",
+            "client_name": "ExampleApp",
+            "client_type": "confidential",
+            "registered_by": "ExampleUser",
+            "client_ids":
+            [
+                {
+                    "client_id": "819455f6-9a7e-4ee0-b159-f85b25758112",
+                    "client_secret":"",
+                    "scope": "openid msso phone profile address email",
+                    "redirect_uri": "https://ios.ssosdk.ca.com/ios",
+                    "environment": "iOS",
+                    "status": "ENABLED",
+                    "registered_by": "ExampleUser"
+                }
+            ]
+        },
+        
+        "system_endpoints":
+        {
+            "authorization_endpoint_path": "/auth/oauth/v2/authorize",
+            "token_endpoint_path": "/auth/oauth/v2/token",
+            "token_revocation_endpoint_path": "/auth/oauth/v2/token/revoke",
+            "usersession_logout_endpoint_path": "/connect/session/logout",
+            "usersession_status_endpoint_path": "/connect/session/status"
+        },
+        
+        "oauth_protected_endpoints":
+        {
+            "userinfo_endpoint_path": "/openid/connect/v1/userinfo"
+        }
+    },
+
+    "custom":
+    {
+        "oauth_demo_protected_api_endpoint_path":"/oauth/v2/protectedapi/foo",
+        "mag_demo_products_endpoint_path":"/protected/resource/products"
+    }
+}
+
+```
+                                                 
+## Start Your App
+
+- [Android Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/master/Guides/Android/ANDROID_GUIDES.md)
+- [iOS Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/master/Guides/iOS/IOS_GUIDES.md)
 
 ## Pre-release Agreement
 
@@ -73,5 +168,5 @@ This software is provided under the terms of CA’s Pre-Release Agreement. See t
  [download]: https://github.com/CAAPIM/iOS-MAS-Foundation/archive/master.zip
  [contributing]: /CONTRIBUTING
  [license-link]: /LICENSE
- [prerequisites]: http://mas.ca.com/docs/ios/1.6.00/guides/#prerequisites
+ [prerequisites]: http://mas.ca.com/docs/ios/1.6.10/guides/#prerequisites
  [agreement-link]: /CA-Beta-Pre-Release-Agreement

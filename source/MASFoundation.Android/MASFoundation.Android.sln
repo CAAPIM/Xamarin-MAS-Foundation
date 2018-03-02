@@ -3,6 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MASFoundation.Android", "MASFoundation.Android.csproj", "{C52D9BE8-2753-4BF1-A91B-40B2396FB1DE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15D965E5-9380-48BC-823C-200380309ED2}"
+	ProjectSection(SolutionItems) = preProject
+		AndroidBuild.fsx = AndroidBuild.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{30E071DB-AB4B-46B8-80A2-D8F4FA40AEE1}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\nuget.exe = .nuget\nuget.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
