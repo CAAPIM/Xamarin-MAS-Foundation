@@ -48,6 +48,12 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MyAuthenticationListener.cs" />
+    <Compile Include="SampleActions.cs" />
+    <Compile Include="UnlockCallback.cs" />
+    <Compile Include="ProtectAPICallback.cs" />
+    <Compile Include="LoginCallback.cs" />
+    <Compile Include="LockSessionCallback.cs" />
+    <Compile Include="StartWithEnrollmentCallback.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
