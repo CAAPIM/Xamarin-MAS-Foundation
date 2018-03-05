@@ -54,6 +54,7 @@
     <Compile Include="LoginCallback.cs" />
     <Compile Include="LockSessionCallback.cs" />
     <Compile Include="StartWithEnrollmentCallback.cs" />
+    <Compile Include="DeregisterCallback.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

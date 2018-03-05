@@ -303,5 +303,14 @@ namespace BasicAuthSample
                 activity.Alert("MAS", "User not authenticated");
             }
         }
+
+        //
+        //  Deregister the device is an advanced feature available available in MASDevice. 
+        //  It will remove the device's registered record in the Gateway and then clear all credentials
+        //
+        public static void deregister(MainActivity activity)
+        {
+            MASDevice.CurrentDevice.Deregister(new DeregisterCallback(activity));
+        }
     }
 }

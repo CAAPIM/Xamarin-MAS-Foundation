@@ -24,7 +24,7 @@
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/startSDKButton"
+        android:id="@+id/startSDK"
         android:backgroundTint="#ff000000"
         android:text="Start SDK" />
     <Button
@@ -57,4 +57,10 @@
         android:id="@+id/unlockSession"
         android:text="Unlock Session"
         android:backgroundTint="#ff000000" />
+    <Button
+        android:layout_width="250.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/deregister"
+        android:backgroundTint="#ff000000"
+        android:text="Deregister Device" />
 </LinearLayout>

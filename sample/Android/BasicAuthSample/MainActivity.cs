@@ -24,13 +24,13 @@ namespace BasicAuthSample
             // Get our UI controls from the loaded layout
             Button setClientCredentialsFlowButton = FindViewById<Button>(Resource.Id.setClientCredentialsFlow);
             Button setPasswordFlowButton = FindViewById<Button>(Resource.Id.setPasswordFlow);
-            Button startSDKButton = FindViewById<Button>(Resource.Id.startSDKButton);
+            Button startSDKButton = FindViewById<Button>(Resource.Id.startSDK);
             Button loginButton = FindViewById<Button>(Resource.Id.login);
             Button invokeApiButton = FindViewById<Button>(Resource.Id.invokeApi);
             Button logoutButton = FindViewById<Button>(Resource.Id.logout);
             Button lockSessionButton = FindViewById<Button>(Resource.Id.lockSession);
             Button unlockSessionButton = FindViewById<Button>(Resource.Id.unlockSession);
-
+            Button deregisterButton = FindViewById<Button>(Resource.Id.deregister);
 
             //
             // Button Actions
@@ -79,6 +79,11 @@ namespace BasicAuthSample
             unlockSessionButton.Click += (sender, e) =>
             {
                 SampleActions.unLockSession(this);
+            };
+
+            deregisterButton.Click += (sender, e) =>
+            {
+                SampleActions.deregister(this);
             };
 
             MAS.SetAuthenticationListener(new MyAuthenticationListener());

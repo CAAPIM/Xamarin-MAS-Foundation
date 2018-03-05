@@ -79,6 +79,9 @@ namespace BasicAuthSample
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f080008
+			public const int deregister = 2131230728;
+			
 			// aapt resource value: 0x7f080004
 			public const int invokeApi = 2131230724;
 			
@@ -98,7 +101,7 @@ namespace BasicAuthSample
 			public const int setPasswordFlow = 2131230721;
 			
 			// aapt resource value: 0x7f080002
-			public const int startSDKButton = 2131230722;
+			public const int startSDK = 2131230722;
 			
 			// aapt resource value: 0x7f080007
 			public const int unlockSession = 2131230727;
