@@ -1,4 +1,4 @@
-
+    
 ## iOS Guides MASFoundation for Xamarin
 
 **MASFoundation** is the core MAS framework that handles the communication and authentication layer. Quickly build secure Xamarin apps using these built-in features:
@@ -492,7 +492,6 @@ The shared keychain group identifier that you specify in both apps must be the s
 
 That's it! The MASFoundation library detects your shared keychain group settings (if set) and responds accordingly. 
 
-
 ## Access APIs
 
 This section provides methods to call APIs. 
@@ -717,6 +716,332 @@ MAS.PutTo(@"/protected/resource/products", param, null, MASRequestResponseType.J
 	//
 });
 ```
+
+
+## Debug the SDK
+
+### Configure app for network monitoring 
+
+MAS always monitors the network reachability status of the MAG URL. If your app needs monitoring, here's how to hook your app into monitoring.
+
+```c#
+
+```
+
+#### Configure status notifications
+
+You can register the MAG to monitor status update notifications.  The notification is defined in MASConstants as shown below:
+
+```c#
+
+```
+
+#### Conveniences
+
+To determine if the network connection to the MAG is currently reachable:
+
+```c#
+
+```
+
+To determine the current status as a string at any time:
+
+```c#
+
+```
+
+
+#### Stop and reset the device
+
+To stop all processes in the library, use the following method:
+
+```c#
+
+```
+
+#### Reset all app, device, and user credentials
+
+To reset all app, device, and user credentials in memory, or in the local and shared group keychains, use the following method:  
+
+```c#
+
+```
+
+::: alert info
+**Note:** We recommend that you add a warning UI component or similar to indicate to the user exactly what they are doing, with a confirmation before proceeding with this action.
+:::
+
+::: alert info
+**Note:** This only resets the credentials on the device. To reset and deregister the device record on the MAG, call [[MASDevice currentDevice] deregisterWithCompletion:].
+:::
+
+::: alert info
+**Note:** You must restart your app to get new registration of the app, device and user authentication.
+:::
+
+#### Deregister a device
+
+You can programmatically deregister a device to:
+
+- Revoke access to a device identified as risky
+- Use the device again for test runs
+- Troubleshoot an app if there is a "device already registered" error
+
+Deregistration removes the device record from MAG. Use this feature with caution because it may not be easy for end users to use if you make it publicly available.  We suggest a warning UI component or similar to indicate to the user exactly what they are doing, with a confirmation before proceeding with this action.
+
+```c#
+
+```
+
+:::alert info
+**Note**: You must restart your app to get new registration of the app, device and user authentication.
+:::
+
+To listen for the following notifications:
+
+```c#
+
+```
+
+#### Notifications
+
+During SDK startup, if the SDK detects the server switch from an old configuration to a new configuration, `MASWillSwitchGatewayServerNotification` and `MASDidSwitchGatewayServerNotification` are sent. You can optionally observe these notifications to handle any necessary operation that you may wish to do within your app.  
+
+The SDK determines the server switch by these configuration values: **hostname, port, and prefix**.
+
+#### Handle errors
+
+All errors that occur during SDK startup are returned in the completion block of the method. 
+
+```c#
+
+```
+
+All errors that are returned from the startup process should contain proper error message descriptions in `error.localizedDescription` and `error.userInfo`.
+
+##### MASFoundationErrorDomain
+
+```c#
+
+```
+This error is returned when the SDK fails during communications: app registration, device registration, or user authentication with backend services. This can be caused by invalid configuration values, or  misconfiguration on the backend services. 
+
+The error should contain: 1) explanation of the error, 2) the backend services' specific error code and error response in `error.userInfo`.
+
+##### MASFoundationErrorDomainLocal
+
+```c#
+
+```
+This error is returned when the SDK fails because of client SDK configuration issues. The most common issues are: invalid JSON configuration file, misconfigured device settings (i.e. geolocation or other permissions), or network issues.
+
+##### MASFoundationErrorDomainTargetAPI
+
+```c#
+
+```
+This error is returned only when a custom endpoint on a backend service fails.
+
+#### Get notifications
+
+You can get notifications of the app registration, device registration and user authentication. These notifications are defined in MASConstants as shown below:
+
+```c#
+
+```
+
+## Troubleshoot Your App
+
+### Issues Between Your App and the MAG Server
+
+This section describes some of the issues that arise between your app and the MAG server.
+
+#### msso_config.json file 
+
+The msso_config.json file is how the Mobile SDK communicates with the MAG server. It contains OAuth scope values that provide permissions to operations and access to resources for your app. If the file has missing or incorrect scopes, this can cause errors. 
+
+**Scope help for Admins:**
+
+- [Create a Client App for the Mobile SDK](https://docops.ca.com/mag)
+- [Manage Permissions With Scopes](https://docops.ca.com/mag) 
+
+#### Apps and MAG Policies
+
+Many (but not all) methods have associated policy and configuration on the MAG server. 
+
+- [Mobile Policies](https://docops.ca.com/mag)
+- [Error Codes](https://docops.ca.com/mag)
+
+### Error Codes
+
+An iOS error is returned with three components to help identify the problem:
+- Error domain – one of the following MASFoundation domains described below
+- Error code    
+- Error description
+
+Error Domain=com.ca.MASFoundation:ErrorDomain Code=1000202 "Username or password invalid" UserInfo={status-code=401} 
+The error code is returned in the response header in the x-ca-err field:
+x-ca-err = 1000202.
+
+**MASFoundation**
+
+The MASFoundation domain indicates a MAG server endpoint error. These errors occur during SDK startup, and include errors on registering the client, registering the device, and authenticating the user.
+
+```c#
+
+```
+
+**MASFoundation.localError**
+
+The MASFoundation.localError domain indicates a client side error, for example:
+
+- Invalid  or missing JSON format of msso_config.json 
+- No geolocation available or unauthorized geolocation
+- No internet access
+- Invalid id_token format or id_token expiration when the client first receives the id_token
+
+```c#
+
+```
+
+**MASFoundation.targetAPI**
+
+The MASFoundation.targetAPI domain indicates a target endpoint error. These are errors thrown by the app that are outside the range 200-299. You define these errors. However, the following errors are reserved:
+
+- **xxxx990 Access Token Expired**
+
+Although the access_token is accepted by the MAG server, the app server considers the token expired. This can occur when the MAG server and the app server are not synchronized. In this case, the Access Token is expired, the token is removed from the keychain, and the process flow is repeated -- this time without an access token. With no access token, a refresh token is issued.
+
+- **xxxx991 Access Token Not Granted**
+
+The API requires a SCOPE value that the request does not contain.
+
+- **xxxx992 No Access Token**
+
+The access_token was not included in the request, or the same access_token was included more than once in the same request.
+
+- **xxxx993 Token is disabled**
+
+The associated client is disabled.
+
+- **xxxx000 Unknown**
+
+```c#
+
+```
+### Reset the App
+
+During app testing (or other administrative/devops use cases), you may need to reset the app and clean up the local cache on the device. Conditions that can lead to resetting the app include:
+- You get a 'Device Unknown' error message
+- The device record has been removed on the MAG
+- You get an error message that the device is already registered
+
+Use the following method to deregister the device and remove the record on MAG. Note that all apps associated with the device are deregistered. 
+
+### iTunes Store Operation Failed
+
+If you installed the Mobile SDK using the binaries, and you did not add our custom script to remove the simulator architecture, you get the following error when you deploy your app to the Apple Store:
+
+`Archive validation failed with errors: iTunes Store Operation failed. Unsupported Architectures. Your executable contains unsupported architecture '[x86_64, i386]`
+
+To fix this, [follow steps 7-10 to remove the simulator file](#binaries), recompile your project, and submit again. 
+
+### SSL Pinning Validation Failed
+
+`ErrorDomain Code=100212"SSL pinning validation failed: ensure the target domain’s MASSecurityConfiguration is correctly configured."`
+
+This error means that the server security configuration in the MASSecurityConfiguration object for the hostname:portnumber is not valid or is missing. See [Create the MASSecurityConfiguration object](#create-the-massecurityconfiguration-object).
+
+### General Errors
+
+**Requests are not being handled**
+
+If you see the error: `Error Subscribing to Topic: (128)`, ask your Admin to check the server-side message topic format for unsupported characters (+ and #).
+
+
+### SDK Sample App Fails
+
+**Error: code –999**
+
+This error occurs when the sample app fails to connect to the MAG server. It is a MAG certificate configuration issue that must be resolved by your Admin. You may need an updated msso_config.json file. 
+
+### Disable PKCE 
+
+Proof Key for Code Exchange (PKCE) provides an extra layer of security for your app. It is enabled by default and works with proximity login. Your Admin does not need to enable the feature on the MAG server. In the enabled state, the Mobile SDK responds to authentication requests or not, based on the policy that is configured by your Admin using OAuth Toolkit. We recommend leaving this feature enabled. However, if you have a specific use case to disable it, go to Reference documentation and change the state: `[MAS enablePKCE:YES];`
+
+### Starting the SDK
+
+When your app starts the first time, here's what happens:
+
+- Loads information in the msso_config.json file 
+- Configures the networking and starts the connection
+- Validates the app to receive and store application-level credentials 
+- Depending upon the grant flow type, registers the device to receive and store device-specific credentials, and optionally authenticates the user, and receives and stores user specific credentials
+
+On subsequent startups of an already-installed app, the process is repeated. However, if the stored credentials are still valid, the validation and/or registration to the server is not necessary and is skipped. The server only checks that currently-stored credentials are still valid and requests a refresh (if necessary).
+
+**Authentication errors**
+
+If you get invalid token, unauthorized, or other authentication errors, it may be due to a MAG server change.  Your Admin must change a client parameter (documented in the 4.0 Release Notes) to allow more than one token per user/client (default). Without making the server changes, the Mobile SDK will not allow the same user to log in to multiple apps instances. 
+
+**MAS start method error**
+
+This method performs the necessary validations for the SDK to properly work. If something is missing or invalid, the method returns an error with a description of the problem. Common problems are:
+
+* You forgot to add the msso_config.json file to the project
+* You forgot to reset the simulator after replacing the msso_config.json file with the new one that has different host
+
+**Cannot identify location error**
+
+In the Simulator, manually set the location.
+
+**Device is already registered error**
+
+The MAG server secures device registration and reregistration with this simple logic: only the previously-registered user or client can perform the re-registration. This logic (which resides in policy), is perfect for production environments. However, in Mobile SDK 1.5 and earlier, this caused "device already registered" errors during app testing with multiple users and uninstalling/reinstalling the app.
+
+In this release, the Mobile SDK generates a new device identifier after uninstall/reinstall, which reduces the likelihood that you'll get this error. 
+
+But if you get this error, follow these steps to delete unwanted registered device entries in MAG Manager. If you don't have experience with MAG Manager, work with your Admin.
+1. Log into the MAG Manager. For example: `https://your_hostname/instanceModifier/mag/manager`
+2. Find your registered device.  
+If you don’t know the device user, enter “*” in the “Lookup values for user”  field. 
+3. Find your device identifier by calling this method in the Mobile SDK: [MASDevice currentDevice].identifier.
+4. Map the device identifier to the OU attribute in MAG Manager (for example: OU=08f8ce12096fcf9d1a1779e4f9dc5fe15519fa2b4ace2af904cf954cc5f5c4e5), Registered Name (DN) column.
+4. Click “Delete Device” to delete the device.
+
+::: alert info
+**Note**: It's not likely, but it's possible that the policy for device registration is incorrectly configured, so check with your Admin if you continue to get "device already registered" errors. See [Configure Device Registration](https://docops.ca.com/mag)
+:::
+
+:::alert info
+**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG server. 
+:::
+
+**Registered device is invalid error**
+
+Any of the following:
+- Existing registration was found but could not be updated
+- Certificate DN is already registered
+- Certificate DN is too long and exceeds the maximum length
+
+**Device is not registered error**
+
+Verify that the SharedKeychain is enabled in the project Capabilities tab.
+
+**TLS connection version error**
+
+The iOS requires TLS v1.2 as minimum. The default MAG installation is configured with TLS 1.0. Add a KEY into the app info.plist so MAG can successfully connect.
+
+**SDK tries to connect to old host instead of the new one from the msso_config.json file**
+
+The SDK relies on the keychain to store information. To reload data for a new msso_config.json file, the keychain must be cleaned. Follow these steps based on where you are working:
+
+* **In the Simulator**
+Select "Reset content and Settings" from the Simulator top menu bar.
+
+* **In the Device**
+Implement the code to call deregisterWithCompletion from the currentDevice object. That is: `MASDevice *myDevice = [MASDevice currentDevice]
+[myDevice deregisterWithCompletion:...`
 
 
 ## Pre-release Agreement
