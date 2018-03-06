@@ -35,6 +35,12 @@ namespace MASFoundation
     /// </summary>
     delegate void MASResponseInfoErrorBlock([NullAllowed] NSDictionary<NSString, NSObject> arg0, [NullAllowed] NSError arg1);
 
+    // typedef void (^MASResponseObjectErrorBlock)(NSHTTPURLResponse * _Nullable, id _Nullable, NSError * _Nullable);
+    /// <summary>
+    /// A standard (NSHttpUrlResponse arg0, NSObject arg1, NSError arg2) block.  The response object (arg1) could potentially be any type of object.  The response object has to properly perform type casting based on the Content-type in NSHttpUrlResponse's response header value.
+    /// </summary>
+    delegate void MASResponseObjectErrorBlock([NullAllowed] NSHttpUrlResponse arg0, [NullAllowed] NSObject arg1, [NullAllowed] NSError arg2);
+
     // typedef void (^MASUserResponseErrorBlock)(MASUser * _Nullable, NSError * _Nullable);
     /// <summary>
     /// The MASUser specific (MASUser arg0, NSError arg1) block.
@@ -308,36 +314,78 @@ namespace MASFoundation
     }
 
     // @interface MASSecurityConfiguration : MASObject
+    /// <summary>
+    ///  MASSecurityConfiguration class is an object that determines security measures for communication between the target host.
+    ///  The class is mainly responsible for SSL pinning mechanism, as well as for including/excluding credentials from primary gateway in the network communication to the target host.
+    ///  
+    ///  Default configuration value for designated initializer, new MASSecurityConfiguration(new NSUrl("https://your_gateway_hostname:port")), would be:
+    ///  isPublic: false,
+    ///  validateDomainName: true,
+    ///  trustPublicPKI: false.
+    /// </summary>
     [BaseType(typeof(MASObject))]
     interface MASSecurityConfiguration
     {
         // @property (assign) BOOL isPublic;
+        /// <summary>
+        /// Gets or sets a value determining whether this <see cref="T:MASFoundation.MASSecurityConfiguration"/> to include sensitive credentials from primary gateway in the network communication with the target host.
+        /// </summary>
+        /// <value><c>true</c> if is public; otherwise, <c>false</c>.</value>
         [Export("isPublic")]
         bool IsPublic { get; set; }
 
         // @property (assign) BOOL validateDomainName;
+        /// <summary>
+        /// Gets or sets a value determining whether this <see cref="T:MASFoundation.MASSecurityConfiguration"/> to validate validate the domain name of the certificate on the server trust.
+        /// </summary>
+        /// <value><c>true</c> if validate domain name; otherwise, <c>false</c>.</value>
         [Export("validateDomainName")]
         bool ValidateDomainName { get; set; }
 
         // @property (assign) BOOL trustPublicPKI;
+        /// <summary>
+        /// Gets or sets a value determining whether this <see cref="T:MASFoundation.MASSecurityConfiguration"/> to validate the server trust against iOS' trusted root certificates.
+        /// </summary>
+        /// <value><c>true</c> if trust public pki; otherwise, <c>false</c>.</value>
         [Export("trustPublicPKI")]
         bool TrustPublicPKI { get; set; }
 
         // @property (nonatomic, strong) NSArray * _Nullable certificates;
+        /// <summary>
+        /// NSArray value of pinned certificates.  Certificates must be in PEM encoded CRT; each line should be an item of the certificate array.
+        /// </summary>
+        /// <value>NSArray of the certificates.</value>
         [NullAllowed, Export("certificates", ArgumentSemantic.Strong)]
         //[Verify(StronglyTypedNSArray)]
         NSArray[] Certificates { get; set; }
 
         // @property (nonatomic, strong) NSArray * _Nullable publicKeyHashes;
+        /// <summary>
+        /// NSArray value of pinned public key hashes.  Public key hashes must be in string format.
+        /// </summary>
+        /// <value>NSArray of the public key hashes.</value>
         [NullAllowed, Export("publicKeyHashes", ArgumentSemantic.Strong)]
         //[Verify(StronglyTypedNSArray)]
         NSArray[] PublicKeyHashes { get; set; }
 
         // @property (readonly, nonatomic, strong) NSURL * _Nonnull host;
+        /// <summary>
+        /// NSUrl value of the target host.
+        /// </summary>
+        /// <value>NSUrl of the host.</value>
         [Export("host", ArgumentSemantic.Strong)]
         NSUrl Host { get; }
 
         // -(instancetype _Nonnull)initWithURL:(NSURL * _Nonnull)url __attribute__((objc_designated_initializer));
+        /// <summary>
+        /// Designated initializer for MASSecurityConfiguration.
+        /// 
+        /// NSUrl MUST contain the port number as well.
+        /// 
+        /// default values for designated initializer are: isPublic: false, trustPublicPKI: false, validateDomainName: true.
+        /// </summary>
+        /// <returns>MASSecurityConfiguration object</returns>
+        /// <param name="url">NSUrl of the targeted host including HTTP scheme, hostname and port number in http://hostname:port format.</param>
         [Export("initWithURL:")]
         [DesignatedInitializer]
         IntPtr Constructor(NSUrl url);
@@ -665,247 +713,502 @@ namespace MASFoundation
     }
 
     // @interface MASConfiguration : NSObject
+    /// <summary>
+    /// The `MASConfiguration` class is a local representation of configuration data.
+    /// </summary>
     [BaseType(typeof(NSObject))]
     interface MASConfiguration
     {
         // @property (readonly, assign, nonatomic) BOOL isLoaded;
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MASConfiguration"/> is loaded.
+        /// true if it has succesfully loaded and is ready for use.  
+        /// false if not yet loaded or perhaps an error has occurred during attempting to load.
+        /// </summary>
+        /// <value><c>true</c> if is loaded; otherwise, <c>false</c>.</value>
         [Export("isLoaded")]
         bool IsLoaded { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull applicationName;
+        /// <summary>
+        /// Gets the name of the application.
+        /// </summary>
+        /// <value>The name of the application.</value>
         [Export("applicationName", ArgumentSemantic.Strong)]
         string ApplicationName { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull applicationType;
+        /// <summary>
+        /// Gets the type of the application.
+        /// </summary>
+        /// <value>The type of the application.</value>
         [Export("applicationType", ArgumentSemantic.Strong)]
         string ApplicationType { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nullable applicationDescription;
+        /// <summary>
+        /// Gets the application description.
+        /// </summary>
+        /// <value>The application description.</value>
         [NullAllowed, Export("applicationDescription", ArgumentSemantic.Strong)]
         string ApplicationDescription { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull applicationOrganization;
+        /// <summary>
+        /// Gets the organization name of the application.
+        /// </summary>
+        /// <value>The application organization.</value>
         [Export("applicationOrganization", ArgumentSemantic.Strong)]
         string ApplicationOrganization { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull applicationRegisteredBy;
+        /// <summary>
+        /// Gets the name of the entity that registered the application.
+        /// </summary>
+        /// <value>The application registered by.</value>
         [Export("applicationRegisteredBy", ArgumentSemantic.Strong)]
         string ApplicationRegisteredBy { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificates;
+        /// <summary>
+        /// Gets the public server certificate of the Gateway as obtained from the configuration.
+        /// </summary>
+        /// <value>The array of strings of the gateway's public certificate.</value>
         [NullAllowed, Export("gatewayCertificates", ArgumentSemantic.Copy)]
         string[] GatewayCertificates { get; }
 
         // @property (readonly, copy, nonatomic) NSArray * _Nullable trustedCertPinnedPublickKeyHashes;
+        /// <summary>
+        /// Gets the array of trusted public key hasehs for certificate pinning.
+        /// </summary>
+        /// <value>The trusted cert pinned publick key hashes.</value>
         [NullAllowed, Export("trustedCertPinnedPublickKeyHashes", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
         NSArray[] TrustedCertPinnedPublickKeyHashes { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificatesAsDERData;
+        /// <summary>
+        /// Gets the public server certificate of the Gateway guaraneteed to be in DER format.
+        /// </summary>
+        /// <value>The gateway certificates as DER Data format.</value>
         [NullAllowed, Export("gatewayCertificatesAsDERData", ArgumentSemantic.Copy)]
         string[] GatewayCertificatesAsDERData { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificatesAsPEMData;
+        /// <summary>
+        /// Gets the public server certificate of the Gateway guaraneteed to be in PEM format.
+        /// </summary>
+        /// <value>The gateway certificates as PEM Data format.</value>
         [NullAllowed, Export("gatewayCertificatesAsPEMData", ArgumentSemantic.Copy)]
         string[] GatewayCertificatesAsPEMData { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull gatewayHostName;
+        /// <summary>
+        /// Gets the name of the gateway host.
+        /// </summary>
+        /// <value>The name of the gateway host.</value>
         [Export("gatewayHostName", ArgumentSemantic.Strong)]
         string GatewayHostName { get; }
 
         // @property (readonly, nonatomic, strong) NSNumber * _Nonnull gatewayPort;
+        /// <summary>
+        /// Gets the gateway port.
+        /// </summary>
+        /// <value>The gateway port.</value>
         [Export("gatewayPort", ArgumentSemantic.Strong)]
         NSNumber GatewayPort { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nullable gatewayPrefix;
+        /// <summary>
+        /// Gets the gateway prefix.
+        /// </summary>
+        /// <value>The gateway prefix.</value>
         [NullAllowed, Export("gatewayPrefix", ArgumentSemantic.Strong)]
         string GatewayPrefix { get; }
 
         // @property (readonly, nonatomic, strong) NSURL * _Nonnull gatewayUrl;
+        /// <summary>
+        /// Gets the full URL of the Gateway including the prefix, hostname and port in a https://<hostname>:<port>/<prefix (if exists)> format.
+        /// </summary>
+        /// <value>The gateway URL in NSUrl object with https://<hostname>:<port>/<prefix (if exists)> format.</value>
         [Export("gatewayUrl", ArgumentSemantic.Strong)]
         NSUrl GatewayUrl { get; }
 
         // @property (readonly, assign, nonatomic) BOOL locationIsRequired;
+        /// <summary>
+        /// Determines if a user's location coordinates are required.  This read only value 
+        /// is within the JSON configuration file and is set as a requirement of the application
+        /// on the Gateway.This means that a set of location coordinates must be sent in the
+        /// header of all protected endpoint HTTP request to the API on the Gateway.
+        /// 
+        /// If these are not sent when this is YES the Gateway will validate this and return
+        /// an error response.
+        /// </summary>
+        /// <value><c>true</c> if location is required; otherwise, <c>false</c>.</value>
         [Export("locationIsRequired")]
         bool LocationIsRequired { get; }
 
         // @property (readonly, assign, nonatomic) BOOL enabledPublicKeyPinning;
+        /// <summary>
+        /// Determines SDK is enabled for public key pinning for authentication challenge.  This read only value is within
+        /// the JSON configuration file.
+        /// </summary>
+        /// <value><c>true</c> if enabled public key pinning; otherwise, <c>false</c>.</value>
         [Export("enabledPublicKeyPinning")]
         bool EnabledPublicKeyPinning { get; }
 
         // @property (readonly, assign, nonatomic) BOOL enabledTrustedPublicPKI;
+        /// <summary>
+        /// Determines SDK is enabled for trusted public PKI for authentication challenge.  This read only value is within
+        /// the JSON configuration file.
+        /// </summary>
+        /// <value><c>true</c> if enabled trusted public pki; otherwise, <c>false</c>.</value>
         [Export("enabledTrustedPublicPKI")]
         bool EnabledTrustedPublicPKI { get; }
 
         // @property (assign, nonatomic) BOOL ssoEnabled;
+        /// <summary>
+        /// Determines if the client's SSO is enabled or not.  This value
+        /// is read from JSON configuration, if there is no value defined in keychain.
+        /// </summary>
+        /// <value><c>true</c> if sso enabled; otherwise, <c>false</c>.</value>
         [Export("ssoEnabled")]
         bool SsoEnabled { get; set; }
 
         // +(MASConfiguration * _Nullable)currentConfiguration;
+        /// <summary>
+        /// Gets the application's configuration object. This is a singleton object.
+        /// </summary>
+        /// <value>The singleton 'MASConfiguration' object.</value>
         [Static]
         [NullAllowed, Export("currentConfiguration")]
         //[Verify(MethodToProperty)]
         MASConfiguration CurrentConfiguration { get; }
 
         // -(NSString * _Nullable)endpointPathForKey:(NSString * _Nonnull)endpointKey;
+        /// <summary>
+        /// Retrieves an endpoint path fragment for a given endpoint key.
+        /// </summary>
+        /// <returns>The path for key.</returns>
+        /// <param name="endpointKey">The key which applies to the endpoint path.</param>
         [Export("endpointPathForKey:")]
         [return: NullAllowed]
         string EndpointPathForKey(string endpointKey);
 
         // +(BOOL)setSecurityConfiguration:(MASSecurityConfiguration * _Nonnull)securityConfiguration error:(NSError * _Nullable * _Nullable)error;
+        /// <summary>
+        /// Sets security measure for SSL pinning, and SSL validation for specified host in MASSecurityConfiguration object.
+        /// 
+        /// @remark MASSecurityConfiguration must have valid host in NSUrl object with port number(port number is mandatory), at least one pinning information(either certificates, or public key hashes), or trust public PKI.If public PKI is not trusted, and no pinning information is provided, it will fail to store the security configuration object, and eventually fail on evaluating SSL for requests.
+        /// @warning Upon SDK initialization, MASConfiguration.CurrentConfiguration.GatewayUrl's MASSecurityConfiguration object will be overwritten. If primary gateway's security configuration has to be modified, ensure to set security configuration after SDK initialization.
+        /// </summary>
+        /// <returns><c>true</c>, if security configuration was set, <c>false</c> otherwise.</returns>
+        /// <param name="securityConfiguration">MASSecurityConfiguration object with host, and security measure configuration values.</param>
+        /// <param name="error">NSError object reference to notify any error occurred while validating MASSecurityConfiguration.</param>
         [Static]
         [Export("setSecurityConfiguration:error:")]
         bool SetSecurityConfiguration(MASSecurityConfiguration securityConfiguration, [NullAllowed] out NSError error);
 
         // +(void)removeSecurityConfigurationForDomain:(NSURL * _Nonnull)domain;
+        /// <summary>
+        /// Removes security configuration object based on the domain (host, and port number).
+        /// </summary>
+        /// <param name="domain">NSUrl of the targeted host including HTTP scheme, hostname and port number in http://hostname:port format.</param>
         [Static]
         [Export("removeSecurityConfigurationForDomain:")]
         void RemoveSecurityConfigurationForDomain(NSUrl domain);
 
         // +(NSArray * _Nullable)securityConfigurations;
+        /// <summary>
+        /// Returns an array of MASSecurityConfiguration objects for each host.
+        /// </summary>
+        /// <value>The array of currently active MASSecurityConfigurations.</value>
         [Static]
         [NullAllowed, Export("securityConfigurations")]
         //[Verify(MethodToProperty), Verify(StronglyTypedNSArray)]
         NSArray[] SecurityConfigurations { get; }
 
         // +(MASSecurityConfiguration * _Nullable)securityConfigurationForDomain:(NSURL * _Nonnull)domain;
+        /// <summary>
+        /// Returns MASSecurityConfiguration object for a specific domain.
+        /// </summary>
+        /// <returns>The MASSecurityConfiguration object for domain.</returns>
+        /// <param name="domain">NSUrl of the targeted host including HTTP scheme, hostname and port number in http://hostname:port format.</param>
         [Static]
         [Export("securityConfigurationForDomain:")]
         [return: NullAllowed]
         MASSecurityConfiguration SecurityConfigurationForDomain(NSUrl domain);
 
         // @property (readonly, assign, nonatomic) BOOL applicationCredentialsAreDynamic;
+        /// <summary>
+        /// ** Internal usage only; READ ONLY **
+        /// 
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MASConfiguration"/> application credentials
+        /// are dynamic or static.
+        /// </summary>
+        /// <value><c>true</c> if application credentials are dynamic; otherwise, <c>false</c>.</value>
         [Export("applicationCredentialsAreDynamic")]
         bool ApplicationCredentialsAreDynamic { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSDictionary *> * _Nonnull applicationClients;
+        /// <summary>
+        /// ** Internal usage only; READ ONLY **
+        /// 
+        /// Gets the application static clients.
+        /// </summary>
+        /// <value>The application clients.</value>
         [Export("applicationClients", ArgumentSemantic.Copy)]
         NSDictionary[] ApplicationClients { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable scimPathEndpointPath;
+        /// <summary>
+        /// Gets the scim endpoint.
+        /// </summary>
+        /// <value>The scim endpoint.</value>
         [NullAllowed, Export("scimPathEndpointPath")]
         string ScimPathEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable storagePathEndpointPath;
+        /// <summary>
+        /// Gets the storage endpoint.
+        /// </summary>
+        /// <value>The storage endpoint.</value>
         [NullAllowed, Export("storagePathEndpointPath")]
         string StoragePathEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable authorizationEndpointPath;
+        /// <summary>
+        /// Gets the authorization endpoint.
+        /// </summary>
+        /// <value>The authorization endpoint.</value>
         [NullAllowed, Export("authorizationEndpointPath")]
         string AuthorizationEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable clientInitializeEndpointPath;
+        /// <summary>
+        /// Gets the client initialize endpoint.
+        /// </summary>
+        /// <value>The client initialize endpoint.</value>
         [NullAllowed, Export("clientInitializeEndpointPath")]
         string ClientInitializeEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable authenticateOTPEndpointPath;
+        /// <summary>
+        /// Gets the authenticate OTP endpoint.
+        /// </summary>
+        /// <value>The authenticate OTP endpoint.</value>
         [NullAllowed, Export("authenticateOTPEndpointPath")]
         string AuthenticateOTPEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable deviceListAllEndpointPath;
+        /// <summary>
+        /// Gets the device list endpoint.
+        /// </summary>
+        /// <value>The device list endpoint.</value>
         [NullAllowed, Export("deviceListAllEndpointPath")]
         string DeviceListAllEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable deviceRegisterEndpointPath;
+        /// <summary>
+        /// Gets the device registration endpoint.
+        /// </summary>
+        /// <value>The device registration endpoint.</value>
         [NullAllowed, Export("deviceRegisterEndpointPath")]
         string DeviceRegisterEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable deviceRegisterClientEndpointPath;
+        /// <summary>
+        /// Gets the device registration as client credentials endpoint.
+        /// </summary>
+        /// <value>The device registration as client credentials endpoint.</value>
         [NullAllowed, Export("deviceRegisterClientEndpointPath")]
         string DeviceRegisterClientEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable deviceRenewEndpointPath;
+        /// <summary>
+        /// Gets the device client certificate renew endpoint path.
+        /// </summary>
+        /// <value>The device client certificate renew endpoint path.</value>
         [NullAllowed, Export("deviceRenewEndpointPath")]
         string DeviceRenewEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable deviceRemoveEndpointPath;
+        /// <summary>
+        /// Gets the device de-registration endpoint.
+        /// </summary>
+        /// <value>The device de-registration endpoint.</value>
         [NullAllowed, Export("deviceRemoveEndpointPath")]
         string DeviceRemoveEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable enterpriseBrowserEndpointPath;
+        /// <summary>
+        /// Gets the enterprise browser endpoint.
+        /// </summary>
+        /// <value>The enterprise browser endpoint.</value>
         [NullAllowed, Export("enterpriseBrowserEndpointPath")]
         string EnterpriseBrowserEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable tokenEndpointPath;
+        /// <summary>
+        /// Gets the OAuth 2 token endpoint.
+        /// </summary>
+        /// <value>The OAuth 2 token endpoint.</value>
         [NullAllowed, Export("tokenEndpointPath")]
         string TokenEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable tokenRevokeEndpointPath;
+        /// <summary>
+        /// Gets the OAuth 2 token revoke endpoint.
+        /// </summary>
+        /// <value>The OAuth 2 token revoke endpoint.</value>
         [NullAllowed, Export("tokenRevokeEndpointPath")]
         string TokenRevokeEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable userInfoEndpointPath;
+        /// <summary>
+        /// Gets the user info endpoint.
+        /// </summary>
+        /// <value>The user info endpoint.</value>
         [NullAllowed, Export("userInfoEndpointPath")]
         string UserInfoEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable userSessionLogoutEndpointPath;
+        /// <summary>
+        /// Gets the user session logout endpoint.
+        /// </summary>
+        /// <value>The user session logout endpoint.</value>
         [NullAllowed, Export("userSessionLogoutEndpointPath")]
         string UserSessionLogoutEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable userSessionStatusEndpointPath;
+        /// <summary>
+        /// Gets the user session status endpoint.
+        /// </summary>
+        /// <value>The user session status endpoint.</value>
         [NullAllowed, Export("userSessionStatusEndpointPath")]
         string UserSessionStatusEndpointPath { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable bluetoothServiceUuid;
+        /// <summary>
+        /// Gets the bluetooth service UUID.
+        /// </summary>
+        /// <value>The bluetooth service UUID.</value>
         [NullAllowed, Export("bluetoothServiceUuid")]
         string BluetoothServiceUuid { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable bluetoothCharacteristicUuid;
+        /// <summary>
+        /// Gets the bluetooth characteristic UUID.
+        /// </summary>
+        /// <value>The bluetooth characteristic UUID.</value>
         [NullAllowed, Export("bluetoothCharacteristicUuid")]
         string BluetoothCharacteristicUuid { get; }
 
         // @property (readonly, assign) NSInteger bluetoothRssi;
+        /// <summary>
+        /// Gets the bluetooth rssi.
+        /// </summary>
+        /// <value>The bluetooth rssi.</value>
         [Export("bluetoothRssi")]
         nint BluetoothRssi { get; }
 
         // -(instancetype _Nullable)initWithConfigurationInfo:(NSDictionary * _Nonnull)info;
+        /// <summary>
+        /// Initializer to perform a default initialization.
+        /// </summary>
+        /// <returns>Newly initialized MASConfiguration.</returns>
+        /// <param name="info">NSDictionary of configuration information.</param>
         [Export("initWithConfigurationInfo:")]
         IntPtr Constructor(NSDictionary info);
 
         // +(MASConfiguration * _Nullable)instanceFromStorage;
+        /// <summary>
+        /// Gets the instance from internal storage.
+        /// </summary>
+        /// <value>The instance from storage.</value>
         [Static]
         [NullAllowed, Export("instanceFromStorage")]
         //[Verify(MethodToProperty)]
         MASConfiguration InstanceFromStorage { get; }
 
         // -(void)saveToStorage;
+        /// <summary>
+        /// Saves MASConfiguration object to storage.
+        /// </summary>
         [Export("saveToStorage")]
         void SaveToStorage();
 
         // -(void)reset;
+        /// <summary>
+        /// Reset this instance.
+        /// </summary>
         [Export("reset")]
         void Reset();
 
         // -(NSString * _Nonnull)defaultApplicationClientIdentifier;
+        /// <summary>
+        /// Gets the default application client identifier.
+        /// </summary>
+        /// <value>The default application client identifier.</value>
         [Export("defaultApplicationClientIdentifier")]
         //[Verify(MethodToProperty)]
         string DefaultApplicationClientIdentifier { get; }
 
         // -(NSString * _Nullable)defaultApplicationClientSecret;
+        /// <summary>
+        /// Gets the default application client secret.
+        /// </summary>
+        /// <value>The default application client secret.</value>
         [NullAllowed, Export("defaultApplicationClientSecret")]
         //[Verify(MethodToProperty)]
         string DefaultApplicationClientSecret { get; }
 
         // -(NSDictionary<NSString *,NSString *> * _Nonnull)defaultApplicationClientInfo;
+        /// <summary>
+        /// Gets the default application client info.
+        /// </summary>
+        /// <value>The default application client info.</value>
         [Export("defaultApplicationClientInfo")]
         //[Verify(MethodToProperty)]
         NSDictionary<NSString, NSString> DefaultApplicationClientInfo { get; }
 
         // -(BOOL)compareWithCurrentConfiguration:(NSDictionary * _Nonnull)newConfiguration;
+        /// <summary>
+        /// Internal function to compare the configuration JSON object with current configuration.
+        /// </summary>
+        /// <returns><c>true</c>, if with current configuration was compared, <c>false</c> otherwise.</returns>
+        /// <param name="newConfiguration">NSDictionary of new configuration to compare.</param>
         [Export("compareWithCurrentConfiguration:")]
         bool CompareWithCurrentConfiguration(NSDictionary newConfiguration);
 
         // -(BOOL)detectServerChangeWithCurrentConfiguration:(NSDictionary * _Nonnull)newConfiguration;
+        /// <summary>
+        /// Internal function to determine the server change based on HTTP scheme, hostname and port number between two configurations.
+        /// </summary>
+        /// <returns><c>true</c>, if server change with current configuration was detected, <c>false</c> otherwise.</returns>
+        /// <param name="newConfiguration">NSDictionary of new configuration to compare.</param>
         [Export("detectServerChangeWithCurrentConfiguration:")]
         bool DetectServerChangeWithCurrentConfiguration(NSDictionary newConfiguration);
 
         // +(NSError * _Nullable)validateJSONConfiguration:(NSDictionary * _Nonnull)configuration;
+        /// <summary>
+        /// Internal function to validate the configuration.
+        /// </summary>
+        /// <returns>The JSONC onfiguration.</returns>
+        /// <param name="configuration">Configuration.</param>
         [Static]
         [Export("validateJSONConfiguration:")]
         [return: NullAllowed]
         NSError ValidateJSONConfiguration(NSDictionary configuration);
 
         // +(void)setSecurityConfiguration:(MASSecurityConfiguration * _Nonnull)securityConfiguration __attribute__((deprecated("[MASConfiguration setSecurityConfiguration:] is deprecated.  Use [MASConfiguration setSecurityConfiguration:error:] instead for better handling of error cases.")));
+        /// <summary>
+        /// Sets security measure for SSL pinning, and SSL validation for specified host in MASSecurityConfiguration object.
+        /// 
+        /// @remark MASSecurityConfiguration must have valid host in NSUrl object with port number(port number is mandatory), at least one pinning information(either certificates, or public key hashes), or trust public PKI.If public PKI is not trusted, and no pinning information is provided, it will fail to store the security configuration object, and eventually fail on evaluating SSL for requests.
+        /// @warning Upon SDK initialization, MASConfiguration.CurrentConfiguration.GatewayUrl's MASSecurityConfiguration object will be overwritten. If primary gateway's security configuration has to be modified, ensure to set security configuration after SDK initialization.
+        /// </summary>
+        /// <param name="securityConfiguration">MASSecurityConfiguration object with host, and security measure configuration values.</param>
         [Static]
         [Export("setSecurityConfiguration:")]
         void SetSecurityConfiguration(MASSecurityConfiguration securityConfiguration);
@@ -1226,32 +1529,71 @@ namespace MASFoundation
     }
 
     // @interface MASSharedStorage : MASObject
+    /// <summary>
+    ///  MASSharedStorage class is designed for developers to write, read, and delete NSString or NSData data into shared keychain storage,
+    ///  so that multiple applications with same keychain sharing group in the same device can share data between applications.
+    /// 
+    ///  @warning *Important:* MASSharedStorage will not be available if MASFoundation framework is not initialized; the framework should be initialized prior to write/read/delete any data into MASSharedStorage.
+    /// </summary>
     [BaseType(typeof(MASObject))]
     interface MASSharedStorage
     {
         // +(NSString * _Nullable)findStringUsingKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error;
+        /// <summary>
+        /// Finds NSString data stored with the key from shared keychain storage.
+        /// </summary>
+        /// <returns>The string of data found with the key.</returns>
+        /// <param name="key">string of the key used to store the string data</param>
+        /// <param name="error">NSError object reference that would notify if there was any error while retrieving the data</param>
         [Static]
         [Export("findStringUsingKey:error:")]
         [return: NullAllowed]
         string FindStringUsingKey(string key, [NullAllowed] out NSError error);
 
         // +(NSData * _Nullable)findDataUsingKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error;
+        /// <summary>
+        /// Finds NSData object stored with the key from shared keychain storage.
+        /// </summary>
+        /// <returns>NSData of data found with the key.</returns>
+        /// <param name="key">string of the key used to store the NSData</param>
+        /// <param name="error">NSError object reference that would notify if there was any error while retrieving the data</param>
         [Static]
         [Export("findDataUsingKey:error:")]
         [return: NullAllowed]
         NSData FindDataUsingKey(string key, [NullAllowed] out NSError error);
 
         // +(BOOL)saveString:(NSString * _Nonnull)string key:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error;
+        /// <summary>
+        /// Saves string data with the specified key into shared keychain storage.
+        /// Save method can also be used to delete the data from the shared keychain storage by passing nil in string parameter with the key.
+        /// </summary>
+        /// <returns><c>true</c>, if string was saved, <c>false</c> otherwise.</returns>
+        /// <param name="string">String data to be stored.</param>
+        /// <param name="error">NSError object reference that would notify if there was any error while storing the data</param>
+        /// <param name="error">Error.</param>
         [Static]
         [Export("saveString:key:error:")]
         bool SaveString(string @string, string key, [NullAllowed] out NSError error);
 
         // +(BOOL)saveData:(NSData * _Nonnull)data key:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error;
+        /// <summary>
+        /// Saves NSData object with the specified key into shared keychain storage.
+        /// Save method can also be used to delete the data from the shared keychain storage by passing nil in data parameter with the key.
+        /// </summary>
+        /// <returns><c>true</c>, if data was saved, <c>false</c> otherwise.</returns>
+        /// <param name="data">NSData object to be stored.</param>
+        /// <param name="key">String of the key used to store the NSData object.</param>
+        /// <param name="error">NSError object reference that would notify if there was any error while storing the data.</param>
         [Static]
         [Export("saveData:key:error:")]
         bool SaveData(NSData data, string key, [NullAllowed] out NSError error);
 
         // +(void)deleteForKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error;
+        /// <summary>
+        /// Deletes any data type with the specified key from shared keychain storage.
+        /// </summary>
+        /// <param name="key">String of the key used to store the data.</param>
+        /// <param name="error">NSError object reference that would notify if there was any error while deleting the data.</param>
         [Static]
         [Export("deleteForKey:error:")]
         void DeleteForKey(string key, [NullAllowed] out NSError error);
@@ -1596,54 +1938,136 @@ namespace MASFoundation
     }
 
     // @interface MASClaims : MASObject
+    /// <summary>
+    /// MASClaims class is a helper class to build JWT signed with key pairs.
+    /// </summary>
     [BaseType(typeof(MASObject))]
     interface MASClaims
     {
         // @property (readwrite, nonatomic, strong) NSString * _Nullable iss;
+        /// <summary>
+        /// iss identifies the principal that issued the JWT
+        /// </summary>
+        /// <remarks>
+        /// iss is in format of device://{mag-identifier}/{client_id} where both mag-identifier and client_id are known to the primary gateway.
+        /// </remarks>
+        /// <value>The iss claim of JWT.</value>
         [NullAllowed, Export("iss", ArgumentSemantic.Strong)]
         string Iss { get; set; }
 
         // @property (readwrite, nonatomic, strong) NSString * _Nullable aud;
+        /// <summary>
+        /// aud identifies the recipients that the JWT is inteded for
+        /// </summary>
+        /// <remarks>
+        /// aud is an audience of the JWT where the audience is URL of primary gateway.
+        /// </remarks>
+        /// <value>The aud claim of JWT.</value>
         [NullAllowed, Export("aud", ArgumentSemantic.Strong)]
         string Aud { get; set; }
 
         // @property (readwrite, nonatomic, strong) NSString * _Nullable sub;
+        /// <summary>
+        /// sub identifies the principal that is subject of the JWT
+        /// </summary>
+        /// <remarks>
+        /// sub is an subject of the JWT that is either authenticated user's username or registered client's client name where both are known to the primary gateway.
+        /// </remarks>
+        /// <value>The sub claim of JWT.</value>
         [NullAllowed, Export("sub", ArgumentSemantic.Strong)]
         string Sub { get; set; }
 
         // @property (readwrite, nonatomic, strong) NSDate * _Nullable exp;
+        /// <summary>
+        /// exp identifies the expiration timestamp of JWT
+        /// </summary>
+        /// <remarks>
+        /// exp is unix timestamp of expiration for JWT.
+        /// </remarks>
+        /// <value>The exp claim of JWT.</value>
         [NullAllowed, Export("exp", ArgumentSemantic.Strong)]
         NSDate Exp { get; set; }
 
         // @property (readwrite, nonatomic, strong) NSDate * _Nullable iat;
+        /// <summary>
+        /// iat identifies the issued timestamp of JWT
+        /// </summary>
+        /// <remarks>
+        /// iat is an issued timestamp when the JWT was built.  iat will be nil in MASClaims object until JWT is built.
+        /// </remarks>
+        /// <value>The iat claim of JWT.</value>
         [NullAllowed, Export("iat", ArgumentSemantic.Strong)]
         NSDate Iat { get; set; }
 
         // @property (readwrite, nonatomic, strong) NSDate * _Nullable nbf;
+        /// <summary>
+        /// nbf identifies the time before which the JWT must not be accepted for processing.
+        /// </summary>
+        /// <remarks>
+        /// nbf is a timestamp which the JWT should not be used before.  nbf is an optional claim which will not be generated and added to payload if not defined.
+        /// </remarks>
+        /// <value>The nbf claim of JWT.</value>
         [NullAllowed, Export("nbf", ArgumentSemantic.Strong)]
         NSDate Nbf { get; set; }
 
         // @property (readwrite, nonatomic, strong) NSString * _Nullable jti;
+        /// <summary>
+        /// jti identifies a unique identifier for the JWT
+        /// </summary>
+        /// <remarks>
+        /// jti is an unique identifier of JWT.
+        /// </remarks>
+        /// <value>The jti claim of JWT.</value>
         [NullAllowed, Export("jti", ArgumentSemantic.Strong)]
         string Jti { get; set; }
 
         // @property (readwrite, nonatomic, strong) id _Nullable content;
+        /// <summary>
+        /// content will be identified as private claim for the custom contents in payload
+        /// </summary>
+        /// <remarks>
+        /// ** content is an content that will be part of JWT's payload.
+        /// ** content can only be in NSString, NSDictionary, or NSArray format. Make sure to convert NSData into base64encoded string.
+        /// </remarks>
+        /// <value>The content claim of JWT.</value>
         [NullAllowed, Export("content", ArgumentSemantic.Strong)]
         NSObject Content { get; set; }
 
         // @property (readwrite, nonatomic, strong) NSString * _Nullable contentType;
+        /// <summary>
+        /// contentType will be identified as private claim for the custom contents' content-type in payload
+        /// </summary>
+        /// <remarks>
+        /// contentType is a MIME type of the contents.
+        /// </remarks>
+        /// <value>The content type claim of JWT.</value>
         [NullAllowed, Export("contentType", ArgumentSemantic.Strong)]
         string ContentType { get; set; }
 
         // @property (readonly, nonatomic, strong) NSMutableDictionary * _Nullable customClaims;
+        /// <summary>
+        /// claims dictionary added through thisClaim.SetValue().
+        /// </summary>
+        /// <value>The custom claims.</value>
         [NullAllowed, Export("customClaims", ArgumentSemantic.Strong)]
         NSMutableDictionary CustomClaims { get; }
 
         // -(void)setValue:(id _Nonnull)value forClaimKey:(NSString * _Nonnull)claimKey error:(NSError * _Nullable * _Nullable)error;
+        /// <summary>
+        /// Setting a custom attribute to JWT
+        /// </summary>
+        /// <param name="value">Object/value of the attribute. Object can only be either of NSNumber, NSString, NSDictionary, or NSArray..</param>
+        /// <param name="claimKey">Key of the attribute as in string.</param>
+        /// <param name="error">NSError object reference that would notify if there was any error while setting the claim.</param>
         [Export("setValue:forClaimKey:error:")]
         void SetValue(NSObject value, string claimKey, [NullAllowed] out NSError error);
 
         // +(MASClaims * _Nullable)claims;
+        /// <summary>
+        /// Designated initializer for MASClaims object.
+        /// This initializer will construct MASClaims object with auto-populated some of claims values.
+        /// </summary>
+        /// <value>MASClaims object with auto populated some of claims.</value>
         [Static]
         [NullAllowed, Export("claims")]
         //[Verify(MethodToProperty)]
@@ -2811,18 +3235,33 @@ namespace MASFoundation
         /// 
         /// </summary>
         /// <param name="request">MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request..</param>
-        /// <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        /// <param name="completion">An MASResponseObjectErrorBlock (NSHttpUrlResponse response, NSObject responseObject, NSError error) that will receive any type of response object or an NSError object if there is a failure.</param>
         [Static]
         [Export("invoke:completion:")]
-        void Invoke(MASRequest request, [NullAllowed] MASResponseInfoErrorBlock completion);
+        void Invoke(MASRequest request, [NullAllowed] MASResponseObjectErrorBlock completion);
 
         // +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
+        /// <summary>
+        /// Signs MASClaims object with default private key from device registration against primary gateway.
+        /// Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
+        /// </summary>
+        /// <returns>string of JWT.</returns>
+        /// <param name="claims">MASClaims object containing claims for JWT.</param>
+        /// <param name="error">NSError error reference object that returns any error occurred during JWT construction.</param>
         [Static]
         [Export("signWithClaims:error:")]
         [return: NullAllowed]
         string SignWithClaims(MASClaims claims, [NullAllowed] out NSError error);
 
         // +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims privateKey:(NSData * _Nonnull)privateKey error:(NSError * _Nullable * _Nullable)error;
+        /// <summary>
+        /// Signs MASClaims object with custom private key in NSData format. Private key should be in NSData format and should have been signed using RS256 algorithm.
+        /// Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
+        /// </summary>
+        /// <returns>string of JWT.</returns>
+        /// <param name="claims">MASClaims object containing claims for JWT.</param>
+        /// <param name="privateKey">Custom private key in NSData format signed using RS256 algorithm.</param>
+        /// <param name="error">NSError error reference object that returns any error occurred during JWT construction.</param>
         [Static]
         [Export("signWithClaims:privateKey:error:")]
         [return: NullAllowed]
@@ -2835,74 +3274,145 @@ namespace MASFoundation
     }
 
     // @interface MASApplication : MASObject
+    /// <summary>
+    /// The `MASApplication` class is a local representation of application data.
+    /// </summary>
     [BaseType(typeof(MASObject))]
     interface MASApplication
     {
         // @property (readonly, assign, nonatomic) BOOL isRegistered;
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MASApplication"/> is registered.
+        /// </summary>
+        /// <value><c>true</c> if is registered; otherwise, <c>false</c>.</value>
         [Export("isRegistered")]
         bool IsRegistered { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable organization;
+        /// <summary>
+        /// Gets the organization of the application.
+        /// </summary>
+        /// <value>The organization of the application.</value>
         [NullAllowed, Export("organization")]
         string Organization { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable name;
+        /// <summary>
+        /// Gets the name of the application.
+        /// </summary>
+        /// <value>The name of the application.</value>
         [NullAllowed, Export("name")]
         string Name { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nonnull identifier;
+        /// <summary>
+        /// Gets the application identifier.
+        /// </summary>
+        /// <value>The application identifier.</value>
         [Export("identifier")]
         string Identifier { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable detailedDescription;
+        /// <summary>
+        /// Gets the detailed description of the application.
+        /// </summary>
+        /// <value>The detailed description of the application.</value>
         [NullAllowed, Export("detailedDescription")]
         string DetailedDescription { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable iconUrl;
+        /// <summary>
+        /// Gets the icon URL.
+        /// </summary>
+        /// <value>The icon URL.</value>
         [NullAllowed, Export("iconUrl")]
         string IconUrl { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable authUrl;
+        /// <summary>
+        /// Gets the auth URL.
+        /// </summary>
+        /// <value>The auth URL.</value>
         [NullAllowed, Export("authUrl")]
         string AuthUrl { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable nativeUrl;
+        /// <summary>
+        /// Gets the native URL.
+        /// </summary>
+        /// <value>The native URL.</value>
         [NullAllowed, Export("nativeUrl")]
         string NativeUrl { get; }
 
         // @property (readonly, copy, nonatomic) NSDictionary * _Nullable customProperties;
+        /// <summary>
+        /// Gets the custom properties of the application.
+        /// </summary>
+        /// <value>The custom properties of the application.</value>
         [NullAllowed, Export("customProperties", ArgumentSemantic.Copy)]
         NSDictionary CustomProperties { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable environment;
+        /// <summary>
+        /// Gets the environment of the application.
+        /// </summary>
+        /// <value>The environment of the application.</value>
         [NullAllowed, Export("environment")]
         string Environment { get; }
 
         // @property (readonly, copy, nonatomic) NSURL * _Nullable redirectUri;
+        /// <summary>
+        /// Gets the redirect URI of the application.
+        /// </summary>
+        /// <value>The redirect URI of the application.</value>
         [NullAllowed, Export("redirectUri", ArgumentSemantic.Copy)]
         NSUrl RedirectUri { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable registeredBy;
+        /// <summary>
+        /// Gets the user that the application was registered by.
+        /// </summary>
+        /// <value>The user that the application was registered by.</value>
         [NullAllowed, Export("registeredBy")]
         string RegisteredBy { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable scope;
+        /// <summary>
+        /// Gets the registered scope of the application in array of strings.
+        /// </summary>
+        /// <value>The registered scope of the application in array of strings.</value>
         [NullAllowed, Export("scope", ArgumentSemantic.Copy)]
         string[] Scope { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable scopeAsString;
+        /// <summary>
+        /// Gets the registered scope of the application in string with space separator.
+        /// </summary>
+        /// <value>The registered scope of the application in string with space separator.</value>
         [NullAllowed, Export("scopeAsString")]
         string ScopeAsString { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable status;
+        /// <summary>
+        /// Gets the status of the application.
+        /// </summary>
+        /// <value>The status of the application.</value>
         [NullAllowed, Export("status")]
         string Status { get; }
 
         // @property (readonly, assign, nonatomic) BOOL isAuthenticated;
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MASApplication"/> is authenticated.
+        /// </summary>
+        /// <value><c>true</c> if is authenticated; otherwise, <c>false</c>.</value>
         [Export("isAuthenticated")]
         bool IsAuthenticated { get; }
 
         // @property (readonly, assign, nonatomic) MASAuthenticationStatus authenticationStatus;
+        /// <summary>
+        /// Gets the authentication status.
+        /// </summary>
+        /// <value>The authentication status.</value>
         [Export("authenticationStatus", ArgumentSemantic.Assign)]
         MASAuthenticationStatus AuthenticationStatus { get; }
 
@@ -2915,6 +3425,10 @@ namespace MASFoundation
         NSObject WeakDelegate { get; set; }
 
         // +(MASApplication * _Nullable)currentApplication;
+        /// <summary>
+        /// Gets the current application as in singleton MASApplication object.
+        /// </summary>
+        /// <value>The current application as in singleton MASApplication object.</value>
         [Static]
         [NullAllowed, Export("currentApplication")]
         //[Verify(MethodToProperty)]
@@ -2951,35 +3465,65 @@ namespace MASFoundation
     }
 
     // @interface MASAuthCredentials : MASObject
+    /// <summary>
+    /// The `MASAuthCredentials` class is a base class of all other auth credentials types supported in MASFoundation SDK.
+    /// </summary>
     [BaseType(typeof(MASObject))]
     interface MASAuthCredentials
     {
         // @property (readonly, assign, nonatomic) NSString * credentialsType;
+        /// <summary>
+        /// Authentication credentials type.
+        /// </summary>
+        /// <value>The type of the authentication credentials.</value>
         [Export("credentialsType")]
         string CredentialsType { get; }
 
         // @property (readonly, assign, nonatomic) BOOL canRegisterDevice;
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MASAuthCredentials"/> can register device.
+        /// </summary>
+        /// <value><c>true</c> if can register device; otherwise, <c>false</c>.</value>
         [Export("canRegisterDevice")]
         bool CanRegisterDevice { get; }
 
         // @property (readonly, assign, nonatomic) BOOL isReuseable;
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:MASFoundation.MASAuthCredentials"/> is reuseable.
+        /// </summary>
+        /// <value><c>true</c> if is reuseable; otherwise, <c>false</c>.</value>
         [Export("isReuseable")]
         bool IsReuseable { get; }
 
         // -(void)clearCredentials;
+        /// <summary>
+        /// Clears the credentials.
+        /// </summary>
         [Export("clearCredentials")]
         void ClearCredentials();
     }
 
     // @interface MASAuthCredentialsAuthorizationCode : MASAuthCredentials
+    /// <summary>
+    /// The `MASAuthCredentialsAuthorizationCode` class is representation of Authorization code auth credentials.
+    /// </summary>
     [BaseType(typeof(MASAuthCredentials))]
     interface MASAuthCredentialsAuthorizationCode
     {
         // @property (readonly, copy, nonatomic) NSString * _Nullable authorizationCode;
+        /// <summary>
+        /// Gets the authorization code.
+        /// </summary>
+        /// <value>The authorization code.</value>
         [NullAllowed, Export("authorizationCode")]
         string AuthorizationCode { get; }
 
         // +(MASAuthCredentialsAuthorizationCode * _Nullable)initWithAuthorizationCode:(NSString * _Nonnull)authorizationCode;
+        /// <summary>
+        /// Designated factory method to construct MASAuthCredentials object for authorization code credentials.
+        /// </summary>
+        /// <returns>MASAuthCredentialsAuthorizationCode object that can be used as auth credentials to register or login.</returns>
+        /// <param name="authorizationCode">string of authorization code for credentials in string.</param>
         [Static]
         [Export("initWithAuthorizationCode:")]
         [return: NullAllowed]
@@ -2987,18 +3531,35 @@ namespace MASFoundation
     }
 
     // @interface MASAuthCredentialsJWT : MASAuthCredentials
+    /// <summary>
+    /// The `MASAuthCredentialsJWT` class is representation of JWT auth credentials.
+    /// </summary>
     [BaseType(typeof(MASAuthCredentials))]
     interface MASAuthCredentialsJWT
     {
         // @property (readonly, copy, nonatomic) NSString * _Nullable jwt;
+        /// <summary>
+        /// Gets the jwt.
+        /// </summary>
+        /// <value>The jwt.</value>
         [NullAllowed, Export("jwt")]
         string Jwt { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable tokenType;
+        /// <summary>
+        /// Gets the type of the JWT.
+        /// </summary>
+        /// <value>The type of the JWT.</value>
         [NullAllowed, Export("tokenType")]
         string TokenType { get; }
 
         // +(MASAuthCredentialsJWT * _Nullable)initWithJWT:(NSString * _Nonnull)jwt tokenType:(NSString * _Nullable)tokenType;
+        /// <summary>
+        /// Designated factory method to construct MASAuthCredentials object for JWT credentials
+        /// </summary>
+        /// <returns>MASAuthCredentialsJWT object that can be used as auth credentials to register or login.</returns>
+        /// <param name="jwt">string of JWT's token type for credentials.</param>
+        /// <param name="tokenType">Token type.</param>
         [Static]
         [Export("initWithJWT:tokenType:")]
         [return: NullAllowed]
@@ -3006,23 +3567,38 @@ namespace MASFoundation
     }
 
     // @interface MASAuthCredentialsPassword : MASAuthCredentials
+    /// <summary>
+    /// The `MASAuthCredentialsPassword` class is representation of username/password auth credentials.
+    /// </summary>
     [BaseType(typeof(MASAuthCredentials))]
     interface MASAuthCredentialsPassword
     {
         // @property (readonly, copy, nonatomic) NSString * _Nullable username;
+        /// <summary>
+        /// Gets the username.
+        /// </summary>
+        /// <value>The username.</value>
         [NullAllowed, Export("username")]
         string Username { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable password;
+        /// <summary>
+        /// Gets the password.
+        /// </summary>
+        /// <value>The password.</value>
         [NullAllowed, Export("password")]
         string Password { get; }
 
         // +(MASAuthCredentialsPassword * _Nullable)initWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;
+        /// <summary>
+        /// MASAuthCredentialsPassword.
+        /// </summary>
+        /// <returns>MASAuthCredentialsPassword object that can be used as auth credentials to register or login.</returns>
+        /// <param name="username">string of username for credentials.</param>
+        /// <param name="password">string of password for credentials.</param>
         [Static]
         [Export("initWithUsername:password:")]
         [return: NullAllowed]
         MASAuthCredentialsPassword InitWithUsername(string username, string password);
     }
-
-
 }
