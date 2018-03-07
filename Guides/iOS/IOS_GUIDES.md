@@ -263,6 +263,21 @@ Use the new msso_config.json by calling one of the following MAS.start interface
    - Start with file URL
    - Start with enrollment URL
 
+### Keychain Synchronization
+
+The Mobile SDK uses iOS Keychain Storage to secure credentials and sensitive data on mobile devices. When a mobile device is backed up to iCloud or transferred to another device, some of the data stored in keychain storage is also backed up or transferred to iCloud or another device.
+
+By default, the Mobile SDK enforces all app credentials and data to **remain only on the device**; during backup, credentials are not synchronized to iCloud or transferred to another device. Use the following method to bypass the default and sync credentials and data to the iCloud.
+
+Before initializing the Mobile SDK, configure the keychain synchronization option:
+
+- YES: Mobile SDK credentials in keychain storage are sync'ed with iCloud
+- NO: Mobile SDK credentials in keychain storage are NOT sync'ed with iCloud (default)
+
+```c#
+
+```
+
 ## Login: User Authentication and Authorization
 
 **Library**: MASFoundation<br>
