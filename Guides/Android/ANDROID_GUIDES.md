@@ -743,26 +743,74 @@ if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
 This error occurs if the client fails to provide the geolocation header required by the server.
 
 ```c#
-
+public class GeolocationCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is LocationRequiredException) {
+            // Handle Error
+        }
+    }
+}
 ```
 
 This error occurs when the location sent from the client is not authorized to access the protected endpoint on the MAG.
 
 ```c#
-
+public class GeolocationCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is LocationInvalidException) {
+            // Handle Error
+        }
+    }
+}
 ```
 
 This error occurs if the MAG requires an MSISDN value in the header, and the client fails to supply one.
 
 ```c#
-
+public class MsisdnCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is MobileNumberRequiredException) {
+            // Handle Error
+        }
+    }
+}
 ```
 
 
 This error occurs if the MSISDN value sent from the client is unauthorized to access the protected endpoint on the MAG.
 
 ```c#
-
+public class MsisdnCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is MobileNumberInvalidException) {
+            // Handle Error
+        }
+    }
+}
 ```
 
 
