@@ -725,6 +725,29 @@ MAS.PutTo(@"/protected/resource/products", param, null, MASRequestResponseType.J
 MAS always monitors the network reachability status of the MAG URL. If your app needs monitoring, here's how to hook your app into monitoring.
 
 ```c#
+public class AppDelegate : UIApplicationDelegate
+{
+	public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+	{
+		//
+		// You can set the MAG monitor block like this.  It is recommended 
+		// to set this before starting MAS
+		//
+		MAS.SetGatewayMonitor((MASGatewayMonitoringStatus status) => {
+			... do something ...
+		});
+		
+		//
+		// Start MAS
+		//
+		MAS.Start(completion: (completed, error) => {
+		    ... 
+		});
+
+		return true;
+	}
+
+}    
 
 ```
 
@@ -733,7 +756,7 @@ MAS always monitors the network reachability status of the MAG URL. If your app 
 You can register the MAG to monitor status update notifications.  The notification is defined in MASConstants as shown below:
 
 ```c#
-
+MASGatewayMonitorStatusUpdateNotification
 ```
 
 #### Conveniences
@@ -741,13 +764,13 @@ You can register the MAG to monitor status update notifications.  The notificati
 To determine if the network connection to the MAG is currently reachable:
 
 ```c#
-
+MAS.GatewayIsReachable;
 ```
 
 To determine the current status as a string at any time:
 
 ```c#
-
+MAS.GatewayMonitoringStatusAsString;
 ```
 
 
@@ -756,7 +779,7 @@ To determine the current status as a string at any time:
 To stop all processes in the library, use the following method:
 
 ```c#
-
+void MAS.Stop(MASCompletionErrorBlock completion);
 ```
 
 #### Reset all app, device, and user credentials
@@ -764,7 +787,7 @@ To stop all processes in the library, use the following method:
 To reset all app, device, and user credentials in memory, or in the local and shared group keychains, use the following method:  
 
 ```c#
-
+void MASDevice.ResetLocally();
 ```
 
 ::: alert info
@@ -772,7 +795,7 @@ To reset all app, device, and user credentials in memory, or in the local and sh
 :::
 
 ::: alert info
-**Note:** This only resets the credentials on the device. To reset and deregister the device record on the MAG, call [[MASDevice currentDevice] deregisterWithCompletion:].
+**Note:** This only resets the credentials on the device. To reset and deregister the device record on the MAG, call MASDevice.CurrentDevice().DeregisterWithCompletion(MASCompletionErrorBlock completion).
 :::
 
 ::: alert info
@@ -790,7 +813,9 @@ You can programmatically deregister a device to:
 Deregistration removes the device record from MAG. Use this feature with caution because it may not be easy for end users to use if you make it publicly available.  We suggest a warning UI component or similar to indicate to the user exactly what they are doing, with a confirmation before proceeding with this action.
 
 ```c#
-
+MASDevice.CurrentDevice().DeregisterWithCompletion(completion: (completed, error) => {
+	... 
+});
 ```
 
 :::alert info
@@ -800,7 +825,9 @@ Deregistration removes the device record from MAG. Use this feature with caution
 To listen for the following notifications:
 
 ```c#
-
+MASDeviceWillDeregisterNotification
+MASDeviceDidFailToDeregisterNotification
+MASDeviceDidDeregisterNotification
 ```
 
 #### Notifications
@@ -814,7 +841,20 @@ The SDK determines the server switch by these configuration values: **hostname, 
 All errors that occur during SDK startup are returned in the completion block of the method. 
 
 ```c#
-
+//Initializing the SDK
+MAS.Start(completion: (completed, error) => {    
+	if (error)
+	{
+		//  Handle error here
+		if(error.Domain.Equals(MASFoundationErrorDomain))
+		{
+			//  MASFoundation error domain
+		}
+		else if(error.Domain.Equals(MASFoundationErrorDomainLocal))
+		{
+			//  MASFoundation local error domain
+		}
+});
 ```
 
 All errors that are returned from the startup process should contain proper error message descriptions in `error.localizedDescription` and `error.userInfo`.
@@ -822,7 +862,7 @@ All errors that are returned from the startup process should contain proper erro
 ##### MASFoundationErrorDomain
 
 ```c#
-
+NSString MASFoundationErrorDomain = "com.ca.MASFoundation.Error:ErrorDomain";
 ```
 This error is returned when the SDK fails during communications: app registration, device registration, or user authentication with backend services. This can be caused by invalid configuration values, or  misconfiguration on the backend services. 
 
@@ -831,14 +871,14 @@ The error should contain: 1) explanation of the error, 2) the backend services' 
 ##### MASFoundationErrorDomainLocal
 
 ```c#
-
+NSString MASFoundationErrorDomainLocal = "com.ca.MASFoundation.localError:ErrorDomain";
 ```
 This error is returned when the SDK fails because of client SDK configuration issues. The most common issues are: invalid JSON configuration file, misconfigured device settings (i.e. geolocation or other permissions), or network issues.
 
 ##### MASFoundationErrorDomainTargetAPI
 
 ```c#
-
+NSString MASFoundationErrorDomainTargetAPI = "com.ca.MASFoundation.targetAPI:ErrorDomain";
 ```
 This error is returned only when a custom endpoint on a backend service fails.
 
@@ -847,7 +887,33 @@ This error is returned only when a custom endpoint on a backend service fails.
 You can get notifications of the app registration, device registration and user authentication. These notifications are defined in MASConstants as shown below:
 
 ```c#
+// SDK initialization lifecycle notifications
+MASWillStartNotification
+MASDidFailToStartNotification
+MASDidStartNotification
+MASWillStopNotification
+MASDidFailToStopNotification
+MASDidStopNotification
 
+// SDK initialization server switch notifications
+MASWillSwitchGatewayServerNotification
+MASDidSwitchGatewayServerNotification
+
+// Device de-registration notifications
+MASDeviceWillDeregisterNotification
+MASDeviceDidFailToDeregisterNotification
+MASDeviceDidDeregisterNotification
+
+// User authentication notifications
+MASUserWillAuthenticateNotification
+MASUserDidFailToAuthenticateNotification
+MASUserDidAuthenticateNotification
+MASUserWillLogoutNotification
+MASUserDidFailToLogoutNotification
+MASUserDidLogoutNotification
+MASUserWillUpdateInformationNotification
+MASUserDidFailToUpdateInformationNotification
+MASUserDidUpdateInformationNotification
 ```
 
 ## Troubleshoot Your App
@@ -888,7 +954,7 @@ x-ca-err = 1000202.
 The MASFoundation domain indicates a MAG server endpoint error. These errors occur during SDK startup, and include errors on registering the client, registering the device, and authenticating the user.
 
 ```c#
-
+NSString MASFoundationErrorDomain = "com.ca.MASFoundation.Error:ErrorDomain";
 ```
 
 **MASFoundation.localError**
@@ -901,7 +967,7 @@ The MASFoundation.localError domain indicates a client side error, for example:
 - Invalid id_token format or id_token expiration when the client first receives the id_token
 
 ```c#
-
+NSString MASFoundationErrorDomainLocal = "com.ca.MASFoundation.localError:ErrorDomain";
 ```
 
 **MASFoundation.targetAPI**
@@ -927,7 +993,7 @@ The associated client is disabled.
 - **xxxx000 Unknown**
 
 ```c#
-
+NSString MASFoundationErrorDomainTargetAPI = "com.ca.MASFoundation.targetAPI:ErrorDomain";
 ```
 ### Reset the App
 
@@ -937,6 +1003,18 @@ During app testing (or other administrative/devops use cases), you may need to r
 - You get an error message that the device is already registered
 
 Use the following method to deregister the device and remove the record on MAG. Note that all apps associated with the device are deregistered. 
+
+```c#
+MASDevice.CurrentDevice().DeregisterWithCompletion(completion: (completed, error) => {
+	if (completed && error != nil)
+	{
+		// The device is successfully deregistered.
+	}
+	else {
+		//Handle the error
+	}
+});
+```
 
 ### iTunes Store Operation Failed
 
