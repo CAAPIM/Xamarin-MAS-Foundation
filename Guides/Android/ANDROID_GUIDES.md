@@ -683,18 +683,18 @@ IMASRequest postRequest = builder.Build();
 
   Run the following command in a terminal window:
 ```c#
-    
+
 ```
 **Note:** Whenever you restart the device or emulator, you must rerun the command to enable debug.
 
 ### Enable Debug During Runtime
 
 ```c#
-   
+
 ```
 
 ### Configure app for network monitoring
- 
+
 If your application needs monitoring, here's how to hook up your application into monitoring the network call:
 
 ```c#
@@ -743,7 +743,7 @@ To reset all application, device, and user credentials in memory, or in the loca
 :::
 
 ::: alert info
-**Note:** This only resets the credentials on the device. To reset and deregister the device record on the MAG, call `MASDevice.getCurrentDevice().deregister()`.
+**Note:** This only resets the credentials on the device. To reset and deregister the device record on the MAG, call `MASDevice.CurrentDevice.Deregister()`.
 :::
 
 #### Handle errors
@@ -759,9 +759,9 @@ Extract more information from the `onError` callback:
 
 This section describes some of the issues that can occur between your app and the MAG server.
 
-#### msso_config.json file 
+#### msso_config.json file
 
-The msso_config.json file is how the Mobile SDK communicates with the MAG server. It contains OAuth scope values that provide permissions to operations and access to resources for your app. If the file has missing or incorrect scopes, this can cause errors. 
+The msso_config.json file is how the Mobile SDK communicates with the MAG server. It contains OAuth scope values that provide permissions to operations and access to resources for your app. If the file has missing or incorrect scopes, this can cause errors.
 
 **Scope help for Admins:**
 
@@ -832,11 +832,11 @@ MASException represents a general error from the Mobile SDK. The MASException is
 
 - **xxxx990 Access Token Expired**
   Although the access_token is accepted by the MAG server, the application server considers the token expired. This can occur when the MAG server and the application server are not synchronized. In this case the Access Token is expired, the token is removed from the keychain and the process flow repeated, this time without an access token. With no access token, a refresh token is issued.
-- **xxxx991 Access Token Not Granted** 
+- **xxxx991 Access Token Not Granted**
   The API requires a SCOPE value that the request does not contain.
 - **xxxx992 No Access Token**
   The access_token was not included in the request, or the same access_token was included more than once in the same request. Not testable from client SDK.
-- **xxxx993 Token is disabled** 
+- **xxxx993 Token is disabled**
   The associated client is disabled.
 - **xxxx000 Unknown**
   Not testable from the client SDK.
@@ -861,7 +861,7 @@ During app testing (or other administrative/devops use cases), you may need to r
 - The device record has been removed on the MAG
 - You get an error message that the device is already registered
 
-Use the following method to deregister the device and remove the record on MAG. Note that all apps associated with the device are deregistered. 
+Use the following method to deregister the device and remove the record on MAG. Note that all apps associated with the device are deregistered.
 
 ### Deregister a device
 
@@ -877,6 +877,20 @@ Deregistration removes the device record from MAG. Use this feature with caution
 
 
 ```c#
+MASDevice.CurrentDevice.Deregister(new DeregisterCallback());
+
+// Deregister Callback
+public class DeregisterCallback : MASCallback
+{
+  public override void OnSuccess(Java.Lang.Object result)
+  {
+      // The device is successfully deregistered
+  }
+  public override void OnError(Throwable e)
+  {
+      // Handle the error
+  }
+}
 
 ```
 
@@ -889,7 +903,7 @@ This error means that the server security configuration in the MASSecurityConfig
 
 #### Authentication errors
 
-If you get invalid token, unauthorized, or other authentication errors, it may be due to a MAG server change.  Your Admin must change a client parameter (documented in the 4.0 Release Notes) to allow more than one token per user/client (default). Without making the server changes, the Mobile SDK will not allow the same user to log in to multiple apps instances. 
+If you get invalid token, unauthorized, or other authentication errors, it may be due to a MAG server change.  Your Admin must change a client parameter (documented in the 4.0 Release Notes) to allow more than one token per user/client (default). Without making the server changes, the Mobile SDK will not allow the same user to log in to multiple apps instances.
 
 #### Disable PKCE
 
@@ -907,7 +921,7 @@ This is a common issue that is caused by the following conditions:
 * There is an application already installed with a different msso_config file.
 
 To resolve this issue, try the following;
-1. Deregister the application from the MAG Manager by issuing a deregister request. 
+1. Deregister the application from the MAG Manager by issuing a deregister request.
 2. Uninstall the applications from your device that have conflicting registrations.
 3. Log into the MAG Manager and remove the client registration for your application.
 
@@ -915,12 +929,12 @@ To resolve this issue, try the following;
 
 The MAG server secures device registration and re-registration with this simple logic: only the previously-registered user or client can perform the re-registration. This logic (which resides in policy), is perfect for production environments. However, in Mobile SDK 1.5 and earlier, this caused "device already registered" errors during app testing with multiple users and uninstalling/reinstalling the app.
 
-In this release, the Mobile SDK generates a new device identifier after uninstall/reinstall, which reduces the likelihood that you'll get this error. 
+In this release, the Mobile SDK generates a new device identifier after uninstall/reinstall, which reduces the likelihood that you'll get this error.
 
 But if you get this error, follow these steps to delete unwanted registered device entries in MAG Manager. If you don't have experience with MAG Manager, work with your Admin.
 1. Log into the MAG Manager. For example: `https://your_hostname/instanceModifier/mag/manager`
 2. Find your registered device.    
-If you don’t know the device user, enter “*” in the “Lookup values for user” field. 
+If you don’t know the device user, enter “*” in the “Lookup values for user” field.
 3. Find your device identifier by calling this method in the Mobile SDK: MASDevice.getCurrentDevice().getIdentifier().
 4. Map the device identifier to the OU attribute in MAG Manager (for example: OU=08f8ce12096fcf9d1a1779e4f9dc5fe15519fa2b4ace2af904cf954cc5f5c4e5), Registered Name (DN) column.
 4. Click “Delete Device” to delete the device.
@@ -930,7 +944,7 @@ If you don’t know the device user, enter “*” in the “Lookup values for u
 :::
 
 :::alert info
-**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG server. 
+**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG server.
 :::
 
 #### Requests are failing
@@ -953,7 +967,7 @@ Any of the following:
 - Certificate DN is too long and exceeds the maximum length
 
 ::: alert danger
-**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG Server. 
+**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG Server.
 :::
 
 ### Platform Limitations During App Development
