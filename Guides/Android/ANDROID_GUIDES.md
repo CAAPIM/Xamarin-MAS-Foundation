@@ -735,7 +735,7 @@ To stop all processes in the library:
 To reset all application, device, and user credentials in memory, or in the local and shared group keychains, use the following method:
 
 ```c#
-
+MASDevice.CurrentDevice.ResetLocally();
 ```
 
 ::: alert info
