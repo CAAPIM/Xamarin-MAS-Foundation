@@ -715,7 +715,7 @@ The following code requests access to the device phone number which is required 
 ```c#
 if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
 {
-    if (CheckSelfPermission(Manifest.Permission.AccessFineLocation)
+    if (CheckSelfPermission(Manifest.Permission.ReadSms)
             != Android.Content.PM.Permission.Granted)
     {
         RequestPermissions(new string[] { Manifest.Permission.ReadSms }, 0);
@@ -732,7 +732,7 @@ if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
     if (CheckSelfPermission(Manifest.Permission.AccessFineLocation)
             != Android.Content.PM.Permission.Granted)
     {
-        RequestPermissions(new string[] { Manifest.Permission.ReadSms }, 0);
+        RequestPermissions(new string[] { Manifest.Permission.AccessFineLocation }, 0);
     }
 }
 
