@@ -222,7 +222,59 @@ namespace MASFoundation
         [Field("MASFoundationVersionString", "__Internal")]
         //byte[] MASFoundationVersionString { get; }
         IntPtr MASFoundationVersionString { get; }
+
     }
+
+    //[Static]
+    //// [Verify(ConstantsInterfaceAssociation)]
+    //partial interface MASConstants
+    //{
+    //    // MAS Errors
+    //    // static NSString *const _Nonnull MASFoundationErrorDomain = @"com.ca.MASFoundation:ErrorDomain";
+    //    [Field("MASFoundationErrorDomain", "__Internal")]
+    //    NSString MASFoundationErrorDomain { get; }
+
+    //    // static NSString *const _Nonnull MASFoundationErrorDomainLocal = @"com.ca.MASFoundation.localError:ErrorDomain";
+    //    [Field("MASFoundationErrorDomainLocal", "__Internal")]
+    //    NSString MASFoundationErrorDomainLocal { get; }
+
+    //    // static NSString *const _Nonnull MASFoundationErrorDomainTargetAPI = @"com.ca.MASFoundation.targetAPI:ErrorDomain";
+    //    [Field("MASFoundationErrorDomainTargetAPI", "__Internal")]
+    //    NSString MASFoundationErrorDomainTargetAPI { get; }
+
+    //    // MAS Notifications
+    //    // static NSString *const _Nonnull MASWillStartNotification = @"MASWillStartNotification";
+    //    [Field("MASWillStartNotification", "__Internal")]
+    //    NSString MASWillStartNotification { get; }
+
+    //    // static NSString *const _Nonnull MASDidFailToStartNotification = @"MASDidFailToStartNotification";
+    //    [Field("MASDidFailToStartNotification", "__Internal")]
+    //    NSString MASDidFailToStartNotification { get; }
+
+    //    // static NSString *const _Nonnull MASDidStartNotification = @"MASDidStartNotification";
+    //    [Field("MASDidStartNotification", "__Internal")]
+    //    NSString MASDidStartNotification { get; }
+
+    //    // static NSString *const _Nonnull MASWillStopNotification = @"MASWillStopNotification";
+    //    [Field("MASWillStopNotification", "__Internal")]
+    //    NSString MASWillStopNotification { get; }
+
+    //    // static NSString *const _Nonnull MASDidFailToStopNotification = @"MASDidFailToStopNotification";
+    //    [Field("MASDidFailToStopNotification", "__Internal")]
+    //    NSString MASDidFailToStopNotification { get; }
+
+    //    // static NSString *const _Nonnull MASDidStopNotification = @"MASDidStopNotification";
+    //    [Field("MASDidStopNotification", "__Internal")]
+    //    NSString MASDidStopNotification { get; }
+
+    //    // static NSString *const _Nonnull MASWillSwitchGatewayServerNotification = @"MASWillSwitchGatewayServerNotification";
+    //    [Field("MASWillSwitchGatewayServerNotification", "__Internal")]
+    //    NSString MASWillSwitchGatewayServerNotification { get; }
+
+    //    // static NSString *const _Nonnull MASDidSwitchGatewayServerNotification = @"MASDidSwitchGatewayServerNotification";
+    //    [Field("MASDidSwitchGatewayServerNotification", "__Internal")]
+    //    NSString MASDidSwitchGatewayServerNotification { get; }
+    //}
 
     // @protocol MASProximityLoginDelegate <NSObject>
     //[Protocol, Model]
@@ -3601,4 +3653,6 @@ namespace MASFoundation
         [return: NullAllowed]
         MASAuthCredentialsPassword InitWithUsername(string username, string password);
     }
+
+
 }

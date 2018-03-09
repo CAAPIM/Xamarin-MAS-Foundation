@@ -291,7 +291,7 @@ namespace BasicAuthSample
                 MASRequest request = requestBuilder.Build();
 
                 //  Using MASRequest object, invoke API
-                MAS.Invoke(request, completion: (responseInfo, error) =>
+                MAS.Invoke(request, completion: (response, responseObject, error) =>
                 {
                     if (error != null)
                     {
@@ -299,14 +299,15 @@ namespace BasicAuthSample
                         Console.WriteLine("Error: {0}", error.LocalizedDescription);
                         Alert("MAS.Invoke", error.LocalizedDescription);
                     }
-                    else if (responseInfo != null)
+                    else if (responseObject != null)
                     {
                         //  If a response is returned
                         string value = "No value";
+                        NSDictionary result = (NSDictionary)responseObject;
                         //  MAG iOS Mobile SDK's response structure in JSON
-                        if (responseInfo.ContainsKey(new NSString("MASResponseInfoBodyInfoKey")))
+                        if (result.ContainsKey(new NSString("MASResponseInfoBodyInfoKey")))
                         {
-                            NSDictionary values = responseInfo;
+                            NSDictionary values = result;
                             value = values[NSObject.FromObject("MASResponseInfoBodyInfoKey")].ToString();
                         }
                         Console.WriteLine("Success: {0}", value);
