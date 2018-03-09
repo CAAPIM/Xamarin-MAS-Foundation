@@ -677,24 +677,161 @@ builder.Post(form);
 IMASRequest postRequest = builder.Build();
 ```
 
+### Geolocation
+
+**Description**: Access to protected APIs can be based on the physical location of the application user. The application passes the physical location information to the MAG in the http header of an access request. Within the http header, location is expressed using either the latitude/longitude coordinates of the host device or the phone number associated with the device.
+
+The MAG extracts the location, validates the data, then returns it to the application with a success or error message.
+
+**To enable**: The following permission are required:
+
+For MSISDN:
+
+```xml
+<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+```
+For Location:
+
+To allow an app to access an approximate location derived from network location sources such as cell towers and Wi-Fi:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+```
+
+To allow an app to access a precise location from location sources such as GPS, cell towers, and Wi-Fi:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+```
+
+**Dependencies**: Your MAG Admin must customize policies to enable and configure geolocation, and customize the msso_config.json configuration file for MSISDN.
+
+#### Coding Runtime Permissions
+For runtime permissions, the application displays a dialog to the user requesting permission when needed. The user can decide whether or not to grant access.
+
+##### MSISDN Permission
+The following code requests access to the device phone number which is required by the geolocation service.
+
+```c#
+if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
+{
+    if (CheckSelfPermission(Manifest.Permission.ReadSms)
+            != Android.Content.PM.Permission.Granted)
+    {
+        RequestPermissions(new string[] { Manifest.Permission.ReadSms }, 0);
+    }
+}
+
+```
+##### Location Permission
+The following code requests access to the location information. The  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> permission is set in the manifest file.
+
+```c#
+if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
+{
+    if (CheckSelfPermission(Manifest.Permission.AccessFineLocation)
+            != Android.Content.PM.Permission.Granted)
+    {
+        RequestPermissions(new string[] { Manifest.Permission.AccessFineLocation }, 0);
+    }
+}
+
+```
+
+##### Error Handling
+
+This error occurs if the client fails to provide the geolocation header required by the server.
+
+```c#
+public class GeolocationCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is LocationRequiredException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+This error occurs when the location sent from the client is not authorized to access the protected endpoint on the MAG.
+
+```c#
+public class GeolocationCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is LocationInvalidException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+This error occurs if the MAG requires an MSISDN value in the header, and the client fails to supply one.
+
+```c#
+public class MsisdnCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is MobileNumberRequiredException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+
+This error occurs if the MSISDN value sent from the client is unauthorized to access the protected endpoint on the MAG.
+
+```c#
+public class MsisdnCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is MobileNumberInvalidException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+
 ## Debug the SDK
 
 ### Enable Debug Before App is Running
 
   Run the following command in a terminal window:
 ```c#
-    
+
 ```
 **Note:** Whenever you restart the device or emulator, you must rerun the command to enable debug.
 
 ### Enable Debug During Runtime
 
 ```c#
-   
+
 ```
 
 ### Configure app for network monitoring
- 
+
 If your application needs monitoring, here's how to hook up your application into monitoring the network call:
 
 ```c#
@@ -759,9 +896,9 @@ Extract more information from the `onError` callback:
 
 This section describes some of the issues that can occur between your app and the MAG server.
 
-#### msso_config.json file 
+#### msso_config.json file
 
-The msso_config.json file is how the Mobile SDK communicates with the MAG server. It contains OAuth scope values that provide permissions to operations and access to resources for your app. If the file has missing or incorrect scopes, this can cause errors. 
+The msso_config.json file is how the Mobile SDK communicates with the MAG server. It contains OAuth scope values that provide permissions to operations and access to resources for your app. If the file has missing or incorrect scopes, this can cause errors.
 
 **Scope help for Admins:**
 
@@ -832,11 +969,11 @@ MASException represents a general error from the Mobile SDK. The MASException is
 
 - **xxxx990 Access Token Expired**
   Although the access_token is accepted by the MAG server, the application server considers the token expired. This can occur when the MAG server and the application server are not synchronized. In this case the Access Token is expired, the token is removed from the keychain and the process flow repeated, this time without an access token. With no access token, a refresh token is issued.
-- **xxxx991 Access Token Not Granted** 
+- **xxxx991 Access Token Not Granted**
   The API requires a SCOPE value that the request does not contain.
 - **xxxx992 No Access Token**
   The access_token was not included in the request, or the same access_token was included more than once in the same request. Not testable from client SDK.
-- **xxxx993 Token is disabled** 
+- **xxxx993 Token is disabled**
   The associated client is disabled.
 - **xxxx000 Unknown**
   Not testable from the client SDK.
@@ -861,7 +998,7 @@ During app testing (or other administrative/devops use cases), you may need to r
 - The device record has been removed on the MAG
 - You get an error message that the device is already registered
 
-Use the following method to deregister the device and remove the record on MAG. Note that all apps associated with the device are deregistered. 
+Use the following method to deregister the device and remove the record on MAG. Note that all apps associated with the device are deregistered.
 
 ### Deregister a device
 
@@ -889,7 +1026,7 @@ This error means that the server security configuration in the MASSecurityConfig
 
 #### Authentication errors
 
-If you get invalid token, unauthorized, or other authentication errors, it may be due to a MAG server change.  Your Admin must change a client parameter (documented in the 4.0 Release Notes) to allow more than one token per user/client (default). Without making the server changes, the Mobile SDK will not allow the same user to log in to multiple apps instances. 
+If you get invalid token, unauthorized, or other authentication errors, it may be due to a MAG server change.  Your Admin must change a client parameter (documented in the 4.0 Release Notes) to allow more than one token per user/client (default). Without making the server changes, the Mobile SDK will not allow the same user to log in to multiple apps instances.
 
 #### Disable PKCE
 
@@ -907,7 +1044,7 @@ This is a common issue that is caused by the following conditions:
 * There is an application already installed with a different msso_config file.
 
 To resolve this issue, try the following;
-1. Deregister the application from the MAG Manager by issuing a deregister request. 
+1. Deregister the application from the MAG Manager by issuing a deregister request.
 2. Uninstall the applications from your device that have conflicting registrations.
 3. Log into the MAG Manager and remove the client registration for your application.
 
@@ -915,12 +1052,12 @@ To resolve this issue, try the following;
 
 The MAG server secures device registration and re-registration with this simple logic: only the previously-registered user or client can perform the re-registration. This logic (which resides in policy), is perfect for production environments. However, in Mobile SDK 1.5 and earlier, this caused "device already registered" errors during app testing with multiple users and uninstalling/reinstalling the app.
 
-In this release, the Mobile SDK generates a new device identifier after uninstall/reinstall, which reduces the likelihood that you'll get this error. 
+In this release, the Mobile SDK generates a new device identifier after uninstall/reinstall, which reduces the likelihood that you'll get this error.
 
 But if you get this error, follow these steps to delete unwanted registered device entries in MAG Manager. If you don't have experience with MAG Manager, work with your Admin.
 1. Log into the MAG Manager. For example: `https://your_hostname/instanceModifier/mag/manager`
 2. Find your registered device.    
-If you don’t know the device user, enter “*” in the “Lookup values for user” field. 
+If you don’t know the device user, enter “*” in the “Lookup values for user” field.
 3. Find your device identifier by calling this method in the Mobile SDK: MASDevice.getCurrentDevice().getIdentifier().
 4. Map the device identifier to the OU attribute in MAG Manager (for example: OU=08f8ce12096fcf9d1a1779e4f9dc5fe15519fa2b4ace2af904cf954cc5f5c4e5), Registered Name (DN) column.
 4. Click “Delete Device” to delete the device.
@@ -930,7 +1067,7 @@ If you don’t know the device user, enter “*” in the “Lookup values for u
 :::
 
 :::alert info
-**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG server. 
+**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG server.
 :::
 
 #### Requests are failing
@@ -953,7 +1090,7 @@ Any of the following:
 - Certificate DN is too long and exceeds the maximum length
 
 ::: alert danger
-**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG Server. 
+**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG Server.
 :::
 
 ### Platform Limitations During App Development
