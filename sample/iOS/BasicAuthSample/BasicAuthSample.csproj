@@ -132,6 +132,7 @@
   <ItemGroup>
     <BundleResource Include="msso_config.json" />
     <BundleResource Include="msso_config2.json" />
+    <BundleResource Include="msso_config_public.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
