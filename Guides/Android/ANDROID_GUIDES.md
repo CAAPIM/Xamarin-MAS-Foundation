@@ -677,6 +677,143 @@ builder.Post(form);
 IMASRequest postRequest = builder.Build();
 ```
 
+### Geolocation
+
+**Description**: Access to protected APIs can be based on the physical location of the application user. The application passes the physical location information to the MAG in the http header of an access request. Within the http header, location is expressed using either the latitude/longitude coordinates of the host device or the phone number associated with the device.
+
+The MAG extracts the location, validates the data, then returns it to the application with a success or error message.
+
+**To enable**: The following permission are required:
+
+For MSISDN:
+
+```xml
+<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+```
+For Location:
+
+To allow an app to access an approximate location derived from network location sources such as cell towers and Wi-Fi:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+```
+
+To allow an app to access a precise location from location sources such as GPS, cell towers, and Wi-Fi:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+```
+
+**Dependencies**: Your MAG Admin must customize policies to enable and configure geolocation, and customize the msso_config.json configuration file for MSISDN.
+
+#### Coding Runtime Permissions
+For runtime permissions, the application displays a dialog to the user requesting permission when needed. The user can decide whether or not to grant access.
+
+##### MSISDN Permission
+The following code requests access to the device phone number which is required by the geolocation service.
+
+```c#
+if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
+{
+    if (CheckSelfPermission(Manifest.Permission.ReadSms)
+            != Android.Content.PM.Permission.Granted)
+    {
+        RequestPermissions(new string[] { Manifest.Permission.ReadSms }, 0);
+    }
+}
+
+```
+##### Location Permission
+The following code requests access to the location information. The  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> permission is set in the manifest file.
+
+```c#
+if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
+{
+    if (CheckSelfPermission(Manifest.Permission.AccessFineLocation)
+            != Android.Content.PM.Permission.Granted)
+    {
+        RequestPermissions(new string[] { Manifest.Permission.AccessFineLocation }, 0);
+    }
+}
+
+```
+
+##### Error Handling
+
+This error occurs if the client fails to provide the geolocation header required by the server.
+
+```c#
+public class GeolocationCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is LocationRequiredException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+This error occurs when the location sent from the client is not authorized to access the protected endpoint on the MAG.
+
+```c#
+public class GeolocationCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is LocationInvalidException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+This error occurs if the MAG requires an MSISDN value in the header, and the client fails to supply one.
+
+```c#
+public class MsisdnCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is MobileNumberRequiredException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+
+This error occurs if the MSISDN value sent from the client is unauthorized to access the protected endpoint on the MAG.
+
+```c#
+public class MsisdnCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is MobileNumberInvalidException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+
 ## Debug the SDK
 
 ### Enable Debug Before App is Running

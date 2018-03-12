@@ -62,7 +62,9 @@ namespace BasicAuthSample
             {
 
                 // Change the default Configuration
-                MAS.SetConfigurationFileName("custom.json");
+                //MAS.SetConfigurationFileName("custom.json");
+                MAS.SetConfigurationFileName("msso_config_public.json");
+
                 // MAS.Start(Context context, bool shouldUseDefault);
                 MAS.Start(activity, true);
 
