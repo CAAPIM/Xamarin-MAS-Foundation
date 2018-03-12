@@ -849,8 +849,7 @@ The following Subclasses provide more details.
 To capture the result of an AuthenticationException when the user enters the wrong password:
 
 ```c#
-LoginCallback loginCallback = new LoginCallback();
-MASUser.Login("username", "password".ToCharArray(), loginCallback);
+MASUser.Login("username", "password".ToCharArray(), new LoginCallback());
 
 private class LoginCallback : MASCallback
 {
@@ -860,9 +859,8 @@ private class LoginCallback : MASCallback
         }
         else {
             // Handle other failure
+            MAS.CancelAllRequests();
         }
-
-        MAS.CancelAllRequests();
     }
 
     public override void OnSuccess(Java.Lang.Object user) {
