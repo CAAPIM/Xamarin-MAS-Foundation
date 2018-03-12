@@ -683,14 +683,15 @@ IMASRequest postRequest = builder.Build();
 
   Run the following command in a terminal window:
 ```c#
-
+adb shell setprop log.tag.MAS VERBOSE
 ```
 **Note:** Whenever you restart the device or emulator, you must rerun the command to enable debug.
 
 ### Enable Debug During Runtime
 
 ```c#
-
+// Enable debug mode
+MAS.Debug();
 ```
 
 ### Configure app for network monitoring
@@ -698,8 +699,20 @@ IMASRequest postRequest = builder.Build();
 If your application needs monitoring, here's how to hook up your application into monitoring the network call:
 
 ```c#
+MAS.SetConnectionListener(new MASConnectionListener());
 
+private class MASConnectionListener : Java.Lang.Object,  IMASConnectionListener
+{
+    public void OnConnected(HttpURLConnection connection)
+    {
+        // On connection connected
+    }
 
+    public void OnObtained(HttpURLConnection connection)
+    {
+        // On connection obtained
+    }
+}
 ```
 
 **Note:** You should not dump sensitive information to Production.
@@ -709,7 +722,22 @@ If your application needs monitoring, here's how to hook up your application int
 To determine if the network connection to the MAG is currently reachable:
 
 ```c#
+MAS.GatewayIsReachable(new GatewayIsReachableCallback());
 
+private class GatewayIsReachableCallback : MASCallback
+{
+    public override void OnError(Throwable p0)
+    {
+        // Handle error
+        Console.WriteLine(p0);
+    }
+
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // GatewayIsReachable success result
+        Console.WriteLine(result);
+    }
+}
 ```
 
 #### Rename the msso_config.json file
@@ -717,8 +745,7 @@ To determine if the network connection to the MAG is currently reachable:
 You can rename the msso_config.json configuration file, as long as you use the .json extension, and you change the filename before you start the library processes.
 
 ```c#
-
-
+MAS.SetConfigurationFileName("custom_msso.json");
 ```
 
 
@@ -727,7 +754,7 @@ You can rename the msso_config.json configuration file, as long as you use the .
 To stop all processes in the library:
 
 ```c#
-
+MAS.Stop();
 ```
 
 #### Reset all app, device, and user credentials
@@ -750,7 +777,15 @@ MASDevice.CurrentDevice.ResetLocally();
 Extract more information from the `onError` callback:
 
 ```c#
-
+OnError(Throwable t)
+{
+    if (t.Cause is TargetApiException) {
+        TargetApiException exception = (TargetApiException)t.Cause;
+        Console.WriteLine("Response Message: {0}", exception.Response.ResponseMessage); // Server resposne message
+        Console.WriteLine("Response Body: {0}", exception.Response.Body.Content.ToString()); // Server response content
+        Console.WriteLine("Response Code: {0}", exception.Response.ResponseCode);// Server response http code
+    }
+}
 ```
 
 ## Troubleshoot Your App
@@ -814,7 +849,26 @@ The following Subclasses provide more details.
 To capture the result of an AuthenticationException when the user enters the wrong password:
 
 ```c#
+LoginCallback loginCallback = new LoginCallback();
+MASUser.Login("username", "password".ToCharArray(), loginCallback);
 
+private class LoginCallback : MASCallback
+{
+    public override void OnError(Throwable e) {
+        if (e.Cause is AuthenticationException) {
+            // Invalid username or password
+        }
+        else {
+            // Handle other failure
+        }
+
+        MAS.CancelAllRequests();
+    }
+
+    public override void OnSuccess(Java.Lang.Object user) {
+        // Successful login
+    }
+}
 ```
 
 **MASException**
@@ -822,10 +876,23 @@ To capture the result of an AuthenticationException when the user enters the wro
 com.ca.mas.foundation.MASException
 ```
 
-MASException represents a general error from the Mobile SDK. The MASException is provided to the `MASCallback#onError` interface.
+MASException represents a general error from the Mobile SDK. The MASException is provided to the `MASCallback#OnError` interface.
 
 ```c#
+MAS.Invoke(request, new InvokeAPICallback());
 
+private class InvokeAPICallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result) {
+        // Handle successful invocation
+    }
+
+    public override void OnError(Throwable t) {
+        MASException exception = (MASException) t.Cause;
+        Console.WriteLine("Root cause: {0}", exception.RootCause); // retrieve the root cause of the exception
+
+    }
+}
 ```
 
 **Reserved x-ca-err Error Codes:**
@@ -845,12 +912,31 @@ MASException represents a general error from the Mobile SDK. The MASException is
 
 The TargetAPIException is used to capture errors originating from the application. The error is thrown when the target application API returns an http status code that is not within the range 200 - 299. These errors are primarily defined by the application developer.
 
-To receive the response from the API, use the request: `com.ca.mas.core.error.TargetApiException#getResponse`
+To receive the response from the API, use the request: `Com.CA.Mas.Core.Error.TargetApiException#Response`
 
 The following code shows how to capture the result of the request with TargetApiException interface:
 
 ```c#
+MAS.Invoke(request, new InvokeAPICallback());
 
+private class InvokeAPICallback : MASCallback
+{
+    OnError(Throwable t)
+    {
+        if (t.Cause is TargetApiException) {
+            TargetApiException exception = (TargetApiException)t.Cause;
+
+            if(exception.Response.ResponseCode == 404) {
+                // Do something
+            }
+            Console.WriteLine("Response Headers: {0}", exception.Response.Headers); // Server resposne headers
+            Console.WriteLine("Response Message: {0}", exception.Response.ResponseMessage); // Server resposne message
+            Console.WriteLine("Response Body: {0}", exception.Response.Body.Content); // Server response content
+            Console.WriteLine("Response Code: {0}", exception.Response.ResponseCode);// Server response http code
+        }
+    }
+    .....
+}
 ```
 
 
