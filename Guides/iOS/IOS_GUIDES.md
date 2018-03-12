@@ -271,11 +271,18 @@ By default, the Mobile SDK enforces all app credentials and data to **remain onl
 
 Before initializing the Mobile SDK, configure the keychain synchronization option:
 
-- YES: Mobile SDK credentials in keychain storage are sync'ed with iCloud
-- NO: Mobile SDK credentials in keychain storage are NOT sync'ed with iCloud (default)
+- `true`: Mobile SDK credentials in keychain storage are sync'ed with iCloud
+- `false`: Mobile SDK credentials in keychain storage are NOT sync'ed with iCloud (default)
 
 ```c#
+//
+//	Enable keychain synchronization
+//
+MAS.SetKeychainSynchronizable(true);
 
+//
+//	Disable keychain synchronization (default)
+//
 ```
 
 ## Login: User Authentication and Authorization
