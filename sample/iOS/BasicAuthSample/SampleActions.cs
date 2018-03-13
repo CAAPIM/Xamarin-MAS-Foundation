@@ -273,7 +273,7 @@ namespace BasicAuthSample
         //
         // Invoke a sample protected endpoint in the Gateway and display the returned JSON in a dialog
         //
-        public static void invokeProtectedAPI()
+        public static void InvokeProtectedAPI()
         {
             if (MAS.MASState != MASState.NotInitialized)
             {
@@ -284,9 +284,7 @@ namespace BasicAuthSample
                 //  Specify an endpoint path, any parameters or headers, and request/response type
                 //
                 requestBuilder.EndPoint = "/protected/resource/products";
-                requestBuilder.SetQueryParameter("operation", "listProducts");
-                requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
-                requestBuilder.ResponseType = MASRequestResponseType.Json;
+                requestBuilder.Body = new NSDictionary("operation", "listProducts");
 
                 //  Build MASRequestBuilder to convert into MASRequest object
                 MASRequest request = requestBuilder.Build();
@@ -302,19 +300,11 @@ namespace BasicAuthSample
                     }
                     else if (responseObject != null)
                     {
-                        //  If a response is returned
-                        string value = "No value";
-                        NSDictionary result = (NSDictionary)responseObject;
-                        //  MAG iOS Mobile SDK's response structure in JSON
-                        if (result.ContainsKey(new NSString("MASResponseInfoBodyInfoKey")))
-                        {
-                            NSDictionary values = result;
-                            value = values[NSObject.FromObject("MASResponseInfoBodyInfoKey")].ToString();
-                        }
-                        Console.WriteLine("Success: {0}", value);
-                        Alert("MAS.Invoke", value);
+                        Console.WriteLine("Success: {0}", responseObject.ToString());
+                        Alert("MAS.Invoke", responseObject.ToString());
                     }
                 });
+
             }
             else
             {

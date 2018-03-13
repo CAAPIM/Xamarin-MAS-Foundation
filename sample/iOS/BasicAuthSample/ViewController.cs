@@ -40,7 +40,7 @@ namespace BasicAuthSample
 
         partial void InvokeAPIButton_TouchUpInside(UIButton sender)
         {
-            SampleActions.invokeProtectedAPI();
+            SampleActions.InvokeProtectedAPI();
         }
 
 
