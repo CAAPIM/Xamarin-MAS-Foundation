@@ -2222,33 +2222,6 @@ namespace MASFoundation
         /// <param name="error">NSError error reference object that returns any error occurred during JWT signature.</param>
         [Export("setSignWithClaims:privateKey:error:")]
         void SetSignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
-
-        // -(void)setHeaderParameter:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-        /// <summary>
-        /// Append parameter into the header of a request.
-        /// </summary>
-        /// <param name="key">NSString containing name/type of the parameter.</param>
-        /// <param name="value">NSString containing value of the parameter.</param>
-        [Export("setHeaderParameter:value:")]
-        void SetHeaderParameter(string key, string value);
-
-        // -(void)setBodyParameter:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-        /// <summary>
-        /// Append parameter into the body of a request.
-        /// </summary>
-        /// <param name="key">NSString containing name/type of the parameter.</param>
-        /// <param name="value">NSString containing value of the parameter.</param>
-        [Export("setBodyParameter:value:")]
-        void SetBodyParameter(string key, string value);
-
-        // -(void)setQueryParameter:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-        /// <summary>
-        /// Append parameter into the URL of a request.
-        /// </summary>
-        /// <param name="key">NSString containing name/type of the parameter.</param>
-        /// <param name="value">NSString containing value of the parameter.M</param>
-        [Export("setQueryParameter:value:")]
-        void SetQueryParameter(string key, string value);
     }
 
     // @interface MASRequest : MASObject
