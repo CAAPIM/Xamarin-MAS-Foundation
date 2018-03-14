@@ -534,7 +534,7 @@ MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
 //  Specify an endpoint path, any parameters or headers, and request/response type
 //
 requestBuilder.EndPoint = "/protected/resource/products";
-requestBuilder.SetQueryParameter("operation", "listProducts");
+requestBuilder.Query = new NSDictionary("operation", "listProducts");
 requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
 requestBuilder.ResponseType = MASRequestResponseType.Json;
  
@@ -542,22 +542,16 @@ requestBuilder.ResponseType = MASRequestResponseType.Json;
 MASRequest request = requestBuilder.Build();
  
 //  Using MASRequest object, invoke API
-MAS.Invoke(request, completion: (responseInfo, error) => {
+MAS.Invoke(request, completion: (response, responseObject, error) => {
     if (error != null)
     {
         //  If an error was returned
         Console.WriteLine("Error: {0}", error.LocalizedDescription);
     }
-    else if (responseInfo != null)
+    else 
     {
         //  If a response is returned
-        string value = "No value";
-        //  MAG iOS Mobile SDK's response structure in JSON
-        if (responseInfo.ContainsKey(new NSString("MASResponseInfoBodyInfoKey")))
-        {
-            NSDictionary values = responseInfo;
-            value = values[NSObject.FromObject("MASResponseInfoBodyInfoKey")].ToString();
-        }
+        string value = responseObject == null ? "No value" : responseObject.ToString();
         Console.WriteLine("Success: {0}", value);
     }
 });
@@ -580,7 +574,7 @@ MASRequest request = MASRequest.GetFrom((requestBuilder) => {
 	//	Define request builder's properties within block
 	//
    requestBuilder.EndPoint = "/protected/resource/products";
-   requestBuilder.SetQueryParameter("operation", "listProducts");
+   requestBuilder.Query = new NSDictionary("operation", "listProducts");
    requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
    requestBuilder.ResponseType = MASRequestResponseType.Json;
 });
@@ -588,7 +582,7 @@ MASRequest request = MASRequest.GetFrom((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (responseInfo, error) => {});
+MAS.Invoke(request, completion: (response, responseObject, error) => {});
 ```
 
 ##### Delete method
@@ -604,7 +598,7 @@ MASRequest request = MASRequest.DeleteFrom((requestBuilder) => {
 	//	Define request builder's properties within block
 	//
    requestBuilder.EndPoint = "/protected/resource/products";
-   requestBuilder.SetQueryParameter("operation", "listProducts");
+   requestBuilder.Query = new NSDictionary("operation", "listProducts");
    requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
    requestBuilder.ResponseType = MASRequestResponseType.Json;
 });
@@ -612,7 +606,7 @@ MASRequest request = MASRequest.DeleteFrom((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (responseInfo, error) => {});
+MAS.Invoke(request, completion: (response, responseObject, error) => {});
 ```
 
 ##### Post method
@@ -628,7 +622,7 @@ MASRequest request = MASRequest.PostTo((requestBuilder) => {
 	//	Define request builder's properties within block
 	//
    requestBuilder.EndPoint = "/protected/resource/products";
-   requestBuilder.SetBodyParameter("operation", "listProducts");
+   requestBuilder.Query = new NSDictionary("operation", "listProducts");
    requestBuilder.RequestType = MASRequestResponseType.Json;
    requestBuilder.ResponseType = MASRequestResponseType.Json;
 });
@@ -636,7 +630,7 @@ MASRequest request = MASRequest.PostTo((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (responseInfo, error) => {});
+MAS.Invoke(request, completion: (response, responseObject, error) => {});
 ```
 
 ##### Put method
@@ -652,7 +646,7 @@ MASRequest request = MASRequest.PutTo((requestBuilder) => {
 	//	Define request builder's properties within block
 	//
    requestBuilder.EndPoint = "/protected/resource/products";
-   requestBuilder.SetBodyParameter("operation", "listProducts");
+   requestBuilder.Query = new NSDictionary("operation", "listProducts");
    requestBuilder.RequestType = MASRequestResponseType.Json;
    requestBuilder.ResponseType = MASRequestResponseType.Json;
 });
@@ -660,7 +654,7 @@ MASRequest request = MASRequest.PutTo((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (responseInfo, error) => {});
+MAS.Invoke(request, completion: (response, responseObject, error) => {});
 ```
 
 #### Simplified request methods
