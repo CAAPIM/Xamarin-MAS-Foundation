@@ -622,7 +622,7 @@ MASRequest request = MASRequest.PostTo((requestBuilder) => {
 	//	Define request builder's properties within block
 	//
    requestBuilder.EndPoint = "/protected/resource/products";
-   requestBuilder.Query = new NSDictionary("operation", "listProducts");
+   requestBuilder.Body = new NSDictionary("operation", "listProducts");
    requestBuilder.RequestType = MASRequestResponseType.Json;
    requestBuilder.ResponseType = MASRequestResponseType.Json;
 });
@@ -646,7 +646,7 @@ MASRequest request = MASRequest.PutTo((requestBuilder) => {
 	//	Define request builder's properties within block
 	//
    requestBuilder.EndPoint = "/protected/resource/products";
-   requestBuilder.Query = new NSDictionary("operation", "listProducts");
+   requestBuilder.Body = new NSDictionary("operation", "listProducts");
    requestBuilder.RequestType = MASRequestResponseType.Json;
    requestBuilder.ResponseType = MASRequestResponseType.Json;
 });
