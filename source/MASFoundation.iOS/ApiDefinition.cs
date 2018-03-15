@@ -357,7 +357,7 @@ namespace MASFoundation
         /// <value>NSArray of the certificates.</value>
         [NullAllowed, Export("certificates", ArgumentSemantic.Strong)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] Certificates { get; set; }
+        NSArray Certificates { get; set; }
 
         // @property (nonatomic, strong) NSArray * _Nullable publicKeyHashes;
         /// <summary>
@@ -366,7 +366,7 @@ namespace MASFoundation
         /// <value>NSArray of the public key hashes.</value>
         [NullAllowed, Export("publicKeyHashes", ArgumentSemantic.Strong)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] PublicKeyHashes { get; set; }
+        NSArray PublicKeyHashes { get; set; }
 
         // @property (readonly, nonatomic, strong) NSURL * _Nonnull host;
         /// <summary>
