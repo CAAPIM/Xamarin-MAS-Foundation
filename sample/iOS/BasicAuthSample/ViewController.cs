@@ -4,6 +4,7 @@
 // This software is for evaluation purposes only and currently not supported by CA.
 
 using System;
+using System.Threading.Tasks;
 using UIKit;
 using MASFoundation;
 using Foundation;
@@ -30,19 +31,41 @@ namespace BasicAuthSample
         partial void StartSDKButton_TouchUpInside(UIButton sender)
         {
             // Comment/Uncomment desired start method (One uncommented at a time)
-            SampleActions.StartSDK();
-            //SampleActions.StartSDKChangeDefaultConfig();
+            //SampleActions.StartSDK();
+            SampleActions.StartSDKChangeDefaultConfig();
             //SampleActions.StartSDKCustomJson();
             //SampleActions.StartSDKFileUrl();
             //SampleActions.StartSDKEnrolmentURL();
         }
 
 
-        partial void InvokeAPIButton_TouchUpInside(UIButton sender)
+        async partial void InvokeAPIButton_TouchUpInside(UIButton sender)
         {
-            SampleActions.InvokeProtectedAPI();
+            var invokeResult = await InvokeProtectedApiAsync();
+
+            SampleActions.Alert("Response", invokeResult.Arg1.ToString());
         }
 
+        private async Task<InvokeResult> InvokeProtectedApiAsync()
+        {
+            MAS.GrantFlow = MASGrantFlow.ClientCredentials;
+            MAS.SetConfigurationFileName("msso_config_public");
+
+            var defaultConfigurationsResult = await MAS.StartWithDefaultConfigurationAsync(true);
+
+            MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
+
+            //
+            //  Specify an endpoint path, any parameters or headers, and request/response type
+            //
+            requestBuilder.EndPoint = "/protected/resource/products";
+            requestBuilder.Body = new NSDictionary("operation", "listProducts");
+
+            //  Build MASRequestBuilder to convert into MASRequest object
+            MASRequest request = requestBuilder.Build();
+
+            return await MAS.InvokeAsync(request);
+        }
 
         partial void LogoutButton_TouchUpInside(UIButton sender)
         {
