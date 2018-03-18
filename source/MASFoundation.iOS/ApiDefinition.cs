@@ -2601,6 +2601,7 @@ namespace MASFoundation
         /// is a failure.
         /// </param>
         [Static]
+        [Async(ResultTypeName = "StartDefaultConfigurationResult")]
         [Export("startWithDefaultConfiguration:completion:")]
         void StartWithDefaultConfiguration(bool shouldUseDefault, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -3210,6 +3211,7 @@ namespace MASFoundation
         /// <param name="request">MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request..</param>
         /// <param name="completion">An MASResponseObjectErrorBlock (NSHttpUrlResponse response, NSObject responseObject, NSError error) that will receive any type of response object or an NSError object if there is a failure.</param>
         [Static]
+        [Async(ResultTypeName = "InvokeResult")]
         [Export("invoke:completion:")]
         void Invoke(MASRequest request, [NullAllowed] MASResponseObjectErrorBlock completion);
 
