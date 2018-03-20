@@ -1206,7 +1206,7 @@ This section provides solutions that solve specific and immediate customer reque
 
 ### Send HTTP Requests to External APIs
 
-You can send HTTP requests to APIs hosted in others servers (another MAG or other public server). The MASSecurityConfiguration object registers the external server as a trusted source. 
+You can send HTTP requests to APIs hosted in others servers (another MAG or other public server). The MASSecurityConfiguration object registers the external server as a trusted source.
 
 For how to use this feature, see [Blog: How to Make Secure Calls to APIs from External Servers](https://www.ca.com/us/developers/mas/blog.html?id=2)
 
@@ -1232,7 +1232,16 @@ To send HTTP requests to another MAG or public server, you must configure the MA
 **Example**
 
 ```c#
+Java.Security.Cert.X509Certificate certificate = ...;
+string pkHash1 = "H9hoBtopEPatTn ... ="; //Base64 string
 
+IMASSecurityConfiguration configuration = new MASSecurityConfigurationBuilder()
+  .Host(new Android.Net.Uri.Builder().EncodedAuthority(HOST).Build())
+  .Add(certificate)
+  .Add(pkHash1)
+  .Build();
+
+MASConfiguration.CurrentConfiguration.AddSecurityConfiguration(configuration);
 ```
 
 #### Invoke an API from external server
@@ -1241,8 +1250,29 @@ The only difference between making HTTP requests to a MAG compared to external s
 
 **Example**
 ```c#
+Android.Net.Uri uri = new Android.Net.Uri.Builder()
+  .EncodedAuthority("swapi.co:443")
+  .Scheme("https")
+  .AppendPath("api").AppendPath("people").AppendPath("1")
+  .Build();
 
-        
+IMASRequest request = new MASRequestBuilder(uri).Build();
+MAS.Invoke(request, new ProtectAPICallback());
+
+// Callback class
+public class ProtectAPICallback : MASCallback
+{
+    public override void OnError(Throwable e)
+    {
+      // Handle Error
+    }
+
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+      // Handle Success
+    }
+}
+
 ```
 
 ## Pre-release Agreement
