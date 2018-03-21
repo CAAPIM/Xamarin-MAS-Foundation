@@ -1190,6 +1190,26 @@ To send HTTP requests to another MAG or public server, you must configure the MA
 **Example**
 
 ```c#
+NSUrl url = new NSUrl("https://itunes.apple.com:443");
+MASSecurityConfiguration masSecurityConfiguration = new MASSecurityConfiguration(url);
+masSecurityConfiguration.IsPublic = true;
+masSecurityConfiguration.Certificates = ["-----BEGIN CERTIFICATE-----",
+        "MIIO...ADB3",
+        "MQswCQ...HzAd",
+        "BgNVB...dGVj", ... , "-----END CERTIFICATE-----" ]
+masSecurityConfiguration.PublicKeyHashes = "Ha+Xyz....XqU=";
+
+NSError securityError;
+MASConfiguration.SetSecurityConfiguration(masSecurityConfiguration, out securityError);
+
+if (securityError != null)
+{
+  // Check for an error
+}
+else
+{
+  // Security configuration successfully set
+}
 
 ```
 
@@ -1201,6 +1221,12 @@ The only difference between making HTTP requests to a MAG, versus to external se
 
 ```c#
 
+    MASResponseInfoErrorBlock responseInfoErrorBlock = new MASResponseInfoErrorBlock((NSDictionary<NSString, NSObject> dictionary, NSError error) =>
+    {
+            // Handle completion    
+    });
+
+    MAS.GetFrom("https://itunes.apple.com/search?term=red+hot+chili+peppers&entity=musicVideo", null, null, MASRequestResponseType.Json, MASRequestResponseType.Json, responseInfoErrorBlock);
 ```
 
 ## Pre-release Agreement
