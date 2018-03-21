@@ -62,7 +62,7 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 2. Add the Mobile SDK (recommended) or dlls to your project.
 
     **NuGet Packages**  
-  a. In Visual Studio, open your platform app, click **Packages**, **Add Packages...**      
+  a. In Visual Studio, open your platform app, right click **Packages**, **Add Packages...**      
   b. Search for "MASFoundation.Xamarin", and click the button, **Add Package**.    
   c. Repeat the steps for the other platform.    
 
