@@ -61,17 +61,17 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).
 2. Add the Mobile SDK (recommended) or dlls to your project.
 
-**NuGet Packages**
-  a. In Visual Studio, open your platform app, click **Packages**, **Add Packages...**
-  b. Search for "MASFoundation.Xamarin", and click the button, **Add Package**.
-  c. Repeat the steps for the other platform.
+    **NuGet Packages**
+      a. In Visual Studio, open your platform app, click **Packages**, **Add Packages...**    
+      b. Search for "MASFoundation.Xamarin", and click the button, **Add Package**.    
+      c. Repeat the steps for the other platform.    
 
-**Dlls** 
-  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/  Xamarin-MAS-Foundation.git**     
-  Verify that you have both "Android" and "iOS" source directories.
-  b. In Visual Studio, right-click the **References** folder and select **Edit References**.
-  c. Select the **.Net Assembly** tab, and click the **Browse** button.
-  d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.iOS.dll` file, click **Open** and then **OK**.
+    **Dlls** 
+      a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/  Xamarin-MAS-Foundation.git**       
+      Verify that you have both "Android" and "iOS" source directories.    
+      b. In Visual Studio, right-click the **References** folder and select **Edit References**.    
+      c. Select the **.Net Assembly** tab, and click the **Browse** button.    
+      d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.iOS.dll` file, click **Open** and then **OK**.    
 
 ### Step 2: Update the Information Property List File
 
@@ -114,13 +114,13 @@ In Visual Studio:
 
 1. Go to the folder containing your app configuration file (`msso_config.json`), select it, and click **Copy the file to the directory**.  
 
-::: alert danger
-**Important**: The msso_config.json file must use a valid JSON format with the required data. If the file is not found, you'll get an error message and your app will not run. Do not change any of the contents without assistance from your Admin; if you remove or alter required values, your app may not be able to connect or interact with the MAG.
-:::
+  ::: alert danger
+  **Important**: The msso_config.json file must use a valid JSON format with the required data. If the file is not found, you'll get an error message and your app will not run. Do not change any of the contents without assistance from your Admin; if you remove or alter required values, your app may not be able to connect or interact with the MAG.
+  :::
 
-::: alert note
-**Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes. 
-:::
+  ::: alert note
+  **Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes. 
+  :::
 
 2. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
