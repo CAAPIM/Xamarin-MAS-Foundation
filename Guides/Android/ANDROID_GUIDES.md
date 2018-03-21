@@ -17,21 +17,22 @@
 
 ## Create an App: Choose a Method
 
-| Create your app using...                 | Benefits                                 |
+| Get Started...                 | Benefits                                 |
 | ---------------------------------------- | ---------------------------------------- |
-| [Sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods, or building a real app.</li></ul> |
-| [No sample app, from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Just download the dynamic-link library (.dll) and add your app configuration file.</li></ul> |                             
+| [Using sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods and trying out the Mobile SDK.</li></ul> |
+| [Create app from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Add the SDK libraries using NuGet in Visual Studio, or the dynamic-link libraries (dlls).</li></ul> |                             
 
 ## Quick Start with Sample App
 
-The Android **BasicAuthSample** app:
-
-- Lets you test the following with a CA Mobile API Gateway:  
-  - Define authentication flow
+The Android **BasicAuthSample** app works with a CA Mobile API Gateway so you can:  
+  - Define an authentication flow
   - Start the SDK
   - Log in
   - Access a protected API
   - Log out
+
+The sample app:
+
 - Was created using Visual Studio Community 2017 build 7.3.3
 - Requires Android 4.4 or later to run the app
 
@@ -47,27 +48,32 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **log in**, **log out**, and **access a protected API**.
 
-[TBD - Will we improve sample or use slick demo by Microsoft consultant?]
-[Sample app improvements: spelling errors Log in/Log out, human error messages, human text for grant flows, sample app should be something useful and interesting for enterprise.]
-
 ## Create App from Scratch or Integrate an Existing App into the Mobile SDK
 
 If you have an existing Xamarin app that you want to integrate into the Mobile SDK, or simply want full control to set up a new app, these steps are for you.
 
 ::: alert info
-**Note**: You cannot use an existing Android Mobile SDK app. You must redo the app using c#.
+**Note**: You cannot use an existing Android Mobile SDK app. You must rewrite the app using c#.
 :::
 
-### Step 1: Set Up Project in Visual Studio
+### Set Up Visual Studio for the Mobile SDK
 
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).
-2. Open a terminal window in a directory of your choice and copy and paste the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
-Verify that you have both "Android" and "iOS" source directories.
-3. Open your app in Visual Studio.
-4. Right-click the **References** folder and select **Edit References**.
-5. Select the **.Net Assembly** tab, and click the **Browse** button.
-6. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.Android.dll` file, click Open and then OK.
-7. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
+2. Add the Mobile SDK (recommended) or dlls to your project.
+
+**NuGet Packages**
+  a. In Visual Studio, open your platform app, click **Packages**, **Add Packages...**
+  b. Search for "MASFoundation.Xamarin", and click the button, **Add Package**.
+  c. Repeat the steps for the other platform.
+
+**Dlls** 
+  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/  Xamarin-MAS-Foundation.git**     
+  Verify that you have both "Android" and "iOS" source directories.
+  b. In Visual Studio, right-click the **References** folder and select **Edit References**.
+  c. Select the **.Net Assembly** tab, and click the **Browse** button.
+  d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.Android.dll` file, click **Open** and then **OK**.
+
+3. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
 If you have multiple MAGs, you will have more than one file.
 
 ::: alert danger
@@ -78,10 +84,10 @@ If you have multiple MAGs, you will have more than one file.
 **Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes.
 :::
 
-8. In the manifests folder, open the file, `AndroidManifest.xml`.  
+4. In the manifests folder, open the file, `AndroidManifest.xml`.  
 Before the application definition, add the permission, **android.permission.INTERNET** so your app can access the internet. For example:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.BabsTestApp">
     <uses-permission android:name="android.permission.INTERNET" />
@@ -90,19 +96,19 @@ Before the application definition, add the permission, **android.permission.INTE
     </application>
 </manifest>
 ```
-9. Select **Build/Rebuild All**.  
+
+5. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
 
 That's it! You can now start building out your app.
 
-### Step 2: Start the SDK
+### Start the SDK
 
 After your project is properly configured, you must start the SDK to establish a secure connection with the backend services. The method that starts the SDK is **MAS.start**. Note the following:
 
 - You can put MAS.Start anywhere in your app
 - MAS.Start should be processed before app startup (during the splash/loading screen of your app).
 - We recommended that you process any communication with the backend services after successful completion of the startup method, or the secure communication is not guaranteed and may fail.
-
 
 #### Start with standard method
 
