@@ -18,22 +18,22 @@
 
 ## Create an App: Choose a Method
 
-| Create your app using...                 | Benefits                                 |
+| Get Started...                 | Benefits                                 |
 | ---------------------------------------- | ---------------------------------------- |
-| [Sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods, or building a real app.</li></ul> |
-| [No sample app, from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Just download the dynamic-link library (.dll) and add your app configuration file.</li></ul> |                                  
+| [Using sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods and trying out the Mobile SDK.</li></ul> |
+| [Create app from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Add the SDK libraries using NuGet in Visual Studio, or the dynamic-link libraries (dlls).</li></ul> |                                  
 
 ## Quick Start with Sample App
 
-The iOS **BasicAuthSample** app:
-
-- Lets you test the following with a CA Mobile API Gateway:    
-  - Define authentication flow 
+The iOS **BasicAuthSample** app works with a CA Mobile API Gateway so you can:    
+  - Define an authentication flow 
   - Start the SDK 
   - Log in
   - Access a protected API 
   - Log out
-- Was created using Visual Studio Community 2017 build 7.3.3
+
+The sample app:
+- Uses Visual Studio Community 2017 build 7.3.3
 - Requires iOS 8.0 or later to run the app
 
 1. Open a terminal window in a directory of your choice and clone the MASFoundation repo: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**.  
@@ -48,9 +48,6 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **log in**, **log out**, and **access a protected API**. 
 
-[TBD - Will we improve sample or use slick demo by Microsoft consultant?]
-[Sample app improvements: spelling errors Log in/Log out, human error messages, human text for grant flows, sample app should be something useful and interesting for enterprise.]
-
 ## Create App from Scratch or Integrate an Existing App into the Mobile SDK
 
 If you have an existing Xamarin app that you want to integrate into the Mobile SDK, or simply want full control to set up a new app, these steps are for you.
@@ -59,15 +56,22 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 **Note**: You cannot use an existing iOS Mobile SDK app. You must redo the app using c#.
 ::: 
 
-### Step 1: Add Mobile SDK Libraries to Visual Studio
+### Step 1: Set Up Visual Studio for the Mobile SDK
 
-1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`). 
-2. Open a terminal window in a directory of your choice and copy and paste the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
-Verify that you have both "Android" and "iOS" source directories. 
-3. Open your app in Visual Studio.
-4. Right-click the **References** folder and select **Edit References**. 
-6. Select the **.Net Assembly** tab, and click the **Browse** button.
-7. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.iOS.dll` file, click Open and then OK.
+1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).
+2. Add the Mobile SDK (recommended) or dlls to your project.
+
+**NuGet Packages**
+  a. In Visual Studio, open your platform app, click **Packages**, **Add Packages...**
+  b. Search for "MASFoundation.Xamarin", and click the button, **Add Package**.
+  c. Repeat the steps for the other platform.
+
+**Dlls** 
+  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/  Xamarin-MAS-Foundation.git**     
+  Verify that you have both "Android" and "iOS" source directories.
+  b. In Visual Studio, right-click the **References** folder and select **Edit References**.
+  c. Select the **.Net Assembly** tab, and click the **Browse** button.
+  d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.iOS.dll` file, click **Open** and then **OK**.
 
 ### Step 2: Update the Information Property List File
 
@@ -103,12 +107,12 @@ In Visual Studio, verify/change these settings:
 
 In Visual Studio:
 
-1. Go to: Preferences, Publishing, Apple Developer Accounts.
+1. Go to: **Preferences**, **Publishing**, **Apple Developer Accounts**.
 2. Add your Apple ID. 
 
 ### Step 5: Add the App Configuration File and Build 
 
-1. Go to the folder containing your `msso_config.json` app configuration file, select it, and click **Copy the file to the directory**.  
+1. Go to the folder containing your app configuration file (`msso_config.json`), select it, and click **Copy the file to the directory**.  
 
 ::: alert danger
 **Important**: The msso_config.json file must use a valid JSON format with the required data. If the file is not found, you'll get an error message and your app will not run. Do not change any of the contents without assistance from your Admin; if you remove or alter required values, your app may not be able to connect or interact with the MAG.
@@ -121,7 +125,7 @@ In Visual Studio:
 2. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
 
-### Step 6: Start the SDK 
+## Start the SDK 
 
 After your project is properly configured, you must start the SDK to establish a secure connection with the backend services. The method that starts the SDK is **MAS.start**. Note the following:
 
