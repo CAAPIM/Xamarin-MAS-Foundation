@@ -76,13 +76,13 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 3. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
 If you have multiple MAGs, you will have more than one file.
 
-::: alert danger
-**Important**: The msso_config.json file must use a valid JSON format with the required data. If the file is not found, you'll get an error message and your app will not run. Do not change any of the contents without assistance from your Admin; if you remove or alter required values, your app may not be able to connect or interact with the MAG.
-:::
+  ::: alert danger
+  **Important**: The msso_config.json file must use a valid JSON format with the required data. If the file is not found, you'll get an error message and your app will not run. Do not change any of the contents without assistance from your Admin; if you remove or alter required values, your app may not be able to connect or interact with the MAG.
+  :::
 
-::: alert note
-**Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes.
-:::
+  ::: alert note
+  **Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes.
+  :::
 
 4. In the manifests folder, open the file, `AndroidManifest.xml`.  
 Before the application definition, add the permission, **android.permission.INTERNET** so your app can access the internet. For example:
