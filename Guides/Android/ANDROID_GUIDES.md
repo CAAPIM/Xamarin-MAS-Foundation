@@ -61,17 +61,17 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).
 2. Add the Mobile SDK (recommended) or dlls to your project.
 
-  **NuGet Packages**  
-  a. In Visual Studio, open your platform app, click **Packages**, **Add Packages...**  
-  b. Search for "MASFoundation.Xamarin", and click the button, **Add Package**.  
-  c. Repeat the steps for the other platform.  
+    **NuGet Packages**  
+  a. In Visual Studio, open your platform app, click **Packages**, **Add Packages...**      
+  b. Search for "MASFoundation.Xamarin", and click the button, **Add Package**.    
+  c. Repeat the steps for the other platform.    
 
-  s**Dlls**   
-  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/    Xamarin-MAS-Foundation.git**      
-  Verify that you have both "Android" and "iOS" source directories.
-  b. In Visual Studio, right-click the **References** folder and select **Edit References**.  
-  c. Select the **.Net Assembly** tab, and click the **Browse** button.  
-  d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.Android.dll` file, click **Open** and then **OK**.  
+    **Dlls**   
+  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/    Xamarin-MAS-Foundation.git**        
+  Verify that you have both "Android" and "iOS" source directories.    
+  b. In Visual Studio, right-click the **References** folder and select **Edit References**.    
+  c. Select the **.Net Assembly** tab, and click the **Browse** button.    
+  d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.Android.dll` file, click **Open** and then **OK**.    
 
 3. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
 If you have multiple MAGs, you will have more than one file.
