@@ -1117,7 +1117,8 @@ public class DeregisterCallback : MASCallback
 
 ### SSL Pinning Validation Failed
 
-javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.
+`javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.`
+
 This error means that the server security configuration in the MASSecurityConfiguration object for the hostname:portnumber is not valid or is missing. See [Create the MASSecurityConfiguration object](#create-the-massecurityconfiguration-object).
 
 ### General Problems
@@ -1197,6 +1198,82 @@ The following limitations exist only during development.
 
 - Only Android M+ devices can act as peripheral devices.
 - Only the Nexus 6 device has been tested as a peripheral device.
+
+
+## ADVANCED USE CASES
+
+This section provides solutions that solve specific and immediate customer requests. They may not have the tight coupling between backend and the SDK that we normally provide, but they work. They just require more collaboration between Admins and developers to implement. Hope you find them useful!
+
+### Send HTTP Requests to External APIs
+
+You can send HTTP requests to APIs hosted in others servers (another MAG or other public server). The MASSecurityConfiguration object registers the external server as a trusted source.
+
+For how to use this feature, see [Blog: How to Make Secure Calls to APIs from External Servers](https://www.ca.com/us/developers/mas/blog.html?id=2)
+
+#### Support
+
+The Mobile SDK supports:
+- Sending requests to external APIs with these security features: SSL pinning method, evaluate the certificate against root certificates on device, default credentials injection on API calls
+- Only certificate signature algorithm SHA256 with RSA 2048 bits  
+(SSL pinning will fail if you use other algorithms.)
+
+#### Create the MASSecurityConfiguration object
+
+To send HTTP requests to another MAG or public server, you must configure the MASSecurityConfiguration object. The following security settings are per hostname and port number. The only required attribute is the host; if the host is not set, the request fails with an [SSL pinning error](#ssl-pinning-validation-failed).
+
+| Attribute          | Description                                                                                                              | Required? | Default     |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------|-----------|-------------|
+| host               | Uri object containing the hostname, and port number.                                                                     | Yes       |    null     |
+| isPublic           | Boolean value that includes (or not), credentials from the primary gateway to the target host for network communication. | No        |    false    |
+| certificates       | The list of certificates that contains the pinned certificate.                                                           | No        |    null     |
+| publicKeyHashes    | The list of strings that contains pinned public key hashes in base64 format.                                             | No        |    null     |
+| trustPublicPKI     | Boolean value for whether or not to validate the trusted server against the Android trusted root certificates.           | No        |    false    |
+
+**Example**
+
+```c#
+Java.Security.Cert.X509Certificate certificate = ...;
+string pkHash1 = "H9hoBtopEPatTn ... ="; //Base64 string
+
+IMASSecurityConfiguration configuration = new MASSecurityConfigurationBuilder()
+  .Host(new Android.Net.Uri.Builder().EncodedAuthority(HOST).Build())
+  .Add(certificate)
+  .Add(pkHash1)
+  .Build();
+
+MASConfiguration.CurrentConfiguration.AddSecurityConfiguration(configuration);
+```
+
+#### Invoke an API from external server
+
+The only difference between making HTTP requests to a MAG compared to external servers, is that you must provide the full URL instead of the relative path. For example, if your full URL is https://somegatewayhost:port/some/endpoint, you would pass this value as endPointPath parameter in the SDK CRUD methods (for example, MAS.getFrom / MAS.postTo / MAS.deleteFrom).
+
+**Example**
+```c#
+Android.Net.Uri uri = new Android.Net.Uri.Builder()
+  .EncodedAuthority("swapi.co:443")
+  .Scheme("https")
+  .AppendPath("api").AppendPath("people").AppendPath("1")
+  .Build();
+
+IMASRequest request = new MASRequestBuilder(uri).Build();
+MAS.Invoke(request, new ProtectAPICallback());
+
+// Callback class
+public class ProtectAPICallback : MASCallback
+{
+    public override void OnError(Throwable e)
+    {
+      // Handle Error
+    }
+
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+      // Handle Success
+    }
+}
+
+```
 
 ## Pre-release Agreement
 
