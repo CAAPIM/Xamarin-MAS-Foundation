@@ -86,9 +86,9 @@ In Visual Studio, verify/change these settings:
     - **NSLocationAlwaysAndWhenInUseUsageDescription** = "Program requires GPS"
     - **NSAppTransportSecurity, NSAllowsArbitraryLoads** = "Yes"
 
-::: Container width="300" align="left"
-![Xcode Properties](images/info-plist.png)
-:::
+  ::: Container width="300" align="left"
+  ![Xcode Properties](images/info-plist.png)
+  :::
 
 ### Step 3: Update System Settings
 
