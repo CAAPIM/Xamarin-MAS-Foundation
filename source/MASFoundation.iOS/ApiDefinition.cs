@@ -357,7 +357,7 @@ namespace MASFoundation
         /// <value>NSArray of the certificates.</value>
         [NullAllowed, Export("certificates", ArgumentSemantic.Strong)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] Certificates { get; set; }
+        NSArray Certificates { get; set; }
 
         // @property (nonatomic, strong) NSArray * _Nullable publicKeyHashes;
         /// <summary>
@@ -366,7 +366,7 @@ namespace MASFoundation
         /// <value>NSArray of the public key hashes.</value>
         [NullAllowed, Export("publicKeyHashes", ArgumentSemantic.Strong)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] PublicKeyHashes { get; set; }
+        NSArray PublicKeyHashes { get; set; }
 
         // @property (readonly, nonatomic, strong) NSURL * _Nonnull host;
         /// <summary>
@@ -645,7 +645,7 @@ namespace MASFoundation
         // @property (readonly, copy, nonatomic) NSArray * _Nullable providers;
         [NullAllowed, Export("providers", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] Providers { get; }
+        NSArray Providers { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable idp;
         [NullAllowed, Export("idp")]
@@ -784,7 +784,7 @@ namespace MASFoundation
         /// <value>The trusted cert pinned publick key hashes.</value>
         [NullAllowed, Export("trustedCertPinnedPublickKeyHashes", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] TrustedCertPinnedPublickKeyHashes { get; }
+        NSArray TrustedCertPinnedPublickKeyHashes { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificatesAsDERData;
         /// <summary>
@@ -926,7 +926,7 @@ namespace MASFoundation
         [Static]
         [NullAllowed, Export("securityConfigurations")]
         //[Verify(MethodToProperty), Verify(StronglyTypedNSArray)]
-        NSArray[] SecurityConfigurations { get; }
+        NSArray SecurityConfigurations { get; }
 
         // +(MASSecurityConfiguration * _Nullable)securityConfigurationForDomain:(NSURL * _Nonnull)domain;
         /// <summary>
@@ -1453,7 +1453,7 @@ namespace MASFoundation
         // @property (readwrite, copy, nonatomic) NSArray * _Nullable members;
         [NullAllowed, Export("members", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] Members { get; set; }
+        NSArray Members { get; set; }
 
         // -(instancetype _Nullable)initWithInfo:(NSDictionary * _Nonnull)info;
         [Export("initWithInfo:")]
