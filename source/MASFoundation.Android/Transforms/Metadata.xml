@@ -24,7 +24,7 @@
     <remove-node path="/api/package[@name='com.ca.mas.core.auth.otp']" />
      -->
 
-    <remove-node path="/api/package[@name='com.ca.mas.core.cert']" />
+<!--    <remove-node path="/api/package[@name='com.ca.mas.core.cert']" />-->
     <remove-node path="/api/package[@name='com.ca.mas.core.client']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.clientcredentials']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.conf']" />
