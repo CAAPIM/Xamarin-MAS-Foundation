@@ -223,58 +223,137 @@ namespace MASFoundation
         //byte[] MASFoundationVersionString { get; }
         IntPtr MASFoundationVersionString { get; }
 
+        // MAS Errors
+        // extern NSString *const _Nonnull MASFoundationErrorDomain;
+        [Field("MASFoundationErrorDomain", "__Internal")]
+        NSString MASFoundationErrorDomain { get; }
+
+        // extern NSString *const _Nonnull MASFoundationErrorDomainLocal;
+        [Field("MASFoundationErrorDomainLocal", "__Internal")]
+        NSString MASFoundationErrorDomainLocal { get; }
+
+        // extern NSString *const _Nonnull MASFoundationErrorDomainTargetAPI;
+        [Field("MASFoundationErrorDomainTargetAPI", "__Internal")]
+        NSString MASFoundationErrorDomainTargetAPI { get; }
+
+        // MAS Notifications
+        // extern NSString *const _Nonnull MASWillStartNotification;
+        [Field("MASWillStartNotification", "__Internal")]
+        NSString MASWillStartNotification { get; }
+
+        // extern NSString *const _Nonnull MASDidFailToStartNotification;
+        [Field("MASDidFailToStartNotification", "__Internal")]
+        NSString MASDidFailToStartNotification { get; }
+
+        // extern NSString *const _Nonnull MASDidStartNotification;
+        [Field("MASDidStartNotification", "__Internal")]
+        NSString MASDidStartNotification { get; }
+
+        // extern NSString *const _Nonnull MASWillStopNotification;
+        [Field("MASWillStopNotification", "__Internal")]
+        NSString MASWillStopNotification { get; }
+
+        // extern NSString *const _Nonnull MASDidFailToStopNotification;
+        [Field("MASDidFailToStopNotification", "__Internal")]
+        NSString MASDidFailToStopNotification { get; }
+
+        // extern NSString *const _Nonnull MASDidStopNotification;
+        [Field("MASDidStopNotification", "__Internal")]
+        NSString MASDidStopNotification { get; }
+
+        // extern NSString *const _Nonnull MASWillSwitchGatewayServerNotification;
+        [Field("MASWillSwitchGatewayServerNotification", "__Internal")]
+        NSString MASWillSwitchGatewayServerNotification { get; }
+
+        // extern NSString *const _Nonnull MASDidSwitchGatewayServerNotification;
+        [Field("MASDidSwitchGatewayServerNotification", "__Internal")]
+        NSString MASDidSwitchGatewayServerNotification { get; }
+
+        // MAS Device Notifications
+        // extern NSString* const _Nonnull MASDeviceWillDeregisterNotification;
+        [Field("MASDeviceWillDeregisterNotification", "__Internal")]
+        NSString MASDeviceWillDeregisterNotification { get; }
+
+        // extern NSString* const _Nonnull MASDeviceDidFailToDeregisterNotification;
+        [Field("MASDeviceDidFailToDeregisterNotification", "__Internal")]
+        NSString MASDeviceDidFailToDeregisterNotification { get; }
+
+        // extern NSString* const _Nonnull MASDeviceDidDeregisterNotification;
+        [Field("MASDeviceDidDeregisterNotification", "__Internal")]
+        NSString MASDeviceDidDeregisterNotification { get; }
+
+        // extern NSString* const _Nonnull MASDeviceDidResetLocallyNotification;
+        [Field("MASDeviceDidResetLocallyNotification", "__Internal")]
+        NSString MASDeviceDidResetLocallyNotification { get; }
+
+        // User Notifications
+        // extern NSString* const _Nonnull MASUserWillAuthenticateNotification;
+        [Field("MASUserWillAuthenticateNotification", "__Internal")]
+        NSString MASUserWillAuthenticateNotification { get; }
+
+        // extern NSString* const _Nonnull MASUserDidFailToAuthenticateNotification;
+        [Field("MASUserDidFailToAuthenticateNotification", "__Internal")]
+        NSString MASUserDidFailToAuthenticateNotification { get; }
+
+        // extern NSString* const _Nonnull MASUserDidAuthenticateNotification;
+        [Field("MASUserDidAuthenticateNotification", "__Internal")]
+        NSString MASUserDidAuthenticateNotification { get; }
+
+        // extern NSString* const _Nonnull MASUserWillLogoutNotification;
+        [Field("MASUserWillLogoutNotification", "__Internal")]
+        NSString MASUserWillLogoutNotification { get; }
+
+        // extern NSString* const _Nonnull MASUserDidFailToLogoutNotification;
+        [Field("MASUserDidFailToLogoutNotification", "__Internal")]
+        NSString MASUserDidFailToLogoutNotification { get; }
+
+        // extern NSString* const _Nonnull MASUserDidLogoutNotification;
+        [Field("MASUserDidLogoutNotification", "__Internal")]
+        NSString MASUserDidLogoutNotification { get; }
+
+        // extern NSString* const _Nonnull MASUserWillUpdateInformationNotification;
+        [Field("MASUserWillUpdateInformationNotification", "__Internal")]
+        NSString MASUserWillUpdateInformationNotification { get; }
+
+        // extern NSString* const _Nonnull MASUserDidFailToUpdateInformationNotification;
+        [Field("MASUserDidFailToUpdateInformationNotification", "__Internal")]
+        NSString MASUserDidFailToUpdateInformationNotification { get; }
+
+        // extern NSString* const _Nonnull MASUserDidUpdateInformationNotification;
+        [Field("MASUserDidUpdateInformationNotification", "__Internal")]
+        NSString MASUserDidUpdateInformationNotification { get; }
+
+        // Authorization Response - Social Login Notifications
+        // extern NSString* const _Nonnull MASAuthorizationResponseDidReceiveAuthorizationCodeNotification;
+        [Field("MASAuthorizationResponseDidReceiveAuthorizationCodeNotification", "__Internal")]
+        NSString MASAuthorizationResponseDidReceiveAuthorizationCodeNotification { get; }
+
+        // extern NSString* const _Nonnull MASAuthorizationResponseDidReceiveErrorNotification;
+        [Field("MASAuthorizationResponseDidReceiveErrorNotification", "__Internal")]
+        NSString MASAuthorizationResponseDidReceiveErrorNotification { get; }
+
+        // Proximity Login Notifications
+        // extern NSString* const _Nonnull MASDeviceDidReceiveAuthorizationCodeFromProximityLoginNotification;
+        [Field("MASDeviceDidReceiveAuthorizationCodeFromProximityLoginNotification", "__Internal")]
+        NSString MASDeviceDidReceiveAuthorizationCodeFromProximityLoginNotification { get; }
+
+        // extern NSString* const _Nonnull MASDeviceDidReceiveErrorFromProximityLoginNotification;
+        [Field("MASDeviceDidReceiveErrorFromProximityLoginNotification", "__Internal")]
+        NSString MASDeviceDidReceiveErrorFromProximityLoginNotification { get; }
+
+        // extern NSString* const _Nonnull MASProximityLoginQRCodeDidStartDisplayingQRCodeImage;
+        [Field("MASProximityLoginQRCodeDidStartDisplayingQRCodeImage", "__Internal")]
+        NSString MASProximityLoginQRCodeDidStartDisplayingQRCodeImage { get; }
+
+        // extern NSString* const _Nonnull MASProximityLoginQRCodeDidStopDisplayingQRCodeImage;
+        [Field("MASProximityLoginQRCodeDidStopDisplayingQRCodeImage", "__Internal")]
+        NSString MASProximityLoginQRCodeDidStopDisplayingQRCodeImage { get; }
+
+        //Gateway Monitor Notifications
+        // extern NSString* const _Nonnull MASGatewayMonitorStatusUpdateNotification;
+        [Field("MASGatewayMonitorStatusUpdateNotification", "__Internal")]
+        NSString MASGatewayMonitorStatusUpdateNotification { get; }
     }
-
-    //[Static]
-    //// [Verify(ConstantsInterfaceAssociation)]
-    //partial interface MASConstants
-    //{
-    //    // MAS Errors
-    //    // static NSString *const _Nonnull MASFoundationErrorDomain = @"com.ca.MASFoundation:ErrorDomain";
-    //    [Field("MASFoundationErrorDomain", "__Internal")]
-    //    NSString MASFoundationErrorDomain { get; }
-
-    //    // static NSString *const _Nonnull MASFoundationErrorDomainLocal = @"com.ca.MASFoundation.localError:ErrorDomain";
-    //    [Field("MASFoundationErrorDomainLocal", "__Internal")]
-    //    NSString MASFoundationErrorDomainLocal { get; }
-
-    //    // static NSString *const _Nonnull MASFoundationErrorDomainTargetAPI = @"com.ca.MASFoundation.targetAPI:ErrorDomain";
-    //    [Field("MASFoundationErrorDomainTargetAPI", "__Internal")]
-    //    NSString MASFoundationErrorDomainTargetAPI { get; }
-
-    //    // MAS Notifications
-    //    // static NSString *const _Nonnull MASWillStartNotification = @"MASWillStartNotification";
-    //    [Field("MASWillStartNotification", "__Internal")]
-    //    NSString MASWillStartNotification { get; }
-
-    //    // static NSString *const _Nonnull MASDidFailToStartNotification = @"MASDidFailToStartNotification";
-    //    [Field("MASDidFailToStartNotification", "__Internal")]
-    //    NSString MASDidFailToStartNotification { get; }
-
-    //    // static NSString *const _Nonnull MASDidStartNotification = @"MASDidStartNotification";
-    //    [Field("MASDidStartNotification", "__Internal")]
-    //    NSString MASDidStartNotification { get; }
-
-    //    // static NSString *const _Nonnull MASWillStopNotification = @"MASWillStopNotification";
-    //    [Field("MASWillStopNotification", "__Internal")]
-    //    NSString MASWillStopNotification { get; }
-
-    //    // static NSString *const _Nonnull MASDidFailToStopNotification = @"MASDidFailToStopNotification";
-    //    [Field("MASDidFailToStopNotification", "__Internal")]
-    //    NSString MASDidFailToStopNotification { get; }
-
-    //    // static NSString *const _Nonnull MASDidStopNotification = @"MASDidStopNotification";
-    //    [Field("MASDidStopNotification", "__Internal")]
-    //    NSString MASDidStopNotification { get; }
-
-    //    // static NSString *const _Nonnull MASWillSwitchGatewayServerNotification = @"MASWillSwitchGatewayServerNotification";
-    //    [Field("MASWillSwitchGatewayServerNotification", "__Internal")]
-    //    NSString MASWillSwitchGatewayServerNotification { get; }
-
-    //    // static NSString *const _Nonnull MASDidSwitchGatewayServerNotification = @"MASDidSwitchGatewayServerNotification";
-    //    [Field("MASDidSwitchGatewayServerNotification", "__Internal")]
-    //    NSString MASDidSwitchGatewayServerNotification { get; }
-    //}
 
     // @protocol MASProximityLoginDelegate <NSObject>
     //[Protocol, Model]
