@@ -5,10 +5,25 @@ namespace Com.CA.Mas.Foundation
 {
     public partial class MASUser
     {
-        
+        public static Task<IMASResponse> Login()
+        {
+            var tcs = new TaskCompletionSource<IMASResponse>();
+            Login(new MASUserCompletion<IMASResponse>(tcs));
+
+            return tcs.Task;
+        }
+
         public static Task<IMASResponse> Login(IMASAuthCredentials credentials) {
             var tcs = new TaskCompletionSource<IMASResponse>();
             Login(credentials, new MASUserCompletion<IMASResponse>(tcs));
+
+            return tcs.Task;
+        }
+
+        public static Task<IMASResponse> Login(string username, char[] password)
+        {
+            var tcs = new TaskCompletionSource<IMASResponse>();
+            Login(username, password, new MASUserCompletion<IMASResponse>(tcs));
 
             return tcs.Task;
         }
