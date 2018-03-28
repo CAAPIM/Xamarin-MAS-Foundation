@@ -12,7 +12,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidClassParser>jar2xml</AndroidClassParser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -61,7 +61,10 @@
     <Folder Include="JavaDocs\" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\mas-foundation-release.aar" />
+    <LibraryProjectZip Include="Jars\mas-foundation-debug.aar" />
+  </ItemGroup>
+  <ItemGroup>
+    <JavaDocIndex Include="JavaDocs\index.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
