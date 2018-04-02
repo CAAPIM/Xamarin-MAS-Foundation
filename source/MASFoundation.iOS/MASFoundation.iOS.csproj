@@ -29,6 +29,10 @@
           <type>AfterBuild</type>
           <command>mdoc export-msxdoc --out bin/Debug/MASFoundation.iOS.xml docs</command>
         </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp -f bin/Debug/MASFoundation.iOS.dll bin/Debug/MASFoundation.iOS.xml ../../lib</command>
+        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
