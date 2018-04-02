@@ -1,0 +1,219 @@
+<Type Name="MASState" FullName="MASFoundation.MASState">
+  <TypeSignature Language="C#" Value="public enum MASState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASState extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DidLoad">
+      <MemberSignature Language="C#" Value="DidLoad" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState DidLoad = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DidStart">
+      <MemberSignature Language="C#" Value="DidStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState DidStart = int32(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DidStop">
+      <MemberSignature Language="C#" Value="DidStop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState DidStop = int32(5)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBeingStopped">
+      <MemberSignature Language="C#" Value="IsBeingStopped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState IsBeingStopped = int32(6)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotConfigured">
+      <MemberSignature Language="C#" Value="NotConfigured" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState NotConfigured = int32(-1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotInitialized">
+      <MemberSignature Language="C#" Value="NotInitialized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState NotInitialized = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WillStart">
+      <MemberSignature Language="C#" Value="WillStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState WillStart = int32(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WillStop">
+      <MemberSignature Language="C#" Value="WillStop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState WillStop = int32(4)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

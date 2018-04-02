@@ -1,0 +1,586 @@
+<Type Name="MASClaims" FullName="MASFoundation.MASClaims">
+  <TypeSignature Language="C#" Value="public class MASClaims : MASFoundation.MASObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASClaims extends MASFoundation.MASObject" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>MASFoundation.MASObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("MASClaims", true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MASClaims ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("init")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MASClaims (Foundation.NSCoder coder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSCoder coder) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("initWithCoder:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="coder" Type="Foundation.NSCoder" />
+      </Parameters>
+      <Docs>
+        <param name="coder">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASClaims (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASClaims (IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="handle">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Aud">
+      <MemberSignature Language="C#" Value="public virtual string Aud { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Aud" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("aud", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setAud:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        aud identifies the recipients that the JWT is inteded for
+        </summary>
+        <value>The aud claim of JWT.</value>
+        <remarks>
+        aud is an audience of the JWT where the audience is URL of primary gateway.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Claims">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASClaims Claims { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class MASFoundation.MASClaims Claims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("claims")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASClaims</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Designated initializer for MASClaims object.
+        <para>
+        This initializer will construct MASClaims object with auto-populated some of claims values.
+        </para></summary>
+        <value>MASClaims object with auto populated some of claims.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSObject Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSObject Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("content", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setContent:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        content will be identified as private claim for the custom contents in payload
+        </summary>
+        <value>The content claim of JWT.</value>
+        <remarks>
+        ** content is an content that will be part of JWT's payload.
+        ** content can only be in NSString, NSDictionary, or NSArray format. Make sure to convert NSData into base64encoded string.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public virtual string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("contentType", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setContentType:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        contentType will be identified as private claim for the custom contents' content-type in payload
+        </summary>
+        <value>The content type claim of JWT.</value>
+        <remarks>
+        contentType is a MIME type of the contents.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomClaims">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSMutableDictionary CustomClaims { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSMutableDictionary CustomClaims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("customClaims", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSMutableDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        claims dictionary added through thisClaim.SetValue().
+        </summary>
+        <value>The custom claims.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exp">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSDate Exp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDate Exp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("exp", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setExp:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSDate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        exp identifies the expiration timestamp of JWT
+        </summary>
+        <value>The exp claim of JWT.</value>
+        <remarks>
+        exp is unix timestamp of expiration for JWT.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Iat">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSDate Iat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDate Iat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("iat", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setIat:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSDate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        iat identifies the issued timestamp of JWT
+        </summary>
+        <value>The iat claim of JWT.</value>
+        <remarks>
+        iat is an issued timestamp when the JWT was built.  iat will be nil in MASClaims object until JWT is built.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Iss">
+      <MemberSignature Language="C#" Value="public virtual string Iss { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Iss" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("iss", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setIss:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        iss identifies the principal that issued the JWT
+        </summary>
+        <value>The iss claim of JWT.</value>
+        <remarks>
+        iss is in format of device://{mag-identifier}/{client_id} where both mag-identifier and client_id are known to the primary gateway.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Jti">
+      <MemberSignature Language="C#" Value="public virtual string Jti { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Jti" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("jti", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setJti:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        jti identifies a unique identifier for the JWT
+        </summary>
+        <value>The jti claim of JWT.</value>
+        <remarks>
+        jti is an unique identifier of JWT.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Nbf">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSDate Nbf { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDate Nbf" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("nbf", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setNbf:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSDate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        nbf identifies the time before which the JWT must not be accepted for processing.
+        </summary>
+        <value>The nbf claim of JWT.</value>
+        <remarks>
+        nbf is a timestamp which the JWT should not be used before.  nbf is an optional claim which will not be generated and added to payload if not defined.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public virtual void SetValue (Foundation.NSObject value, string claimKey, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(class Foundation.NSObject value, string claimKey, class Foundation.NSError error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setValue:forClaimKey:error:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="Foundation.NSObject" />
+        <Parameter Name="claimKey" Type="System.String" />
+        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="value">Object/value of the attribute. Object can only be either of NSNumber, NSString, NSDictionary, or NSArray..</param>
+        <param name="claimKey">Key of the attribute as in string.</param>
+        <param name="error">NSError object reference that would notify if there was any error while setting the claim.</param>
+        <summary>
+        Setting a custom attribute to JWT
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sub">
+      <MemberSignature Language="C#" Value="public virtual string Sub { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Sub" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("sub", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setSub:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        sub identifies the principal that is subject of the JWT
+        </summary>
+        <value>The sub claim of JWT.</value>
+        <remarks>
+        sub is an subject of the JWT that is either authenticated user's username or registered client's client name where both are known to the primary gateway.
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

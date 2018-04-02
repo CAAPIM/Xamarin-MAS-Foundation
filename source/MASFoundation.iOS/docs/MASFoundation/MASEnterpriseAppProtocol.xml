@@ -1,0 +1,169 @@
+<Type Name="MASEnterpriseAppProtocol" FullName="MASFoundation.MASEnterpriseAppProtocol">
+  <TypeSignature Language="C#" Value="public abstract class MASEnterpriseAppProtocol : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MASEnterpriseAppProtocol extends Foundation.NSObject" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Model</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.Register("MASEnterpriseAppProtocol", false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASEnterpriseAppProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("init")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASEnterpriseAppProtocol (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASEnterpriseAppProtocol (IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="handle">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterpriseApp">
+      <MemberSignature Language="C#" Value="public abstract void EnterpriseApp (MASFoundation.MASApplication app, Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnterpriseApp(class MASFoundation.MASApplication app, class Foundation.NSError error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("enterpriseApp:didReceiveError:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="MASFoundation.MASApplication" />
+        <Parameter Name="error" Type="Foundation.NSError" />
+      </Parameters>
+      <Docs>
+        <param name="app">To be added.</param>
+        <param name="error">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterpriseWebApp">
+      <MemberSignature Language="C#" Value="public abstract void EnterpriseWebApp (MASFoundation.MASApplication app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnterpriseWebApp(class MASFoundation.MASApplication app) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("enterpriseWebApp:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="MASFoundation.MASApplication" />
+      </Parameters>
+      <Docs>
+        <param name="app">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,650 @@
+<Type Name="MASRequest" FullName="MASFoundation.MASRequest">
+  <TypeSignature Language="C#" Value="public class MASRequest : MASFoundation.MASObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASRequest extends MASFoundation.MASObject" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>MASFoundation.MASObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("MASRequest", true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+    MASRequest class is an object created by MASRequestBuilder. It contains all necessary information to invoke an API.
+    The class cannot be constructed or changed directly, only through MASRequestBuilder.
+    </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MASRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("init")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MASRequest (Foundation.NSCoder coder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSCoder coder) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("initWithCoder:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="coder" Type="Foundation.NSCoder" />
+      </Parameters>
+      <Docs>
+        <param name="coder">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASRequest (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASRequest (IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="handle">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary Body { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("body", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        NSDictionary of type/value parameters to put into the body of a request.
+        </summary>
+        <value>The body.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteFrom">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASRequest DeleteFrom (Action&lt;MASFoundation.MASRequestBuilder&gt; block);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class MASFoundation.MASRequest DeleteFrom(class System.Action`1&lt;class MASFoundation.MASRequestBuilder&gt; block) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("deleteFrom:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="block" Type="System.Action&lt;MASFoundation.MASRequestBuilder&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V2))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="block">MASRequestBuilder block containing all paramters to build the request.</param>
+        <summary>
+        Initialize MASRequest using MASRequestBuilder block and defining the request method as a HTTP DELETE call. This type of HTTP Method type
+        places its parameters within the NSURL itself as an HTTP query extension.
+        </summary>
+        <returns>MASRequestBuilder object.</returns>
+        <remarks>
+        default values for designated initializer are: isPublic: NO, sign: NO, requestType:MASRequestResponseTypeJson, responseType:MASRequestResponseTypeJson.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPoint">
+      <MemberSignature Language="C#" Value="public virtual string EndPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("endPoint", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        NSString value of the specific end point path fragment to append to the base Gateway URL.  endPoint value can also be defined as full URL format; in this case,
+        SDK must be configured to add add the external host as a trusted source using MASSecurityConfiguration object.
+        </summary>
+        <value>The end point.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFrom">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASRequest GetFrom (Action&lt;MASFoundation.MASRequestBuilder&gt; block);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class MASFoundation.MASRequest GetFrom(class System.Action`1&lt;class MASFoundation.MASRequestBuilder&gt; block) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("getFrom:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="block" Type="System.Action&lt;MASFoundation.MASRequestBuilder&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V2))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="block">MASRequestBuilder block containing all paramters to build the request.</param>
+        <summary>
+        Initialize MASRequest using MASRequestBuilder block and defining the request method as a HTTP GET call. This type of HTTP Method type
+        places its parameters within the NSURL itself as an HTTP query extension.
+        </summary>
+        <returns>MASRequestBuilder object.</returns>
+        <remarks>
+        default values for designated initializer are: isPublic: NO, sign: NO, requestType:MASRequestResponseTypeJson, responseType:MASRequestResponseTypeJson.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary Header { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("header", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        NSDictionary of type/value parameters to put into the header of a request.
+        </summary>
+        <value>The header.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpMethod">
+      <MemberSignature Language="C#" Value="public virtual string HttpMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("httpMethod", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        NSString value of the HTTP Method (GET, POST, PUT, DELETE).
+        </summary>
+        <value>The http method.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPublic">
+      <MemberSignature Language="C#" Value="public virtual bool IsPublic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("isPublic")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        bool value that determines whether or not to include credentials of primary gateway in the request.
+        </summary>
+        <value>
+          <c>true</c> if is public; otherwise, <c>false</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PatchTo">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASRequest PatchTo (Action&lt;MASFoundation.MASRequestBuilder&gt; block);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class MASFoundation.MASRequest PatchTo(class System.Action`1&lt;class MASFoundation.MASRequestBuilder&gt; block) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("patchTo:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="block" Type="System.Action&lt;MASFoundation.MASRequestBuilder&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V2))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="block">MASRequestBuilder block containing all paramters to build the request.</param>
+        <summary>
+        Initialize MASRequest using MASRequestBuilder block and defining the request method as a HTTP PATCH call. This type of HTTP Method type
+        places its parameters within the NSURL itself as an HTTP query extension.
+        </summary>
+        <returns>MASRequestBuilder object.</returns>
+        <remarks>
+        default values for designated initializer are: isPublic: NO, sign: NO, requestType:MASRequestResponseTypeJson, responseType:MASRequestResponseTypeJson.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostTo">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASRequest PostTo (Action&lt;MASFoundation.MASRequestBuilder&gt; block);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class MASFoundation.MASRequest PostTo(class System.Action`1&lt;class MASFoundation.MASRequestBuilder&gt; block) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("postTo:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="block" Type="System.Action&lt;MASFoundation.MASRequestBuilder&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V2))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="block">MASRequestBuilder block containing all paramters to build the request.</param>
+        <summary>
+        Initialize MASRequest using MASRequestBuilder block and defining the request method as a HTTP POST call. This type of HTTP Method type
+        places its parameters within the NSURL itself as an HTTP query extension.
+        </summary>
+        <returns>MASRequestBuilder object.</returns>
+        <remarks>
+        default values for designated initializer are: isPublic: NO, sign: NO, requestType:MASRequestResponseTypeJson, responseType:MASRequestResponseTypeJson.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateKey">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSData PrivateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSData PrivateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("privateKey", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        NSData value of private key.
+        </summary>
+        <value>The private key.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PutTo">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASRequest PutTo (Action&lt;MASFoundation.MASRequestBuilder&gt; block);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class MASFoundation.MASRequest PutTo(class System.Action`1&lt;class MASFoundation.MASRequestBuilder&gt; block) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("putTo:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="block" Type="System.Action&lt;MASFoundation.MASRequestBuilder&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V2))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="block">MASRequestBuilder block containing all paramters to build the request.</param>
+        <summary>
+        Initialize MASRequest using MASRequestBuilder block and defining the request method as a HTTP PUT call. This type of HTTP Method type
+        places its parameters within the NSURL itself as an HTTP query extension.
+        </summary>
+        <returns>MASRequestBuilder object.</returns>
+        <remarks>
+        default values for designated initializer are: isPublic: NO, sign: NO, requestType:MASRequestResponseTypeJson, responseType:MASRequestResponseTypeJson.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Query">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary Query { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary Query" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("query", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        NSDictionary of type/value parameters to put into the URL of a request.
+        </summary>
+        <value>The query.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestType">
+      <MemberSignature Language="C#" Value="public virtual MASFoundation.MASRequestResponseType RequestType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype MASFoundation.MASRequestResponseType RequestType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("requestType", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        MASRequestResponseType value that specifies what type formatting is required for request body.
+        </summary>
+        <value>The type of the request.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseType">
+      <MemberSignature Language="C#" Value="public virtual MASFoundation.MASRequestResponseType ResponseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype MASFoundation.MASRequestResponseType ResponseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("responseType", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        MASRequestResponseType value that specifies what type formatting is required for response body.
+        </summary>
+        <value>The type of the response.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public virtual bool Sign { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Sign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("sign")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        bool value that determines whether or not digitally sign the request parameters with JWT signature.
+        </summary>
+        <value>
+          <c>true</c> if sign; otherwise, <c>false</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

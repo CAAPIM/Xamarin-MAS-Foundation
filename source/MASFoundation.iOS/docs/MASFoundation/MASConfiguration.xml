@@ -1,0 +1,1756 @@
+<Type Name="MASConfiguration" FullName="MASFoundation.MASConfiguration">
+  <TypeSignature Language="C#" Value="public class MASConfiguration : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASConfiguration extends Foundation.NSObject" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("MASConfiguration", true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+    The `MASConfiguration` class is a local representation of configuration data.
+    </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MASConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("init")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MASConfiguration (Foundation.NSDictionary info);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSDictionary info) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("initWithConfigurationInfo:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="Foundation.NSDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="info">NSDictionary of configuration information.</param>
+        <summary>
+        Initializer to perform a default initialization.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASConfiguration (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASConfiguration (IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="handle">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationClients">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary[] ApplicationClients { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary[] ApplicationClients" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("applicationClients", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSDictionary[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        ** Internal usage only; READ ONLY **
+        
+        Gets the application static clients.
+        </summary>
+        <value>The application clients.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationCredentialsAreDynamic">
+      <MemberSignature Language="C#" Value="public virtual bool ApplicationCredentialsAreDynamic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplicationCredentialsAreDynamic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("applicationCredentialsAreDynamic")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        ** Internal usage only; READ ONLY **
+        
+        Gets a value indicating whether this <see cref="T:MASFoundation.MASConfiguration" /> application credentials
+        are dynamic or static.
+        </summary>
+        <value>
+          <c>true</c> if application credentials are dynamic; otherwise, <c>false</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationDescription">
+      <MemberSignature Language="C#" Value="public virtual string ApplicationDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("applicationDescription", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the application description.
+        </summary>
+        <value>The application description.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public virtual string ApplicationName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("applicationName", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the name of the application.
+        </summary>
+        <value>The name of the application.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationOrganization">
+      <MemberSignature Language="C#" Value="public virtual string ApplicationOrganization { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationOrganization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("applicationOrganization", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the organization name of the application.
+        </summary>
+        <value>The application organization.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationRegisteredBy">
+      <MemberSignature Language="C#" Value="public virtual string ApplicationRegisteredBy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationRegisteredBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("applicationRegisteredBy", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the name of the entity that registered the application.
+        </summary>
+        <value>The application registered by.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationType">
+      <MemberSignature Language="C#" Value="public virtual string ApplicationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("applicationType", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the type of the application.
+        </summary>
+        <value>The type of the application.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticateOTPEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string AuthenticateOTPEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticateOTPEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("authenticateOTPEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the authenticate OTP endpoint.
+        </summary>
+        <value>The authenticate OTP endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string AuthorizationEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthorizationEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("authorizationEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the authorization endpoint.
+        </summary>
+        <value>The authorization endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BluetoothCharacteristicUuid">
+      <MemberSignature Language="C#" Value="public virtual string BluetoothCharacteristicUuid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BluetoothCharacteristicUuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("bluetoothCharacteristicUuid")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the bluetooth characteristic UUID.
+        </summary>
+        <value>The bluetooth characteristic UUID.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BluetoothRssi">
+      <MemberSignature Language="C#" Value="public virtual nint BluetoothRssi { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.nint BluetoothRssi" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("bluetoothRssi")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.nint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the bluetooth rssi.
+        </summary>
+        <value>The bluetooth rssi.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BluetoothServiceUuid">
+      <MemberSignature Language="C#" Value="public virtual string BluetoothServiceUuid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BluetoothServiceUuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("bluetoothServiceUuid")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the bluetooth service UUID.
+        </summary>
+        <value>The bluetooth service UUID.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientInitializeEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string ClientInitializeEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientInitializeEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("clientInitializeEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the client initialize endpoint.
+        </summary>
+        <value>The client initialize endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareWithCurrentConfiguration">
+      <MemberSignature Language="C#" Value="public virtual bool CompareWithCurrentConfiguration (Foundation.NSDictionary newConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CompareWithCurrentConfiguration(class Foundation.NSDictionary newConfiguration) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("compareWithCurrentConfiguration:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newConfiguration" Type="Foundation.NSDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="newConfiguration">NSDictionary of new configuration to compare.</param>
+        <summary>
+        Internal function to compare the configuration JSON object with current configuration.
+        </summary>
+        <returns>
+          <c>true</c>, if with current configuration was compared, <c>false</c> otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentConfiguration">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASConfiguration CurrentConfiguration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class MASFoundation.MASConfiguration CurrentConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("currentConfiguration")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the application's configuration object. This is a singleton object.
+        </summary>
+        <value>The singleton 'MASConfiguration' object.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultApplicationClientIdentifier">
+      <MemberSignature Language="C#" Value="public virtual string DefaultApplicationClientIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultApplicationClientIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("defaultApplicationClientIdentifier")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the default application client identifier.
+        </summary>
+        <value>The default application client identifier.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultApplicationClientInfo">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt; DefaultApplicationClientInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSString&gt; DefaultApplicationClientInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("defaultApplicationClientInfo")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the default application client info.
+        </summary>
+        <value>The default application client info.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultApplicationClientSecret">
+      <MemberSignature Language="C#" Value="public virtual string DefaultApplicationClientSecret { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultApplicationClientSecret" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("defaultApplicationClientSecret")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the default application client secret.
+        </summary>
+        <value>The default application client secret.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetectServerChangeWithCurrentConfiguration">
+      <MemberSignature Language="C#" Value="public virtual bool DetectServerChangeWithCurrentConfiguration (Foundation.NSDictionary newConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool DetectServerChangeWithCurrentConfiguration(class Foundation.NSDictionary newConfiguration) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("detectServerChangeWithCurrentConfiguration:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newConfiguration" Type="Foundation.NSDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="newConfiguration">NSDictionary of new configuration to compare.</param>
+        <summary>
+        Internal function to determine the server change based on HTTP scheme, hostname and port number between two configurations.
+        </summary>
+        <returns>
+          <c>true</c>, if server change with current configuration was detected, <c>false</c> otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceListAllEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string DeviceListAllEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceListAllEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("deviceListAllEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the device list endpoint.
+        </summary>
+        <value>The device list endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRegisterClientEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string DeviceRegisterClientEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceRegisterClientEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("deviceRegisterClientEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the device registration as client credentials endpoint.
+        </summary>
+        <value>The device registration as client credentials endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRegisterEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string DeviceRegisterEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceRegisterEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("deviceRegisterEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the device registration endpoint.
+        </summary>
+        <value>The device registration endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRemoveEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string DeviceRemoveEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceRemoveEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("deviceRemoveEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the device de-registration endpoint.
+        </summary>
+        <value>The device de-registration endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRenewEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string DeviceRenewEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceRenewEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("deviceRenewEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the device client certificate renew endpoint path.
+        </summary>
+        <value>The device client certificate renew endpoint path.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnabledPublicKeyPinning">
+      <MemberSignature Language="C#" Value="public virtual bool EnabledPublicKeyPinning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnabledPublicKeyPinning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("enabledPublicKeyPinning")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Determines SDK is enabled for public key pinning for authentication challenge.  This read only value is within
+        the JSON configuration file.
+        </summary>
+        <value>
+          <c>true</c> if enabled public key pinning; otherwise, <c>false</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnabledTrustedPublicPKI">
+      <MemberSignature Language="C#" Value="public virtual bool EnabledTrustedPublicPKI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnabledTrustedPublicPKI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("enabledTrustedPublicPKI")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Determines SDK is enabled for trusted public PKI for authentication challenge.  This read only value is within
+        the JSON configuration file.
+        </summary>
+        <value>
+          <c>true</c> if enabled trusted public pki; otherwise, <c>false</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointPathForKey">
+      <MemberSignature Language="C#" Value="public virtual string EndpointPathForKey (string endpointKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string EndpointPathForKey(string endpointKey) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("endpointPathForKey:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpointKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="endpointKey">The key which applies to the endpoint path.</param>
+        <summary>
+        Retrieves an endpoint path fragment for a given endpoint key.
+        </summary>
+        <returns>The path for key.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterpriseBrowserEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string EnterpriseBrowserEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EnterpriseBrowserEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("enterpriseBrowserEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the enterprise browser endpoint.
+        </summary>
+        <value>The enterprise browser endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayCertificates">
+      <MemberSignature Language="C#" Value="public virtual string[] GatewayCertificates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] GatewayCertificates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("gatewayCertificates", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the public server certificate of the Gateway as obtained from the configuration.
+        </summary>
+        <value>The array of strings of the gateway's public certificate.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayCertificatesAsDERData">
+      <MemberSignature Language="C#" Value="public virtual string[] GatewayCertificatesAsDERData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] GatewayCertificatesAsDERData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("gatewayCertificatesAsDERData", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the public server certificate of the Gateway guaraneteed to be in DER format.
+        </summary>
+        <value>The gateway certificates as DER Data format.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayCertificatesAsPEMData">
+      <MemberSignature Language="C#" Value="public virtual string[] GatewayCertificatesAsPEMData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] GatewayCertificatesAsPEMData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("gatewayCertificatesAsPEMData", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the public server certificate of the Gateway guaraneteed to be in PEM format.
+        </summary>
+        <value>The gateway certificates as PEM Data format.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayHostName">
+      <MemberSignature Language="C#" Value="public virtual string GatewayHostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GatewayHostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("gatewayHostName", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the name of the gateway host.
+        </summary>
+        <value>The name of the gateway host.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayPort">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber GatewayPort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber GatewayPort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("gatewayPort", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the gateway port.
+        </summary>
+        <value>The gateway port.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayPrefix">
+      <MemberSignature Language="C#" Value="public virtual string GatewayPrefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GatewayPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("gatewayPrefix", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the gateway prefix.
+        </summary>
+        <value>The gateway prefix.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayUrl">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSUrl GatewayUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSUrl GatewayUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("gatewayUrl", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSUrl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the full URL of the Gateway including the prefix, hostname and port in a https://hostname:port/prefix (if exists)&gt; format.
+        </summary>
+        <value>The gateway URL in NSUrl object with https://hostname:port/prefix (if exists)&gt; format.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceFromStorage">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASConfiguration InstanceFromStorage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class MASFoundation.MASConfiguration InstanceFromStorage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("instanceFromStorage")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the instance from internal storage.
+        </summary>
+        <value>The instance from storage.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoaded">
+      <MemberSignature Language="C#" Value="public virtual bool IsLoaded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLoaded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("isLoaded")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets a value indicating whether this <see cref="T:MASFoundation.MASConfiguration" /> is loaded.
+        <para>true if it has succesfully loaded and is ready for use.</para><para>false if not yet loaded or perhaps an error has occurred during attempting to load.</para></summary>
+        <value>
+          <c>true</c> if is loaded; otherwise, <c>false</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationIsRequired">
+      <MemberSignature Language="C#" Value="public virtual bool LocationIsRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LocationIsRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("locationIsRequired")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Determines if a user's location coordinates are required.  This read only value 
+        is within the JSON configuration file and is set as a requirement of the application
+        on the Gateway.This means that a set of location coordinates must be sent in the
+        header of all protected endpoint HTTP request to the API on the Gateway.        
+        <para>If these are not sent when this is YES the Gateway will validate this and return
+        an error response.</para></summary>
+        <value>
+          <c>true</c> if location is required; otherwise, <c>false</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSecurityConfigurationForDomain">
+      <MemberSignature Language="C#" Value="public static void RemoveSecurityConfigurationForDomain (Foundation.NSUrl domain);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveSecurityConfigurationForDomain(class Foundation.NSUrl domain) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("removeSecurityConfigurationForDomain:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="domain" Type="Foundation.NSUrl" />
+      </Parameters>
+      <Docs>
+        <param name="domain">NSUrl of the targeted host including HTTP scheme, hostname and port number in http://hostname:port format.</param>
+        <summary>
+        Removes security configuration object based on the domain (host, and port number).
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public virtual void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("reset")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        Reset this instance.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveToStorage">
+      <MemberSignature Language="C#" Value="public virtual void SaveToStorage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveToStorage() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("saveToStorage")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        Saves MASConfiguration object to storage.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScimPathEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string ScimPathEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScimPathEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("scimPathEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the scim endpoint.
+        </summary>
+        <value>The scim endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityConfigurationForDomain">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASSecurityConfiguration SecurityConfigurationForDomain (Foundation.NSUrl domain);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class MASFoundation.MASSecurityConfiguration SecurityConfigurationForDomain(class Foundation.NSUrl domain) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("securityConfigurationForDomain:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASSecurityConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="domain" Type="Foundation.NSUrl" />
+      </Parameters>
+      <Docs>
+        <param name="domain">NSUrl of the targeted host including HTTP scheme, hostname and port number in http://hostname:port format.</param>
+        <summary>
+        Returns MASSecurityConfiguration object for a specific domain.
+        </summary>
+        <returns>The MASSecurityConfiguration object for domain.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityConfigurations">
+      <MemberSignature Language="C#" Value="public static Foundation.NSArray[] SecurityConfigurations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSArray[] SecurityConfigurations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("securityConfigurations")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSArray[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Returns an array of MASSecurityConfiguration objects for each host.
+        </summary>
+        <value>The array of currently active MASSecurityConfigurations.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSecurityConfiguration">
+      <MemberSignature Language="C#" Value="public static void SetSecurityConfiguration (MASFoundation.MASSecurityConfiguration securityConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSecurityConfiguration(class MASFoundation.MASSecurityConfiguration securityConfiguration) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setSecurityConfiguration:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityConfiguration" Type="MASFoundation.MASSecurityConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="securityConfiguration">MASSecurityConfiguration object with host, and security measure configuration values.</param>
+        <summary>
+        Sets security measure for SSL pinning, and SSL validation for specified host in MASSecurityConfiguration object.
+        <para>MASSecurityConfiguration must have valid host in NSUrl object with port number(port number is mandatory), at least one pinning information(either certificates, or public key hashes), or trust public PKI.If public PKI is not trusted, and no pinning information is provided, it will fail to store the security configuration object, and eventually fail on evaluating SSL for requests.</para><para>Upon SDK initialization, MASConfiguration.CurrentConfiguration.GatewayUrl's MASSecurityConfiguration object will be overwritten. If primary gateway's security configuration has to be modified, ensure to set security configuration after SDK initialization.</para></summary>
+        <remarks>To be added.</remarks>
+        <deprecated type="deprecate">
+        This method is deprecated.  Use MASConfiguration.SetSecurityConfiguration(MASSecurityConfiguration, NSError) instead for better handling of error cases.
+        </deprecated>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSecurityConfiguration">
+      <MemberSignature Language="C#" Value="public static bool SetSecurityConfiguration (MASFoundation.MASSecurityConfiguration securityConfiguration, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SetSecurityConfiguration(class MASFoundation.MASSecurityConfiguration securityConfiguration, class Foundation.NSError error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setSecurityConfiguration:error:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityConfiguration" Type="MASFoundation.MASSecurityConfiguration" />
+        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="securityConfiguration">MASSecurityConfiguration object with host, and security measure configuration values.</param>
+        <param name="error">NSError object reference to notify any error occurred while validating MASSecurityConfiguration.</param>
+        <summary>
+        Sets security measure for SSL pinning, and SSL validation for specified host in MASSecurityConfiguration object.     
+        <para>MASSecurityConfiguration must have valid host in NSUrl object with port number(port number is mandatory), at least one pinning information(either certificates, or public key hashes), or trust public PKI.If public PKI is not trusted, and no pinning information is provided, it will fail to store the security configuration object, and eventually fail on evaluating SSL for requests.</para><para>Upon SDK initialization, MASConfiguration.CurrentConfiguration.GatewayUrl's MASSecurityConfiguration object will be overwritten. If primary gateway's security configuration has to be modified, ensure to set security configuration after SDK initialization.</para></summary>
+        <returns>
+          <c>true</c>, if security configuration was set, <c>false</c> otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SsoEnabled">
+      <MemberSignature Language="C#" Value="public virtual bool SsoEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SsoEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("ssoEnabled")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setSsoEnabled:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Determines if the client's SSO is enabled or not.  This value
+        is read from JSON configuration, if there is no value defined in keychain.
+        </summary>
+        <value>
+          <c>true</c> if sso enabled; otherwise, <c>false</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoragePathEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string StoragePathEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StoragePathEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("storagePathEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the storage endpoint.
+        </summary>
+        <value>The storage endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string TokenEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TokenEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("tokenEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the OAuth 2 token endpoint.
+        </summary>
+        <value>The OAuth 2 token endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenRevokeEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string TokenRevokeEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TokenRevokeEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("tokenRevokeEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the OAuth 2 token revoke endpoint.
+        </summary>
+        <value>The OAuth 2 token revoke endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedCertPinnedPublickKeyHashes">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray[] TrustedCertPinnedPublickKeyHashes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray[] TrustedCertPinnedPublickKeyHashes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("trustedCertPinnedPublickKeyHashes", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSArray[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the array of trusted public key hasehs for certificate pinning.
+        </summary>
+        <value>The trusted cert pinned publick key hashes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserInfoEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string UserInfoEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserInfoEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("userInfoEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the user info endpoint.
+        </summary>
+        <value>The user info endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserSessionLogoutEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string UserSessionLogoutEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserSessionLogoutEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("userSessionLogoutEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the user session logout endpoint.
+        </summary>
+        <value>The user session logout endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserSessionStatusEndpointPath">
+      <MemberSignature Language="C#" Value="public virtual string UserSessionStatusEndpointPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserSessionStatusEndpointPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("userSessionStatusEndpointPath")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets the user session status endpoint.
+        </summary>
+        <value>The user session status endpoint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateJSONConfiguration">
+      <MemberSignature Language="C#" Value="public static Foundation.NSError ValidateJSONConfiguration (Foundation.NSDictionary configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Foundation.NSError ValidateJSONConfiguration(class Foundation.NSDictionary configuration) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("validateJSONConfiguration:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="Foundation.NSDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">Configuration.</param>
+        <summary>
+        Internal function to validate the configuration.
+        </summary>
+        <returns>The JSONC onfiguration.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

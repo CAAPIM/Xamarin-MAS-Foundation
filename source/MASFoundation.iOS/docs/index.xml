@@ -1,0 +1,206 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="MASFoundation.iOS" Version="1.0.6666.28870">
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.LinkerSafe</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("MASFoundation.framework")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.Default | System.Diagnostics.DebuggableAttribute+DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints | System.Diagnostics.DebuggableAttribute+DebuggingModes.EnableEditAndContinue)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCopyright("${AuthorCopyright}")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("MASFoundation.iOS")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTrademark("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetFramework("Xamarin.iOS,Version=v1.0", FrameworkDisplayName="Xamarin.iOS")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+  </Assemblies>
+  <Remarks>To be added.</Remarks>
+  <Copyright>To be added.</Copyright>
+  <Types>
+    <Namespace Name="MASFoundation">
+      <Type Name="Constants" Kind="Class" />
+      <Type Name="InvokeResult" Kind="Class" />
+      <Type Name="LoginWithAuthCredentialsResult" Kind="Class" />
+      <Type Name="LoginWithAuthorizationCodeResult" Kind="Class" />
+      <Type Name="LoginWithIdTokenResult" Kind="Class" />
+      <Type Name="LoginWithUserNameResult" Kind="Class" />
+      <Type Name="MAS" Kind="Class" />
+      <Type Name="MASApplication" Kind="Class" />
+      <Type Name="MASAuthCredentials" Kind="Class" />
+      <Type Name="MASAuthCredentialsAuthorizationCode" Kind="Class" />
+      <Type Name="MASAuthCredentialsBlock" Kind="Delegate" />
+      <Type Name="MASAuthCredentialsJWT" Kind="Class" />
+      <Type Name="MASAuthCredentialsPassword" Kind="Class" />
+      <Type Name="MASAuthenticationProvider" Kind="Class" />
+      <Type Name="MASAuthenticationProviders" Kind="Class" />
+      <Type Name="MASAuthenticationStatus" Kind="Enumeration" />
+      <Type Name="MASAuthorizationCodeCredentialsBlock" Kind="Delegate" />
+      <Type Name="MASAuthorizationResponse" Kind="Class" />
+      <Type Name="MASAuthorizationResponseDelegate" Kind="Class" />
+      <Type Name="MASBasicCredentialsBlock" Kind="Delegate" />
+      <Type Name="MASBLEServiceState" Kind="Enumeration" />
+      <Type Name="MASClaims" Kind="Class" />
+      <Type Name="MASCompletionErrorBlock" Kind="Delegate" />
+      <Type Name="MASConfiguration" Kind="Class" />
+      <Type Name="MASConnectaMessagingClientDelegate" Kind="Class" />
+      <Type Name="MASDevice" Kind="Class" />
+      <Type Name="MASEnterpriseAppProtocol" Kind="Class" />
+      <Type Name="MASFile" Kind="Class" />
+      <Type Name="MASFileDirectoryType" Kind="Enumeration" />
+      <Type Name="MASFoundationErrorCode" Kind="Enumeration" />
+      <Type Name="MASGatewayMonitoringStatus" Kind="Enumeration" />
+      <Type Name="MASGatewayMonitorStatusBlock" Kind="Delegate" />
+      <Type Name="MASGrantFlow" Kind="Enumeration" />
+      <Type Name="MASGroup" Kind="Class" />
+      <Type Name="MASMQTTClient" Kind="Class" />
+      <Type Name="MASMQTTMessage" Kind="Class" />
+      <Type Name="MASObject" Kind="Class" />
+      <Type Name="MASObjectResponseErrorBlock" Kind="Delegate" />
+      <Type Name="MASObjectsResponseErrorBlock" Kind="Delegate" />
+      <Type Name="MASOTPChannelSelectionBlock" Kind="Delegate" />
+      <Type Name="MASOTPCredentialsBlock" Kind="Delegate" />
+      <Type Name="MASOTPFetchCredentialsBlock" Kind="Delegate" />
+      <Type Name="MASOTPGenerationBlock" Kind="Delegate" />
+      <Type Name="MASProximityLogin" Kind="Class" />
+      <Type Name="MASProximityLoginDelegate" Kind="Class" />
+      <Type Name="MASProximityLoginQRCode" Kind="Class" />
+      <Type Name="MASRequest" Kind="Class" />
+      <Type Name="MASRequestBuilder" Kind="Class" />
+      <Type Name="MASRequestResponseType" Kind="Enumeration" />
+      <Type Name="MASResponseInfoErrorBlock" Kind="Delegate" />
+      <Type Name="MASResponseObjectErrorBlock" Kind="Delegate" />
+      <Type Name="MASSecurityConfiguration" Kind="Class" />
+      <Type Name="MASService" Kind="Class" />
+      <Type Name="MASService_SubclassingHooks" Kind="Class" />
+      <Type Name="MASServiceLifecycleStatus" Kind="Enumeration" />
+      <Type Name="MASSharedStorage" Kind="Class" />
+      <Type Name="MASSocialLogin" Kind="Class" />
+      <Type Name="MASSocialLoginDelegate" Kind="Class" />
+      <Type Name="MASState" Kind="Enumeration" />
+      <Type Name="MASUser" Kind="Class" />
+      <Type Name="MASUserAuthCredentialsBlock" Kind="Delegate" />
+      <Type Name="MASUserLoginWithUserCredentialsBlock" Kind="Delegate" />
+      <Type Name="MASUserResponseErrorBlock" Kind="Delegate" />
+      <Type Name="MQTTCompletionErrorBlock" Kind="Delegate" />
+      <Type Name="MQTTConnectionReturnCode" Kind="Enumeration" />
+      <Type Name="MQTTDisconnectionHandler" Kind="Delegate" />
+      <Type Name="MQTTMessageHandler" Kind="Delegate" />
+      <Type Name="MQTTPublishingCompletionBlock" Kind="Delegate" />
+      <Type Name="MQTTQualityOfService" Kind="Enumeration" />
+      <Type Name="MQTTSubscriptionCompletionBlock" Kind="Delegate" />
+      <Type Name="MQTTSubscriptionCompletionHandler" Kind="Delegate" />
+      <Type Name="NSData_MAS" Kind="Class" />
+      <Type Name="StartDefaultConfigurationResult" Kind="Class" />
+    </Namespace>
+  </Types>
+  <Title>MASFoundation.iOS</Title>
+  <ExtensionMethods>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:MASFoundation.MASService" />
+      </Targets>
+      <Member MemberName="ServiceDidFailWithError">
+        <MemberSignature Language="C#" Value="public static void ServiceDidFailWithError (this MASFoundation.MASService This, Foundation.NSError error);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ServiceDidFailWithError(class MASFoundation.MASService This, class Foundation.NSError error) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>System.Void</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="This" Type="MASFoundation.MASService" RefType="this" />
+          <Parameter Name="error" Type="Foundation.NSError" />
+        </Parameters>
+        <Docs>
+          <param name="This">To be added.</param>
+          <param name="error">To be added.</param>
+          <summary>To be added.</summary>
+        </Docs>
+        <Link Type="MASFoundation.MASService_SubclassingHooks" Member="M:MASFoundation.MASService_SubclassingHooks.ServiceDidFailWithError(MASFoundation.MASService,Foundation.NSError)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:Foundation.NSData" />
+      </Targets>
+      <Member MemberName="DecryptData">
+        <MemberSignature Language="C#" Value="public static Foundation.NSData DecryptData (this Foundation.NSData This, Foundation.NSData data, string password, out Foundation.NSError anError);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Foundation.NSData DecryptData(class Foundation.NSData This, class Foundation.NSData data, string password, class Foundation.NSError anError) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>Foundation.NSData</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="This" Type="Foundation.NSData" RefType="this" />
+          <Parameter Name="data" Type="Foundation.NSData" />
+          <Parameter Name="password" Type="System.String" />
+          <Parameter Name="anError" Type="Foundation.NSError&amp;" RefType="out" />
+        </Parameters>
+        <Docs>
+          <param name="This">To be added.</param>
+          <param name="data">To be added.</param>
+          <param name="password">To be added.</param>
+          <param name="anError">To be added.</param>
+          <summary>To be added.</summary>
+        </Docs>
+        <Link Type="MASFoundation.NSData_MAS" Member="M:MASFoundation.NSData_MAS.DecryptData(Foundation.NSData,Foundation.NSData,System.String,Foundation.NSError@)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:Foundation.NSData" />
+      </Targets>
+      <Member MemberName="EncryptData">
+        <MemberSignature Language="C#" Value="public static Foundation.NSData EncryptData (this Foundation.NSData This, Foundation.NSData data, string password, out Foundation.NSError anError);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Foundation.NSData EncryptData(class Foundation.NSData This, class Foundation.NSData data, string password, class Foundation.NSError anError) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>Foundation.NSData</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="This" Type="Foundation.NSData" RefType="this" />
+          <Parameter Name="data" Type="Foundation.NSData" />
+          <Parameter Name="password" Type="System.String" />
+          <Parameter Name="anError" Type="Foundation.NSError&amp;" RefType="out" />
+        </Parameters>
+        <Docs>
+          <param name="This">To be added.</param>
+          <param name="data">To be added.</param>
+          <param name="password">To be added.</param>
+          <param name="anError">To be added.</param>
+          <summary>To be added.</summary>
+        </Docs>
+        <Link Type="MASFoundation.NSData_MAS" Member="M:MASFoundation.NSData_MAS.EncryptData(Foundation.NSData,Foundation.NSData,System.String,Foundation.NSError@)" />
+      </Member>
+    </ExtensionMethod>
+  </ExtensionMethods>
+</Overview>

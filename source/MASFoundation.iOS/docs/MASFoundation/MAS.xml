@@ -1,0 +1,2178 @@
+<Type Name="MAS" FullName="MASFoundation.MAS">
+  <TypeSignature Language="C#" Value="public class MAS : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MAS extends Foundation.NSObject" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("MAS", true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+    The top level MAS object represents the Mobile App Services SDK in it's entirety.  
+    It is where the framework lifecycle begins, and ends if necessary.It is the front
+    facing class where many of the configuration settings for the SDK as a whole can be
+    found and utilized.
+    </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MAS ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("init")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MAS (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MAS (IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="handle">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteFrom">
+      <MemberSignature Language="C#" Value="public static void DeleteFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeleteFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("deleteFrom:withParameters:andHeaders:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP DELETE call from the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para><para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use MAS.DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </para>
+        This version defaults the request/response content type encoding to JSON.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteFrom">
+      <MemberSignature Language="C#" Value="public static void DeleteFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeleteFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("deleteFrom:withParameters:andHeaders:requestType:responseType:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        <param name="responseType">The mime type expected in the body of the response.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP DELETE call from the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para><para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use MAS.DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </para></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteFrom">
+      <MemberSignature Language="C#" Value="public static void DeleteFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeleteFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("deleteFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        <param name="responseType">The mime type expected in the body of the response.</param>
+        <param name="isPublic">Boolean value whether the request is being made outside of primary gateway. When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP DELETE call from the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para><para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </para></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableBrowserBasedAuthentication">
+      <MemberSignature Language="C#" Value="public static void EnableBrowserBasedAuthentication (bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableBrowserBasedAuthentication(bool enable) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("enableBrowserBasedAuthentication:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enable">bool value indicating whether Browser Based Authentication is enabled or not.</param>
+        <summary>
+        Sets bool indicator of Browser Based Authentication (templatized login) enabled or not for authorization process.
+        By default, it is disabled.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablePKCE">
+      <MemberSignature Language="C#" Value="public static void EnablePKCE (bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnablePKCE(bool enable) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("enablePKCE:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enable">bool value of indicating whether PKCE is enabled or not.</param>
+        <summary>
+        Sets bool indicator of PKCE (Proof Key for Code Exchange) enabled or not for authorization process in Social Login, and Proximity Login.
+        <para>By default, PKCE is enabled and enforced in authorization process; it can be opted-out.</para><para>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</para><para>Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE. If the server side does not support PKCE, client side will still work without PKCE verification.</para></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayIsReachable">
+      <MemberSignature Language="C#" Value="public static bool GatewayIsReachable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool GatewayIsReachable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("gatewayIsReachable")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Retrieves a simple boolean indicator if the gateway is currently reachable or not.
+        </summary>
+        <value>
+          <c>true</c> if gateway is reachable; otherwise, <c>false</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayMonitoringStatusAsString">
+      <MemberSignature Language="C#" Value="public static string GatewayMonitoringStatusAsString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string GatewayMonitoringStatusAsString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("gatewayMonitoringStatusAsString")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Retrieves the current gateway monitoring status of the Gateway connection.
+        </summary>
+        <value>The gateway monitoring status as string.</value>
+        <remarks>
+        The monitoring status enumerated values to their string equivalents are:
+        
+        MASGatewayMonitoringStatus.NotReachable
+        MASGatewayMonitoringStatus.ReachableViaWWAN
+        MASGatewayMonitoringStatus.ReachableViaWiFi
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFrom">
+      <MemberSignature Language="C#" Value="public static void GetFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("getFrom:withParameters:andHeaders:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP GET call from the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para><para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </para>
+        This version defaults the request/response content type encoding to JSON.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFrom">
+      <MemberSignature Language="C#" Value="public static void GetFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("getFrom:withParameters:andHeaders:requestType:responseType:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        <param name="responseType">The mime type expected in the body of the response.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP GET call from the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFrom">
+      <MemberSignature Language="C#" Value="public static void GetFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("getFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        <param name="responseType">The mime type expected in the body of the response.</param>
+        <param name="isPublic">Boolean value whether the request is being made outside of primary gateway. When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP GET call from the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GrantFlow">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASGrantFlow GrantFlow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype MASFoundation.MASGrantFlow GrantFlow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("grantFlow")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setGrantFlow:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASGrantFlow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        MASGrantFlow property.  The default is MASGrantFlow.ClientCredentials.
+        </summary>
+        <value>The grant flow of MAG SDK.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static void Invoke (MASFoundation.MASRequest request, MASFoundation.MASResponseObjectErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Invoke(class MASFoundation.MASRequest request, class MASFoundation.MASResponseObjectErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("invoke:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="MASFoundation.MASRequest" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseObjectErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseObjectErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="request">MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        <param name="completion">An MASResponseObjectErrorBlock (NSHttpUrlResponse response, NSObject responseObject, NSError error) that will receive any type of response object or an NSError object if there is a failure.</param>
+        <summary>
+        Invoke the endpoint with the parameters defined in the MASRequest object
+        <para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.      
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;MASFoundation.InvokeResult&gt; InvokeAsync (MASFoundation.MASRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class MASFoundation.InvokeResult&gt; InvokeAsync(class MASFoundation.MASRequest request) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.InvokeResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="MASFoundation.MASRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        <summary>
+        Invoke the endpoint with the parameters defined in the MASRequest object
+        <para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.      
+        </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeychainSynchronizable">
+      <MemberSignature Language="C#" Value="public static bool IsKeychainSynchronizable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsKeychainSynchronizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("isKeychainSynchronizable")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets a value indicating whether this <see cref="T:MASFoundation.MAS" /> is keychain synchronizable.
+        </summary>
+        <value>
+          <c>true</c> if is keychain synchronizable; otherwise, <c>false</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPKCEEnabled">
+      <MemberSignature Language="C#" Value="public static bool IsPKCEEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsPKCEEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("isPKCEEnabled")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets a value indicating whether this <see cref="T:MASFoundation.MAS" /> is PKCEE nabled.
+        
+        <para>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</para><para>@dependency &gt;Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification.</para></summary>
+        <value>
+        bool value of indicating whether PKCE is enabled or not.
+        <c>true</c> if is PKCEE nabled; otherwise, <c>false</c>.
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASState">
+      <MemberSignature Language="C#" Value="public static MASFoundation.MASState MASState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype MASFoundation.MASState MASState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("MASState")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Returns current MASState enumeration value.  The value can be used to determine which state SDK is currently at.
+        </summary>
+        <value>MASState of current state.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PatchTo">
+      <MemberSignature Language="C#" Value="public static void PatchTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PatchTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("patchTo:withParameters:andHeaders:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP PATCH call to the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para><para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </para>
+        This version defaults the request/response content type encoding to JSON.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PatchTo">
+      <MemberSignature Language="C#" Value="public static void PatchTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PatchTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("patchTo:withParameters:andHeaders:requestType:responseType:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        <param name="responseType">The mime type expected in the body of the response.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP PATCH call to the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PatchTo">
+      <MemberSignature Language="C#" Value="public static void PatchTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PatchTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("patchTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        <param name="responseType">The mime type expected in the body of the response.</param>
+        <param name="isPublic">Boolean value whether the request is being made outside of primary gateway. When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP PATCH call to the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostTo">
+      <MemberSignature Language="C#" Value="public static void PostTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PostTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("postTo:withParameters:andHeaders:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP POST call to the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para><para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </para>
+        This version defaults the request/response content type encoding to JSON.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostTo">
+      <MemberSignature Language="C#" Value="public static void PostTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PostTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("postTo:withParameters:andHeaders:requestType:responseType:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        <param name="responseType">The mime type expected in the body of the response.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP POST call to the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostTo">
+      <MemberSignature Language="C#" Value="public static void PostTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PostTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("postTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        <param name="responseType">The mime type expected in the body of the response.</param>
+        <param name="isPublic">Boolean value whether the request is being made outside of primary gateway. When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP PATCH call to the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PutTo">
+      <MemberSignature Language="C#" Value="public static void PutTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PutTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("putTo:withParameters:andHeaders:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP PUT call to the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para><para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </para>
+        This version defaults the request/response content type encoding to JSON.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PutTo">
+      <MemberSignature Language="C#" Value="public static void PutTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PutTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("putTo:withParameters:andHeaders:requestType:responseType:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        <param name="responseType">The mime type expected in the body of the response.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP PUT call to the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PutTo">
+      <MemberSignature Language="C#" Value="public static void PutTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic, MASFoundation.MASResponseInfoErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PutTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("putTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+        <Parameter Name="completion" Type="MASFoundation.MASResponseInfoErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseInfoErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">The specific end point path fragment NSString to append to the base
+        Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
+        which can be configured in JSON configuration.</param>
+        <param name="parameterInfo">An NSDictionary of key/value parameter values that will go into the query portion of the URL.</param>
+        <param name="headerInfo">An NSDictionary of key/value header values that will go into the HTTP header.</param>
+        <param name="requestType">The mime type content encoding expected for the parameter encoding.</param>
+        <param name="responseType">The mime type expected in the body of the response.</param>
+        <param name="isPublic">Boolean value whether the request is being made outside of primary gateway. When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
+        <param name="completion">An MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will receive the JSON response object or an NSError object if there is a failure.</param>
+        <summary>
+        Request method for an HTTP PUT call to the Gateway.  This type of HTTP Method type
+        places it's parameters within the NSURL itself as an HTTP query extension as so:
+        <para><![CDATA[ https://<hostname>:<port>/<endPointPath><?type=value&type2=value2&...>]]></para><para>
+        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+        </para><para>
+        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+        </para><para>
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
+        </para>
+        If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made
+        to the primary gateway or not.  To ensure bypass the user session validation for public API, use PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
+        with isPublic being <c>true</c>.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetConfigurationFileName">
+      <MemberSignature Language="C#" Value="public static void SetConfigurationFileName (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetConfigurationFileName(string fileName) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setConfigurationFileName:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">The NSString name of the configuration file.</param>
+        <summary>
+        Set the name of the configuration file.  This gives the ability to set the file's name to a custom value.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGatewayMonitor">
+      <MemberSignature Language="C#" Value="public static void SetGatewayMonitor (MASFoundation.MASGatewayMonitorStatusBlock monitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetGatewayMonitor(class MASFoundation.MASGatewayMonitorStatusBlock monitor) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setGatewayMonitor:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="monitor" Type="MASFoundation.MASGatewayMonitorStatusBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASGatewayMonitorStatusBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="monitor">The MASGatewayMonitorStatusBlock that will receive the status updates.</param>
+        <summary>
+        Sets the gateway monitoring block defined by the GatewayMonitorStatusBlock type.
+        This block will be triggered when any change to the current monitoring status
+        takes place with a MASGatewayMonitoringStatus.
+        <para>
+        This is optional and it can be set to null at any time to stop receiving the notifications.
+        </para></summary>
+        <remarks>
+        The gateway monitoring status enumerated values are:
+        MASGatewayMonitoringStatus.NotReachable
+        MASGatewayMonitoringStatus.ReachableViaWWAN
+        MASGatewayMonitoringStatus.ReachableViaWiFi
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGatewayNetworkActivityLogging">
+      <MemberSignature Language="C#" Value="public static void SetGatewayNetworkActivityLogging (bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetGatewayNetworkActivityLogging(bool enabled) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setGatewayNetworkActivityLogging:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enabled">If set to <c>true</c> enabled.</param>
+        <summary>
+        Turn on or off the logging of the network activity with the Gateway.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKeychainSynchronizable">
+      <MemberSignature Language="C#" Value="public static void SetKeychainSynchronizable (bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetKeychainSynchronizable(bool enabled) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setKeychainSynchronizable:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enabled">If set to <c>true</c> enabled.</param>
+        <summary>
+        Sets bool indicator whether the Keychain is synchronized through iCloud.
+        By default, the Keychain is not synchronized through iCloud.
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOTPChannelSelectionBlock">
+      <MemberSignature Language="C#" Value="public static void SetOTPChannelSelectionBlock (MASFoundation.MASOTPChannelSelectionBlock OTPChannelSelector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetOTPChannelSelectionBlock(class MASFoundation.MASOTPChannelSelectionBlock OTPChannelSelector) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setOTPChannelSelectionBlock:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="OTPChannelSelector" Type="MASFoundation.MASOTPChannelSelectionBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASOTPChannelSelectionBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="OTPChannelSelector">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOTPCredentialsBlock">
+      <MemberSignature Language="C#" Value="public static void SetOTPCredentialsBlock (MASFoundation.MASOTPCredentialsBlock oneTimePassword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetOTPCredentialsBlock(class MASFoundation.MASOTPCredentialsBlock oneTimePassword) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setOTPCredentialsBlock:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oneTimePassword" Type="MASFoundation.MASOTPCredentialsBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASOTPCredentialsBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="oneTimePassword">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUserAuthCredentials">
+      <MemberSignature Language="C#" Value="public static void SetUserAuthCredentials (MASFoundation.MASUserAuthCredentialsBlock userAuthCredentialsBlock);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetUserAuthCredentials(class MASFoundation.MASUserAuthCredentialsBlock userAuthCredentialsBlock) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setUserAuthCredentials:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userAuthCredentialsBlock" Type="MASFoundation.MASUserAuthCredentialsBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASUserAuthCredentialsBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="userAuthCredentialsBlock">MASUserAuthCredentialsBlock that contains callback block to be invoked with MASAuthCredentials.</param>
+        <summary>
+        Set a user auth credential block to handle the case where SDK requires auth credentials.
+        <para>When MASGrantFlow is set to MASGrantFlowPassword, and auth credentials is required, SDK will invoke this block
+        to obtain MASAuthCredentials to proceed authentication process.</para></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUserLoginBlock">
+      <MemberSignature Language="C#" Value="public static void SetUserLoginBlock (MASFoundation.MASUserLoginWithUserCredentialsBlock login);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetUserLoginBlock(class MASFoundation.MASUserLoginWithUserCredentialsBlock login) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setUserLoginBlock:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="login" Type="MASFoundation.MASUserLoginWithUserCredentialsBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASUserLoginWithUserCredentialsBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="login">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignWithClaims">
+      <MemberSignature Language="C#" Value="public static string SignWithClaims (MASFoundation.MASClaims claims, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string SignWithClaims(class MASFoundation.MASClaims claims, class Foundation.NSError error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("signWithClaims:error:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claims" Type="MASFoundation.MASClaims" />
+        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="claims">MASClaims object containing claims for JWT.</param>
+        <param name="error">NSError error reference object that returns any error occurred during JWT construction.</param>
+        <summary>
+        Signs MASClaims object with default private key from device registration against primary gateway.
+        Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
+        </summary>
+        <returns>string of JWT.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignWithClaims">
+      <MemberSignature Language="C#" Value="public static string SignWithClaims (MASFoundation.MASClaims claims, Foundation.NSData privateKey, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string SignWithClaims(class MASFoundation.MASClaims claims, class Foundation.NSData privateKey, class Foundation.NSError error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("signWithClaims:privateKey:error:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claims" Type="MASFoundation.MASClaims" />
+        <Parameter Name="privateKey" Type="Foundation.NSData" />
+        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="claims">MASClaims object containing claims for JWT.</param>
+        <param name="privateKey">Custom private key in NSData format signed using RS256 algorithm.</param>
+        <param name="error">NSError error reference object that returns any error occurred during JWT construction.</param>
+        <summary>
+        Signs MASClaims object with custom private key in NSData format. Private key should be in NSData format and should have been signed using RS256 algorithm.
+        Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
+        </summary>
+        <returns>string of JWT.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public static void Start (MASFoundation.MASCompletionErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Start(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("start:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError error) that will
+        receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there
+        is a failure.
+        </param>
+        <summary>
+        Starts the lifecycle of the MAS processes.  
+        <para>
+        Although an asynchronous block callback parameter is provided for response usage,
+        optionally you can set that to null and the caller can observe the lifecycle 
+        notifications instead.
+        </para><para>
+        This will load the last used JSON configuration from keychain storage.If there was none,
+        it will load from default JSON configuration file (msso_config.json)
+        or JSON file with file name set through[MAS setConfigurationFileName:].
+        </para></summary>
+        <remarks>
+        The MAS lifecycle notifications are:
+        
+         *      MASWillStartNotification
+         *      MASDidFailToStartNotification
+         *      MASDidStartNotification
+        
+        The application registration notifications are:
+        
+         *      MASApplicationWillRegisterNotification
+         *      MASApplicationDidFailToRegisterNotification
+         *      MASApplicationDidRegisterNotification
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartWithDefaultConfiguration">
+      <MemberSignature Language="C#" Value="public static void StartWithDefaultConfiguration (bool shouldUseDefault, MASFoundation.MASCompletionErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartWithDefaultConfiguration(bool shouldUseDefault, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startWithDefaultConfiguration:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shouldUseDefault" Type="System.Boolean" />
+        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="shouldUseDefault">Boolean value of using default configuration rather than the one in keychain storage.</param>
+        <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError error) that will
+        receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there
+        is a failure.
+        </param>
+        <summary>
+        Starts the lifecycle of the MAS processes.
+        <para>
+        Although an asynchronous block callback parameter is provided for response usage,
+        optionally you can set that to null and the caller can observe the lifecycle
+        notifications instead.
+        </para><para>
+        This will load the default JSON configuration rather than from keychain storage; if the SDK was already initialized, this method will fully stop and re-start the SDK.
+        The default JSON configuration file should be msso_config.json or file name defined through MAS.SetConfigurationFileName().
+        This will ignore the JSON configuration in keychain storage and replace with the default configuration.
+        </para></summary>
+        <remarks>
+        The MAS lifecycle notifications are:
+        
+         *      MASWillStartNotification
+         *      MASDidFailToStartNotification
+         *      MASDidStartNotification
+        
+        The application registration notifications are:
+        
+         *      MASApplicationWillRegisterNotification
+         *      MASApplicationDidFailToRegisterNotification
+         *      MASApplicationDidRegisterNotification
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartWithDefaultConfigurationAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; StartWithDefaultConfigurationAsync (bool shouldUseDefault);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; StartWithDefaultConfigurationAsync(bool shouldUseDefault) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shouldUseDefault" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="shouldUseDefault">Boolean value of using default configuration rather than the one in keychain storage.</param>
+        <summary>
+        Starts the lifecycle of the MAS processes.
+        <para>
+        Although an asynchronous block callback parameter is provided for response usage,
+        optionally you can set that to null and the caller can observe the lifecycle
+        notifications instead.
+        </para><para>
+        This will load the default JSON configuration rather than from keychain storage; if the SDK was already initialized, this method will fully stop and re-start the SDK.
+        The default JSON configuration file should be msso_config.json or file name defined through MAS.SetConfigurationFileName().
+        This will ignore the JSON configuration in keychain storage and replace with the default configuration.
+        </para></summary>
+        <returns>To be added.</returns>
+        <remarks>
+        The MAS lifecycle notifications are:
+        
+         *      MASWillStartNotification
+         *      MASDidFailToStartNotification
+         *      MASDidStartNotification
+        
+        The application registration notifications are:
+        
+         *      MASApplicationWillRegisterNotification
+         *      MASApplicationDidFailToRegisterNotification
+         *      MASApplicationDidRegisterNotification
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartWithJSON">
+      <MemberSignature Language="C#" Value="public static void StartWithJSON (Foundation.NSDictionary jsonConfiguration, MASFoundation.MASCompletionErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartWithJSON(class Foundation.NSDictionary jsonConfiguration, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startWithJSON:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jsonConfiguration" Type="Foundation.NSDictionary" />
+        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="jsonConfiguration">NSDictionary of JSON configuration object.</param>
+        <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError error) that will
+        receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there
+        is a failure.</param>
+        <summary>
+        Starts the lifecycle of the MAS processes with given JSON configuration data.
+        This method will overwrite JSON configuration(if they are different) that was stored in keychain.
+        <para>
+        Although an asynchronous block callback parameter is provided for response usage,
+        optionally you can set that to null and the caller can observe the lifecycle
+        </para></summary>
+        <remarks>
+        The MAS lifecycle notifications are:
+        
+         *      MASWillStartNotification
+         *      MASDidFailToStartNotification
+         *      MASDidStartNotification
+        
+        The application registration notifications are:
+        
+         *      MASApplicationWillRegisterNotification
+         *      MASApplicationDidFailToRegisterNotification
+         *      MASApplicationDidRegisterNotification
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartWithURL">
+      <MemberSignature Language="C#" Value="public static void StartWithURL (Foundation.NSUrl url, MASFoundation.MASCompletionErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartWithURL(class Foundation.NSUrl url, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startWithURL:completion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="Foundation.NSUrl" />
+        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="url">NSURL of JSON configuration file path or enrolment URL.</param>
+        <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError *error) that will receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there is a failure.</param>
+        <summary>
+        Starts the lifecycle of the MAS processes with given JSON configuration file path, enrolment URL or null.
+        This method will overwrite JSON configuration(if they are different) that was stored in keychain when configuration file path or enrolment URL is provided.
+        <para>
+        When URL is recognized as null, this method will initialize SDK by using last used JSON configuration that is stored in keychain storage,
+        or load JSON configuration from defined default configuration file name.
+        </para><para>
+        Enrolment URL is an URL from gateway containing some of credentials required to establish secure connection.
+        </para>
+        The gateway must be configured to generate and handle enrolment process with client side SDK.
+        The enrolment URL can be retrieved in many ways which has to be configured properly along with the gateway in regards of the enrolment process.
+        <para>
+        MASFoundation SDK does not request, or retrieve the enrolment URL by itself.
+        </para>
+        Although an asynchronous block callback parameter is provided for response usage,
+        optionally you can set that to null and the caller can observe the lifecycle
+        </summary>
+        <remarks>
+        The MAS lifecycle notifications are:
+        
+        *      MASWillStartNotification
+        *      MASDidFailToStartNotification
+        *      MASDidStartNotification
+        
+        The application registration notifications are:
+        
+        *      MASApplicationWillRegisterNotification
+        *      MASApplicationDidFailToRegisterNotification
+        *      MASApplicationDidRegisterNotification
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public static void Stop (MASFoundation.MASCompletionErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Stop(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
+        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
+        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("stop:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError error) that will
+        receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there
+        is a failure.
+        </param>
+        <summary>
+        Stops the lifecycle of all MAS processes.
+        <para>
+        Although an asynchronous block callback parameter is provided for response usage,
+        optionally you can set that to null and the caller can observe the lifecycle 
+        notifications instead.
+        </para></summary>
+        <remarks>
+        The lifecycle notifications are:
+        
+        *      MASWillStopNotification
+        *      MASDidFailToStopNotification
+        *      MASDidStopNotification
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
