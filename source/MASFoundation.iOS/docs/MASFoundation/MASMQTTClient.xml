@@ -3,12 +3,6 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASMQTTClient extends Foundation.NSObject" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Foundation.NSObject</BaseTypeName>
@@ -28,14 +22,6 @@
       <MemberSignature Language="C#" Value="public MASMQTTClient ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("init")</AttributeName>
@@ -54,14 +40,6 @@
       <MemberSignature Language="C#" Value="protected MASMQTTClient (Foundation.NSObjectFlag t);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -80,14 +58,6 @@
       <MemberSignature Language="C#" Value="protected MASMQTTClient (IntPtr handle);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -106,14 +76,6 @@
       <MemberSignature Language="C#" Value="public MASMQTTClient (string clientId, bool cleanSession);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string clientId, bool cleanSession) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("initWithClientId:cleanSession:")</AttributeName>
@@ -134,14 +96,6 @@
       <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IntPtr</ReturnType>
       </ReturnValue>
@@ -155,14 +109,6 @@
       <MemberSignature Language="C#" Value="public virtual void ClearWill ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearWill() cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("clearWill")</AttributeName>
@@ -181,14 +127,6 @@
       <MemberSignature Language="C#" Value="public virtual string ClientID { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ClientID" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("clientID")</AttributeName>
@@ -210,14 +148,6 @@
       <MemberSignature Language="C#" Value="public virtual bool Connected { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool Connected" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("connected")</AttributeName>
@@ -236,14 +166,6 @@
       <MemberSignature Language="C#" Value="public virtual void ConnectToHost (string hostName, Action&lt;MASFoundation.MQTTConnectionReturnCode&gt; completionHandler);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConnectToHost(string hostName, class System.Action`1&lt;valuetype MASFoundation.MQTTConnectionReturnCode&gt; completionHandler) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("connectToHost:completionHandler:")</AttributeName>
@@ -273,14 +195,6 @@
       <MemberSignature Language="C#" Value="public virtual void ConnectToHost (string hostName, bool tls, Action&lt;MASFoundation.MQTTConnectionReturnCode&gt; completionHandler);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConnectToHost(string hostName, bool tls, class System.Action`1&lt;valuetype MASFoundation.MQTTConnectionReturnCode&gt; completionHandler) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("connectToHost:withTLS:completionHandler:")</AttributeName>
@@ -312,14 +226,6 @@
       <MemberSignature Language="C#" Value="public virtual void ConnectWithHost (string hostName, int port, bool tls, Action&lt;MASFoundation.MQTTConnectionReturnCode&gt; completionHandler);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConnectWithHost(string hostName, int32 port, bool tls, class System.Action`1&lt;valuetype MASFoundation.MQTTConnectionReturnCode&gt; completionHandler) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("connectWithHost:withPort:enableTLS:completionHandler:")</AttributeName>
@@ -353,14 +259,6 @@
       <MemberSignature Language="C#" Value="public virtual void ConnectWithHost (string hostName, int port, bool tls, string certFile, Action&lt;MASFoundation.MQTTConnectionReturnCode&gt; completionHandler);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConnectWithHost(string hostName, int32 port, bool tls, string certFile, class System.Action`1&lt;valuetype MASFoundation.MQTTConnectionReturnCode&gt; completionHandler) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("connectWithHost:withPort:enableTLS:usingSSLCACert:completionHandler:")</AttributeName>
@@ -396,14 +294,6 @@
       <MemberSignature Language="C#" Value="public virtual bool DebugMode { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool DebugMode" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("debugMode")</AttributeName>
@@ -425,14 +315,6 @@
       <MemberSignature Language="C#" Value="public MASFoundation.MASConnectaMessagingClientDelegate Delegate { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class MASFoundation.MASConnectaMessagingClientDelegate Delegate" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASConnectaMessagingClientDelegate</ReturnType>
       </ReturnValue>
@@ -446,14 +328,6 @@
       <MemberSignature Language="C#" Value="public virtual MASFoundation.MQTTDisconnectionHandler DisconnectionHandler { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class MASFoundation.MQTTDisconnectionHandler DisconnectionHandler" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("disconnectionHandler", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
@@ -475,14 +349,6 @@
       <MemberSignature Language="C#" Value="public virtual void DisconnectWithCompletionHandler (MASFoundation.MQTTDisconnectionHandler completionHandler);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DisconnectWithCompletionHandler(class MASFoundation.MQTTDisconnectionHandler completionHandler) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("disconnectWithCompletionHandler:")</AttributeName>
@@ -510,14 +376,6 @@
       <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -534,14 +392,6 @@
       <MemberSignature Language="C#" Value="public virtual MASFoundation.MQTTMessageHandler MessageHandler { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class MASFoundation.MQTTMessageHandler MessageHandler" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("messageHandler", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
@@ -563,14 +413,6 @@
       <MemberSignature Language="C#" Value="public virtual void PublishString (string payload, string topic, MASFoundation.MQTTQualityOfService qos, bool retain, MASFoundation.MQTTPublishingCompletionBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PublishString(string payload, string topic, valuetype MASFoundation.MQTTQualityOfService qos, bool retain, class MASFoundation.MQTTPublishingCompletionBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("publishString:toTopic:withQos:retain:completion:")</AttributeName>
@@ -606,14 +448,6 @@
       <MemberSignature Language="C#" Value="public virtual void PublishString (string payload, string topic, MASFoundation.MQTTQualityOfService qos, bool retain, Action&lt;int&gt; completionHandler);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PublishString(string payload, string topic, valuetype MASFoundation.MQTTQualityOfService qos, bool retain, class System.Action`1&lt;int32&gt; completionHandler) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("publishString:toTopic:withQos:retain:completionHandler:")</AttributeName>
@@ -649,14 +483,6 @@
       <MemberSignature Language="C#" Value="public virtual void Reconnect ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reconnect() cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("reconnect")</AttributeName>
@@ -675,14 +501,6 @@
       <MemberSignature Language="C#" Value="public virtual void SetMessageRetry (nuint seconds);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetMessageRetry(valuetype System.nuint seconds) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setMessageRetry:")</AttributeName>
@@ -704,14 +522,6 @@
       <MemberSignature Language="C#" Value="public virtual void SetUsername (string username, string password);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetUsername(string username, string password) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setUsername:Password:")</AttributeName>
@@ -735,14 +545,6 @@
       <MemberSignature Language="C#" Value="public virtual void SetWill (string payload, string willTopic, MASFoundation.MQTTQualityOfService willQos, bool retain);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetWill(string payload, string willTopic, valuetype MASFoundation.MQTTQualityOfService willQos, bool retain) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setWill:toTopic:withQos:retain:")</AttributeName>
@@ -770,14 +572,6 @@
       <MemberSignature Language="C#" Value="public static MASFoundation.MASMQTTClient SharedClient ();" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class MASFoundation.MASMQTTClient SharedClient() cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("sharedClient")</AttributeName>
@@ -797,14 +591,6 @@
       <MemberSignature Language="C#" Value="public virtual void SubscribeToTopic (string topic, MASFoundation.MQTTSubscriptionCompletionBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SubscribeToTopic(string topic, class MASFoundation.MQTTSubscriptionCompletionBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("subscribeToTopic:withCompletion:")</AttributeName>
@@ -834,14 +620,6 @@
       <MemberSignature Language="C#" Value="public virtual void SubscribeToTopic (string topic, MASFoundation.MQTTSubscriptionCompletionHandler completionHandler);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SubscribeToTopic(string topic, class MASFoundation.MQTTSubscriptionCompletionHandler completionHandler) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("subscribeToTopic:withCompletionHandler:")</AttributeName>
@@ -871,14 +649,6 @@
       <MemberSignature Language="C#" Value="public virtual void SubscribeToTopic (string topic, MASFoundation.MQTTQualityOfService qos, MASFoundation.MQTTSubscriptionCompletionBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SubscribeToTopic(string topic, valuetype MASFoundation.MQTTQualityOfService qos, class MASFoundation.MQTTSubscriptionCompletionBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("subscribeToTopic:withQos:completion:")</AttributeName>
@@ -910,14 +680,6 @@
       <MemberSignature Language="C#" Value="public virtual void SubscribeToTopic (string topic, MASFoundation.MQTTQualityOfService qos, MASFoundation.MQTTSubscriptionCompletionHandler completionHandler);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SubscribeToTopic(string topic, valuetype MASFoundation.MQTTQualityOfService qos, class MASFoundation.MQTTSubscriptionCompletionHandler completionHandler) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("subscribeToTopic:withQos:completionHandler:")</AttributeName>
@@ -949,14 +711,6 @@
       <MemberSignature Language="C#" Value="public virtual void UnsubscribeFromTopic (string topic, MASFoundation.MQTTCompletionErrorBlock completionHandler);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnsubscribeFromTopic(string topic, class MASFoundation.MQTTCompletionErrorBlock completionHandler) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("unsubscribeFromTopic:withCompletionHandler:")</AttributeName>
@@ -986,14 +740,6 @@
       <MemberSignature Language="C#" Value="public static string Version { get; }" />
       <MemberSignature Language="ILAsm" Value=".property string Version" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("version")</AttributeName>
@@ -1012,14 +758,6 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSObject WeakDelegate { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSObject WeakDelegate" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("delegate", ObjCRuntime.ArgumentSemantic.Weak)</AttributeName>

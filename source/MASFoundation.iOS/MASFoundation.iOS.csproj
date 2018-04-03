@@ -23,7 +23,7 @@
       <CustomCommands>
         <Command>
           <type>AfterBuild</type>
-          <command>mdoc update -L /Developer/MonoTouch/usr/lib/mono/2.1/ -L /Developer/MonoTouch/usr/lib/mono/Xamarin.iOS/ --out docs bin/Debug/MASFoundation.iOS.dll</command>
+          <command>mdoc update -fno-assembly-versions -L /Developer/MonoTouch/usr/lib/mono/2.1/ -L /Developer/MonoTouch/usr/lib/mono/Xamarin.iOS/ --out docs bin/Debug/MASFoundation.iOS.dll</command>
         </Command>
         <Command>
           <type>AfterBuild</type>
@@ -42,6 +42,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mdoc update -fno-assembly-versions -L /Developer/MonoTouch/usr/lib/mono/2.1/ -L /Developer/MonoTouch/usr/lib/mono/Xamarin.iOS/ --out docs bin/Release/MASFoundation.iOS.dll</command>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mdoc export-msxdoc --out bin/Release/MASFoundation.iOS.xml docs</command>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp -f bin/Release/MASFoundation.iOS.dll bin/Release/MASFoundation.iOS.xml ../../lib</command>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -64,6 +80,83 @@
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\index.xml" />
+    <None Include="docs\ns-MASFoundation.xml" />
+    <None Include="docs\MASFoundation\Constants.xml" />
+    <None Include="docs\MASFoundation\InvokeResult.xml" />
+    <None Include="docs\MASFoundation\LoginWithAuthCredentialsResult.xml" />
+    <None Include="docs\MASFoundation\LoginWithAuthorizationCodeResult.xml" />
+    <None Include="docs\MASFoundation\LoginWithIdTokenResult.xml" />
+    <None Include="docs\MASFoundation\LoginWithUserNameResult.xml" />
+    <None Include="docs\MASFoundation\MAS.xml" />
+    <None Include="docs\MASFoundation\MASApplication.xml" />
+    <None Include="docs\MASFoundation\MASAuthCredentials.xml" />
+    <None Include="docs\MASFoundation\MASAuthCredentialsAuthorizationCode.xml" />
+    <None Include="docs\MASFoundation\MASAuthCredentialsBlock.xml" />
+    <None Include="docs\MASFoundation\MASAuthCredentialsJWT.xml" />
+    <None Include="docs\MASFoundation\MASAuthCredentialsPassword.xml" />
+    <None Include="docs\MASFoundation\MASAuthenticationProvider.xml" />
+    <None Include="docs\MASFoundation\MASAuthenticationProviders.xml" />
+    <None Include="docs\MASFoundation\MASAuthenticationStatus.xml" />
+    <None Include="docs\MASFoundation\MASAuthorizationCodeCredentialsBlock.xml" />
+    <None Include="docs\MASFoundation\MASAuthorizationResponse.xml" />
+    <None Include="docs\MASFoundation\MASAuthorizationResponseDelegate.xml" />
+    <None Include="docs\MASFoundation\MASBLEServiceState.xml" />
+    <None Include="docs\MASFoundation\MASBasicCredentialsBlock.xml" />
+    <None Include="docs\MASFoundation\MASClaims.xml" />
+    <None Include="docs\MASFoundation\MASCompletionErrorBlock.xml" />
+    <None Include="docs\MASFoundation\MASConfiguration.xml" />
+    <None Include="docs\MASFoundation\MASConnectaMessagingClientDelegate.xml" />
+    <None Include="docs\MASFoundation\MASDevice.xml" />
+    <None Include="docs\MASFoundation\MASEnterpriseAppProtocol.xml" />
+    <None Include="docs\MASFoundation\MASFile.xml" />
+    <None Include="docs\MASFoundation\MASFileDirectoryType.xml" />
+    <None Include="docs\MASFoundation\MASFoundationErrorCode.xml" />
+    <None Include="docs\MASFoundation\MASGatewayMonitorStatusBlock.xml" />
+    <None Include="docs\MASFoundation\MASGatewayMonitoringStatus.xml" />
+    <None Include="docs\MASFoundation\MASGrantFlow.xml" />
+    <None Include="docs\MASFoundation\MASGroup.xml" />
+    <None Include="docs\MASFoundation\MASMQTTClient.xml" />
+    <None Include="docs\MASFoundation\MASMQTTMessage.xml" />
+    <None Include="docs\MASFoundation\MASOTPChannelSelectionBlock.xml" />
+    <None Include="docs\MASFoundation\MASOTPCredentialsBlock.xml" />
+    <None Include="docs\MASFoundation\MASOTPFetchCredentialsBlock.xml" />
+    <None Include="docs\MASFoundation\MASOTPGenerationBlock.xml" />
+    <None Include="docs\MASFoundation\MASObject.xml" />
+    <None Include="docs\MASFoundation\MASObjectResponseErrorBlock.xml" />
+    <None Include="docs\MASFoundation\MASObjectsResponseErrorBlock.xml" />
+    <None Include="docs\MASFoundation\MASProximityLogin.xml" />
+    <None Include="docs\MASFoundation\MASProximityLoginDelegate.xml" />
+    <None Include="docs\MASFoundation\MASProximityLoginQRCode.xml" />
+    <None Include="docs\MASFoundation\MASRequest.xml" />
+    <None Include="docs\MASFoundation\MASRequestBuilder.xml" />
+    <None Include="docs\MASFoundation\MASRequestResponseType.xml" />
+    <None Include="docs\MASFoundation\MASResponseInfoErrorBlock.xml" />
+    <None Include="docs\MASFoundation\MASResponseObjectErrorBlock.xml" />
+    <None Include="docs\MASFoundation\MASSecurityConfiguration.xml" />
+    <None Include="docs\MASFoundation\MASService.xml" />
+    <None Include="docs\MASFoundation\MASServiceLifecycleStatus.xml" />
+    <None Include="docs\MASFoundation\MASService_SubclassingHooks.xml" />
+    <None Include="docs\MASFoundation\MASSharedStorage.xml" />
+    <None Include="docs\MASFoundation\MASSocialLogin.xml" />
+    <None Include="docs\MASFoundation\MASSocialLoginDelegate.xml" />
+    <None Include="docs\MASFoundation\MASState.xml" />
+    <None Include="docs\MASFoundation\MASUser.xml" />
+    <None Include="docs\MASFoundation\MASUserAuthCredentialsBlock.xml" />
+    <None Include="docs\MASFoundation\MASUserLoginWithUserCredentialsBlock.xml" />
+    <None Include="docs\MASFoundation\MASUserResponseErrorBlock.xml" />
+    <None Include="docs\MASFoundation\MQTTCompletionErrorBlock.xml" />
+    <None Include="docs\MASFoundation\MQTTConnectionReturnCode.xml" />
+    <None Include="docs\MASFoundation\MQTTDisconnectionHandler.xml" />
+    <None Include="docs\MASFoundation\MQTTMessageHandler.xml" />
+    <None Include="docs\MASFoundation\MQTTPublishingCompletionBlock.xml" />
+    <None Include="docs\MASFoundation\MQTTQualityOfService.xml" />
+    <None Include="docs\MASFoundation\MQTTSubscriptionCompletionBlock.xml" />
+    <None Include="docs\MASFoundation\MQTTSubscriptionCompletionHandler.xml" />
+    <None Include="docs\MASFoundation\NSData_MAS.xml" />
+    <None Include="docs\MASFoundation\StartDefaultConfigurationResult.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>

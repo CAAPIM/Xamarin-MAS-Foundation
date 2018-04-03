@@ -3,11 +3,6 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LoginWithUserNameResult extends System.Object" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,13 +17,6 @@
       <MemberSignature Language="C#" Value="public LoginWithUserNameResult (bool arg0);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool arg0) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Parameters>
         <Parameter Name="arg0" Type="System.Boolean" />
       </Parameters>
@@ -42,13 +30,6 @@
       <MemberSignature Language="C#" Value="public bool Arg0 { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool Arg0" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>

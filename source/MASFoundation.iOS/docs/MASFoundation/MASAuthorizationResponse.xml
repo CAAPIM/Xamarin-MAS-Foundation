@@ -3,14 +3,6 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASAuthorizationResponse extends Foundation.NSObject" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Foundation.NSObject</BaseTypeName>
@@ -30,16 +22,6 @@
       <MemberSignature Language="C#" Value="public MASAuthorizationResponse ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("init")</AttributeName>
@@ -58,16 +40,6 @@
       <MemberSignature Language="C#" Value="protected MASAuthorizationResponse (Foundation.NSObjectFlag t);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -86,16 +58,6 @@
       <MemberSignature Language="C#" Value="protected MASAuthorizationResponse (IntPtr handle);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -114,16 +76,6 @@
       <MemberSignature Language="C#" Value="public virtual bool Application (UIKit.UIApplication app, Foundation.NSUrl url, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; options);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Application(class UIKit.UIApplication app, class Foundation.NSUrl url, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; options) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("application:openURL:options:")</AttributeName>
@@ -150,16 +102,6 @@
       <MemberSignature Language="C#" Value="public virtual bool Application (UIKit.UIApplication application, Foundation.NSUrl url, string sourceApplication, Foundation.NSObject annotation);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Application(class UIKit.UIApplication application, class Foundation.NSUrl url, string sourceApplication, class Foundation.NSObject annotation) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("application:openURL:sourceApplication:annotation:")</AttributeName>
@@ -188,16 +130,6 @@
       <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IntPtr</ReturnType>
       </ReturnValue>
@@ -211,16 +143,6 @@
       <MemberSignature Language="C#" Value="public MASFoundation.MASAuthorizationResponseDelegate Delegate { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class MASFoundation.MASAuthorizationResponseDelegate Delegate" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASAuthorizationResponseDelegate</ReturnType>
       </ReturnValue>
@@ -234,16 +156,6 @@
       <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -260,16 +172,6 @@
       <MemberSignature Language="C#" Value="public static MASFoundation.MASAuthorizationResponse SharedInstance ();" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class MASFoundation.MASAuthorizationResponse SharedInstance() cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("sharedInstance")</AttributeName>
@@ -289,16 +191,6 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSObject WeakDelegate { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSObject WeakDelegate" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("delegate", ObjCRuntime.ArgumentSemantic.Weak)</AttributeName>

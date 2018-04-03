@@ -3,12 +3,6 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASSecurityConfiguration extends MASFoundation.MASObject" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>MASFoundation.MASObject</BaseTypeName>
@@ -33,14 +27,6 @@
       <MemberSignature Language="C#" Value="public MASSecurityConfiguration ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("init")</AttributeName>
@@ -59,14 +45,6 @@
       <MemberSignature Language="C#" Value="public MASSecurityConfiguration (Foundation.NSCoder coder);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSCoder coder) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("initWithCoder:")</AttributeName>
@@ -91,14 +69,6 @@
       <MemberSignature Language="C#" Value="protected MASSecurityConfiguration (Foundation.NSObjectFlag t);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -117,14 +87,6 @@
       <MemberSignature Language="C#" Value="public MASSecurityConfiguration (Foundation.NSUrl url);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSUrl url) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("initWithURL:")</AttributeName>
@@ -148,14 +110,6 @@
       <MemberSignature Language="C#" Value="protected MASSecurityConfiguration (IntPtr handle);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -174,14 +128,6 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSArray[] Certificates { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray[] Certificates" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("certificates", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -205,14 +151,6 @@
       <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IntPtr</ReturnType>
       </ReturnValue>
@@ -226,14 +164,6 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSUrl Host { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSUrl Host" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("host", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -254,14 +184,6 @@
       <MemberSignature Language="C#" Value="public virtual bool IsPublic { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsPublic" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("isPublic")</AttributeName>
@@ -286,14 +208,6 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSArray[] PublicKeyHashes { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray[] PublicKeyHashes" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("publicKeyHashes", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -317,14 +231,6 @@
       <MemberSignature Language="C#" Value="public virtual bool TrustPublicPKI { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool TrustPublicPKI" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("trustPublicPKI")</AttributeName>
@@ -349,14 +255,6 @@
       <MemberSignature Language="C#" Value="public virtual bool ValidateDomainName { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool ValidateDomainName" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("validateDomainName")</AttributeName>

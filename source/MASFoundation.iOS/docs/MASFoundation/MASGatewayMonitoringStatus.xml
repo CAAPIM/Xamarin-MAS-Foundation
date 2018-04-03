@@ -3,17 +3,6 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASGatewayMonitoringStatus extends System.Enum" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -27,19 +16,6 @@
       <MemberSignature Language="C#" Value="Count" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASGatewayMonitoringStatus Count = int32(3)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
       </ReturnValue>
@@ -51,19 +27,6 @@
       <MemberSignature Language="C#" Value="NotReachable" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASGatewayMonitoringStatus NotReachable = int32(0)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
       </ReturnValue>
@@ -75,19 +38,6 @@
       <MemberSignature Language="C#" Value="ReachableViaWiFi" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASGatewayMonitoringStatus ReachableViaWiFi = int32(2)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
       </ReturnValue>
@@ -99,19 +49,6 @@
       <MemberSignature Language="C#" Value="ReachableViaWWAN" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASGatewayMonitoringStatus ReachableViaWWAN = int32(1)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
       </ReturnValue>
@@ -123,19 +60,6 @@
       <MemberSignature Language="C#" Value="Unknown" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASGatewayMonitoringStatus Unknown = int32(-1)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
       </ReturnValue>

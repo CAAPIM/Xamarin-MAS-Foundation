@@ -3,12 +3,6 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASConfiguration extends Foundation.NSObject" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Foundation.NSObject</BaseTypeName>
@@ -30,14 +24,6 @@
       <MemberSignature Language="C#" Value="public MASConfiguration ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("init")</AttributeName>
@@ -56,14 +42,6 @@
       <MemberSignature Language="C#" Value="public MASConfiguration (Foundation.NSDictionary info);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSDictionary info) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("initWithConfigurationInfo:")</AttributeName>
@@ -84,14 +62,6 @@
       <MemberSignature Language="C#" Value="protected MASConfiguration (Foundation.NSObjectFlag t);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -110,14 +80,6 @@
       <MemberSignature Language="C#" Value="protected MASConfiguration (IntPtr handle);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -136,14 +98,6 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary[] ApplicationClients { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary[] ApplicationClients" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationClients", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
@@ -166,14 +120,6 @@
       <MemberSignature Language="C#" Value="public virtual bool ApplicationCredentialsAreDynamic { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool ApplicationCredentialsAreDynamic" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationCredentialsAreDynamic")</AttributeName>
@@ -198,14 +144,6 @@
       <MemberSignature Language="C#" Value="public virtual string ApplicationDescription { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ApplicationDescription" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationDescription", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -226,14 +164,6 @@
       <MemberSignature Language="C#" Value="public virtual string ApplicationName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationName", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -254,14 +184,6 @@
       <MemberSignature Language="C#" Value="public virtual string ApplicationOrganization { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ApplicationOrganization" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationOrganization", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -282,14 +204,6 @@
       <MemberSignature Language="C#" Value="public virtual string ApplicationRegisteredBy { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ApplicationRegisteredBy" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationRegisteredBy", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -310,14 +224,6 @@
       <MemberSignature Language="C#" Value="public virtual string ApplicationType { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ApplicationType" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationType", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -338,14 +244,6 @@
       <MemberSignature Language="C#" Value="public virtual string AuthenticateOTPEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string AuthenticateOTPEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("authenticateOTPEndpointPath")</AttributeName>
@@ -366,14 +264,6 @@
       <MemberSignature Language="C#" Value="public virtual string AuthorizationEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string AuthorizationEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("authorizationEndpointPath")</AttributeName>
@@ -394,14 +284,6 @@
       <MemberSignature Language="C#" Value="public virtual string BluetoothCharacteristicUuid { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string BluetoothCharacteristicUuid" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("bluetoothCharacteristicUuid")</AttributeName>
@@ -422,14 +304,6 @@
       <MemberSignature Language="C#" Value="public virtual nint BluetoothRssi { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.nint BluetoothRssi" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("bluetoothRssi")</AttributeName>
@@ -450,14 +324,6 @@
       <MemberSignature Language="C#" Value="public virtual string BluetoothServiceUuid { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string BluetoothServiceUuid" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("bluetoothServiceUuid")</AttributeName>
@@ -478,14 +344,6 @@
       <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IntPtr</ReturnType>
       </ReturnValue>
@@ -499,14 +357,6 @@
       <MemberSignature Language="C#" Value="public virtual string ClientInitializeEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ClientInitializeEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("clientInitializeEndpointPath")</AttributeName>
@@ -527,14 +377,6 @@
       <MemberSignature Language="C#" Value="public virtual bool CompareWithCurrentConfiguration (Foundation.NSDictionary newConfiguration);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CompareWithCurrentConfiguration(class Foundation.NSDictionary newConfiguration) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("compareWithCurrentConfiguration:")</AttributeName>
@@ -560,14 +402,6 @@
       <MemberSignature Language="C#" Value="public static MASFoundation.MASConfiguration CurrentConfiguration { get; }" />
       <MemberSignature Language="ILAsm" Value=".property class MASFoundation.MASConfiguration CurrentConfiguration" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("currentConfiguration")</AttributeName>
@@ -588,14 +422,6 @@
       <MemberSignature Language="C#" Value="public virtual string DefaultApplicationClientIdentifier { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DefaultApplicationClientIdentifier" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("defaultApplicationClientIdentifier")</AttributeName>
@@ -616,14 +442,6 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt; DefaultApplicationClientInfo { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSString&gt; DefaultApplicationClientInfo" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("defaultApplicationClientInfo")</AttributeName>
@@ -644,14 +462,6 @@
       <MemberSignature Language="C#" Value="public virtual string DefaultApplicationClientSecret { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DefaultApplicationClientSecret" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("defaultApplicationClientSecret")</AttributeName>
@@ -672,14 +482,6 @@
       <MemberSignature Language="C#" Value="public virtual bool DetectServerChangeWithCurrentConfiguration (Foundation.NSDictionary newConfiguration);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool DetectServerChangeWithCurrentConfiguration(class Foundation.NSDictionary newConfiguration) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("detectServerChangeWithCurrentConfiguration:")</AttributeName>
@@ -705,14 +507,6 @@
       <MemberSignature Language="C#" Value="public virtual string DeviceListAllEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DeviceListAllEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("deviceListAllEndpointPath")</AttributeName>
@@ -733,14 +527,6 @@
       <MemberSignature Language="C#" Value="public virtual string DeviceRegisterClientEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DeviceRegisterClientEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("deviceRegisterClientEndpointPath")</AttributeName>
@@ -761,14 +547,6 @@
       <MemberSignature Language="C#" Value="public virtual string DeviceRegisterEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DeviceRegisterEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("deviceRegisterEndpointPath")</AttributeName>
@@ -789,14 +567,6 @@
       <MemberSignature Language="C#" Value="public virtual string DeviceRemoveEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DeviceRemoveEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("deviceRemoveEndpointPath")</AttributeName>
@@ -817,14 +587,6 @@
       <MemberSignature Language="C#" Value="public virtual string DeviceRenewEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DeviceRenewEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("deviceRenewEndpointPath")</AttributeName>
@@ -845,14 +607,6 @@
       <MemberSignature Language="C#" Value="public virtual bool EnabledPublicKeyPinning { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool EnabledPublicKeyPinning" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("enabledPublicKeyPinning")</AttributeName>
@@ -875,14 +629,6 @@
       <MemberSignature Language="C#" Value="public virtual bool EnabledTrustedPublicPKI { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool EnabledTrustedPublicPKI" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("enabledTrustedPublicPKI")</AttributeName>
@@ -905,14 +651,6 @@
       <MemberSignature Language="C#" Value="public virtual string EndpointPathForKey (string endpointKey);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string EndpointPathForKey(string endpointKey) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("endpointPathForKey:")</AttributeName>
@@ -937,14 +675,6 @@
       <MemberSignature Language="C#" Value="public virtual string EnterpriseBrowserEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string EnterpriseBrowserEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("enterpriseBrowserEndpointPath")</AttributeName>
@@ -965,14 +695,6 @@
       <MemberSignature Language="C#" Value="public virtual string[] GatewayCertificates { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string[] GatewayCertificates" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayCertificates", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
@@ -993,14 +715,6 @@
       <MemberSignature Language="C#" Value="public virtual string[] GatewayCertificatesAsDERData { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string[] GatewayCertificatesAsDERData" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayCertificatesAsDERData", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
@@ -1021,14 +735,6 @@
       <MemberSignature Language="C#" Value="public virtual string[] GatewayCertificatesAsPEMData { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string[] GatewayCertificatesAsPEMData" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayCertificatesAsPEMData", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
@@ -1049,14 +755,6 @@
       <MemberSignature Language="C#" Value="public virtual string GatewayHostName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string GatewayHostName" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayHostName", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -1077,14 +775,6 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber GatewayPort { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber GatewayPort" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayPort", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -1105,14 +795,6 @@
       <MemberSignature Language="C#" Value="public virtual string GatewayPrefix { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string GatewayPrefix" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayPrefix", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -1133,14 +815,6 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSUrl GatewayUrl { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSUrl GatewayUrl" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayUrl", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
@@ -1161,14 +835,6 @@
       <MemberSignature Language="C#" Value="public static MASFoundation.MASConfiguration InstanceFromStorage { get; }" />
       <MemberSignature Language="ILAsm" Value=".property class MASFoundation.MASConfiguration InstanceFromStorage" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("instanceFromStorage")</AttributeName>
@@ -1189,14 +855,6 @@
       <MemberSignature Language="C#" Value="public virtual bool IsLoaded { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsLoaded" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("isLoaded")</AttributeName>
@@ -1218,14 +876,6 @@
       <MemberSignature Language="C#" Value="public virtual bool LocationIsRequired { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool LocationIsRequired" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("locationIsRequired")</AttributeName>
@@ -1251,14 +901,6 @@
       <MemberSignature Language="C#" Value="public static void RemoveSecurityConfigurationForDomain (Foundation.NSUrl domain);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveSecurityConfigurationForDomain(class Foundation.NSUrl domain) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("removeSecurityConfigurationForDomain:")</AttributeName>
@@ -1282,14 +924,6 @@
       <MemberSignature Language="C#" Value="public virtual void Reset ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("reset")</AttributeName>
@@ -1310,14 +944,6 @@
       <MemberSignature Language="C#" Value="public virtual void SaveToStorage ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveToStorage() cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("saveToStorage")</AttributeName>
@@ -1338,14 +964,6 @@
       <MemberSignature Language="C#" Value="public virtual string ScimPathEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string ScimPathEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("scimPathEndpointPath")</AttributeName>
@@ -1366,14 +984,6 @@
       <MemberSignature Language="C#" Value="public static MASFoundation.MASSecurityConfiguration SecurityConfigurationForDomain (Foundation.NSUrl domain);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class MASFoundation.MASSecurityConfiguration SecurityConfigurationForDomain(class Foundation.NSUrl domain) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("securityConfigurationForDomain:")</AttributeName>
@@ -1398,14 +1008,6 @@
       <MemberSignature Language="C#" Value="public static Foundation.NSArray[] SecurityConfigurations { get; }" />
       <MemberSignature Language="ILAsm" Value=".property class Foundation.NSArray[] SecurityConfigurations" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("securityConfigurations")</AttributeName>
@@ -1426,14 +1028,6 @@
       <MemberSignature Language="C#" Value="public static void SetSecurityConfiguration (MASFoundation.MASSecurityConfiguration securityConfiguration);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSecurityConfiguration(class MASFoundation.MASSecurityConfiguration securityConfiguration) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setSecurityConfiguration:")</AttributeName>
@@ -1460,14 +1054,6 @@
       <MemberSignature Language="C#" Value="public static bool SetSecurityConfiguration (MASFoundation.MASSecurityConfiguration securityConfiguration, out Foundation.NSError error);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SetSecurityConfiguration(class MASFoundation.MASSecurityConfiguration securityConfiguration, class Foundation.NSError error) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setSecurityConfiguration:error:")</AttributeName>
@@ -1495,14 +1081,6 @@
       <MemberSignature Language="C#" Value="public virtual bool SsoEnabled { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool SsoEnabled" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("ssoEnabled")</AttributeName>
@@ -1528,14 +1106,6 @@
       <MemberSignature Language="C#" Value="public virtual string StoragePathEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string StoragePathEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("storagePathEndpointPath")</AttributeName>
@@ -1556,14 +1126,6 @@
       <MemberSignature Language="C#" Value="public virtual string TokenEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string TokenEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("tokenEndpointPath")</AttributeName>
@@ -1584,14 +1146,6 @@
       <MemberSignature Language="C#" Value="public virtual string TokenRevokeEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string TokenRevokeEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("tokenRevokeEndpointPath")</AttributeName>
@@ -1612,14 +1166,6 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSArray[] TrustedCertPinnedPublickKeyHashes { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray[] TrustedCertPinnedPublickKeyHashes" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("trustedCertPinnedPublickKeyHashes", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
@@ -1640,14 +1186,6 @@
       <MemberSignature Language="C#" Value="public virtual string UserInfoEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string UserInfoEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("userInfoEndpointPath")</AttributeName>
@@ -1668,14 +1206,6 @@
       <MemberSignature Language="C#" Value="public virtual string UserSessionLogoutEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string UserSessionLogoutEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("userSessionLogoutEndpointPath")</AttributeName>
@@ -1696,14 +1226,6 @@
       <MemberSignature Language="C#" Value="public virtual string UserSessionStatusEndpointPath { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string UserSessionStatusEndpointPath" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("userSessionStatusEndpointPath")</AttributeName>
@@ -1724,14 +1246,6 @@
       <MemberSignature Language="C#" Value="public static Foundation.NSError ValidateJSONConfiguration (Foundation.NSDictionary configuration);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Foundation.NSError ValidateJSONConfiguration(class Foundation.NSDictionary configuration) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("validateJSONConfiguration:")</AttributeName>

@@ -3,14 +3,6 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MAS extends Foundation.NSObject" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Foundation.NSObject</BaseTypeName>
@@ -35,16 +27,6 @@
       <MemberSignature Language="C#" Value="public MAS ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("init")</AttributeName>
@@ -63,16 +45,6 @@
       <MemberSignature Language="C#" Value="protected MAS (Foundation.NSObjectFlag t);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -91,16 +63,6 @@
       <MemberSignature Language="C#" Value="protected MAS (IntPtr handle);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
       <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -119,16 +81,6 @@
       <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IntPtr</ReturnType>
       </ReturnValue>
@@ -142,16 +94,6 @@
       <MemberSignature Language="C#" Value="public static void DeleteFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeleteFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("deleteFrom:withParameters:andHeaders:completion:")</AttributeName>
@@ -204,16 +146,6 @@
       <MemberSignature Language="C#" Value="public static void DeleteFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeleteFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("deleteFrom:withParameters:andHeaders:requestType:responseType:completion:")</AttributeName>
@@ -268,16 +200,6 @@
       <MemberSignature Language="C#" Value="public static void DeleteFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeleteFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("deleteFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")</AttributeName>
@@ -334,16 +256,6 @@
       <MemberSignature Language="C#" Value="public static void EnableBrowserBasedAuthentication (bool enable);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableBrowserBasedAuthentication(bool enable) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("enableBrowserBasedAuthentication:")</AttributeName>
@@ -368,16 +280,6 @@
       <MemberSignature Language="C#" Value="public static void EnablePKCE (bool enable);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnablePKCE(bool enable) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("enablePKCE:")</AttributeName>
@@ -401,16 +303,6 @@
       <MemberSignature Language="C#" Value="public static bool GatewayIsReachable { get; }" />
       <MemberSignature Language="ILAsm" Value=".property bool GatewayIsReachable" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayIsReachable")</AttributeName>
@@ -432,16 +324,6 @@
       <MemberSignature Language="C#" Value="public static string GatewayMonitoringStatusAsString { get; }" />
       <MemberSignature Language="ILAsm" Value=".property string GatewayMonitoringStatusAsString" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayMonitoringStatusAsString")</AttributeName>
@@ -468,16 +350,6 @@
       <MemberSignature Language="C#" Value="public static void GetFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("getFrom:withParameters:andHeaders:completion:")</AttributeName>
@@ -530,16 +402,6 @@
       <MemberSignature Language="C#" Value="public static void GetFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("getFrom:withParameters:andHeaders:requestType:responseType:completion:")</AttributeName>
@@ -594,16 +456,6 @@
       <MemberSignature Language="C#" Value="public static void GetFrom (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetFrom(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("getFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")</AttributeName>
@@ -660,16 +512,6 @@
       <MemberSignature Language="C#" Value="public static MASFoundation.MASGrantFlow GrantFlow { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property valuetype MASFoundation.MASGrantFlow GrantFlow" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("grantFlow")</AttributeName>
@@ -693,16 +535,6 @@
       <MemberSignature Language="C#" Value="public static void Invoke (MASFoundation.MASRequest request, MASFoundation.MASResponseObjectErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Invoke(class MASFoundation.MASRequest request, class MASFoundation.MASResponseObjectErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("invoke:completion:")</AttributeName>
@@ -742,16 +574,6 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;MASFoundation.InvokeResult&gt; InvokeAsync (MASFoundation.MASRequest request);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class MASFoundation.InvokeResult&gt; InvokeAsync(class MASFoundation.MASRequest request) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.InvokeResult&gt;</ReturnType>
       </ReturnValue>
@@ -779,16 +601,6 @@
       <MemberSignature Language="C#" Value="public static bool IsKeychainSynchronizable { get; }" />
       <MemberSignature Language="ILAsm" Value=".property bool IsKeychainSynchronizable" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("isKeychainSynchronizable")</AttributeName>
@@ -810,16 +622,6 @@
       <MemberSignature Language="C#" Value="public static bool IsPKCEEnabled { get; }" />
       <MemberSignature Language="ILAsm" Value=".property bool IsPKCEEnabled" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("isPKCEEnabled")</AttributeName>
@@ -844,16 +646,6 @@
       <MemberSignature Language="C#" Value="public static MASFoundation.MASState MASState { get; }" />
       <MemberSignature Language="ILAsm" Value=".property valuetype MASFoundation.MASState MASState" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: Foundation.Export("MASState")</AttributeName>
@@ -874,16 +666,6 @@
       <MemberSignature Language="C#" Value="public static void PatchTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PatchTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("patchTo:withParameters:andHeaders:completion:")</AttributeName>
@@ -936,16 +718,6 @@
       <MemberSignature Language="C#" Value="public static void PatchTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PatchTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("patchTo:withParameters:andHeaders:requestType:responseType:completion:")</AttributeName>
@@ -1000,16 +772,6 @@
       <MemberSignature Language="C#" Value="public static void PatchTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PatchTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("patchTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")</AttributeName>
@@ -1066,16 +828,6 @@
       <MemberSignature Language="C#" Value="public static void PostTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PostTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("postTo:withParameters:andHeaders:completion:")</AttributeName>
@@ -1128,16 +880,6 @@
       <MemberSignature Language="C#" Value="public static void PostTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PostTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("postTo:withParameters:andHeaders:requestType:responseType:completion:")</AttributeName>
@@ -1192,16 +934,6 @@
       <MemberSignature Language="C#" Value="public static void PostTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PostTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("postTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")</AttributeName>
@@ -1258,16 +990,6 @@
       <MemberSignature Language="C#" Value="public static void PutTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PutTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("putTo:withParameters:andHeaders:completion:")</AttributeName>
@@ -1320,16 +1042,6 @@
       <MemberSignature Language="C#" Value="public static void PutTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PutTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("putTo:withParameters:andHeaders:requestType:responseType:completion:")</AttributeName>
@@ -1384,16 +1096,6 @@
       <MemberSignature Language="C#" Value="public static void PutTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PutTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("putTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")</AttributeName>
@@ -1450,16 +1152,6 @@
       <MemberSignature Language="C#" Value="public static void SetConfigurationFileName (string fileName);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetConfigurationFileName(string fileName) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setConfigurationFileName:")</AttributeName>
@@ -1483,16 +1175,6 @@
       <MemberSignature Language="C#" Value="public static void SetGatewayMonitor (MASFoundation.MASGatewayMonitorStatusBlock monitor);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetGatewayMonitor(class MASFoundation.MASGatewayMonitorStatusBlock monitor) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setGatewayMonitor:")</AttributeName>
@@ -1531,16 +1213,6 @@
       <MemberSignature Language="C#" Value="public static void SetGatewayNetworkActivityLogging (bool enabled);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetGatewayNetworkActivityLogging(bool enabled) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setGatewayNetworkActivityLogging:")</AttributeName>
@@ -1564,16 +1236,6 @@
       <MemberSignature Language="C#" Value="public static void SetKeychainSynchronizable (bool enabled);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetKeychainSynchronizable(bool enabled) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setKeychainSynchronizable:")</AttributeName>
@@ -1598,16 +1260,6 @@
       <MemberSignature Language="C#" Value="public static void SetOTPChannelSelectionBlock (MASFoundation.MASOTPChannelSelectionBlock OTPChannelSelector);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetOTPChannelSelectionBlock(class MASFoundation.MASOTPChannelSelectionBlock OTPChannelSelector) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setOTPChannelSelectionBlock:")</AttributeName>
@@ -1635,16 +1287,6 @@
       <MemberSignature Language="C#" Value="public static void SetOTPCredentialsBlock (MASFoundation.MASOTPCredentialsBlock oneTimePassword);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetOTPCredentialsBlock(class MASFoundation.MASOTPCredentialsBlock oneTimePassword) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setOTPCredentialsBlock:")</AttributeName>
@@ -1672,16 +1314,6 @@
       <MemberSignature Language="C#" Value="public static void SetUserAuthCredentials (MASFoundation.MASUserAuthCredentialsBlock userAuthCredentialsBlock);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetUserAuthCredentials(class MASFoundation.MASUserAuthCredentialsBlock userAuthCredentialsBlock) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setUserAuthCredentials:")</AttributeName>
@@ -1712,16 +1344,6 @@
       <MemberSignature Language="C#" Value="public static void SetUserLoginBlock (MASFoundation.MASUserLoginWithUserCredentialsBlock login);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetUserLoginBlock(class MASFoundation.MASUserLoginWithUserCredentialsBlock login) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setUserLoginBlock:")</AttributeName>
@@ -1749,16 +1371,6 @@
       <MemberSignature Language="C#" Value="public static string SignWithClaims (MASFoundation.MASClaims claims, out Foundation.NSError error);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string SignWithClaims(class MASFoundation.MASClaims claims, class Foundation.NSError error) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("signWithClaims:error:")</AttributeName>
@@ -1786,16 +1398,6 @@
       <MemberSignature Language="C#" Value="public static string SignWithClaims (MASFoundation.MASClaims claims, Foundation.NSData privateKey, out Foundation.NSError error);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string SignWithClaims(class MASFoundation.MASClaims claims, class Foundation.NSData privateKey, class Foundation.NSError error) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("signWithClaims:privateKey:error:")</AttributeName>
@@ -1825,16 +1427,6 @@
       <MemberSignature Language="C#" Value="public static void Start (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Start(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("start:")</AttributeName>
@@ -1887,16 +1479,6 @@
       <MemberSignature Language="C#" Value="public static void StartWithDefaultConfiguration (bool shouldUseDefault, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartWithDefaultConfiguration(bool shouldUseDefault, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("startWithDefaultConfiguration:completion:")</AttributeName>
@@ -1951,16 +1533,6 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; StartWithDefaultConfigurationAsync (bool shouldUseDefault);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; StartWithDefaultConfigurationAsync(bool shouldUseDefault) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -2000,16 +1572,6 @@
       <MemberSignature Language="C#" Value="public static void StartWithJSON (Foundation.NSDictionary jsonConfiguration, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartWithJSON(class Foundation.NSDictionary jsonConfiguration, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("startWithJSON:completion:")</AttributeName>
@@ -2059,16 +1621,6 @@
       <MemberSignature Language="C#" Value="public static void StartWithURL (Foundation.NSUrl url, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartWithURL(class Foundation.NSUrl url, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("startWithURL:completion:")</AttributeName>
@@ -2126,16 +1678,6 @@
       <MemberSignature Language="C#" Value="public static void Stop (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Stop(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("stop:")</AttributeName>

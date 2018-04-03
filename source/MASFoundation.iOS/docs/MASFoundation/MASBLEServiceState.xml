@@ -3,17 +3,6 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASBLEServiceState extends System.Enum" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-    <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-    <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-    <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -27,19 +16,6 @@
       <MemberSignature Language="C#" Value="CentralAuthorizationFailed" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState CentralAuthorizationFailed = int32(9)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -51,19 +27,6 @@
       <MemberSignature Language="C#" Value="CentralAuthorizationSucceeded" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState CentralAuthorizationSucceeded = int32(8)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -75,19 +38,6 @@
       <MemberSignature Language="C#" Value="CentralCharacteristicDiscovered" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState CentralCharacteristicDiscovered = int32(6)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -99,19 +49,6 @@
       <MemberSignature Language="C#" Value="CentralCharacteristicWritten" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState CentralCharacteristicWritten = int32(7)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -123,19 +60,6 @@
       <MemberSignature Language="C#" Value="CentralDeviceConnected" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState CentralDeviceConnected = int32(3)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -147,19 +71,6 @@
       <MemberSignature Language="C#" Value="CentralDeviceDetected" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState CentralDeviceDetected = int32(2)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -171,19 +82,6 @@
       <MemberSignature Language="C#" Value="CentralDeviceDisconnected" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState CentralDeviceDisconnected = int32(4)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -195,19 +93,6 @@
       <MemberSignature Language="C#" Value="CentralServiceDiscovered" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState CentralServiceDiscovered = int32(5)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -219,19 +104,6 @@
       <MemberSignature Language="C#" Value="CentralStarted" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState CentralStarted = int32(0)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -243,19 +115,6 @@
       <MemberSignature Language="C#" Value="CentralStopped" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState CentralStopped = int32(1)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -267,19 +126,6 @@
       <MemberSignature Language="C#" Value="PeripheralSessionAuthorized" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState PeripheralSessionAuthorized = int32(14)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -291,19 +137,6 @@
       <MemberSignature Language="C#" Value="PeripheralSessionNotified" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState PeripheralSessionNotified = int32(15)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -315,19 +148,6 @@
       <MemberSignature Language="C#" Value="PeripheralStarted" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState PeripheralStarted = int32(12)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -339,19 +159,6 @@
       <MemberSignature Language="C#" Value="PeripheralStopped" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState PeripheralStopped = int32(13)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -363,19 +170,6 @@
       <MemberSignature Language="C#" Value="PeripheralSubscribed" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState PeripheralSubscribed = int32(10)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -387,19 +181,6 @@
       <MemberSignature Language="C#" Value="PeripheralUnsubscribed" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState PeripheralUnsubscribed = int32(11)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
@@ -411,19 +192,6 @@
       <MemberSignature Language="C#" Value="Unknown" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASBLEServiceState Unknown = int32(-1)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6662.25382</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.25608</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29144</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29213</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29231</AssemblyVersion>
-        <AssemblyVersion>1.0.6662.29322</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28742</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28769</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28797</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28818</AssemblyVersion>
-        <AssemblyVersion>1.0.6666.28870</AssemblyVersion>
-      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
