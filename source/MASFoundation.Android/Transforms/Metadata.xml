@@ -24,7 +24,9 @@
     <remove-node path="/api/package[@name='com.ca.mas.core.auth.otp']" />
      -->
 
+    <!--
     <remove-node path="/api/package[@name='com.ca.mas.core.cert']" />
+    -->
     <remove-node path="/api/package[@name='com.ca.mas.core.client']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.clientcredentials']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.conf']" />
@@ -57,7 +59,9 @@
     <remove-node path="/api/package[@name='com.ca.mas.core.service']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.storage']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.storage.implementation']" />
+    <!--
     <remove-node path="/api/package[@name='com.ca.mas.core.storage.sharedstorage']" />
+    -->
     <remove-node path="/api/package[@name='com.ca.mas.core.store']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.token']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.util']" />
