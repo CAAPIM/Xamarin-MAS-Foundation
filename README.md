@@ -18,10 +18,8 @@ In this release, you get **MASFoundation**, the core framework that handles the 
 The SDK contains:
 - MASFoundation framework for iOS and Android with the above features 
 - A sample app so you can test basic authentication flows with a CA Mobile API Gateway (MAG)
-- iOS and Android Guides with get started and methods
-- API Reference documentation  
+- iOS and Android Guides and API Reference documentation  
     
-
 ::: alert info
 **Note**:  You'll need your own UI framework for a fit and finished app.
 :::
