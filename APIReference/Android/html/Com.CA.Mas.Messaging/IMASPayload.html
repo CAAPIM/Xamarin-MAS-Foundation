@@ -1,0 +1,748 @@
+<html>
+  <head>
+    <title>Com.CA.Mas.Messaging.IMASPayload</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MASFoundation.Android</a> : <a href="index.html">Com.CA.Mas.Messaging Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Com.CA.Mas.Messaging.IMASPayload">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Messaging.IMASPayload:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Messaging.IMASPayload:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Messaging.IMASPayload:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Com.CA.Mas.Messaging.IMASPayload">IMASPayload  Interface</h1>
+    <p class="Summary" id="T:Com.CA.Mas.Messaging.IMASPayload:Summary">
+      <b>MASPayload</b> describes the message format that is passed between MAS clients.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Com.CA.Mas.Messaging.IMASPayload:Signature">[Android.Runtime.Register("com/ca/mas/messaging/MASPayload", "", "Com.CA.Mas.Messaging.IMASPayloadInvoker")]<br />public interface  <b>IMASPayload</b> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.IJavaObject</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+    </div>
+    <div class="Remarks" id="T:Com.CA.Mas.Messaging.IMASPayload:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Messaging.IMASPayload:Docs:Remarks">
+        <p>
+          <b>MASPayload</b> describes the message format that is passed between MAS clients. The payload is a simple
+ JSON document consisting of 8 key/value pairs;</p>
+        <ul>
+          <li>Version - currently 1.0.</li>
+          <li>SenderID - a unique identifier typically registered with the corporate system.</li>
+          <li>SenderType - any defined sender such as 'User', 'Device', 'Application', etc. Whatever has meaning in the application's context.</li>
+          <li>DisplayName - a free-form value that contains the user friendly name for display.</li>
+          <li>SentTime - the number of milliseconds since the epoch.</li>
+          <li>ContentType - the  media type.</li>
+          <li>ContentEncoding - the payload encoding such as base64 or UTF-8.</li>
+          <li>Payload - the opaque payload that is described by the content type and content encoding. This could be any set of bytes
+ such as a text message, an image, etc. and is Base64 encoded</li>
+        </ul>
+        <p>This payload is opaque to the message broker and the format is MAS SDK specific. There is no expectation within the message broker of
+ format or content. It is simply a byte stream.
+ <br /></p>
+        <p>From the design document the payload should be of the form:
+  </p>
+        <p>
+          <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html" target="_blank">[Android Documentation]</a>
+        </p>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Messaging.IMASPayload:Docs:Version Information">
+        <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Messaging.IMASPayload.ContentEncoding">ContentEncoding</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <b>Description:</b> The payload's content encoding.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Messaging.IMASPayload.ContentType">ContentType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <b>Description:</b>} media type.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Messaging.IMASPayload.DisplayName">DisplayName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>.  The string value set by the application developer.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Messaging.IMASPayload.SenderId">SenderId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <b>Description:</b> The Id of the sender from the MASUser instance.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Messaging.IMASPayload.SenderType">SenderType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <b>Description:</b> Get the sender type that has context within the implementing application.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Messaging.IMASPayload.SentTime">SentTime</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                  </i>. <b>Description:</b> The number of milliseconds since the Epoch returned by an OS call to getTime, for example.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Messaging.IMASPayload.Version">Version</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <b>Description:</b> The version will always be 1.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Messaging.IMASPayload.CreateJSONStringFromMASMessage(Android.Content.Context)">CreateJSONStringFromMASMessage</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Content.Context</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote> This method takes the entire MASPayload attributes and create a Base64 encoded
+ version of the JSON document representing the payload.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Messaging.IMASPayload.CreateMASMessageFromJSONString(System.String)">CreateMASMessageFromJSONString</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote> This method takes a JSON object that has been turned into a String and attempts to turn it into a
+ MASPayload object.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Messaging.IMASPayload.GetPayload()">GetPayload</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</nobr><blockquote> This payload is a byte stream that is meaningful to the receiving client.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Messaging.IMASPayload.SetPayload(System.Byte[])">SetPayload</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[])<blockquote> This payload is a byte stream that is meaningful to the receiving client.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Com.CA.Mas.Messaging.IMASPayload:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="P:Com.CA.Mas.Messaging.IMASPayload.ContentEncoding">ContentEncoding Property</h3>
+        <blockquote id="P:Com.CA.Mas.Messaging.IMASPayload.ContentEncoding:member">
+          <div class="msummary">
+            <b>Description:</b> The payload's content encoding.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getContentEncoding", "()Ljava/lang/String;", "GetGetContentEncodingHandler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />[set: Android.Runtime.Register("setContentEncoding", "(Ljava/lang/String;)V", "GetSetContentEncoding_Ljava_lang_String_Handler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ContentEncoding</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.ContentEncoding:Value">String a representation of a the content encoding such as 'base64'. The default is utf-8.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.ContentEncoding:Remarks">
+            <p>
+              <b>Get method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#getContentEncoding()" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> The payload's content encoding. The client will use this value to decode the payload byte stream.</p>
+            <p>
+              <b>Set method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#setContentEncoding(java.lang.String)" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> The payload's content encoding. This is set for the receiving client and has no meaning to the message broker.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.ContentEncoding:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Messaging.IMASPayload.ContentType">ContentType Property</h3>
+        <blockquote id="P:Com.CA.Mas.Messaging.IMASPayload.ContentType:member">
+          <div class="msummary">
+            <b>Description:</b>} media type.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getContentType", "()Ljava/lang/String;", "GetGetContentTypeHandler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />[set: Android.Runtime.Register("setContentType", "(Ljava/lang/String;)V", "GetSetContentType_Ljava_lang_String_Handler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ContentType</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.ContentType:Value">String the string representing the MIME type. Could be null.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.ContentType:Remarks">
+            <p>
+              <b>Get method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#getContentType()" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b>} media type.</p>
+            <p> Get the {</p>
+            <p>
+              <b>Set method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#setContentType(java.lang.String)" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b>} media type.</p>
+            <p> Set the {</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.ContentType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Messaging.IMASPayload.CreateJSONStringFromMASMessage(Android.Content.Context)">CreateJSONStringFromMASMessage Method</h3>
+        <blockquote id="M:Com.CA.Mas.Messaging.IMASPayload.CreateJSONStringFromMASMessage(Android.Content.Context):member">
+          <div class="msummary"> This method takes the entire MASPayload attributes and create a Base64 encoded
+ version of the JSON document representing the payload.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("createJSONStringFromMASMessage", "(Landroid/content/Context;)Ljava/lang/String;", "GetCreateJSONStringFromMASMessage_Landroid_content_Context_Handler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>CreateJSONStringFromMASMessage</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Content.Context</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.CreateJSONStringFromMASMessage(Android.Content.Context):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.CreateJSONStringFromMASMessage(Android.Content.Context):Returns">String representing the base64 encoded JSON document.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.CreateJSONStringFromMASMessage(Android.Content.Context):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../Com.CA.Mas.Messaging/MASMessageException.html">Com.CA.Mas.Messaging.MASMessageException</a>
+                </td>
+                <td>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.CreateJSONStringFromMASMessage(Android.Content.Context):Remarks">
+            <b>Description:</b>
+            <p> This method takes the entire MASPayload attributes and create a Base64 encoded
+ version of the JSON document representing the payload. For example, this interface results in the JSON
+ document;
+ </p>
+            <p>
+              <br />
+            </p>
+            <p>
+ Note that the inner payload is base64 encoded.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#createJSONStringFromMASMessage(android.content.Context)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.CreateJSONStringFromMASMessage(Android.Content.Context):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Messaging.IMASPayload.CreateMASMessageFromJSONString(System.String)">CreateMASMessageFromJSONString Method</h3>
+        <blockquote id="M:Com.CA.Mas.Messaging.IMASPayload.CreateMASMessageFromJSONString(System.String):member">
+          <div class="msummary"> This method takes a JSON object that has been turned into a String and attempts to turn it into a
+ MASPayload object.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("createMASMessageFromJSONString", "(Ljava/lang/String;)V", "GetCreateMASMessageFromJSONString_Ljava_lang_String_Handler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>CreateMASMessageFromJSONString</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.CreateMASMessageFromJSONString(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.CreateMASMessageFromJSONString(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../Com.CA.Mas.Messaging/MASMessageException.html">Com.CA.Mas.Messaging.MASMessageException</a>
+                </td>
+                <td> - if the String cannot be converted or is not valid JSON.</td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.CreateMASMessageFromJSONString(System.String):Remarks">
+            <b>Description:</b>
+            <p> This method takes a JSON object that has been turned into a String and attempts to turn it into a
+ MASPayload object. This is a re-serialization of the transmitted MASPayload.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#createMASMessageFromJSONString(java.lang.String)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.CreateMASMessageFromJSONString(System.String):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Messaging.IMASPayload.DisplayName">DisplayName Property</h3>
+        <blockquote id="P:Com.CA.Mas.Messaging.IMASPayload.DisplayName:member">
+          <div class="msummary"> The string value set by the application developer.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getDisplayName", "()Ljava/lang/String;", "GetGetDisplayNameHandler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DisplayName</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.DisplayName:Value">String the free-form display name. Can be null.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.DisplayName:Remarks">
+            <b>Description:</b>
+            <p> The string value set by the application developer.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#getDisplayName()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.DisplayName:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Messaging.IMASPayload.GetPayload()">GetPayload Method</h3>
+        <blockquote id="M:Com.CA.Mas.Messaging.IMASPayload.GetPayload():member">
+          <div class="msummary"> This payload is a byte stream that is meaningful to the receiving client.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("getPayload", "()[B", "GetGetPayloadHandler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] <b>GetPayload</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.GetPayload():Returns">byte[] the arbitrary bytes. Should not be null or there is no payload to transmit.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.GetPayload():Remarks">
+            <b>Description:</b>
+            <p> This payload is a byte stream that is meaningful to the receiving client. The message broker passes
+ this information through along with the rest of the MASMessage. The client will use the content type and encoding type
+ to interpret the received byte stream.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#getPayload()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.GetPayload():Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Messaging.IMASPayload.SenderId">SenderId Property</h3>
+        <blockquote id="P:Com.CA.Mas.Messaging.IMASPayload.SenderId:member">
+          <div class="msummary">
+            <b>Description:</b> The Id of the sender from the MASUser instance.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getSenderId", "()Ljava/lang/String;", "GetGetSenderIdHandler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />[set: Android.Runtime.Register("setSenderId", "(Ljava/lang/String;)V", "GetSetSenderId_Ljava_lang_String_Handler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>SenderId</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.SenderId:Value">String the identifier so that the recipient will know who it is from.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.SenderId:Remarks">
+            <p>
+              <b>Get method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#getSenderId()" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> The Id of the sender from the MASUser instance.</p>
+            <p>
+              <b>Set method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#setSenderId(java.lang.String)" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> The Id of the sender from the MASUser instance.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.SenderId:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Messaging.IMASPayload.SenderType">SenderType Property</h3>
+        <blockquote id="P:Com.CA.Mas.Messaging.IMASPayload.SenderType:member">
+          <div class="msummary">
+            <b>Description:</b> Get the sender type that has context within the implementing application.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getSenderType", "()Ljava/lang/String;", "GetGetSenderTypeHandler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />[set: Android.Runtime.Register("setSenderType", "(Ljava/lang/String;)V", "GetSetSenderType_Ljava_lang_String_Handler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>SenderType</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.SenderType:Value">String one of USER, DEVICE, APPLICATION, etc. It could be null.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.SenderType:Remarks">
+            <p>
+              <b>Get method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#getSenderType()" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> Get the sender type that has context within the implementing application.</p>
+            <p>
+              <b>Set method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#setSenderType(java.lang.String)" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> Set the sender type that has context within the implementing application.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.SenderType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Messaging.IMASPayload.SentTime">SentTime Property</h3>
+        <blockquote id="P:Com.CA.Mas.Messaging.IMASPayload.SentTime:member">
+          <div class="msummary">
+            <b>Description:</b> The number of milliseconds since the Epoch returned by an OS call to getTime, for example.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getSentTime", "()J", "GetGetSentTimeHandler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />[set: Android.Runtime.Register("setSentTime", "(J)V", "GetSetSentTime_JHandler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>SentTime</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.SentTime:Value">long  the time that the message was sent by the MAS SDK call to <tt>com.ca.mas.connecta.client.MASConnectaClient#publish</tt></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.SentTime:Remarks">
+            <p>
+              <b>Get method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#getSentTime()" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> The number of milliseconds since the Epoch returned by an OS call to getTime, for example.</p>
+            <p>
+              <b>Set method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#setSentTime(long)" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> The number of milliseconds since the Epoch returned by an OS call to getTime, for example.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.SentTime:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Messaging.IMASPayload.SetPayload(System.Byte[])">SetPayload Method</h3>
+        <blockquote id="M:Com.CA.Mas.Messaging.IMASPayload.SetPayload(System.Byte[]):member">
+          <div class="msummary"> This payload is a byte stream that is meaningful to the receiving client.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("setPayload", "([B)V", "GetSetPayload_arrayBHandler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetPayload</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.SetPayload(System.Byte[]):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.SetPayload(System.Byte[]):Remarks">
+            <b>Description:</b>
+            <p> This payload is a byte stream that is meaningful to the receiving client. The message broker passes
+ this information through along with the rest of the MASMessage. The maximum size of the payload is system dependent and is
+ not limited by the MAS SDK. If there are enough resource to handle this message then it considered to be a valid size.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#setPayload(byte[])" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Messaging.IMASPayload.SetPayload(System.Byte[]):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Messaging.IMASPayload.Version">Version Property</h3>
+        <blockquote id="P:Com.CA.Mas.Messaging.IMASPayload.Version:member">
+          <div class="msummary">
+            <b>Description:</b> The version will always be 1.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getVersion", "()Ljava/lang/String;", "GetGetVersionHandler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />[set: Android.Runtime.Register("setVersion", "(Ljava/lang/String;)V", "GetSetVersion_Ljava_lang_String_Handler:Com.CA.Mas.Messaging.IMASPayloadInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Version</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.Version:Value">String the value '1.0'</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.Version:Remarks">
+            <p>
+              <b>Get method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#getVersion()" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> The version will always be 1.0.</p>
+            <p>
+              <b>Set method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/messaging/MASPayload.html#setVersion(java.lang.String)" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> The version will always be 1.0.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Messaging.IMASPayload.Version:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Messaging<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
