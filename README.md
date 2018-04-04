@@ -6,8 +6,6 @@ The Mobile SDK for Xamarin provides simple and secure access to CA Mobile API Ga
 
 ## What's in this Release
 
-**NOTE**: This version is for **evaluation purposes only** and is not supported by CA Technologies. Documentation is a work in progress.
-
 In this release, you get **MASFoundation** -- the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
  
 - Authenticate with:
@@ -21,8 +19,9 @@ The SDK contains:
 
 - MASFoundation framework for iOS and Android with the above features 
 - A sample app so you can test basic authentication flows with a CA Mobile API Gateway (MAG)
-- Steps to add MASFoundation an existing app
-- API reference documentation
+- Steps to add MASFoundation to an existing app
+- API reference documentation  
+    **Note**: Although the Xamarin API Reference Guide exposes all of the Mobile SDK APIs, only the MASFoundation features noted above are supported in this release.
 
 ::: alert info
 **Note**:  You'll need your own UI framework for a fit and finished app.
@@ -151,27 +150,28 @@ This a valid msso_config.json file exported from a MAG.
 
 ```
                                                  
-## Get Started Using the Xamarin Mobile SDK
+## Get Started and Documentation
 
 The best way to get the lastest Xamarin Mobile SDK libraries is to use the NuGet dependency manager, which is embedded in Visual Studio. 
 
 To add the libraries and set up your project, see:
-
 - [Android Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
 - [iOS Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
 
 If you do not have Visual Studio, go to: [Get NuGet Packages](https://www.nuget.org/packages), and search for: **MASFoundation.Xamarin**.
 
 ## API Reference 
-
 - [Android Xamarin API Reference](http://mas.ca.com//xamarin-android/1.6.10/sdk/)
 - [iOS Xamarin API Reference](http://mas.ca.com//xamarin-ios/1.6.10/sdk/)
 
-## Pre-release Agreement
+## License
 
-Copyright (c) 2018 CA. All rights reserved.
-This software is provided under the terms of CA’s Pre-Release Agreement. See the [AGREEMENT][agreement-link] file for details. This software is for evaluation purposes only and currently not supported by CA.
+Copyright (c) 2016 CA. All rights reserved.
 
+This software may be modified and distributed under the terms
+of the MIT license. See the [LICENSE][license-link] file for details.
+
+ [license-link]: /LICENSE
  [mag]: https://docops.ca.com/mag
  [mas.ca.com]: http://mas.ca.com/
  [docs]: http://mas.ca.com/docs/
