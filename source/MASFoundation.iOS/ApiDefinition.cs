@@ -1841,6 +1841,7 @@ namespace MASFoundation
         /// <param name="password">The password of the user.</param>
         /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         [Static]
+        [Async(ResultTypeName = "LoginWithUserNameResult")]
         [Export("loginWithUserName:password:completion:")]
         void LoginWithUserName(string userName, string password, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1853,6 +1854,7 @@ namespace MASFoundation
         /// <param name="authorizationCode">The authorization code for the user.</param>
         /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         [Static]
+        [Async(ResultTypeName = "LoginWithAuthorizationCodeResult")]
         [Export("loginWithAuthorizationCode:completion:")]
         void LoginWithAuthorizationCode(string authorizationCode, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1866,6 +1868,7 @@ namespace MASFoundation
         /// <param name="tokenType">Token type of id_token.</param>
         /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         [Static]
+        [Async(ResultTypeName = "LoginWithIdTokenResult")]
         [Export("loginWithIdToken:tokenType:completion:")]
         void LoginWithIdToken(string idToken, string tokenType, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1880,6 +1883,7 @@ namespace MASFoundation
         /// <param name="authCredentials">MASAuthCredentials object that contains credentials.</param>
         /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         [Static]
+        [Async(ResultTypeName = "LoginWithAuthCredentialsResult")]
         [Export("loginWithAuthCredentials:completion:")]
         void LoginWithAuthCredentials(MASAuthCredentials authCredentials, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -2601,6 +2605,7 @@ namespace MASFoundation
         /// is a failure.
         /// </param>
         [Static]
+        [Async(ResultTypeName = "StartDefaultConfigurationResult")]
         [Export("startWithDefaultConfiguration:completion:")]
         void StartWithDefaultConfiguration(bool shouldUseDefault, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -3210,6 +3215,7 @@ namespace MASFoundation
         /// <param name="request">MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request..</param>
         /// <param name="completion">An MASResponseObjectErrorBlock (NSHttpUrlResponse response, NSObject responseObject, NSError error) that will receive any type of response object or an NSError object if there is a failure.</param>
         [Static]
+        [Async(ResultTypeName = "InvokeResult")]
         [Export("invoke:completion:")]
         void Invoke(MASRequest request, [NullAllowed] MASResponseObjectErrorBlock completion);
 

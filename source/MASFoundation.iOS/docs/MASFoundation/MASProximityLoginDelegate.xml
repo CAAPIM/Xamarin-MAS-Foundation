@@ -1,0 +1,171 @@
+<Type Name="MASProximityLoginDelegate" FullName="MASFoundation.MASProximityLoginDelegate">
+  <TypeSignature Language="C#" Value="public abstract class MASProximityLoginDelegate : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MASProximityLoginDelegate extends Foundation.NSObject" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Model</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.Register("MASProximityLoginDelegate", false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASProximityLoginDelegate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("init")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASProximityLoginDelegate (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASProximityLoginDelegate (IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="handle">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DidReceiveAuthorizationCode">
+      <MemberSignature Language="C#" Value="public virtual void DidReceiveAuthorizationCode (string authorizationCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DidReceiveAuthorizationCode(string authorizationCode) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("didReceiveAuthorizationCode:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authorizationCode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authorizationCode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DidReceiveBLEProximityLoginStateUpdate">
+      <MemberSignature Language="C#" Value="public virtual void DidReceiveBLEProximityLoginStateUpdate (MASFoundation.MASBLEServiceState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DidReceiveBLEProximityLoginStateUpdate(valuetype MASFoundation.MASBLEServiceState state) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("didReceiveBLEProximityLoginStateUpdate:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="MASFoundation.MASBLEServiceState" />
+      </Parameters>
+      <Docs>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DidReceiveProximityLoginError">
+      <MemberSignature Language="C#" Value="public virtual void DidReceiveProximityLoginError (Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DidReceiveProximityLoginError(class Foundation.NSError error) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("didReceiveProximityLoginError:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="error" Type="Foundation.NSError" />
+      </Parameters>
+      <Docs>
+        <param name="error">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleBLEProximityLoginUserConsent">
+      <MemberSignature Language="C#" Value="public abstract void HandleBLEProximityLoginUserConsent (MASFoundation.MASCompletionErrorBlock completion, string deviceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void HandleBLEProximityLoginUserConsent(class MASFoundation.MASCompletionErrorBlock completion, string deviceName) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("handleBLEProximityLoginUserConsent:deviceName:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="deviceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="completion">To be added.</param>
+        <param name="deviceName">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

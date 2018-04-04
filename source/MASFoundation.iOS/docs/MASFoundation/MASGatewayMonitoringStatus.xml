@@ -1,0 +1,71 @@
+<Type Name="MASGatewayMonitoringStatus" FullName="MASFoundation.MASGatewayMonitoringStatus">
+  <TypeSignature Language="C#" Value="public enum MASGatewayMonitoringStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASGatewayMonitoringStatus extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="Count" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASGatewayMonitoringStatus Count = int32(3)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotReachable">
+      <MemberSignature Language="C#" Value="NotReachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASGatewayMonitoringStatus NotReachable = int32(0)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReachableViaWiFi">
+      <MemberSignature Language="C#" Value="ReachableViaWiFi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASGatewayMonitoringStatus ReachableViaWiFi = int32(2)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReachableViaWWAN">
+      <MemberSignature Language="C#" Value="ReachableViaWWAN" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASGatewayMonitoringStatus ReachableViaWWAN = int32(1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASGatewayMonitoringStatus Unknown = int32(-1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

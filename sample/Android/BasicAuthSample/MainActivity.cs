@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Com.CA.Mas.Foundation;
 using Android.Content;
+using Org.Json;
 
 namespace BasicAuthSample
 {
@@ -49,8 +50,8 @@ namespace BasicAuthSample
             startSDKButton.Click += (sender, e) =>
             {
                 // Comment/Uncomment desired start method (One uncommented at a time)
-                SampleActions.startSDK(this);
-                //SampleActions.startSDKChangeDefaultConfig(this);
+                //SampleActions.startSDK(this);
+                SampleActions.startSDKChangeDefaultConfig(this);
                 //SampleActions.startSDKCustomJson(this);
                 //SampleActions.startSDKFileUrl(this);
                 //SampleActions.startSDKEnrolmentURL(this);
@@ -61,9 +62,12 @@ namespace BasicAuthSample
                 SampleActions.login(this);
             };
 
-            invokeApiButton.Click += (sender, e) =>
+            invokeApiButton.Click += async (sender, e) =>
             {
-                SampleActions.invokeApi(this);
+                var response = await SampleActions.InvokeApi();
+
+                JSONObject jsonObject = (JSONObject)response.Body.Content;
+                Alert("Response", jsonObject.ToString(4));
             };
 
             logoutButton.Click += (sender, e) =>
