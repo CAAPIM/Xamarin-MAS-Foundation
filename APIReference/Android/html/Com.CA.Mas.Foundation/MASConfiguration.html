@@ -1,0 +1,1123 @@
+<html>
+  <head>
+    <title>Com.CA.Mas.Foundation.MASConfiguration</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MASFoundation.Android</a> : <a href="index.html">Com.CA.Mas.Foundation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.MASConfiguration">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.MASConfiguration:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.MASConfiguration:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.MASConfiguration:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Com.CA.Mas.Foundation.MASConfiguration">MASConfiguration  Class</h1>
+    <p class="Summary" id="T:Com.CA.Mas.Foundation.MASConfiguration:Summary">
+      <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html" target="_blank">[Android Documentation]</a>
+    </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Com.CA.Mas.Foundation.MASConfiguration:Signature">[Android.Runtime.Register("com/ca/mas/foundation/MASConfiguration", DoNotGenerateAcw=true)]<br />public class  <b>MASConfiguration</b> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Object</a></div>
+    </div>
+    <div class="Remarks" id="T:Com.CA.Mas.Foundation.MASConfiguration:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Foundation.MASConfiguration:Docs:Remarks">
+        <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html" target="_blank">[Android Documentation]</a>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Foundation.MASConfiguration:Docs:Version Information">
+        <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Object</a>.
+							</p>
+        <h2 class="Section">Protected Constructors</h2>
+        <div class="SectionBox" id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Com.CA.Mas.Foundation.MASConfiguration(Android.Content.Context)">MASConfiguration</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Content.Context</a>)</div>
+                </td>
+                <td>
+                  <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#MASConfiguration(android.content.Context)" target="_blank">[Android Documentation]</a>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Com.CA.Mas.Foundation.MASConfiguration(System.IntPtr,Android.Runtime.JniHandleOwnership)">MASConfiguration</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JniHandleOwnership</a>)</div>
+                </td>
+                <td>A constructor used when creating managed representations of JNI objects; called by the runtime.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationDescription">ApplicationDescription</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The description of the application.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationName">ApplicationName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The name of the applications.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationOrganization">ApplicationOrganization</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The organization name of the application.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationRegisteredBy">ApplicationRegisteredBy</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The name of the entity that registered the application.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationType">ApplicationType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The type of the application.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.CertificateAdvancedRenewTimeframe">CertificateAdvancedRenewTimeframe</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>static </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.CurrentConfiguration">CurrentConfiguration</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Com.CA.Mas.Foundation/MASConfiguration.html">MASConfiguration</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getCurrentConfiguration()" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.GatewayCertificates">GatewayCertificates</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;Java.Security.Cert.X509Certificate&gt;</a>
+                  </i>. The public server certificate of the Gateway as obtained from the configuration.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.GatewayHostName">GatewayHostName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The host name of the Gateway.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPort">GatewayPort</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. The port assigned on the Gateway.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPrefix">GatewayPrefix</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. The prefix assigned on the Gateway.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.GatewayUrl">GatewayUrl</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Net.URL</a>
+                  </i>. The full URL of the Gateway including the prefix, hostname and port in a ://: format.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledPublicKeyPinning">IsEnabledPublicKeyPinning</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. Determines if the SDK is enabled for public key pinning for an authentication challenge.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledTrustedPublicPKI">IsEnabledTrustedPublicPKI</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. Determines if the SDK will trust the public PKI for an authentication challenge.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.IsLoaded">IsLoaded</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. This indicates the status of the configuration loading.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.IsSsoEnabled">IsSsoEnabled</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. Determines if the client’s SSO is enabled or not.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.LocationIsRequired">LocationIsRequired</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. Determines if a user’s location coordinates are required.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Properties</h2>
+        <div class="SectionBox" id="Protected Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdClass">ThresholdClass</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>
+                  </i>. This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdType">ThresholdType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>
+                  </i>. This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASConfiguration.AddSecurityConfiguration(Com.CA.Mas.Foundation.IMASSecurityConfiguration)">AddSecurityConfiguration</a>
+                  </b>(<a href="../Com.CA.Mas.Foundation/IMASSecurityConfiguration.html">IMASSecurityConfiguration</a>)<blockquote>Adds the security configuration to the list of configurations and notifies observers.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASConfiguration.GetEndpointPath(System.String)">GetEndpointPath</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Retrieves an endpoint path fragment for a given endpoint key, the keys can be one of the following
+ <ul><li>   msso.url.request_token</li><li>   msso.url.request_token_sso</li><li>   msso.url.register_device</li><li>   msso.url.register_device_client</li><li>   msso.url.resource_owner_logout</li><li>   msso.url.remove_device_x509</li><li>   msso.url.authorize</li><li>   msso.url.enterprise_apps</li><li>   msso.url.client_credentials</li><li>   msso.url.authorize</li><li>   mas.url.scim_path</li><li>   mas.url.mas_storage_path</li><li>   mas.url.user_info</li></ul></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASConfiguration.GetSecurityConfiguration(Android.Net.Uri)">GetSecurityConfiguration</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Net.Uri</a>)<nobr> : <a href="../Com.CA.Mas.Foundation/IMASSecurityConfiguration.html">IMASSecurityConfiguration</a></nobr><blockquote>Returns a MASSecurityConfiguration object for the specified domain.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASConfiguration.RemoveSecurityConfiguration(Android.Net.Uri)">RemoveSecurityConfiguration</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Net.Uri</a>)<blockquote>Attempts to remove the security configuration from the list of configurations
+ with the host and port information and notifies observers.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Com.CA.Mas.Foundation.MASConfiguration:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Com.CA.Mas.Foundation.MASConfiguration(Android.Content.Context)">MASConfiguration Constructor</h3>
+        <blockquote id="C:Com.CA.Mas.Foundation.MASConfiguration(Android.Content.Context):member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#MASConfiguration(android.content.Context)" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register(".ctor", "(Landroid/content/Context;)V", "")]<br />protected  <b>MASConfiguration</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Content.Context</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Com.CA.Mas.Foundation.MASConfiguration(Android.Content.Context):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.MASConfiguration(Android.Content.Context):Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#MASConfiguration(android.content.Context)" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.MASConfiguration(Android.Content.Context):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Com.CA.Mas.Foundation.MASConfiguration(System.IntPtr,Android.Runtime.JniHandleOwnership)">MASConfiguration Constructor</h3>
+        <blockquote id="C:Com.CA.Mas.Foundation.MASConfiguration(System.IntPtr,Android.Runtime.JniHandleOwnership):member">
+          <div class="msummary">A constructor used when creating managed representations of JNI objects; called by the runtime.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected  <b>MASConfiguration</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> javaReference, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JniHandleOwnership</a> transfer)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Com.CA.Mas.Foundation.MASConfiguration(System.IntPtr,Android.Runtime.JniHandleOwnership):Parameters">
+            <dl>
+              <dt>
+                <i>javaReference</i>
+              </dt>
+              <dd>A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>containing a Java Native Interface (JNI) object reference.</dd>
+              <dt>
+                <i>transfer</i>
+              </dt>
+              <dd>A <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JniHandleOwnership</a>indicating how to handle <i>javaReference</i></dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.MASConfiguration(System.IntPtr,Android.Runtime.JniHandleOwnership):Remarks">
+            <p>This constructor is invoked by the runtime infrastructure (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Object.GetObject``1(IntPtr, Android.Runtime.JniHandleOwnership)</a>) to create a new managed representation for a Java Native Interface object.</p>
+            <p>The constructor will initializes the <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.IJavaObject.Handle</a> property of the new instance using <i>javaReference</i> and <i>transfer</i>.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.MASConfiguration(System.IntPtr,Android.Runtime.JniHandleOwnership):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASConfiguration.AddSecurityConfiguration(Com.CA.Mas.Foundation.IMASSecurityConfiguration)">AddSecurityConfiguration Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASConfiguration.AddSecurityConfiguration(Com.CA.Mas.Foundation.IMASSecurityConfiguration):member">
+          <div class="msummary">Adds the security configuration to the list of configurations and notifies observers.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("addSecurityConfiguration", "(Lcom/ca/mas/foundation/MASSecurityConfiguration;)V", "GetAddSecurityConfiguration_Lcom_ca_mas_foundation_MASSecurityConfiguration_Handler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddSecurityConfiguration</b> (<a href="../Com.CA.Mas.Foundation/IMASSecurityConfiguration.html">IMASSecurityConfiguration</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.AddSecurityConfiguration(Com.CA.Mas.Foundation.IMASSecurityConfiguration):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.AddSecurityConfiguration(Com.CA.Mas.Foundation.IMASSecurityConfiguration):Remarks">
+            <p>Adds the security configuration to the list of configurations and notifies observers.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#addSecurityConfiguration(com.ca.mas.foundation.MASSecurityConfiguration)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.AddSecurityConfiguration(Com.CA.Mas.Foundation.IMASSecurityConfiguration):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationDescription">ApplicationDescription Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationDescription:member">
+          <div class="msummary">The description of the application.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getApplicationDescription", "()Ljava/lang/String;", "GetGetApplicationDescriptionHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ApplicationDescription</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationDescription:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationDescription:Remarks">
+            <p>The description of the application.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getApplicationDescription()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationDescription:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationName">ApplicationName Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationName:member">
+          <div class="msummary">The name of the applications.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getApplicationName", "()Ljava/lang/String;", "GetGetApplicationNameHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ApplicationName</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationName:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationName:Remarks">
+            <p>The name of the applications.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getApplicationName()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationName:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationOrganization">ApplicationOrganization Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationOrganization:member">
+          <div class="msummary">The organization name of the application.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getApplicationOrganization", "()Ljava/lang/String;", "GetGetApplicationOrganizationHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ApplicationOrganization</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationOrganization:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationOrganization:Remarks">
+            <p>The organization name of the application.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getApplicationOrganization()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationOrganization:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationRegisteredBy">ApplicationRegisteredBy Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationRegisteredBy:member">
+          <div class="msummary">The name of the entity that registered the application.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getApplicationRegisteredBy", "()Ljava/lang/String;", "GetGetApplicationRegisteredByHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ApplicationRegisteredBy</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationRegisteredBy:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationRegisteredBy:Remarks">
+            <p>The name of the entity that registered the application.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getApplicationRegisteredBy()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationRegisteredBy:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationType">ApplicationType Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationType:member">
+          <div class="msummary">The type of the application.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getApplicationType", "()Ljava/lang/String;", "GetGetApplicationTypeHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ApplicationType</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationType:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationType:Remarks">
+            <p>The type of the application.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getApplicationType()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ApplicationType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.CertificateAdvancedRenewTimeframe">CertificateAdvancedRenewTimeframe Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.CertificateAdvancedRenewTimeframe:member">
+          <div class="msummary">
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getCertificateAdvancedRenewTimeframe", "()I", "GetGetCertificateAdvancedRenewTimeframeHandler")]<br />[set: Android.Runtime.Register("setCertificateAdvancedRenewTimeframe", "(I)V", "GetSetCertificateAdvancedRenewTimeframe_IHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>CertificateAdvancedRenewTimeframe</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.CertificateAdvancedRenewTimeframe:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.CertificateAdvancedRenewTimeframe:Remarks">
+            <p>
+              <b>Get method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getCertificateAdvancedRenewTimeframe()" target="_blank">[Android Documentation]</a>
+              <br />
+            </p>
+            <p>
+              <b>Set method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#setCertificateAdvancedRenewTimeframe(int)" target="_blank">[Android Documentation]</a>
+              <br />
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.CertificateAdvancedRenewTimeframe:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.CurrentConfiguration">CurrentConfiguration Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.CurrentConfiguration:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getCurrentConfiguration()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getCurrentConfiguration", "()Lcom/ca/mas/foundation/MASConfiguration;", "GetGetCurrentConfigurationHandler")]<br />public static <a href="../Com.CA.Mas.Foundation/MASConfiguration.html">MASConfiguration</a> <b>CurrentConfiguration</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.CurrentConfiguration:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.CurrentConfiguration:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getCurrentConfiguration()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.CurrentConfiguration:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayCertificates">GatewayCertificates Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayCertificates:member">
+          <div class="msummary">The public server certificate of the Gateway as obtained from the configuration.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getGatewayCertificates", "()Ljava/util/Collection;", "GetGetGatewayCertificatesHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;Java.Security.Cert.X509Certificate&gt;</a> <b>GatewayCertificates</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayCertificates:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayCertificates:Remarks">
+            <p>The public server certificate of the Gateway as obtained from the configuration.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getGatewayCertificates()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayCertificates:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayHostName">GatewayHostName Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayHostName:member">
+          <div class="msummary">The host name of the Gateway.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getGatewayHostName", "()Ljava/lang/String;", "GetGetGatewayHostNameHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GatewayHostName</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayHostName:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayHostName:Remarks">
+            <p>The host name of the Gateway.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getGatewayHostName()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayHostName:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPort">GatewayPort Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPort:member">
+          <div class="msummary">The port assigned on the Gateway.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getGatewayPort", "()I", "GetGetGatewayPortHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>GatewayPort</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPort:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPort:Remarks">
+            <p>The port assigned on the Gateway.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getGatewayPort()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPort:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPrefix">GatewayPrefix Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPrefix:member">
+          <div class="msummary">The prefix assigned on the Gateway.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getGatewayPrefix", "()Ljava/lang/String;", "GetGetGatewayPrefixHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GatewayPrefix</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPrefix:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPrefix:Remarks">
+            <p>The prefix assigned on the Gateway.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getGatewayPrefix()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayPrefix:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayUrl">GatewayUrl Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayUrl:member">
+          <div class="msummary">The full URL of the Gateway including the prefix, hostname and port in a ://: format.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getGatewayUrl", "()Ljava/net/URL;", "GetGetGatewayUrlHandler")]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Net.URL</a> <b>GatewayUrl</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayUrl:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayUrl:Remarks">
+            <p>The full URL of the Gateway including the prefix, hostname and port in a ://: format.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getGatewayUrl()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.GatewayUrl:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASConfiguration.GetEndpointPath(System.String)">GetEndpointPath Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASConfiguration.GetEndpointPath(System.String):member">
+          <div class="msummary">Retrieves an endpoint path fragment for a given endpoint key, the keys can be one of the following
+ <ul><li>   msso.url.request_token</li><li>   msso.url.request_token_sso</li><li>   msso.url.register_device</li><li>   msso.url.register_device_client</li><li>   msso.url.resource_owner_logout</li><li>   msso.url.remove_device_x509</li><li>   msso.url.authorize</li><li>   msso.url.enterprise_apps</li><li>   msso.url.client_credentials</li><li>   msso.url.authorize</li><li>   mas.url.scim_path</li><li>   mas.url.mas_storage_path</li><li>   mas.url.user_info</li></ul></div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("getEndpointPath", "(Ljava/lang/String;)Ljava/lang/String;", "GetGetEndpointPath_Ljava_lang_String_Handler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetEndpointPath</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.GetEndpointPath(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.GetEndpointPath(System.String):Returns">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.GetEndpointPath(System.String):Remarks">
+            <p>Retrieves an endpoint path fragment for a given endpoint key, the keys can be one of the following
+ <ul><li>   msso.url.request_token</li><li>   msso.url.request_token_sso</li><li>   msso.url.register_device</li><li>   msso.url.register_device_client</li><li>   msso.url.resource_owner_logout</li><li>   msso.url.remove_device_x509</li><li>   msso.url.authorize</li><li>   msso.url.enterprise_apps</li><li>   msso.url.client_credentials</li><li>   msso.url.authorize</li><li>   mas.url.scim_path</li><li>   mas.url.mas_storage_path</li><li>   mas.url.user_info</li></ul></p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getEndpointPath(java.lang.String)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.GetEndpointPath(System.String):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASConfiguration.GetSecurityConfiguration(Android.Net.Uri)">GetSecurityConfiguration Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASConfiguration.GetSecurityConfiguration(Android.Net.Uri):member">
+          <div class="msummary">Returns a MASSecurityConfiguration object for the specified domain.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("getSecurityConfiguration", "(Landroid/net/Uri;)Lcom/ca/mas/foundation/MASSecurityConfiguration;", "GetGetSecurityConfiguration_Landroid_net_Uri_Handler")]<br />public virtual <a href="../Com.CA.Mas.Foundation/IMASSecurityConfiguration.html">IMASSecurityConfiguration</a> <b>GetSecurityConfiguration</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Net.Uri</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.GetSecurityConfiguration(Android.Net.Uri):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.GetSecurityConfiguration(Android.Net.Uri):Returns">the host and port URI</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.GetSecurityConfiguration(Android.Net.Uri):Remarks">
+            <p>Returns a MASSecurityConfiguration object for the specified domain.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getSecurityConfiguration(android.net.Uri)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.GetSecurityConfiguration(Android.Net.Uri):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledPublicKeyPinning">IsEnabledPublicKeyPinning Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledPublicKeyPinning:member">
+          <div class="msummary">Determines if the SDK is enabled for public key pinning for an authentication challenge.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("isEnabledPublicKeyPinning", "()Z", "GetIsEnabledPublicKeyPinningHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsEnabledPublicKeyPinning</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledPublicKeyPinning:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledPublicKeyPinning:Remarks">
+            <p>Determines if the SDK is enabled for public key pinning for an authentication challenge. This read only value is within the JSON configuration file.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#isEnabledPublicKeyPinning()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledPublicKeyPinning:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledTrustedPublicPKI">IsEnabledTrustedPublicPKI Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledTrustedPublicPKI:member">
+          <div class="msummary">Determines if the SDK will trust the public PKI for an authentication challenge.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("isEnabledTrustedPublicPKI", "()Z", "GetIsEnabledTrustedPublicPKIHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsEnabledTrustedPublicPKI</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledTrustedPublicPKI:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledTrustedPublicPKI:Remarks">
+            <p>Determines if the SDK will trust the public PKI for an authentication challenge. This read only value is within the JSON configuration file.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#isEnabledTrustedPublicPKI()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsEnabledTrustedPublicPKI:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.IsLoaded">IsLoaded Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.IsLoaded:member">
+          <div class="msummary">This indicates the status of the configuration loading.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("isLoaded", "()Z", "GetIsLoadedHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsLoaded</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsLoaded:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsLoaded:Remarks">
+            <p>This indicates the status of the configuration loading. YES if it has successfully loaded and is ready for use.
+ NO if not yet loaded or perhaps an error has occurred during attempting to load.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#isLoaded()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsLoaded:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.IsSsoEnabled">IsSsoEnabled Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.IsSsoEnabled:member">
+          <div class="msummary">Determines if the client’s SSO is enabled or not.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("isSsoEnabled", "()Z", "GetIsSsoEnabledHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsSsoEnabled</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsSsoEnabled:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsSsoEnabled:Remarks">
+            <p>Determines if the client’s SSO is enabled or not. This value is read from JSON configuration, if there is no value defined in keychain.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#isSsoEnabled()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.IsSsoEnabled:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.LocationIsRequired">LocationIsRequired Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.LocationIsRequired:member">
+          <div class="msummary">Determines if a user’s location coordinates are required.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getLocationIsRequired", "()Z", "GetGetLocationIsRequiredHandler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>LocationIsRequired</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.LocationIsRequired:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.LocationIsRequired:Remarks">
+            <p>Determines if a user’s location coordinates are required. This read only value is within the JSON configuration file and is
+ set as a requirement of the application on the Gateway. This means that a set of location coordinates must be sent in the
+ header of all protected endpoint HTTP request to the API on the Gateway.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#getLocationIsRequired()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.LocationIsRequired:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASConfiguration.RemoveSecurityConfiguration(Android.Net.Uri)">RemoveSecurityConfiguration Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASConfiguration.RemoveSecurityConfiguration(Android.Net.Uri):member">
+          <div class="msummary">Attempts to remove the security configuration from the list of configurations
+ with the host and port information and notifies observers.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("removeSecurityConfiguration", "(Landroid/net/Uri;)V", "GetRemoveSecurityConfiguration_Landroid_net_Uri_Handler")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveSecurityConfiguration</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Net.Uri</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.RemoveSecurityConfiguration(Android.Net.Uri):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.RemoveSecurityConfiguration(Android.Net.Uri):Remarks">
+            <p>Attempts to remove the security configuration from the list of configurations
+ with the host and port information and notifies observers.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASConfiguration.html#removeSecurityConfiguration(android.net.Uri)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASConfiguration.RemoveSecurityConfiguration(Android.Net.Uri):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdClass">ThresholdClass Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdClass:member">
+          <div class="msummary">This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> <b>ThresholdClass</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdClass:Value">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> which contains the <tt>java.lang.Class</tt> JNI value corresponding to this type.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdClass:Remarks">This property is used to control which <tt>jclass</tt> is provided to methods like <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JNIEnv.CallNonVirtualVoidMethod</a>.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdClass:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdType">ThresholdType Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdType:member">
+          <div class="msummary">This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> <b>ThresholdType</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdType:Value">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> which provides the declaring type.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdType:Remarks">This property is used to control virtual vs. non virtual method dispatch against the underlying JNI object. When this property is equal to the declaring type, then virtual method invocation against the JNI object is performed; otherwise, we assume that the method was overridden by a derived type, and perform non-virtual methdo invocation.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASConfiguration.ThresholdType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

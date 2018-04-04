@@ -48,6 +48,10 @@
           <type>AfterBuild</type>
           <command>cp -f bin/Release/MASFoundation.iOS.dll bin/Release/MASFoundation.iOS.xml ../../lib</command>
         </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mdoc export-html --template doctemplate.xsl -o ../../APIReference/iOS/html docs</command>
+        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
