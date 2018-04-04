@@ -18,7 +18,7 @@
 
     <remove-node path="/api/package[@name='com.ca.mas.core']" />
         
-     <!-- 
+     <!--
     <remove-node path="/api/package[@name='com.ca.mas.core.auth']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.auth.ble']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.auth.otp']" />
@@ -62,18 +62,14 @@
     <remove-node path="/api/package[@name='com.ca.mas.core.token']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.util']" />
 
+    
+    <remove-node path="/api/package[@name='com.ca.mas.foundation.notify']" />
+
+
     <attr path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASResponseProxy']" name="visibility">public</attr>
     <attr path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASRequest.MASRequestBuilder']" name="managedName">Builder</attr>
     <attr path="/api/package[@name='com.ca.mas.identity.user']/interface[@name='MASUserIdentity']/method[@name='getUsersByFilter' and count(parameter)=2 and parameter[1][@type='com.ca.mas.identity.common.MASFilteredRequest'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASUser&gt;&gt;']]/parameter[@name='p0']" name="name">filteredRequest</attr>
     <attr path="/api/package[@name='com.ca.mas.identity.user']/interface[@name='MASUserIdentity']/method[@name='getUsersByFilter' and count(parameter)=2 and parameter[1][@type='com.ca.mas.identity.common.MASFilteredRequest'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASUser&gt;&gt;']]/parameter[@name='p1']" name="name">callback</attr>
-    <attr path="/api/package[@name='com.ca.mas.identity.group']/interface[@name='MASGroupIdentity']/method[@name='getAllGroups' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASGroup&gt;&gt;']]/parameter[@name='p0']" name="name">owner</attr>"
-    <attr path="/api/package[@name='com.ca.mas.identity.group']/interface[@name='MASGroupIdentity']/method[@name='getAllGroups' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASGroup&gt;&gt;']]/parameter[@name='p1']" name="name">callback</attr>"
-
-    <attr path="/api/package[@name='com.ca.mas.identity.group']/interface[@name='MASGroupIdentity']/method[@name='getGroupByGroupName' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASGroup&gt;&gt;']]/parameter[@name='p0']" name="name">groupName</attr>"
-    <attr path="/api/package[@name='com.ca.mas.identity.group']/interface[@name='MASGroupIdentity']/method[@name='getGroupByGroupName' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASGroup&gt;&gt;']]/parameter[@name='p1']" name="name">callback</attr>"
-
-    <attr path="/api/package[@name='com.ca.mas.identity.group']/interface[@name='MASGroupIdentity']/method[@name='getGroupByMember' and count(parameter)=2 and parameter[1][@type='com.ca.mas.foundation.MASUser'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASGroup&gt;&gt;']]/parameter[@name='p0']"  name="name">member</attr>"
-    <attr path="/api/package[@name='com.ca.mas.identity.group']/interface[@name='MASGroupIdentity']/method[@name='getGroupByMember' and count(parameter)=2 and parameter[1][@type='com.ca.mas.foundation.MASUser'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASGroup&gt;&gt;']]/parameter[@name='p1']"  name="name">callback</attr>"
 
     <attr path="/api/package[@name='com.ca.mas.identity.group']/interface[@name='MASGroupIdentity']/method[@name='getGroupsByFilter' and count(parameter)=2 and parameter[1][@type='com.ca.mas.identity.common.MASFilteredRequest'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASGroup&gt;&gt;']]/parameter[@name='p0']" name="name">filteredRequest</attr>"
     <attr path="/api/package[@name='com.ca.mas.identity.group']/interface[@name='MASGroupIdentity']/method[@name='getGroupsByFilter' and count(parameter)=2 and parameter[1][@type='com.ca.mas.identity.common.MASFilteredRequest'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASGroup&gt;&gt;']]/parameter[@name='p1']" name="name">callback</attr>"
@@ -83,3 +79,4 @@
 
     <!-- <remove-node path="/api/package[@name='com.ca.mas.identity.user']/class[@name='User.X509Cert']" /> -->
 </metadata>
+

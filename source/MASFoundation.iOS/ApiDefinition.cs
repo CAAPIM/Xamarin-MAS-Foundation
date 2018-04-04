@@ -488,7 +488,7 @@ namespace MASFoundation
         /// <value>NSArray of the certificates.</value>
         [NullAllowed, Export("certificates", ArgumentSemantic.Strong)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] Certificates { get; set; }
+        NSArray Certificates { get; set; }
 
         // @property (nonatomic, strong) NSArray * _Nullable publicKeyHashes;
         /// <summary>
@@ -497,7 +497,7 @@ namespace MASFoundation
         /// <value>NSArray of the public key hashes.</value>
         [NullAllowed, Export("publicKeyHashes", ArgumentSemantic.Strong)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] PublicKeyHashes { get; set; }
+        NSArray PublicKeyHashes { get; set; }
 
         // @property (readonly, nonatomic, strong) NSURL * _Nonnull host;
         /// <summary>
@@ -776,7 +776,7 @@ namespace MASFoundation
         // @property (readonly, copy, nonatomic) NSArray * _Nullable providers;
         [NullAllowed, Export("providers", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] Providers { get; }
+        NSArray Providers { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable idp;
         [NullAllowed, Export("idp")]
@@ -915,7 +915,7 @@ namespace MASFoundation
         /// <value>The trusted cert pinned publick key hashes.</value>
         [NullAllowed, Export("trustedCertPinnedPublickKeyHashes", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] TrustedCertPinnedPublickKeyHashes { get; }
+        NSArray TrustedCertPinnedPublickKeyHashes { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificatesAsDERData;
         /// <summary>
@@ -1057,7 +1057,7 @@ namespace MASFoundation
         [Static]
         [NullAllowed, Export("securityConfigurations")]
         //[Verify(MethodToProperty), Verify(StronglyTypedNSArray)]
-        NSArray[] SecurityConfigurations { get; }
+        NSArray SecurityConfigurations { get; }
 
         // +(MASSecurityConfiguration * _Nullable)securityConfigurationForDomain:(NSURL * _Nonnull)domain;
         /// <summary>
@@ -1584,7 +1584,7 @@ namespace MASFoundation
         // @property (readwrite, copy, nonatomic) NSArray * _Nullable members;
         [NullAllowed, Export("members", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray[] Members { get; set; }
+        NSArray Members { get; set; }
 
         // -(instancetype _Nullable)initWithInfo:(NSDictionary * _Nonnull)info;
         [Export("initWithInfo:")]
@@ -1972,6 +1972,7 @@ namespace MASFoundation
         /// <param name="password">The password of the user.</param>
         /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         [Static]
+        [Async(ResultTypeName = "LoginWithUserNameResult")]
         [Export("loginWithUserName:password:completion:")]
         void LoginWithUserName(string userName, string password, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1984,6 +1985,7 @@ namespace MASFoundation
         /// <param name="authorizationCode">The authorization code for the user.</param>
         /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         [Static]
+        [Async(ResultTypeName = "LoginWithAuthorizationCodeResult")]
         [Export("loginWithAuthorizationCode:completion:")]
         void LoginWithAuthorizationCode(string authorizationCode, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1997,6 +1999,7 @@ namespace MASFoundation
         /// <param name="tokenType">Token type of id_token.</param>
         /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         [Static]
+        [Async(ResultTypeName = "LoginWithIdTokenResult")]
         [Export("loginWithIdToken:tokenType:completion:")]
         void LoginWithIdToken(string idToken, string tokenType, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -2011,6 +2014,7 @@ namespace MASFoundation
         /// <param name="authCredentials">MASAuthCredentials object that contains credentials.</param>
         /// <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         [Static]
+        [Async(ResultTypeName = "LoginWithAuthCredentialsResult")]
         [Export("loginWithAuthCredentials:completion:")]
         void LoginWithAuthCredentials(MASAuthCredentials authCredentials, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -2353,33 +2357,6 @@ namespace MASFoundation
         /// <param name="error">NSError error reference object that returns any error occurred during JWT signature.</param>
         [Export("setSignWithClaims:privateKey:error:")]
         void SetSignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
-
-        // -(void)setHeaderParameter:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-        /// <summary>
-        /// Append parameter into the header of a request.
-        /// </summary>
-        /// <param name="key">NSString containing name/type of the parameter.</param>
-        /// <param name="value">NSString containing value of the parameter.</param>
-        [Export("setHeaderParameter:value:")]
-        void SetHeaderParameter(string key, string value);
-
-        // -(void)setBodyParameter:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-        /// <summary>
-        /// Append parameter into the body of a request.
-        /// </summary>
-        /// <param name="key">NSString containing name/type of the parameter.</param>
-        /// <param name="value">NSString containing value of the parameter.</param>
-        [Export("setBodyParameter:value:")]
-        void SetBodyParameter(string key, string value);
-
-        // -(void)setQueryParameter:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-        /// <summary>
-        /// Append parameter into the URL of a request.
-        /// </summary>
-        /// <param name="key">NSString containing name/type of the parameter.</param>
-        /// <param name="value">NSString containing value of the parameter.M</param>
-        [Export("setQueryParameter:value:")]
-        void SetQueryParameter(string key, string value);
     }
 
     // @interface MASRequest : MASObject
@@ -2759,6 +2736,7 @@ namespace MASFoundation
         /// is a failure.
         /// </param>
         [Static]
+        [Async(ResultTypeName = "StartDefaultConfigurationResult")]
         [Export("startWithDefaultConfiguration:completion:")]
         void StartWithDefaultConfiguration(bool shouldUseDefault, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -3368,6 +3346,7 @@ namespace MASFoundation
         /// <param name="request">MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request..</param>
         /// <param name="completion">An MASResponseObjectErrorBlock (NSHttpUrlResponse response, NSObject responseObject, NSError error) that will receive any type of response object or an NSError object if there is a failure.</param>
         [Static]
+        [Async(ResultTypeName = "InvokeResult")]
         [Export("invoke:completion:")]
         void Invoke(MASRequest request, [NullAllowed] MASResponseObjectErrorBlock completion);
 

@@ -1,0 +1,1105 @@
+<Type Name="MASFoundationErrorCode" FullName="MASFoundation.MASFoundationErrorCode">
+  <TypeSignature Language="C#" Value="public enum MASFoundationErrorCode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASFoundationErrorCode extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccessTokenDisabled">
+      <MemberSignature Language="C#" Value="AccessTokenDisabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode AccessTokenDisabled = int32(130202)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessTokenInvalid">
+      <MemberSignature Language="C#" Value="AccessTokenInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode AccessTokenInvalid = int32(130201)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessTokenNotGrantedScope">
+      <MemberSignature Language="C#" Value="AccessTokenNotGrantedScope" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode AccessTokenNotGrantedScope = int32(130203)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationAlreadyRegistered">
+      <MemberSignature Language="C#" Value="ApplicationAlreadyRegistered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ApplicationAlreadyRegistered = int32(110001)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationInvalid">
+      <MemberSignature Language="C#" Value="ApplicationInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ApplicationInvalid = int32(110002)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationInvalidMagIdentifer">
+      <MemberSignature Language="C#" Value="ApplicationInvalidMagIdentifer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ApplicationInvalidMagIdentifer = int32(110004)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationNotRegistered">
+      <MemberSignature Language="C#" Value="ApplicationNotRegistered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ApplicationNotRegistered = int32(110003)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationRedirectUriInvalid">
+      <MemberSignature Language="C#" Value="ApplicationRedirectUriInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ApplicationRedirectUriInvalid = int32(110005)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BBANotEnabled">
+      <MemberSignature Language="C#" Value="BBANotEnabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BBANotEnabled = int32(180000)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEAuthorizationFailed">
+      <MemberSignature Language="C#" Value="BLEAuthorizationFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEAuthorizationFailed = int32(150002)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEAuthorizationPollingFailed">
+      <MemberSignature Language="C#" Value="BLEAuthorizationPollingFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEAuthorizationPollingFailed = int32(150003)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLECentral">
+      <MemberSignature Language="C#" Value="BLECentral" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLECentral = int32(150013)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLECentralDeviceNotFound">
+      <MemberSignature Language="C#" Value="BLECentralDeviceNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLECentralDeviceNotFound = int32(150004)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEDelegateNotDefined">
+      <MemberSignature Language="C#" Value="BLEDelegateNotDefined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEDelegateNotDefined = int32(150005)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEInvalidAuthenticationProvider">
+      <MemberSignature Language="C#" Value="BLEInvalidAuthenticationProvider" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEInvalidAuthenticationProvider = int32(150006)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEPeripheral">
+      <MemberSignature Language="C#" Value="BLEPeripheral" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEPeripheral = int32(150014)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEPeripheralCharacteristics">
+      <MemberSignature Language="C#" Value="BLEPeripheralCharacteristics" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEPeripheralCharacteristics = int32(150016)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEPeripheralServices">
+      <MemberSignature Language="C#" Value="BLEPeripheralServices" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEPeripheralServices = int32(150015)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEPoweredOff">
+      <MemberSignature Language="C#" Value="BLEPoweredOff" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEPoweredOff = int32(150007)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLERestting">
+      <MemberSignature Language="C#" Value="BLERestting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLERestting = int32(150008)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLERSSINotInRange">
+      <MemberSignature Language="C#" Value="BLERSSINotInRange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLERSSINotInRange = int32(150009)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEUnauthorized">
+      <MemberSignature Language="C#" Value="BLEUnauthorized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEUnauthorized = int32(150011)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEUnknownState">
+      <MemberSignature Language="C#" Value="BLEUnknownState" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEUnknownState = int32(150001)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEUnSupported">
+      <MemberSignature Language="C#" Value="BLEUnSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEUnSupported = int32(150010)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BLEUserDeclined">
+      <MemberSignature Language="C#" Value="BLEUserDeclined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEUserDeclined = int32(150012)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationInvalidEndpoint">
+      <MemberSignature Language="C#" Value="ConfigurationInvalidEndpoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ConfigurationInvalidEndpoint = int32(100204)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationInvalidHostForSecurityConfiguration">
+      <MemberSignature Language="C#" Value="ConfigurationInvalidHostForSecurityConfiguration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ConfigurationInvalidHostForSecurityConfiguration = int32(100211)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationInvalidPinningInfoForSecurityConfiguration">
+      <MemberSignature Language="C#" Value="ConfigurationInvalidPinningInfoForSecurityConfiguration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ConfigurationInvalidPinningInfoForSecurityConfiguration = int32(100212)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationLoadingFailedFileNotFound">
+      <MemberSignature Language="C#" Value="ConfigurationLoadingFailedFileNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ConfigurationLoadingFailedFileNotFound = int32(100201)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationLoadingFailedJsonSerialization">
+      <MemberSignature Language="C#" Value="ConfigurationLoadingFailedJsonSerialization" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ConfigurationLoadingFailedJsonSerialization = int32(100202)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationLoadingFailedJsonValidation">
+      <MemberSignature Language="C#" Value="ConfigurationLoadingFailedJsonValidation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ConfigurationLoadingFailedJsonValidation = int32(100203)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="Count" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode Count = int32(-999999)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceAlreadyRegistered">
+      <MemberSignature Language="C#" Value="DeviceAlreadyRegistered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode DeviceAlreadyRegistered = int32(120001)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceAlreadyRegisteredWithDifferentFlow">
+      <MemberSignature Language="C#" Value="DeviceAlreadyRegisteredWithDifferentFlow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode DeviceAlreadyRegisteredWithDifferentFlow = int32(120002)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceCouldNotBeDeregistered">
+      <MemberSignature Language="C#" Value="DeviceCouldNotBeDeregistered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode DeviceCouldNotBeDeregistered = int32(120003)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceDoesNotSupportLocalAuthentication">
+      <MemberSignature Language="C#" Value="DeviceDoesNotSupportLocalAuthentication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode DeviceDoesNotSupportLocalAuthentication = int32(120009)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceInvalidAuthCredentialsForDeviceRegistration">
+      <MemberSignature Language="C#" Value="DeviceInvalidAuthCredentialsForDeviceRegistration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode DeviceInvalidAuthCredentialsForDeviceRegistration = int32(120010)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceNotLoggedIn">
+      <MemberSignature Language="C#" Value="DeviceNotLoggedIn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode DeviceNotLoggedIn = int32(120005)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceNotRegistered">
+      <MemberSignature Language="C#" Value="DeviceNotRegistered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode DeviceNotRegistered = int32(120004)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRecordIsNotValid">
+      <MemberSignature Language="C#" Value="DeviceRecordIsNotValid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode DeviceRecordIsNotValid = int32(120006)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRegistrationAttemptedWithUnregisteredScope">
+      <MemberSignature Language="C#" Value="DeviceRegistrationAttemptedWithUnregisteredScope" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode DeviceRegistrationAttemptedWithUnregisteredScope = int32(120007)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceRegistrationWithoutRequiredParameters">
+      <MemberSignature Language="C#" Value="DeviceRegistrationWithoutRequiredParameters" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode DeviceRegistrationWithoutRequiredParameters = int32(120008)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterpriseBrowserAppDoesNotExist">
+      <MemberSignature Language="C#" Value="EnterpriseBrowserAppDoesNotExist" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode EnterpriseBrowserAppDoesNotExist = int32(140004)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterpriseBrowserNativeAppCannotOpen">
+      <MemberSignature Language="C#" Value="EnterpriseBrowserNativeAppCannotOpen" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode EnterpriseBrowserNativeAppCannotOpen = int32(140003)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterpriseBrowserNativeAppDoesNotExist">
+      <MemberSignature Language="C#" Value="EnterpriseBrowserNativeAppDoesNotExist" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode EnterpriseBrowserNativeAppDoesNotExist = int32(140002)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterpriseBrowserWebAppInvalidURL">
+      <MemberSignature Language="C#" Value="EnterpriseBrowserWebAppInvalidURL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode EnterpriseBrowserWebAppInvalidURL = int32(140001)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowIsNotActive">
+      <MemberSignature Language="C#" Value="FlowIsNotActive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode FlowIsNotActive = int32(100101)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowIsNotImplemented">
+      <MemberSignature Language="C#" Value="FlowIsNotImplemented" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode FlowIsNotImplemented = int32(100102)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowTypeUnsupported">
+      <MemberSignature Language="C#" Value="FlowTypeUnsupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode FlowTypeUnsupported = int32(100103)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GeolocationIsInvalid">
+      <MemberSignature Language="C#" Value="GeolocationIsInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode GeolocationIsInvalid = int32(100301)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GeolocationIsMissing">
+      <MemberSignature Language="C#" Value="GeolocationIsMissing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode GeolocationIsMissing = int32(100302)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GeolocationIsNotConfigured">
+      <MemberSignature Language="C#" Value="GeolocationIsNotConfigured" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode GeolocationIsNotConfigured = int32(100304)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GeolocationServicesAreUnauthorized">
+      <MemberSignature Language="C#" Value="GeolocationServicesAreUnauthorized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode GeolocationServicesAreUnauthorized = int32(100303)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidAuthorization">
+      <MemberSignature Language="C#" Value="InvalidAuthorization" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode InvalidAuthorization = int32(131001)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidEnrollmentURL">
+      <MemberSignature Language="C#" Value="InvalidEnrollmentURL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode InvalidEnrollmentURL = int32(100005)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidNSDictionary">
+      <MemberSignature Language="C#" Value="InvalidNSDictionary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode InvalidNSDictionary = int32(100002)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidNSURL">
+      <MemberSignature Language="C#" Value="InvalidNSURL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode InvalidNSURL = int32(100001)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidOTPChannelSelectionBlock">
+      <MemberSignature Language="C#" Value="InvalidOTPChannelSelectionBlock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode InvalidOTPChannelSelectionBlock = int32(160101)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidOTPCredentialsBlock">
+      <MemberSignature Language="C#" Value="InvalidOTPCredentialsBlock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode InvalidOTPCredentialsBlock = int32(160102)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidOTPProvided">
+      <MemberSignature Language="C#" Value="InvalidOTPProvided" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode InvalidOTPProvided = int32(160103)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidUserLoginBlock">
+      <MemberSignature Language="C#" Value="InvalidUserLoginBlock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode InvalidUserLoginBlock = int32(100003)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="JWTInvalidClaims">
+      <MemberSignature Language="C#" Value="JWTInvalidClaims" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode JWTInvalidClaims = int32(170001)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="JWTSerializationError">
+      <MemberSignature Language="C#" Value="JWTSerializationError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode JWTSerializationError = int32(170003)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="JWTUnexpectedClassType">
+      <MemberSignature Language="C#" Value="JWTUnexpectedClassType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode JWTUnexpectedClassType = int32(170002)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginProcessCancel">
+      <MemberSignature Language="C#" Value="LoginProcessCancel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode LoginProcessCancel = int32(130005)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MASIsNotStarted">
+      <MemberSignature Language="C#" Value="MASIsNotStarted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode MASIsNotStarted = int32(100004)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkIsOffline">
+      <MemberSignature Language="C#" Value="NetworkIsOffline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode NetworkIsOffline = int32(100402)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkNotReachable">
+      <MemberSignature Language="C#" Value="NetworkNotReachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode NetworkNotReachable = int32(100403)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkNotStarted">
+      <MemberSignature Language="C#" Value="NetworkNotStarted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode NetworkNotStarted = int32(100404)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkRequestTimedOut">
+      <MemberSignature Language="C#" Value="NetworkRequestTimedOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode NetworkRequestTimedOut = int32(100405)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkSSLAuthenticationChallengeFailure">
+      <MemberSignature Language="C#" Value="NetworkSSLAuthenticationChallengeFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode NetworkSSLAuthenticationChallengeFailure = int32(100408)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkSSLConnectionCannotBeMade">
+      <MemberSignature Language="C#" Value="NetworkSSLConnectionCannotBeMade" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode NetworkSSLConnectionCannotBeMade = int32(100406)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkUnacceptableContentType">
+      <MemberSignature Language="C#" Value="NetworkUnacceptableContentType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode NetworkUnacceptableContentType = int32(100401)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OTPAuthenticationCancelled">
+      <MemberSignature Language="C#" Value="OTPAuthenticationCancelled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode OTPAuthenticationCancelled = int32(160202)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OTPChannelSelectionCancelled">
+      <MemberSignature Language="C#" Value="OTPChannelSelectionCancelled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode OTPChannelSelectionCancelled = int32(160201)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OTPExpired">
+      <MemberSignature Language="C#" Value="OTPExpired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode OTPExpired = int32(160105)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OTPNotProvided">
+      <MemberSignature Language="C#" Value="OTPNotProvided" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode OTPNotProvided = int32(160104)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OTPRetryBarred">
+      <MemberSignature Language="C#" Value="OTPRetryBarred" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode OTPRetryBarred = int32(160107)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OTPRetryLimitExceeded">
+      <MemberSignature Language="C#" Value="OTPRetryLimitExceeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode OTPRetryLimitExceeded = int32(160106)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProximityLoginAuthorizationInProgress">
+      <MemberSignature Language="C#" Value="ProximityLoginAuthorizationInProgress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ProximityLoginAuthorizationInProgress = int32(150101)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProximityLoginInvalidAuthenticationURL">
+      <MemberSignature Language="C#" Value="ProximityLoginInvalidAuthenticationURL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ProximityLoginInvalidAuthenticationURL = int32(150102)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProximityLoginInvalidAuthorizeURL">
+      <MemberSignature Language="C#" Value="ProximityLoginInvalidAuthorizeURL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ProximityLoginInvalidAuthorizeURL = int32(150104)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QRCodeProximityLoginAuthorizationPollingFailed">
+      <MemberSignature Language="C#" Value="QRCodeProximityLoginAuthorizationPollingFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode QRCodeProximityLoginAuthorizationPollingFailed = int32(150103)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseSerializationFailedToParseResponse">
+      <MemberSignature Language="C#" Value="ResponseSerializationFailedToParseResponse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode ResponseSerializationFailedToParseResponse = int32(100407)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SharedStorageNotNilKey">
+      <MemberSignature Language="C#" Value="SharedStorageNotNilKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode SharedStorageNotNilKey = int32(180001)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenIdTokenExpired">
+      <MemberSignature Language="C#" Value="TokenIdTokenExpired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode TokenIdTokenExpired = int32(130102)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenIdTokenInvalidAud">
+      <MemberSignature Language="C#" Value="TokenIdTokenInvalidAud" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode TokenIdTokenInvalidAud = int32(130103)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenIdTokenInvalidAzp">
+      <MemberSignature Language="C#" Value="TokenIdTokenInvalidAzp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode TokenIdTokenInvalidAzp = int32(130104)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenIdTokenInvalidSignature">
+      <MemberSignature Language="C#" Value="TokenIdTokenInvalidSignature" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode TokenIdTokenInvalidSignature = int32(130105)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenIdTokenNotExistForLockingUserSession">
+      <MemberSignature Language="C#" Value="TokenIdTokenNotExistForLockingUserSession" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode TokenIdTokenNotExistForLockingUserSession = int32(130106)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenInvalidIdToken">
+      <MemberSignature Language="C#" Value="TokenInvalidIdToken" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode TokenInvalidIdToken = int32(130101)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode Unknown = int32(-1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAlreadyAuthenticated">
+      <MemberSignature Language="C#" Value="UserAlreadyAuthenticated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode UserAlreadyAuthenticated = int32(130001)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserBasicCredentialsNotValid">
+      <MemberSignature Language="C#" Value="UserBasicCredentialsNotValid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode UserBasicCredentialsNotValid = int32(130002)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDoesNotExist">
+      <MemberSignature Language="C#" Value="UserDoesNotExist" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode UserDoesNotExist = int32(130003)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserNotAuthenticated">
+      <MemberSignature Language="C#" Value="UserNotAuthenticated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode UserNotAuthenticated = int32(130004)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserSessionIsAlreadyLocked">
+      <MemberSignature Language="C#" Value="UserSessionIsAlreadyLocked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode UserSessionIsAlreadyLocked = int32(130006)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserSessionIsAlreadyUnlocked">
+      <MemberSignature Language="C#" Value="UserSessionIsAlreadyUnlocked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode UserSessionIsAlreadyUnlocked = int32(130007)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserSessionIsCurrentlyLocked">
+      <MemberSignature Language="C#" Value="UserSessionIsCurrentlyLocked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode UserSessionIsCurrentlyLocked = int32(130008)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

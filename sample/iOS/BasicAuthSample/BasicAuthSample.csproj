@@ -124,14 +124,15 @@
     <Compile Include="SampleActions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="msso_config.json" />
+    <BundleResource Include="msso_config2.json" />
+    <BundleResource Include="msso_config_public.json" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\..\source\MASFoundation.iOS\MASFoundation.iOS.csproj">
       <Project>{DBB0B1DC-6E45-4C48-92A6-249B13AB60CB}</Project>
       <Name>MASFoundation.iOS</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="msso_config.json" />
-    <BundleResource Include="msso_config2.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

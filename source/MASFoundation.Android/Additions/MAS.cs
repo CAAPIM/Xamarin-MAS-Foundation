@@ -8,23 +8,24 @@ namespace Com.CA.Mas.Foundation
         
         public static Task<IMASResponse> Invoke(IMASRequest request) {
             var tcs = new TaskCompletionSource<IMASResponse>();
-            Invoke(request, new MASInvokeCompletion(tcs));
+            Invoke(request, new MASInvokeCompletion<IMASResponse>(tcs));
+
             return tcs.Task;
-            
         }
 
-        private class MASInvokeCompletion : MASCallback
-        {
-            private readonly TaskCompletionSource<IMASResponse> _tcs;
 
-            public MASInvokeCompletion(TaskCompletionSource<IMASResponse> tcs)
+        private class MASInvokeCompletion<T> : MASCallback where T: class
+        {
+            private readonly TaskCompletionSource<T> _tcs;
+
+            public MASInvokeCompletion(TaskCompletionSource<T> tcs)
             {
                 _tcs = tcs;
             }
 
             public override void OnSuccess(Java.Lang.Object response)
             {
-                _tcs.SetResult((IMASResponse)response);
+                _tcs.SetResult(response as T);
             }
 
             public override void OnError(Java.Lang.Throwable t)

@@ -5,6 +5,7 @@
 
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 using Android.App;
 using Com.CA.Mas.Foundation;
 using Org.Json;
@@ -62,7 +63,9 @@ namespace BasicAuthSample
             {
 
                 // Change the default Configuration
-                MAS.SetConfigurationFileName("custom.json");
+                //MAS.SetConfigurationFileName("custom.json");
+                MAS.SetConfigurationFileName("msso_config_public.json");
+
                 // MAS.Start(Context context, bool shouldUseDefault);
                 MAS.Start(activity, true);
 
@@ -227,7 +230,7 @@ namespace BasicAuthSample
         //
         // Invoke a sample protected endpoint in the Gateway and display the returned JSON in a dialog
         //
-        public static void invokeApi(MainActivity activity)
+        public static async Task<IMASResponse> InvokeApi()
         {
 
             MAS.Debug();
@@ -244,9 +247,8 @@ namespace BasicAuthSample
             //Add Response type
             builder.ResponseBody(MASResponseBody.JsonBody());
 
-            //Invoke the API with builder and API Callback
-            MAS.Invoke(builder.Build(), new ProtectAPICallback(activity));
-
+            //Invoke the API with builder
+            return await MAS.Invoke(builder.Build());
         }
 
         //

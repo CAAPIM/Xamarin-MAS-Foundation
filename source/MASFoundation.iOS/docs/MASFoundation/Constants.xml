@@ -1,0 +1,53 @@
+<Type Name="Constants" FullName="MASFoundation.Constants">
+  <TypeSignature Language="C#" Value="public static class Constants" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Constants extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MASFoundationVersionNumber">
+      <MemberSignature Language="C#" Value="public static double MASFoundationVersionNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property float64 MASFoundationVersionNumber" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASFoundationVersionNumber", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASFoundationVersionString">
+      <MemberSignature Language="C#" Value="public static IntPtr MASFoundationVersionString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property native int MASFoundationVersionString" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASFoundationVersionString", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

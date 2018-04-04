@@ -63,7 +63,8 @@ namespace BasicAuthSample
         {
             if (!isSDKAlreadyInitialized())
             {
-                MAS.SetConfigurationFileName("msso_config2");
+                //MAS.SetConfigurationFileName("msso_config2");
+                MAS.SetConfigurationFileName("msso_config_public");
                 MAS.StartWithDefaultConfiguration(true, completion: checkSDKInitialization);     
             }
         }
@@ -272,7 +273,7 @@ namespace BasicAuthSample
         //
         // Invoke a sample protected endpoint in the Gateway and display the returned JSON in a dialog
         //
-        public static void invokeProtectedAPI()
+        public static void InvokeProtectedAPI()
         {
             if (MAS.MASState != MASState.NotInitialized)
             {
@@ -283,9 +284,7 @@ namespace BasicAuthSample
                 //  Specify an endpoint path, any parameters or headers, and request/response type
                 //
                 requestBuilder.EndPoint = "/protected/resource/products";
-                requestBuilder.SetQueryParameter("operation", "listProducts");
-                requestBuilder.RequestType = MASRequestResponseType.WwwFormUrlEncoded;
-                requestBuilder.ResponseType = MASRequestResponseType.Json;
+                requestBuilder.Body = new NSDictionary("operation", "listProducts");
 
                 //  Build MASRequestBuilder to convert into MASRequest object
                 MASRequest request = requestBuilder.Build();
@@ -314,6 +313,7 @@ namespace BasicAuthSample
                         Alert("MAS.Invoke", value);
                     }
                 });
+
             }
             else
             {

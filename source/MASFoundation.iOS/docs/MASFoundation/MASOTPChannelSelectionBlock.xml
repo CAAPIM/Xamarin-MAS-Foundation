@@ -1,0 +1,23 @@
+<Type Name="MASOTPChannelSelectionBlock" FullName="MASFoundation.MASOTPChannelSelectionBlock">
+  <TypeSignature Language="C#" Value="public delegate void MASOTPChannelSelectionBlock(NSObject[] arg0, MASOTPGenerationBlock arg1);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASOTPChannelSelectionBlock extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="arg0" Type="Foundation.NSObject[]" />
+    <Parameter Name="arg1" Type="MASFoundation.MASOTPGenerationBlock" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="arg0">To be added.</param>
+    <param name="arg1">To be added.</param>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>
