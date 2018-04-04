@@ -5,33 +5,30 @@ namespace Com.CA.Mas.Foundation
 {
     public partial class MAS
     {
-        
-        public static Task<IMASResponse> Invoke(IMASRequest request) {
+        public static Task<IMASResponse> InvokeAsync(IMASRequest request) {
             var tcs = new TaskCompletionSource<IMASResponse>();
-            Invoke(request, new MASInvokeCompletion<IMASResponse>(tcs));
+            Invoke(request, new MASCompletion<IMASResponse>(tcs));
+
+            return tcs.Task;
+        }
+
+        public static Task<Java.Lang.Void> StartAsync(Android.Content.Context context, Java.Net.URL url)
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Void>();
+            Start(context, url, new MASCompletion<Java.Lang.Void>(tcs));
+
+            return tcs.Task;
+        }
+
+        public static Task<Java.Lang.Boolean> GatewayIsReachableAsync()
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Boolean>();
+            GatewayIsReachable(new MASCompletion<Java.Lang.Boolean>(tcs));
 
             return tcs.Task;
         }
 
 
-        private class MASInvokeCompletion<T> : MASCallback where T: class
-        {
-            private readonly TaskCompletionSource<T> _tcs;
 
-            public MASInvokeCompletion(TaskCompletionSource<T> tcs)
-            {
-                _tcs = tcs;
-            }
-
-            public override void OnSuccess(Java.Lang.Object response)
-            {
-                _tcs.SetResult(response as T);
-            }
-
-            public override void OnError(Java.Lang.Throwable t)
-            {
-                _tcs.SetException(t);
-            }
-        }
     }
 }

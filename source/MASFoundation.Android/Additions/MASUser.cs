@@ -5,34 +5,75 @@ namespace Com.CA.Mas.Foundation
 {
     public partial class MASUser
     {
-        public static Task<IMASResponse> Login()
+
+        public static Task<MASUser> LoginAsync()
         {
-            var tcs = new TaskCompletionSource<IMASResponse>();
-            Login(new MASUserCompletion<IMASResponse>(tcs));
+            var tcs = new TaskCompletionSource<MASUser>();
+            Login(new MASCompletion<MASUser>(tcs));
 
             return tcs.Task;
         }
 
-        public static Task<IMASResponse> Login(IMASAuthCredentials credentials) {
-            var tcs = new TaskCompletionSource<IMASResponse>();
-            Login(credentials, new MASUserCompletion<IMASResponse>(tcs));
+        public static Task<MASUser> LoginAsync(IMASAuthCredentials credentials) {
+            var tcs = new TaskCompletionSource<MASUser>();
+            Login(credentials, new MASCompletion<MASUser>(tcs));
 
             return tcs.Task;
         }
 
-        public static Task<IMASResponse> Login(string username, char[] password)
+        public static Task<MASUser> LoginAsync(string username, char[] password)
         {
-            var tcs = new TaskCompletionSource<IMASResponse>();
-            Login(username, password, new MASUserCompletion<IMASResponse>(tcs));
+            var tcs = new TaskCompletionSource<MASUser>();
+            Login(username, password, new MASCompletion<MASUser>(tcs));
 
             return tcs.Task;
         }
 
-        private class MASUserCompletion<T> : MASCallback where T: class
+        public Task<Java.Lang.Void> LogoutAsync()
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Void>();
+            Logout(new MASCompletion<Java.Lang.Void>(tcs));
+
+            return tcs.Task;
+        }
+
+        public Task<Java.Lang.Void> RequestUserInfoAsync()
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Void>();
+            RequestUserInfo(new MASCompletion<Java.Lang.Void>(tcs));
+
+            return tcs.Task;
+        }
+
+        public Task<Java.Lang.Void> LockSessionAsync()
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Void>();
+            LockSession(new MASCompletion<Java.Lang.Void>(tcs));
+
+            return tcs.Task;
+        }
+
+        public Task<Java.Lang.Void> UnlockSessionAsync()
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Void>();
+            UnlockSession(new MASSessionUnlockCompletion<Java.Lang.Void>(tcs));
+
+            return tcs.Task;
+        }
+
+        public Task<Java.Lang.Void> RemoveSessionLockAsync()
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Void>();
+            RemoveSessionLock(new MASSessionUnlockCompletion<Java.Lang.Void>(tcs));
+
+            return tcs.Task;
+        }
+
+        private class MASSessionUnlockCompletion<T> : MASSessionUnlockCallback where T : class
         {
             private readonly TaskCompletionSource<T> _tcs;
 
-            public MASUserCompletion(TaskCompletionSource<T> tcs)
+            public MASSessionUnlockCompletion(TaskCompletionSource<T> tcs)
             {
                 _tcs = tcs;
             }
@@ -46,6 +87,16 @@ namespace Com.CA.Mas.Foundation
             {
                 _tcs.SetException(t);
             }
+
+            public override void OnUserAuthenticationRequired() 
+            {
+                _tcs.SetException(new UserAuthenticationRequiredException());
+            }
         }
+
+        public class UserAuthenticationRequiredException : Exception {
+            
+        }
+
     }
 }
