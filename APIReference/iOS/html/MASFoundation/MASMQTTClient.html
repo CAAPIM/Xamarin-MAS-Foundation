@@ -1,0 +1,1591 @@
+<html>
+  <head>
+    <title>MASFoundation.MASMQTTClient</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MASFoundation.iOS</a> : <a href="index.html">MASFoundation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MASFoundation.MASMQTTClient">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MASFoundation.MASMQTTClient:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MASFoundation.MASMQTTClient:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MASFoundation.MASMQTTClient:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MASFoundation.MASMQTTClient">MASMQTTClient  Class</h1>
+    <p class="Summary" id="T:MASFoundation.MASMQTTClient:Summary">
+      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+    </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MASFoundation.MASMQTTClient:Signature">[Foundation.Register("MASMQTTClient", true)]<br />public class  <b>MASMQTTClient</b> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a></div>
+    </div>
+    <div class="Remarks" id="T:MASFoundation.MASMQTTClient:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MASFoundation.MASMQTTClient:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MASFoundation.MASMQTTClient:Docs:Version Information">
+        <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MASFoundation.MASMQTTClient()">MASMQTTClient</a>
+                    </b>()</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MASFoundation.MASMQTTClient(System.String,System.Boolean)">MASMQTTClient</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Constructors</h2>
+        <div class="SectionBox" id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MASFoundation.MASMQTTClient(Foundation.NSObjectFlag)">MASMQTTClient</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a>)</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MASFoundation.MASMQTTClient(System.IntPtr)">MASMQTTClient</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>)</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASMQTTClient.ClassHandle">ClassHandle</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASMQTTClient.ClientID">ClientID</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASMQTTClient.Connected">Connected</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASMQTTClient.DebugMode">DebugMode</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASMQTTClient.Delegate">Delegate</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MASFoundation/MASConnectaMessagingClientDelegate.html">MASConnectaMessagingClientDelegate</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASMQTTClient.DisconnectionHandler">DisconnectionHandler</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MASFoundation/MQTTDisconnectionHandler.html">MQTTDisconnectionHandler</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASMQTTClient.MessageHandler">MessageHandler</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MASFoundation/MQTTMessageHandler.html">MQTTMessageHandler</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>static </div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASMQTTClient.Version">Version</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASMQTTClient.WeakDelegate">WeakDelegate</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.ClearWill()">ClearWill</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Action{MASFoundation.MQTTConnectionReturnCode})">ConnectToHost</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;MQTTConnectionReturnCode&gt;</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode})">ConnectToHost</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;MQTTConnectionReturnCode&gt;</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode})">ConnectWithHost</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;MQTTConnectionReturnCode&gt;</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.String,System.Action{MASFoundation.MQTTConnectionReturnCode})">ConnectWithHost</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;MQTTConnectionReturnCode&gt;</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.DisconnectWithCompletionHandler(MASFoundation.MQTTDisconnectionHandler)">DisconnectWithCompletionHandler</a>
+                  </b>(<a href="../MASFoundation/MQTTDisconnectionHandler.html">MQTTDisconnectionHandler</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,MASFoundation.MQTTPublishingCompletionBlock)">PublishString</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MQTTQualityOfService.html">MQTTQualityOfService</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="../MASFoundation/MQTTPublishingCompletionBlock.html">MQTTPublishingCompletionBlock</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,System.Action{System.Int32})">PublishString</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MQTTQualityOfService.html">MQTTQualityOfService</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;int&gt;</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.Reconnect()">Reconnect</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.SetMessageRetry(System.nuint)">SetMessageRetry</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.nuint">nuint</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.SetUsername(System.String,System.String)">SetUsername</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.SetWill(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean)">SetWill</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MQTTQualityOfService.html">MQTTQualityOfService</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.SharedClient()">SharedClient</a>
+                  </b>()<nobr> : <a href="../MASFoundation/MASMQTTClient.html">MASMQTTClient</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionBlock)">SubscribeToTopic</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MQTTSubscriptionCompletionBlock.html">MQTTSubscriptionCompletionBlock</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionHandler)">SubscribeToTopic</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MQTTSubscriptionCompletionHandler.html">MQTTSubscriptionCompletionHandler</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionBlock)">SubscribeToTopic</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MQTTQualityOfService.html">MQTTQualityOfService</a>, <a href="../MASFoundation/MQTTSubscriptionCompletionBlock.html">MQTTSubscriptionCompletionBlock</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionHandler)">SubscribeToTopic</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MQTTQualityOfService.html">MQTTQualityOfService</a>, <a href="../MASFoundation/MQTTSubscriptionCompletionHandler.html">MQTTSubscriptionCompletionHandler</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.UnsubscribeFromTopic(System.String,MASFoundation.MQTTCompletionErrorBlock)">UnsubscribeFromTopic</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MQTTCompletionErrorBlock.html">MQTTCompletionErrorBlock</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASMQTTClient.Dispose(System.Boolean)">Dispose</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MASFoundation.MASMQTTClient:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MASFoundation.MASMQTTClient()">MASMQTTClient Constructor</h3>
+        <blockquote id="C:MASFoundation.MASMQTTClient():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("init")]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASMQTTClient</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASMQTTClient():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASMQTTClient():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MASFoundation.MASMQTTClient(Foundation.NSObjectFlag)">MASMQTTClient Constructor</h3>
+        <blockquote id="C:MASFoundation.MASMQTTClient(Foundation.NSObjectFlag):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASMQTTClient</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MASFoundation.MASMQTTClient(Foundation.NSObjectFlag):Parameters">
+            <dl>
+              <dt>
+                <i>t</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASMQTTClient(Foundation.NSObjectFlag):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASMQTTClient(Foundation.NSObjectFlag):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MASFoundation.MASMQTTClient(System.IntPtr)">MASMQTTClient Constructor</h3>
+        <blockquote id="C:MASFoundation.MASMQTTClient(System.IntPtr):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASMQTTClient</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MASFoundation.MASMQTTClient(System.IntPtr):Parameters">
+            <dl>
+              <dt>
+                <i>handle</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASMQTTClient(System.IntPtr):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASMQTTClient(System.IntPtr):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MASFoundation.MASMQTTClient(System.String,System.Boolean)">MASMQTTClient Constructor</h3>
+        <blockquote id="C:MASFoundation.MASMQTTClient(System.String,System.Boolean):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("initWithClientId:cleanSession:")]<br />public  <b>MASMQTTClient</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> clientId, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> cleanSession)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MASFoundation.MASMQTTClient(System.String,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>clientId</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>cleanSession</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASMQTTClient(System.String,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASMQTTClient(System.String,System.Boolean):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASMQTTClient.ClassHandle">ClassHandle Property</h3>
+        <blockquote id="P:MASFoundation.MASMQTTClient.ClassHandle:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> <b>ClassHandle</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASMQTTClient.ClassHandle:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.ClassHandle:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.ClassHandle:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.ClearWill()">ClearWill Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.ClearWill():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("clearWill")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ClearWill</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.ClearWill():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.ClearWill():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASMQTTClient.ClientID">ClientID Property</h3>
+        <blockquote id="P:MASFoundation.MASMQTTClient.ClientID:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("clientID")]<br />[set: Foundation.Export("setClientID:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ClientID</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASMQTTClient.ClientID:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.ClientID:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.ClientID:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASMQTTClient.Connected">Connected Property</h3>
+        <blockquote id="P:MASFoundation.MASMQTTClient.Connected:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("connected")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Connected</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASMQTTClient.Connected:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.Connected:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.Connected:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Action{MASFoundation.MQTTConnectionReturnCode})">ConnectToHost Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Action{MASFoundation.MQTTConnectionReturnCode}):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("connectToHost:completionHandler:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ConnectToHost</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> hostName, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V0))] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;MQTTConnectionReturnCode&gt;</a> completionHandler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Action{MASFoundation.MQTTConnectionReturnCode}):Parameters">
+            <dl>
+              <dt>
+                <i>hostName</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completionHandler</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Action{MASFoundation.MQTTConnectionReturnCode}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Action{MASFoundation.MQTTConnectionReturnCode}):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode})">ConnectToHost Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode}):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("connectToHost:withTLS:completionHandler:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ConnectToHost</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> hostName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> tls, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V0))] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;MQTTConnectionReturnCode&gt;</a> completionHandler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode}):Parameters">
+            <dl>
+              <dt>
+                <i>hostName</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>tls</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completionHandler</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode}):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode})">ConnectWithHost Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode}):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("connectWithHost:withPort:enableTLS:completionHandler:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ConnectWithHost</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> hostName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> port, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> tls, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V0))] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;MQTTConnectionReturnCode&gt;</a> completionHandler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode}):Parameters">
+            <dl>
+              <dt>
+                <i>hostName</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>port</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>tls</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completionHandler</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode}):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.String,System.Action{MASFoundation.MQTTConnectionReturnCode})">ConnectWithHost Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.String,System.Action{MASFoundation.MQTTConnectionReturnCode}):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("connectWithHost:withPort:enableTLS:usingSSLCACert:completionHandler:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ConnectWithHost</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> hostName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> port, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> tls, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> certFile, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V0))] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;MQTTConnectionReturnCode&gt;</a> completionHandler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.String,System.Action{MASFoundation.MQTTConnectionReturnCode}):Parameters">
+            <dl>
+              <dt>
+                <i>hostName</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>port</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>tls</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>certFile</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completionHandler</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.String,System.Action{MASFoundation.MQTTConnectionReturnCode}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.String,System.Action{MASFoundation.MQTTConnectionReturnCode}):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASMQTTClient.DebugMode">DebugMode Property</h3>
+        <blockquote id="P:MASFoundation.MASMQTTClient.DebugMode:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("debugMode")]<br />[set: Foundation.Export("setDebugMode:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>DebugMode</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASMQTTClient.DebugMode:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.DebugMode:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.DebugMode:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASMQTTClient.Delegate">Delegate Property</h3>
+        <blockquote id="P:MASFoundation.MASMQTTClient.Delegate:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MASFoundation/MASConnectaMessagingClientDelegate.html">MASConnectaMessagingClientDelegate</a> <b>Delegate</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASMQTTClient.Delegate:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.Delegate:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.Delegate:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASMQTTClient.DisconnectionHandler">DisconnectionHandler Property</h3>
+        <blockquote id="P:MASFoundation.MASMQTTClient.DisconnectionHandler:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("disconnectionHandler", ObjCRuntime.ArgumentSemantic.Copy)]<br />[set: Foundation.Export("setDisconnectionHandler:", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="../MASFoundation/MQTTDisconnectionHandler.html">MQTTDisconnectionHandler</a> <b>DisconnectionHandler</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASMQTTClient.DisconnectionHandler:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.DisconnectionHandler:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.DisconnectionHandler:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.DisconnectWithCompletionHandler(MASFoundation.MQTTDisconnectionHandler)">DisconnectWithCompletionHandler Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.DisconnectWithCompletionHandler(MASFoundation.MQTTDisconnectionHandler):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("disconnectWithCompletionHandler:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DisconnectWithCompletionHandler</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMQTTDisconnectionHandler))] <a href="../MASFoundation/MQTTDisconnectionHandler.html">MQTTDisconnectionHandler</a> completionHandler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.DisconnectWithCompletionHandler(MASFoundation.MQTTDisconnectionHandler):Parameters">
+            <dl>
+              <dt>
+                <i>completionHandler</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.DisconnectWithCompletionHandler(MASFoundation.MQTTDisconnectionHandler):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.DisconnectWithCompletionHandler(MASFoundation.MQTTDisconnectionHandler):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.Dispose(System.Boolean)">Dispose Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.Dispose(System.Boolean):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.Dispose(System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>disposing</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.Dispose(System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.Dispose(System.Boolean):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASMQTTClient.MessageHandler">MessageHandler Property</h3>
+        <blockquote id="P:MASFoundation.MASMQTTClient.MessageHandler:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("messageHandler", ObjCRuntime.ArgumentSemantic.Copy)]<br />[set: Foundation.Export("setMessageHandler:", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="../MASFoundation/MQTTMessageHandler.html">MQTTMessageHandler</a> <b>MessageHandler</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASMQTTClient.MessageHandler:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.MessageHandler:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.MessageHandler:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,MASFoundation.MQTTPublishingCompletionBlock)">PublishString Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,MASFoundation.MQTTPublishingCompletionBlock):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("publishString:toTopic:withQos:retain:completion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>PublishString</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> payload, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> topic, <a href="../MASFoundation/MQTTQualityOfService.html">MQTTQualityOfService</a> qos, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> retain, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMQTTPublishingCompletionBlock))] <a href="../MASFoundation/MQTTPublishingCompletionBlock.html">MQTTPublishingCompletionBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,MASFoundation.MQTTPublishingCompletionBlock):Parameters">
+            <dl>
+              <dt>
+                <i>payload</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>topic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>qos</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>retain</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,MASFoundation.MQTTPublishingCompletionBlock):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,MASFoundation.MQTTPublishingCompletionBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,System.Action{System.Int32})">PublishString Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,System.Action{System.Int32}):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("publishString:toTopic:withQos:retain:completionHandler:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>PublishString</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> payload, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> topic, <a href="../MASFoundation/MQTTQualityOfService.html">MQTTQualityOfService</a> qos, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> retain, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V1))] <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;int&gt;</a> completionHandler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,System.Action{System.Int32}):Parameters">
+            <dl>
+              <dt>
+                <i>payload</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>topic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>qos</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>retain</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completionHandler</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,System.Action{System.Int32}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,System.Action{System.Int32}):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.Reconnect()">Reconnect Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.Reconnect():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("reconnect")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Reconnect</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.Reconnect():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.Reconnect():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.SetMessageRetry(System.nuint)">SetMessageRetry Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.SetMessageRetry(System.nuint):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("setMessageRetry:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetMessageRetry</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.nuint">nuint</a> seconds)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.SetMessageRetry(System.nuint):Parameters">
+            <dl>
+              <dt>
+                <i>seconds</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SetMessageRetry(System.nuint):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SetMessageRetry(System.nuint):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.SetUsername(System.String,System.String)">SetUsername Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.SetUsername(System.String,System.String):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("setUsername:Password:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetUsername</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> username, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.SetUsername(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>username</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>password</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SetUsername(System.String,System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SetUsername(System.String,System.String):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.SetWill(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean)">SetWill Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.SetWill(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("setWill:toTopic:withQos:retain:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetWill</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> payload, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> willTopic, <a href="../MASFoundation/MQTTQualityOfService.html">MQTTQualityOfService</a> willQos, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> retain)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.SetWill(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>payload</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>willTopic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>willQos</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>retain</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SetWill(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SetWill(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.SharedClient()">SharedClient Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.SharedClient():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("sharedClient")]<br />public static <a href="../MASFoundation/MASMQTTClient.html">MASMQTTClient</a> <b>SharedClient</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.SharedClient():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SharedClient():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SharedClient():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionBlock)">SubscribeToTopic Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionBlock):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("subscribeToTopic:withCompletion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SubscribeToTopic</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> topic, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMQTTSubscriptionCompletionBlock))] <a href="../MASFoundation/MQTTSubscriptionCompletionBlock.html">MQTTSubscriptionCompletionBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionBlock):Parameters">
+            <dl>
+              <dt>
+                <i>topic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionBlock):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionHandler)">SubscribeToTopic Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionHandler):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("subscribeToTopic:withCompletionHandler:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SubscribeToTopic</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> topic, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMQTTSubscriptionCompletionHandler))] <a href="../MASFoundation/MQTTSubscriptionCompletionHandler.html">MQTTSubscriptionCompletionHandler</a> completionHandler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionHandler):Parameters">
+            <dl>
+              <dt>
+                <i>topic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completionHandler</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionHandler):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionHandler):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionBlock)">SubscribeToTopic Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionBlock):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("subscribeToTopic:withQos:completion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SubscribeToTopic</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> topic, <a href="../MASFoundation/MQTTQualityOfService.html">MQTTQualityOfService</a> qos, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMQTTSubscriptionCompletionBlock))] <a href="../MASFoundation/MQTTSubscriptionCompletionBlock.html">MQTTSubscriptionCompletionBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionBlock):Parameters">
+            <dl>
+              <dt>
+                <i>topic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>qos</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionBlock):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionHandler)">SubscribeToTopic Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionHandler):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("subscribeToTopic:withQos:completionHandler:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SubscribeToTopic</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> topic, <a href="../MASFoundation/MQTTQualityOfService.html">MQTTQualityOfService</a> qos, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMQTTSubscriptionCompletionHandler))] <a href="../MASFoundation/MQTTSubscriptionCompletionHandler.html">MQTTSubscriptionCompletionHandler</a> completionHandler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionHandler):Parameters">
+            <dl>
+              <dt>
+                <i>topic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>qos</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completionHandler</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionHandler):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionHandler):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASMQTTClient.UnsubscribeFromTopic(System.String,MASFoundation.MQTTCompletionErrorBlock)">UnsubscribeFromTopic Method</h3>
+        <blockquote id="M:MASFoundation.MASMQTTClient.UnsubscribeFromTopic(System.String,MASFoundation.MQTTCompletionErrorBlock):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("unsubscribeFromTopic:withCompletionHandler:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UnsubscribeFromTopic</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> topic, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMQTTCompletionErrorBlock))] <a href="../MASFoundation/MQTTCompletionErrorBlock.html">MQTTCompletionErrorBlock</a> completionHandler)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASMQTTClient.UnsubscribeFromTopic(System.String,MASFoundation.MQTTCompletionErrorBlock):Parameters">
+            <dl>
+              <dt>
+                <i>topic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>completionHandler</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.UnsubscribeFromTopic(System.String,MASFoundation.MQTTCompletionErrorBlock):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASMQTTClient.UnsubscribeFromTopic(System.String,MASFoundation.MQTTCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASMQTTClient.Version">Version Property</h3>
+        <blockquote id="P:MASFoundation.MASMQTTClient.Version:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("version")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Version</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASMQTTClient.Version:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.Version:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.Version:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASMQTTClient.WeakDelegate">WeakDelegate Property</h3>
+        <blockquote id="P:MASFoundation.MASMQTTClient.WeakDelegate:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("delegate", ObjCRuntime.ArgumentSemantic.Weak)]<br />[set: Foundation.Export("setDelegate:", ObjCRuntime.ArgumentSemantic.Weak)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> <b>WeakDelegate</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASMQTTClient.WeakDelegate:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.WeakDelegate:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASMQTTClient.WeakDelegate:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
