@@ -15,7 +15,7 @@
   </Attributes>
   <Docs>
     <summary>
-    The top level MAS object represents the Mobile App Services SDK in it's entirety.  
+    The top level MAS object represents the Mobile App Services SDK in it's entirety.
     It is where the framework lifecycle begins, and ends if necessary.It is the front
     facing class where many of the configuration settings for the SDK as a whole can be
     found and utilized.
@@ -339,7 +339,7 @@
         <value>The gateway monitoring status as string.</value>
         <remarks>
         The monitoring status enumerated values to their string equivalents are:
-        
+
         MASGatewayMonitoringStatus.NotReachable
         MASGatewayMonitoringStatus.ReachableViaWWAN
         MASGatewayMonitoringStatus.ReachableViaWiFi
@@ -565,7 +565,7 @@
         ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
         subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
         </para>
-        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.      
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
         </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -591,7 +591,7 @@
         ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
         subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
         </para>
-        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.      
+        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
         </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -633,7 +633,7 @@
       <Docs>
         <summary>
         Gets a value indicating whether this <see cref="T:MASFoundation.MAS" /> is PKCEE nabled.
-        
+
         <para>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</para><para>@dependency &gt;Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification.</para></summary>
         <value>
         bool value of indicating whether PKCE is enabled or not.
@@ -1278,8 +1278,8 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="OTPChannelSelector">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="OTPChannelSelector">The MASOTPChannelSelectionBlock to receive the request for OTP channels.</param>
+        <summary>Set a OTP channel selection block to handle the case where the channel for Two-factor authentication is required.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1305,8 +1305,8 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="oneTimePassword">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="oneTimePassword">The MASOTPCredentialsBlock to receive the request for OTP credentials.</param>
+        <summary>Set a OTP credentials block to handle the case where a Two-factor authentication is required.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1362,8 +1362,8 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="login">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="login">The MASUserLoginWithUserCredentialsBlock to receive the request for user credentials.</param>
+        <summary>Set a user login block to handle the case where the type set in ‘setDeviceRegistrationType:(MASDeviceRegistrationType)’ is ‘MASDeviceRegistrationTypeUserCredentials’. If it set to ‘MASDeviceRegistrationTypeClientCredentials’ this is not called.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1450,10 +1450,10 @@
         is a failure.
         </param>
         <summary>
-        Starts the lifecycle of the MAS processes.  
+        Starts the lifecycle of the MAS processes.
         <para>
         Although an asynchronous block callback parameter is provided for response usage,
-        optionally you can set that to null and the caller can observe the lifecycle 
+        optionally you can set that to null and the caller can observe the lifecycle
         notifications instead.
         </para><para>
         This will load the last used JSON configuration from keychain storage.If there was none,
@@ -1462,13 +1462,13 @@
         </para></summary>
         <remarks>
         The MAS lifecycle notifications are:
-        
+
          *      MASWillStartNotification
          *      MASDidFailToStartNotification
          *      MASDidStartNotification
-        
+
         The application registration notifications are:
-        
+
          *      MASApplicationWillRegisterNotification
          *      MASApplicationDidFailToRegisterNotification
          *      MASApplicationDidRegisterNotification
@@ -1516,13 +1516,13 @@
         </para></summary>
         <remarks>
         The MAS lifecycle notifications are:
-        
+
          *      MASWillStartNotification
          *      MASDidFailToStartNotification
          *      MASDidStartNotification
-        
+
         The application registration notifications are:
-        
+
          *      MASApplicationWillRegisterNotification
          *      MASApplicationDidFailToRegisterNotification
          *      MASApplicationDidRegisterNotification
@@ -1555,13 +1555,13 @@
         <returns>To be added.</returns>
         <remarks>
         The MAS lifecycle notifications are:
-        
+
          *      MASWillStartNotification
          *      MASDidFailToStartNotification
          *      MASDidStartNotification
-        
+
         The application registration notifications are:
-        
+
          *      MASApplicationWillRegisterNotification
          *      MASApplicationDidFailToRegisterNotification
          *      MASApplicationDidRegisterNotification
@@ -1604,13 +1604,13 @@
         </para></summary>
         <remarks>
         The MAS lifecycle notifications are:
-        
+
          *      MASWillStartNotification
          *      MASDidFailToStartNotification
          *      MASDidStartNotification
-        
+
         The application registration notifications are:
-        
+
          *      MASApplicationWillRegisterNotification
          *      MASApplicationDidFailToRegisterNotification
          *      MASApplicationDidRegisterNotification
@@ -1661,13 +1661,13 @@
         </summary>
         <remarks>
         The MAS lifecycle notifications are:
-        
+
         *      MASWillStartNotification
         *      MASDidFailToStartNotification
         *      MASDidStartNotification
-        
+
         The application registration notifications are:
-        
+
         *      MASApplicationWillRegisterNotification
         *      MASApplicationDidFailToRegisterNotification
         *      MASApplicationDidRegisterNotification
@@ -1704,12 +1704,12 @@
         Stops the lifecycle of all MAS processes.
         <para>
         Although an asynchronous block callback parameter is provided for response usage,
-        optionally you can set that to null and the caller can observe the lifecycle 
+        optionally you can set that to null and the caller can observe the lifecycle
         notifications instead.
         </para></summary>
         <remarks>
         The lifecycle notifications are:
-        
+
         *      MASWillStopNotification
         *      MASDidFailToStopNotification
         *      MASDidStopNotification
