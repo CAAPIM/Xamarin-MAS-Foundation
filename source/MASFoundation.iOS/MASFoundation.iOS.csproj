@@ -29,10 +29,6 @@
           <type>AfterBuild</type>
           <command>mdoc export-msxdoc --out bin/Debug/MASFoundation.iOS.xml docs</command>
         </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp -f bin/Debug/MASFoundation.iOS.dll bin/Debug/MASFoundation.iOS.xml ../../lib</command>
-        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -44,10 +40,6 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CustomCommands>
       <CustomCommands>
-        <Command>
-          <type>AfterBuild</type>
-          <command>mdoc update -fno-assembly-versions -L /Developer/MonoTouch/usr/lib/mono/2.1/ -L /Developer/MonoTouch/usr/lib/mono/Xamarin.iOS/ --out docs bin/Release/MASFoundation.iOS.dll</command>
-        </Command>
         <Command>
           <type>AfterBuild</type>
           <command>mdoc export-msxdoc --out bin/Release/MASFoundation.iOS.xml docs</command>
