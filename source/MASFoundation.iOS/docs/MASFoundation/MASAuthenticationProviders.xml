@@ -14,7 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>The MASAuthenticationProviders class is a representation of all available providers.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -122,8 +122,8 @@
         <ReturnType>MASFoundation.MASAuthenticationProviders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The application’s currently configured authentication providers. This is a singleton object.</summary>
+        <value>Returns a singleton ‘MASAuthenticationProviders’ object.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -158,7 +158,7 @@
         <ReturnType>Foundation.NSArray[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The `MASAuthenticationProvider` instances.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -176,8 +176,8 @@
         <ReturnType>MASFoundation.MASAuthenticationProvider</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Retrieves the instance of `MASAuthenticationProvider` for BLE/QR Code Proximity Login.</summary>
+        <value>Returns `MASAuthenticationProvider` for BLE/QA Code Proximity Login.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -203,8 +203,8 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="completion">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="completion">	`MASObjectResponseErrorBlock` to notify original caller with the results.</param>
+        <summary>Retrieves the MASAuthenticationProviders from the server.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
