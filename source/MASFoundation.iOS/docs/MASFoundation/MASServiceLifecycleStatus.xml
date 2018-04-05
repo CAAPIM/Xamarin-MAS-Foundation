@@ -8,7 +8,7 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>The enumerated status for the Lifecycle of the micro services.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -20,7 +20,7 @@
         <ReturnType>MASFoundation.MASServiceLifecycleStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated status for the Lifecycle of the micro services.</summary>
       </Docs>
     </Member>
     <Member MemberName="DidStop">
@@ -31,7 +31,7 @@
         <ReturnType>MASFoundation.MASServiceLifecycleStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated status for the Lifecycle of the micro services.</summary>
       </Docs>
     </Member>
     <Member MemberName="Initialized">
@@ -42,7 +42,7 @@
         <ReturnType>MASFoundation.MASServiceLifecycleStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated status for the Lifecycle of the micro services.</summary>
       </Docs>
     </Member>
     <Member MemberName="Loaded">
@@ -53,7 +53,7 @@
         <ReturnType>MASFoundation.MASServiceLifecycleStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated status for the Lifecycle of the micro services.</summary>
       </Docs>
     </Member>
     <Member MemberName="StateCount">
@@ -64,7 +64,7 @@
         <ReturnType>MASFoundation.MASServiceLifecycleStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated status for the Lifecycle of the micro services.</summary>
       </Docs>
     </Member>
     <Member MemberName="Unknown">
@@ -75,7 +75,7 @@
         <ReturnType>MASFoundation.MASServiceLifecycleStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated status for the Lifecycle of the micro services.</summary>
       </Docs>
     </Member>
     <Member MemberName="WillStart">
@@ -86,7 +86,7 @@
         <ReturnType>MASFoundation.MASServiceLifecycleStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated status for the Lifecycle of the micro services.</summary>
       </Docs>
     </Member>
     <Member MemberName="WillStop">
@@ -97,7 +97,7 @@
         <ReturnType>MASFoundation.MASServiceLifecycleStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated status for the Lifecycle of the micro services.</summary>
       </Docs>
     </Member>
   </Members>

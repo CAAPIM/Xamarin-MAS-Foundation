@@ -14,7 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>MASService is the base class for all services which are to be run during the internal service’s lifecycle.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -98,8 +98,8 @@
         <ReturnType>MASFoundation.MASServiceLifecycleStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The current MASServiceLifecycleStatus of the MASService.</summary>
+        <value>lifecycleStatus</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,8 +116,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Retrieve a human readable string value for the current MASServiceLifecycleStatus.</summary>
+        <value>Returns the MASServiceLifecycleStatus in a human readable string.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -137,9 +137,9 @@
         <Parameter Name="status" Type="MASFoundation.MASServiceLifecycleStatus" />
       </Parameters>
       <Docs>
-        <param name="status">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="status">The MASServiceLifecycleStatus.</param>
+        <summary>Retrieve a human readable string value for the given MASServiceLifecycleStatus.</summary>
+        <returns>Returns the MASServiceLifecycleStatus in a human readable string.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -157,7 +157,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The lifecycle method to indicate to the service to perform an processes or acquire any resources it requires at the MASServiceLifecycleStatusLoaded state.
+
+Subclasses should override this to do this for their specific requirements.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -175,7 +177,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The lifecycle method to indicate the service should perform any processes or release any resources to bring the service to a default installation state.
+
+Subclasses should override this to do this for their specific requirements. They should call this super version at the start of their override.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -193,7 +197,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The lifecycle method to indicate the service should perform any processes or acquire any resources at the MASServiceLifecycleStatusDidStart state.
+
+Subclasses should override this to do this for their specific requirements. They should call this super version at the start of their override.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -211,7 +217,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The lifecycle method to indicate the service should perform any processes or release any resources at the MASServiceLifecycleStatusDidStop state.
+
+Subclasses should override this to do this for their specific requirements. They should call this super version at the start of their override.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -228,8 +236,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Retreives the UUID assigned to a particular MASService subclass. All subclasses MUST implement this method with a unique value. If it does not the super version will return null and the services will be rejected for membership in the internal MASService process. Return the UUID assigned to the MASService subclass.</summary>
+        <value>serviceUUID</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -247,7 +255,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The lifecycle method to indicate the service should perform any processes or acquire any resources BEFORE it enters the MASServiceLifecycleStatusWillStart state.
+
+Subclasses should override this to do this for their specific requirements. They should call this super version at the start of their override.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -265,7 +275,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The lifecycle method to indicate the service should perform any processes or release any resources BEFORE it enters the MASServiceLifecycleStatusWillStop state.
+
+Subclasses should override this to do this for their specific requirements. They should call this super version at the start of their override.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -283,7 +295,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Retrieve the shared MASService singleton.
+
+Note, subclasses should override this version of the method. Returns the shared MASService singleton.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

@@ -14,7 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>The ‘MASSocialLogin’ class is a helper class to utilize WKWebView object for social network authentication. The WKNavigationDelegate will be re-delegated to this class during authentication process, and will be assigned back to the original delegation.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -110,9 +110,9 @@
         <Parameter Name="webView" Type="WebKit.WKWebView" />
       </Parameters>
       <Docs>
-        <param name="provider">To be added.</param>
-        <param name="webView">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="provider">MASAuthenticationProvider for which social network login to be performed</param>
+        <param name="webView">WKWebView to process the social login</param>
+        <summary>Initialize the object with MASAuthenticationProvider and WKWebView. (Deprecated: Use SFSafariViewController and MASAuthorizationResponse with MASAuthenticationProvider to present social login view instead.)</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -137,8 +137,8 @@
         <ReturnType>MASFoundation.MASSocialLoginDelegate</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>MASSocialLoginDelegate property for delegation of MASSocialLogin protocols (Deprecated: Use SFSafariViewController and MASAuthorizationResponse with MASAuthenticationProvider to present social login view instead.)</summary>
+        <value>delegate</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -174,8 +174,8 @@
         <ReturnType>MASFoundation.MASAuthenticationProvider</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>MASAuthentication property for social login (Deprecated: Use SFSafariViewController and MASAuthorizationResponse with MASAuthenticationProvider to present social login view instead.)</summary>
+        <value>provider</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -195,8 +195,8 @@
         <ReturnType>Foundation.NSObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>MASSocialLoginDelegate property for delegation of MASSocialLogin protocols (Deprecated: Use SFSafariViewController and MASAuthorizationResponse with MASAuthenticationProvider to present social login view instead.)</summary>
+        <value>delegate</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
