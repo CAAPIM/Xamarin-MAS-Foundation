@@ -14,7 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>The MASAuthenticationProvider class is a representation of a single provider.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -109,7 +109,7 @@
         <ReturnType>Foundation.NSUrl</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The MASAuthenticationProvider URL.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -140,7 +140,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The MASAuthenticationProvider identifier.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -158,7 +158,7 @@
         <ReturnType>Foundation.NSObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Does the MASAuthenticationProvider represent Enterprise.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -176,7 +176,7 @@
         <ReturnType>Foundation.NSObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Does the MASAuthenticationProvider represent Facebook.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -194,7 +194,7 @@
         <ReturnType>Foundation.NSObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Does the MASAuthenticationProvider represent Google.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -212,7 +212,7 @@
         <ReturnType>Foundation.NSObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Does the MASAuthenticationProvider represent LinkedIn.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,7 +230,7 @@
         <ReturnType>Foundation.NSObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Does the MASAuthenticationProvider represent a QR code provider.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -248,7 +248,7 @@
         <ReturnType>Foundation.NSObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Does the MASAuthenticationProvider represent SalesForce.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -266,7 +266,7 @@
         <ReturnType>Foundation.NSUrl</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The MASAuthenticationProvider polling URL, only applicable to QR codes. Nil for social login providers.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

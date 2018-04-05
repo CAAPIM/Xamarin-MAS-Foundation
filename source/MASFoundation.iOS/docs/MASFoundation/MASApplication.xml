@@ -199,7 +199,7 @@
         <ReturnType>MASFoundation.MASEnterpriseAppProtocol</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The `MASEnterpriseAppProtocol` delegate.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -263,9 +263,9 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="imageView">To be added.</param>
-        <param name="completion">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="imageView">an imageView object contains the app icon.</param>
+        <param name="completion">An `MASCompletionErrorBlock` type (BOOL completed, NSError *error) that will receive a YES or NO BOOL indicating the completion state and/or an NSError object if there is a failure.</param>
+        <summary>Loads the app icon into a UIImageView to enable enterprise app funcationality.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -394,9 +394,9 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="webView">To be added.</param>
-        <param name="completion">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="webView">a webView loading the web app.</param>
+        <param name="completion">An `MASCompletionErrorBlock` type (BOOL completed, NSError *error) that will receive a YES or NO BOOL indicating the completion state and/or an NSError object if there is a failure.</param>
+        <summary>Loads a web application representing this application into a `UIWebView.`</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -522,8 +522,8 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="completion">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="completion">The `MASObjectsResponseErrorBlock (NSArray objects, NSError error)` completion block.</param>
+        <summary>Retrieve the currently registered enterprise applications.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

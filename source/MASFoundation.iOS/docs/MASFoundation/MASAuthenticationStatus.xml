@@ -8,7 +8,7 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>MASAuthenticationStatus states the authentication status of the application.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -20,7 +20,7 @@
         <ReturnType>MASFoundation.MASAuthenticationStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>MASAuthenticationStatusLoginAnonymously represents that the app has been authenticated with client credentials.</summary>
       </Docs>
     </Member>
     <Member MemberName="LoginWithUser">
@@ -31,7 +31,7 @@
         <ReturnType>MASFoundation.MASAuthenticationStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>MASAuthenticationStatusLoginWithUser represents that the app has been authenticated with user.</summary>
       </Docs>
     </Member>
     <Member MemberName="NotLoggedIn">
@@ -42,7 +42,7 @@
         <ReturnType>MASFoundation.MASAuthenticationStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>MASAuthenticationStatusNotLoggedIn represents that the app has not been authenticated.</summary>
       </Docs>
     </Member>
   </Members>
