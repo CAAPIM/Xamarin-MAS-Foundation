@@ -9,7 +9,7 @@
   </Base>
   <Docs>
     <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>The enumerated MASRequestResponseTypes that can indicate what data format is expected in a request or a response.</remarks>
   </Docs>
   <Members>
     <Member MemberName="Count">
@@ -20,7 +20,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The total number of supported types.</summary>
       </Docs>
     </Member>
     <Member MemberName="Json">
@@ -31,7 +31,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Standard JSON encoding.</summary>
       </Docs>
     </Member>
     <Member MemberName="ScimJson">
@@ -42,7 +42,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>SCIM-specific JSON variant encoding.</summary>
       </Docs>
     </Member>
     <Member MemberName="TextPlain">
@@ -53,7 +53,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Plain Text.</summary>
       </Docs>
     </Member>
     <Member MemberName="Unknown">
@@ -64,7 +64,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Unknown encoding type.</summary>
       </Docs>
     </Member>
     <Member MemberName="WwwFormUrlEncoded">
@@ -75,7 +75,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Standard WWW Form URL encoding.</summary>
       </Docs>
     </Member>
     <Member MemberName="Xml">
@@ -86,7 +86,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Standard XML encoding.</summary>
       </Docs>
     </Member>
   </Members>

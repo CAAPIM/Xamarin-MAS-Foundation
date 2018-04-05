@@ -21,7 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This class is the base class for the Message object used in MASConnecta</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -120,12 +120,13 @@
         <Parameter Name="mid" Type="System.Int16" />
       </Parameters>
       <Docs>
-        <param name="topic">To be added.</param>
-        <param name="payload">To be added.</param>
-        <param name="qos">To be added.</param>
-        <param name="retained">To be added.</param>
-        <param name="mid">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="topic">Topic of the Message</param>
+        <param name="payload">Message Payload Data</param>
+        <param name="qos">Quality of Service to use in this Message</param>
+        <param name="retained">True to retain the message</param>
+        <param name="mid">The message ID</param>
+        <returns> The Message Object instance </returns>
+        <summary>Initialize the Message Object with parameters</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -215,8 +216,8 @@
         <ReturnType>UIKit.UIImage</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The Payload message as UIImage</summary>
+        <returns>UIImage value of the payload</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -233,8 +234,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The Payload message as NSString</summary>
+        <returns>NSString value of the payload</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

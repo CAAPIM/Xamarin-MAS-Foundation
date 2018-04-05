@@ -91,8 +91,8 @@
         <Parameter Name="authorizationCode" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="authorizationCode">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="authorizationCode">NSString of authorization code</param>
+        <summary>Notify the host application that the authorization code has been received from other device. Alternatively, developers can subscribe notification, MASDeviceDidReceiveAuthorizationCodeFromProximityLoginNotification, to receive the authorization code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -112,8 +112,8 @@
         <Parameter Name="state" Type="MASFoundation.MASBLEServiceState" />
       </Parameters>
       <Docs>
-        <param name="state">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="state">enumeration of MASBLEServiceState</param>
+        <summary>Notify the host application on the state of the BLE proximity login.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -133,8 +133,8 @@
         <Parameter Name="error" Type="Foundation.NSError" />
       </Parameters>
       <Docs>
-        <param name="error">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="error">NSError of BLE proximity login error</param>
+        <summary>Notify the host application on any error occured while proximity login</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -161,9 +161,9 @@
         <Parameter Name="deviceName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="completion">To be added.</param>
-        <param name="deviceName">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="completion">MASCompletionErrorBlock returns boolean of consent state and error if there is any</param>
+        <param name="deviceName">NSString of device name</param>
+        <summary>SDK callback to this method for user consent to authorize proximity login.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

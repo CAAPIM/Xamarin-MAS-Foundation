@@ -14,7 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This class is used to create a MQTT Client to connect to any broker</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -119,7 +119,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Used to Remove the previously configured Will message.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -185,9 +185,9 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="hostName">To be added.</param>
-        <param name="completionHandler">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="hostName">The host to connect to</param>
+        <param name="completionHandler">The completionHandler code block</param>
+        <summary>Used to Connect to a specific host using TLS as default. It uses a completion handler that allows the developer to call some code depending on the connection response.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -215,10 +215,10 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="hostName">To be added.</param>
-        <param name="tls">To be added.</param>
-        <param name="completionHandler">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="hostName">The host to connect to</param>
+        <param name="tls">Set TLS to True or False during connection</param>
+        <param name="completionHandler">The completionHandler code block</param>
+        <summary>Used to Connect to a specific host using TLS or not. It uses a completion handler that allows the developer to call some code depending on the connection response. If TLS Flag is set then it connects to the default port 8883, if not then it connects to 1883 (non tls)</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -247,11 +247,11 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="hostName">To be added.</param>
-        <param name="port">To be added.</param>
-        <param name="tls">To be added.</param>
-        <param name="completionHandler">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="hostName">The host to connect to</param>
+        <param name="port">The port to be used in the connection</param>
+        <param name="tls">Set TLS to True or False during connection</param>
+        <param name="completionHandler">The completionHandler code block</param>
+        <summary>Connect with remote server with host name, tls flag and port number. NOTE: Use this if you want to explicitly specify the port number in your application in case you are not using standard ports</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -281,12 +281,12 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="hostName">To be added.</param>
-        <param name="port">To be added.</param>
-        <param name="tls">To be added.</param>
-        <param name="certFile">To be added.</param>
-        <param name="completionHandler">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="hostName">The host to connect to</param>
+        <param name="port">The port to be used in the connection</param>
+        <param name="tls">Set TLS to True or False during connection</param>
+        <param name="certFile">The path to the cert file</param>
+        <param name="completionHandler">The completionHandler code block</param>
+        <summary>Connect with remote server with host name, tls flag , port number and server certificate file.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -367,8 +367,8 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="completionHandler">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="completionHandler">The completionHandler code block</param>
+        <summary>Used to Disconnect from the host. It uses a completion handler that allows the developer to take actions after the disconnect.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -435,12 +435,12 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="payload">To be added.</param>
-        <param name="topic">To be added.</param>
-        <param name="qos">To be added.</param>
-        <param name="retain">To be added.</param>
-        <param name="completion">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="payload">The Payload to be sent</param>
+        <param name="topic">The Topic to be sent</param>
+        <param name="qos">The Quality of Service to be used</param>
+        <param name="retain">Set to true to make the message retained</param>
+        <param name="completion">The completionHandler code block</param>
+        <summary>Used to Publish a message on a given topic</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -470,12 +470,12 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="payload">To be added.</param>
-        <param name="topic">To be added.</param>
-        <param name="qos">To be added.</param>
-        <param name="retain">To be added.</param>
-        <param name="completionHandler">To be added.</param>
-        <summary>To be added.</summary>
+          <param name="payload">The Payload to be sent</param>
+          <param name="topic">The Topic to be sent</param>
+          <param name="qos">The Quality of Service to be used</param>
+          <param name="retain">Set to true to make the message retained</param>
+          <param name="completion">The completionHandler code block</param>
+          <summary>Used to Publish a message on a given topic</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -493,7 +493,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Used to Reconnect to the last connected host</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -513,8 +513,8 @@
         <Parameter Name="seconds" Type="System.nuint" />
       </Parameters>
       <Docs>
-        <param name="seconds">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="seconds">The number of seconds until the next retry</param>
+        <summary>Used to Set the number of seconds to wait before retrying messages.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -535,9 +535,9 @@
         <Parameter Name="password" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="username">To be added.</param>
-        <param name="password">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="username">The UserName parameter</param>
+        <param name="password">The Password parameter</param>
+        <summary>Set the username and password to be used in the connection with the broker NOTE: Must be called before calling connect method incase you are using username and password</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -560,11 +560,11 @@
         <Parameter Name="retain" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="payload">To be added.</param>
-        <param name="willTopic">To be added.</param>
-        <param name="willQos">To be added.</param>
-        <param name="retain">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="payload">Message Payload</param>
+        <param name="willTopic">Topic that will be send the Will message</param>
+        <param name="willQos">Qos related the Will message</param>
+        <param name="retain">YES to retain the message or NO to otherwise</param>
+        <summary>Used to Configure Will information for a MASMQTTClient instance. This message will be sent when client disconnected from the server.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -582,8 +582,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>Singlenton instance of the MQTTClient</summary>
+        <returns>sharedClient</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -610,9 +610,9 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="topic">To be added.</param>
-        <param name="completion">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="topic">The Topic to be subscribed</param>
+        <param name="completion">The completion code block</param>
+        <summary>Used to Subscribe to a topic using QoS = 0. Use subscribeToTopicWithQos method to set a different QoS level</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -639,9 +639,9 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="topic">To be added.</param>
-        <param name="completionHandler">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="topic">The Topic to be subscribed</param>
+        <param name="completionHandler">The completionHandler code block</param>
+        <summary>Used to Subscribe to a topic using QoS = 0. Use subscribeToTopicWithQos method to set a different QoS level</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -669,10 +669,10 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="topic">To be added.</param>
-        <param name="qos">To be added.</param>
-        <param name="completion">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="topic">The Topic to be subscribed to</param>
+        <param name="qos">The Quality of Service to be used</param>
+        <param name="completion">The completionHandler code block</param>
+        <summary>Used to Subscribe to a topic using a specific Quality of Service</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -700,10 +700,10 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="topic">To be added.</param>
-        <param name="qos">To be added.</param>
-        <param name="completionHandler">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="topic">The Topic to be subscribed to</param>
+        <param name="qos">The Quality of Service to be used</param>
+        <param name="completionHandler">The completionHandler code block</param>
+        <summary>Used to Subscribe to a topic using a specific Quality of Service</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -730,9 +730,9 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="topic">To be added.</param>
-        <param name="completionHandler">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="topic">The Topic to be unsubscribed from</param>
+        <param name="completionHandler">The completionHandler code block</param>
+        <summary>Used to Unsubscribe from a topic</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -749,8 +749,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Shows the version of the Mosquitto Library used (Deprecated: in MAG 1.7)</summary>
+        <returns>The libmosquitto version</returns>
+        <value>version</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
