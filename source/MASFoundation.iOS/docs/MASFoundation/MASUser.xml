@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASUser extends MASFoundation.MASObject" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
+    <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>MASFoundation.MASObject</BaseTypeName>
@@ -14,9 +15,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>
-    The `MASUser` class is a local representation of user data.
-    </summary>
+    <summary>The MASUser class is a local representation of user data.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -24,9 +23,15 @@
       <MemberSignature Language="C#" Value="public MASUser ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("init")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -34,7 +39,7 @@
       </Attributes>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Default Constructor</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -42,9 +47,15 @@
       <MemberSignature Language="C#" Value="public MASUser (Foundation.NSCoder coder);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSCoder coder) cil managed" />
       <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("initWithCoder:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
@@ -66,7 +77,13 @@
       <MemberSignature Language="C#" Value="protected MASUser (Foundation.NSObjectFlag t);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
       <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
         </Attribute>
@@ -84,7 +101,13 @@
       <MemberSignature Language="C#" Value="protected MASUser (IntPtr handle);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
       <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
         </Attribute>
@@ -102,7 +125,13 @@
       <MemberSignature Language="C#" Value="public virtual string AccessToken { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string AccessToken" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("accessToken")</AttributeName>
         </Attribute>
@@ -111,10 +140,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets the access token of the user, if authenticated.
-        </summary>
-        <value>The access token.</value>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -122,7 +149,13 @@
       <MemberSignature Language="C#" Value="public virtual bool Active { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool Active" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("active")</AttributeName>
         </Attribute>
@@ -140,7 +173,13 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt; Addresses { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSString&gt; Addresses" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("addresses", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -149,10 +188,8 @@
         <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets the addresses.
-        </summary>
-        <value>The addresses.</value>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -160,7 +197,13 @@
       <MemberSignature Language="C#" Value="public static string AuthCredentialsType { get; }" />
       <MemberSignature Language="ILAsm" Value=".property string AuthCredentialsType" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("authCredentialsType")</AttributeName>
         </Attribute>
@@ -169,10 +212,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Previously, or currently used authCredentialsType for the session.
-        <para>If the SDK is not properly initialized, null will be returned regardless of the authentication status of the SDK.</para><para>If the SDK was never authenticated before, SDK will also return null as a result.</para></summary>
-        <value>NSString of previously, or currently used authCredentialsType as in String.</value>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -180,6 +221,9 @@
       <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IntPtr</ReturnType>
       </ReturnValue>
@@ -193,7 +237,13 @@
       <MemberSignature Language="C#" Value="public static MASFoundation.MASUser CurrentUser { get; }" />
       <MemberSignature Language="ILAsm" Value=".property class MASFoundation.MASUser CurrentUser" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("currentUser")</AttributeName>
         </Attribute>
@@ -202,10 +252,8 @@
         <ReturnType>MASFoundation.MASUser</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        GeThe authenticated user for the application, if any. null returned if none. This is a singleton object.
-        </summary>
-        <value>A singleton 'MASUser' object.</value>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -213,7 +261,13 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt; EmailAddresses { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSString&gt; EmailAddresses" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("emailAddresses", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -222,10 +276,8 @@
         <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets the email addresses.
-        </summary>
-        <value>The email addresses.</value>
+        <summary>NSString property of the user’s email address</summary>
+        <value>NSString property of the user’s email address</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -233,7 +285,13 @@
       <MemberSignature Language="C#" Value="public virtual string FamilyName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string FamilyName" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("familyName")</AttributeName>
         </Attribute>
@@ -242,10 +300,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets the string value of family name.
-        </summary>
-        <value>The string value of family name.</value>
+        <summary>NSString property of the user’s family name</summary>
+        <value>NSString property of the user’s family name</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -253,7 +309,13 @@
       <MemberSignature Language="C#" Value="public virtual string FormattedName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string FormattedName" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("formattedName")</AttributeName>
         </Attribute>
@@ -262,10 +324,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets the string value of formatted name.
-        </summary>
-        <value>The string value of formatted name.</value>
+        <summary>NSString property of the user’s full name</summary>
+        <value>NSString property of the user’s full name</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -273,7 +333,13 @@
       <MemberSignature Language="C#" Value="public virtual string GivenName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string GivenName" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("givenName")</AttributeName>
         </Attribute>
@@ -282,10 +348,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets the string value of given name.
-        </summary>
-        <value>The string value of given name.</value>
+        <summary>NSString property of the user’s given name</summary>
+        <value>NSString property of the user’s given name</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -293,7 +357,13 @@
       <MemberSignature Language="C#" Value="public virtual string[] Groups { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string[] Groups" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("groups", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -302,10 +372,8 @@
         <ReturnType>System.String[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets the groups.
-        </summary>
-        <value>The groups.</value>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -313,9 +381,15 @@
       <MemberSignature Language="C#" Value="public static void InitializeBrowserBasedAuthenticationWithCompletion (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InitializeBrowserBasedAuthenticationWithCompletion(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("initializeBrowserBasedAuthenticationWithCompletion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -331,10 +405,8 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
-        <summary>
-        Authenticate a user by launching a Browser which in turn loads a URL (templatized).
-        </summary>
+        <param name="completion">The MASCompletionErrorBlock block that receives the results. On a successful completion, the user available via [MASUser currentUser] has been updated with the new information.</param>
+        <summary>Authenticate a user by launching a Browser which in turn loads a URL (templatized).</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -342,7 +414,13 @@
       <MemberSignature Language="C#" Value="public virtual bool IsAuthenticated { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("isAuthenticated")</AttributeName>
         </Attribute>
@@ -351,11 +429,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets a value indicating whether this <see cref="T:MASFoundation.MASUser" /> is authenticated.
-        </summary>
-        <value>
-          <c>true</c> if is authenticated; otherwise, <c>false</c>.</value>
+        <summary>Boolean indicator of whether the MASUser object is authenticated or not</summary>
+        <value>isAuthenticated</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -363,7 +438,13 @@
       <MemberSignature Language="C#" Value="public virtual bool IsCurrentUser { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsCurrentUser" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("isCurrentUser")</AttributeName>
         </Attribute>
@@ -372,11 +453,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets a value indicating whether this <see cref="T:MASFoundation.MASUser" /> is current user.
-        </summary>
-        <value>
-          <c>true</c> if is current user; otherwise, <c>false</c>.</value>
+        <summary>Boolean indicator of whether the MASUser object is currently authenticated user or not.</summary>
+        <value>isCurrentUser</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -384,7 +462,13 @@
       <MemberSignature Language="C#" Value="public virtual bool IsSessionLocked { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsSessionLocked" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("isSessionLocked")</AttributeName>
         </Attribute>
@@ -393,11 +477,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets a value indicating whether this <see cref="T:MASFoundation.MASUser" />'s session is locked.
-        </summary>
-        <value>
-          <c>true</c> if is session locked; otherwise, <c>false</c>.</value>
+        <summary>Boolean indicator of whether the currently authenticated MASUser object is locked or not</summary>
+        <value>isSessionLocked</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -405,9 +486,15 @@
       <MemberSignature Language="C#" Value="public virtual void LockSessionWithCompletion (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LockSessionWithCompletion(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("lockSessionWithCompletion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -424,18 +511,11 @@
       </Parameters>
       <Docs>
         <param name="completion">The MASCompletionErrorBlock block that receives the results.</param>
-        <summary>
-        Lock currently authenticated user session with device's local authentication (Device's Passcode or Biometric Authentication).
-        <para>
-        This will lock current user session and block most of operations except for MASUser.CurrentUser.LogoutWithCompletion();
-        and MASDevice.CurrentDevice().DeregisterWithCompletion().
-        Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
-        which will remove credentials from protected stroage of the device with local authentication.
-        </para><para>
-        After locking user session, MASUser.CurrentUser will still exists; 
-        however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
-        Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
-        </para></summary>
+        <summary>Lock currently authenticated user session with device’s local authentication (Device’s Passcode or Biometric Authentication).
+
+This will lock current user session and block most of operations except for [[MASUser currentUser] logoutWithCompletion:] and [[MASDevice currentDevice] deregisterWithCompletion:]. Alternatively, locked user session can be removed by [[MASUser currentUser] removeSessionLock] which will remove credentials from protected stroage of the device with local authentication.
+
+After locking user session, [MASUser currentUser] will still exists; however, [MASUser currentUser].isAuthenticated property will reflect the lock status and will return false until it’s unlocked. Session lock status can also be checked through [MASUser currentUser].isSessionLocked property.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -443,9 +523,15 @@
       <MemberSignature Language="C#" Value="public static void LoginWithAuthCredentials (MASFoundation.MASAuthCredentials authCredentials, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LoginWithAuthCredentials(class MASFoundation.MASAuthCredentials authCredentials, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("loginWithAuthCredentials:completion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -462,40 +548,9 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="authCredentials">MASAuthCredentials object that contains credentials.</param>
-        <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
-        <summary>
-        Authenticate a user via asynchronous request with MASAuthCredentials object.
-        <para>
-        This will accept any objects that inherites from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
-        on backend services.
-        </para><para>
-        This will create an MASUser.CurrentUser upon a successful result.
-        </para></summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="LoginWithAuthCredentialsAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LoginWithAuthCredentialsAsync (MASFoundation.MASAuthCredentials authCredentials);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LoginWithAuthCredentialsAsync(class MASFoundation.MASAuthCredentials authCredentials) cil managed" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="authCredentials" Type="MASFoundation.MASAuthCredentials" />
-      </Parameters>
-      <Docs>
-        <param name="authCredentials">MASAuthCredentials object that contains credentials.</param>
-        <summary>
-        Authenticate a user via asynchronous request with MASAuthCredentials object.
-        <para>
-        This will accept any objects that inherites from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
-        on backend services.
-        </para><para>
-        This will create an MASUser.CurrentUser upon a successful result.
-        </para></summary>
-        <returns>To be added.</returns>
+        <param name="authCredentials">MASAuthCredentials object that contains credentials</param>
+        <param name="completion">The MASCompletionErrorBlock block that receives the results. On a successful completion, the user available via [MASUser currentUser] has been updated with the new information.</param>
+        <summary>Authenticate a user via asynchronous request with MASAuthCredentials object. This will accept any objects that inherites from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics on backend services. This will create an [MASUser currentUser] upon a successful result.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -503,9 +558,15 @@
       <MemberSignature Language="C#" Value="public static void LoginWithAuthorizationCode (string authorizationCode, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LoginWithAuthorizationCode(string authorizationCode, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("loginWithAuthorizationCode:completion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -523,33 +584,8 @@
       </Parameters>
       <Docs>
         <param name="authorizationCode">The authorization code for the user.</param>
-        <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
-        <summary>
-        Authenticate a user via asynchronous request with authorization code.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="LoginWithAuthorizationCodeAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LoginWithAuthorizationCodeAsync (string authorizationCode);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LoginWithAuthorizationCodeAsync(string authorizationCode) cil managed" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="authorizationCode" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="authorizationCode">The authorization code for the user.</param>
-        <summary>
-        Authenticate a user via asynchronous request with authorization code.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <returns>To be added.</returns>
+        <param name="completion">The MASCompletionErrorBlock block that receives the results. On a successful completion, the user * available via [MASUser currentUser] has been updated with the new information.</param>
+        <summary>Authenticate a user via asynchronous request with authorization code. This will create an [MASUser currentUser] upon a successful result.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -557,9 +593,15 @@
       <MemberSignature Language="C#" Value="public static void LoginWithIdToken (string idToken, string tokenType, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LoginWithIdToken(string idToken, string tokenType, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("loginWithIdToken:tokenType:completion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -579,35 +621,12 @@
       <Docs>
         <param name="idToken">The id_token for the user.</param>
         <param name="tokenType">Token type of id_token.</param>
-        <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
-        <summary>
-        Authenticate a user via asynchronous request with id_token.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="LoginWithIdTokenAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LoginWithIdTokenAsync (string idToken, string tokenType);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LoginWithIdTokenAsync(string idToken, string tokenType) cil managed" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="idToken" Type="System.String" />
-        <Parameter Name="tokenType" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="idToken">The id_token for the user.</param>
-        <param name="tokenType">Token type of id_token.</param>
-        <summary>
-        Authenticate a user via asynchronous request with id_token.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <returns>To be added.</returns>
+        <param name="completion">The MASCompletionErrorBlock block that receives the results. On a successful completion, the user available via [MASUser currentUser] has been updated with the new information.</param>
+        <summary>Authenticate a user via asynchronous request with id_token
+
+This will create an [MASUser currentUser] upon a successful result.
+
+</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -615,9 +634,15 @@
       <MemberSignature Language="C#" Value="public static void LoginWithUserName (string userName, string password, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LoginWithUserName(string userName, string password, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("loginWithUserName:password:completion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -637,35 +662,8 @@
       <Docs>
         <param name="userName">The userName of the user.</param>
         <param name="password">The password of the user.</param>
-        <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
-        <summary>
-        Authenticate a user via asynchronous request with basic credentials.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="LoginWithUserNameAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LoginWithUserNameAsync (string userName, string password);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LoginWithUserNameAsync(string userName, string password) cil managed" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="userName" Type="System.String" />
-        <Parameter Name="password" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="userName">The userName of the user.</param>
-        <param name="password">The password of the user.</param>
-        <summary>
-        Authenticate a user via asynchronous request with basic credentials.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <returns>To be added.</returns>
+        <param name="completion">The MASCompletionErrorBlock block that receives the results. On a successful completion, the user available via [MASUser currentUser] has been updated with the new information.</param>
+        <summary>Authenticate a user via asynchronous request with basic credentials. This will create an [MAUser currentUser] upon a successful result.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -673,9 +671,15 @@
       <MemberSignature Language="C#" Value="public virtual void LogoutWithCompletion (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LogoutWithCompletion(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("logoutWithCompletion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -691,13 +695,8 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user 
-        available via[MASUser currentUser] has been updated with the new information.</param>
-        <summary>
-        Logout an already authenticated user via asynchronous request.
-        
-        This will return <c>true</c> upon a successful result.
-        </summary>
+        <param name="completion">The MASCompletionErrorBlock block that receives the results. On a successful completion, the user available via [MASUser currentUser] has been updated with the new information.</param>
+        <summary>Logout an already authenticated user via asynchronous request. This will return YES upon a successful result.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -705,7 +704,13 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt; PhoneNumbers { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSString&gt; PhoneNumbers" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("phoneNumbers", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -714,10 +719,8 @@
         <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets the phone numbers.
-        </summary>
-        <value>The phone numbers.</value>
+        <summary>NSString property of the user’s phone number</summary>
+        <value>phoneNumbers</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -725,7 +728,13 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; Photos { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; Photos" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("photos", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -734,10 +743,8 @@
         <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets the photos.
-        </summary>
-        <value>The photos.</value>
+        <summary>Declared In MASUser.h</summary>
+        <value>photos</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -745,9 +752,15 @@
       <MemberSignature Language="C#" Value="public virtual void RemoveSessionLock ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveSessionLock() cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("removeSessionLock")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -755,11 +768,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-        Remove user session that had been protected device's local authentication.
-        <para>
-        This interface can be used when end-user chooses to not provide local authentication and clean up the session.
-        </para></summary>
+        <summary>Remove user session that had been protected device’s local authentication. This interface can be used when end-user chooses to not provide local authentication and clean up the session.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -767,9 +776,15 @@
       <MemberSignature Language="C#" Value="public virtual void RequestUserInfoWithCompletion (MASFoundation.MASUserResponseErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RequestUserInfoWithCompletion(class MASFoundation.MASUserResponseErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("requestUserInfoWithCompletion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -786,10 +801,7 @@
       </Parameters>
       <Docs>
         <param name="completion">The MASUserResponseErrorBlock block that returns MASUSer object with updated value which is also available through the current MASUser object that is making this request, and NSError object in case any error is encountered during the process.</param>
-        <summary>
-        Requesting userInfo for the MASUser object.
-        This method will retrieve additional information on the MASUser object.
-        </summary>
+        <summary>Requesting userInfo for the MASUser object. This method will retrieve additional information on the MASUser object.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -797,9 +809,15 @@
       <MemberSignature Language="C#" Value="public virtual void UnlockSessionWithCompletion (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnlockSessionWithCompletion(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("unlockSessionWithCompletion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -816,13 +834,11 @@
       </Parameters>
       <Docs>
         <param name="completion">MASCompletionErrorBlock block that receives the results.</param>
-        <summary>
-        Unlcok currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
-        <para>
-        This will unlock current user session and unblock all of the operations through SDK.
-        </para><para>
-        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
-        </para></summary>
+        <summary>Unlcok currently locked user session with device’s local authentication (Device’s Passcode or Biometric Authentication).
+
+This will unlock current user session and unblock all of the operations through SDK.
+
+After unlocking user session, [MASUser currentUser] will reflect correct authentication and lock status.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -830,9 +846,15 @@
       <MemberSignature Language="C#" Value="public virtual void UnlockSessionWithUserOperationPromptMessage (string userOperationPrompt, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnlockSessionWithUserOperationPromptMessage(string userOperationPrompt, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("unlockSessionWithUserOperationPromptMessage:completion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -851,13 +873,11 @@
       <Docs>
         <param name="userOperationPrompt">NSString message that will be displayed on system local authentication dialog.</param>
         <param name="completion">MASCompletionErrorBlock block that receives the results.</param>
-        <summary>
-        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication) and specified message on system local authentication dialog.
-        <para>
-        This will unlock current user session and unblock all of the operations through SDK.
-        </para><para>
-        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
-        </para></summary>
+        <summary>Unlock currently locked user session with device’s local authentication (Device’s Passcode or Biometric Authentication) and specified message on system local authentication dialog.
+
+This will unlock current user session and unblock all of the operations through SDK.
+
+After unlocking user session, [MASUser currentUser] will reflect correct authentication and lock status.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -865,7 +885,13 @@
       <MemberSignature Language="C#" Value="public virtual string UserName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
       <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("userName")</AttributeName>
         </Attribute>
@@ -874,10 +900,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-        Gets the string value of the username.
-        </summary>
-        <value>The string value of the username.</value>
+        <summary>NSString property of username</summary>
+        <value>userName</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
