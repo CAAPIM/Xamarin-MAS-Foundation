@@ -71,7 +71,8 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
       Verify that you have both "Android" and "iOS" source directories.    
       b. In Visual Studio, right-click the **References** folder and select **Edit References**.    
       c. Select the **.Net Assembly** tab, and click the **Browse** button.    
-      d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.iOS.dll` file, click **Open** and then **OK**.    
+      d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.iOS.dll` file, click **Open** and then **OK**.   
+         **Important!** Do not move or remove the XML files from this directory; they are required to build your app.    
 
 ### Step 2: Update the Information Property List File
 
