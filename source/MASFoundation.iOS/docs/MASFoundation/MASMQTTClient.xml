@@ -340,7 +340,7 @@
         <ReturnType>MASFoundation.MQTTDisconnectionHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Used to Disconnect from the host.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -439,7 +439,7 @@
         <param name="topic">The Topic to be sent</param>
         <param name="qos">The Quality of Service to be used</param>
         <param name="retain">Set to true to make the message retained</param>
-        <param name="completion">The completionHandler code block</param>
+        <param name="completion">The completion code block</param>
         <summary>Used to Publish a message on a given topic</summary>
         <remarks>To be added.</remarks>
       </Docs>
