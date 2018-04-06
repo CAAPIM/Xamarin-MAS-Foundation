@@ -9,6 +9,7 @@ using Android.OS;
 using Com.CA.Mas.Foundation;
 using Android.Content;
 using Org.Json;
+using System.Threading.Tasks;
 
 namespace BasicAuthSample
 {
@@ -18,7 +19,6 @@ namespace BasicAuthSample
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
@@ -39,55 +39,172 @@ namespace BasicAuthSample
 
             setClientCredentialsFlowButton.Click += (sender, e) =>
             {
-                SampleActions.SetGrantFlowToClientCredential(this);
+                // MAS.SetGrantFlow(int type)
+                MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
+                Alert("MAS", "Grant flow set to Client Credentials Flow!");
             };
 
             setPasswordFlowButton.Click += (sender, e) =>
             {
-                SampleActions.SetGrantFlowToPassword(this);
+                // MAS.SetGrantFlow(int type)
+                MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
+                Alert("MAS", "Grant flow set to Password Flow!");
             };
 
             startSDKButton.Click += (sender, e) =>
             {
                 // Comment/Uncomment desired start method (One uncommented at a time)
-                //SampleActions.startSDK(this);
-                SampleActions.startSDKChangeDefaultConfig(this);
+                SampleActions.startSDK(this);
+                //SampleActions.startSDKChangeDefaultConfig(this);
                 //SampleActions.startSDKCustomJson(this);
                 //SampleActions.startSDKFileUrl(this);
                 //SampleActions.startSDKEnrolmentURL(this);
             };
 
-            loginButton.Click += (sender, e) =>
+            //
+            // Log in button action. See MyAuthenticationListener.cs for details on MASUser.Login();
+            //
+            loginButton.Click += async (sender, e) =>
             {
-                SampleActions.login(this);
+                // Check if user is already authenticated
+                if (MASUser.CurrentUser != null)
+                {
+                    Alert("MAS", "User already authenticated as " + MASUser.CurrentUser.UserName);
+                }
+                else
+                {
+                    // Used only to trigger authentication with no callback
+                    try
+                    {
+                        var user = await MASUser.LoginAsync();
+
+                    } catch (Java.Lang.Throwable exception) {
+                        Alert("Error", exception.ToString());
+                        MAS.CancelAllRequests();
+                    }
+                }
             };
 
+            //
+            // Invoke a sample protected endpoint in the Gateway and display the returned JSON in a dialog
+            //
             invokeApiButton.Click += async (sender, e) =>
             {
-                var response = await SampleActions.InvokeApi();
+                try { 
+                    //Use Uri.Builder() to build the Uri and pass it into a MASRequestBuilder.
+                    Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
 
-                JSONObject jsonObject = (JSONObject)response.Body.Content;
-                Alert("Response", jsonObject.ToString(4));
+                    //Append path
+                    uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
+
+                    //Create MASRequestBuilder
+                    MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
+
+                    //Add Response type
+                    builder.ResponseBody(MASResponseBody.JsonBody());
+
+                    //Invoke the API with builder
+                    var response = await MAS.InvokeAsync(builder.Build());
+
+                    JSONObject jsonObject = (JSONObject)response.Body.Content;
+                    Alert("Response", jsonObject.ToString(4));
+
+                } catch (Java.Lang.Throwable exception) {
+                    Alert("MAS", exception.LocalizedMessage);
+                }
             };
 
-            logoutButton.Click += (sender, e) =>
+            //
+            // Logs out current user
+            //
+            logoutButton.Click += async (sender, e) =>
             {
-                SampleActions.logout(this);
+                if (MASUser.CurrentUser != null)
+                {
+                    try
+                    {
+                        await MASUser.CurrentUser.LogoutAsync();
+                        Alert("MAS", "User Logout");
+                    }
+                    catch (Java.Lang.Throwable)
+                    {
+                        Alert("MAS", "User Logout Failed");
+                    }
+                }
+                else
+                {
+                    Alert("MAS", "User is not authenticated");
+                }
             };
 
-            lockSessionButton.Click += (sender, e) =>
+            //
+            // Lock current user session with device's local authentication
+            // This will block most of operations except for MASUser.CurrentUser.Logout()
+            // and MASDevice.CurrentDevice().Deregister()
+            //
+            lockSessionButton.Click += async (sender, e) =>
             {
-                SampleActions.lockSession(this);
+                if (MASUser.CurrentUser != null)
+                {
+                    try
+                    {
+                        await MASUser.CurrentUser.LockSessionAsync();
+                        Alert("Session Lock", "Session Locked!");
+                    } catch (Java.Lang.Throwable) {
+                        Alert("Session Lock", "Session Locked Failed!");
+                    }
+                }
+                else
+                {
+                    Alert("MAS", "User is not authenticated");
+                }
             };
 
-            unlockSessionButton.Click += (sender, e) =>
+            //
+            // Unlock current user session and unblock all of the operations through SDK
+            //
+            unlockSessionButton.Click += async (sender, e) =>
             {
-                SampleActions.unLockSession(this);
+                if (MASUser.CurrentUser != null)
+                {
+                    if (MASUser.CurrentUser.IsSessionLocked)
+                    {
+                        //Unlock session
+                        try
+                        {
+                            await MASUser.CurrentUser.UnlockSessionAsync();
+                        } catch (MASUser.UserAuthenticationRequiredException) {
+                            KeyguardManager keyguardManager = (KeyguardManager)Application.Context.GetSystemService(Context.KeyguardService);
+                            Intent intent = keyguardManager.CreateConfirmDeviceCredentialIntent("Session Unlock", "Provide PIN or FingerPrint to unlock session.");
+                            StartActivityForResult(intent, 1);
+                        } catch (Java.Lang.Throwable) {
+                            Alert("Session Unlock", "Session Unlocked Failed!");
+                        }
+                    }
+                    else
+                    {
+                        Alert("Session Unlock", "Session not locked!");
+                    }
+                }
+                else
+                {
+                    Alert("Session Unlock", "User not authenticated");
+                }
             };
 
-            deregisterButton.Click += (sender, e) =>
+            //
+            //  Deregister the device is an advanced feature available available in MASDevice. 
+            //  It will remove the device's registered record in the Gateway and then clear all credentials
+            //
+            deregisterButton.Click += async (sender, e) =>
             {
-                SampleActions.deregister(this);
+                try {
+                    await MASDevice.CurrentDevice.DeregisterAsync();
+                    Alert("MASDevice", "Device Deregister");
+                } catch (Java.Lang.Throwable) {
+                    Alert("MASDevice", "Deregister Failed!");
+                }
+               
             };
 
             MAS.SetAuthenticationListener(new MyAuthenticationListener());
@@ -106,7 +223,7 @@ namespace BasicAuthSample
             alert.Show();
         }
 
-        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        protected override async void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             if (requestCode == 1)
             {
@@ -114,7 +231,13 @@ namespace BasicAuthSample
                 if (resultCode == Result.Ok)
                 {
                     //Call unlock again after activity
-                    MASUser.CurrentUser.UnlockSession(new UnlockCallback(this));
+                    try {
+                        await MASUser.CurrentUser.UnlockSessionAsync();
+                        Alert("MAS", "Session Unlocked!");
+                    } catch(Java.Lang.Throwable) {
+                        Alert("MAS", "Session Unlocked Failed!");
+                    }
+
                 }
             }
         }

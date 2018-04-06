@@ -55,6 +55,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Additions\MAS.cs" />
     <Compile Include="Additions\MASUser.cs" />
+    <Compile Include="Additions\MASDevice.cs" />
+    <Compile Include="Additions\MASCompletion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />
