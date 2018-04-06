@@ -40,7 +40,7 @@ The sample app:
 After cloning, you will have /sample and /source directories for "Android" and "iOS".
 2. In Visual Studio, select File, Open.
 3. Go to:`Xamarin-MAS-Foundation/sample/iOS/BasicAuthSample`, select **BasicAuthSample.csproj**, and click **Open**.
-4. Open the Assets folder and add your `msso_config.json` app configuration file.
+4. Add your `msso_config.json` app configuration file to the root level of the project.
 5. Select **Build, Build All**, and verify "Build successful".
 6. Deploy and install the application on an emulator.
 7. In your emulator, launch the **BasicAuthSample** app.  
