@@ -1005,8 +1005,8 @@
       </Docs>
     </Member>
     <Member MemberName="SecurityConfigurations">
-      <MemberSignature Language="C#" Value="public static Foundation.NSArray[] SecurityConfigurations { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSArray[] SecurityConfigurations" />
+      <MemberSignature Language="C#" Value="public static Foundation.NSArray SecurityConfigurations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSArray SecurityConfigurations" />
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
@@ -1014,7 +1014,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Foundation.NSArray[]</ReturnType>
+        <ReturnType>Foundation.NSArray</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -1163,8 +1163,8 @@
       </Docs>
     </Member>
     <Member MemberName="TrustedCertPinnedPublickKeyHashes">
-      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray[] TrustedCertPinnedPublickKeyHashes { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray[] TrustedCertPinnedPublickKeyHashes" />
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray TrustedCertPinnedPublickKeyHashes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray TrustedCertPinnedPublickKeyHashes" />
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
@@ -1172,7 +1172,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Foundation.NSArray[]</ReturnType>
+        <ReturnType>Foundation.NSArray</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
