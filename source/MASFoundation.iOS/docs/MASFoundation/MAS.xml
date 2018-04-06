@@ -597,6 +597,23 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;MASFoundation.MASResult&gt; InvokeAsync (MASFoundation.MASRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class MASFoundation.MASResult&gt; InvokeAsync(class MASFoundation.MASRequest request) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.MASResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="MASFoundation.MASRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="IsKeychainSynchronizable">
       <MemberSignature Language="C#" Value="public static bool IsKeychainSynchronizable { get; }" />
       <MemberSignature Language="ILAsm" Value=".property bool IsKeychainSynchronizable" />
@@ -1475,6 +1492,20 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="StartAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; StartAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; StartAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="StartWithDefaultConfiguration">
       <MemberSignature Language="C#" Value="public static void StartWithDefaultConfiguration (bool shouldUseDefault, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartWithDefaultConfiguration(bool shouldUseDefault, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
@@ -1617,6 +1648,23 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="StartWithJSONAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; StartWithJSONAsync (Foundation.NSDictionary jsonConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; StartWithJSONAsync(class Foundation.NSDictionary jsonConfiguration) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jsonConfiguration" Type="Foundation.NSDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="jsonConfiguration">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="StartWithURL">
       <MemberSignature Language="C#" Value="public static void StartWithURL (Foundation.NSUrl url, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartWithURL(class Foundation.NSUrl url, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
@@ -1674,6 +1722,23 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="StartWithURLAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; StartWithURLAsync (Foundation.NSUrl url);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; StartWithURLAsync(class Foundation.NSUrl url) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="Foundation.NSUrl" />
+      </Parameters>
+      <Docs>
+        <param name="url">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Stop">
       <MemberSignature Language="C#" Value="public static void Stop (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Stop(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
@@ -1714,6 +1779,20 @@
         *      MASDidFailToStopNotification
         *      MASDidStopNotification
         </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; StopAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; StopAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

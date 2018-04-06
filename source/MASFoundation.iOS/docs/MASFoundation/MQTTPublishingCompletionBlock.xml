@@ -1,5 +1,5 @@
 <Type Name="MQTTPublishingCompletionBlock" FullName="MASFoundation.MQTTPublishingCompletionBlock">
-  <TypeSignature Language="C#" Value="public delegate void MQTTPublishingCompletionBlock(bool arg0, NSError arg1, int arg2);" />
+  <TypeSignature Language="C#" Value="public delegate void MQTTPublishingCompletionBlock(bool completed, NSError error, int mid);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MQTTPublishingCompletionBlock extends System.MulticastDelegate" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
@@ -16,9 +16,9 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="arg0">To be added.</param>
-    <param name="arg1">To be added.</param>
-    <param name="arg2">To be added.</param>
+    <param name="completed">To be added.</param>
+    <param name="error">To be added.</param>
+    <param name="mid">To be added.</param>
     <summary>To be added.</summary>
     <remarks>To be added.</remarks>
   </Docs>

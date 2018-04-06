@@ -146,8 +146,8 @@
       </Docs>
     </Member>
     <Member MemberName="Providers">
-      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray[] Providers { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray[] Providers" />
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray Providers" />
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
@@ -155,7 +155,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Foundation.NSArray[]</ReturnType>
+        <ReturnType>Foundation.NSArray</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>The `MASAuthenticationProvider` instances.</summary>

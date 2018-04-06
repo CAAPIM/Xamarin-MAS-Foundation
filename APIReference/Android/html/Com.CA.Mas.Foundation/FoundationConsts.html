@@ -1,0 +1,1662 @@
+<html>
+  <head>
+    <title>Com.CA.Mas.Foundation.FoundationConsts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MASFoundation.Android</a> : <a href="index.html">Com.CA.Mas.Foundation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.FoundationConsts">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.FoundationConsts:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.FoundationConsts:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.FoundationConsts:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Com.CA.Mas.Foundation.FoundationConsts">FoundationConsts  Class</h1>
+    <p class="Summary" id="T:Com.CA.Mas.Foundation.FoundationConsts:Summary">
+      <b>FoundationConsts</b> contains the base constants used by any classes in the hierarchy.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Com.CA.Mas.Foundation.FoundationConsts:Signature">[Android.Runtime.Register("com/ca/mas/foundation/FoundationConsts", DoNotGenerateAcw=true)]<br />public class  <b>FoundationConsts</b> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Object</a></div>
+    </div>
+    <div class="Remarks" id="T:Com.CA.Mas.Foundation.FoundationConsts:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Foundation.FoundationConsts:Docs:Remarks">
+        <p>
+          <b>FoundationConsts</b> contains the base constants used by any classes in the hierarchy. The nature of these constants is
+ intentianally general and is limited to basic timeout, network constants, and character constants that could potentially be
+ used anywhere in the SDK.</p>
+        <p>
+          <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html" target="_blank">[Android Documentation]</a>
+        </p>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Foundation.FoundationConsts:Docs:Version Information">
+        <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Com.CA.Mas.Foundation.FoundationConsts()">FoundationConsts</a>
+                    </b>()</div>
+                </td>
+                <td>
+                  <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#FoundationConsts()" target="_blank">[Android Documentation]</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Constructors</h2>
+        <div class="SectionBox" id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Com.CA.Mas.Foundation.FoundationConsts(System.IntPtr,Android.Runtime.JniHandleOwnership)">FoundationConsts</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JniHandleOwnership</a>)</div>
+                </td>
+                <td>A constructor used when creating managed representations of JNI objects; called by the runtime.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.Amp">Amp</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#AMP" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.Base64">Base64</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#BASE64" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.CloseParen">CloseParen</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#CLOSE_PAREN" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.Colon">Colon</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#COLON" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.Comma">Comma</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#COMMA" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.Dot">Dot</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#DOT" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.Empty">Empty</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#EMPTY" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.EncDoubleQuote">EncDoubleQuote</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#ENC_DOUBLE_QUOTE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.EncSpace">EncSpace</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#ENC_SPACE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.EncUtf8">EncUtf8</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#ENC_UTF8" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.Eq">Eq</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#EQ" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.Fslash">Fslash</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#FSLASH" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyAccept">HeaderKeyAccept</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_KEY_ACCEPT" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyContentType">HeaderKeyContentType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_KEY_CONTENT_TYPE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyUserAgent">HeaderKeyUserAgent</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_KEY_USER_AGENT" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.HeaderValueAccept">HeaderValueAccept</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_VALUE_ACCEPT" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.HeaderValueContentType">HeaderValueContentType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_VALUE_CONTENT_TYPE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.HttpsScimScheme">HttpsScimScheme</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HTTPS_SCIM_SCHEME" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppDescription">KeyConfigAppDescription</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_DESCRIPTION" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppName">KeyConfigAppName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_NAME" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppOrganization">KeyConfigAppOrganization</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_ORGANIZATION" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppRegisteredBy">KeyConfigAppRegisteredBy</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_REGISTERED_BY" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppType">KeyConfigAppType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_TYPE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigCloudStoragePath">KeyConfigCloudStoragePath</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_CLOUD_STORAGE_PATH" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigScimPath">KeyConfigScimPath</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_SCIM_PATH" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigUserInfo">KeyConfigUserInfo</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_USER_INFO" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyEventType">KeyEventType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_EVENT_TYPE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyMessage">KeyMessage</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_MESSAGE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyOnMessage">KeyOnMessage</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_ON_MESSAGE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyType">KeyType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_TYPE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.KeyValue">KeyValue</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_VALUE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.MtAppJson">MtAppJson</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#MT_APP_JSON" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.MtApplicationOctetStream">MtApplicationOctetStream</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#MT_APPLICATION_OCTET_STREAM" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.MtTextPlain">MtTextPlain</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#MT_TEXT_PLAIN" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.Qm">Qm</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#QM" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.SecMillis">SecMillis</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                  </i> (1000). <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#SEC_MILLIS" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.SemiColon">SemiColon</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#SEMI_COLON" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.Space">Space</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#SPACE" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.TimeoutVal">TimeoutVal</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                  </i> (30000). <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#TIMEOUT_VAL" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.UaAppMobileAppServices">UaAppMobileAppServices</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#UA_APP_MOBILE_APP_SERVICES" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.UaKhtml">UaKhtml</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#UA_KHTML" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>const </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:Com.CA.Mas.Foundation.FoundationConsts.UaMozilla">UaMozilla</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#UA_MOZILLA" target="_blank">[Android Documentation]</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Properties</h2>
+        <div class="SectionBox" id="Protected Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdClass">ThresholdClass</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>
+                  </i>. This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdType">ThresholdType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>
+                  </i>. This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Com.CA.Mas.Foundation.FoundationConsts:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Com.CA.Mas.Foundation.FoundationConsts()">FoundationConsts Constructor</h3>
+        <blockquote id="C:Com.CA.Mas.Foundation.FoundationConsts():member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#FoundationConsts()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register(".ctor", "()V", "")]<br />public  <b>FoundationConsts</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.FoundationConsts():Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#FoundationConsts()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.FoundationConsts():Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Com.CA.Mas.Foundation.FoundationConsts(System.IntPtr,Android.Runtime.JniHandleOwnership)">FoundationConsts Constructor</h3>
+        <blockquote id="C:Com.CA.Mas.Foundation.FoundationConsts(System.IntPtr,Android.Runtime.JniHandleOwnership):member">
+          <div class="msummary">A constructor used when creating managed representations of JNI objects; called by the runtime.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected  <b>FoundationConsts</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> javaReference, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JniHandleOwnership</a> transfer)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Com.CA.Mas.Foundation.FoundationConsts(System.IntPtr,Android.Runtime.JniHandleOwnership):Parameters">
+            <dl>
+              <dt>
+                <i>javaReference</i>
+              </dt>
+              <dd>A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>containing a Java Native Interface (JNI) object reference.</dd>
+              <dt>
+                <i>transfer</i>
+              </dt>
+              <dd>A <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JniHandleOwnership</a>indicating how to handle <i>javaReference</i></dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.FoundationConsts(System.IntPtr,Android.Runtime.JniHandleOwnership):Remarks">
+            <p>This constructor is invoked by the runtime infrastructure (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Object.GetObject``1(IntPtr, Android.Runtime.JniHandleOwnership)</a>) to create a new managed representation for a Java Native Interface object.</p>
+            <p>The constructor will initializes the <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.IJavaObject.Handle</a> property of the new instance using <i>javaReference</i> and <i>transfer</i>.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.FoundationConsts(System.IntPtr,Android.Runtime.JniHandleOwnership):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.Amp">Amp Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.Amp:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#AMP" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("AMP")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a> <b>Amp</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Amp:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#AMP" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Amp:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.Base64">Base64 Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.Base64:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#BASE64" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("BASE64")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Base64</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Base64:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#BASE64" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Base64:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.CloseParen">CloseParen Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.CloseParen:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#CLOSE_PAREN" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("CLOSE_PAREN")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a> <b>CloseParen</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.CloseParen:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#CLOSE_PAREN" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.CloseParen:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.Colon">Colon Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.Colon:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#COLON" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("COLON")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Colon</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Colon:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#COLON" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Colon:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.Comma">Comma Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.Comma:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#COMMA" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("COMMA")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Comma</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Comma:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#COMMA" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Comma:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.Dot">Dot Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.Dot:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#DOT" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("DOT")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a> <b>Dot</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Dot:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#DOT" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Dot:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.Empty">Empty Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.Empty:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#EMPTY" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("EMPTY")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Empty</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Empty:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#EMPTY" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Empty:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.EncDoubleQuote">EncDoubleQuote Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.EncDoubleQuote:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#ENC_DOUBLE_QUOTE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("ENC_DOUBLE_QUOTE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>EncDoubleQuote</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.EncDoubleQuote:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#ENC_DOUBLE_QUOTE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.EncDoubleQuote:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.EncSpace">EncSpace Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.EncSpace:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#ENC_SPACE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("ENC_SPACE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>EncSpace</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.EncSpace:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#ENC_SPACE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.EncSpace:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.EncUtf8">EncUtf8 Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.EncUtf8:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#ENC_UTF8" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("ENC_UTF8")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>EncUtf8</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.EncUtf8:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#ENC_UTF8" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.EncUtf8:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.Eq">Eq Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.Eq:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#EQ" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("EQ")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Eq</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Eq:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#EQ" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Eq:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.Fslash">Fslash Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.Fslash:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#FSLASH" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("FSLASH")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Fslash</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Fslash:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#FSLASH" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Fslash:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyAccept">HeaderKeyAccept Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyAccept:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_KEY_ACCEPT" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("HEADER_KEY_ACCEPT")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>HeaderKeyAccept</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyAccept:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_KEY_ACCEPT" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyAccept:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyContentType">HeaderKeyContentType Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyContentType:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_KEY_CONTENT_TYPE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("HEADER_KEY_CONTENT_TYPE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>HeaderKeyContentType</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyContentType:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_KEY_CONTENT_TYPE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyContentType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyUserAgent">HeaderKeyUserAgent Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyUserAgent:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_KEY_USER_AGENT" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("HEADER_KEY_USER_AGENT")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>HeaderKeyUserAgent</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyUserAgent:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_KEY_USER_AGENT" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderKeyUserAgent:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderValueAccept">HeaderValueAccept Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderValueAccept:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_VALUE_ACCEPT" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("HEADER_VALUE_ACCEPT")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>HeaderValueAccept</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderValueAccept:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_VALUE_ACCEPT" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderValueAccept:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderValueContentType">HeaderValueContentType Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderValueContentType:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_VALUE_CONTENT_TYPE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("HEADER_VALUE_CONTENT_TYPE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>HeaderValueContentType</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderValueContentType:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HEADER_VALUE_CONTENT_TYPE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HeaderValueContentType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.HttpsScimScheme">HttpsScimScheme Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.HttpsScimScheme:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HTTPS_SCIM_SCHEME" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("HTTPS_SCIM_SCHEME")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>HttpsScimScheme</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HttpsScimScheme:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#HTTPS_SCIM_SCHEME" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.HttpsScimScheme:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppDescription">KeyConfigAppDescription Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppDescription:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_DESCRIPTION" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_CONFIG_APP_DESCRIPTION")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyConfigAppDescription</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppDescription:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_DESCRIPTION" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppDescription:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppName">KeyConfigAppName Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppName:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_NAME" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_CONFIG_APP_NAME")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyConfigAppName</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppName:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_NAME" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppName:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppOrganization">KeyConfigAppOrganization Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppOrganization:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_ORGANIZATION" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_CONFIG_APP_ORGANIZATION")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyConfigAppOrganization</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppOrganization:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_ORGANIZATION" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppOrganization:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppRegisteredBy">KeyConfigAppRegisteredBy Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppRegisteredBy:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_REGISTERED_BY" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_CONFIG_APP_REGISTERED_BY")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyConfigAppRegisteredBy</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppRegisteredBy:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_REGISTERED_BY" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppRegisteredBy:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppType">KeyConfigAppType Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppType:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_TYPE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_CONFIG_APP_TYPE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyConfigAppType</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppType:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_APP_TYPE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigAppType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigCloudStoragePath">KeyConfigCloudStoragePath Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigCloudStoragePath:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_CLOUD_STORAGE_PATH" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_CONFIG_CLOUD_STORAGE_PATH")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyConfigCloudStoragePath</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigCloudStoragePath:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_CLOUD_STORAGE_PATH" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigCloudStoragePath:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigScimPath">KeyConfigScimPath Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigScimPath:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_SCIM_PATH" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_CONFIG_SCIM_PATH")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyConfigScimPath</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigScimPath:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_SCIM_PATH" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigScimPath:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigUserInfo">KeyConfigUserInfo Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigUserInfo:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_USER_INFO" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_CONFIG_USER_INFO")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyConfigUserInfo</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigUserInfo:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_CONFIG_USER_INFO" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyConfigUserInfo:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyEventType">KeyEventType Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyEventType:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_EVENT_TYPE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_EVENT_TYPE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyEventType</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyEventType:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_EVENT_TYPE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyEventType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyMessage">KeyMessage Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyMessage:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_MESSAGE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_MESSAGE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyMessage</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyMessage:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_MESSAGE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyMessage:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyOnMessage">KeyOnMessage Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyOnMessage:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_ON_MESSAGE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_ON_MESSAGE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyOnMessage</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyOnMessage:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_ON_MESSAGE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyOnMessage:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyType">KeyType Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyType:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_TYPE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_TYPE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyType</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyType:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_TYPE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyValue">KeyValue Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyValue:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_VALUE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("KEY_VALUE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyValue</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyValue:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#KEY_VALUE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.KeyValue:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.MtAppJson">MtAppJson Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.MtAppJson:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#MT_APP_JSON" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("MT_APP_JSON")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MtAppJson</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.MtAppJson:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#MT_APP_JSON" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.MtAppJson:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.MtApplicationOctetStream">MtApplicationOctetStream Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.MtApplicationOctetStream:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#MT_APPLICATION_OCTET_STREAM" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("MT_APPLICATION_OCTET_STREAM")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MtApplicationOctetStream</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.MtApplicationOctetStream:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#MT_APPLICATION_OCTET_STREAM" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.MtApplicationOctetStream:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.MtTextPlain">MtTextPlain Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.MtTextPlain:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#MT_TEXT_PLAIN" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("MT_TEXT_PLAIN")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MtTextPlain</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.MtTextPlain:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#MT_TEXT_PLAIN" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.MtTextPlain:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.Qm">Qm Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.Qm:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#QM" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("QM")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a> <b>Qm</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Qm:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#QM" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Qm:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.SecMillis">SecMillis Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.SecMillis:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#SEC_MILLIS" target="_blank">[Android Documentation]</a>
+          </div>
+          <p>
+            <b>Value: </b>1000</p>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("SEC_MILLIS")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>SecMillis</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.SecMillis:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#SEC_MILLIS" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.SecMillis:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.SemiColon">SemiColon Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.SemiColon:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#SEMI_COLON" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("SEMI_COLON")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>SemiColon</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.SemiColon:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#SEMI_COLON" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.SemiColon:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.Space">Space Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.Space:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#SPACE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("SPACE")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Space</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Space:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#SPACE" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.Space:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdClass">ThresholdClass Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdClass:member">
+          <div class="msummary">This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> <b>ThresholdClass</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdClass:Value">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> which contains the <tt>java.lang.Class</tt> JNI value corresponding to this type.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdClass:Remarks">This property is used to control which <tt>jclass</tt> is provided to methods like <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JNIEnv.CallNonVirtualVoidMethod</a>.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdClass:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdType">ThresholdType Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdType:member">
+          <div class="msummary">This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> <b>ThresholdType</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdType:Value">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> which provides the declaring type.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdType:Remarks">This property is used to control virtual vs. non virtual method dispatch against the underlying JNI object. When this property is equal to the declaring type, then virtual method invocation against the JNI object is performed; otherwise, we assume that the method was overridden by a derived type, and perform non-virtual methdo invocation.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.FoundationConsts.ThresholdType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.TimeoutVal">TimeoutVal Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.TimeoutVal:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#TIMEOUT_VAL" target="_blank">[Android Documentation]</a>
+          </div>
+          <p>
+            <b>Value: </b>30000</p>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("TIMEOUT_VAL")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>TimeoutVal</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.TimeoutVal:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#TIMEOUT_VAL" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.TimeoutVal:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.UaAppMobileAppServices">UaAppMobileAppServices Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.UaAppMobileAppServices:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#UA_APP_MOBILE_APP_SERVICES" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("UA_APP_MOBILE_APP_SERVICES")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>UaAppMobileAppServices</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.UaAppMobileAppServices:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#UA_APP_MOBILE_APP_SERVICES" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.UaAppMobileAppServices:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.UaKhtml">UaKhtml Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.UaKhtml:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#UA_KHTML" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("UA_KHTML")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>UaKhtml</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.UaKhtml:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#UA_KHTML" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.UaKhtml:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:Com.CA.Mas.Foundation.FoundationConsts.UaMozilla">UaMozilla Field</h3>
+        <blockquote id="F:Com.CA.Mas.Foundation.FoundationConsts.UaMozilla:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#UA_MOZILLA" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("UA_MOZILLA")]<br />public const <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>UaMozilla</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.UaMozilla:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/FoundationConsts.html#UA_MOZILLA" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:Com.CA.Mas.Foundation.FoundationConsts.UaMozilla:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -17,21 +17,22 @@
 
 ## Create an App: Choose a Method
 
-| Create your app using...                 | Benefits                                 |
+| Get Started...                 | Benefits                                 |
 | ---------------------------------------- | ---------------------------------------- |
-| [Sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods, or building a real app.</li></ul> |
-| [No sample app, from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Just download the dynamic-link library (.dll) and add your app configuration file.</li></ul> |                             
+| [Using sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods and trying out the Mobile SDK.</li></ul> |
+| [Create app from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Add the SDK libraries using NuGet in Visual Studio, or the dynamic-link libraries (dlls).</li></ul> |                             
 
 ## Quick Start with Sample App
 
-The Android **BasicAuthSample** app:
-
-- Lets you test the following with a CA Mobile API Gateway:  
-  - Define authentication flow
+The Android **BasicAuthSample** app works with a CA Mobile API Gateway so you can:  
+  - Define an authentication flow
   - Start the SDK
   - Log in
   - Access a protected API
   - Log out
+
+The sample app:
+
 - Was created using Visual Studio Community 2017 build 7.3.3
 - Requires Android 4.4 or later to run the app
 
@@ -47,41 +48,46 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **log in**, **log out**, and **access a protected API**.
 
-[TBD - Will we improve sample or use slick demo by Microsoft consultant?]
-[Sample app improvements: spelling errors Log in/Log out, human error messages, human text for grant flows, sample app should be something useful and interesting for enterprise.]
-
 ## Create App from Scratch or Integrate an Existing App into the Mobile SDK
 
 If you have an existing Xamarin app that you want to integrate into the Mobile SDK, or simply want full control to set up a new app, these steps are for you.
 
 ::: alert info
-**Note**: You cannot use an existing Android Mobile SDK app. You must redo the app using c#.
+**Note**: You cannot use an existing Android Mobile SDK app. You must rewrite the app using c#.
 :::
 
-### Step 1: Set Up Project in Visual Studio
+### Set Up Visual Studio for the Mobile SDK
 
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).
-2. Open a terminal window in a directory of your choice and copy and paste the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
-Verify that you have both "Android" and "iOS" source directories.
-3. Open your app in Visual Studio.
-4. Right-click the **References** folder and select **Edit References**.
-5. Select the **.Net Assembly** tab, and click the **Browse** button.
-6. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.Android.dll` file, click Open and then OK.
-7. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
+2. Add the Mobile SDK (recommended) or dlls to your project.
+
+    **NuGet Packages**  
+  a. In Visual Studio, open your platform app, right click **Packages**, **Add Packages...**      
+  b. Search for "MASFoundation.Xamarin", and click the button, **Add Package**.    
+  c. Repeat the steps for the other platform.    
+
+    **Dlls**   
+  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/    Xamarin-MAS-Foundation.git**        
+  Verify that you have both "Android" and "iOS" source directories.    
+  b. In Visual Studio, right-click the **References** folder and select **Edit References**.    
+  c. Select the **.Net Assembly** tab, and click the **Browse** button.    
+  d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.Android.dll` file, click **Open** and then **OK**.    
+
+3. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
 If you have multiple MAGs, you will have more than one file.
 
-::: alert danger
-**Important**: The msso_config.json file must use a valid JSON format with the required data. If the file is not found, you'll get an error message and your app will not run. Do not change any of the contents without assistance from your Admin; if you remove or alter required values, your app may not be able to connect or interact with the MAG.
-:::
+    ::: alert danger
+    **Important**: The msso_config.json file must use a valid JSON format with the required data. If the file is not found, you'll get an error message and your app will not run. Do not change any of the contents without assistance from your Admin; if you remove or alter required values, your app may not be able to connect or interact with the MAG.
+    :::
 
-::: alert note
-**Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes.
-:::
+    ::: alert note
+    **Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes.
+    :::
 
-8. In the manifests folder, open the file, `AndroidManifest.xml`.  
+4. In the manifests folder, open the file, `AndroidManifest.xml`.  
 Before the application definition, add the permission, **android.permission.INTERNET** so your app can access the internet. For example:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.BabsTestApp">
     <uses-permission android:name="android.permission.INTERNET" />
@@ -90,19 +96,19 @@ Before the application definition, add the permission, **android.permission.INTE
     </application>
 </manifest>
 ```
-9. Select **Build/Rebuild All**.  
+
+5. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
 
 That's it! You can now start building out your app.
 
-### Step 2: Start the SDK
+### Start the SDK
 
 After your project is properly configured, you must start the SDK to establish a secure connection with the backend services. The method that starts the SDK is **MAS.start**. Note the following:
 
 - You can put MAS.Start anywhere in your app
 - MAS.Start should be processed before app startup (during the splash/loading screen of your app).
 - We recommended that you process any communication with the backend services after successful completion of the startup method, or the secure communication is not guaranteed and may fail.
-
 
 #### Start with standard method
 
@@ -1117,7 +1123,8 @@ public class DeregisterCallback : MASCallback
 
 ### SSL Pinning Validation Failed
 
-javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.
+`javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.`
+
 This error means that the server security configuration in the MASSecurityConfiguration object for the hostname:portnumber is not valid or is missing. See [Create the MASSecurityConfiguration object](#create-the-massecurityconfiguration-object).
 
 ### General Problems
@@ -1197,6 +1204,82 @@ The following limitations exist only during development.
 
 - Only Android M+ devices can act as peripheral devices.
 - Only the Nexus 6 device has been tested as a peripheral device.
+
+
+## ADVANCED USE CASES
+
+This section provides solutions that solve specific and immediate customer requests. They may not have the tight coupling between backend and the SDK that we normally provide, but they work. They just require more collaboration between Admins and developers to implement. Hope you find them useful!
+
+### Send HTTP Requests to External APIs
+
+You can send HTTP requests to APIs hosted in others servers (another MAG or other public server). The MASSecurityConfiguration object registers the external server as a trusted source.
+
+For how to use this feature, see [Blog: How to Make Secure Calls to APIs from External Servers](https://www.ca.com/us/developers/mas/blog.html?id=2)
+
+#### Support
+
+The Mobile SDK supports:
+- Sending requests to external APIs with these security features: SSL pinning method, evaluate the certificate against root certificates on device, default credentials injection on API calls
+- Only certificate signature algorithm SHA256 with RSA 2048 bits  
+(SSL pinning will fail if you use other algorithms.)
+
+#### Create the MASSecurityConfiguration object
+
+To send HTTP requests to another MAG or public server, you must configure the MASSecurityConfiguration object. The following security settings are per hostname and port number. The only required attribute is the host; if the host is not set, the request fails with an [SSL pinning error](#ssl-pinning-validation-failed).
+
+| Attribute          | Description                                                                                                              | Required? | Default     |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------|-----------|-------------|
+| host               | Uri object containing the hostname, and port number.                                                                     | Yes       |    null     |
+| isPublic           | Boolean value that includes (or not), credentials from the primary gateway to the target host for network communication. | No        |    false    |
+| certificates       | The list of certificates that contains the pinned certificate.                                                           | No        |    null     |
+| publicKeyHashes    | The list of strings that contains pinned public key hashes in base64 format.                                             | No        |    null     |
+| trustPublicPKI     | Boolean value for whether or not to validate the trusted server against the Android trusted root certificates.           | No        |    false    |
+
+**Example**
+
+```c#
+Java.Security.Cert.X509Certificate certificate = ...;
+string pkHash1 = "H9hoBtopEPatTn ... ="; //Base64 string
+
+IMASSecurityConfiguration configuration = new MASSecurityConfigurationBuilder()
+  .Host(new Android.Net.Uri.Builder().EncodedAuthority(HOST).Build())
+  .Add(certificate)
+  .Add(pkHash1)
+  .Build();
+
+MASConfiguration.CurrentConfiguration.AddSecurityConfiguration(configuration);
+```
+
+#### Invoke an API from external server
+
+The only difference between making HTTP requests to a MAG compared to external servers, is that you must provide the full URL instead of the relative path. For example, if your full URL is https://somegatewayhost:port/some/endpoint, you would pass this value as endPointPath parameter in the SDK CRUD methods (for example, MAS.getFrom / MAS.postTo / MAS.deleteFrom).
+
+**Example**
+```c#
+Android.Net.Uri uri = new Android.Net.Uri.Builder()
+  .EncodedAuthority("swapi.co:443")
+  .Scheme("https")
+  .AppendPath("api").AppendPath("people").AppendPath("1")
+  .Build();
+
+IMASRequest request = new MASRequestBuilder(uri).Build();
+MAS.Invoke(request, new ProtectAPICallback());
+
+// Callback class
+public class ProtectAPICallback : MASCallback
+{
+    public override void OnError(Throwable e)
+    {
+      // Handle Error
+    }
+
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+      // Handle Success
+    }
+}
+
+```
 
 ## Pre-release Agreement
 

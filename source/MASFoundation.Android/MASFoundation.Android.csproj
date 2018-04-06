@@ -12,7 +12,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidClassParser>jar2xml</AndroidClassParser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mdoc export-html --template doctemplate.xsl -o ../../APIReference/Android/html obj/Release/docs</command>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup>
      <JavaDocPaths>JavaDocs/</JavaDocPaths>
@@ -60,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="JavaDocs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <JavaDocIndex Include="JavaDocs\index.html" />
   </ItemGroup>
   <ItemGroup>
     <LibraryProjectZip Include="Jars\mas-foundation-release.aar" />

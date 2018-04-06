@@ -1,0 +1,1004 @@
+<html>
+  <head>
+    <title>Com.CA.Mas.Foundation.MASGroup</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MASFoundation.Android</a> : <a href="index.html">Com.CA.Mas.Foundation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.MASGroup">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.MASGroup:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.MASGroup:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.MASGroup:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Com.CA.Mas.Foundation.MASGroup">MASGroup  Class</h1>
+    <p class="Summary" id="T:Com.CA.Mas.Foundation.MASGroup:Summary">The <b>MASGroup</b> class is a local representation of group data.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Com.CA.Mas.Foundation.MASGroup:Signature">[Android.Runtime.Register("com/ca/mas/foundation/MASGroup", DoNotGenerateAcw=true)]<br />public abstract class  <b>MASGroup</b> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Object</a>,	<a href="../Com.CA.Mas.Foundation/IMASTransformable.html">IMASTransformable</a>, <a href="../Com.CA.Mas.Identity.Group/IMASGroupIdentity.html">Com.CA.Mas.Identity.Group.IMASGroupIdentity</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+    </div>
+    <div class="Remarks" id="T:Com.CA.Mas.Foundation.MASGroup:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Foundation.MASGroup:Docs:Remarks">
+        <p>The <b>MASGroup</b> class is a local representation of group data.</p>
+        <p>
+          <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html" target="_blank">[Android Documentation]</a>
+        </p>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Foundation.MASGroup:Docs:Version Information">
+        <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Com.CA.Mas.Foundation.MASGroup()">MASGroup</a>
+                    </b>()</div>
+                </td>
+                <td>
+                  <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#MASGroup()" target="_blank">[Android Documentation]</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Constructors</h2>
+        <div class="SectionBox" id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:Com.CA.Mas.Foundation.MASGroup(System.IntPtr,Android.Runtime.JniHandleOwnership)">MASGroup</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JniHandleOwnership</a>)</div>
+                </td>
+                <td>A constructor used when creating managed representations of JNI objects; called by the runtime.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div>abstract </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASGroup.AsJSONObject">AsJSONObject</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.Json.JSONObject</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASGroup.GroupName">GroupName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <b>Description:</b> This method returns the group name used to display.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>abstract </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASGroup.Id">Id</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>.  Getter for the group ID.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>abstract </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASGroup.Members">Members</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;Com.CA.Mas.Identity.Group.MASMember&gt;</a>
+                  </i>.  Getter.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>abstract </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASGroup.Meta">Meta</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Com.CA.Mas.Identity.User/MASMeta.html">Com.CA.Mas.Identity.User.MASMeta</a>
+                  </i>.  Get the metadata for the group, if it exists.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>abstract </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASGroup.Owner">Owner</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Com.CA.Mas.Identity.Group/MASOwner.html">Com.CA.Mas.Identity.Group.MASOwner</a>
+                  </i>.  Getter.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>abstract </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASGroup.Reference">Reference</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+ The reference is a URI that can be used to make a web service call to get the details of this group,
+ e.g.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>abstract </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASGroup.Value">Value</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>.  Value accessor which could be a GUID,
+ e.g. 'e9e30dba-f08f-4109-8486-d5c6a331660a'.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Properties</h2>
+        <div class="SectionBox" id="Protected Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASGroup.ThresholdClass">ThresholdClass</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>
+                  </i>. This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.MASGroup.ThresholdType">ThresholdType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>
+                  </i>. This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASGroup.AddMember(Com.CA.Mas.Identity.Group.MASMember)">AddMember</a>
+                  </b>(<a href="../Com.CA.Mas.Identity.Group/MASMember.html">Com.CA.Mas.Identity.Group.MASMember</a>)<blockquote> Add a new member to the group.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASGroup.Delete(Com.CA.Mas.Foundation.MASCallback)">Delete</a>
+                  </b>(<a href="../Com.CA.Mas.Foundation/MASCallback.html">MASCallback</a>)<blockquote>Deletes the group object in the cloud.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASGroup.GetGroupById(System.String,Com.CA.Mas.Foundation.MASCallback)">GetGroupById</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../Com.CA.Mas.Foundation/MASCallback.html">MASCallback</a>)<blockquote><a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getGroupById(java.lang.String, com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASGroup.GetGroupMetaData(Com.CA.Mas.Foundation.MASCallback)">GetGroupMetaData</a>
+                  </b>(<a href="../Com.CA.Mas.Foundation/MASCallback.html">MASCallback</a>)<blockquote><a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getGroupMetaData(com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASGroup.GetGroupsByFilter(Com.CA.Mas.Identity.Common.MASFilteredRequest,Com.CA.Mas.Foundation.MASCallback)">GetGroupsByFilter</a>
+                  </b>(<a href="../Com.CA.Mas.Identity.Common/MASFilteredRequest.html">Com.CA.Mas.Identity.Common.MASFilteredRequest</a>, <a href="../Com.CA.Mas.Foundation/MASCallback.html">MASCallback</a>)<blockquote><a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getGroupsByFilter(com.ca.mas.identity.common.MASFilteredRequest, com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASGroup.NewInstance()">NewInstance</a>
+                  </b>()<nobr> : <a href="../Com.CA.Mas.Foundation/MASGroup.html">MASGroup</a></nobr><blockquote><a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#newInstance()" target="_blank">[Android Documentation]</a></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASGroup.Populate(Org.Json.JSONObject)">Populate</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.Json.JSONObject</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASGroup.RemoveMember(Com.CA.Mas.Identity.Group.MASMember)">RemoveMember</a>
+                  </b>(<a href="../Com.CA.Mas.Identity.Group/MASMember.html">Com.CA.Mas.Identity.Group.MASMember</a>)<blockquote> remove member from the group.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.MASGroup.Save(Com.CA.Mas.Foundation.MASCallback)">Save</a>
+                  </b>(<a href="../Com.CA.Mas.Foundation/MASCallback.html">MASCallback</a>)<blockquote>Saves the group object in the cloud.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Com.CA.Mas.Foundation.MASGroup:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:Com.CA.Mas.Foundation.MASGroup()">MASGroup Constructor</h3>
+        <blockquote id="C:Com.CA.Mas.Foundation.MASGroup():member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#MASGroup()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register(".ctor", "()V", "")]<br />public  <b>MASGroup</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.MASGroup():Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#MASGroup()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.MASGroup():Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:Com.CA.Mas.Foundation.MASGroup(System.IntPtr,Android.Runtime.JniHandleOwnership)">MASGroup Constructor</h3>
+        <blockquote id="C:Com.CA.Mas.Foundation.MASGroup(System.IntPtr,Android.Runtime.JniHandleOwnership):member">
+          <div class="msummary">A constructor used when creating managed representations of JNI objects; called by the runtime.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected  <b>MASGroup</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> javaReference, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JniHandleOwnership</a> transfer)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:Com.CA.Mas.Foundation.MASGroup(System.IntPtr,Android.Runtime.JniHandleOwnership):Parameters">
+            <dl>
+              <dt>
+                <i>javaReference</i>
+              </dt>
+              <dd>A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>containing a Java Native Interface (JNI) object reference.</dd>
+              <dt>
+                <i>transfer</i>
+              </dt>
+              <dd>A <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JniHandleOwnership</a>indicating how to handle <i>javaReference</i></dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.MASGroup(System.IntPtr,Android.Runtime.JniHandleOwnership):Remarks">
+            <p>This constructor is invoked by the runtime infrastructure (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Object.GetObject``1(IntPtr, Android.Runtime.JniHandleOwnership)</a>) to create a new managed representation for a Java Native Interface object.</p>
+            <p>The constructor will initializes the <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.IJavaObject.Handle</a> property of the new instance using <i>javaReference</i> and <i>transfer</i>.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:Com.CA.Mas.Foundation.MASGroup(System.IntPtr,Android.Runtime.JniHandleOwnership):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASGroup.AddMember(Com.CA.Mas.Identity.Group.MASMember)">AddMember Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASGroup.AddMember(Com.CA.Mas.Identity.Group.MASMember):member">
+          <div class="msummary"> Add a new member to the group.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("addMember", "(Lcom/ca/mas/identity/group/MASMember;)V", "GetAddMember_Lcom_ca_mas_identity_group_MASMember_Handler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddMember</b> (<a href="../Com.CA.Mas.Identity.Group/MASMember.html">Com.CA.Mas.Identity.Group.MASMember</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.AddMember(Com.CA.Mas.Identity.Group.MASMember):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.AddMember(Com.CA.Mas.Identity.Group.MASMember):Remarks">
+            <b>Description:</b>
+            <p> Add a new member to the group.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#addMember(com.ca.mas.identity.group.MASMember)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.AddMember(Com.CA.Mas.Identity.Group.MASMember):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASGroup.AsJSONObject">AsJSONObject Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASGroup.AsJSONObject:member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getAsJSONObject", "()Lorg/json/JSONObject;", "GetGetAsJSONObjectHandler")]<br />public abstract <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.Json.JSONObject</a> <b>AsJSONObject</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.AsJSONObject:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.AsJSONObject:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.AsJSONObject:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASGroup.Delete(Com.CA.Mas.Foundation.MASCallback)">Delete Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASGroup.Delete(Com.CA.Mas.Foundation.MASCallback):member">
+          <div class="msummary">Deletes the group object in the cloud.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("delete", "(Lcom/ca/mas/foundation/MASCallback;)V", "GetDelete_Lcom_ca_mas_foundation_MASCallback_Handler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Delete</b> (<a href="../Com.CA.Mas.Foundation/MASCallback.html">MASCallback</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.Delete(Com.CA.Mas.Foundation.MASCallback):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.Delete(Com.CA.Mas.Foundation.MASCallback):Remarks">
+            <p>Deletes the group object in the cloud.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#delete(com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.Delete(Com.CA.Mas.Foundation.MASCallback):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupById(System.String,Com.CA.Mas.Foundation.MASCallback)">GetGroupById Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupById(System.String,Com.CA.Mas.Foundation.MASCallback):member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getGroupById(java.lang.String, com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("getGroupById", "(Ljava/lang/String;Lcom/ca/mas/foundation/MASCallback;)V", "GetGetGroupById_Ljava_lang_String_Lcom_ca_mas_foundation_MASCallback_Handler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GetGroupById</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> p0, <a href="../Com.CA.Mas.Foundation/MASCallback.html">MASCallback</a> p1)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupById(System.String,Com.CA.Mas.Foundation.MASCallback):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>p1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupById(System.String,Com.CA.Mas.Foundation.MASCallback):Remarks">Description copied from interface: <tt><a href="javascript:alert(&quot;Documentation not found.&quot;)">Com.CA.Mas.Identity.Group.IMASGroupIdentity.getGroupById-java.lang.String-com.ca.mas.foundation.MASCallback-</a></tt><p><a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getGroupById(java.lang.String, com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a></p></div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupById(System.String,Com.CA.Mas.Foundation.MASCallback):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupMetaData(Com.CA.Mas.Foundation.MASCallback)">GetGroupMetaData Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupMetaData(Com.CA.Mas.Foundation.MASCallback):member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getGroupMetaData(com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("getGroupMetaData", "(Lcom/ca/mas/foundation/MASCallback;)V", "GetGetGroupMetaData_Lcom_ca_mas_foundation_MASCallback_Handler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GetGroupMetaData</b> (<a href="../Com.CA.Mas.Foundation/MASCallback.html">MASCallback</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupMetaData(Com.CA.Mas.Foundation.MASCallback):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupMetaData(Com.CA.Mas.Foundation.MASCallback):Remarks">Description copied from interface: <tt><a href="javascript:alert(&quot;Documentation not found.&quot;)">Com.CA.Mas.Identity.Group.IMASGroupIdentity.getGroupMetaData-com.ca.mas.foundation.MASCallback-</a></tt><p><a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getGroupMetaData(com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a></p></div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupMetaData(Com.CA.Mas.Foundation.MASCallback):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupsByFilter(Com.CA.Mas.Identity.Common.MASFilteredRequest,Com.CA.Mas.Foundation.MASCallback)">GetGroupsByFilter Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupsByFilter(Com.CA.Mas.Identity.Common.MASFilteredRequest,Com.CA.Mas.Foundation.MASCallback):member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getGroupsByFilter(com.ca.mas.identity.common.MASFilteredRequest, com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("getGroupsByFilter", "(Lcom/ca/mas/identity/common/MASFilteredRequest;Lcom/ca/mas/foundation/MASCallback;)V", "GetGetGroupsByFilter_Lcom_ca_mas_identity_common_MASFilteredRequest_Lcom_ca_mas_foundation_MASCallback_Handler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GetGroupsByFilter</b> (<a href="../Com.CA.Mas.Identity.Common/MASFilteredRequest.html">Com.CA.Mas.Identity.Common.MASFilteredRequest</a> p0, <a href="../Com.CA.Mas.Foundation/MASCallback.html">MASCallback</a> p1)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupsByFilter(Com.CA.Mas.Identity.Common.MASFilteredRequest,Com.CA.Mas.Foundation.MASCallback):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>p1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupsByFilter(Com.CA.Mas.Identity.Common.MASFilteredRequest,Com.CA.Mas.Foundation.MASCallback):Remarks">Description copied from interface: <tt><a href="javascript:alert(&quot;Documentation not found.&quot;)">Com.CA.Mas.Identity.Group.IMASGroupIdentity.getGroupsByFilter-com.ca.mas.identity.common.MASFilteredRequest-com.ca.mas.foundation.MASCallback-</a></tt><p><a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getGroupsByFilter(com.ca.mas.identity.common.MASFilteredRequest, com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a></p></div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.GetGroupsByFilter(Com.CA.Mas.Identity.Common.MASFilteredRequest,Com.CA.Mas.Foundation.MASCallback):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASGroup.GroupName">GroupName Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASGroup.GroupName:member">
+          <div class="msummary">
+            <b>Description:</b> This method returns the group name used to display.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getGroupName", "()Ljava/lang/String;", "GetGetGroupNameHandler")]<br />[set: Android.Runtime.Register("setGroupName", "(Ljava/lang/String;)V", "GetSetGroupName_Ljava_lang_String_Handler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GroupName</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.GroupName:Value">String which is a free-form user friendly display name.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.GroupName:Remarks">
+            <p>
+              <b>Get method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getGroupName()" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> This method returns the group name used to display. For example, this attribute will
+ contain a value such as 'Employees', 'Tour Guides', etc.</p>
+            <p>
+              <b>Set method documentation</b>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#setGroupName(java.lang.String)" target="_blank">[Android Documentation]</a>
+              <br />
+              <b>Description:</b> The groupName is stored as the 'displayName' in the SCIM data model.
+ This value is used as the group's display name when creating an adhoc group.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.GroupName:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASGroup.Id">Id Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASGroup.Id:member">
+          <div class="msummary"> Getter for the group ID.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getId", "()Ljava/lang/String;", "GetGetIdHandler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Id</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Id:Value">String representing the unique ID.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Id:Remarks">
+            <b>Description:</b>
+            <p> Getter for the group ID.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getId()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Id:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASGroup.Members">Members Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASGroup.Members:member">
+          <div class="msummary"> Getter.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getMembers", "()Ljava/util/List;", "GetGetMembersHandler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;Com.CA.Mas.Identity.Group.MASMember&gt;</a> <b>Members</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Members:Value">A list of user IDs representing the members of the group.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Members:Remarks">
+            <b>Description:</b>
+            <p> Getter.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getMembers()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Members:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASGroup.Meta">Meta Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASGroup.Meta:member">
+          <div class="msummary"> Get the metadata for the group, if it exists.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getMeta", "()Lcom/ca/mas/identity/user/MASMeta;", "GetGetMetaHandler")]<br />public abstract <a href="../Com.CA.Mas.Identity.User/MASMeta.html">Com.CA.Mas.Identity.User.MASMeta</a> <b>Meta</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Meta:Value">The metadata for this group, if it exists.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Meta:Remarks">
+            <b>Description:</b>
+            <p> Get the metadata for the group, if it exists. Could be null.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getMeta()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Meta:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASGroup.NewInstance()">NewInstance Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASGroup.NewInstance():member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#newInstance()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("newInstance", "()Lcom/ca/mas/foundation/MASGroup;", "")]<br />public static <a href="../Com.CA.Mas.Foundation/MASGroup.html">MASGroup</a> <b>NewInstance</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.NewInstance():Returns">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.NewInstance():Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#newInstance()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.NewInstance():Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASGroup.Owner">Owner Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASGroup.Owner:member">
+          <div class="msummary"> Getter.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getOwner", "()Lcom/ca/mas/identity/group/MASOwner;", "GetGetOwnerHandler")]<br />public abstract <a href="../Com.CA.Mas.Identity.Group/MASOwner.html">Com.CA.Mas.Identity.Group.MASOwner</a> <b>Owner</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Owner:Value">The user ID representing the owner of this group.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Owner:Remarks">
+            <b>Description:</b>
+            <p> Getter.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getOwner()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Owner:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASGroup.Populate(Org.Json.JSONObject)">Populate Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASGroup.Populate(Org.Json.JSONObject):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("populate", "(Lorg/json/JSONObject;)V", "GetPopulate_Lorg_json_JSONObject_Handler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Populate</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.Json.JSONObject</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.Populate(Org.Json.JSONObject):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.Populate(Org.Json.JSONObject):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.Populate(Org.Json.JSONObject):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASGroup.Reference">Reference Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASGroup.Reference:member">
+          <div class="msummary">
+ The reference is a URI that can be used to make a web service call to get the details of this group,
+ e.g.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getReference", "()Ljava/lang/String;", "GetGetReferenceHandler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Reference</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Reference:Value">String which is a URI representing a specific group.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Reference:Remarks">
+            <b>Description:</b>
+            <p>
+ The reference is a URI that can be used to make a web service call to get the details of this group,
+ e.g. '../Groups/e9e30dba-f08f-4109-8486-d5c6a331660a'.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getReference()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Reference:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASGroup.RemoveMember(Com.CA.Mas.Identity.Group.MASMember)">RemoveMember Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASGroup.RemoveMember(Com.CA.Mas.Identity.Group.MASMember):member">
+          <div class="msummary"> remove member from the group.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("removeMember", "(Lcom/ca/mas/identity/group/MASMember;)V", "GetRemoveMember_Lcom_ca_mas_identity_group_MASMember_Handler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveMember</b> (<a href="../Com.CA.Mas.Identity.Group/MASMember.html">Com.CA.Mas.Identity.Group.MASMember</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.RemoveMember(Com.CA.Mas.Identity.Group.MASMember):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.RemoveMember(Com.CA.Mas.Identity.Group.MASMember):Remarks">
+            <b>Description:</b>
+            <p> remove member from the group.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#removeMember(com.ca.mas.identity.group.MASMember)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.RemoveMember(Com.CA.Mas.Identity.Group.MASMember):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.MASGroup.Save(Com.CA.Mas.Foundation.MASCallback)">Save Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.MASGroup.Save(Com.CA.Mas.Foundation.MASCallback):member">
+          <div class="msummary">Saves the group object in the cloud.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("save", "(Lcom/ca/mas/foundation/MASCallback;)V", "GetSave_Lcom_ca_mas_foundation_MASCallback_Handler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Save</b> (<a href="../Com.CA.Mas.Foundation/MASCallback.html">MASCallback</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.Save(Com.CA.Mas.Foundation.MASCallback):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.Save(Com.CA.Mas.Foundation.MASCallback):Remarks">
+            <p>Saves the group object in the cloud.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#save(com.ca.mas.foundation.MASCallback)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.MASGroup.Save(Com.CA.Mas.Foundation.MASCallback):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASGroup.ThresholdClass">ThresholdClass Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASGroup.ThresholdClass:member">
+          <div class="msummary">This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> <b>ThresholdClass</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.ThresholdClass:Value">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> which contains the <tt>java.lang.Class</tt> JNI value corresponding to this type.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.ThresholdClass:Remarks">This property is used to control which <tt>jclass</tt> is provided to methods like <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JNIEnv.CallNonVirtualVoidMethod</a>.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.ThresholdClass:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASGroup.ThresholdType">ThresholdType Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASGroup.ThresholdType:member">
+          <div class="msummary">This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> <b>ThresholdType</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.ThresholdType:Value">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> which provides the declaring type.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.ThresholdType:Remarks">This property is used to control virtual vs. non virtual method dispatch against the underlying JNI object. When this property is equal to the declaring type, then virtual method invocation against the JNI object is performed; otherwise, we assume that the method was overridden by a derived type, and perform non-virtual methdo invocation.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.ThresholdType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.MASGroup.Value">Value Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.MASGroup.Value:member">
+          <div class="msummary"> Value accessor which could be a GUID,
+ e.g. 'e9e30dba-f08f-4109-8486-d5c6a331660a'.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getValue", "()Ljava/lang/String;", "GetGetValueHandler")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Value</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Value:Value">String representation of the value.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Value:Remarks">
+            <b>Description:</b>
+            <p> Value accessor which could be a GUID,
+ e.g. 'e9e30dba-f08f-4109-8486-d5c6a331660a'.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASGroup.html#getValue()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.MASGroup.Value:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

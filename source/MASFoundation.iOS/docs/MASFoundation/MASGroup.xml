@@ -168,8 +168,8 @@
       </Docs>
     </Member>
     <Member MemberName="Members">
-      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray[] Members { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray[] Members" />
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray Members { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray Members" />
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
@@ -180,7 +180,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Foundation.NSArray[]</ReturnType>
+        <ReturnType>Foundation.NSArray</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Group Members</summary>

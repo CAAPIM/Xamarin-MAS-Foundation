@@ -300,8 +300,17 @@ namespace BasicAuthSample
                     }
                     else if (responseObject != null)
                     {
-                        Console.WriteLine("Success: {0}", responseObject.ToString());
-                        Alert("MAS.Invoke", responseObject.ToString());
+                        //  If a response is returned
+                        string value = "No value";
+                        NSDictionary result = (NSDictionary)responseObject;
+                        //  MAG iOS Mobile SDK's response structure in JSON
+                        if (result.ContainsKey(new NSString("MASResponseInfoBodyInfoKey")))
+                        {
+                            NSDictionary values = result;
+                            value = values[NSObject.FromObject("MASResponseInfoBodyInfoKey")].ToString();
+                        }
+                        Console.WriteLine("Success: {0}", value);
+                        Alert("MAS.Invoke", value);
                     }
                 });
 
