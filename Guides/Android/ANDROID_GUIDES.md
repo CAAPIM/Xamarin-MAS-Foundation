@@ -67,7 +67,7 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
   c. Repeat the steps for the other platform.    
 
     **Dlls**   
-  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/    Xamarin-MAS-Foundation.git**        
+  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**        
   Verify that you have both "Android" and "iOS" source directories.    
   b. In Visual Studio, right-click the **References** folder and select **Edit References**.    
   c. Select the **.Net Assembly** tab, and click the **Browse** button.    
