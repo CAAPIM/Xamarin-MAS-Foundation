@@ -8,7 +8,7 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>The enumerated MASBLEServiceState that can indicate what is current status of Device BLE</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -20,7 +20,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Central authorization failed.</summary>
       </Docs>
     </Member>
     <Member MemberName="CentralAuthorizationSucceeded">
@@ -31,7 +31,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Central authorization succeeded.</summary>
       </Docs>
     </Member>
     <Member MemberName="CentralCharacteristicDiscovered">
@@ -42,7 +42,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Central characteristic discovered.</summary>
       </Docs>
     </Member>
     <Member MemberName="CentralCharacteristicWritten">
@@ -64,7 +64,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Central device connected.</summary>
       </Docs>
     </Member>
     <Member MemberName="CentralDeviceDetected">
@@ -75,7 +75,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Central device detected.</summary>
       </Docs>
     </Member>
     <Member MemberName="CentralDeviceDisconnected">
@@ -86,7 +86,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE central device disconnected.</summary>
       </Docs>
     </Member>
     <Member MemberName="CentralServiceDiscovered">
@@ -108,7 +108,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Central device started.</summary>
       </Docs>
     </Member>
     <Member MemberName="CentralStopped">
@@ -119,7 +119,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Central device stopped.</summary>
       </Docs>
     </Member>
     <Member MemberName="PeripheralSessionAuthorized">
@@ -130,7 +130,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Peripheral session authorized.</summary>
       </Docs>
     </Member>
     <Member MemberName="PeripheralSessionNotified">
@@ -141,7 +141,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Peripheral session notified.</summary>
       </Docs>
     </Member>
     <Member MemberName="PeripheralStarted">
@@ -152,7 +152,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE peripheral device started.</summary>
       </Docs>
     </Member>
     <Member MemberName="PeripheralStopped">
@@ -163,7 +163,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE peripheral device stopped.</summary>
       </Docs>
     </Member>
     <Member MemberName="PeripheralSubscribed">
@@ -174,7 +174,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE peripheral device subscriped.</summary>
       </Docs>
     </Member>
     <Member MemberName="PeripheralUnsubscribed">
@@ -185,7 +185,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE peripheral device unsubscribed.</summary>
       </Docs>
     </Member>
     <Member MemberName="Unknown">
@@ -196,7 +196,7 @@
         <ReturnType>MASFoundation.MASBLEServiceState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Unknown.</summary>
       </Docs>
     </Member>
   </Members>

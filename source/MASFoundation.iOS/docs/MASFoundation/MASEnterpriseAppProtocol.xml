@@ -92,9 +92,9 @@
         <Parameter Name="error" Type="Foundation.NSError" />
       </Parameters>
       <Docs>
-        <param name="app">To be added.</param>
-        <param name="error">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="app">The app object.</param>
+        <param name="error">object which has the details of the error.</param>
+        <summary>This is the protocol for an app to implement to receive a error callback while loading the icon or webapp.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -114,8 +114,8 @@
         <Parameter Name="app" Type="MASFoundation.MASApplication" />
       </Parameters>
       <Docs>
-        <param name="app">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="app">The app object needs to be loaded as a web app.</param>
+        <summary>This is the protocol for an app to implement to receive a callback when an enterpise web view needs to be loaded.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
