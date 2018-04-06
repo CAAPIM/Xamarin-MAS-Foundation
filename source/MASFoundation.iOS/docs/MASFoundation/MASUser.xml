@@ -701,6 +701,20 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="LogoutWithCompletionAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LogoutWithCompletionAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LogoutWithCompletionAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="PhoneNumbers">
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt; PhoneNumbers { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSString&gt; PhoneNumbers" />

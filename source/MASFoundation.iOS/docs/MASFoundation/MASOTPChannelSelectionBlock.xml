@@ -1,5 +1,5 @@
 <Type Name="MASOTPChannelSelectionBlock" FullName="MASFoundation.MASOTPChannelSelectionBlock">
-  <TypeSignature Language="C#" Value="public delegate void MASOTPChannelSelectionBlock(NSObject[] arg0, MASOTPGenerationBlock arg1);" />
+  <TypeSignature Language="C#" Value="public delegate void MASOTPChannelSelectionBlock(NSObject[] supportedOTPChannels, MASOTPGenerationBlock otpBotpGenerationBlocklock);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASOTPChannelSelectionBlock extends System.MulticastDelegate" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
@@ -15,8 +15,8 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="arg0">To be added.</param>
-    <param name="arg1">To be added.</param>
+    <param name="supportedOTPChannels">To be added.</param>
+    <param name="otpBotpGenerationBlocklock">To be added.</param>
     <summary>To be added.</summary>
     <remarks>To be added.</remarks>
   </Docs>

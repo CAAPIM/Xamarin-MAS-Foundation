@@ -14,21 +14,21 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public LoginWithUserNameResult (bool arg0);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool arg0) cil managed" />
+      <MemberSignature Language="C#" Value="public LoginWithUserNameResult (bool completed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool completed) cil managed" />
       <MemberType>Constructor</MemberType>
       <Parameters>
         <Parameter Name="arg0" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="arg0">To be added.</param>
+        <param name="completed">To be added.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Arg0">
-      <MemberSignature Language="C#" Value="public bool Arg0 { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool Arg0" />
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="public bool Completed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Completed" />
       <MemberType>Property</MemberType>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
