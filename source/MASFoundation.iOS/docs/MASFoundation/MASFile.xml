@@ -14,7 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>The MASFile class is a local representation of file data.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -122,8 +122,8 @@
         <ReturnType>Foundation.NSData</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The contents of file as NSData.</summary>
+        <value>contents</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -140,8 +140,8 @@
         <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The file directory type. Default directory type is MASFileDirectoryTypeApplicationSupport.</summary>
+        <value>directoryType</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -158,8 +158,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The full file path of the file on disk.</summary>
+        <value>filePath</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -180,10 +180,18 @@
         <Parameter Name="contents" Type="Foundation.NSData" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="contents">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="name">The NSString name of the new file.</param>
+        <param name="contents">The NSData contents of the new file.</param>
+        <summary>Creates a new ‘MASFile’ object.
+            
+            Note, that default directory type is MASFileDirectoryTypeApplicationSupport. If you want to have a file in a specific directory, use fileWithName:contents:directoryType:
+            
+            Available directory types are:
+            
+            MASFileDirectoryTypeTemporary MASFileDirectoryTypeApplicationSupport MASFileDirectoryTypeCachesDirectory MASFileDirectoryTypeDocuments MASFileDirectoryTypeLibrary
+            
+            Data stored into file will be automatically protected with </summary>
+        <returns>Returns a new ‘MASFile’ object.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -205,11 +213,15 @@
         <Parameter Name="directoryType" Type="MASFoundation.MASFileDirectoryType" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="contents">To be added.</param>
-        <param name="directoryType">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="name">The NSString name of the new file.</param>
+        <param name="contents">The NSData contents of the new file.</param>
+        <param name="directoryType">The MASFileDirectoryType enumeration value of directory type.</param>
+        <summary>Creates a new ‘MASFile’ object with specified directory type.
+            
+            Available directory types are:
+            
+            MASFileDirectoryTypeTemporary MASFileDirectoryTypeApplicationSupport MASFileDirectoryTypeCachesDirectory MASFileDirectoryTypeDocuments MASFileDirectoryTypeLibrary</summary>
+        <returns>Returns a new ‘MASFile’ object.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -229,9 +241,15 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="name">The name of the file</param>
+        <summary>Find a specific, MASFile in local storage if it exists.
+            
+            Note, that file is retrieved from Application Support directory in the application directory by default. If you want to find a file to a specific directory, use findFileWithName:directoryType:
+            
+            Available directory types are:
+            
+            MASFileDirectoryTypeTemporary MASFileDirectoryTypeApplicationSupport MASFileDirectoryTypeCachesDirectory MASFileDirectoryTypeDocuments MASFileDirectoryTypeLibrary</summary>
+        <returns>Returns the MASFile that applies to the name, nil if none.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -252,10 +270,14 @@
         <Parameter Name="directoryType" Type="MASFoundation.MASFileDirectoryType" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="directoryType">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="name">The name of the file</param>
+        <param name="directoryType">The directory type of the file</param>
+        <summary>Find a specific, MASFile in local storage from specified directory if it exists.
+            
+            Available directory types are:
+            
+            MASFileDirectoryTypeTemporary MASFileDirectoryTypeApplicationSupport MASFileDirectoryTypeCachesDirectory MASFileDirectoryTypeDocuments MASFileDirectoryTypeLibrary</summary>
+        <returns>Returns the MASFile that applies to the name, nil if none.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -272,8 +294,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The name of the file.</summary>
+        <value>name</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -291,8 +313,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>Removes the MASFile locally.</summary>
+        <returns>Returns YES if success or NO if failure.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -312,9 +334,9 @@
         <Parameter Name="filePath" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="filePath">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="filePath">The file path to find the data to remove.</param>
+        <summary>Remove any data at the given file path.</summary>
+        <returns>Returns YES if removed, NO if not.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -332,8 +354,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+          <summary>Save the MASFile locally.
+              
+              By default, NSDataWritingOptions is set to NSDataWritingFileProtectionComplete.</summary>
+        <returns>Returns YES if success or NO if failure.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -353,9 +377,11 @@
         <Parameter Name="option" Type="Foundation.NSDataWritingOptions" />
       </Parameters>
       <Docs>
-        <param name="option">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="option">NSDataWritingOptions option</param>
+        <summary>Save the MASFile locally with NSDataWritingOptions option.
+            
+            This method saves the file into iOS file system with provided NSDataWritingOptions.</summary>
+        <returns>Returns YES if success or NO if failure.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -375,9 +401,11 @@
         <Parameter Name="data" Type="Foundation.NSData" />
       </Parameters>
       <Docs>
-        <param name="data">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="data">The NSData item to store.</param>
+        <summary>Stores the given NSData at a temporary location.
+            
+            Temporary items are saved with NSDataWritingFileProtectionNone.</summary>
+        <returns>Returns the NSString file path where it is stored.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

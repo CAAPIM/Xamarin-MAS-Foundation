@@ -8,8 +8,8 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The enumerated error codes for Foundation level NSErrors.</summary>
+    <remarks>The enumerated error codes for Foundation level NSErrors.</remarks>
   </Docs>
   <Members>
     <Member MemberName="AccessTokenDisabled">
@@ -20,7 +20,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="AccessTokenInvalid">
@@ -31,7 +31,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="AccessTokenNotGrantedScope">
@@ -42,7 +42,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ApplicationAlreadyRegistered">
@@ -53,7 +53,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ApplicationInvalid">
@@ -64,7 +64,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ApplicationInvalidMagIdentifer">
@@ -75,7 +75,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ApplicationNotRegistered">
@@ -86,7 +86,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ApplicationRedirectUriInvalid">
@@ -97,7 +97,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BBANotEnabled">
@@ -108,7 +108,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEAuthorizationFailed">
@@ -119,7 +119,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEAuthorizationPollingFailed">
@@ -130,7 +130,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLECentral">
@@ -141,7 +141,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLECentralDeviceNotFound">
@@ -152,7 +152,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEDelegateNotDefined">
@@ -163,7 +163,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEInvalidAuthenticationProvider">
@@ -174,7 +174,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEPeripheral">
@@ -185,7 +185,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEPeripheralCharacteristics">
@@ -196,7 +196,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEPeripheralServices">
@@ -207,7 +207,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEPoweredOff">
@@ -218,7 +218,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLERestting">
@@ -229,7 +229,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLERSSINotInRange">
@@ -240,7 +240,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEUnauthorized">
@@ -251,7 +251,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEUnknownState">
@@ -262,7 +262,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEUnSupported">
@@ -273,7 +273,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEUserDeclined">
@@ -284,7 +284,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationInvalidEndpoint">
@@ -295,7 +295,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationInvalidHostForSecurityConfiguration">
@@ -306,7 +306,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationInvalidPinningInfoForSecurityConfiguration">
@@ -317,7 +317,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationLoadingFailedFileNotFound">
@@ -328,7 +328,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationLoadingFailedJsonSerialization">
@@ -339,7 +339,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationLoadingFailedJsonValidation">
@@ -350,7 +350,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -361,7 +361,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceAlreadyRegistered">
@@ -372,7 +372,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceAlreadyRegisteredWithDifferentFlow">
@@ -383,7 +383,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceCouldNotBeDeregistered">
@@ -394,7 +394,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceDoesNotSupportLocalAuthentication">
@@ -405,7 +405,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceInvalidAuthCredentialsForDeviceRegistration">
@@ -416,7 +416,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceNotLoggedIn">
@@ -427,7 +427,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceNotRegistered">
@@ -438,7 +438,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceRecordIsNotValid">
@@ -449,7 +449,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceRegistrationAttemptedWithUnregisteredScope">
@@ -460,7 +460,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceRegistrationWithoutRequiredParameters">
@@ -471,7 +471,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="EnterpriseBrowserAppDoesNotExist">
@@ -482,7 +482,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="EnterpriseBrowserNativeAppCannotOpen">
@@ -493,7 +493,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="EnterpriseBrowserNativeAppDoesNotExist">
@@ -504,7 +504,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="EnterpriseBrowserWebAppInvalidURL">
@@ -515,7 +515,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="FlowIsNotActive">
@@ -526,7 +526,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="FlowIsNotImplemented">
@@ -537,7 +537,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="FlowTypeUnsupported">
@@ -548,7 +548,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="GeolocationIsInvalid">
@@ -559,7 +559,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="GeolocationIsMissing">
@@ -570,7 +570,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="GeolocationIsNotConfigured">
@@ -581,7 +581,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="GeolocationServicesAreUnauthorized">
@@ -592,7 +592,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidAuthorization">
@@ -603,7 +603,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidEnrollmentURL">
@@ -614,7 +614,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidNSDictionary">
@@ -625,7 +625,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidNSURL">
@@ -636,7 +636,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidOTPChannelSelectionBlock">
@@ -647,7 +647,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidOTPCredentialsBlock">
@@ -658,7 +658,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidOTPProvided">
@@ -669,7 +669,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidUserLoginBlock">
@@ -680,7 +680,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="JWTInvalidClaims">
@@ -691,7 +691,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="JWTSerializationError">
@@ -702,7 +702,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="JWTUnexpectedClassType">
@@ -713,7 +713,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="LoginProcessCancel">
@@ -724,7 +724,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="MASIsNotStarted">
@@ -735,7 +735,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkIsOffline">
@@ -746,7 +746,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkNotReachable">
@@ -757,7 +757,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkNotStarted">
@@ -768,7 +768,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkRequestTimedOut">
@@ -779,7 +779,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkSSLAuthenticationChallengeFailure">
@@ -790,7 +790,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkSSLConnectionCannotBeMade">
@@ -801,7 +801,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkUnacceptableContentType">
@@ -812,7 +812,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPAuthenticationCancelled">
@@ -823,7 +823,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPChannelSelectionCancelled">
@@ -834,7 +834,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPExpired">
@@ -845,7 +845,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPNotProvided">
@@ -856,7 +856,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPRetryBarred">
@@ -867,7 +867,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPRetryLimitExceeded">
@@ -878,7 +878,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ProximityLoginAuthorizationInProgress">
@@ -889,7 +889,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ProximityLoginInvalidAuthenticationURL">
@@ -900,7 +900,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ProximityLoginInvalidAuthorizeURL">
@@ -911,7 +911,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="QRCodeProximityLoginAuthorizationPollingFailed">
@@ -922,7 +922,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="ResponseSerializationFailedToParseResponse">
@@ -933,7 +933,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="SharedStorageNotNilKey">
@@ -944,7 +944,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenIdTokenExpired">
@@ -955,7 +955,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenIdTokenInvalidAud">
@@ -966,7 +966,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenIdTokenInvalidAzp">
@@ -977,7 +977,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenIdTokenInvalidSignature">
@@ -988,7 +988,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenIdTokenNotExistForLockingUserSession">
@@ -999,7 +999,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenInvalidIdToken">
@@ -1010,7 +1010,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="Unknown">
@@ -1021,7 +1021,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserAlreadyAuthenticated">
@@ -1032,7 +1032,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserBasicCredentialsNotValid">
@@ -1043,7 +1043,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserDoesNotExist">
@@ -1054,7 +1054,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserNotAuthenticated">
@@ -1065,7 +1065,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserSessionIsAlreadyLocked">
@@ -1076,7 +1076,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserSessionIsAlreadyUnlocked">
@@ -1087,7 +1087,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserSessionIsCurrentlyLocked">
@@ -1098,7 +1098,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The enumerated error codes for Foundation level NSErrors.</summary>
       </Docs>
     </Member>
   </Members>

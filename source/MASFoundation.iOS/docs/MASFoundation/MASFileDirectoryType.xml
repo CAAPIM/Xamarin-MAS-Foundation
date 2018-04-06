@@ -8,7 +8,7 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>Enumerated MASFileDirectoryType that indicates which directory to store MASFile into.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -20,7 +20,7 @@
         <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Application Support directory in the application package.</summary>
       </Docs>
     </Member>
     <Member MemberName="CachesDirectory">
@@ -31,7 +31,7 @@
         <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Cache directory in the application package.</summary>
       </Docs>
     </Member>
     <Member MemberName="Documents">
@@ -42,7 +42,7 @@
         <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Documents directory in the application package.</summary>
       </Docs>
     </Member>
     <Member MemberName="Library">
@@ -53,7 +53,7 @@
         <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Library directory in the application package.</summary>
       </Docs>
     </Member>
     <Member MemberName="Temporary">
@@ -64,7 +64,7 @@
         <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Temporary directory in the application package.</summary>
       </Docs>
     </Member>
   </Members>

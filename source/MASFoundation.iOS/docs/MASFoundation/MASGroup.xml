@@ -14,7 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>The MASGroup class is a local representation of group data.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -73,8 +73,8 @@
         <Parameter Name="info" Type="Foundation.NSDictionary" />
       </Parameters>
       <Docs>
-        <param name="info">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="info">NSDictionary to be used as attributes</param>
+        <summary>Init the object with passed attributes in a form of NSDictionary</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -140,8 +140,9 @@
         <ReturnType>MASFoundation.MASGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Create a instance of the MASGroup object</summary>
+        <value>group</value>
+        <returns>The instance of a new MASGroup object</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -161,8 +162,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Group Name</summary>
+        <value>groupName</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -182,8 +183,8 @@
         <ReturnType>Foundation.NSArray[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Group Members</summary>
+        <value>members</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -203,8 +204,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Group Owner</summary>
+        <value>owner</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
