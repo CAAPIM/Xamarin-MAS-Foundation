@@ -20,7 +20,7 @@
         <ReturnType>MASFoundation.MASGrantFlow</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>The client credentials grant flow./summary>
+        <summary>The client credentials grant flow.</summary>
       </Docs>
     </Member>
     <Member MemberName="Count">
