@@ -1,6 +1,6 @@
-<Type Name="MASResult" FullName="MASFoundation.MASResult">
-  <TypeSignature Language="C#" Value="public class MASResult" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASResult extends System.Object" />
+<Type Name="MASResultInvokeAPI" FullName="MASFoundation.MASResultInvokeAPI">
+  <TypeSignature Language="C#" Value="public class MASResultInvokeAPI" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASResultInvokeAPI extends System.Object" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
   </AssemblyInfo>
@@ -14,7 +14,7 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public MASResult (Foundation.NSHttpUrlResponse response, Foundation.NSObject responseObject);" />
+      <MemberSignature Language="C#" Value="public MASResultInvokeAPI (Foundation.NSHttpUrlResponse response, Foundation.NSObject responseObject);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSHttpUrlResponse response, class Foundation.NSObject responseObject) cil managed" />
       <MemberType>Constructor</MemberType>
       <Parameters>

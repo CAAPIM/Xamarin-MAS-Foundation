@@ -11,6 +11,20 @@ using WebKit;
 
 namespace MASFoundation
 {
+    /// 
+    /// This API includes all features available in the native iOS SDK. Howerver, in this first realease only a subset of the features are available:
+    /// 
+    /// Authentication and Authorization, limited to:
+    ///     Device Registration
+    ///     User login and client credentials
+    ///     Fingerprint session lock
+    ///     Single Sign-on
+    /// Securely access to APIs
+    /// Shared Storage
+    /// 
+    /// All non-supported features are commented out. If you decide to uncomment and use those fetures, do it at your own risk
+    /// 
+
     // typedef void (^MASCompletionErrorBlock)(BOOL, NSError * _Nullable);
     delegate void MASCompletionErrorBlock(bool completed, [NullAllowed] NSError error);
 
@@ -35,17 +49,17 @@ namespace MASFoundation
     // typedef void (^MASUserAuthCredentialsBlock)(MASAuthCredentialsBlock _Nonnull);
     delegate void MASUserAuthCredentialsBlock([BlockCallback] MASAuthCredentialsBlock authCredentialBlock);
 
-    // typedef void (^MASOTPGenerationBlock)(NSArray * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
-    delegate void MASOTPGenerationBlock(NSObject[] otpChannels, bool cancel, [BlockCallback, NullAllowed] MASCompletionErrorBlock completionBlock);
+    //// typedef void (^MASOTPGenerationBlock)(NSArray * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
+    //delegate void MASOTPGenerationBlock(NSObject[] otpChannels, bool cancel, [BlockCallback, NullAllowed] MASCompletionErrorBlock completionBlock);
 
-    // typedef void (^MASOTPFetchCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
-    delegate void MASOTPFetchCredentialsBlock(string oneTimePassword, bool cancel, [BlockCallback, NullAllowed] MASCompletionErrorBlock completionBlock);
+    //// typedef void (^MASOTPFetchCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
+    //delegate void MASOTPFetchCredentialsBlock(string oneTimePassword, bool cancel, [BlockCallback, NullAllowed] MASCompletionErrorBlock completionBlock);
 
-    // typedef void (^MASOTPChannelSelectionBlock)(NSArray * _Nonnull, MASOTPGenerationBlock _Nonnull);
-    delegate void MASOTPChannelSelectionBlock(NSObject[] supportedOTPChannels, [BlockCallback] MASOTPGenerationBlock otpBotpGenerationBlocklock);
+    //// typedef void (^MASOTPChannelSelectionBlock)(NSArray * _Nonnull, MASOTPGenerationBlock _Nonnull);
+    //delegate void MASOTPChannelSelectionBlock(NSObject[] supportedOTPChannels, [BlockCallback] MASOTPGenerationBlock otpBotpGenerationBlocklock);
 
-    // typedef void (^MASOTPCredentialsBlock)(MASOTPFetchCredentialsBlock _Nonnull, NSError * _Nullable);
-    delegate void MASOTPCredentialsBlock([BlockCallback] MASOTPFetchCredentialsBlock otpBlock, [NullAllowed] NSError error);
+    //// typedef void (^MASOTPCredentialsBlock)(MASOTPFetchCredentialsBlock _Nonnull, NSError * _Nullable);
+    //delegate void MASOTPCredentialsBlock([BlockCallback] MASOTPFetchCredentialsBlock otpBlock, [NullAllowed] NSError error);
 
     // typedef void (^MASBiometricModalitiesBlock)(NSArray * _Nullable, BOOL, MASCompletionErrorBlock _Nullable);
     delegate void MASBiometricModalitiesBlock([NullAllowed] NSObject[] biometricModalities, bool cancel, [NullAllowed] MASCompletionErrorBlock completionBlock);
@@ -266,29 +280,29 @@ namespace MASFoundation
         //NSString MASGatewayMonitorStatusUpdateNotification { get; }
     }
 
-    // @protocol MASProximityLoginDelegate <NSObject>
-    //[Protocol, Model]
-    [BaseType(typeof(NSObject))]
-    [Model]
-    interface MASProximityLoginDelegate
-    {
-        // @required -(void)handleBLEProximityLoginUserConsent:(MASCompletionErrorBlock _Nullable)completion deviceName:(NSString * _Nonnull)deviceName;
-        [Abstract]
-        [Export("handleBLEProximityLoginUserConsent:deviceName:")]
-        void HandleBLEProximityLoginUserConsent([NullAllowed] MASCompletionErrorBlock completion, string deviceName);
+    //// @protocol MASProximityLoginDelegate <NSObject>
+    ////[Protocol, Model]
+    //[BaseType(typeof(NSObject))]
+    //[Model]
+    //interface MASProximityLoginDelegate
+    //{
+    //    // @required -(void)handleBLEProximityLoginUserConsent:(MASCompletionErrorBlock _Nullable)completion deviceName:(NSString * _Nonnull)deviceName;
+    //    [Abstract]
+    //    [Export("handleBLEProximityLoginUserConsent:deviceName:")]
+    //    void HandleBLEProximityLoginUserConsent([NullAllowed] MASCompletionErrorBlock completion, string deviceName);
 
-        // @optional -(void)didReceiveAuthorizationCode:(NSString * _Nonnull)authorizationCode;
-        [Export("didReceiveAuthorizationCode:")]
-        void DidReceiveAuthorizationCode(string authorizationCode);
+    //    // @optional -(void)didReceiveAuthorizationCode:(NSString * _Nonnull)authorizationCode;
+    //    [Export("didReceiveAuthorizationCode:")]
+    //    void DidReceiveAuthorizationCode(string authorizationCode);
 
-        // @optional -(void)didReceiveBLEProximityLoginStateUpdate:(MASBLEServiceState)state;
-        [Export("didReceiveBLEProximityLoginStateUpdate:")]
-        void DidReceiveBLEProximityLoginStateUpdate(MASBLEServiceState state);
+    //    // @optional -(void)didReceiveBLEProximityLoginStateUpdate:(MASBLEServiceState)state;
+    //    [Export("didReceiveBLEProximityLoginStateUpdate:")]
+    //    void DidReceiveBLEProximityLoginStateUpdate(MASBLEServiceState state);
 
-        // @optional -(void)didReceiveProximityLoginError:(NSError * _Nonnull)error;
-        [Export("didReceiveProximityLoginError:")]
-        void DidReceiveProximityLoginError(NSError error);
-    }
+    //    // @optional -(void)didReceiveProximityLoginError:(NSError * _Nonnull)error;
+    //    [Export("didReceiveProximityLoginError:")]
+    //    void DidReceiveProximityLoginError(NSError error);
+    //}
 
     // @interface MASService : NSObject
     [BaseType(typeof(NSObject))]
@@ -391,282 +405,283 @@ namespace MASFoundation
         IntPtr Constructor(NSUrl url);
     }
 
-    // typedef void (^MQTTSubscriptionCompletionHandler)(NSArray * _Nonnull);
-    delegate void MQTTSubscriptionCompletionHandler(NSArray grantedQos);
 
-    // typedef void (^MQTTCompletionErrorBlock)(BOOL, NSError * _Nullable);
-    delegate void MQTTCompletionErrorBlock(bool completed, [NullAllowed] NSError error);
+    //// typedef void (^MQTTSubscriptionCompletionHandler)(NSArray * _Nonnull);
+    //delegate void MQTTSubscriptionCompletionHandler(NSArray grantedQos);
 
-    // typedef void (^MQTTSubscriptionCompletionBlock)(BOOL, NSError * _Nullable, NSArray * _Nonnull);
-    delegate void MQTTSubscriptionCompletionBlock(bool completed, [NullAllowed] NSError error, NSArray grantedQos);
+    //// typedef void (^MQTTCompletionErrorBlock)(BOOL, NSError * _Nullable);
+    //delegate void MQTTCompletionErrorBlock(bool completed, [NullAllowed] NSError error);
 
-    // typedef void (^MQTTPublishingCompletionBlock)(BOOL, NSError * _Nullable, int);
-    delegate void MQTTPublishingCompletionBlock(bool completed, [NullAllowed] NSError error, int mid);
+    //// typedef void (^MQTTSubscriptionCompletionBlock)(BOOL, NSError * _Nullable, NSArray * _Nonnull);
+    //delegate void MQTTSubscriptionCompletionBlock(bool completed, [NullAllowed] NSError error, NSArray grantedQos);
 
-    // typedef void (^MQTTMessageHandler)(MASMQTTMessage * _Nonnull);
-    delegate void MQTTMessageHandler(MASMQTTMessage message);
+    //// typedef void (^MQTTPublishingCompletionBlock)(BOOL, NSError * _Nullable, int);
+    //delegate void MQTTPublishingCompletionBlock(bool completed, [NullAllowed] NSError error, int mid);
 
-    // typedef void (^MQTTDisconnectionHandler)(NSUInteger);
-    delegate void MQTTDisconnectionHandler(nuint code);
+    //// typedef void (^MQTTMessageHandler)(MASMQTTMessage * _Nonnull);
+    //delegate void MQTTMessageHandler(MASMQTTMessage message);
+
+    //// typedef void (^MQTTDisconnectionHandler)(NSUInteger);
+    //delegate void MQTTDisconnectionHandler(nuint code);
 
     // @interface MASMQTTMessage : NSObject <NSCoding>
-    [BaseType(typeof(NSObject))]
-    interface MASMQTTMessage : INSCoding
-    {
-        // @property (readonly, assign) unsigned short mid;
-        [Export("mid")]
-        ushort Mid { get; }
+    //[BaseType(typeof(NSObject))]
+    //interface MASMQTTMessage : INSCoding
+    //{
+    //    // @property (readonly, assign) unsigned short mid;
+    //    [Export("mid")]
+    //    ushort Mid { get; }
 
-        // @property (readonly, copy) NSString * _Nonnull topic;
-        [Export("topic")]
-        string Topic { get; }
+    //    // @property (readonly, copy) NSString * _Nonnull topic;
+    //    [Export("topic")]
+    //    string Topic { get; }
 
-        // @property (readonly, copy) NSData * _Nonnull payload;
-        [Export("payload", ArgumentSemantic.Copy)]
-        NSData Payload { get; }
+    //    // @property (readonly, copy) NSData * _Nonnull payload;
+    //    [Export("payload", ArgumentSemantic.Copy)]
+    //    NSData Payload { get; }
 
-        // @property (readonly, assign) MQTTQualityOfService qos;
-        [Export("qos", ArgumentSemantic.Assign)]
-        MQTTQualityOfService Qos { get; }
+    //    // @property (readonly, assign) MQTTQualityOfService qos;
+    //    [Export("qos", ArgumentSemantic.Assign)]
+    //    MQTTQualityOfService Qos { get; }
 
-        // @property (readonly, assign) BOOL retained;
-        [Export("retained")]
-        bool Retained { get; }
+    //    // @property (readonly, assign) BOOL retained;
+    //    [Export("retained")]
+    //    bool Retained { get; }
 
-        // -(NSString * _Nonnull)payloadString;
-        [Export("payloadString")]
-        //[Verify(MethodToProperty)]
-        string PayloadString { get; }
+    //    // -(NSString * _Nonnull)payloadString;
+    //    [Export("payloadString")]
+    //    //[Verify(MethodToProperty)]
+    //    string PayloadString { get; }
 
-        // -(UIImage * _Nonnull)payloadImage;
-        [Export("payloadImage")]
-        //[Verify(MethodToProperty)]
-        UIImage PayloadImage { get; }
+    //    // -(UIImage * _Nonnull)payloadImage;
+    //    [Export("payloadImage")]
+    //    //[Verify(MethodToProperty)]
+    //    UIImage PayloadImage { get; }
 
-        // -(id _Nonnull)initWithTopic:(NSString * _Nonnull)topic payload:(NSData * _Nonnull)payload qos:(MQTTQualityOfService)qos retain:(BOOL)retained mid:(short)mid;
-        [Export("initWithTopic:payload:qos:retain:mid:")]
-        IntPtr Constructor(string topic, NSData payload, MQTTQualityOfService qos, bool retained, short mid);
-    }
+    //    // -(id _Nonnull)initWithTopic:(NSString * _Nonnull)topic payload:(NSData * _Nonnull)payload qos:(MQTTQualityOfService)qos retain:(BOOL)retained mid:(short)mid;
+    //    [Export("initWithTopic:payload:qos:retain:mid:")]
+    //    IntPtr Constructor(string topic, NSData payload, MQTTQualityOfService qos, bool retained, short mid);
+    //}
 
-    // @protocol MASConnectaMessagingClientDelegate <NSObject>
-    //[Protocol, Model]
-    [BaseType(typeof(NSObject))]
-    [Model]
-    interface MASConnectaMessagingClientDelegate
-    {
-        // @required -(void)onMessageReceived:(MASMQTTMessage * _Nonnull)message;
-        [Abstract]
-        [Export("onMessageReceived:")]
-        void OnMessageReceived(MASMQTTMessage message);
+    //// @protocol MASConnectaMessagingClientDelegate <NSObject>
+    ////[Protocol, Model]
+    //[BaseType(typeof(NSObject))]
+    //[Model]
+    //interface MASConnectaMessagingClientDelegate
+    //{
+    //    // @required -(void)onMessageReceived:(MASMQTTMessage * _Nonnull)message;
+    //    [Abstract]
+    //    [Export("onMessageReceived:")]
+    //    void OnMessageReceived(MASMQTTMessage message);
 
-        // @required -(void)onPublishMessage:(NSNumber * _Nonnull)messageId;
-        [Abstract]
-        [Export("onPublishMessage:")]
-        void OnPublishMessage(NSNumber messageId);
+    //    // @required -(void)onPublishMessage:(NSNumber * _Nonnull)messageId;
+    //    [Abstract]
+    //    [Export("onPublishMessage:")]
+    //    void OnPublishMessage(NSNumber messageId);
 
-        // @required -(void)onConnected:(MQTTConnectionReturnCode)rc;
-        [Abstract]
-        [Export("onConnected:")]
-        void OnConnected(MQTTConnectionReturnCode rc);
+    //    // @required -(void)onConnected:(MQTTConnectionReturnCode)rc;
+    //    [Abstract]
+    //    [Export("onConnected:")]
+    //    void OnConnected(MQTTConnectionReturnCode rc);
 
-        // @required -(void)onDisconnect:(MQTTConnectionReturnCode)rc;
-        [Abstract]
-        [Export("onDisconnect:")]
-        void OnDisconnect(MQTTConnectionReturnCode rc);
-    }
+    //    // @required -(void)onDisconnect:(MQTTConnectionReturnCode)rc;
+    //    [Abstract]
+    //    [Export("onDisconnect:")]
+    //    void OnDisconnect(MQTTConnectionReturnCode rc);
+    //}
 
-    // @interface MASMQTTClient : NSObject
-    [BaseType(typeof(NSObject))]
-    interface MASMQTTClient
-    {
-        [Wrap("WeakDelegate")]
-        [NullAllowed]
-        MASConnectaMessagingClientDelegate Delegate { get; set; }
+    //// @interface MASMQTTClient : NSObject
+    //[BaseType(typeof(NSObject))]
+    //interface MASMQTTClient
+    //{
+    //    [Wrap("WeakDelegate")]
+    //    [NullAllowed]
+    //    MASConnectaMessagingClientDelegate Delegate { get; set; }
 
-        // @property (nonatomic, weak) id<MASConnectaMessagingClientDelegate> _Nullable delegate;
-        [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
-        NSObject WeakDelegate { get; set; }
+    //    // @property (nonatomic, weak) id<MASConnectaMessagingClientDelegate> _Nullable delegate;
+    //    [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
+    //    NSObject WeakDelegate { get; set; }
 
-        // @property (readonly, assign, nonatomic) BOOL connected;
-        [Export("connected")]
-        bool Connected { get; }
+    //    // @property (readonly, assign, nonatomic) BOOL connected;
+    //    [Export("connected")]
+    //    bool Connected { get; }
 
-        // @property (copy, nonatomic) MQTTMessageHandler _Nonnull messageHandler;
-        [Export("messageHandler", ArgumentSemantic.Copy)]
-        MQTTMessageHandler MessageHandler { get; set; }
+    //    // @property (copy, nonatomic) MQTTMessageHandler _Nonnull messageHandler;
+    //    [Export("messageHandler", ArgumentSemantic.Copy)]
+    //    MQTTMessageHandler MessageHandler { get; set; }
 
-        // @property (copy, nonatomic) MQTTDisconnectionHandler _Nonnull disconnectionHandler;
-        [Export("disconnectionHandler", ArgumentSemantic.Copy)]
-        MQTTDisconnectionHandler DisconnectionHandler { get; set; }
+    //    // @property (copy, nonatomic) MQTTDisconnectionHandler _Nonnull disconnectionHandler;
+    //    [Export("disconnectionHandler", ArgumentSemantic.Copy)]
+    //    MQTTDisconnectionHandler DisconnectionHandler { get; set; }
 
-        // @property (assign, nonatomic) BOOL debugMode;
-        [Export("debugMode")]
-        bool DebugMode { get; set; }
+    //    // @property (assign, nonatomic) BOOL debugMode;
+    //    [Export("debugMode")]
+    //    bool DebugMode { get; set; }
 
-        // @property (readwrite, copy) NSString * _Nonnull clientID;
-        [Export("clientID")]
-        string ClientID { get; set; }
+    //    // @property (readwrite, copy) NSString * _Nonnull clientID;
+    //    [Export("clientID")]
+    //    string ClientID { get; set; }
 
-        // +(instancetype _Nonnull)sharedClient;
-        [Static]
-        [Export("sharedClient")]
-        MASMQTTClient SharedClient();
+    //    // +(instancetype _Nonnull)sharedClient;
+    //    [Static]
+    //    [Export("sharedClient")]
+    //    MASMQTTClient SharedClient();
 
-        // -(MASMQTTClient * _Nonnull)initWithClientId:(NSString * _Nonnull)clientId cleanSession:(BOOL)cleanSession;
-        [Export("initWithClientId:cleanSession:")]
-        IntPtr Constructor(string clientId, bool cleanSession);
+    //    // -(MASMQTTClient * _Nonnull)initWithClientId:(NSString * _Nonnull)clientId cleanSession:(BOOL)cleanSession;
+    //    [Export("initWithClientId:cleanSession:")]
+    //    IntPtr Constructor(string clientId, bool cleanSession);
 
-        // -(void)setUsername:(NSString * _Nonnull)username Password:(NSString * _Nonnull)password;
-        [Export("setUsername:Password:")]
-        void SetUsername(string username, string password);
+    //    // -(void)setUsername:(NSString * _Nonnull)username Password:(NSString * _Nonnull)password;
+    //    [Export("setUsername:Password:")]
+    //    void SetUsername(string username, string password);
 
-        // -(void)clearWill;
-        [Export("clearWill")]
-        void ClearWill();
+    //    // -(void)clearWill;
+    //    [Export("clearWill")]
+    //    void ClearWill();
 
-        // -(void)setMessageRetry:(NSUInteger)seconds;
-        [Export("setMessageRetry:")]
-        void SetMessageRetry(nuint seconds);
+    //    // -(void)setMessageRetry:(NSUInteger)seconds;
+    //    [Export("setMessageRetry:")]
+    //    void SetMessageRetry(nuint seconds);
 
-        // -(void)setWill:(NSString * _Nonnull)payload toTopic:(NSString * _Nonnull)willTopic withQos:(MQTTQualityOfService)willQos retain:(BOOL)retain;
-        [Export("setWill:toTopic:withQos:retain:")]
-        void SetWill(string payload, string willTopic, MQTTQualityOfService willQos, bool retain);
+    //    // -(void)setWill:(NSString * _Nonnull)payload toTopic:(NSString * _Nonnull)willTopic withQos:(MQTTQualityOfService)willQos retain:(BOOL)retain;
+    //    [Export("setWill:toTopic:withQos:retain:")]
+    //    void SetWill(string payload, string willTopic, MQTTQualityOfService willQos, bool retain);
 
-        // +(NSString * _Nonnull)version;
-        [Static]
-        [Export("version")]
-        //[Verify(MethodToProperty)]
-        string Version { get; }
+    //    // +(NSString * _Nonnull)version;
+    //    [Static]
+    //    [Export("version")]
+    //    //[Verify(MethodToProperty)]
+    //    string Version { get; }
 
-        // -(void)connectToHost:(NSString * _Nonnull)hostName completionHandler:(void (^ _Nonnull)(MQTTConnectionReturnCode))completionHandler;
-        [Export("connectToHost:completionHandler:")]
-        void ConnectToHost(string hostName, Action<MQTTConnectionReturnCode> completionHandler);
+    //    // -(void)connectToHost:(NSString * _Nonnull)hostName completionHandler:(void (^ _Nonnull)(MQTTConnectionReturnCode))completionHandler;
+    //    [Export("connectToHost:completionHandler:")]
+    //    void ConnectToHost(string hostName, Action<MQTTConnectionReturnCode> completionHandler);
 
-        // -(void)connectToHost:(NSString * _Nonnull)hostName withTLS:(BOOL)tls completionHandler:(void (^ _Nonnull)(MQTTConnectionReturnCode))completionHandler;
-        [Export("connectToHost:withTLS:completionHandler:")]
-        void ConnectToHost(string hostName, bool tls, Action<MQTTConnectionReturnCode> completionHandler);
+    //    // -(void)connectToHost:(NSString * _Nonnull)hostName withTLS:(BOOL)tls completionHandler:(void (^ _Nonnull)(MQTTConnectionReturnCode))completionHandler;
+    //    [Export("connectToHost:withTLS:completionHandler:")]
+    //    void ConnectToHost(string hostName, bool tls, Action<MQTTConnectionReturnCode> completionHandler);
 
-        // -(void)connectWithHost:(NSString * _Nonnull)hostName withPort:(int)port enableTLS:(BOOL)tls completionHandler:(void (^ _Nonnull)(MQTTConnectionReturnCode))completionHandler;
-        [Export("connectWithHost:withPort:enableTLS:completionHandler:")]
-        void ConnectWithHost(string hostName, int port, bool tls, Action<MQTTConnectionReturnCode> completionHandler);
+    //    // -(void)connectWithHost:(NSString * _Nonnull)hostName withPort:(int)port enableTLS:(BOOL)tls completionHandler:(void (^ _Nonnull)(MQTTConnectionReturnCode))completionHandler;
+    //    [Export("connectWithHost:withPort:enableTLS:completionHandler:")]
+    //    void ConnectWithHost(string hostName, int port, bool tls, Action<MQTTConnectionReturnCode> completionHandler);
 
-        // -(void)connectWithHost:(NSString * _Nonnull)hostName withPort:(int)port enableTLS:(BOOL)tls usingSSLCACert:(NSString * _Nonnull)certFile completionHandler:(void (^ _Nonnull)(MQTTConnectionReturnCode))completionHandler;
-        [Export("connectWithHost:withPort:enableTLS:usingSSLCACert:completionHandler:")]
-        void ConnectWithHost(string hostName, int port, bool tls, string certFile, Action<MQTTConnectionReturnCode> completionHandler);
+    //    // -(void)connectWithHost:(NSString * _Nonnull)hostName withPort:(int)port enableTLS:(BOOL)tls usingSSLCACert:(NSString * _Nonnull)certFile completionHandler:(void (^ _Nonnull)(MQTTConnectionReturnCode))completionHandler;
+    //    [Export("connectWithHost:withPort:enableTLS:usingSSLCACert:completionHandler:")]
+    //    void ConnectWithHost(string hostName, int port, bool tls, string certFile, Action<MQTTConnectionReturnCode> completionHandler);
 
-        // -(void)disconnectWithCompletionHandler:(MQTTDisconnectionHandler _Nonnull)completionHandler;
-        [Export("disconnectWithCompletionHandler:")]
-        void DisconnectWithCompletionHandler(MQTTDisconnectionHandler completionHandler);
+    //    // -(void)disconnectWithCompletionHandler:(MQTTDisconnectionHandler _Nonnull)completionHandler;
+    //    [Export("disconnectWithCompletionHandler:")]
+    //    void DisconnectWithCompletionHandler(MQTTDisconnectionHandler completionHandler);
 
-        // -(void)reconnect;
-        [Export("reconnect")]
-        void Reconnect();
+    //    // -(void)reconnect;
+    //    [Export("reconnect")]
+    //    void Reconnect();
 
-        // -(void)publishString:(NSString * _Nonnull)payload toTopic:(NSString * _Nonnull)topic withQos:(MQTTQualityOfService)qos retain:(BOOL)retain completionHandler:(void (^ _Nonnull)(int))completionHandler __attribute__((deprecated("Use the new publishString:toTopic:withQoS:retain:completion method instead.")));
-        [Export("publishString:toTopic:withQos:retain:completionHandler:")]
-        void PublishString(string payload, string topic, MQTTQualityOfService qos, bool retain, Action<int> completionHandler);
+    //    // -(void)publishString:(NSString * _Nonnull)payload toTopic:(NSString * _Nonnull)topic withQos:(MQTTQualityOfService)qos retain:(BOOL)retain completionHandler:(void (^ _Nonnull)(int))completionHandler __attribute__((deprecated("Use the new publishString:toTopic:withQoS:retain:completion method instead.")));
+    //    [Export("publishString:toTopic:withQos:retain:completionHandler:")]
+    //    void PublishString(string payload, string topic, MQTTQualityOfService qos, bool retain, Action<int> completionHandler);
 
-        // -(void)publishString:(NSString * _Nonnull)payload toTopic:(NSString * _Nonnull)topic withQos:(MQTTQualityOfService)qos retain:(BOOL)retain completion:(MQTTPublishingCompletionBlock _Nullable)completion;
-        [Export("publishString:toTopic:withQos:retain:completion:")]
-        void PublishString(string payload, string topic, MQTTQualityOfService qos, bool retain, [NullAllowed] MQTTPublishingCompletionBlock completion);
+    //    // -(void)publishString:(NSString * _Nonnull)payload toTopic:(NSString * _Nonnull)topic withQos:(MQTTQualityOfService)qos retain:(BOOL)retain completion:(MQTTPublishingCompletionBlock _Nullable)completion;
+    //    [Export("publishString:toTopic:withQos:retain:completion:")]
+    //    void PublishString(string payload, string topic, MQTTQualityOfService qos, bool retain, [NullAllowed] MQTTPublishingCompletionBlock completion);
 
-        // -(void)subscribeToTopic:(NSString * _Nonnull)topic withCompletionHandler:(MQTTSubscriptionCompletionHandler _Nonnull)completionHandler __attribute__((deprecated("Use the new subscribeToTopic:withCompletion method instead.")));
-        [Export("subscribeToTopic:withCompletionHandler:")]
-        void SubscribeToTopic(string topic, MQTTSubscriptionCompletionHandler completionHandler);
+    //    // -(void)subscribeToTopic:(NSString * _Nonnull)topic withCompletionHandler:(MQTTSubscriptionCompletionHandler _Nonnull)completionHandler __attribute__((deprecated("Use the new subscribeToTopic:withCompletion method instead.")));
+    //    [Export("subscribeToTopic:withCompletionHandler:")]
+    //    void SubscribeToTopic(string topic, MQTTSubscriptionCompletionHandler completionHandler);
 
-        // -(void)subscribeToTopic:(NSString * _Nonnull)topic withCompletion:(MQTTSubscriptionCompletionBlock _Nullable)completion;
-        [Export("subscribeToTopic:withCompletion:")]
-        void SubscribeToTopic(string topic, [NullAllowed] MQTTSubscriptionCompletionBlock completion);
+    //    // -(void)subscribeToTopic:(NSString * _Nonnull)topic withCompletion:(MQTTSubscriptionCompletionBlock _Nullable)completion;
+    //    [Export("subscribeToTopic:withCompletion:")]
+    //    void SubscribeToTopic(string topic, [NullAllowed] MQTTSubscriptionCompletionBlock completion);
 
-        // -(void)subscribeToTopic:(NSString * _Nonnull)topic withQos:(MQTTQualityOfService)qos completionHandler:(MQTTSubscriptionCompletionHandler _Nonnull)completionHandler __attribute__((deprecated("Use the new subscribeToTopic:withQos:completion method instead.")));
-        [Export("subscribeToTopic:withQos:completionHandler:")]
-        void SubscribeToTopic(string topic, MQTTQualityOfService qos, MQTTSubscriptionCompletionHandler completionHandler);
+    //    // -(void)subscribeToTopic:(NSString * _Nonnull)topic withQos:(MQTTQualityOfService)qos completionHandler:(MQTTSubscriptionCompletionHandler _Nonnull)completionHandler __attribute__((deprecated("Use the new subscribeToTopic:withQos:completion method instead.")));
+    //    [Export("subscribeToTopic:withQos:completionHandler:")]
+    //    void SubscribeToTopic(string topic, MQTTQualityOfService qos, MQTTSubscriptionCompletionHandler completionHandler);
 
-        // -(void)subscribeToTopic:(NSString * _Nonnull)topic withQos:(MQTTQualityOfService)qos completion:(MQTTSubscriptionCompletionBlock _Nullable)completion;
-        [Export("subscribeToTopic:withQos:completion:")]
-        void SubscribeToTopic(string topic, MQTTQualityOfService qos, [NullAllowed] MQTTSubscriptionCompletionBlock completion);
+    //    // -(void)subscribeToTopic:(NSString * _Nonnull)topic withQos:(MQTTQualityOfService)qos completion:(MQTTSubscriptionCompletionBlock _Nullable)completion;
+    //    [Export("subscribeToTopic:withQos:completion:")]
+    //    void SubscribeToTopic(string topic, MQTTQualityOfService qos, [NullAllowed] MQTTSubscriptionCompletionBlock completion);
 
-        // -(void)unsubscribeFromTopic:(NSString * _Nonnull)topic withCompletionHandler:(MQTTCompletionErrorBlock _Nullable)completionHandler;
-        [Export("unsubscribeFromTopic:withCompletionHandler:")]
-        void UnsubscribeFromTopic(string topic, [NullAllowed] MQTTCompletionErrorBlock completionHandler);
-    }
+    //    // -(void)unsubscribeFromTopic:(NSString * _Nonnull)topic withCompletionHandler:(MQTTCompletionErrorBlock _Nullable)completionHandler;
+    //    [Export("unsubscribeFromTopic:withCompletionHandler:")]
+    //    void UnsubscribeFromTopic(string topic, [NullAllowed] MQTTCompletionErrorBlock completionHandler);
+    //}
 
-    // @interface MASAuthenticationProvider : MASObject
-    [BaseType(typeof(MASObject))]
-    interface MASAuthenticationProvider
-    {
-        // @property (readonly, copy, nonatomic) NSString * _Nonnull identifier;
-        [Export("identifier", ArgumentSemantic.Copy)]
-        string Identifier { get; }
+    //// @interface MASAuthenticationProvider : MASObject
+    //[BaseType(typeof(MASObject))]
+    //interface MASAuthenticationProvider
+    //{
+    //    // @property (readonly, copy, nonatomic) NSString * _Nonnull identifier;
+    //    [Export("identifier", ArgumentSemantic.Copy)]
+    //    string Identifier { get; }
 
-        // @property (readonly, copy, nonatomic) NSURL * _Nonnull authenticationUrl;
-        [Export("authenticationUrl", ArgumentSemantic.Copy)]
-        NSUrl AuthenticationUrl { get; }
+    //    // @property (readonly, copy, nonatomic) NSURL * _Nonnull authenticationUrl;
+    //    [Export("authenticationUrl", ArgumentSemantic.Copy)]
+    //    NSUrl AuthenticationUrl { get; }
 
-        // @property (readonly, copy, nonatomic) NSUrl * _Nullable pollUrl;
-        [NullAllowed, Export("pollUrl", ArgumentSemantic.Copy)]
-        NSUrl PollUrl { get; }
+    //    // @property (readonly, copy, nonatomic) NSUrl * _Nullable pollUrl;
+    //    [NullAllowed, Export("pollUrl", ArgumentSemantic.Copy)]
+    //    NSUrl PollUrl { get; }
 
-        // -(id)isEnterprise;
-        [Export("isEnterprise")]
-        //[Verify(MethodToProperty)]
-        NSObject IsEnterprise { get; }
+    //    // -(id)isEnterprise;
+    //    [Export("isEnterprise")]
+    //    //[Verify(MethodToProperty)]
+    //    NSObject IsEnterprise { get; }
 
-        // -(id)isFacebook;
-        [Export("isFacebook")]
-        //[Verify(MethodToProperty)]
-        NSObject IsFacebook { get; }
+    //    // -(id)isFacebook;
+    //    [Export("isFacebook")]
+    //    //[Verify(MethodToProperty)]
+    //    NSObject IsFacebook { get; }
 
-        // -(id)isGoogle;
-        [Export("isGoogle")]
-        //[Verify(MethodToProperty)]
-        NSObject IsGoogle { get; }
+    //    // -(id)isGoogle;
+    //    [Export("isGoogle")]
+    //    //[Verify(MethodToProperty)]
+    //    NSObject IsGoogle { get; }
 
-        // -(id)isLinkedIn;
-        [Export("isLinkedIn")]
-        //[Verify(MethodToProperty)]
-        NSObject IsLinkedIn { get; }
+    //    // -(id)isLinkedIn;
+    //    [Export("isLinkedIn")]
+    //    //[Verify(MethodToProperty)]
+    //    NSObject IsLinkedIn { get; }
 
-        // -(id)isQrCode;
-        [Export("isQrCode")]
-        //[Verify(MethodToProperty)]
-        NSObject IsQrCode { get; }
+    //    // -(id)isQrCode;
+    //    [Export("isQrCode")]
+    //    //[Verify(MethodToProperty)]
+    //    NSObject IsQrCode { get; }
 
-        // -(id)isSalesforce;
-        [Export("isSalesforce")]
-        //[Verify(MethodToProperty)]
-        NSObject IsSalesforce { get; }
-    }
+    //    // -(id)isSalesforce;
+    //    [Export("isSalesforce")]
+    //    //[Verify(MethodToProperty)]
+    //    NSObject IsSalesforce { get; }
+    //}
 
-    // @interface MASAuthenticationProviders : MASObject
-    [BaseType(typeof(MASObject))]
-    interface MASAuthenticationProviders
-    {
-        // @property (readonly, copy, nonatomic) NSArray * _Nullable providers;
-        [NullAllowed, Export("providers", ArgumentSemantic.Copy)]
-        //[Verify(StronglyTypedNSArray)]
-        NSArray Providers { get; }
+    //// @interface MASAuthenticationProviders : MASObject
+    //[BaseType(typeof(MASObject))]
+    //interface MASAuthenticationProviders
+    //{
+    //    // @property (readonly, copy, nonatomic) NSArray * _Nullable providers;
+    //    [NullAllowed, Export("providers", ArgumentSemantic.Copy)]
+    //    //[Verify(StronglyTypedNSArray)]
+    //    NSArray Providers { get; }
 
-        // @property (readonly, copy, nonatomic) NSString * _Nullable idp;
-        [NullAllowed, Export("idp")]
-        string Idp { get; }
+    //    // @property (readonly, copy, nonatomic) NSString * _Nullable idp;
+    //    [NullAllowed, Export("idp")]
+    //    string Idp { get; }
 
-        // +(MASAuthenticationProviders * _Nullable)currentProviders;
-        [Static]
-        [NullAllowed, Export("currentProviders")]
-        //[Verify(MethodToProperty)]
-        MASAuthenticationProviders CurrentProviders { get; }
+    //    // +(MASAuthenticationProviders * _Nullable)currentProviders;
+    //    [Static]
+    //    [NullAllowed, Export("currentProviders")]
+    //    //[Verify(MethodToProperty)]
+    //    MASAuthenticationProviders CurrentProviders { get; }
 
-        // +(void)retrieveAuthenticationProvidersWithCompletion:(MASObjectResponseErrorBlock _Nullable)completion;
-        [Static]
-        [Export("retrieveAuthenticationProvidersWithCompletion:")]
-        void RetrieveAuthenticationProvidersWithCompletion([NullAllowed] MASObjectResponseErrorBlock completion);
+    //    // +(void)retrieveAuthenticationProvidersWithCompletion:(MASObjectResponseErrorBlock _Nullable)completion;
+    //    [Static]
+    //    [Export("retrieveAuthenticationProvidersWithCompletion:")]
+    //    void RetrieveAuthenticationProvidersWithCompletion([NullAllowed] MASObjectResponseErrorBlock completion);
 
-        // -(MASAuthenticationProvider * _Nullable)retrieveAuthenticationProviderForProximityLogin;
-        [NullAllowed, Export("retrieveAuthenticationProviderForProximityLogin")]
-        //[Verify(MethodToProperty)]
-        MASAuthenticationProvider RetrieveAuthenticationProviderForProximityLogin { get; }
-    }
+    //    // -(MASAuthenticationProvider * _Nullable)retrieveAuthenticationProviderForProximityLogin;
+    //    [NullAllowed, Export("retrieveAuthenticationProviderForProximityLogin")]
+    //    //[Verify(MethodToProperty)]
+    //    MASAuthenticationProvider RetrieveAuthenticationProviderForProximityLogin { get; }
+    //}
 
     // @protocol MASAuthorizationResponseDelegate <NSObject>
     //[Protocol, Model]
@@ -983,11 +998,11 @@ namespace MASFoundation
         [Export("isBeingAuthorized")]
         bool IsBeingAuthorized { get; set; }
 
-        // +(id<MASProximityLoginDelegate> _Nullable)proximityLoginDelegate;
-        // +(void)setProximityLoginDelegate:(id<MASProximityLoginDelegate> _Nonnull)delegate;
-        [Static]
-        [NullAllowed, Export("proximityLoginDelegate")]
-        MASProximityLoginDelegate ProximityLoginDelegate { get; set; }
+        //// +(id<MASProximityLoginDelegate> _Nullable)proximityLoginDelegate;
+        //// +(void)setProximityLoginDelegate:(id<MASProximityLoginDelegate> _Nonnull)delegate;
+        //[Static]
+        //[NullAllowed, Export("proximityLoginDelegate")]
+        //MASProximityLoginDelegate ProximityLoginDelegate { get; set; }
 
         // +(MASDevice * _Nullable)currentDevice;
         [Static]
@@ -1003,25 +1018,25 @@ namespace MASFoundation
         [Export("resetLocally")]
         void ResetLocally();
 
-        // -(void)startAsBluetoothPeripheral;
-        [Export("startAsBluetoothPeripheral")]
-        void StartAsBluetoothPeripheral();
+        //// -(void)startAsBluetoothPeripheral;
+        //[Export("startAsBluetoothPeripheral")]
+        //void StartAsBluetoothPeripheral();
 
-        // -(void)stopAsBluetoothPeripheral;
-        [Export("stopAsBluetoothPeripheral")]
-        void StopAsBluetoothPeripheral();
+        //// -(void)stopAsBluetoothPeripheral;
+        //[Export("stopAsBluetoothPeripheral")]
+        //void StopAsBluetoothPeripheral();
 
-        // -(void)startAsBluetoothCentral;
-        [Export("startAsBluetoothCentral")]
-        void StartAsBluetoothCentral();
+        //// -(void)startAsBluetoothCentral;
+        //[Export("startAsBluetoothCentral")]
+        //void StartAsBluetoothCentral();
 
-        // -(void)startAsBluetoothCentralWithAuthenticationProvider:(MASAuthenticationProvider * _Nonnull)provider;
-        [Export("startAsBluetoothCentralWithAuthenticationProvider:")]
-        void StartAsBluetoothCentralWithAuthenticationProvider(MASAuthenticationProvider provider);
+        //// -(void)startAsBluetoothCentralWithAuthenticationProvider:(MASAuthenticationProvider * _Nonnull)provider;
+        //[Export("startAsBluetoothCentralWithAuthenticationProvider:")]
+        //void StartAsBluetoothCentralWithAuthenticationProvider(MASAuthenticationProvider provider);
 
-        // -(void)stopAsBluetoothCentral;
-        [Export("stopAsBluetoothCentral")]
-        void StopAsBluetoothCentral();
+        //// -(void)stopAsBluetoothCentral;
+        //[Export("stopAsBluetoothCentral")]
+        //void StopAsBluetoothCentral();
     }
 
     // @interface MASFile : MASObject
@@ -1123,67 +1138,67 @@ namespace MASFoundation
         MASGroup Group { get; }
     }
 
-    // @interface MASProximityLogin : MASObject
-    [BaseType(typeof(MASObject))]
-    interface MASProximityLogin
-    {
-    }
+    //// @interface MASProximityLogin : MASObject
+    //[BaseType(typeof(MASObject))]
+    //interface MASProximityLogin
+    //{
+    //}
 
-    // @interface MASProximityLoginQRCode : MASProximityLogin
-    [BaseType(typeof(MASProximityLogin))]
-    interface MASProximityLoginQRCode
-    {
-        // @property (readonly, assign, nonatomic) NSNumber * _Nonnull pollingInterval;
-        [Export("pollingInterval", ArgumentSemantic.Assign)]
-        NSNumber PollingInterval { get; }
+    //// @interface MASProximityLoginQRCode : MASProximityLogin
+    //[BaseType(typeof(MASProximityLogin))]
+    //interface MASProximityLoginQRCode
+    //{
+    //    // @property (readonly, assign, nonatomic) NSNumber * _Nonnull pollingInterval;
+    //    [Export("pollingInterval", ArgumentSemantic.Assign)]
+    //    NSNumber PollingInterval { get; }
 
-        // @property (readonly, assign, nonatomic) NSNumber * _Nonnull pollingDelay;
-        [Export("pollingDelay", ArgumentSemantic.Assign)]
-        NSNumber PollingDelay { get; }
+    //    // @property (readonly, assign, nonatomic) NSNumber * _Nonnull pollingDelay;
+    //    [Export("pollingDelay", ArgumentSemantic.Assign)]
+    //    NSNumber PollingDelay { get; }
 
-        // @property (readonly, assign, nonatomic) NSNumber * _Nonnull pollingLimit;
-        [Export("pollingLimit", ArgumentSemantic.Assign)]
-        NSNumber PollingLimit { get; }
+    //    // @property (readonly, assign, nonatomic) NSNumber * _Nonnull pollingLimit;
+    //    [Export("pollingLimit", ArgumentSemantic.Assign)]
+    //    NSNumber PollingLimit { get; }
 
-        // @property (readonly, assign, nonatomic) int currentPollingCounter;
-        [Export("currentPollingCounter")]
-        int CurrentPollingCounter { get; }
+    //    // @property (readonly, assign, nonatomic) int currentPollingCounter;
+    //    [Export("currentPollingCounter")]
+    //    int CurrentPollingCounter { get; }
 
-        // @property (readonly, assign, nonatomic) BOOL isPolling;
-        [Export("isPolling")]
-        bool IsPolling { get; }
+    //    // @property (readonly, assign, nonatomic) BOOL isPolling;
+    //    [Export("isPolling")]
+    //    bool IsPolling { get; }
 
-        // @property (readonly, copy, nonatomic) NSString * _Nonnull authenticationUrl;
-        [Export("authenticationUrl")]
-        string AuthenticationUrl { get; }
+    //    // @property (readonly, copy, nonatomic) NSString * _Nonnull authenticationUrl;
+    //    [Export("authenticationUrl")]
+    //    string AuthenticationUrl { get; }
 
-        // @property (readonly, copy, nonatomic) NSString * _Nonnull pollUrl;
-        [Export("pollUrl")]
-        string PollUrl { get; }
+    //    // @property (readonly, copy, nonatomic) NSString * _Nonnull pollUrl;
+    //    [Export("pollUrl")]
+    //    string PollUrl { get; }
 
-        // -(instancetype _Nullable)initWithAuthenticationProvider:(MASAuthenticationProvider * _Nonnull)provider initialDelay:(NSNumber * _Nonnull)initDelay pollingInterval:(NSNumber * _Nonnull)pollingInterval pollingLimit:(NSNumber * _Nonnull)pollingLimit;
-        [Export("initWithAuthenticationProvider:initialDelay:pollingInterval:pollingLimit:")]
-        IntPtr Constructor(MASAuthenticationProvider provider, NSNumber initDelay, NSNumber pollingInterval, NSNumber pollingLimit);
+    //    // -(instancetype _Nullable)initWithAuthenticationProvider:(MASAuthenticationProvider * _Nonnull)provider initialDelay:(NSNumber * _Nonnull)initDelay pollingInterval:(NSNumber * _Nonnull)pollingInterval pollingLimit:(NSNumber * _Nonnull)pollingLimit;
+    //    [Export("initWithAuthenticationProvider:initialDelay:pollingInterval:pollingLimit:")]
+    //    IntPtr Constructor(MASAuthenticationProvider provider, NSNumber initDelay, NSNumber pollingInterval, NSNumber pollingLimit);
 
-        // -(instancetype _Nullable)initWithAuthenticationProvider:(MASAuthenticationProvider * _Nonnull)provider;
-        [Export("initWithAuthenticationProvider:")]
-        IntPtr Constructor(MASAuthenticationProvider provider);
+    //    // -(instancetype _Nullable)initWithAuthenticationProvider:(MASAuthenticationProvider * _Nonnull)provider;
+    //    [Export("initWithAuthenticationProvider:")]
+    //    IntPtr Constructor(MASAuthenticationProvider provider);
 
-        // -(UIImage * _Nullable)startDisplayingQRCodeImageForProximityLogin;
-        [NullAllowed, Export("startDisplayingQRCodeImageForProximityLogin")]
-        //[Verify(MethodToProperty)]
-        //UIImage StartDisplayingQRCodeImageForProximityLogin { get; }
-        UIImage StartDisplayingQRCodeImageForProximityLogin();
+    //    // -(UIImage * _Nullable)startDisplayingQRCodeImageForProximityLogin;
+    //    [NullAllowed, Export("startDisplayingQRCodeImageForProximityLogin")]
+    //    //[Verify(MethodToProperty)]
+    //    //UIImage StartDisplayingQRCodeImageForProximityLogin { get; }
+    //    UIImage StartDisplayingQRCodeImageForProximityLogin();
 
-        // -(void)stopDisplayingQRCodeImageForProximityLogin;
-        [Export("stopDisplayingQRCodeImageForProximityLogin")]
-        void StopDisplayingQRCodeImageForProximityLogin();
+    //    // -(void)stopDisplayingQRCodeImageForProximityLogin;
+    //    [Export("stopDisplayingQRCodeImageForProximityLogin")]
+    //    void StopDisplayingQRCodeImageForProximityLogin();
 
-        // +(void)authorizeAuthenticateUrl:(NSString * _Nonnull)authenticateUrl completion:(MASCompletionErrorBlock _Nullable)completion;
-        [Static]
-        [Export("authorizeAuthenticateUrl:completion:")]
-        void AuthorizeAuthenticateUrl(string authenticateUrl, [NullAllowed] MASCompletionErrorBlock completion);
-    }
+    //    // +(void)authorizeAuthenticateUrl:(NSString * _Nonnull)authenticateUrl completion:(MASCompletionErrorBlock _Nullable)completion;
+    //    [Static]
+    //    [Export("authorizeAuthenticateUrl:completion:")]
+    //    void AuthorizeAuthenticateUrl(string authenticateUrl, [NullAllowed] MASCompletionErrorBlock completion);
+    //}
 
     // @interface MASSharedStorage : MASObject
     [BaseType(typeof(MASObject))]
@@ -1217,49 +1232,49 @@ namespace MASFoundation
         void DeleteForKey(string key, [NullAllowed] out NSError error);
     }
 
-    // @protocol MASSocialLoginDelegate <NSObject>
-    //[Protocol, Model]
-    [BaseType(typeof(NSObject))]
-    [Model]
-    interface MASSocialLoginDelegate
-    {
-        // @required -(void)didReceiveAuthorizationCode:(NSString *)code __attribute__((deprecated("")));
-        [Abstract]
-        [Export("didReceiveAuthorizationCode:")]
-        void DidReceiveAuthorizationCode(string code);
+    //// @protocol MASSocialLoginDelegate <NSObject>
+    ////[Protocol, Model]
+    //[BaseType(typeof(NSObject))]
+    //[Model]
+    //interface MASSocialLoginDelegate
+    //{
+    //    // @required -(void)didReceiveAuthorizationCode:(NSString *)code __attribute__((deprecated("")));
+    //    [Abstract]
+    //    [Export("didReceiveAuthorizationCode:")]
+    //    void DidReceiveAuthorizationCode(string code);
 
-        // @optional -(void)didReceiveError:(NSError *)error __attribute__((deprecated("")));
-        [Export("didReceiveError:")]
-        void DidReceiveError(NSError error);
+    //    // @optional -(void)didReceiveError:(NSError *)error __attribute__((deprecated("")));
+    //    [Export("didReceiveError:")]
+    //    void DidReceiveError(NSError error);
 
-        // @optional -(void)didStartLoadingWebView __attribute__((deprecated("")));
-        [Export("didStartLoadingWebView")]
-        void DidStartLoadingWebView();
+    //    // @optional -(void)didStartLoadingWebView __attribute__((deprecated("")));
+    //    [Export("didStartLoadingWebView")]
+    //    void DidStartLoadingWebView();
 
-        // @optional -(void)didStopLoadingWebView __attribute__((deprecated("")));
-        [Export("didStopLoadingWebView")]
-        void DidStopLoadingWebView();
-    }
+    //    // @optional -(void)didStopLoadingWebView __attribute__((deprecated("")));
+    //    [Export("didStopLoadingWebView")]
+    //    void DidStopLoadingWebView();
+    //}
 
-    // @interface MASSocialLogin : MASObject
-    [BaseType(typeof(MASObject))]
-    interface MASSocialLogin
-    {
-        // @property (nonatomic, strong) MASAuthenticationProvider * provider __attribute__((deprecated("")));
-        [Export("provider", ArgumentSemantic.Strong)]
-        MASAuthenticationProvider Provider { get; set; }
+    //// @interface MASSocialLogin : MASObject
+    //[BaseType(typeof(MASObject))]
+    //interface MASSocialLogin
+    //{
+    //    // @property (nonatomic, strong) MASAuthenticationProvider * provider __attribute__((deprecated("")));
+    //    [Export("provider", ArgumentSemantic.Strong)]
+    //    MASAuthenticationProvider Provider { get; set; }
 
-        [Wrap("WeakDelegate")]
-        MASSocialLoginDelegate Delegate { get; set; }
+    //    [Wrap("WeakDelegate")]
+    //    MASSocialLoginDelegate Delegate { get; set; }
 
-        // @property (nonatomic, weak) id<MASSocialLoginDelegate> delegate __attribute__((deprecated("")));
-        [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
-        NSObject WeakDelegate { get; set; }
+    //    // @property (nonatomic, weak) id<MASSocialLoginDelegate> delegate __attribute__((deprecated("")));
+    //    [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
+    //    NSObject WeakDelegate { get; set; }
 
-        // -(instancetype)initWithAuthenticationProvider:(MASAuthenticationProvider *)provider webView:(WKWebView *)webView __attribute__((deprecated("")));
-        [Export("initWithAuthenticationProvider:webView:")]
-        IntPtr Constructor(MASAuthenticationProvider provider, WKWebView webView);
-    }
+    //    // -(instancetype)initWithAuthenticationProvider:(MASAuthenticationProvider *)provider webView:(WKWebView *)webView __attribute__((deprecated("")));
+    //    [Export("initWithAuthenticationProvider:webView:")]
+    //    IntPtr Constructor(MASAuthenticationProvider provider, WKWebView webView);
+    //}
 
     // @interface MASUser : MASObject
     [BaseType(typeof(MASObject))]
@@ -1349,25 +1364,25 @@ namespace MASFoundation
 
         // +(void)loginWithUserName:(NSString * _Nonnull)userName password:(NSString * _Nonnull)password completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultLoginWithUserName")]
         [Export("loginWithUserName:password:completion:")]
         void LoginWithUserName(string userName, string password, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithAuthorizationCode:(NSString * _Nonnull)authorizationCode completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultLoginWithAuthorizationCode")]
         [Export("loginWithAuthorizationCode:completion:")]
         void LoginWithAuthorizationCode(string authorizationCode, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithIdToken:(NSString * _Nonnull)idToken tokenType:(NSString * _Nonnull)tokenType completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultLoginWithIdToken")]
         [Export("loginWithIdToken:tokenType:completion:")]
         void LoginWithIdToken(string idToken, string tokenType, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithAuthCredentials:(MASAuthCredentials * _Nonnull)authCredentials completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultLoginWithAuthCredentials")]
         [Export("loginWithAuthCredentials:completion:")]
         void LoginWithAuthCredentials(MASAuthCredentials authCredentials, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1377,11 +1392,12 @@ namespace MASFoundation
         void InitializeBrowserBasedAuthenticationWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)requestUserInfoWithCompletion:(MASUserResponseErrorBlock _Nullable)completion;
+        [Async(ResultTypeName = "MASResultRequestUserInfo")]
         [Export("requestUserInfoWithCompletion:")]
         void RequestUserInfoWithCompletion([NullAllowed] MASUserResponseErrorBlock completion);
 
         // -(void)logoutWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultLogout")]
         [Export("logoutWithCompletion:")]
         void LogoutWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
     }
@@ -1410,60 +1426,60 @@ namespace MASFoundation
         bool IsEncrypted { get; }
     }
 
-    // @interface MASClaims : MASObject
-    [BaseType(typeof(MASObject))]
-    interface MASClaims
-    {
-        // @property (readwrite, nonatomic, strong) NSString * _Nullable iss;
-        [NullAllowed, Export("iss", ArgumentSemantic.Strong)]
-        string Iss { get; set; }
+    //// @interface MASClaims : MASObject
+    //[BaseType(typeof(MASObject))]
+    //interface MASClaims
+    //{
+    //    // @property (readwrite, nonatomic, strong) NSString * _Nullable iss;
+    //    [NullAllowed, Export("iss", ArgumentSemantic.Strong)]
+    //    string Iss { get; set; }
 
-        // @property (readwrite, nonatomic, strong) NSString * _Nullable aud;
-        [NullAllowed, Export("aud", ArgumentSemantic.Strong)]
-        string Aud { get; set; }
+    //    // @property (readwrite, nonatomic, strong) NSString * _Nullable aud;
+    //    [NullAllowed, Export("aud", ArgumentSemantic.Strong)]
+    //    string Aud { get; set; }
 
-        // @property (readwrite, nonatomic, strong) NSString * _Nullable sub;
-        [NullAllowed, Export("sub", ArgumentSemantic.Strong)]
-        string Sub { get; set; }
+    //    // @property (readwrite, nonatomic, strong) NSString * _Nullable sub;
+    //    [NullAllowed, Export("sub", ArgumentSemantic.Strong)]
+    //    string Sub { get; set; }
 
-        // @property (readwrite, nonatomic, strong) NSDate * _Nullable exp;
-        [NullAllowed, Export("exp", ArgumentSemantic.Strong)]
-        NSDate Exp { get; set; }
+    //    // @property (readwrite, nonatomic, strong) NSDate * _Nullable exp;
+    //    [NullAllowed, Export("exp", ArgumentSemantic.Strong)]
+    //    NSDate Exp { get; set; }
 
-        // @property (readwrite, nonatomic, strong) NSDate * _Nullable iat;
-        [NullAllowed, Export("iat", ArgumentSemantic.Strong)]
-        NSDate Iat { get; set; }
+    //    // @property (readwrite, nonatomic, strong) NSDate * _Nullable iat;
+    //    [NullAllowed, Export("iat", ArgumentSemantic.Strong)]
+    //    NSDate Iat { get; set; }
 
-        // @property (readwrite, nonatomic, strong) NSDate * _Nullable nbf;
-        [NullAllowed, Export("nbf", ArgumentSemantic.Strong)]
-        NSDate Nbf { get; set; }
+    //    // @property (readwrite, nonatomic, strong) NSDate * _Nullable nbf;
+    //    [NullAllowed, Export("nbf", ArgumentSemantic.Strong)]
+    //    NSDate Nbf { get; set; }
 
-        // @property (readwrite, nonatomic, strong) NSString * _Nullable jti;
-        [NullAllowed, Export("jti", ArgumentSemantic.Strong)]
-        string Jti { get; set; }
+    //    // @property (readwrite, nonatomic, strong) NSString * _Nullable jti;
+    //    [NullAllowed, Export("jti", ArgumentSemantic.Strong)]
+    //    string Jti { get; set; }
 
-        // @property (readwrite, nonatomic, strong) id _Nullable content;
-        [NullAllowed, Export("content", ArgumentSemantic.Strong)]
-        NSObject Content { get; set; }
+    //    // @property (readwrite, nonatomic, strong) id _Nullable content;
+    //    [NullAllowed, Export("content", ArgumentSemantic.Strong)]
+    //    NSObject Content { get; set; }
 
-        // @property (readwrite, nonatomic, strong) NSString * _Nullable contentType;
-        [NullAllowed, Export("contentType", ArgumentSemantic.Strong)]
-        string ContentType { get; set; }
+    //    // @property (readwrite, nonatomic, strong) NSString * _Nullable contentType;
+    //    [NullAllowed, Export("contentType", ArgumentSemantic.Strong)]
+    //    string ContentType { get; set; }
 
-        // @property (readonly, nonatomic, strong) NSMutableDictionary * _Nullable customClaims;
-        [NullAllowed, Export("customClaims", ArgumentSemantic.Strong)]
-        NSMutableDictionary CustomClaims { get; }
+    //    // @property (readonly, nonatomic, strong) NSMutableDictionary * _Nullable customClaims;
+    //    [NullAllowed, Export("customClaims", ArgumentSemantic.Strong)]
+    //    NSMutableDictionary CustomClaims { get; }
 
-        // -(void)setValue:(id _Nonnull)value forClaimKey:(NSString * _Nonnull)claimKey error:(NSError * _Nullable * _Nullable)error;
-        [Export("setValue:forClaimKey:error:")]
-        void SetValue(NSObject value, string claimKey, [NullAllowed] out NSError error);
+    //    // -(void)setValue:(id _Nonnull)value forClaimKey:(NSString * _Nonnull)claimKey error:(NSError * _Nullable * _Nullable)error;
+    //    [Export("setValue:forClaimKey:error:")]
+    //    void SetValue(NSObject value, string claimKey, [NullAllowed] out NSError error);
 
-        // +(MASClaims * _Nullable)claims;
-        [Static]
-        [NullAllowed, Export("claims")]
-        //[Verify(MethodToProperty)]
-        MASClaims Claims { get; }
-    }
+    //    // +(MASClaims * _Nullable)claims;
+    //    [Static]
+    //    [NullAllowed, Export("claims")]
+    //    //[Verify(MethodToProperty)]
+    //    MASClaims Claims { get; }
+    //}
 
     // @interface MASRequestBuilder : MASObject
     [BaseType(typeof(MASObject))]
@@ -1477,17 +1493,17 @@ namespace MASFoundation
         [Export("isPublic")]
         bool IsPublic { get; set; }
 
-        // @property (readonly, assign) BOOL sign;
-        [Export("sign")]
-        bool Sign { get; }
+        //// @property (readonly, assign) BOOL sign;
+        //[Export("sign")]
+        //bool Sign { get; }
 
         // @property (nonatomic, strong) NSString * _Nullable endPoint;
         [NullAllowed, Export("endPoint", ArgumentSemantic.Strong)]
         string EndPoint { get; set; }
 
-        // @property (readonly, nonatomic, strong) MASClaims * _Nullable claims;
-        [NullAllowed, Export("claims", ArgumentSemantic.Strong)]
-        MASClaims Claims { get; }
+        //// @property (readonly, nonatomic, strong) MASClaims * _Nullable claims;
+        //[NullAllowed, Export("claims", ArgumentSemantic.Strong)]
+        //MASClaims Claims { get; }
 
         // @property (readonly, nonatomic, strong) NSData * _Nullable privateKey;
         [NullAllowed, Export("privateKey", ArgumentSemantic.Strong)]
@@ -1524,17 +1540,17 @@ namespace MASFoundation
         //MASRequest Build { get; }
         MASRequest Build();
 
-        // -(void)setSignWithError:(NSError * _Nullable * _Nullable)error;
-        [Export("setSignWithError:")]
-        void SetSignWithError([NullAllowed] out NSError error);
+        //// -(void)setSignWithError:(NSError * _Nullable * _Nullable)error;
+        //[Export("setSignWithError:")]
+        //void SetSignWithError([NullAllowed] out NSError error);
 
-        // -(void)setSignWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
-        [Export("setSignWithClaims:error:")]
-        void SetSignWithClaims(MASClaims claims, [NullAllowed] out NSError error);
+        //// -(void)setSignWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
+        //[Export("setSignWithClaims:error:")]
+        //void SetSignWithClaims(MASClaims claims, [NullAllowed] out NSError error);
 
-        // -(void)setSignWithClaims:(MASClaims * _Nonnull)claims privateKey:(NSData * _Nonnull)privateKey error:(NSError * _Nullable * _Nullable)error;
-        [Export("setSignWithClaims:privateKey:error:")]
-        void SetSignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
+        //// -(void)setSignWithClaims:(MASClaims * _Nonnull)claims privateKey:(NSData * _Nonnull)privateKey error:(NSError * _Nullable * _Nullable)error;
+        //[Export("setSignWithClaims:privateKey:error:")]
+        //void SetSignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
     }
 
     // @interface MASRequest : MASObject
@@ -1549,9 +1565,9 @@ namespace MASFoundation
         [Export("isPublic")]
         bool IsPublic { get; }
 
-        // @property (readonly, assign) BOOL sign;
-        [Export("sign")]
-        bool Sign { get; }
+        //// @property (readonly, assign) BOOL sign;
+        //[Export("sign")]
+        //bool Sign { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nullable endPoint;
         [NullAllowed, Export("endPoint", ArgumentSemantic.Strong)]
@@ -1628,36 +1644,36 @@ namespace MASFoundation
         //[Verify(MethodToProperty)]
         MASGrantFlow GrantFlow { get; set; }
 
-        // +(void)enablePKCE:(BOOL)enable;
-        [Static]
-        [Export("enablePKCE:")]
-        void EnablePKCE(bool enable);
+        //// +(void)enablePKCE:(BOOL)enable;
+        //[Static]
+        //[Export("enablePKCE:")]
+        //void EnablePKCE(bool enable);
 
-        // +(BOOL)isPKCEEnabled;
-        [Static]
-        [Export("isPKCEEnabled")]
-        //[Verify(MethodToProperty)]
-        bool IsPKCEEnabled { get; }
+        //// +(BOOL)isPKCEEnabled;
+        //[Static]
+        //[Export("isPKCEEnabled")]
+        ////[Verify(MethodToProperty)]
+        //bool IsPKCEEnabled { get; }
 
         // +(void)setUserAuthCredentials:(MASUserAuthCredentialsBlock _Nullable)userAuthCredentialsBlock;
         [Static]
         [Export("setUserAuthCredentials:")]
         void SetUserAuthCredentials([NullAllowed] MASUserAuthCredentialsBlock userAuthCredentialsBlock);
 
-        // +(void)setOTPChannelSelectionBlock:(MASOTPChannelSelectionBlock _Nullable)OTPChannelSelector;
-        [Static]
-        [Export("setOTPChannelSelectionBlock:")]
-        void SetOTPChannelSelectionBlock([NullAllowed] MASOTPChannelSelectionBlock OTPChannelSelector);
+        //// +(void)setOTPChannelSelectionBlock:(MASOTPChannelSelectionBlock _Nullable)OTPChannelSelector;
+        //[Static]
+        //[Export("setOTPChannelSelectionBlock:")]
+        //void SetOTPChannelSelectionBlock([NullAllowed] MASOTPChannelSelectionBlock OTPChannelSelector);
 
-        // +(void)setOTPCredentialsBlock:(MASOTPCredentialsBlock _Nullable)oneTimePassword;
-        [Static]
-        [Export("setOTPCredentialsBlock:")]
-        void SetOTPCredentialsBlock([NullAllowed] MASOTPCredentialsBlock oneTimePassword);
+        //// +(void)setOTPCredentialsBlock:(MASOTPCredentialsBlock _Nullable)oneTimePassword;
+        //[Static]
+        //[Export("setOTPCredentialsBlock:")]
+        //void SetOTPCredentialsBlock([NullAllowed] MASOTPCredentialsBlock oneTimePassword);
 
-        // +(void)enableBrowserBasedAuthentication:(BOOL)enable;
-        [Static]
-        [Export("enableBrowserBasedAuthentication:")]
-        void EnableBrowserBasedAuthentication(bool enable);
+        //// +(void)enableBrowserBasedAuthentication:(BOOL)enable;
+        //[Static]
+        //[Export("enableBrowserBasedAuthentication:")]
+        //void EnableBrowserBasedAuthentication(bool enable);
 
         // +(void)setGatewayMonitor:(MASGatewayMonitorStatusBlock _Nullable)monitor;
         [Static]
@@ -1686,31 +1702,31 @@ namespace MASFoundation
 
         // +(void)start:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultStart")]
         [Export("start:")]
         void Start([NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithDefaultConfiguration:(BOOL)shouldUseDefault completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultStartWithDefaultConfiguration")]
         [Export("startWithDefaultConfiguration:completion:")]
         void StartWithDefaultConfiguration(bool shouldUseDefault, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithJSON:(NSDictionary * _Nonnull)jsonConfiguration completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultStartWithJSON")]
         [Export("startWithJSON:completion:")]
         void StartWithJSON(NSDictionary jsonConfiguration, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithURL:(NSURL * _Nullable)url completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultStartWithURL")]
         [Export("startWithURL:completion:")]
         void StartWithURL([NullAllowed] NSUrl url, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)stop:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultStop")]
         [Export("stop:")]
         void Stop([NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1728,96 +1744,111 @@ namespace MASFoundation
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultDeleteFrom")]
         [Export("deleteFrom:withParameters:andHeaders:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultDeleteFrom")]
         [Export("deleteFrom:withParameters:andHeaders:requestType:responseType:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultDeleteFrom")]
         [Export("deleteFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultGetFrom")]
         [Export("getFrom:withParameters:andHeaders:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultGetFrom")]
         [Export("getFrom:withParameters:andHeaders:requestType:responseType:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultGetFrom")]
         [Export("getFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultPatchTo")]
         [Export("patchTo:withParameters:andHeaders:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultPatchTo")]
         [Export("patchTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultPatchTo")]
         [Export("patchTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultPostTo")]
         [Export("postTo:withParameters:andHeaders:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultPostTo")]
         [Export("postTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultPostTo")]
         [Export("postTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultPutTo")]
         [Export("putTo:withParameters:andHeaders:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultPutTo")]
         [Export("putTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
+        [Async(ResultTypeName = "MASResultPutTo")]
         [Export("putTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)invoke:(MASRequest * _Nonnull)request completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResult")]
+        [Async(ResultTypeName = "MASResultInvokeAPI")]
         [Export("invoke:completion:")]
         void Invoke(MASRequest request, [NullAllowed] MASResponseObjectErrorBlock completion);
 
-        // +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
-        [Static]
-        [Export("signWithClaims:error:")]
-        [return: NullAllowed]
-        string SignWithClaims(MASClaims claims, [NullAllowed] out NSError error);
+        //// +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
+        //[Static]
+        //[Export("signWithClaims:error:")]
+        //[return: NullAllowed]
+        //string SignWithClaims(MASClaims claims, [NullAllowed] out NSError error);
 
-        // +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims privateKey:(NSData * _Nonnull)privateKey error:(NSError * _Nullable * _Nullable)error;
-        [Static]
-        [Export("signWithClaims:privateKey:error:")]
-        [return: NullAllowed]
-        string SignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
+        //// +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims privateKey:(NSData * _Nonnull)privateKey error:(NSError * _Nullable * _Nullable)error;
+        //[Static]
+        //[Export("signWithClaims:privateKey:error:")]
+        //[return: NullAllowed]
+        //string SignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
 
         // +(void)setUserLoginBlock:(MASUserLoginWithUserCredentialsBlock _Nullable)login __attribute__((deprecated("[MAS setUserLoginBlock:] is deprecated as of MAS 1.5. Use [MAS setAuthCredentials:] instead.")));
         [Static]
@@ -1897,9 +1928,9 @@ namespace MASFoundation
         [Export("authenticationStatus", ArgumentSemantic.Assign)]
         MASAuthenticationStatus AuthenticationStatus { get; }
 
-        [Wrap("WeakDelegate")]
-        [NullAllowed]
-        MASEnterpriseAppProtocol Delegate { get; set; }
+        //[Wrap("WeakDelegate")]
+        //[NullAllowed]
+        //MASEnterpriseAppProtocol Delegate { get; set; }
 
         // @property id<MASEnterpriseAppProtocol> _Nullable delegate;
         [NullAllowed, Export("delegate", ArgumentSemantic.Assign)]
@@ -1911,34 +1942,34 @@ namespace MASFoundation
         MASApplication CurrentApplication { get; }
 
         // -(void)retrieveEnterpriseApps:(MASObjectsResponseErrorBlock _Nullable)completion;
-        [Export("retrieveEnterpriseApps:")]
-        void RetrieveEnterpriseApps([NullAllowed] MASObjectsResponseErrorBlock completion);
+        //[Export("retrieveEnterpriseApps:")]
+        //void RetrieveEnterpriseApps([NullAllowed] MASObjectsResponseErrorBlock completion);
 
-        // -(void)enterpriseIconWithImageView:(UIImageView * _Nonnull)imageView completion:(MASCompletionErrorBlock _Nullable)completion;
-        [Export("enterpriseIconWithImageView:completion:")]
-        void EnterpriseIconWithImageView(UIImageView imageView, [NullAllowed] MASCompletionErrorBlock completion);
+        //// -(void)enterpriseIconWithImageView:(UIImageView * _Nonnull)imageView completion:(MASCompletionErrorBlock _Nullable)completion;
+        //[Export("enterpriseIconWithImageView:completion:")]
+        //void EnterpriseIconWithImageView(UIImageView imageView, [NullAllowed] MASCompletionErrorBlock completion);
 
-        // -(void)loadWebApp:(UIWebView * _Nonnull)webView completion:(MASCompletionErrorBlock _Nullable)completion;
-        [Export("loadWebApp:completion:")]
-        void LoadWebApp(UIWebView webView, [NullAllowed] MASCompletionErrorBlock completion);
+        //// -(void)loadWebApp:(UIWebView * _Nonnull)webView completion:(MASCompletionErrorBlock _Nullable)completion;
+        //[Export("loadWebApp:completion:")]
+        //void LoadWebApp(UIWebView webView, [NullAllowed] MASCompletionErrorBlock completion);
     }
 
-    // @protocol MASEnterpriseAppProtocol <NSObject>
-    //[Protocol, Model]
-    [BaseType(typeof(NSObject))]
-    [Model]
-    interface MASEnterpriseAppProtocol
-    {
-        // @required -(void)enterpriseWebApp:(MASApplication * _Nonnull)app;
-        [Abstract]
-        [Export("enterpriseWebApp:")]
-        void EnterpriseWebApp(MASApplication app);
+    //// @protocol MASEnterpriseAppProtocol <NSObject>
+    ////[Protocol, Model]
+    //[BaseType(typeof(NSObject))]
+    //[Model]
+    //interface MASEnterpriseAppProtocol
+    //{
+    //    // @required -(void)enterpriseWebApp:(MASApplication * _Nonnull)app;
+    //    [Abstract]
+    //    [Export("enterpriseWebApp:")]
+    //    void EnterpriseWebApp(MASApplication app);
 
-        // @required -(void)enterpriseApp:(MASApplication * _Nonnull)app didReceiveError:(NSError * _Nonnull)error;
-        [Abstract]
-        [Export("enterpriseApp:didReceiveError:")]
-        void EnterpriseApp(MASApplication app, NSError error);
-    }
+    //    // @required -(void)enterpriseApp:(MASApplication * _Nonnull)app didReceiveError:(NSError * _Nonnull)error;
+    //    [Abstract]
+    //    [Export("enterpriseApp:didReceiveError:")]
+    //    void EnterpriseApp(MASApplication app, NSError error);
+    //}
 
     // @interface MASAuthCredentials : MASObject
     [BaseType(typeof(MASObject))]
