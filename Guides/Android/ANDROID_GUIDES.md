@@ -15,6 +15,10 @@
 - [Requirements for CA Mobile API Gateway](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
 - Android 8.1.0 for new apps written in C#   
 
+::: alert info 
+**Note**: Our Mobile SDK is tested only on devices using an Android official version. If app users customize the device ROM, the SDK may not work as expected. 
+:::
+
 ## Create an App: Choose a Method
 
 | Get Started...                 | Benefits                                 |
@@ -1133,6 +1137,10 @@ This error means that the server security configuration in the MASSecurityConfig
 
 If you get invalid token, unauthorized, or other authentication errors, it may be due to a MAG server change.  Your Admin must change a client parameter (documented in the 4.0 Release Notes) to allow more than one token per user/client (default). Without making the server changes, the Mobile SDK will not allow the same user to log in to multiple apps instances.
 
+#### Errors on Specific Devices
+
+If you have SDK errors that are only occurring on specific devices, environments or settings, verify that the device users have a supported version of the platform. The Mobile SDK is tested only on devices using an official Android version. Next, verify that users have not customized the device ROM. When users customize the device ROM, the SDK can behave in unexpected ways. If either condition is true, users should upgrade to a supported version [Prerequisites](#prerequisites).
+
 #### Disable PKCE
 
 Proof Key for Code Exchange (PKCE) provides an extra layer of security for your app. It is enabled by default and works with proximity login. Your Admin does not need to enable the feature on the MAG server. In the enabled state, the Mobile SDK responds to authentication requests or not, based on the policy that is configured by your Admin using OAuth Toolkit. We recommend leaving this feature enabled. However, if you have a specific use case to disable it, go to Reference documentation and change the state: `MAS.enablePKCE(true);`
@@ -1144,6 +1152,7 @@ Proof Key for Code Exchange (PKCE) provides an extra layer of security for your 
 This error occurs when the sample app fails to connect to the MAG server. It is a MAG certificate configuration issue that must be resolved by your Admin. You may need an updated msso_config.json file.
 
 #### Cannot log in due to invalid mag-identifier
+
 This is a common issue that is caused by the following conditions:
 * The registration for the client Id already exists on the MAG Manager.
 * There is an application already installed with a different msso_config file.
