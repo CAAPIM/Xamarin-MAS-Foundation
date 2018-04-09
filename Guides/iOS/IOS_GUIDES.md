@@ -1,5 +1,5 @@
 
-## iOS Guides MASFoundation for Xamarin
+## iOS Mobile SDK for Xamarin
 
 **MASFoundation** is the core MAS framework that handles the communication and authentication layer. Quickly build secure Xamarin apps using these built-in features:
 
