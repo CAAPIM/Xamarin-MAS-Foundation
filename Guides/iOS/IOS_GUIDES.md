@@ -1077,7 +1077,7 @@ This error means that the server security configuration in the MASSecurityConfig
 
 ### Errors on Specific iOS Devices
 
-If you have SDK errors that are only occurring on specific iOS devices, environments or settings, verify that the device users have a supported version of the platform. The Mobile SDK is tested only on devices using official iOS platform versions. Next, verify that users have not jailbroken or unlocked the OS (rooted the device). When users tamper with the device in these ways, the SDK can behave in unexpected ways. If either condition is true, users should upgrade to [Supported Versions](#supported-versions).
+If you have SDK errors that are only occurring on specific iOS devices, environments or settings, verify that the device users have a supported version of the platform. The Mobile SDK is tested only on devices using official iOS platform versions. Next, verify that users have not jailbroken or unlocked the OS (rooted the device). When users tamper with the device in these ways, the SDK can behave in unexpected ways. If either condition is true, users should upgrade to [Support and Prerequisites](#support-and-prerequisites).
 
 ### General Errors
 
