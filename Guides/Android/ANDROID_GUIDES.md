@@ -10,7 +10,7 @@
   - Single Sign-On
 - Securely access protected APIs that are configured with OAuth 2.0
 
-## Prerequisites
+## Support and Prerequisites
 
 - [Requirements for CA Mobile API Gateway](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
 - Android 8.1.0 for new apps written in C#   
@@ -1139,7 +1139,7 @@ If you get invalid token, unauthorized, or other authentication errors, it may b
 
 #### Errors on Specific Devices
 
-If you have SDK errors that are only occurring on specific devices, environments or settings, verify that the device users have a supported version of the platform. The Mobile SDK is tested only on devices using an official Android version. Next, verify that users have not customized the device ROM. When users customize the device ROM, the SDK can behave in unexpected ways. If either condition is true, users should upgrade to a supported version [Prerequisites](#prerequisites).
+If you have SDK errors that are only occurring on specific devices, environments or settings, verify that the device users have a supported version of the platform. The Mobile SDK is tested only on devices using an official Android version. Next, verify that users have not customized the device ROM. When users customize the device ROM, the SDK can behave in unexpected ways. If either condition is true, users should upgrade to a supported version [Support and Prerequisites](#support-and-prerequisites).
 
 #### Disable PKCE
 
