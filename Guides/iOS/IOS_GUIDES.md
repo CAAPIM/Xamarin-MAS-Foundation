@@ -312,7 +312,7 @@ MAS.GrantFlow = MASGrantFlow.ClientCredentials;
 
 ```
 
-### Authenticate user with password, change default
+### Authenticate User With Password, Change Default
 
 **What**: Always start with login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
@@ -324,7 +324,7 @@ Set the `MAS.GrantFlow` propery to `MASGrantFlow.Password` to  change the defaul
 MAS.GrantFlow = MASGrantFlow.Password;
 ```
 
-### Authenticate user with password method
+### Authenticate User With Password, Explicit
 
 ```c#
 //
@@ -342,7 +342,7 @@ MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, 
 ```
 
 
-### Authenticate user with password, event-based
+### Authenticate User With Password, Event-Based
 
 **What**: Event-based user authentication<br>
 **Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
