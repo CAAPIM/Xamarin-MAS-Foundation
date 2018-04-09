@@ -213,7 +213,7 @@ Use the new msso_config.json by calling one of the following MAS.start interface
 **Library**: MASFoundation<br>
 **Description**: Authentication methods to use with the MAG and backend services.</br>
 
-### Authenticate user with password, default SDK flow
+### Set Default Authentication, with login screen
 
 **What**: Always start with login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
@@ -225,7 +225,7 @@ Use the `MAS.SetGrantFlow` method to set the default flow to user authentication
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
-### No user authentication
+### No User Authentication, no login screen
 
 **What**: No user authentication, just access an API. <br>
 **Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
@@ -237,7 +237,7 @@ Use the `MAS.SetGrantFlow` method to set the default flow to no user authenticat
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 ```
 
-### Authenticate user with password method
+### Authenticate User With Password, explicit
 
 **What**: Always start with user login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive.<br>
@@ -261,7 +261,7 @@ private class LoginCallback : MASCallback
 }
  ```
 
-### Authenticate user with password, event-based
+### Authenticate User With Password, Event-Based
 
 **What**: Event-based user authentication<br>
 **Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
