@@ -213,7 +213,7 @@ Use the new msso_config.json by calling one of the following MAS.start interface
 **Library**: MASFoundation<br>
 **Description**: Authentication methods to use with the MAG and backend services.</br>
 
-### Set Default Authentication, with login screen
+### Authenticate User With Password (Default Flow)
 
 **What**: Always start with login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
@@ -225,7 +225,7 @@ Use the `MAS.SetGrantFlow` method to set the default flow to user authentication
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
-### No User Authentication, no login screen
+### No User Authentication
 
 **What**: No user authentication, just access an API. <br>
 **Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
@@ -237,7 +237,7 @@ Use the `MAS.SetGrantFlow` method to set the default flow to no user authenticat
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 ```
 
-### Authenticate User With Password, explicit
+### Authenticate User With Password, Explicit
 
 **What**: Always start with user login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive.<br>
