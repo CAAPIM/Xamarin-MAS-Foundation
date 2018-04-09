@@ -16,6 +16,10 @@
 - iOS 11.0 for new apps written in C#
 - Apple account ID  
 
+::: alert info 
+**Note**: Our Mobile SDK is tested only on devices using an official iOS version. For example, if iOS app users jailbreak or unlock the OS (rooting the device), the SDK may not work as expected. 
+:::
+
 ## Create an App: Choose a Method
 
 | Get Started...                 | Benefits                                 |
@@ -1070,6 +1074,10 @@ To fix this, [follow steps 7-10 to remove the simulator file](#binaries), recomp
 `ErrorDomain Code=100212"SSL pinning validation failed: ensure the target domain’s MASSecurityConfiguration is correctly configured."`
 
 This error means that the server security configuration in the MASSecurityConfiguration object for the hostname:portnumber is not valid or is missing. See [Create the MASSecurityConfiguration object](#create-the-massecurityconfiguration-object).
+
+### Errors on Specific iOS Devices
+
+If you have SDK errors that are only occurring on specific iOS devices, environments or settings, verify that the device users have a supported version of the platform. The Mobile SDK is tested only on devices using official iOS platform versions. Next, verify that users have not jailbroken or unlocked the OS (rooted the device). When users tamper with the device in these ways, the SDK can behave in unexpected ways. If either condition is true, users should upgrade to [Supported Versions](#supported-versions).
 
 ### General Errors
 
