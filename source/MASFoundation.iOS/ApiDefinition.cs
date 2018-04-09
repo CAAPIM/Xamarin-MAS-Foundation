@@ -61,14 +61,14 @@ namespace MASFoundation
     //// typedef void (^MASOTPCredentialsBlock)(MASOTPFetchCredentialsBlock _Nonnull, NSError * _Nullable);
     //delegate void MASOTPCredentialsBlock([BlockCallback] MASOTPFetchCredentialsBlock otpBlock, [NullAllowed] NSError error);
 
-    // typedef void (^MASBiometricModalitiesBlock)(NSArray * _Nullable, BOOL, MASCompletionErrorBlock _Nullable);
-    delegate void MASBiometricModalitiesBlock([NullAllowed] NSObject[] biometricModalities, bool cancel, [NullAllowed] MASCompletionErrorBlock completionBlock);
+    //// typedef void (^MASBiometricModalitiesBlock)(NSArray * _Nullable, BOOL, MASCompletionErrorBlock _Nullable);
+    //delegate void MASBiometricModalitiesBlock([NullAllowed] NSObject[] biometricModalities, bool cancel, [NullAllowed] MASCompletionErrorBlock completionBlock);
 
-    // typedef void (^MASBiometricRegistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
-    delegate void MASBiometricRegistrationModalitiesSelectionBlock(NSObject[] availableModalities, MASBiometricModalitiesBlock biometricModalitiesBlock);
+    //// typedef void (^MASBiometricRegistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
+    //delegate void MASBiometricRegistrationModalitiesSelectionBlock(NSObject[] availableModalities, MASBiometricModalitiesBlock biometricModalitiesBlock);
 
-    // typedef void (^MASBiometricDeregistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
-    delegate void MASBiometricDeregistrationModalitiesSelectionBlock(NSObject[] availableModalities, MASBiometricModalitiesBlock biometricModalitiesBlock);
+    //// typedef void (^MASBiometricDeregistrationModalitiesSelectionBlock)(NSArray * _Nonnull, MASBiometricModalitiesBlock _Nonnull);
+    //delegate void MASBiometricDeregistrationModalitiesSelectionBlock(NSObject[] availableModalities, MASBiometricModalitiesBlock biometricModalitiesBlock);
 
     // typedef void (^MASGatewayMonitorStatusBlock)(MASGatewayMonitoringStatus);
     delegate void MASGatewayMonitorStatusBlock(MASGatewayMonitoringStatus status);
@@ -1011,6 +1011,7 @@ namespace MASFoundation
         MASDevice CurrentDevice();
 
         // -(void)deregisterWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("deregisterWithCompletion:")]
         void DeregisterWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1110,33 +1111,33 @@ namespace MASFoundation
         string StoreTemporaryItem(NSData data);
     }
 
-    // @interface MASGroup : MASObject
-    [BaseType(typeof(MASObject))]
-    interface MASGroup
-    {
-        // @property (readwrite, copy, nonatomic) NSString * _Nonnull groupName;
-        [Export("groupName")]
-        string GroupName { get; set; }
+    //// @interface MASGroup : MASObject
+    //[BaseType(typeof(MASObject))]
+    //interface MASGroup
+    //{
+    //    // @property (readwrite, copy, nonatomic) NSString * _Nonnull groupName;
+    //    [Export("groupName")]
+    //    string GroupName { get; set; }
 
-        // @property (readwrite, copy, nonatomic) NSString * _Nullable owner;
-        [NullAllowed, Export("owner")]
-        string Owner { get; set; }
+    //    // @property (readwrite, copy, nonatomic) NSString * _Nullable owner;
+    //    [NullAllowed, Export("owner")]
+    //    string Owner { get; set; }
 
-        // @property (readwrite, copy, nonatomic) NSArray * _Nullable members;
-        [NullAllowed, Export("members", ArgumentSemantic.Copy)]
-        //[Verify(StronglyTypedNSArray)]
-        NSArray Members { get; set; }
+    //    // @property (readwrite, copy, nonatomic) NSArray * _Nullable members;
+    //    [NullAllowed, Export("members", ArgumentSemantic.Copy)]
+    //    //[Verify(StronglyTypedNSArray)]
+    //    NSArray Members { get; set; }
 
-        // -(instancetype _Nullable)initWithInfo:(NSDictionary * _Nonnull)info;
-        [Export("initWithInfo:")]
-        IntPtr Constructor(NSDictionary info);
+    //    // -(instancetype _Nullable)initWithInfo:(NSDictionary * _Nonnull)info;
+    //    [Export("initWithInfo:")]
+    //    IntPtr Constructor(NSDictionary info);
 
-        // +(MASGroup * _Nullable)group;
-        [Static]
-        [NullAllowed, Export("group")]
-        //[Verify(MethodToProperty)]
-        MASGroup Group { get; }
-    }
+    //    // +(MASGroup * _Nullable)group;
+    //    [Static]
+    //    [NullAllowed, Export("group")]
+    //    //[Verify(MethodToProperty)]
+    //    MASGroup Group { get; }
+    //}
 
     //// @interface MASProximityLogin : MASObject
     //[BaseType(typeof(MASObject))]
@@ -1347,14 +1348,17 @@ namespace MASFoundation
         string AuthCredentialsType { get; }
 
         // -(void)lockSessionWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("lockSessionWithCompletion:")]
         void LockSessionWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)unlockSessionWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("unlockSessionWithCompletion:")]
         void UnlockSessionWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)unlockSessionWithUserOperationPromptMessage:(NSString * _Nonnull)userOperationPrompt completion:(MASCompletionErrorBlock _Nullable)completion;
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("unlockSessionWithUserOperationPromptMessage:completion:")]
         void UnlockSessionWithUserOperationPromptMessage(string userOperationPrompt, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1364,40 +1368,40 @@ namespace MASFoundation
 
         // +(void)loginWithUserName:(NSString * _Nonnull)userName password:(NSString * _Nonnull)password completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultLoginWithUserName")]
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("loginWithUserName:password:completion:")]
         void LoginWithUserName(string userName, string password, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithAuthorizationCode:(NSString * _Nonnull)authorizationCode completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultLoginWithAuthorizationCode")]
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("loginWithAuthorizationCode:completion:")]
         void LoginWithAuthorizationCode(string authorizationCode, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithIdToken:(NSString * _Nonnull)idToken tokenType:(NSString * _Nonnull)tokenType completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultLoginWithIdToken")]
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("loginWithIdToken:tokenType:completion:")]
         void LoginWithIdToken(string idToken, string tokenType, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithAuthCredentials:(MASAuthCredentials * _Nonnull)authCredentials completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultLoginWithAuthCredentials")]
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("loginWithAuthCredentials:completion:")]
         void LoginWithAuthCredentials(MASAuthCredentials authCredentials, [NullAllowed] MASCompletionErrorBlock completion);
 
-        // +(void)initializeBrowserBasedAuthenticationWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
-        [Static]
-        [Export("initializeBrowserBasedAuthenticationWithCompletion:")]
-        void InitializeBrowserBasedAuthenticationWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
+        //// +(void)initializeBrowserBasedAuthenticationWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
+        //[Static]
+        //[Export("initializeBrowserBasedAuthenticationWithCompletion:")]
+        //void InitializeBrowserBasedAuthenticationWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)requestUserInfoWithCompletion:(MASUserResponseErrorBlock _Nullable)completion;
-        [Async(ResultTypeName = "MASResultRequestUserInfo")]
+        [Async(ResultTypeName = "MASUserResponseErrorResult")]
         [Export("requestUserInfoWithCompletion:")]
         void RequestUserInfoWithCompletion([NullAllowed] MASUserResponseErrorBlock completion);
 
         // -(void)logoutWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
-        [Async(ResultTypeName = "MASResultLogout")]
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("logoutWithCompletion:")]
         void LogoutWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
     }
@@ -1702,31 +1706,31 @@ namespace MASFoundation
 
         // +(void)start:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultStart")]
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("start:")]
         void Start([NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithDefaultConfiguration:(BOOL)shouldUseDefault completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultStartWithDefaultConfiguration")]
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("startWithDefaultConfiguration:completion:")]
         void StartWithDefaultConfiguration(bool shouldUseDefault, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithJSON:(NSDictionary * _Nonnull)jsonConfiguration completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultStartWithJSON")]
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("startWithJSON:completion:")]
         void StartWithJSON(NSDictionary jsonConfiguration, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithURL:(NSURL * _Nullable)url completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultStartWithURL")]
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("startWithURL:completion:")]
         void StartWithURL([NullAllowed] NSUrl url, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)stop:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultStop")]
+        [Async(ResultTypeName = "MASCompletionErrorResult")]
         [Export("stop:")]
         void Stop([NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1744,97 +1748,97 @@ namespace MASFoundation
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultDeleteFrom")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("deleteFrom:withParameters:andHeaders:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultDeleteFrom")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("deleteFrom:withParameters:andHeaders:requestType:responseType:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultDeleteFrom")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("deleteFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultGetFrom")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("getFrom:withParameters:andHeaders:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultGetFrom")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("getFrom:withParameters:andHeaders:requestType:responseType:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultGetFrom")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("getFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultPatchTo")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("patchTo:withParameters:andHeaders:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultPatchTo")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("patchTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultPatchTo")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("patchTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultPostTo")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("postTo:withParameters:andHeaders:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultPostTo")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("postTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultPostTo")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("postTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultPutTo")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("putTo:withParameters:andHeaders:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultPutTo")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("putTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultPutTo")]
+        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
         [Export("putTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)invoke:(MASRequest * _Nonnull)request completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResultInvokeAPI")]
+        [Async(ResultTypeName = "MASResponseObjectErrorResult")]
         [Export("invoke:completion:")]
         void Invoke(MASRequest request, [NullAllowed] MASResponseObjectErrorBlock completion);
 

@@ -17,82 +17,6 @@
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
-        <member name="T:MASFoundation.InvokeResult">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.InvokeResult(Foundation.NSHttpUrlResponse,Foundation.NSObject)">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.InvokeResult.Arg0">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.InvokeResult.Arg1">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.LoginWithAuthCredentialsResult">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.LoginWithAuthCredentialsResult(System.Boolean)">
-            <param name="arg0">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.LoginWithAuthCredentialsResult.Arg0">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.LoginWithAuthorizationCodeResult">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.LoginWithAuthorizationCodeResult(System.Boolean)">
-            <param name="arg0">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.LoginWithAuthorizationCodeResult.Arg0">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.LoginWithIdTokenResult">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.LoginWithIdTokenResult(System.Boolean)">
-            <param name="arg0">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.LoginWithIdTokenResult.Arg0">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.LoginWithUserNameResult">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.LoginWithUserNameResult(System.Boolean)">
-            <param name="arg0">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.LoginWithUserNameResult.Arg0">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="T:MASFoundation.MAS">
             <summary>
     The top level MAS object represents the Mobile App Services SDK in it's entirety.  
@@ -203,19 +127,33 @@
         </para></summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="M:MASFoundation.MAS.EnableBrowserBasedAuthentication(System.Boolean)">
-            <param name="enable">bool value indicating whether Browser Based Authentication is enabled or not.</param>
-            <summary>
-        Sets bool indicator of Browser Based Authentication (templatized login) enabled or not for authorization process.
-        By default, it is disabled.
-        </summary>
+        <member name="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
-        <member name="M:MASFoundation.MAS.EnablePKCE(System.Boolean)">
-            <param name="enable">bool value of indicating whether PKCE is enabled or not.</param>
-            <summary>
-        Sets bool indicator of PKCE (Proof Key for Code Exchange) enabled or not for authorization process in Social Login, and Proximity Login.
-        <para>By default, PKCE is enabled and enforced in authorization process; it can be opted-out.</para><para>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</para><para>Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE. If the server side does not support PKCE, client side will still work without PKCE verification.</para></summary>
+        <member name="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <param name="requestType">To be added.</param>
+            <param name="responseType">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <param name="requestType">To be added.</param>
+            <param name="responseType">To be added.</param>
+            <param name="isPublic">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:MASFoundation.MAS.GatewayIsReachable">
@@ -321,6 +259,35 @@
         </summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <param name="requestType">To be added.</param>
+            <param name="responseType">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <param name="requestType">To be added.</param>
+            <param name="responseType">To be added.</param>
+            <param name="isPublic">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:MASFoundation.MAS.GrantFlow">
             <summary>
         MASGrantFlow property.  The default is MASGrantFlow.ClientCredentials.
@@ -345,18 +312,8 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="M:MASFoundation.MAS.InvokeAsync(MASFoundation.MASRequest)">
-            <param name="request">MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
-            <summary>
-        Invoke the endpoint with the parameters defined in the MASRequest object
-        <para>
-        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
-        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
-        </para><para>
-        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
-        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
-        </para>
-        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.      
-        </summary>
+            <param name="request">To be added.</param>
+            <summary>To be added.</summary>
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
@@ -366,17 +323,6 @@
         </summary>
             <value>
                 <c>true</c> if is keychain synchronizable; otherwise, <c>false</c>.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MAS.IsPKCEEnabled">
-            <summary>
-        Gets a value indicating whether this <see cref="T:MASFoundation.MAS" /> is PKCEE nabled.
-        
-        <para>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</para><para>@dependency &gt;Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification.</para></summary>
-            <value>
-        bool value of indicating whether PKCE is enabled or not.
-        <c>true</c> if is PKCEE nabled; otherwise, <c>false</c>.
-        </value>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:MASFoundation.MAS.MASState">
@@ -468,6 +414,35 @@
         </summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <param name="requestType">To be added.</param>
+            <param name="responseType">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <param name="requestType">To be added.</param>
+            <param name="responseType">To be added.</param>
+            <param name="isPublic">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:MASFoundation.MAS.PostTo(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASResponseInfoErrorBlock)">
             <param name="endPointPath">The specific end point path fragment NSString to append to the base
         Gateway URL.endPointPath value can also be defined as full URL format; in this case, SDK must be configured to perform SSL pinning with public key hashes
@@ -548,6 +523,35 @@
         to the primary gateway or not.  To ensure bypass the user session validation for public API, use PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
         with isPublic being <c>true</c>.
         </summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <param name="requestType">To be added.</param>
+            <param name="responseType">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <param name="requestType">To be added.</param>
+            <param name="responseType">To be added.</param>
+            <param name="isPublic">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="M:MASFoundation.MAS.PutTo(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASResponseInfoErrorBlock)">
@@ -632,6 +636,35 @@
         </summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <param name="requestType">To be added.</param>
+            <param name="responseType">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">
+            <param name="endPointPath">To be added.</param>
+            <param name="parameterInfo">To be added.</param>
+            <param name="headerInfo">To be added.</param>
+            <param name="requestType">To be added.</param>
+            <param name="responseType">To be added.</param>
+            <param name="isPublic">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:MASFoundation.MAS.SetConfigurationFileName(System.String)">
             <param name="fileName">The NSString name of the configuration file.</param>
             <summary>
@@ -670,16 +703,6 @@
         </summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="M:MASFoundation.MAS.SetOTPChannelSelectionBlock(MASFoundation.MASOTPChannelSelectionBlock)">
-            <param name="OTPChannelSelector">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MAS.SetOTPCredentialsBlock(MASFoundation.MASOTPCredentialsBlock)">
-            <param name="oneTimePassword">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="M:MASFoundation.MAS.SetUserAuthCredentials(MASFoundation.MASUserAuthCredentialsBlock)">
             <param name="userAuthCredentialsBlock">MASUserAuthCredentialsBlock that contains callback block to be invoked with MASAuthCredentials.</param>
             <summary>
@@ -691,27 +714,6 @@
         <member name="M:MASFoundation.MAS.SetUserLoginBlock(MASFoundation.MASUserLoginWithUserCredentialsBlock)">
             <param name="login">To be added.</param>
             <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSError@)">
-            <param name="claims">MASClaims object containing claims for JWT.</param>
-            <param name="error">NSError error reference object that returns any error occurred during JWT construction.</param>
-            <summary>
-        Signs MASClaims object with default private key from device registration against primary gateway.
-        Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
-        </summary>
-            <returns>string of JWT.</returns>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@)">
-            <param name="claims">MASClaims object containing claims for JWT.</param>
-            <param name="privateKey">Custom private key in NSData format signed using RS256 algorithm.</param>
-            <param name="error">NSError error reference object that returns any error occurred during JWT construction.</param>
-            <summary>
-        Signs MASClaims object with custom private key in NSData format. Private key should be in NSData format and should have been signed using RS256 algorithm.
-        Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
-        </summary>
-            <returns>string of JWT.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="M:MASFoundation.MAS.Start(MASFoundation.MASCompletionErrorBlock)">
@@ -743,6 +745,11 @@
          *      MASApplicationDidFailToRegisterNotification
          *      MASApplicationDidRegisterNotification
         </remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.StartAsync">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
         </member>
         <member name="M:MASFoundation.MAS.StartWithDefaultConfiguration(System.Boolean,MASFoundation.MASCompletionErrorBlock)">
             <param name="shouldUseDefault">Boolean value of using default configuration rather than the one in keychain storage.</param>
@@ -829,6 +836,12 @@
          *      MASApplicationDidRegisterNotification
         </remarks>
         </member>
+        <member name="M:MASFoundation.MAS.StartWithJSONAsync(Foundation.NSDictionary)">
+            <param name="jsonConfiguration">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:MASFoundation.MAS.StartWithURL(Foundation.NSUrl,MASFoundation.MASCompletionErrorBlock)">
             <param name="url">NSURL of JSON configuration file path or enrolment URL.</param>
             <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError *error) that will receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there is a failure.</param>
@@ -863,6 +876,12 @@
         *      MASApplicationDidRegisterNotification
         </remarks>
         </member>
+        <member name="M:MASFoundation.MAS.StartWithURLAsync(Foundation.NSUrl)">
+            <param name="url">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:MASFoundation.MAS.Stop(MASFoundation.MASCompletionErrorBlock)">
             <param name="completion">An MASCompletionErrorBlock type (bool completed, NSError error) that will
         receive a <c>true</c> or <c>false</c> bool indicating the completion state and/or an NSError object if there
@@ -882,6 +901,11 @@
         *      MASDidFailToStopNotification
         *      MASDidStopNotification
         </remarks>
+        </member>
+        <member name="M:MASFoundation.MAS.StopAsync">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASApplication">
             <summary>
@@ -941,11 +965,6 @@
             <value>The custom properties of the application.</value>
             <remarks>To be added.</remarks>
         </member>
-        <member name="P:MASFoundation.MASApplication.Delegate">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="P:MASFoundation.MASApplication.DetailedDescription">
             <summary>
         Gets the detailed description of the application.
@@ -955,12 +974,6 @@
         </member>
         <member name="M:MASFoundation.MASApplication.Dispose(System.Boolean)">
             <param name="disposing">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASApplication.EnterpriseIconWithImageView(UIKit.UIImageView,MASFoundation.MASCompletionErrorBlock)">
-            <param name="imageView">To be added.</param>
-            <param name="completion">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
@@ -1001,12 +1014,6 @@
                 <c>true</c> if is registered; otherwise, <c>false</c>.</value>
             <remarks>To be added.</remarks>
         </member>
-        <member name="M:MASFoundation.MASApplication.LoadWebApp(UIKit.UIWebView,MASFoundation.MASCompletionErrorBlock)">
-            <param name="webView">To be added.</param>
-            <param name="completion">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="P:MASFoundation.MASApplication.Name">
             <summary>
         Gets the name of the application.
@@ -1040,11 +1047,6 @@
         Gets the user that the application was registered by.
         </summary>
             <value>The user that the application was registered by.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASApplication.RetrieveEnterpriseApps(MASFoundation.MASObjectsResponseErrorBlock)">
-            <param name="completion">To be added.</param>
-            <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:MASFoundation.MASApplication.Scope">
@@ -1178,9 +1180,9 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASAuthCredentialsBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <param name="arg2">To be added.</param>
+            <param name="authCredentials">To be added.</param>
+            <param name="cancel">To be added.</param>
+            <param name="completionBlock">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
@@ -1290,132 +1292,6 @@
             <value>The username.</value>
             <remarks>To be added.</remarks>
         </member>
-        <member name="T:MASFoundation.MASAuthenticationProvider">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASAuthenticationProvider">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASAuthenticationProvider(Foundation.NSCoder)">
-            <param name="coder">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASAuthenticationProvider(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASAuthenticationProvider(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProvider.AuthenticationUrl">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProvider.ClassHandle">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProvider.Identifier">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProvider.IsEnterprise">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProvider.IsFacebook">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProvider.IsGoogle">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProvider.IsLinkedIn">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProvider.IsQrCode">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProvider.IsSalesforce">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProvider.PollUrl">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASAuthenticationProviders">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASAuthenticationProviders">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASAuthenticationProviders(Foundation.NSCoder)">
-            <param name="coder">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASAuthenticationProviders(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASAuthenticationProviders(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProviders.ClassHandle">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProviders.CurrentProviders">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProviders.Idp">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProviders.Providers">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASAuthenticationProviders.RetrieveAuthenticationProviderForProximityLogin">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASAuthenticationProviders.RetrieveAuthenticationProvidersWithCompletion(MASFoundation.MASObjectResponseErrorBlock)">
-            <param name="completion">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="T:MASFoundation.MASAuthenticationStatus">
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
@@ -1430,9 +1306,9 @@
             <summary>To be added.</summary>
         </member>
         <member name="T:MASFoundation.MASAuthorizationCodeCredentialsBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <param name="arg2">To be added.</param>
+            <param name="authorizationCode">To be added.</param>
+            <param name="cancel">To be added.</param>
+            <param name="completionBlock">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
@@ -1525,10 +1401,10 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASBasicCredentialsBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <param name="arg2">To be added.</param>
-            <param name="arg3">To be added.</param>
+            <param name="userName">To be added.</param>
+            <param name="password">To be added.</param>
+            <param name="cancel">To be added.</param>
+            <param name="completionBlock">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
@@ -1587,145 +1463,24 @@
         <member name="F:MASFoundation.MASBLEServiceState.Unknown">
             <summary>To be added.</summary>
         </member>
-        <member name="T:MASFoundation.MASClaims">
+        <member name="T:MASFoundation.MASCompletionErrorBlock">
+            <param name="completed">To be added.</param>
+            <param name="error">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="C:MASFoundation.MASClaims">
+        <member name="T:MASFoundation.MASCompletionErrorResult">
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="C:MASFoundation.MASClaims(Foundation.NSCoder)">
-            <param name="coder">To be added.</param>
+        <member name="C:MASFoundation.MASCompletionErrorResult(System.Boolean)">
+            <param name="completed">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="C:MASFoundation.MASClaims(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASClaims(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.Aud">
-            <summary>
-        aud identifies the recipients that the JWT is inteded for
-        </summary>
-            <value>The aud claim of JWT.</value>
-            <remarks>
-        aud is an audience of the JWT where the audience is URL of primary gateway.
-        </remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.Claims">
-            <summary>
-        Designated initializer for MASClaims object.
-        <para>
-        This initializer will construct MASClaims object with auto-populated some of claims values.
-        </para></summary>
-            <value>MASClaims object with auto populated some of claims.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.ClassHandle">
+        <member name="P:MASFoundation.MASCompletionErrorResult.Completed">
             <summary>To be added.</summary>
             <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.Content">
-            <summary>
-        content will be identified as private claim for the custom contents in payload
-        </summary>
-            <value>The content claim of JWT.</value>
-            <remarks>
-        ** content is an content that will be part of JWT's payload.
-        ** content can only be in NSString, NSDictionary, or NSArray format. Make sure to convert NSData into base64encoded string.
-        </remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.ContentType">
-            <summary>
-        contentType will be identified as private claim for the custom contents' content-type in payload
-        </summary>
-            <value>The content type claim of JWT.</value>
-            <remarks>
-        contentType is a MIME type of the contents.
-        </remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.CustomClaims">
-            <summary>
-        claims dictionary added through thisClaim.SetValue().
-        </summary>
-            <value>The custom claims.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.Exp">
-            <summary>
-        exp identifies the expiration timestamp of JWT
-        </summary>
-            <value>The exp claim of JWT.</value>
-            <remarks>
-        exp is unix timestamp of expiration for JWT.
-        </remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.Iat">
-            <summary>
-        iat identifies the issued timestamp of JWT
-        </summary>
-            <value>The iat claim of JWT.</value>
-            <remarks>
-        iat is an issued timestamp when the JWT was built.  iat will be nil in MASClaims object until JWT is built.
-        </remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.Iss">
-            <summary>
-        iss identifies the principal that issued the JWT
-        </summary>
-            <value>The iss claim of JWT.</value>
-            <remarks>
-        iss is in format of device://{mag-identifier}/{client_id} where both mag-identifier and client_id are known to the primary gateway.
-        </remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.Jti">
-            <summary>
-        jti identifies a unique identifier for the JWT
-        </summary>
-            <value>The jti claim of JWT.</value>
-            <remarks>
-        jti is an unique identifier of JWT.
-        </remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.Nbf">
-            <summary>
-        nbf identifies the time before which the JWT must not be accepted for processing.
-        </summary>
-            <value>The nbf claim of JWT.</value>
-            <remarks>
-        nbf is a timestamp which the JWT should not be used before.  nbf is an optional claim which will not be generated and added to payload if not defined.
-        </remarks>
-        </member>
-        <member name="M:MASFoundation.MASClaims.SetValue(Foundation.NSObject,System.String,Foundation.NSError@)">
-            <param name="value">Object/value of the attribute. Object can only be either of NSNumber, NSString, NSDictionary, or NSArray..</param>
-            <param name="claimKey">Key of the attribute as in string.</param>
-            <param name="error">NSError object reference that would notify if there was any error while setting the claim.</param>
-            <summary>
-        Setting a custom attribute to JWT
-        </summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASClaims.Sub">
-            <summary>
-        sub identifies the principal that is subject of the JWT
-        </summary>
-            <value>The sub claim of JWT.</value>
-            <remarks>
-        sub is an subject of the JWT that is either authenticated user's username or registered client's client name where both are known to the primary gateway.
-        </remarks>
-        </member>
-        <member name="T:MASFoundation.MASCompletionErrorBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASConfiguration">
@@ -2174,44 +1929,6 @@
             <returns>The JSONC onfiguration.</returns>
             <remarks>To be added.</remarks>
         </member>
-        <member name="T:MASFoundation.MASConnectaMessagingClientDelegate">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASConnectaMessagingClientDelegate">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASConnectaMessagingClientDelegate(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASConnectaMessagingClientDelegate(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASConnectaMessagingClientDelegate.OnConnected(MASFoundation.MQTTConnectionReturnCode)">
-            <param name="rc">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASConnectaMessagingClientDelegate.OnDisconnect(MASFoundation.MQTTConnectionReturnCode)">
-            <param name="rc">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASConnectaMessagingClientDelegate.OnMessageReceived(MASFoundation.MASMQTTMessage)">
-            <param name="message">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASConnectaMessagingClientDelegate.OnPublishMessage(Foundation.NSNumber)">
-            <param name="messageId">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="T:MASFoundation.MASDevice">
             <summary>
     The `MASDevice` class is a local representation of device data.
@@ -2269,6 +1986,11 @@
         optionally you can set that to null and the caller can observe the lifecycle notifications instead.</para></summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:MASFoundation.MASDevice.DeregisterWithCompletionAsync">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:MASFoundation.MASDevice.Identifier">
             <summary>
         The MASDevice identifier.
@@ -2299,13 +2021,6 @@
             <value>The MASDevice name.</value>
             <remarks>To be added.</remarks>
         </member>
-        <member name="P:MASFoundation.MASDevice.ProximityLoginDelegate">
-            <summary>
-        Gets or sets the proximity login delegate.
-        </summary>
-            <value>The proximity login delegate.</value>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="M:MASFoundation.MASDevice.ResetLocally">
             <summary>
         Reset the application's locally stored data on the device only.  This does NOT call the
@@ -2315,71 +2030,11 @@
         Re-authentication proccess will be triggered whenever you are trying to access the gateway.</para></summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="M:MASFoundation.MASDevice.StartAsBluetoothCentral">
-            <summary>
-        Start the device acting as a bluetooth central.
-        </summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASDevice.StartAsBluetoothCentralWithAuthenticationProvider(MASFoundation.MASAuthenticationProvider)">
-            <param name="provider">MASAuthenticationProvider to pass authentication information to other devices.</param>
-            <summary>
-        Start the device acting as a bluetooth central with given authentication provider.
-        </summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASDevice.StartAsBluetoothPeripheral">
-            <summary>
-        Start the device acting as a bluetooth peripheral.
-        </summary>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="P:MASFoundation.MASDevice.Status">
             <summary>
         Gets the MASDevice status.
         </summary>
             <value>The MASDevice status.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASDevice.StopAsBluetoothCentral">
-            <summary>
-        Stop the device acting as a bluetooth central.
-        </summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASDevice.StopAsBluetoothPeripheral">
-            <summary>
-        Stop the device acting as a bluetooth peripheral.
-        </summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASEnterpriseAppProtocol">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASEnterpriseAppProtocol">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASEnterpriseAppProtocol(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASEnterpriseAppProtocol(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASEnterpriseAppProtocol.EnterpriseApp(MASFoundation.MASApplication,Foundation.NSError)">
-            <param name="app">To be added.</param>
-            <param name="error">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASEnterpriseAppProtocol.EnterpriseWebApp(MASFoundation.MASApplication)">
-            <param name="app">To be added.</param>
-            <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASFile">
@@ -2826,7 +2481,7 @@
             <summary>To be added.</summary>
         </member>
         <member name="T:MASFoundation.MASGatewayMonitorStatusBlock">
-            <param name="arg0">To be added.</param>
+            <param name="status">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
@@ -2845,327 +2500,6 @@
         </member>
         <member name="F:MASFoundation.MASGrantFlow.Unknown">
             <summary>To be added.</summary>
-        </member>
-        <member name="T:MASFoundation.MASGroup">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASGroup">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASGroup(Foundation.NSCoder)">
-            <param name="coder">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASGroup(Foundation.NSDictionary)">
-            <param name="info">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASGroup(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASGroup(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASGroup.ClassHandle">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASGroup.Group">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASGroup.GroupName">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASGroup.Members">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASGroup.Owner">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASMQTTClient">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASMQTTClient">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASMQTTClient(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASMQTTClient(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASMQTTClient(System.String,System.Boolean)">
-            <param name="clientId">To be added.</param>
-            <param name="cleanSession">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTClient.ClassHandle">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.ClearWill">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTClient.ClientID">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTClient.Connected">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Action{MASFoundation.MQTTConnectionReturnCode})">
-            <param name="hostName">To be added.</param>
-            <param name="completionHandler">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.ConnectToHost(System.String,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode})">
-            <param name="hostName">To be added.</param>
-            <param name="tls">To be added.</param>
-            <param name="completionHandler">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.Action{MASFoundation.MQTTConnectionReturnCode})">
-            <param name="hostName">To be added.</param>
-            <param name="port">To be added.</param>
-            <param name="tls">To be added.</param>
-            <param name="completionHandler">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.ConnectWithHost(System.String,System.Int32,System.Boolean,System.String,System.Action{MASFoundation.MQTTConnectionReturnCode})">
-            <param name="hostName">To be added.</param>
-            <param name="port">To be added.</param>
-            <param name="tls">To be added.</param>
-            <param name="certFile">To be added.</param>
-            <param name="completionHandler">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTClient.DebugMode">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTClient.Delegate">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTClient.DisconnectionHandler">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.DisconnectWithCompletionHandler(MASFoundation.MQTTDisconnectionHandler)">
-            <param name="completionHandler">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.Dispose(System.Boolean)">
-            <param name="disposing">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTClient.MessageHandler">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,MASFoundation.MQTTPublishingCompletionBlock)">
-            <param name="payload">To be added.</param>
-            <param name="topic">To be added.</param>
-            <param name="qos">To be added.</param>
-            <param name="retain">To be added.</param>
-            <param name="completion">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.PublishString(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean,System.Action{System.Int32})">
-            <param name="payload">To be added.</param>
-            <param name="topic">To be added.</param>
-            <param name="qos">To be added.</param>
-            <param name="retain">To be added.</param>
-            <param name="completionHandler">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.Reconnect">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.SetMessageRetry(System.nuint)">
-            <param name="seconds">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.SetUsername(System.String,System.String)">
-            <param name="username">To be added.</param>
-            <param name="password">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.SetWill(System.String,System.String,MASFoundation.MQTTQualityOfService,System.Boolean)">
-            <param name="payload">To be added.</param>
-            <param name="willTopic">To be added.</param>
-            <param name="willQos">To be added.</param>
-            <param name="retain">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.SharedClient">
-            <summary>To be added.</summary>
-            <returns>To be added.</returns>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionBlock)">
-            <param name="topic">To be added.</param>
-            <param name="completion">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTSubscriptionCompletionHandler)">
-            <param name="topic">To be added.</param>
-            <param name="completionHandler">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionBlock)">
-            <param name="topic">To be added.</param>
-            <param name="qos">To be added.</param>
-            <param name="completion">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.SubscribeToTopic(System.String,MASFoundation.MQTTQualityOfService,MASFoundation.MQTTSubscriptionCompletionHandler)">
-            <param name="topic">To be added.</param>
-            <param name="qos">To be added.</param>
-            <param name="completionHandler">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTClient.UnsubscribeFromTopic(System.String,MASFoundation.MQTTCompletionErrorBlock)">
-            <param name="topic">To be added.</param>
-            <param name="completionHandler">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTClient.Version">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTClient.WeakDelegate">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASMQTTMessage">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASMQTTMessage">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASMQTTMessage(Foundation.NSCoder)">
-            <param name="coder">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASMQTTMessage(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASMQTTMessage(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASMQTTMessage(System.String,Foundation.NSData,MASFoundation.MQTTQualityOfService,System.Boolean,System.Int16)">
-            <param name="topic">To be added.</param>
-            <param name="payload">To be added.</param>
-            <param name="qos">To be added.</param>
-            <param name="retained">To be added.</param>
-            <param name="mid">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTMessage.ClassHandle">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASMQTTMessage.EncodeTo(Foundation.NSCoder)">
-            <param name="encoder">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTMessage.Mid">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTMessage.Payload">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTMessage.PayloadImage">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTMessage.PayloadString">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTMessage.Qos">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTMessage.Retained">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASMQTTMessage.Topic">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASObject">
             <summary>
@@ -3289,207 +2623,6 @@
             <summary>
         Returns the value associated with a given key.
         <para>This method enables usage of literal syntax on `MASObject`. E.g. `object["key"] = "value";`</para></summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASObjectResponseErrorBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASObjectsResponseErrorBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASOTPChannelSelectionBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASOTPCredentialsBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASOTPFetchCredentialsBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <param name="arg2">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASOTPGenerationBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <param name="arg2">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASProximityLogin">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLogin">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLogin(Foundation.NSCoder)">
-            <param name="coder">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLogin(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLogin(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASProximityLogin.ClassHandle">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASProximityLoginDelegate">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLoginDelegate">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLoginDelegate(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLoginDelegate(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASProximityLoginDelegate.DidReceiveAuthorizationCode(System.String)">
-            <param name="authorizationCode">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASProximityLoginDelegate.DidReceiveBLEProximityLoginStateUpdate(MASFoundation.MASBLEServiceState)">
-            <param name="state">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASProximityLoginDelegate.DidReceiveProximityLoginError(Foundation.NSError)">
-            <param name="error">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASProximityLoginDelegate.HandleBLEProximityLoginUserConsent(MASFoundation.MASCompletionErrorBlock,System.String)">
-            <param name="completion">To be added.</param>
-            <param name="deviceName">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASProximityLoginQRCode">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLoginQRCode">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLoginQRCode(Foundation.NSCoder)">
-            <param name="coder">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLoginQRCode(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLoginQRCode(MASFoundation.MASAuthenticationProvider)">
-            <param name="provider">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLoginQRCode(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASProximityLoginQRCode(MASFoundation.MASAuthenticationProvider,Foundation.NSNumber,Foundation.NSNumber,Foundation.NSNumber)">
-            <param name="provider">To be added.</param>
-            <param name="initDelay">To be added.</param>
-            <param name="pollingInterval">To be added.</param>
-            <param name="pollingLimit">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASProximityLoginQRCode.AuthenticationUrl">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASProximityLoginQRCode.AuthorizeAuthenticateUrl(System.String,MASFoundation.MASCompletionErrorBlock)">
-            <param name="authenticateUrl">To be added.</param>
-            <param name="completion">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASProximityLoginQRCode.ClassHandle">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASProximityLoginQRCode.CurrentPollingCounter">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASProximityLoginQRCode.Dispose(System.Boolean)">
-            <param name="disposing">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASProximityLoginQRCode.IsPolling">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASProximityLoginQRCode.PollingDelay">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASProximityLoginQRCode.PollingInterval">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASProximityLoginQRCode.PollingLimit">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASProximityLoginQRCode.PollUrl">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASProximityLoginQRCode.StartDisplayingQRCodeImageForProximityLogin">
-            <summary>To be added.</summary>
-            <returns>To be added.</returns>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASProximityLoginQRCode.StopDisplayingQRCodeImageForProximityLogin">
-            <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASRequest">
@@ -3643,14 +2776,6 @@
             <value>The type of the response.</value>
             <remarks>To be added.</remarks>
         </member>
-        <member name="P:MASFoundation.MASRequest.Sign">
-            <summary>
-        bool value that determines whether or not digitally sign the request parameters with JWT signature.
-        </summary>
-            <value>
-                <c>true</c> if sign; otherwise, <c>false</c>.</value>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="T:MASFoundation.MASRequestBuilder">
             <summary>
     MASRequestBuilder class is an object that allows developers to progressively build a request as needed.
@@ -3702,13 +2827,6 @@
         Create a MASRequest object using the parameters from MASRequestBuider
         </summary>
             <returns>MASRequest object.</returns>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASRequestBuilder.Claims">
-            <summary>
-        MASClaims object containing claims for JWT.
-        </summary>
-            <value>The claims.</value>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:MASFoundation.MASRequestBuilder.ClassHandle">
@@ -3773,38 +2891,6 @@
             <value>The type of the response.</value>
             <remarks>To be added.</remarks>
         </member>
-        <member name="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSError@)">
-            <param name="claims">MASClaims object containing claims for JWT</param>
-            <param name="error">NSError error reference object that returns any error occurred during JWT signature.</param>
-            <summary>
-        Set to sign the request with a MASClaims object using default private key from device registration against primary gateway.
-        </summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@)">
-            <param name="claims">MASClaims object containing claims for JWT</param>
-            <param name="privateKey">Custom private key in NSData format signed using RS256 algorithm.</param>
-            <param name="error">NSError error reference object that returns any error occurred during JWT signature.</param>
-            <summary>
-        Set to sign the request with a MASClaims object using custom private key in NSData format.
-        </summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASRequestBuilder.SetSignWithError(Foundation.NSError@)">
-            <param name="error">NSError error reference object that returns any error occurred during JWT signature.</param>
-            <summary>
-        Set to sign the body of request using default private key from device registration against primary gateway.
-        </summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASRequestBuilder.Sign">
-            <summary>
-        bool value that determines whether or not digitally sign the request parameters with JWT signature.
-        </summary>
-            <value>
-                <c>true</c> if sign; otherwise, <c>false</c>.</value>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="T:MASFoundation.MASRequestResponseType">
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
@@ -3831,16 +2917,50 @@
             <summary>To be added.</summary>
         </member>
         <member name="T:MASFoundation.MASResponseInfoErrorBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
+            <param name="responseInfo">To be added.</param>
+            <param name="error">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="T:MASFoundation.MASResponseObjectErrorBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <param name="arg2">To be added.</param>
+        <member name="T:MASFoundation.MASResponseInfoErrorResult">
             <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:MASFoundation.MASResponseInfoErrorResult(Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
+            <param name="responseInfo">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:MASFoundation.MASResponseInfoErrorResult.ResponseInfo">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:MASFoundation.MASResponseObjectErrorBlock">
+            <param name="response">To be added.</param>
+            <param name="responseObject">To be added.</param>
+            <param name="error">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:MASFoundation.MASResponseObjectErrorResult">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:MASFoundation.MASResponseObjectErrorResult(Foundation.NSHttpUrlResponse,Foundation.NSObject)">
+            <param name="response">To be added.</param>
+            <param name="responseObject">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:MASFoundation.MASResponseObjectErrorResult.Response">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:MASFoundation.MASResponseObjectErrorResult.ResponseObject">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASSecurityConfiguration">
@@ -4122,96 +3242,6 @@
                 <c>true</c>, if string was saved, <c>false</c> otherwise.</returns>
             <remarks>To be added.</remarks>
         </member>
-        <member name="T:MASFoundation.MASSocialLogin">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASSocialLogin">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASSocialLogin(Foundation.NSCoder)">
-            <param name="coder">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASSocialLogin(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASSocialLogin(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASSocialLogin(MASFoundation.MASAuthenticationProvider,WebKit.WKWebView)">
-            <param name="provider">To be added.</param>
-            <param name="webView">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASSocialLogin.ClassHandle">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASSocialLogin.Delegate">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASSocialLogin.Dispose(System.Boolean)">
-            <param name="disposing">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASSocialLogin.Provider">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.MASSocialLogin.WeakDelegate">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MASSocialLoginDelegate">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASSocialLoginDelegate">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASSocialLoginDelegate(Foundation.NSObjectFlag)">
-            <param name="t">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.MASSocialLoginDelegate(System.IntPtr)">
-            <param name="handle">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASSocialLoginDelegate.DidReceiveAuthorizationCode(System.String)">
-            <param name="code">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASSocialLoginDelegate.DidReceiveError(Foundation.NSError)">
-            <param name="error">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASSocialLoginDelegate.DidStartLoadingWebView">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="M:MASFoundation.MASSocialLoginDelegate.DidStopLoadingWebView">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="T:MASFoundation.MASState">
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
@@ -4338,13 +3368,6 @@
             <value>The groups.</value>
             <remarks>To be added.</remarks>
         </member>
-        <member name="M:MASFoundation.MASUser.InitializeBrowserBasedAuthenticationWithCompletion(MASFoundation.MASCompletionErrorBlock)">
-            <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
-            <summary>
-        Authenticate a user by launching a Browser which in turn loads a URL (templatized).
-        </summary>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="P:MASFoundation.MASUser.IsAuthenticated">
             <summary>
         Gets a value indicating whether this <see cref="T:MASFoundation.MASUser" /> is authenticated.
@@ -4383,6 +3406,11 @@
         however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
         Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
         </para></summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MASUser.LockSessionWithCompletionAsync">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="M:MASFoundation.MASUser.LoginWithAuthCredentials(MASFoundation.MASAuthCredentials,MASFoundation.MASCompletionErrorBlock)">
@@ -4485,6 +3513,11 @@
         </summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:MASFoundation.MASUser.LogoutWithCompletionAsync">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:MASFoundation.MASUser.PhoneNumbers">
             <summary>
         Gets the phone numbers.
@@ -4515,6 +3548,11 @@
         </summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:MASFoundation.MASUser.RequestUserInfoWithCompletionAsync">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock)">
             <param name="completion">MASCompletionErrorBlock block that receives the results.</param>
             <summary>
@@ -4524,6 +3562,11 @@
         </para><para>
         After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
         </para></summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:MASFoundation.MASUser.UnlockSessionWithCompletionAsync">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessage(System.String,MASFoundation.MASCompletionErrorBlock)">
@@ -4538,6 +3581,12 @@
         </para></summary>
             <remarks>To be added.</remarks>
         </member>
+        <member name="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String)">
+            <param name="userOperationPrompt">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:MASFoundation.MASUser.UserName">
             <summary>
         Gets the string value of the username.
@@ -4546,90 +3595,34 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASUserAuthCredentialsBlock">
-            <param name="arg0">To be added.</param>
+            <param name="authCredentialBlock">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASUserLoginWithUserCredentialsBlock">
             <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
+            <param name="completionBlock">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASUserResponseErrorBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
+            <param name="user">To be added.</param>
+            <param name="error">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="T:MASFoundation.MQTTCompletionErrorBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
+        <member name="T:MASFoundation.MASUserResponseErrorResult">
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="T:MASFoundation.MQTTConnectionReturnCode">
+        <member name="C:MASFoundation.MASUserResponseErrorResult(MASFoundation.MASUser)">
+            <param name="user">To be added.</param>
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="F:MASFoundation.MQTTConnectionReturnCode.Accepted">
+        <member name="P:MASFoundation.MASUserResponseErrorResult.User">
             <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MQTTConnectionReturnCode.RefusedBadUserNameOrPassword">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MQTTConnectionReturnCode.RefusedIdentifierRejected">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MQTTConnectionReturnCode.RefusedNotAuthorized">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MQTTConnectionReturnCode.RefusedServerUnavailable">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MQTTConnectionReturnCode.RefusedUnacceptableProtocolVersion">
-            <summary>To be added.</summary>
-        </member>
-        <member name="T:MASFoundation.MQTTDisconnectionHandler">
-            <param name="arg0">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MQTTMessageHandler">
-            <param name="arg0">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MQTTPublishingCompletionBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <param name="arg2">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MQTTQualityOfService">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="F:MASFoundation.MQTTQualityOfService.AtLeastOnce">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MQTTQualityOfService.AtMostOnce">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MQTTQualityOfService.ExactlyOnce">
-            <summary>To be added.</summary>
-        </member>
-        <member name="T:MASFoundation.MQTTSubscriptionCompletionBlock">
-            <param name="arg0">To be added.</param>
-            <param name="arg1">To be added.</param>
-            <param name="arg2">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.MQTTSubscriptionCompletionHandler">
-            <param name="arg0">To be added.</param>
-            <summary>To be added.</summary>
+            <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.NSData_MAS">
@@ -4655,20 +3648,6 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="P:MASFoundation.NSData_MAS.IsEncrypted">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="T:MASFoundation.StartDefaultConfigurationResult">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:MASFoundation.StartDefaultConfigurationResult(System.Boolean)">
-            <param name="arg0">To be added.</param>
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="P:MASFoundation.StartDefaultConfigurationResult.Arg0">
             <summary>To be added.</summary>
             <value>To be added.</value>
             <remarks>To be added.</remarks>

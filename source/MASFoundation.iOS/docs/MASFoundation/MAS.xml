@@ -670,11 +670,11 @@
       </Docs>
     </Member>
     <Member MemberName="InvokeAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;MASFoundation.MASResultInvokeAPI&gt; InvokeAsync (MASFoundation.MASRequest request);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class MASFoundation.MASResultInvokeAPI&gt; InvokeAsync(class MASFoundation.MASRequest request) cil managed" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;MASFoundation.MASResponseObjectErrorResult&gt; InvokeAsync (MASFoundation.MASRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class MASFoundation.MASResponseObjectErrorResult&gt; InvokeAsync(class MASFoundation.MASRequest request) cil managed" />
       <MemberType>Method</MemberType>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.MASResultInvokeAPI&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.MASResponseObjectErrorResult&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="request" Type="MASFoundation.MASRequest" />

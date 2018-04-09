@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="MASFoundation.iOS" Version="1.0.6670.20000">
+    <Assembly Name="MASFoundation.iOS" Version="1.0.6673.18689">
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.LinkerSafe</AttributeName>
@@ -63,6 +63,7 @@
       <Type Name="MASBasicCredentialsBlock" Kind="Delegate" />
       <Type Name="MASBLEServiceState" Kind="Enumeration" />
       <Type Name="MASCompletionErrorBlock" Kind="Delegate" />
+      <Type Name="MASCompletionErrorResult" Kind="Class" />
       <Type Name="MASConfiguration" Kind="Class" />
       <Type Name="MASDevice" Kind="Class" />
       <Type Name="MASFile" Kind="Class" />
@@ -71,30 +72,14 @@
       <Type Name="MASGatewayMonitoringStatus" Kind="Enumeration" />
       <Type Name="MASGatewayMonitorStatusBlock" Kind="Delegate" />
       <Type Name="MASGrantFlow" Kind="Enumeration" />
-      <Type Name="MASGroup" Kind="Class" />
       <Type Name="MASObject" Kind="Class" />
       <Type Name="MASRequest" Kind="Class" />
       <Type Name="MASRequestBuilder" Kind="Class" />
       <Type Name="MASRequestResponseType" Kind="Enumeration" />
       <Type Name="MASResponseInfoErrorBlock" Kind="Delegate" />
+      <Type Name="MASResponseInfoErrorResult" Kind="Class" />
       <Type Name="MASResponseObjectErrorBlock" Kind="Delegate" />
-      <Type Name="MASResultDeleteFrom" Kind="Class" />
-      <Type Name="MASResultGetFrom" Kind="Class" />
-      <Type Name="MASResultInvokeAPI" Kind="Class" />
-      <Type Name="MASResultLoginWithAuthCredentials" Kind="Class" />
-      <Type Name="MASResultLoginWithAuthorizationCode" Kind="Class" />
-      <Type Name="MASResultLoginWithIdToken" Kind="Class" />
-      <Type Name="MASResultLoginWithUserName" Kind="Class" />
-      <Type Name="MASResultLogout" Kind="Class" />
-      <Type Name="MASResultPatchTo" Kind="Class" />
-      <Type Name="MASResultPostTo" Kind="Class" />
-      <Type Name="MASResultPutTo" Kind="Class" />
-      <Type Name="MASResultRequestUserInfo" Kind="Class" />
-      <Type Name="MASResultStart" Kind="Class" />
-      <Type Name="MASResultStartWithDefaultConfiguration" Kind="Class" />
-      <Type Name="MASResultStartWithJSON" Kind="Class" />
-      <Type Name="MASResultStartWithURL" Kind="Class" />
-      <Type Name="MASResultStop" Kind="Class" />
+      <Type Name="MASResponseObjectErrorResult" Kind="Class" />
       <Type Name="MASSecurityConfiguration" Kind="Class" />
       <Type Name="MASService" Kind="Class" />
       <Type Name="MASService_SubclassingHooks" Kind="Class" />
@@ -105,8 +90,7 @@
       <Type Name="MASUserAuthCredentialsBlock" Kind="Delegate" />
       <Type Name="MASUserLoginWithUserCredentialsBlock" Kind="Delegate" />
       <Type Name="MASUserResponseErrorBlock" Kind="Delegate" />
-      <Type Name="MQTTConnectionReturnCode" Kind="Enumeration" />
-      <Type Name="MQTTQualityOfService" Kind="Enumeration" />
+      <Type Name="MASUserResponseErrorResult" Kind="Class" />
       <Type Name="NSData_MAS" Kind="Class" />
     </Namespace>
   </Types>

@@ -46,7 +46,7 @@ namespace BasicAuthSample
             SampleActions.Alert("Response", invokeResult.ResponseObject.ToString());
         }
 
-        private async Task<MASResultInvokeAPI> InvokeProtectedApiAsync()
+        private async Task<MASResponseObjectErrorResult> InvokeProtectedApiAsync()
         {
             MAS.GrantFlow = MASGrantFlow.ClientCredentials;
             MAS.SetConfigurationFileName("msso_config_public");

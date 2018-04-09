@@ -1,0 +1,43 @@
+<Type Name="MASUserResponseErrorResult" FullName="MASFoundation.MASUserResponseErrorResult">
+  <TypeSignature Language="C#" Value="public class MASUserResponseErrorResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASUserResponseErrorResult extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MASUserResponseErrorResult (MASFoundation.MASUser user);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class MASFoundation.MASUser user) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="user" Type="MASFoundation.MASUser" />
+      </Parameters>
+      <Docs>
+        <param name="user">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public MASFoundation.MASUser User { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class MASFoundation.MASUser User" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASUser</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
