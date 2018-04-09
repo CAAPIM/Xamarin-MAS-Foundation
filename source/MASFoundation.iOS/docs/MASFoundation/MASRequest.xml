@@ -459,26 +459,5 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Sign">
-      <MemberSignature Language="C#" Value="public virtual bool Sign { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool Sign" />
-      <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("sign")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-        bool value that determines whether or not digitally sign the request parameters with JWT signature.
-        </summary>
-        <value>
-          <c>true</c> if sign; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
   </Members>
 </Type>

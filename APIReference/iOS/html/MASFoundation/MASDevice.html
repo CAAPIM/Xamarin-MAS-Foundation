@@ -431,22 +431,6 @@
          (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</td>
               </tr>
               <tr valign="top">
-                <td>
-                  <div>static </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:MASFoundation.MASDevice.ProximityLoginDelegate">ProximityLoginDelegate</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MASFoundation/MASProximityLoginDelegate.html">MASProximityLoginDelegate</a>
-                  </i>. 
-        Gets or sets the proximity login delegate.
-        </td>
-              </tr>
-              <tr valign="top">
                 <td>[read-only]<div></div></td>
                 <td>
                   <b>
@@ -512,6 +496,16 @@
         recommend you also provide an additional user confirmation UI component to make it clear to 
         the user what will occur and allow them to cancel the operation or proceed.</p><p>Although an asynchronous block callback parameter is provided for detecting the response,
         optionally you can set that to null and the caller can observe the lifecycle notifications instead.</p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASDevice.DeregisterWithCompletionAsync()">DeregisterWithCompletionAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -591,66 +585,6 @@
                   <b>
                     <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.SetObjectForKeyedSubscript(Foundation.NSObject,Foundation.NSCopying)">SetObjectForKeyedSubscript</a>
                   </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCopying</a>)<blockquote>This method enables usage of literal syntax on `MASObject`. E.g. `object["key"] = "value";` (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MASDevice.StartAsBluetoothCentral()">StartAsBluetoothCentral</a>
-                  </b>()<blockquote>
-        Start the device acting as a bluetooth central.
-        </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MASDevice.StartAsBluetoothCentralWithAuthenticationProvider(MASFoundation.MASAuthenticationProvider)">StartAsBluetoothCentralWithAuthenticationProvider</a>
-                  </b>(<a href="../MASFoundation/MASAuthenticationProvider.html">MASAuthenticationProvider</a>)<blockquote>
-        Start the device acting as a bluetooth central with given authentication provider.
-        </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MASDevice.StartAsBluetoothPeripheral()">StartAsBluetoothPeripheral</a>
-                  </b>()<blockquote>
-        Start the device acting as a bluetooth peripheral.
-        </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MASDevice.StopAsBluetoothCentral()">StopAsBluetoothCentral</a>
-                  </b>()<blockquote>
-        Stop the device acting as a bluetooth central.
-        </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MASDevice.StopAsBluetoothPeripheral()">StopAsBluetoothPeripheral</a>
-                  </b>()<blockquote>
-        Stop the device acting as a bluetooth peripheral.
-        </blockquote></td>
               </tr>
             </table>
           </div>
@@ -833,6 +767,26 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
+        <h3 id="M:MASFoundation.MASDevice.DeregisterWithCompletionAsync()">DeregisterWithCompletionAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASDevice.DeregisterWithCompletionAsync():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>DeregisterWithCompletionAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASDevice.DeregisterWithCompletionAsync():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASDevice.DeregisterWithCompletionAsync():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASDevice.DeregisterWithCompletionAsync():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
         <h3 id="P:MASFoundation.MASDevice.Identifier">Identifier Property</h3>
         <blockquote id="P:MASFoundation.MASDevice.Identifier:member">
           <div class="msummary">
@@ -907,24 +861,6 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
-        <h3 id="P:MASFoundation.MASDevice.ProximityLoginDelegate">ProximityLoginDelegate Property</h3>
-        <blockquote id="P:MASFoundation.MASDevice.ProximityLoginDelegate:member">
-          <div class="msummary">
-        Gets or sets the proximity login delegate.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("proximityLoginDelegate")]<br />[set: Foundation.Export("setProximityLoginDelegate:")]<br />public static <a href="../MASFoundation/MASProximityLoginDelegate.html">MASProximityLoginDelegate</a> <b>ProximityLoginDelegate</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MASDevice.ProximityLoginDelegate:Value">The proximity login delegate.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MASFoundation.MASDevice.ProximityLoginDelegate:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MASFoundation.MASDevice.ProximityLoginDelegate:Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
         <h3 id="M:MASFoundation.MASDevice.ResetLocally()">ResetLocally Method</h3>
         <blockquote id="M:MASFoundation.MASDevice.ResetLocally():member">
           <div class="msummary">WARNING: if you call this method, all access credentials and locally stored configuration related to the application will be removed.
@@ -937,63 +873,6 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASDevice.ResetLocally():Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MASDevice.StartAsBluetoothCentral()">StartAsBluetoothCentral Method</h3>
-        <blockquote id="M:MASFoundation.MASDevice.StartAsBluetoothCentral():member">
-          <div class="msummary">
-        Start the device acting as a bluetooth central.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("startAsBluetoothCentral")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>StartAsBluetoothCentral</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASDevice.StartAsBluetoothCentral():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASDevice.StartAsBluetoothCentral():Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MASDevice.StartAsBluetoothCentralWithAuthenticationProvider(MASFoundation.MASAuthenticationProvider)">StartAsBluetoothCentralWithAuthenticationProvider Method</h3>
-        <blockquote id="M:MASFoundation.MASDevice.StartAsBluetoothCentralWithAuthenticationProvider(MASFoundation.MASAuthenticationProvider):member">
-          <div class="msummary">
-        Start the device acting as a bluetooth central with given authentication provider.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("startAsBluetoothCentralWithAuthenticationProvider:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>StartAsBluetoothCentralWithAuthenticationProvider</b> (<a href="../MASFoundation/MASAuthenticationProvider.html">MASAuthenticationProvider</a> provider)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASDevice.StartAsBluetoothCentralWithAuthenticationProvider(MASFoundation.MASAuthenticationProvider):Parameters">
-            <dl>
-              <dt>
-                <i>provider</i>
-              </dt>
-              <dd>MASAuthenticationProvider to pass authentication information to other devices.</dd>
-            </dl>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASDevice.StartAsBluetoothCentralWithAuthenticationProvider(MASFoundation.MASAuthenticationProvider):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASDevice.StartAsBluetoothCentralWithAuthenticationProvider(MASFoundation.MASAuthenticationProvider):Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MASDevice.StartAsBluetoothPeripheral()">StartAsBluetoothPeripheral Method</h3>
-        <blockquote id="M:MASFoundation.MASDevice.StartAsBluetoothPeripheral():member">
-          <div class="msummary">
-        Start the device acting as a bluetooth peripheral.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("startAsBluetoothPeripheral")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>StartAsBluetoothPeripheral</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASDevice.StartAsBluetoothPeripheral():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASDevice.StartAsBluetoothPeripheral():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
@@ -1012,38 +891,6 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:MASFoundation.MASDevice.Status:Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MASDevice.StopAsBluetoothCentral()">StopAsBluetoothCentral Method</h3>
-        <blockquote id="M:MASFoundation.MASDevice.StopAsBluetoothCentral():member">
-          <div class="msummary">
-        Stop the device acting as a bluetooth central.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("stopAsBluetoothCentral")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>StopAsBluetoothCentral</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASDevice.StopAsBluetoothCentral():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASDevice.StopAsBluetoothCentral():Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MASDevice.StopAsBluetoothPeripheral()">StopAsBluetoothPeripheral Method</h3>
-        <blockquote id="M:MASFoundation.MASDevice.StopAsBluetoothPeripheral():member">
-          <div class="msummary">
-        Stop the device acting as a bluetooth peripheral.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("stopAsBluetoothPeripheral")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>StopAsBluetoothPeripheral</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASDevice.StopAsBluetoothPeripheral():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASDevice.StopAsBluetoothPeripheral():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
