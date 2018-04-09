@@ -313,27 +313,18 @@
         </tr>
         <tr valign="top">
           <td>
-            <a href="./MASBLEServiceState.html">MASBLEServiceState</a>
-          </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
-        </tr>
-        <tr valign="top">
-          <td>
             <a href="./MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A standard (bool completed, NSError error) block</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASCompletionErrorResult.html">MASCompletionErrorResult</a>
           </td>
           <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+        Result of a MASCompletionErrorBlock block that will a bool value indicating the completion state and/or an NSError object if there
+        is a failure.
+    </td>
         </tr>
         <tr valign="top">
           <td>
@@ -441,32 +432,35 @@
             <a href="./MASResponseInfoErrorBlock.html">MASResponseInfoErrorBlock</a>
           </td>
           <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+        A standard (NSDictionary responseInfo, NSError error) block. The response object could potentially
+        be any type of object. It is most often used to return NSString JSON responses from HTTP calls for example.
+    </td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASResponseInfoErrorResult.html">MASResponseInfoErrorResult</a>
           </td>
           <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+       Result of a MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will
+       receive the JSON response object and/or an NSError object if there is a failure.
+    </td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASResponseObjectErrorBlock.html">MASResponseObjectErrorBlock</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A standard (NSHTTPURLResponse response, Object responseObject, NSError error) block.
+  The block will be executed when a request finishes the task unsuccessfully, or successfully.
+  All of three arguments in the block can be null depends on the result of the request, 
+  and response object should be casted to appropriate data type when it is received.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASResponseObjectErrorResult.html">MASResponseObjectErrorResult</a>
           </td>
           <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+        Result of an MASResponseObjectErrorBlock block that will return the NSHTTPURLResponse object, response object which needs to perform type casting based on the object type, and NSError object when error occurs.  
+    </td>
         </tr>
         <tr valign="top">
           <td>
@@ -545,17 +539,15 @@
           <td>
             <a href="./MASUserResponseErrorBlock.html">MASUserResponseErrorBlock</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The MASUser specific (MASUser user, NSError error) block</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASUserResponseErrorResult.html">MASUserResponseErrorResult</a>
           </td>
           <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+        Result of a MASUserResponseErrorBlock block that returns MASUSer object with updated value and/or NSError object in case any error is encountered during the process.
+    </td>
         </tr>
         <tr valign="top">
           <td>

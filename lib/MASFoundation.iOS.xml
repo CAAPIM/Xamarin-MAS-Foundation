@@ -1408,69 +1408,17 @@
             <summary>To be added.</summary>
             <remarks>To be added.</remarks>
         </member>
-        <member name="T:MASFoundation.MASBLEServiceState">
-            <summary>To be added.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.CentralAuthorizationFailed">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.CentralAuthorizationSucceeded">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.CentralCharacteristicDiscovered">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.CentralCharacteristicWritten">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.CentralDeviceConnected">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.CentralDeviceDetected">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.CentralDeviceDisconnected">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.CentralServiceDiscovered">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.CentralStarted">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.CentralStopped">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.PeripheralSessionAuthorized">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.PeripheralSessionNotified">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.PeripheralStarted">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.PeripheralStopped">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.PeripheralSubscribed">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.PeripheralUnsubscribed">
-            <summary>To be added.</summary>
-        </member>
-        <member name="F:MASFoundation.MASBLEServiceState.Unknown">
-            <summary>To be added.</summary>
-        </member>
         <member name="T:MASFoundation.MASCompletionErrorBlock">
-            <param name="completed">To be added.</param>
-            <param name="error">To be added.</param>
-            <summary>To be added.</summary>
+            <param name="completed">Indicates if the operation was completed successfully.</param>
+            <param name="error">NSError object in case any error is encountered during the process.</param>
+            <summary>A standard (bool completed, NSError error) block</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASCompletionErrorResult">
-            <summary>To be added.</summary>
+            <summary>
+        Result of a MASCompletionErrorBlock block that will a bool value indicating the completion state and/or an NSError object if there
+        is a failure.
+    </summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="C:MASFoundation.MASCompletionErrorResult(System.Boolean)">
@@ -1479,8 +1427,9 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="P:MASFoundation.MASCompletionErrorResult.Completed">
-            <summary>To be added.</summary>
-            <value>To be added.</value>
+            <summary>Indicates if the operation was completed successfully.</summary>
+            <value>
+                <c>true</c> if request was completed successfully; otherwise, <c>false</c>.</value>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASConfiguration">
@@ -2917,13 +2866,19 @@
             <summary>To be added.</summary>
         </member>
         <member name="T:MASFoundation.MASResponseInfoErrorBlock">
-            <param name="responseInfo">To be added.</param>
-            <param name="error">To be added.</param>
-            <summary>To be added.</summary>
+            <param name="responseInfo">JSON response object.</param>
+            <param name="error">NSError object in case any error is encountered during the process.</param>
+            <summary>
+        A standard (NSDictionary responseInfo, NSError error) block. The response object could potentially
+        be any type of object. It is most often used to return NSString JSON responses from HTTP calls for example.
+    </summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASResponseInfoErrorResult">
-            <summary>To be added.</summary>
+            <summary>
+       Result of a MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will
+       receive the JSON response object and/or an NSError object if there is a failure.
+    </summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="C:MASFoundation.MASResponseInfoErrorResult(Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
@@ -2932,19 +2887,24 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="P:MASFoundation.MASResponseInfoErrorResult.ResponseInfo">
-            <summary>To be added.</summary>
+            <summary>JSON response object.</summary>
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASResponseObjectErrorBlock">
-            <param name="response">To be added.</param>
-            <param name="responseObject">To be added.</param>
-            <param name="error">To be added.</param>
-            <summary>To be added.</summary>
+            <param name="response">NSHTTPURLResponse response type.</param>
+            <param name="responseObject">Response object containing the result of the request.</param>
+            <param name="error">NSError object in case any error is encountered during the process</param>
+            <summary>A standard (NSHTTPURLResponse response, Object responseObject, NSError error) block.
+  The block will be executed when a request finishes the task unsuccessfully, or successfully.
+  All of three arguments in the block can be null depends on the result of the request, 
+  and response object should be casted to appropriate data type when it is received.</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASResponseObjectErrorResult">
-            <summary>To be added.</summary>
+            <summary>
+        Result of an MASResponseObjectErrorBlock block that will return the NSHTTPURLResponse object, response object which needs to perform type casting based on the object type, and NSError object when error occurs.  
+    </summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="C:MASFoundation.MASResponseObjectErrorResult(Foundation.NSHttpUrlResponse,Foundation.NSObject)">
@@ -2954,12 +2914,12 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="P:MASFoundation.MASResponseObjectErrorResult.Response">
-            <summary>To be added.</summary>
+            <summary>NSHTTPURLResponse response type.</summary>
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
         <member name="P:MASFoundation.MASResponseObjectErrorResult.ResponseObject">
-            <summary>To be added.</summary>
+            <summary>Response object containing the result of the request. It should be casted to appropriate data type when it is received.</summary>
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
@@ -3606,13 +3566,15 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASUserResponseErrorBlock">
-            <param name="user">To be added.</param>
-            <param name="error">To be added.</param>
-            <summary>To be added.</summary>
+            <param name="user">MASUSer object with updated value which is also available through the current MASUser object that is making this request.</param>
+            <param name="error">NSError object in case any error is encountered during the process.</param>
+            <summary>The MASUser specific (MASUser user, NSError error) block</summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:MASFoundation.MASUserResponseErrorResult">
-            <summary>To be added.</summary>
+            <summary>
+        Result of a MASUserResponseErrorBlock block that returns MASUSer object with updated value and/or NSError object in case any error is encountered during the process.
+    </summary>
             <remarks>To be added.</remarks>
         </member>
         <member name="C:MASFoundation.MASUserResponseErrorResult(MASFoundation.MASUser)">
@@ -3621,7 +3583,7 @@
             <remarks>To be added.</remarks>
         </member>
         <member name="P:MASFoundation.MASUserResponseErrorResult.User">
-            <summary>To be added.</summary>
+            <summary>MASUSer object with updated value which is also available through the current MASUser object that is making this request.</summary>
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>

@@ -188,27 +188,27 @@ namespace MASFoundation
         Count
     }
 
-    //[Native]
-    public enum MASBLEServiceState //: nint
-    {
-        Unknown = -1,
-        CentralStarted,
-        CentralStopped,
-        CentralDeviceDetected,
-        CentralDeviceConnected,
-        CentralDeviceDisconnected,
-        CentralServiceDiscovered,
-        CentralCharacteristicDiscovered,
-        CentralCharacteristicWritten,
-        CentralAuthorizationSucceeded,
-        CentralAuthorizationFailed,
-        PeripheralSubscribed,
-        PeripheralUnsubscribed,
-        PeripheralStarted,
-        PeripheralStopped,
-        PeripheralSessionAuthorized,
-        PeripheralSessionNotified
-    }
+    ////[Native]
+    //public enum MASBLEServiceState //: nint
+    //{
+    //    Unknown = -1,
+    //    CentralStarted,
+    //    CentralStopped,
+    //    CentralDeviceDetected,
+    //    CentralDeviceConnected,
+    //    CentralDeviceDisconnected,
+    //    CentralServiceDiscovered,
+    //    CentralCharacteristicDiscovered,
+    //    CentralCharacteristicWritten,
+    //    CentralAuthorizationSucceeded,
+    //    CentralAuthorizationFailed,
+    //    PeripheralSubscribed,
+    //    PeripheralUnsubscribed,
+    //    PeripheralStarted,
+    //    PeripheralStopped,
+    //    PeripheralSessionAuthorized,
+    //    PeripheralSessionNotified
+    //}
 
     //[Native]
     public enum MASServiceLifecycleStatus //: nint

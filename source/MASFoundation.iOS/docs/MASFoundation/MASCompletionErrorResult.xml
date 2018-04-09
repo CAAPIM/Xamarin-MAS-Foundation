@@ -9,7 +9,10 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+        Result of a MASCompletionErrorBlock block that will a bool value indicating the completion state and/or an NSError object if there
+        is a failure.
+    </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -34,8 +37,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Indicates if the operation was completed successfully.</summary>
+        <value>
+          <c>true</c> if request was completed successfully; otherwise, <c>false</c>.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

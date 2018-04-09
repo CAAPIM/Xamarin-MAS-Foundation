@@ -9,7 +9,9 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+        Result of an MASResponseObjectErrorBlock block that will return the NSHTTPURLResponse object, response object which needs to perform type casting based on the object type, and NSError object when error occurs.  
+    </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -36,7 +38,7 @@
         <ReturnType>Foundation.NSHttpUrlResponse</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>NSHTTPURLResponse response type.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -49,7 +51,7 @@
         <ReturnType>Foundation.NSObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Response object containing the result of the request. It should be casted to appropriate data type when it is received.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

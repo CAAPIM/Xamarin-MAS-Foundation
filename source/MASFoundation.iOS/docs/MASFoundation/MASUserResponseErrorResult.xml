@@ -9,7 +9,9 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+        Result of a MASUserResponseErrorBlock block that returns MASUSer object with updated value and/or NSError object in case any error is encountered during the process.
+    </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -34,7 +36,7 @@
         <ReturnType>MASFoundation.MASUser</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>MASUSer object with updated value which is also available through the current MASUser object that is making this request.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

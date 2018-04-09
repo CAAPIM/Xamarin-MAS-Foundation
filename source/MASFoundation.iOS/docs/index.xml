@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="MASFoundation.iOS" Version="1.0.6673.18689">
+    <Assembly Name="MASFoundation.iOS" Version="1.0.6673.20520">
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.LinkerSafe</AttributeName>
@@ -61,7 +61,6 @@
       <Type Name="MASAuthorizationResponse" Kind="Class" />
       <Type Name="MASAuthorizationResponseDelegate" Kind="Class" />
       <Type Name="MASBasicCredentialsBlock" Kind="Delegate" />
-      <Type Name="MASBLEServiceState" Kind="Enumeration" />
       <Type Name="MASCompletionErrorBlock" Kind="Delegate" />
       <Type Name="MASCompletionErrorResult" Kind="Class" />
       <Type Name="MASConfiguration" Kind="Class" />
