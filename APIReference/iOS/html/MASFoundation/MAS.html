@@ -367,21 +367,6 @@
                 <td>[read-only]<div>static </div></td>
                 <td>
                   <b>
-                    <a href="#P:MASFoundation.MAS.IsPKCEEnabled">IsPKCEEnabled</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. 
-        Gets a value indicating whether this <a href="../MASFoundation/MAS.html">MASFoundation.MAS</a> is PKCEE nabled.
-        
-        <p>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</p><p>@dependency &gt;Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification.</p></td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div>static </div></td>
-                <td>
-                  <b>
                     <a href="#P:MASFoundation.MAS.MASState">MASState</a>
                   </b>
                 </td>
@@ -479,11 +464,8 @@
                 </td>
                 <td colspan="2">
                   <b>
-                    <a href="#M:MASFoundation.MAS.EnableBrowserBasedAuthentication(System.Boolean)">EnableBrowserBasedAuthentication</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
-        Sets bool indicator of Browser Based Authentication (templatized login) enabled or not for authorization process.
-        By default, it is disabled.
-        </blockquote></td>
+                    <a href="#M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">DeleteFromAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -491,10 +473,17 @@
                 </td>
                 <td colspan="2">
                   <b>
-                    <a href="#M:MASFoundation.MAS.EnablePKCE(System.Boolean)">EnablePKCE</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
-        Sets bool indicator of PKCE (Proof Key for Code Exchange) enabled or not for authorization process in Social Login, and Proximity Login.
-        <p>By default, PKCE is enabled and enforced in authorization process; it can be opted-out.</p><p>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</p><p>Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE. If the server side does not support PKCE, client side will still work without PKCE verification.</p></blockquote></td>
+                    <a href="#M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">DeleteFromAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">DeleteFromAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -576,6 +565,33 @@
                 </td>
                 <td colspan="2">
                   <b>
+                    <a href="#M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">GetFromAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">GetFromAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">GetFromAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
                     <a href="#M:MASFoundation.MAS.Invoke(MASFoundation.MASRequest,MASFoundation.MASResponseObjectErrorBlock)">Invoke</a>
                   </b>(<a href="../MASFoundation/MASRequest.html">MASRequest</a>, <a href="../MASFoundation/MASResponseObjectErrorBlock.html">MASResponseObjectErrorBlock</a>)<blockquote>
         Invoke the endpoint with the parameters defined in the MASRequest object
@@ -596,17 +612,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MAS.InvokeAsync(MASFoundation.MASRequest)">InvokeAsync</a>
-                  </b>(<a href="../MASFoundation/MASRequest.html">MASRequest</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;InvokeResult&gt;</a></nobr><blockquote>
-        Invoke the endpoint with the parameters defined in the MASRequest object
-        <p>
-        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
-        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
-        </p><p>
-        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
-        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
-        </p>
-        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.      
-        </blockquote></td>
+                  </b>(<a href="../MASFoundation/MASRequest.html">MASRequest</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MASResponseObjectErrorResult&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -688,6 +694,33 @@
                 </td>
                 <td colspan="2">
                   <b>
+                    <a href="#M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">PatchToAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">PatchToAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">PatchToAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
                     <a href="#M:MASFoundation.MAS.PostTo(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASResponseInfoErrorBlock)">PostTo</a>
                   </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASResponseInfoErrorBlock.html">MASResponseInfoErrorBlock</a>)<blockquote>
         Request method for an HTTP POST call to the Gateway.  This type of HTTP Method type
@@ -755,6 +788,33 @@
         to the primary gateway or not.  To ensure bypass the user session validation for public API, use PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
         with isPublic being <tt>true</tt>.
         </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">PostToAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">PostToAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">PostToAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -836,6 +896,33 @@
                 </td>
                 <td colspan="2">
                   <b>
+                    <a href="#M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">PutToAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">PutToAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">PutToAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
                     <a href="#M:MASFoundation.MAS.SetConfigurationFileName(System.String)">SetConfigurationFileName</a>
                   </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
         Set the name of the configuration file.  This gives the ability to set the file's name to a custom value.
@@ -881,24 +968,6 @@
                 </td>
                 <td colspan="2">
                   <b>
-                    <a href="#M:MASFoundation.MAS.SetOTPChannelSelectionBlock(MASFoundation.MASOTPChannelSelectionBlock)">SetOTPChannelSelectionBlock</a>
-                  </b>(<a href="../MASFoundation/MASOTPChannelSelectionBlock.html">MASOTPChannelSelectionBlock</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MAS.SetOTPCredentialsBlock(MASFoundation.MASOTPCredentialsBlock)">SetOTPCredentialsBlock</a>
-                  </b>(<a href="../MASFoundation/MASOTPCredentialsBlock.html">MASOTPCredentialsBlock</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static </div>
-                </td>
-                <td colspan="2">
-                  <b>
                     <a href="#M:MASFoundation.MAS.SetUserAuthCredentials(MASFoundation.MASUserAuthCredentialsBlock)">SetUserAuthCredentials</a>
                   </b>(<a href="../MASFoundation/MASUserAuthCredentialsBlock.html">MASUserAuthCredentialsBlock</a>)<blockquote>When MASGrantFlow is set to MASGrantFlowPassword, and auth credentials is required, SDK will invoke this block
         to obtain MASAuthCredentials to proceed authentication process.</blockquote></td>
@@ -918,30 +987,6 @@
                 </td>
                 <td colspan="2">
                   <b>
-                    <a href="#M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSError@)">SignWithClaims</a>
-                  </b>(<a href="../MASFoundation/MASClaims.html">MASClaims</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-        Signs MASClaims object with default private key from device registration against primary gateway.
-        Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
-        </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@)">SignWithClaims</a>
-                  </b>(<a href="../MASFoundation/MASClaims.html">MASClaims</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-        Signs MASClaims object with custom private key in NSData format. Private key should be in NSData format and should have been signed using RS256 algorithm.
-        Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
-        </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static </div>
-                </td>
-                <td colspan="2">
-                  <b>
                     <a href="#M:MASFoundation.MAS.Start(MASFoundation.MASCompletionErrorBlock)">Start</a>
                   </b>(<a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
         Starts the lifecycle of the MAS processes.  
@@ -954,6 +999,15 @@
         it will load from default JSON configuration file (msso_config.json)
         or JSON file with file name set through[MAS setConfigurationFileName:].
         </p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.StartAsync()">StartAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -1011,6 +1065,15 @@
                 </td>
                 <td colspan="2">
                   <b>
+                    <a href="#M:MASFoundation.MAS.StartWithJSONAsync(Foundation.NSDictionary)">StartWithJSONAsync</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
                     <a href="#M:MASFoundation.MAS.StartWithURL(Foundation.NSUrl,MASFoundation.MASCompletionErrorBlock)">StartWithURL</a>
                   </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSUrl</a>, <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
         Starts the lifecycle of the MAS processes with given JSON configuration file path, enrolment URL or null.
@@ -1036,12 +1099,30 @@
                 </td>
                 <td colspan="2">
                   <b>
+                    <a href="#M:MASFoundation.MAS.StartWithURLAsync(Foundation.NSUrl)">StartWithURLAsync</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSUrl</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
                     <a href="#M:MASFoundation.MAS.Stop(MASFoundation.MASCompletionErrorBlock)">Stop</a>
                   </b>(<a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
         Although an asynchronous block callback parameter is provided for response usage,
         optionally you can set that to null and the caller can observe the lifecycle 
         notifications instead.
         </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MAS.StopAsync()">StopAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
               </tr>
             </table>
           </div>
@@ -1319,54 +1400,162 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
-        <h3 id="M:MASFoundation.MAS.EnableBrowserBasedAuthentication(System.Boolean)">EnableBrowserBasedAuthentication Method</h3>
-        <blockquote id="M:MASFoundation.MAS.EnableBrowserBasedAuthentication(System.Boolean):member">
+        <h3 id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">DeleteFromAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):member">
           <div class="msummary">
-        Sets bool indicator of Browser Based Authentication (templatized login) enabled or not for authorization process.
-        By default, it is disabled.
-        </div>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("enableBrowserBasedAuthentication:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnableBrowserBasedAuthentication</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> enable)</div>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>DeleteFromAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo)</div>
           <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.EnableBrowserBasedAuthentication(System.Boolean):Parameters">
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Parameters">
             <dl>
               <dt>
-                <i>enable</i>
+                <i>endPointPath</i>
               </dt>
-              <dd>bool value indicating whether Browser Based Authentication is enabled or not.</dd>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
             </dl>
           </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.EnableBrowserBasedAuthentication(System.Boolean):Remarks">
+          <div class="SectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.EnableBrowserBasedAuthentication(System.Boolean):Version Information">
+          <div class="SectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
-        <h3 id="M:MASFoundation.MAS.EnablePKCE(System.Boolean)">EnablePKCE Method</h3>
-        <blockquote id="M:MASFoundation.MAS.EnablePKCE(System.Boolean):member">
+        <h3 id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">DeleteFromAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):member">
           <div class="msummary">
-        Sets bool indicator of PKCE (Proof Key for Code Exchange) enabled or not for authorization process in Social Login, and Proximity Login.
-        <p>By default, PKCE is enabled and enforced in authorization process; it can be opted-out.</p><p>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</p><p>Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE. If the server side does not support PKCE, client side will still work without PKCE verification.</p></div>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("enablePKCE:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnablePKCE</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> enable)</div>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>DeleteFromAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> requestType, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> responseType)</div>
           <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.EnablePKCE(System.Boolean):Parameters">
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Parameters">
             <dl>
               <dt>
-                <i>enable</i>
+                <i>endPointPath</i>
               </dt>
-              <dd>bool value of indicating whether PKCE is enabled or not.</dd>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>requestType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>responseType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
             </dl>
           </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.EnablePKCE(System.Boolean):Remarks">
+          <div class="SectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.EnablePKCE(System.Boolean):Version Information">
+          <div class="SectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">DeleteFromAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>DeleteFromAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> requestType, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> responseType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> isPublic)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>requestType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>responseType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>isPublic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.DeleteFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
@@ -1589,6 +1778,165 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
+        <h3 id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">GetFromAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>GetFromAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">GetFromAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>GetFromAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> requestType, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> responseType)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>requestType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>responseType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">GetFromAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>GetFromAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> requestType, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> responseType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> isPublic)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>requestType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>responseType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>isPublic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.GetFromAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
         <h3 id="P:MASFoundation.MAS.GrantFlow">GrantFlow Property</h3>
         <blockquote id="P:MASFoundation.MAS.GrantFlow:member">
           <div class="msummary">
@@ -1647,25 +1995,19 @@
         <h3 id="M:MASFoundation.MAS.InvokeAsync(MASFoundation.MASRequest)">InvokeAsync Method</h3>
         <blockquote id="M:MASFoundation.MAS.InvokeAsync(MASFoundation.MASRequest):member">
           <div class="msummary">
-        Invoke the endpoint with the parameters defined in the MASRequest object
-        <p>
-        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
-        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
-        </p><p>
-        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
-        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
-        </p>
-        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.      
-        </div>
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
           <h2>Syntax</h2>
-          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;InvokeResult&gt;</a> <b>InvokeAsync</b> (<a href="../MASFoundation/MASRequest.html">MASRequest</a> request)</div>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MASResponseObjectErrorResult&gt;</a> <b>InvokeAsync</b> (<a href="../MASFoundation/MASRequest.html">MASRequest</a> request)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.InvokeAsync(MASFoundation.MASRequest):Parameters">
             <dl>
               <dt>
                 <i>request</i>
               </dt>
-              <dd>MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</dd>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
@@ -1697,28 +2039,6 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:MASFoundation.MAS.IsKeychainSynchronizable:Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MASFoundation.MAS.IsPKCEEnabled">IsPKCEEnabled Property</h3>
-        <blockquote id="P:MASFoundation.MAS.IsPKCEEnabled:member">
-          <div class="msummary">
-        Gets a value indicating whether this <a href="../MASFoundation/MAS.html">MASFoundation.MAS</a> is PKCEE nabled.
-        
-        <p>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</p><p>@dependency &gt;Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification.</p></div>
-          <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("isPKCEEnabled")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsPKCEEnabled</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MAS.IsPKCEEnabled:Value">
-        bool value of indicating whether PKCE is enabled or not.
-        <tt>true</tt> if is PKCEE nabled; otherwise, <tt>false</tt>.
-        </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MASFoundation.MAS.IsPKCEEnabled:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MASFoundation.MAS.IsPKCEEnabled:Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
@@ -1918,6 +2238,165 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
+        <h3 id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">PatchToAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>PatchToAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">PatchToAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>PatchToAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> requestType, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> responseType)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>requestType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>responseType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">PatchToAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>PatchToAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> requestType, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> responseType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> isPublic)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>requestType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>responseType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>isPublic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PatchToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
         <h3 id="M:MASFoundation.MAS.PostTo(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASResponseInfoErrorBlock)">PostTo Method</h3>
         <blockquote id="M:MASFoundation.MAS.PostTo(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASResponseInfoErrorBlock):member">
           <div class="msummary">
@@ -2093,6 +2572,165 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MAS.PostTo(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean,MASFoundation.MASResponseInfoErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">PostToAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>PostToAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">PostToAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>PostToAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> requestType, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> responseType)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>requestType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>responseType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">PostToAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>PostToAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> requestType, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> responseType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> isPublic)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>requestType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>responseType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>isPublic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PostToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
@@ -2274,6 +2912,165 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
+        <h3 id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary)">PutToAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>PutToAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType)">PutToAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>PutToAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> requestType, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> responseType)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>requestType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>responseType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean)">PutToAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;&gt;</a> <b>PutToAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> endPointPath, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> parameterInfo, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> headerInfo, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> requestType, <a href="../MASFoundation/MASRequestResponseType.html">MASRequestResponseType</a> responseType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> isPublic)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>endPointPath</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>parameterInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>headerInfo</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>requestType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>responseType</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>isPublic</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.PutToAsync(System.String,Foundation.NSDictionary,Foundation.NSDictionary,MASFoundation.MASRequestResponseType,MASFoundation.MASRequestResponseType,System.Boolean):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
         <h3 id="M:MASFoundation.MAS.SetConfigurationFileName(System.String)">SetConfigurationFileName Method</h3>
         <blockquote id="M:MASFoundation.MAS.SetConfigurationFileName(System.String):member">
           <div class="msummary">
@@ -2378,60 +3175,6 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
-        <h3 id="M:MASFoundation.MAS.SetOTPChannelSelectionBlock(MASFoundation.MASOTPChannelSelectionBlock)">SetOTPChannelSelectionBlock Method</h3>
-        <blockquote id="M:MASFoundation.MAS.SetOTPChannelSelectionBlock(MASFoundation.MASOTPChannelSelectionBlock):member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("setOTPChannelSelectionBlock:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetOTPChannelSelectionBlock</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASOTPChannelSelectionBlock))] <a href="../MASFoundation/MASOTPChannelSelectionBlock.html">MASOTPChannelSelectionBlock</a> OTPChannelSelector)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.SetOTPChannelSelectionBlock(MASFoundation.MASOTPChannelSelectionBlock):Parameters">
-            <dl>
-              <dt>
-                <i>OTPChannelSelector</i>
-              </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
-            </dl>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.SetOTPChannelSelectionBlock(MASFoundation.MASOTPChannelSelectionBlock):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.SetOTPChannelSelectionBlock(MASFoundation.MASOTPChannelSelectionBlock):Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MAS.SetOTPCredentialsBlock(MASFoundation.MASOTPCredentialsBlock)">SetOTPCredentialsBlock Method</h3>
-        <blockquote id="M:MASFoundation.MAS.SetOTPCredentialsBlock(MASFoundation.MASOTPCredentialsBlock):member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("setOTPCredentialsBlock:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetOTPCredentialsBlock</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASOTPCredentialsBlock))] <a href="../MASFoundation/MASOTPCredentialsBlock.html">MASOTPCredentialsBlock</a> oneTimePassword)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.SetOTPCredentialsBlock(MASFoundation.MASOTPCredentialsBlock):Parameters">
-            <dl>
-              <dt>
-                <i>oneTimePassword</i>
-              </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
-            </dl>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.SetOTPCredentialsBlock(MASFoundation.MASOTPCredentialsBlock):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.SetOTPCredentialsBlock(MASFoundation.MASOTPCredentialsBlock):Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
         <h3 id="M:MASFoundation.MAS.SetUserAuthCredentials(MASFoundation.MASUserAuthCredentialsBlock)">SetUserAuthCredentials Method</h3>
         <blockquote id="M:MASFoundation.MAS.SetUserAuthCredentials(MASFoundation.MASUserAuthCredentialsBlock):member">
           <div class="msummary">When MASGrantFlow is set to MASGrantFlowPassword, and auth credentials is required, SDK will invoke this block
@@ -2483,74 +3226,6 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
-        <h3 id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSError@)">SignWithClaims Method</h3>
-        <blockquote id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSError@):member">
-          <div class="msummary">
-        Signs MASClaims object with default private key from device registration against primary gateway.
-        Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("signWithClaims:error:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>SignWithClaims</b> (<a href="../MASFoundation/MASClaims.html">MASClaims</a> claims, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSError@):Parameters">
-            <dl>
-              <dt>
-                <i>claims</i>
-              </dt>
-              <dd>MASClaims object containing claims for JWT.</dd>
-              <dt>
-                <i>error</i>
-              </dt>
-              <dd>NSError error reference object that returns any error occurred during JWT construction.</dd>
-            </dl>
-          </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSError@):Returns">string of JWT.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSError@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSError@):Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@)">SignWithClaims Method</h3>
-        <blockquote id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@):member">
-          <div class="msummary">
-        Signs MASClaims object with custom private key in NSData format. Private key should be in NSData format and should have been signed using RS256 algorithm.
-        Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("signWithClaims:privateKey:error:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>SignWithClaims</b> (<a href="../MASFoundation/MASClaims.html">MASClaims</a> claims, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a> privateKey, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@):Parameters">
-            <dl>
-              <dt>
-                <i>claims</i>
-              </dt>
-              <dd>MASClaims object containing claims for JWT.</dd>
-              <dt>
-                <i>privateKey</i>
-              </dt>
-              <dd>Custom private key in NSData format signed using RS256 algorithm.</dd>
-              <dt>
-                <i>error</i>
-              </dt>
-              <dd>NSError error reference object that returns any error occurred during JWT construction.</dd>
-            </dl>
-          </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@):Returns">string of JWT.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MAS.SignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@):Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
         <h3 id="M:MASFoundation.MAS.Start(MASFoundation.MASCompletionErrorBlock)">Start Method</h3>
         <blockquote id="M:MASFoundation.MAS.Start(MASFoundation.MASCompletionErrorBlock):member">
           <div class="msummary">
@@ -2594,6 +3269,26 @@
         </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MAS.Start(MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.StartAsync()">StartAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.StartAsync():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>StartAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.StartAsync():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.StartAsync():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.StartAsync():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
@@ -2736,6 +3431,37 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
+        <h3 id="M:MASFoundation.MAS.StartWithJSONAsync(Foundation.NSDictionary)">StartWithJSONAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.StartWithJSONAsync(Foundation.NSDictionary):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>StartWithJSONAsync</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary</a> jsonConfiguration)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.StartWithJSONAsync(Foundation.NSDictionary):Parameters">
+            <dl>
+              <dt>
+                <i>jsonConfiguration</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.StartWithJSONAsync(Foundation.NSDictionary):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.StartWithJSONAsync(Foundation.NSDictionary):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.StartWithJSONAsync(Foundation.NSDictionary):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
         <h3 id="M:MASFoundation.MAS.StartWithURL(Foundation.NSUrl,MASFoundation.MASCompletionErrorBlock)">StartWithURL Method</h3>
         <blockquote id="M:MASFoundation.MAS.StartWithURL(Foundation.NSUrl,MASFoundation.MASCompletionErrorBlock):member">
           <div class="msummary">
@@ -2789,6 +3515,37 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
+        <h3 id="M:MASFoundation.MAS.StartWithURLAsync(Foundation.NSUrl)">StartWithURLAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.StartWithURLAsync(Foundation.NSUrl):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>StartWithURLAsync</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSUrl</a> url)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.StartWithURLAsync(Foundation.NSUrl):Parameters">
+            <dl>
+              <dt>
+                <i>url</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.StartWithURLAsync(Foundation.NSUrl):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.StartWithURLAsync(Foundation.NSUrl):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.StartWithURLAsync(Foundation.NSUrl):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
         <h3 id="M:MASFoundation.MAS.Stop(MASFoundation.MASCompletionErrorBlock)">Stop Method</h3>
         <blockquote id="M:MASFoundation.MAS.Stop(MASFoundation.MASCompletionErrorBlock):member">
           <div class="msummary">
@@ -2820,6 +3577,26 @@
         </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MAS.Stop(MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MAS.StopAsync()">StopAsync Method</h3>
+        <blockquote id="M:MASFoundation.MAS.StopAsync():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>StopAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MAS.StopAsync():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.StopAsync():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MAS.StopAsync():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>

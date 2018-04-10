@@ -206,9 +206,10 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:MASFoundation.MASResponseObjectErrorBlock">MASResponseObjectErrorBlock  Delegate</h1>
-    <p class="Summary" id="T:MASFoundation.MASResponseObjectErrorBlock:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:MASFoundation.MASResponseObjectErrorBlock:Summary">A standard (NSHTTPURLResponse response, Object responseObject, NSError error) block.
+  The block will be executed when a request finishes the task unsuccessfully, or successfully.
+  All of three arguments in the block can be null depends on the result of the request, 
+  and response object should be casted to appropriate data type when it is received.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:MASFoundation.MASResponseObjectErrorBlock:Signature">public delegate <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>MASResponseObjectErrorBlock</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSHttpUrlResponse</a> arg0, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> arg1, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> arg2)</div>
@@ -218,23 +219,17 @@
       <blockquote class="SubsectionBox" id="T:MASFoundation.MASResponseObjectErrorBlock:Docs:Parameters">
         <dl>
           <dt>
-            <i>arg0</i>
+            <i>response</i>
           </dt>
-          <dd>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </dd>
+          <dd>NSHTTPURLResponse response type.</dd>
           <dt>
-            <i>arg1</i>
+            <i>responseObject</i>
           </dt>
-          <dd>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </dd>
+          <dd>Response object containing the result of the request.</dd>
           <dt>
-            <i>arg2</i>
+            <i>error</i>
           </dt>
-          <dd>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </dd>
+          <dd>NSError object in case any error is encountered during the process</dd>
         </dl>
       </blockquote>
       <h2 class="Section">Remarks</h2>

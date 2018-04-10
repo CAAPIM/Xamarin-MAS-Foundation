@@ -309,35 +309,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="InitializeBrowserBasedAuthenticationWithCompletion">
-      <MemberSignature Language="C#" Value="public static void InitializeBrowserBasedAuthenticationWithCompletion (MASFoundation.MASCompletionErrorBlock completion);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InitializeBrowserBasedAuthenticationWithCompletion(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("initializeBrowserBasedAuthenticationWithCompletion:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
-          <Attributes>
-            <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
-            </Attribute>
-          </Attributes>
-        </Parameter>
-      </Parameters>
-      <Docs>
-        <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
-        <summary>
-        Authenticate a user by launching a Browser which in turn loads a URL (templatized).
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="IsAuthenticated">
       <MemberSignature Language="C#" Value="public virtual bool IsAuthenticated { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
@@ -436,6 +407,20 @@
         however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
         Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
         </para></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LockSessionWithCompletionAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LockSessionWithCompletionAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LockSessionWithCompletionAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -807,6 +792,20 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RequestUserInfoWithCompletionAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;MASFoundation.MASUser&gt; RequestUserInfoWithCompletionAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class MASFoundation.MASUser&gt; RequestUserInfoWithCompletionAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.MASUser&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="UnlockSessionWithCompletion">
       <MemberSignature Language="C#" Value="public virtual void UnlockSessionWithCompletion (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnlockSessionWithCompletion(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
@@ -837,6 +836,20 @@
         </para><para>
         After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
         </para></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnlockSessionWithCompletionAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; UnlockSessionWithCompletionAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; UnlockSessionWithCompletionAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -872,6 +885,23 @@
         </para><para>
         After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
         </para></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnlockSessionWithUserOperationPromptMessageAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; UnlockSessionWithUserOperationPromptMessageAsync (string userOperationPrompt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; UnlockSessionWithUserOperationPromptMessageAsync(string userOperationPrompt) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userOperationPrompt" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userOperationPrompt">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

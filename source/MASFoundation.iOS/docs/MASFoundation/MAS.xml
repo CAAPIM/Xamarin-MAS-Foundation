@@ -252,50 +252,76 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="EnableBrowserBasedAuthentication">
-      <MemberSignature Language="C#" Value="public static void EnableBrowserBasedAuthentication (bool enable);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableBrowserBasedAuthentication(bool enable) cil managed" />
+    <Member MemberName="DeleteFromAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; DeleteFromAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; DeleteFromAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo) cil managed" />
       <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("enableBrowserBasedAuthentication:")</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="enable" Type="System.Boolean" />
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
       </Parameters>
       <Docs>
-        <param name="enable">bool value indicating whether Browser Based Authentication is enabled or not.</param>
-        <summary>
-        Sets bool indicator of Browser Based Authentication (templatized login) enabled or not for authorization process.
-        By default, it is disabled.
-        </summary>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="EnablePKCE">
-      <MemberSignature Language="C#" Value="public static void EnablePKCE (bool enable);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnablePKCE(bool enable) cil managed" />
+    <Member MemberName="DeleteFromAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; DeleteFromAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; DeleteFromAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType) cil managed" />
       <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("enablePKCE:")</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="enable" Type="System.Boolean" />
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
       </Parameters>
       <Docs>
-        <param name="enable">bool value of indicating whether PKCE is enabled or not.</param>
-        <summary>
-        Sets bool indicator of PKCE (Proof Key for Code Exchange) enabled or not for authorization process in Social Login, and Proximity Login.
-        <para>By default, PKCE is enabled and enforced in authorization process; it can be opted-out.</para><para>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</para><para>Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE. If the server side does not support PKCE, client side will still work without PKCE verification.</para></summary>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <param name="requestType">To be added.</param>
+        <param name="responseType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteFromAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; DeleteFromAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; DeleteFromAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <param name="requestType">To be added.</param>
+        <param name="responseType">To be added.</param>
+        <param name="isPublic">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -508,6 +534,79 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetFromAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; GetFromAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; GetFromAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFromAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; GetFromAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; GetFromAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <param name="requestType">To be added.</param>
+        <param name="responseType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFromAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; GetFromAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; GetFromAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <param name="requestType">To be added.</param>
+        <param name="responseType">To be added.</param>
+        <param name="isPublic">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GrantFlow">
       <MemberSignature Language="C#" Value="public static MASFoundation.MASGrantFlow GrantFlow { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property valuetype MASFoundation.MASGrantFlow GrantFlow" />
@@ -571,38 +670,11 @@
       </Docs>
     </Member>
     <Member MemberName="InvokeAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;MASFoundation.InvokeResult&gt; InvokeAsync (MASFoundation.MASRequest request);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class MASFoundation.InvokeResult&gt; InvokeAsync(class MASFoundation.MASRequest request) cil managed" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;MASFoundation.MASResponseObjectErrorResult&gt; InvokeAsync (MASFoundation.MASRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class MASFoundation.MASResponseObjectErrorResult&gt; InvokeAsync(class MASFoundation.MASRequest request) cil managed" />
       <MemberType>Method</MemberType>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.InvokeResult&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="request" Type="MASFoundation.MASRequest" />
-      </Parameters>
-      <Docs>
-        <param name="request">MASRequest An object containing all parameters to call the endpoint When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</param>
-        <summary>
-        Invoke the endpoint with the parameters defined in the MASRequest object
-        <para>
-        If endPointPath is full URL format(including port number and http protocol), SDK will validate the server from the client side through SSL pinning(authentication challenge) with
-        provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
-        </para><para>
-        ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
-        subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
-        </para>
-        When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.      
-        </summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="InvokeAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;MASFoundation.MASResult&gt; InvokeAsync (MASFoundation.MASRequest request);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class MASFoundation.MASResult&gt; InvokeAsync(class MASFoundation.MASRequest request) cil managed" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.MASResult&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.MASResponseObjectErrorResult&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="request" Type="MASFoundation.MASRequest" />
@@ -632,30 +704,6 @@
         </summary>
         <value>
           <c>true</c> if is keychain synchronizable; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="IsPKCEEnabled">
-      <MemberSignature Language="C#" Value="public static bool IsPKCEEnabled { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property bool IsPKCEEnabled" />
-      <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("isPKCEEnabled")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-        Gets a value indicating whether this <see cref="T:MASFoundation.MAS" /> is PKCEE nabled.
-        
-        <para>MAS Client SDK 1.4 and MAG/OTK 4.0 on April 2017 release.</para><para>@dependency &gt;Minimum version of MAG/OTK 4.0 is required to successfully perform PKCE.If the server side does not support PKCE, client side will still work without PKCE verification.</para></summary>
-        <value>
-        bool value of indicating whether PKCE is enabled or not.
-        <c>true</c> if is PKCEE nabled; otherwise, <c>false</c>.
-        </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -841,6 +889,79 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="PatchToAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; PatchToAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; PatchToAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PatchToAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; PatchToAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; PatchToAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <param name="requestType">To be added.</param>
+        <param name="responseType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PatchToAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; PatchToAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; PatchToAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <param name="requestType">To be added.</param>
+        <param name="responseType">To be added.</param>
+        <param name="isPublic">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="PostTo">
       <MemberSignature Language="C#" Value="public static void PostTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PostTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
@@ -1000,6 +1121,79 @@
         to the primary gateway or not.  To ensure bypass the user session validation for public API, use PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion) method
         with isPublic being <c>true</c>.
         </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostToAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; PostToAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; PostToAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostToAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; PostToAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; PostToAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <param name="requestType">To be added.</param>
+        <param name="responseType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostToAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; PostToAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; PostToAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <param name="requestType">To be added.</param>
+        <param name="responseType">To be added.</param>
+        <param name="isPublic">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1165,6 +1359,79 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="PutToAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; PutToAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; PutToAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PutToAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; PutToAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; PutToAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <param name="requestType">To be added.</param>
+        <param name="responseType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PutToAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; PutToAsync (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASRequestResponseType requestType, MASFoundation.MASRequestResponseType responseType, bool isPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; PutToAsync(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, valuetype MASFoundation.MASRequestResponseType requestType, valuetype MASFoundation.MASRequestResponseType responseType, bool isPublic) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPointPath" Type="System.String" />
+        <Parameter Name="parameterInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="headerInfo" Type="Foundation.NSDictionary" />
+        <Parameter Name="requestType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="responseType" Type="MASFoundation.MASRequestResponseType" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="endPointPath">To be added.</param>
+        <param name="parameterInfo">To be added.</param>
+        <param name="headerInfo">To be added.</param>
+        <param name="requestType">To be added.</param>
+        <param name="responseType">To be added.</param>
+        <param name="isPublic">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SetConfigurationFileName">
       <MemberSignature Language="C#" Value="public static void SetConfigurationFileName (string fileName);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetConfigurationFileName(string fileName) cil managed" />
@@ -1273,60 +1540,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="SetOTPChannelSelectionBlock">
-      <MemberSignature Language="C#" Value="public static void SetOTPChannelSelectionBlock (MASFoundation.MASOTPChannelSelectionBlock OTPChannelSelector);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetOTPChannelSelectionBlock(class MASFoundation.MASOTPChannelSelectionBlock OTPChannelSelector) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("setOTPChannelSelectionBlock:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="OTPChannelSelector" Type="MASFoundation.MASOTPChannelSelectionBlock">
-          <Attributes>
-            <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASOTPChannelSelectionBlock))</AttributeName>
-            </Attribute>
-          </Attributes>
-        </Parameter>
-      </Parameters>
-      <Docs>
-        <param name="OTPChannelSelector">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SetOTPCredentialsBlock">
-      <MemberSignature Language="C#" Value="public static void SetOTPCredentialsBlock (MASFoundation.MASOTPCredentialsBlock oneTimePassword);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetOTPCredentialsBlock(class MASFoundation.MASOTPCredentialsBlock oneTimePassword) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("setOTPCredentialsBlock:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="oneTimePassword" Type="MASFoundation.MASOTPCredentialsBlock">
-          <Attributes>
-            <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASOTPCredentialsBlock))</AttributeName>
-            </Attribute>
-          </Attributes>
-        </Parameter>
-      </Parameters>
-      <Docs>
-        <param name="oneTimePassword">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="SetUserAuthCredentials">
       <MemberSignature Language="C#" Value="public static void SetUserAuthCredentials (MASFoundation.MASUserAuthCredentialsBlock userAuthCredentialsBlock);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetUserAuthCredentials(class MASFoundation.MASUserAuthCredentialsBlock userAuthCredentialsBlock) cil managed" />
@@ -1381,62 +1594,6 @@
       <Docs>
         <param name="login">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SignWithClaims">
-      <MemberSignature Language="C#" Value="public static string SignWithClaims (MASFoundation.MASClaims claims, out Foundation.NSError error);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string SignWithClaims(class MASFoundation.MASClaims claims, class Foundation.NSError error) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("signWithClaims:error:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="claims" Type="MASFoundation.MASClaims" />
-        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
-      </Parameters>
-      <Docs>
-        <param name="claims">MASClaims object containing claims for JWT.</param>
-        <param name="error">NSError error reference object that returns any error occurred during JWT construction.</param>
-        <summary>
-        Signs MASClaims object with default private key from device registration against primary gateway.
-        Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
-        </summary>
-        <returns>string of JWT.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SignWithClaims">
-      <MemberSignature Language="C#" Value="public static string SignWithClaims (MASFoundation.MASClaims claims, Foundation.NSData privateKey, out Foundation.NSError error);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string SignWithClaims(class MASFoundation.MASClaims claims, class Foundation.NSData privateKey, class Foundation.NSError error) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("signWithClaims:privateKey:error:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="claims" Type="MASFoundation.MASClaims" />
-        <Parameter Name="privateKey" Type="Foundation.NSData" />
-        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
-      </Parameters>
-      <Docs>
-        <param name="claims">MASClaims object containing claims for JWT.</param>
-        <param name="privateKey">Custom private key in NSData format signed using RS256 algorithm.</param>
-        <param name="error">NSError error reference object that returns any error occurred during JWT construction.</param>
-        <summary>
-        Signs MASClaims object with custom private key in NSData format. Private key should be in NSData format and should have been signed using RS256 algorithm.
-        Some of read-write claims, such as exp, content, and/or contentType, should properly be prepared.
-        </summary>
-        <returns>string of JWT.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
