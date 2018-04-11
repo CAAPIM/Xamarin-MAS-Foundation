@@ -16,13 +16,14 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="response">NSHTTPURLResponse response type.</param>
-    <param name="responseObject">Response object containing the result of the request.</param>
+    <param name="response">NSHTTPURLResponse response object.</param>
+    <param name="responseObject">Object containing the result of the request.</param>
     <param name="error">NSError object in case any error is encountered during the process</param>
     <summary>A standard (NSHTTPURLResponse response, Object responseObject, NSError error) block.
   The block will be executed when a request finishes the task unsuccessfully, or successfully.
   All of three arguments in the block can be null depends on the result of the request, 
   and response object should be casted to appropriate data type when it is received.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
 </Type>

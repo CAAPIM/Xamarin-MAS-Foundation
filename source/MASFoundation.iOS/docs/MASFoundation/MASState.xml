@@ -8,8 +8,9 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The enumerated MASState that can indicate what state of SDK currently is at.</summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="DidLoad">

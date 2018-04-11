@@ -8,8 +8,9 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The enumerated MASGatewayMonitoringStatus types.</summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Count">

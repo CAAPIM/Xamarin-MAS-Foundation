@@ -79,9 +79,6 @@ namespace MASFoundation
     // typedef void (^MASAuthorizationCodeCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
     delegate void MASAuthorizationCodeCredentialsBlock(string authorizationCode, bool cancel, [BlockCallback, NullAllowed] MASCompletionErrorBlock completionBlock);
 
-    // typedef void (^MASUserLoginWithUserCredentialsBlock)(MASBasicCredentialsBlock _Nonnull, MASAuthorizationCodeCredentialsBlock _Nonnull);
-    delegate void MASUserLoginWithUserCredentialsBlock([BlockCallback] MASBasicCredentialsBlock arg0, [BlockCallback] MASAuthorizationCodeCredentialsBlock completionBlock);
-
     // @interface MASObject : NSObject <NSCopying, NSCoding>
     [BaseType(typeof(NSObject))]
     interface MASObject : INSCopying, INSCoding
@@ -148,105 +145,105 @@ namespace MASFoundation
         [Field("MASFoundationVersionString", "__Internal")]
         IntPtr MASFoundationVersionString { get; }
 
-        //// MAS Errors
-        //// extern NSString *const _Nonnull MASFoundationErrorDomain;
-        //[Field("MASFoundationErrorDomain", "__Internal")]
-        //NSString MASFoundationErrorDomain { get; }
+        // MAS Errors
+        // extern NSString *const _Nonnull MASFoundationErrorDomain;
+        [Field("MASFoundationErrorDomain", "__Internal")]
+        NSString MASFoundationErrorDomain { get; }
 
-        //// extern NSString *const _Nonnull MASFoundationErrorDomainLocal;
-        //[Field("MASFoundationErrorDomainLocal", "__Internal")]
-        //NSString MASFoundationErrorDomainLocal { get; }
+        // extern NSString *const _Nonnull MASFoundationErrorDomainLocal;
+        [Field("MASFoundationErrorDomainLocal", "__Internal")]
+        NSString MASFoundationErrorDomainLocal { get; }
 
-        //// extern NSString *const _Nonnull MASFoundationErrorDomainTargetAPI;
-        //[Field("MASFoundationErrorDomainTargetAPI", "__Internal")]
-        //NSString MASFoundationErrorDomainTargetAPI { get; }
+        // extern NSString *const _Nonnull MASFoundationErrorDomainTargetAPI;
+        [Field("MASFoundationErrorDomainTargetAPI", "__Internal")]
+        NSString MASFoundationErrorDomainTargetAPI { get; }
 
-        //// MAS Notifications
-        //// extern NSString *const _Nonnull MASWillStartNotification;
-        //[Field("MASWillStartNotification", "__Internal")]
-        //NSString MASWillStartNotification { get; }
+        // MAS Notifications
+        // extern NSString *const _Nonnull MASWillStartNotification;
+        [Field("MASWillStartNotification", "__Internal")]
+        NSString MASWillStartNotification { get; }
 
-        //// extern NSString *const _Nonnull MASDidFailToStartNotification;
-        //[Field("MASDidFailToStartNotification", "__Internal")]
-        //NSString MASDidFailToStartNotification { get; }
+        // extern NSString *const _Nonnull MASDidFailToStartNotification;
+        [Field("MASDidFailToStartNotification", "__Internal")]
+        NSString MASDidFailToStartNotification { get; }
 
-        //// extern NSString *const _Nonnull MASDidStartNotification;
-        //[Field("MASDidStartNotification", "__Internal")]
-        //NSString MASDidStartNotification { get; }
+        // extern NSString *const _Nonnull MASDidStartNotification;
+        [Field("MASDidStartNotification", "__Internal")]
+        NSString MASDidStartNotification { get; }
 
-        //// extern NSString *const _Nonnull MASWillStopNotification;
-        //[Field("MASWillStopNotification", "__Internal")]
-        //NSString MASWillStopNotification { get; }
+        // extern NSString *const _Nonnull MASWillStopNotification;
+        [Field("MASWillStopNotification", "__Internal")]
+        NSString MASWillStopNotification { get; }
 
-        //// extern NSString *const _Nonnull MASDidFailToStopNotification;
-        //[Field("MASDidFailToStopNotification", "__Internal")]
-        //NSString MASDidFailToStopNotification { get; }
+        // extern NSString *const _Nonnull MASDidFailToStopNotification;
+        [Field("MASDidFailToStopNotification", "__Internal")]
+        NSString MASDidFailToStopNotification { get; }
 
-        //// extern NSString *const _Nonnull MASDidStopNotification;
-        //[Field("MASDidStopNotification", "__Internal")]
-        //NSString MASDidStopNotification { get; }
+        // extern NSString *const _Nonnull MASDidStopNotification;
+        [Field("MASDidStopNotification", "__Internal")]
+        NSString MASDidStopNotification { get; }
 
-        //// extern NSString *const _Nonnull MASWillSwitchGatewayServerNotification;
-        //[Field("MASWillSwitchGatewayServerNotification", "__Internal")]
-        //NSString MASWillSwitchGatewayServerNotification { get; }
+        // extern NSString *const _Nonnull MASWillSwitchGatewayServerNotification;
+        [Field("MASWillSwitchGatewayServerNotification", "__Internal")]
+        NSString MASWillSwitchGatewayServerNotification { get; }
 
-        //// extern NSString *const _Nonnull MASDidSwitchGatewayServerNotification;
-        //[Field("MASDidSwitchGatewayServerNotification", "__Internal")]
-        //NSString MASDidSwitchGatewayServerNotification { get; }
+        // extern NSString *const _Nonnull MASDidSwitchGatewayServerNotification;
+        [Field("MASDidSwitchGatewayServerNotification", "__Internal")]
+        NSString MASDidSwitchGatewayServerNotification { get; }
 
-        //// MAS Device Notifications
-        //// extern NSString* const _Nonnull MASDeviceWillDeregisterNotification;
-        //[Field("MASDeviceWillDeregisterNotification", "__Internal")]
-        //NSString MASDeviceWillDeregisterNotification { get; }
+        // MAS Device Notifications
+        // extern NSString* const _Nonnull MASDeviceWillDeregisterNotification;
+        [Field("MASDeviceWillDeregisterNotification", "__Internal")]
+        NSString MASDeviceWillDeregisterNotification { get; }
 
-        //// extern NSString* const _Nonnull MASDeviceDidFailToDeregisterNotification;
-        //[Field("MASDeviceDidFailToDeregisterNotification", "__Internal")]
-        //NSString MASDeviceDidFailToDeregisterNotification { get; }
+        // extern NSString* const _Nonnull MASDeviceDidFailToDeregisterNotification;
+        [Field("MASDeviceDidFailToDeregisterNotification", "__Internal")]
+        NSString MASDeviceDidFailToDeregisterNotification { get; }
 
-        //// extern NSString* const _Nonnull MASDeviceDidDeregisterNotification;
-        //[Field("MASDeviceDidDeregisterNotification", "__Internal")]
-        //NSString MASDeviceDidDeregisterNotification { get; }
+        // extern NSString* const _Nonnull MASDeviceDidDeregisterNotification;
+        [Field("MASDeviceDidDeregisterNotification", "__Internal")]
+        NSString MASDeviceDidDeregisterNotification { get; }
 
-        //// extern NSString* const _Nonnull MASDeviceDidResetLocallyNotification;
-        //[Field("MASDeviceDidResetLocallyNotification", "__Internal")]
-        //NSString MASDeviceDidResetLocallyNotification { get; }
+        // extern NSString* const _Nonnull MASDeviceDidResetLocallyNotification;
+        [Field("MASDeviceDidResetLocallyNotification", "__Internal")]
+        NSString MASDeviceDidResetLocallyNotification { get; }
 
-        //// User Notifications
-        //// extern NSString* const _Nonnull MASUserWillAuthenticateNotification;
-        //[Field("MASUserWillAuthenticateNotification", "__Internal")]
-        //NSString MASUserWillAuthenticateNotification { get; }
+        // User Notifications
+        // extern NSString* const _Nonnull MASUserWillAuthenticateNotification;
+        [Field("MASUserWillAuthenticateNotification", "__Internal")]
+        NSString MASUserWillAuthenticateNotification { get; }
 
-        //// extern NSString* const _Nonnull MASUserDidFailToAuthenticateNotification;
-        //[Field("MASUserDidFailToAuthenticateNotification", "__Internal")]
-        //NSString MASUserDidFailToAuthenticateNotification { get; }
+        // extern NSString* const _Nonnull MASUserDidFailToAuthenticateNotification;
+        [Field("MASUserDidFailToAuthenticateNotification", "__Internal")]
+        NSString MASUserDidFailToAuthenticateNotification { get; }
 
-        //// extern NSString* const _Nonnull MASUserDidAuthenticateNotification;
-        //[Field("MASUserDidAuthenticateNotification", "__Internal")]
-        //NSString MASUserDidAuthenticateNotification { get; }
+        // extern NSString* const _Nonnull MASUserDidAuthenticateNotification;
+        [Field("MASUserDidAuthenticateNotification", "__Internal")]
+        NSString MASUserDidAuthenticateNotification { get; }
 
-        //// extern NSString* const _Nonnull MASUserWillLogoutNotification;
-        //[Field("MASUserWillLogoutNotification", "__Internal")]
-        //NSString MASUserWillLogoutNotification { get; }
+        // extern NSString* const _Nonnull MASUserWillLogoutNotification;
+        [Field("MASUserWillLogoutNotification", "__Internal")]
+        NSString MASUserWillLogoutNotification { get; }
 
-        //// extern NSString* const _Nonnull MASUserDidFailToLogoutNotification;
-        //[Field("MASUserDidFailToLogoutNotification", "__Internal")]
-        //NSString MASUserDidFailToLogoutNotification { get; }
+        // extern NSString* const _Nonnull MASUserDidFailToLogoutNotification;
+        [Field("MASUserDidFailToLogoutNotification", "__Internal")]
+        NSString MASUserDidFailToLogoutNotification { get; }
 
-        //// extern NSString* const _Nonnull MASUserDidLogoutNotification;
-        //[Field("MASUserDidLogoutNotification", "__Internal")]
-        //NSString MASUserDidLogoutNotification { get; }
+        // extern NSString* const _Nonnull MASUserDidLogoutNotification;
+        [Field("MASUserDidLogoutNotification", "__Internal")]
+        NSString MASUserDidLogoutNotification { get; }
 
-        //// extern NSString* const _Nonnull MASUserWillUpdateInformationNotification;
-        //[Field("MASUserWillUpdateInformationNotification", "__Internal")]
-        //NSString MASUserWillUpdateInformationNotification { get; }
+        // extern NSString* const _Nonnull MASUserWillUpdateInformationNotification;
+        [Field("MASUserWillUpdateInformationNotification", "__Internal")]
+        NSString MASUserWillUpdateInformationNotification { get; }
 
-        //// extern NSString* const _Nonnull MASUserDidFailToUpdateInformationNotification;
-        //[Field("MASUserDidFailToUpdateInformationNotification", "__Internal")]
-        //NSString MASUserDidFailToUpdateInformationNotification { get; }
+        // extern NSString* const _Nonnull MASUserDidFailToUpdateInformationNotification;
+        [Field("MASUserDidFailToUpdateInformationNotification", "__Internal")]
+        NSString MASUserDidFailToUpdateInformationNotification { get; }
 
-        //// extern NSString* const _Nonnull MASUserDidUpdateInformationNotification;
-        //[Field("MASUserDidUpdateInformationNotification", "__Internal")]
-        //NSString MASUserDidUpdateInformationNotification { get; }
+        // extern NSString* const _Nonnull MASUserDidUpdateInformationNotification;
+        [Field("MASUserDidUpdateInformationNotification", "__Internal")]
+        NSString MASUserDidUpdateInformationNotification { get; }
 
         //// Authorization Response - Social Login Notifications
         //// extern NSString* const _Nonnull MASAuthorizationResponseDidReceiveAuthorizationCodeNotification;
@@ -274,10 +271,10 @@ namespace MASFoundation
         //[Field("MASProximityLoginQRCodeDidStopDisplayingQRCodeImage", "__Internal")]
         //NSString MASProximityLoginQRCodeDidStopDisplayingQRCodeImage { get; }
 
-        ////Gateway Monitor Notifications
-        //// extern NSString* const _Nonnull MASGatewayMonitorStatusUpdateNotification;
-        //[Field("MASGatewayMonitorStatusUpdateNotification", "__Internal")]
-        //NSString MASGatewayMonitorStatusUpdateNotification { get; }
+        //Gateway Monitor Notifications
+        // extern NSString* const _Nonnull MASGatewayMonitorStatusUpdateNotification;
+        [Field("MASGatewayMonitorStatusUpdateNotification", "__Internal")]
+        NSString MASGatewayMonitorStatusUpdateNotification { get; }
     }
 
     //// @protocol MASProximityLoginDelegate <NSObject>
@@ -1011,7 +1008,8 @@ namespace MASFoundation
         MASDevice CurrentDevice();
 
         // -(void)deregisterWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async(MethodName = "DeregisterAsync")]
         [Export("deregisterWithCompletion:")]
         void DeregisterWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1348,17 +1346,20 @@ namespace MASFoundation
         string AuthCredentialsType { get; }
 
         // -(void)lockSessionWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async(MethodName = "LockSessionAsync")]
         [Export("lockSessionWithCompletion:")]
         void LockSessionWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)unlockSessionWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async(MethodName = "UnlockSessionAsync")]
         [Export("unlockSessionWithCompletion:")]
         void UnlockSessionWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)unlockSessionWithUserOperationPromptMessage:(NSString * _Nonnull)userOperationPrompt completion:(MASCompletionErrorBlock _Nullable)completion;
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async]
         [Export("unlockSessionWithUserOperationPromptMessage:completion:")]
         void UnlockSessionWithUserOperationPromptMessage(string userOperationPrompt, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1368,25 +1369,29 @@ namespace MASFoundation
 
         // +(void)loginWithUserName:(NSString * _Nonnull)userName password:(NSString * _Nonnull)password completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async]
         [Export("loginWithUserName:password:completion:")]
         void LoginWithUserName(string userName, string password, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithAuthorizationCode:(NSString * _Nonnull)authorizationCode completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async]
         [Export("loginWithAuthorizationCode:completion:")]
         void LoginWithAuthorizationCode(string authorizationCode, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithIdToken:(NSString * _Nonnull)idToken tokenType:(NSString * _Nonnull)tokenType completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async]
         [Export("loginWithIdToken:tokenType:completion:")]
         void LoginWithIdToken(string idToken, string tokenType, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)loginWithAuthCredentials:(MASAuthCredentials * _Nonnull)authCredentials completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async]
         [Export("loginWithAuthCredentials:completion:")]
         void LoginWithAuthCredentials(MASAuthCredentials authCredentials, [NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1396,12 +1401,14 @@ namespace MASFoundation
         //void InitializeBrowserBasedAuthenticationWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)requestUserInfoWithCompletion:(MASUserResponseErrorBlock _Nullable)completion;
-        [Async(ResultTypeName = "MASUserResponseErrorResult")]
+        //[Async(ResultTypeName = "MASUserResponseErrorResult")]
+        [Async(MethodName = "RequestUserInfoAsync")]
         [Export("requestUserInfoWithCompletion:")]
         void RequestUserInfoWithCompletion([NullAllowed] MASUserResponseErrorBlock completion);
 
         // -(void)logoutWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async(MethodName = "LogoutAsync")]
         [Export("logoutWithCompletion:")]
         void LogoutWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
     }
@@ -1706,31 +1713,36 @@ namespace MASFoundation
 
         // +(void)start:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async]
         [Export("start:")]
         void Start([NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithDefaultConfiguration:(BOOL)shouldUseDefault completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async]
         [Export("startWithDefaultConfiguration:completion:")]
-        void StartWithDefaultConfiguration(bool shouldUseDefault, [NullAllowed] MASCompletionErrorBlock completion);
+        void StartWithDefaultConfiguration(Boolean shouldUseDefault, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithJSON:(NSDictionary * _Nonnull)jsonConfiguration completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async]
         [Export("startWithJSON:completion:")]
         void StartWithJSON(NSDictionary jsonConfiguration, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)startWithURL:(NSURL * _Nullable)url completion:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async]
         [Export("startWithURL:completion:")]
         void StartWithURL([NullAllowed] NSUrl url, [NullAllowed] MASCompletionErrorBlock completion);
 
         // +(void)stop:(MASCompletionErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASCompletionErrorResult")]
+        //[Async(ResultTypeName = "MASCompletionErrorResult")]
+        [Async]
         [Export("stop:")]
         void Stop([NullAllowed] MASCompletionErrorBlock completion);
 
@@ -1748,91 +1760,106 @@ namespace MASFoundation
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("deleteFrom:withParameters:andHeaders:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("deleteFrom:withParameters:andHeaders:requestType:responseType:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)deleteFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("deleteFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void DeleteFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("getFrom:withParameters:andHeaders:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("getFrom:withParameters:andHeaders:requestType:responseType:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)getFrom:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("getFrom:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void GetFrom(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("patchTo:withParameters:andHeaders:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("patchTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)patchTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("patchTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PatchTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("postTo:withParameters:andHeaders:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("postTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)postTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("postTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PostTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("putTo:withParameters:andHeaders:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("putTo:withParameters:andHeaders:requestType:responseType:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, [NullAllowed] MASResponseInfoErrorBlock completion);
 
         // +(void)putTo:(NSString * _Nonnull)endPointPath withParameters:(NSDictionary * _Nullable)parameterInfo andHeaders:(NSDictionary * _Nullable)headerInfo requestType:(MASRequestResponseType)requestType responseType:(MASRequestResponseType)responseType isPublic:(BOOL)isPublic completion:(MASResponseInfoErrorBlock _Nullable)completion;
         [Static]
-        [Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        //[Async(ResultTypeName = "MASResponseInfoErrorResult")]
+        [Async]
         [Export("putTo:withParameters:andHeaders:requestType:responseType:isPublic:completion:")]
         void PutTo(string endPointPath, [NullAllowed] NSDictionary parameterInfo, [NullAllowed] NSDictionary headerInfo, MASRequestResponseType requestType, MASRequestResponseType responseType, bool isPublic, [NullAllowed] MASResponseInfoErrorBlock completion);
 
@@ -1853,11 +1880,6 @@ namespace MASFoundation
         //[Export("signWithClaims:privateKey:error:")]
         //[return: NullAllowed]
         //string SignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
-
-        // +(void)setUserLoginBlock:(MASUserLoginWithUserCredentialsBlock _Nullable)login __attribute__((deprecated("[MAS setUserLoginBlock:] is deprecated as of MAS 1.5. Use [MAS setAuthCredentials:] instead.")));
-        [Static]
-        [Export("setUserLoginBlock:")]
-        void SetUserLoginBlock([NullAllowed] MASUserLoginWithUserCredentialsBlock login);
     }
 
     // @interface MASApplication : MASObject

@@ -208,19 +208,17 @@
           <td>
             <a href="./Constants.html">Constants</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Contains all string constants and notifications available in the SDK.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MAS.html">MAS</a>
           </td>
           <td>
-    The top level MAS object represents the Mobile App Services SDK in it's entirety.  
-    It is where the framework lifecycle begins, and ends if necessary.It is the front
-    facing class where many of the configuration settings for the SDK as a whole can be
-    found and utilized.
+        The top level MAS object represents the Mobile App Services SDK in it's entirety.  
+        It is where the framework lifecycle begins, and ends if necessary.It is the front
+        facing class where many of the configuration settings for the SDK as a whole can be
+        found and utilized.
     </td>
         </tr>
         <tr valign="top">
@@ -251,9 +249,7 @@
           <td>
             <a href="./MASAuthCredentialsBlock.html">MASAuthCredentialsBlock</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The MASAuthCredentialsBlock to provide auth credentials for device registration and/or user authentication.</td>
         </tr>
         <tr valign="top">
           <td>
@@ -275,56 +271,30 @@
           <td>
             <a href="./MASAuthenticationStatus.html">MASAuthenticationStatus</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MASAuthorizationCodeCredentialsBlock.html">MASAuthorizationCodeCredentialsBlock</a>
-          </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>MASAuthenticationStatus states the authentication status of the application..</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASAuthorizationResponse.html">MASAuthorizationResponse</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td> 
+        Alternatively, NSNotification can be subscribed to perform exactly the same behaviour.    
+        </td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASAuthorizationResponseDelegate.html">MASAuthorizationResponseDelegate</a>
           </td>
           <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MASBasicCredentialsBlock.html">MASBasicCredentialsBlock</a>
-          </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+        MASAuthorizationResponseDelegate protocol is an optional protocol that may be implemented to handle the response of authorization code from social login provider's authorization.
+        These protocols may be implemented in the designated class where social login authentication is being processed.        
+    </td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>
           </td>
           <td>A standard (bool completed, NSError error) block</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MASCompletionErrorResult.html">MASCompletionErrorResult</a>
-          </td>
-          <td>
-        Result of a MASCompletionErrorBlock block that will a bool value indicating the completion state and/or an NSError object if there
-        is a failure.
-    </td>
         </tr>
         <tr valign="top">
           <td>
@@ -346,49 +316,37 @@
           <td>
             <a href="./MASFile.html">MASFile</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The `MASFile` class is a local representation of file data.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASFileDirectoryType.html">MASFileDirectoryType</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Enumerated MASFileDirectoryType that indicates which directory to store MASFile into.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASFoundationErrorCode.html">MASFoundationErrorCode</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The enumerated error codes for Foundation level NSErrors.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASGatewayMonitoringStatus.html">MASGatewayMonitoringStatus</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The enumerated MASGatewayMonitoringStatus types.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASGatewayMonitorStatusBlock.html">MASGatewayMonitorStatusBlock</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The Gateway monitor status block that will receive a MASGatewayMonitoringStatus update when a new status value change is triggered.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MASGrantFlow.html">MASGrantFlow</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The enumerated MASGrantFlow.</td>
         </tr>
         <tr valign="top">
           <td>
@@ -423,9 +381,7 @@
           <td>
             <a href="./MASRequestResponseType.html">MASRequestResponseType</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The enumerated MASRequestResponseTypes that can indicate what data format is expected in a request or a response.</td>
         </tr>
         <tr valign="top">
           <td>
@@ -434,15 +390,6 @@
           <td>
         A standard (NSDictionary responseInfo, NSError error) block. The response object could potentially
         be any type of object. It is most often used to return NSString JSON responses from HTTP calls for example.
-    </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MASResponseInfoErrorResult.html">MASResponseInfoErrorResult</a>
-          </td>
-          <td>
-       Result of a MASResponseInfoErrorBlock (NSDictionary responseInfo, NSError error) that will
-       receive the JSON response object and/or an NSError object if there is a failure.
     </td>
         </tr>
         <tr valign="top">
@@ -478,8 +425,8 @@
             <a href="./MASService.html">MASService</a>
           </td>
           <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+        MASService is the base class for all services which are to be run during the internal service's lifecycle.
+    </td>
         </tr>
         <tr valign="top">
           <td>
@@ -493,9 +440,7 @@
           <td>
             <a href="./MASServiceLifecycleStatus.html">MASServiceLifecycleStatus</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The enumerated status for the Lifecycle of the micro services.</td>
         </tr>
         <tr valign="top">
           <td>
@@ -507,9 +452,7 @@
           <td>
             <a href="./MASState.html">MASState</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The enumerated MASState that can indicate what state of SDK currently is at.</td>
         </tr>
         <tr valign="top">
           <td>
@@ -523,17 +466,7 @@
           <td>
             <a href="./MASUserAuthCredentialsBlock.html">MASUserAuthCredentialsBlock</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MASUserLoginWithUserCredentialsBlock.html">MASUserLoginWithUserCredentialsBlock</a>
-          </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The user auth credentials block that will be invoked by SDK to notify developers to provide auth credentials.</td>
         </tr>
         <tr valign="top">
           <td>
@@ -543,19 +476,9 @@
         </tr>
         <tr valign="top">
           <td>
-            <a href="./MASUserResponseErrorResult.html">MASUserResponseErrorResult</a>
-          </td>
-          <td>
-        Result of a MASUserResponseErrorBlock block that returns MASUSer object with updated value and/or NSError object in case any error is encountered during the process.
-    </td>
-        </tr>
-        <tr valign="top">
-          <td>
             <a href="./NSData_MAS.html">NSData_MAS</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>This category enables encryption methods for the object.</td>
         </tr>
       </table>
     </div>

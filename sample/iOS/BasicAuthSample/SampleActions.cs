@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using Foundation;
 using MASFoundation;
 using UIKit;
@@ -49,9 +50,41 @@ namespace BasicAuthSample
         //
         public static void StartSDK()
         {
-            if (!isSDKAlreadyInitialized())
+            if (!IsSDKAlreadyInitialized())
             {
-                MAS.StartWithDefaultConfiguration(true, completion: checkSDKInitialization);
+                MAS.StartWithDefaultConfiguration(true, completion: CheckSDKInitialization);
+            }
+        }
+
+        //
+        // Start the SDK with default configuration
+        //
+        public static async Task StartSDKAsync()
+        {
+            if (!IsSDKAlreadyInitialized())
+            {
+                try
+                {
+                    var result = await MAS.StartWithDefaultConfigurationAsync(true);
+                    CheckSDKInitialization(result.Item1, result.Item2);
+                }
+                catch (Exception ex)
+                {
+                    Alert("MAS.Start", "MAS Started did not start successfully. Check log to see the exception details.");
+                    Console.WriteLine("MAS Started did not start successfully. ERROR: " + ex.Message);
+                }
+            }
+        }
+
+        //
+        // Start the Mobile SDK after change the default configuration file
+        //
+        public static void StartSDKChangeDefaultConfig()
+        {
+            if (!IsSDKAlreadyInitialized())
+            {
+                MAS.SetConfigurationFileName("msso_config2");
+                MAS.StartWithDefaultConfiguration(true, completion: CheckSDKInitialization);     
             }
         }
 
@@ -59,13 +92,22 @@ namespace BasicAuthSample
         //
         // Start the Mobile SDK after change the default configuration file
         //
-        public static void StartSDKChangeDefaultConfig()
+        public static async Task StartSDKChangeDefaultConfigAsync()
         {
-            if (!isSDKAlreadyInitialized())
+            if (!IsSDKAlreadyInitialized())
             {
-                //MAS.SetConfigurationFileName("msso_config2");
-                MAS.SetConfigurationFileName("msso_config_public");
-                MAS.StartWithDefaultConfiguration(true, completion: checkSDKInitialization);     
+                try
+                {
+                    MAS.SetConfigurationFileName("msso_config2");
+                    var result = await MAS.StartWithDefaultConfigurationAsync(true);
+
+                    CheckSDKInitialization(result.Item1, result.Item2);
+                }
+                catch (Exception ex)
+                {
+                    Alert("MAS.Start", "MAS Started did not start successfully. Check log to see the exception details.");
+                    Console.WriteLine("MAS Started did not start successfully. ERROR: " + ex.Message);
+                }
             }
         }
 
@@ -76,21 +118,71 @@ namespace BasicAuthSample
         //
         public static void StartSDKCustomJson()
         {
-            if (!isSDKAlreadyInitialized())
+            if (!IsSDKAlreadyInitialized())
             {
-                var file = System.IO.File.Open("msso_config.json", System.IO.FileMode.Open);
+                var jsonConfig = JsonConfigAsDictionary("msso_config.json");
 
-                NSString mssoString;
-                using (System.IO.StreamReader reader = new System.IO.StreamReader(file))
+                if(jsonConfig != null)
                 {
-                    mssoString = new NSString(reader.ReadToEnd());
+                    MAS.StartWithJSON(jsonConfig, completion: CheckSDKInitialization);
                 }
-                NSData mssoData = NSData.FromString(mssoString);
-                NSError parsingError;
-                NSDictionary jsonConfig = (NSDictionary)NSJsonSerialization.Deserialize(mssoData, NSJsonReadingOptions.MutableLeaves, out parsingError);
-
-                MAS.StartWithJSON(jsonConfig, completion: checkSDKInitialization);
+                else
+                {
+                    Alert("MAS.Start", "Could not read the msso_config file.");
+                } 
             }
+        }
+
+
+        //
+        // Start the Mobile SDK using the contents of an msso_config file saved in the projects root directory
+        // Alternatively, you could use a custom json hard coded into mssoString variable
+        //
+        public static async Task StartSDKCustomJsonAsync()
+        {
+            if (!IsSDKAlreadyInitialized())
+            {
+                try
+                {
+                    var jsonConfig = JsonConfigAsDictionary("msso_config.json");
+                    if(jsonConfig != null)
+                    {
+                        var result = await MAS.StartWithJSONAsync(jsonConfig);
+                        CheckSDKInitialization(result.Item1, result.Item2);
+                    }
+                    else
+                    {
+                        Alert("MAS.Start", "Could not read the msso_config file.");
+                    } 
+                }
+                catch (Exception ex)
+                {
+                    Alert("MAS.Start", "MAS Started did not start successfully. Check log to see the exception details.");
+                    Console.WriteLine("MAS Started did not start successfully. ERROR: " + ex.Message);
+                }
+            }
+        }
+
+
+        //
+        // Return content from a msso_config file in a NSDictionary
+        //
+        private static NSDictionary JsonConfigAsDictionary(string fileName)
+        {
+            NSDictionary jsonConfig = null;
+
+            var file = System.IO.File.Open(fileName, System.IO.FileMode.Open);
+
+            NSString mssoString;
+            using (System.IO.StreamReader reader = new System.IO.StreamReader(file))
+            {
+                mssoString = new NSString(reader.ReadToEnd());
+            }
+            NSData mssoData = NSData.FromString(mssoString);
+            NSError parsingError;
+            jsonConfig = (NSDictionary)NSJsonSerialization.Deserialize(mssoData, NSJsonReadingOptions.MutableLeaves, out parsingError);
+
+            return jsonConfig;
         }
 
 
@@ -101,11 +193,35 @@ namespace BasicAuthSample
         //
         public static void StartSDKFileUrl()
         {
-            if (!isSDKAlreadyInitialized())
+            if (!IsSDKAlreadyInitialized())
             {
                 NSUrl nSUrl = new NSUrl("msso_config.json", false);
-                MAS.StartWithURL(nSUrl, completion: checkSDKInitialization);  
+                MAS.StartWithURL(nSUrl, completion: CheckSDKInitialization);  
             }          
+        }
+
+
+        //
+        // Start the Mobile SDK with the url of a file containing the msso_config you wish to use.
+        // You must either have a config file named msso_config.json in the root directory of your project
+        // or change the the file name in the NSUrl constructor.
+        //
+        public static async Task StartSDKFileUrlAsync()
+        {
+            if (!IsSDKAlreadyInitialized())
+            {
+                try
+                {
+                    NSUrl nSUrl = new NSUrl("msso_config.json", false);
+                    var result = await MAS.StartWithURLAsync(nSUrl);
+                    CheckSDKInitialization(result.Item1, result.Item2);
+                }
+                catch (Exception ex)
+                {
+                    Alert("MAS.Start", "MAS Started did not start successfully. Check log to see the exception details.");
+                    Console.WriteLine("MAS Started did not start successfully. ERROR: " + ex.Message);
+                }
+            }
         }
 
 
@@ -114,13 +230,38 @@ namespace BasicAuthSample
         //
         public static void StartSDKEnrolmentURL()
         {
-            if(!isSDKAlreadyInitialized())
+            if(!IsSDKAlreadyInitialized())
             {
                 NSUrl nsUrl = new NSUrl(GetEnrollmentURL("https://mobile-staging-xamarinautomation.l7tech.com:8443",
                                               // This client id must match the client id of the config you are using
                                               "44fd840b-45e6-439f-9ff9-9976947d9e26"));
 
-                MAS.StartWithURL(nsUrl, completion: checkSDKInitialization);
+                MAS.StartWithURL(nsUrl, completion: CheckSDKInitialization);
+            }
+        }
+
+
+        //
+        // Start the Mobile SDK using an enrolment URL
+        //
+        public static async Task StartSDKEnrolmentURLAsync()
+        {
+            if (!IsSDKAlreadyInitialized())
+            {
+                try
+                {
+                    NSUrl nsUrl = new NSUrl(GetEnrollmentURL("https://mobile-staging-xamarinautomation.l7tech.com:8443",
+                                              // This client id must match the client id of the config you are using
+                                              "44fd840b-45e6-439f-9ff9-9976947d9e26"));
+                    
+                    var result = await MAS.StartWithURLAsync(nsUrl);
+                    CheckSDKInitialization(result.Item1, result.Item2);
+                }
+                catch (Exception ex)
+                {
+                    Alert("MAS.Start", "MAS Started did not start successfully. Check log to see the exception details.");
+                    Console.WriteLine("MAS Started did not start successfully. ERROR: " + ex.Message);
+                }
             }
         }
 
@@ -128,7 +269,7 @@ namespace BasicAuthSample
         //
         // Display a dialog with SDK Initialiation Status
         //
-        private static void checkSDKInitialization(bool startCompletedSuccessfully, NSError error)
+        private static void CheckSDKInitialization(bool startCompletedSuccessfully, NSError error)
         {
             if (startCompletedSuccessfully)
             {
@@ -139,7 +280,7 @@ namespace BasicAuthSample
             {
                 //  SDK initialized with an error
                 Alert("MAS.Start", "MAS Started did not start successfully.");
-                Console.WriteLine("MAS Started did not start successfully. ERROR: " + error);
+                Console.WriteLine("MAS Started did not start successfully. ERROR: " + error.LocalizedDescription);
             }
         }
 
@@ -147,7 +288,7 @@ namespace BasicAuthSample
         //
         // Check if the SDK is already initialized
         //
-        private static bool isSDKAlreadyInitialized()
+        private static bool IsSDKAlreadyInitialized()
         {
             bool isInitialized = (MAS.MASState == MASState.DidStart);
             if (isInitialized)
@@ -213,6 +354,35 @@ namespace BasicAuthSample
                     Alert("MAS.LoginWithUserName", "ERROR: " + error.LocalizedDescription);
                 }
             });
+        }
+
+
+        //
+        //  Login with username and password
+        //
+        public static async Task LoginAsync(string user, string password)
+        {
+            try
+            {
+                var result = await MASUser.LoginWithUserNameAsync(user, password);
+
+                if (result.Item1)
+                {
+                    // Logged in without an error
+                    Alert("MAS.LoginAsync", "Welcome " + MASUser.CurrentUser.UserName);
+                }
+
+                if (result.Item2 != null)
+                {
+                    // Logged in with an error
+                    Alert("MAS.LoginAsync", "ERROR: " + result.Item2.LocalizedDescription);
+                }
+            }
+            catch (Exception ex)
+            {
+                Alert("MASUser.LoginAsync", "MAS LogoutAsync could not be completed successfully. Check log to see the exception details.");
+                Console.WriteLine("MASUser LoginAsync could not be completed successfully. ERROR: " + ex.Message);
+            }
         }
 
 
@@ -323,6 +493,47 @@ namespace BasicAuthSample
 
 
         //
+        // Invoke a sample protected endpoint in the Gateway and display the returned JSON in a dialog
+        //
+        public static async Task<MASResponseObjectErrorResult> InvokeProtectedAPIAsync()
+        {
+            MASResponseObjectErrorResult result = null;
+
+            if (MAS.MASState != MASState.DidStart)
+            {
+                Alert("MAS.Invoke", "You must initialize the SDK before calling API");
+            }
+            else
+            {
+                try
+                {
+                    //  Create MASRequestBuilder with HTTP method 
+                    MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
+
+                    //
+                    //  Specify an endpoint path, any parameters or headers, and request/response type
+                    //
+                    requestBuilder.EndPoint = "/protected/resource/products";
+                    requestBuilder.Body = new NSDictionary("operation", "listProducts");
+
+                    //  Build MASRequestBuilder to convert into MASRequest object
+                    MASRequest request = requestBuilder.Build();
+
+                    //  Using MASRequest object, invoke API asyncronosly
+                    result = await MAS.InvokeAsync(request);
+                }
+                catch (Exception ex)
+                {
+                    Alert("MAS.Invoke", "MAS Invoke could not be completed successfully. Check log to see the exception details.");
+                    Console.WriteLine("MAS Invoke could not be completed successfully. ERROR: " + ex.Message);
+                }
+            }
+
+            return result;
+        }
+
+
+        //
         //  Logout currently authenticated user
         //
         public static void Logout()
@@ -347,6 +558,44 @@ namespace BasicAuthSample
             {
                 // Logged out without an error
                 Alert("MAS.LogoutWithCompletion", "No user logged in");
+            }
+
+        }
+
+
+        //
+        //  Logout currently authenticated user
+        //
+        public static async Task LogoutAsync()
+        {
+            if (MASUser.CurrentUser != null)
+            {
+                try
+                {
+                    var result = await MASUser.CurrentUser.LogoutAsync();
+                
+                    if (result.Item2 != null)
+                    {
+                        // Logged out with an error
+                        Alert("MASUser.LogoutAsync", "ERROR: " + result.Item2.LocalizedDescription);
+                    }
+                    else if (result.Item1)
+                    {
+                        // Logged out without an error
+                        Alert("MASUser.LogoutAsync", "Logout completed successfully");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Alert("MASUser.LogoutAsync", "MAS LogoutAsync could not be completed successfully. Check log to see the exception details.");
+                    Console.WriteLine("MASUser LogoutAsync could not be completed successfully. ERROR: " + ex.Message);
+                }
+
+            }
+            else
+            {
+                // Logged out without an error
+                Alert("MASUser.LogoutAsync", "No user logged in");
             }
 
         }
@@ -379,6 +628,44 @@ namespace BasicAuthSample
             else
             {
                 Alert("MAS.LockSessionWithCompletion", "User is not authenticated");
+            }
+        }
+
+
+        //
+        // Lock current user session with device's local authentication
+        // This will block most of operations except for MASUser.CurrentUser.LogoutWithCompletion()
+        // and MASDevice.CurrentDevice().DeregisterWithCompletion()
+        //
+        public static async Task LockSessionAsync()
+        {
+            if (MASUser.CurrentUser != null)
+            {
+                try
+                {
+                    // Lock Session
+                    var result = await MASUser.CurrentUser.LockSessionAsync();
+                    if (result.Item2 != null)
+                    {
+                        // Error
+                        Alert("MAS.LockSessionAsync", "ERROR: " + result.Item2.LocalizedDescription);
+                    }
+                    else if (result.Item1)
+                    {
+                        // Session locked without an error
+                        Alert("MAS.LockSessionAsync", "Session Locked!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Alert("MASUser.LockSessionAsync", "MAS LockSessionAsync could not be completed successfully. Check log to see the exception details.");
+                    Console.WriteLine("MAS LockSessionAsync could not be completed successfully. ERROR: " + ex.Message);
+                }
+
+            }
+            else
+            {
+                Alert("MAS.LockSessionAsync", "User is not authenticated");
             }
         }
 
@@ -420,6 +707,49 @@ namespace BasicAuthSample
 
 
         //
+        // Unlock current user session and unblock all of the operations through SDK
+        //
+        public static async Task UnlockSessionAsync()
+        {
+            if (MASUser.CurrentUser != null)
+            {
+                if (MASUser.CurrentUser.IsSessionLocked)
+                {
+                    try
+                    {
+                        // Unlock Session
+                        var result = await MASUser.CurrentUser.UnlockSessionAsync();
+
+                        if (result.Item2 != null)
+                        {
+                            // Error
+                            Alert("MAS.UnlockedSessionAsync", "ERROR: " + result.Item2.LocalizedDescription);
+                        }
+                        else if (result.Item1)
+                        {
+                            // Session unlocked without error
+                            Alert("MAS.UnlockedSessionAsync", "Session Unlocked!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Alert("MASUser.UnlockedSessionAsync", "MAS UnlockedSessionAsync could not be completed successfully. Check log to see the exception details.");
+                        Console.WriteLine("MAS UnlockedSessionAsync could not be completed successfully. ERROR: " + ex.Message);
+                    }
+                }
+                else
+                {
+                    Alert("MAS.UnlockedSessionAsync", "Session is not locked!");
+                }
+            }
+            else
+            {
+                Alert("MAS.UnlockedSessionAsync", "User is not authenticated");
+            }
+        }
+
+
+        //
         //  Deregister the device is an advanced feature available available in MASDevice. 
         //  It will remove the device's registered record in the Gateway and then clear all credentials
         //
@@ -432,6 +762,36 @@ namespace BasicAuthSample
                 if (error != null)
                     Alert("MAS", "Failed to deregister device: " + error.LocalizedDescription);
             });
+        }
+
+
+        //
+        //  Deregister the device is an advanced feature available available in MASDevice. 
+        //  It will remove the device's registered record in the Gateway and then clear all credentials
+        //
+        public static async Task DeregisterDeviceAsync()
+        {
+            try
+            {
+                var result = await MASDevice.CurrentDevice().DeregisterAsync();
+
+                if (result.Item2 != null)
+                {
+                    // Error
+                    Alert("MAS", "Failed to deregister device: " + result.Item2.LocalizedDescription);
+                }
+                else if (result.Item1)
+                {
+                    // Session unlocked without error
+                    Alert("MASDevice", "Device deregistered successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Alert("MASDevice.DeregisterAsync", "MAS UnlockedSessionAsync could not be completed successfully. Check log to see the exception details.");
+                Console.WriteLine("MASDevice DeregisterAsync could not be completed successfully. ERROR: " + ex.Message);
+            }
+
         }
 
 

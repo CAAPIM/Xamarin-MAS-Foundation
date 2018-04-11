@@ -18,6 +18,7 @@
     <param name="completed">Indicates if the operation was completed successfully.</param>
     <param name="error">NSError object in case any error is encountered during the process.</param>
     <summary>A standard (bool completed, NSError error) block</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
 </Type>

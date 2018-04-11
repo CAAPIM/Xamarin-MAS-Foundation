@@ -9,10 +9,239 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Contains all string constants and notifications available in the SDK.</summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
+    <Member MemberName="MASDeviceDidDeregisterNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASDeviceDidDeregisterNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASDeviceDidDeregisterNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASDeviceDidDeregisterNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the device notification indicating that the MASDevice has successfully deregistered.</summary>
+        <value>MASDeviceDidDeregisterNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASDeviceDidFailToDeregisterNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASDeviceDidFailToDeregisterNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASDeviceDidFailToDeregisterNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASDeviceDidFailToDeregisterNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the device notification indicating that the MASDevice has failed to successfully deregister.</summary>
+        <value>MASDeviceDidFailToDeregisterNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASDeviceDidResetLocallyNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASDeviceDidResetLocallyNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASDeviceDidResetLocallyNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASDeviceDidResetLocallyNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the device notification indicating that the MASDevice has reset locally.</summary>
+        <value>MASDeviceDidResetLocallyNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASDeviceWillDeregisterNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASDeviceWillDeregisterNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASDeviceWillDeregisterNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASDeviceWillDeregisterNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the device notification indicating that the MASDevice has begun the process of deregistering the device.</summary>
+        <value>MASDeviceWillDeregisterNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASDidFailToStartNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASDidFailToStartNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASDidFailToStartNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASDidFailToStartNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the MAS notification indicating that MAS has failed to successfully start it's processes.</summary>
+        <value>MASDidFailToStartNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASDidFailToStopNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASDidFailToStopNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASDidFailToStopNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASDidFailToStopNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the MAS notification indicating that MAS has failed to successfully stop it's processes.</summary>
+        <value>MASDidFailToStopNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASDidStartNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASDidStartNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASDidStartNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASDidStartNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the MAS notification indicating that MAS has successfully started it's processes.</summary>
+        <value>MASDidStartNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASDidStopNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASDidStopNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASDidStopNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASDidStopNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the MAS notification indicating that MAS has successfully stopped it's processes.</summary>
+        <value>MASDidStopNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASDidSwitchGatewayServerNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASDidSwitchGatewayServerNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASDidSwitchGatewayServerNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASDidSwitchGatewayServerNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>TThe NSString constant for the MAS notification indicating that MAS did finish to switch the server.</summary>
+        <value>MASDidSwitchGatewayServerNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASFoundationErrorDomain">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASFoundationErrorDomain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASFoundationErrorDomain" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASFoundationErrorDomain", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASFoundationErrorDomainLocal">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASFoundationErrorDomainLocal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASFoundationErrorDomainLocal" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASFoundationErrorDomainLocal", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASFoundationErrorDomainTargetAPI">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASFoundationErrorDomainTargetAPI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASFoundationErrorDomainTargetAPI" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASFoundationErrorDomainTargetAPI", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="MASFoundationVersionNumber">
       <MemberSignature Language="C#" Value="public static double MASFoundationVersionNumber { get; }" />
       <MemberSignature Language="ILAsm" Value=".property float64 MASFoundationVersionNumber" />
@@ -28,7 +257,8 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="MASFoundationVersionString">
@@ -46,7 +276,255 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASGatewayMonitorStatusUpdateNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASGatewayMonitorStatusUpdateNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASGatewayMonitorStatusUpdateNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASGatewayMonitorStatusUpdateNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the gateway monitor notification indicating that the monitor status has updated to a new value.</summary>
+        <value>MASGatewayMonitorStatusUpdateNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASUserDidAuthenticateNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASUserDidAuthenticateNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASUserDidAuthenticateNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASUserDidAuthenticateNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the user notification indicating that a MASUser has successfully authenticated.</summary>
+        <value>MASUserDidAuthenticateNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASUserDidFailToAuthenticateNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASUserDidFailToAuthenticateNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASUserDidFailToAuthenticateNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASUserDidFailToAuthenticateNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the user notification indicating that a MASUser has failed to authenticate.</summary>
+        <value>MASUserDidFailToAuthenticateNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASUserDidFailToLogoutNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASUserDidFailToLogoutNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASUserDidFailToLogoutNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASUserDidFailToLogoutNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the user notification indicating that a MASUser has failed to log out.</summary>
+        <value>MASUserDidFailToLogoutNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASUserDidFailToUpdateInformationNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASUserDidFailToUpdateInformationNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASUserDidFailToUpdateInformationNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASUserDidFailToUpdateInformationNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the user notification indicating that a MASUser has failed to update it's user information.</summary>
+        <value>MASUserDidFailToUpdateInformationNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASUserDidLogoutNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASUserDidLogoutNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASUserDidLogoutNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASUserDidLogoutNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the user notification indicating that a MASUser has successfully logged out.</summary>
+        <value>MASUserDidLogoutNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASUserDidUpdateInformationNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASUserDidUpdateInformationNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASUserDidUpdateInformationNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASUserDidUpdateInformationNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the user notification indicating that a MASUser has successfully updated it's information.</summary>
+        <value>MASUserDidUpdateInformationNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASUserWillAuthenticateNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASUserWillAuthenticateNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASUserWillAuthenticateNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASUserWillAuthenticateNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the user notification indicating that a MASUser will attempt to authenticate.</summary>
+        <value>MASUserWillAuthenticateNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASUserWillLogoutNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASUserWillLogoutNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASUserWillLogoutNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASUserWillLogoutNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the user notification indicating that a MASUser will attempt to log out.</summary>
+        <value>MASUserWillLogoutNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASUserWillUpdateInformationNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASUserWillUpdateInformationNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASUserWillUpdateInformationNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASUserWillUpdateInformationNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the user notification indicating that a MASUser will attempt to update it's information.</summary>
+        <value>MASUserWillUpdateInformationNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASWillStartNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASWillStartNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASWillStartNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASWillStartNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the MAS notification indicating that MAS has begun starting all it's processes.</summary>
+        <value>MASWillStartNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASWillStopNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASWillStopNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASWillStopNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASWillStopNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the MAS notification indicating that MAS has begun stopping all it's processes.</summary>
+        <value>MASWillStopNotification.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MASWillSwitchGatewayServerNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASWillSwitchGatewayServerNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASWillSwitchGatewayServerNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASWillSwitchGatewayServerNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the MAS notification indicating that MAS will switch the server.</summary>
+        <value>MASWillSwitchGatewayServerNotification.</value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>
