@@ -17,7 +17,8 @@
     <summary>
     The `MASDevice` class is a local representation of device data.
     </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -35,7 +36,8 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -59,7 +61,8 @@
       <Docs>
         <param name="coder">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -77,7 +80,8 @@
       <Docs>
         <param name="t">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -95,7 +99,8 @@
       <Docs>
         <param name="handle">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -108,7 +113,8 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CurrentDevice">
@@ -129,7 +135,38 @@
         The device the application is running on. This is a singleton object.
         </summary>
         <returns>A singleton 'MASDevice' object.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeregisterAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; DeregisterAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; DeregisterAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        Deregister the application resources on this device. This is a two step operation.
+        
+        <para>It will first attempt to remove the device's registered record in the cloud.  If it fails,
+        an error is returned and the appropriate notification is sent and it will stop there.</para><para>Upon success of the first operation, deregistration in the cloud, it will then attempt to
+        wipe the device of all credential settings.  If it fails, an error is returned and the appropriate
+        notification is sent.It will stop here.</para><para>*  WARNING #1: </para><para>    A call to deregistration in the same session as the device was initially registered will
+            fail and may leave the device in a strange state.This call should work post
+            initial registration and a restart of the application.</para><para>* WARNING #2: </para><para>    A successful call to deregistration will leave the current application session
+            without required credentials and settings.  You must restart the application
+            to re-register the application and retrieve new credentials.</para><para>This should be considered an advanced feature.If you make this available to end users it
+        should not be made too easily accessible and the UI control should be marked and possibly labeled
+        to accentuate that it will wipe settings both in the cloud and locally on the device. We
+        recommend you also provide an additional user confirmation UI component to make it clear to 
+        the user what will occur and allow them to cancel the operation or proceed.</para><para>Although an asynchronous block callback parameter is provided for detecting the response,
+        optionally you can set that to null and the caller can observe the lifecycle notifications instead.</para></summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DeregisterWithCompletion">
@@ -171,21 +208,8 @@
         recommend you also provide an additional user confirmation UI component to make it clear to 
         the user what will occur and allow them to cancel the operation or proceed.</para><para>Although an asynchronous block callback parameter is provided for detecting the response,
         optionally you can set that to null and the caller can observe the lifecycle notifications instead.</para></summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="DeregisterWithCompletionAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; DeregisterWithCompletionAsync ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; DeregisterWithCompletionAsync() cil managed" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Identifier">
@@ -205,7 +229,8 @@
         The MASDevice identifier.
         </summary>
         <value>The device identifier.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsBeingAuthorized">
@@ -229,7 +254,8 @@
         </summary>
         <value>
           <c>true</c> if is being authorized; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsRegistered">
@@ -250,7 +276,8 @@
         </summary>
         <value>
           <c>true</c> if is registered; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -270,7 +297,8 @@
         Gets the MASDevice name.
         </summary>
         <value>The MASDevice name.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ResetLocally">
@@ -293,7 +321,8 @@
         
         <para>WARNING: if you call this method, all access credentials and locally stored configuration related to the application will be removed.
         Re-authentication proccess will be triggered whenever you are trying to access the gateway.</para></summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Status">
@@ -313,7 +342,8 @@
         Gets the MASDevice status.
         </summary>
         <value>The MASDevice status.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

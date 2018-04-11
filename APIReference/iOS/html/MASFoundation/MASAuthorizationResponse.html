@@ -206,9 +206,9 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:MASFoundation.MASAuthorizationResponse">MASAuthorizationResponse  Class</h1>
-    <p class="Summary" id="T:MASFoundation.MASAuthorizationResponse:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:MASFoundation.MASAuthorizationResponse:Summary"> 
+        Alternatively, NSNotification can be subscribed to perform exactly the same behaviour.    
+        </p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:MASFoundation.MASAuthorizationResponse:Signature">[Foundation.Register("MASAuthorizationResponse", true)]<br />public class  <b>MASAuthorizationResponse</b> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a></div>
@@ -216,7 +216,6 @@
     <div class="Remarks" id="T:MASFoundation.MASAuthorizationResponse:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:MASFoundation.MASAuthorizationResponse:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:MASFoundation.MASAuthorizationResponse:Docs:Version Information">
@@ -315,7 +314,7 @@
                 <td>
                   <i>
                     <a href="../MASFoundation/MASAuthorizationResponseDelegate.html">MASAuthorizationResponseDelegate</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Delegate property for delegation of MASAuthorizationResponse protocols</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -330,7 +329,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Delegate property for delegation of MASAuthorizationResponse protocols</td>
               </tr>
             </table>
           </div>
@@ -347,7 +346,11 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">Application</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">UIKit.UIApplication</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSUrl</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">UIKit.UIApplication</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSUrl</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Prase returned URL from SFSafariViewController with authorization code and OAuth state.
+            Call this method inside MonoTouch.UIKit.UIApplicationDelegate.OpenUrl of the AppDelegate for the application.
+            This method should be invoked in order to properly perform social login in MASFoundation SDK.
+        </blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -357,7 +360,11 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,System.String,Foundation.NSObject)">Application</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">UIKit.UIApplication</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSUrl</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">UIKit.UIApplication</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSUrl</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+        Prase returned URL from SFSafariViewController with authorization code and OAuth state.
+        Call this method inside MonoTouch.UIKit.UIApplicationDelegate.OpenUrl of the AppDelegate for the application.
+        This method should be invoked in order to properly perform social login in MASFoundation SDK.
+        </blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -366,7 +373,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASAuthorizationResponse.SharedInstance()">SharedInstance</a>
-                  </b>()<nobr> : <a href="../MASFoundation/MASAuthorizationResponse.html">MASAuthorizationResponse</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="../MASFoundation/MASAuthorizationResponse.html">MASAuthorizationResponse</a></nobr><blockquote>Note, subclasses should override this version of the method.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -382,7 +389,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASAuthorizationResponse.Dispose(System.Boolean)">Dispose</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote></blockquote></td>
               </tr>
             </table>
           </div>
@@ -401,7 +408,6 @@
           <div class="Signature">[Foundation.Export("init")]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASAuthorizationResponse</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponse():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponse():Version Information">
@@ -428,7 +434,6 @@
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponse(Foundation.NSObjectFlag):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponse(Foundation.NSObjectFlag):Version Information">
@@ -455,7 +460,6 @@
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponse(System.IntPtr):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponse(System.IntPtr):Version Information">
@@ -465,8 +469,10 @@
         <h3 id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">Application Method</h3>
         <blockquote id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject}):member">
           <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            Prase returned URL from SFSafariViewController with authorization code and OAuth state.
+            Call this method inside MonoTouch.UIKit.UIApplicationDelegate.OpenUrl of the AppDelegate for the application.
+            This method should be invoked in order to properly perform social login in MASFoundation SDK.
+        </div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("application:openURL:options:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Application</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">UIKit.UIApplication</a> app, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSUrl</a> url, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;</a> options)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -475,30 +481,21 @@
               <dt>
                 <i>app</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>UIApplication object as passed in UIApplicationOpenUrlOptions.</dd>
               <dt>
                 <i>url</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>NSURL object as passed in UIApplicationOpenUrlOptions.</dd>
               <dt>
                 <i>options</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>NSDictionary as passed in UIApplicationOpenUrlOptions.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject}):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject}):Returns">bool value whether the URL is specific for social login in MASFoundation or not.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject}):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject}):Version Information">
@@ -508,8 +505,10 @@
         <h3 id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,System.String,Foundation.NSObject)">Application Method</h3>
         <blockquote id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,System.String,Foundation.NSObject):member">
           <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+        Prase returned URL from SFSafariViewController with authorization code and OAuth state.
+        Call this method inside MonoTouch.UIKit.UIApplicationDelegate.OpenUrl of the AppDelegate for the application.
+        This method should be invoked in order to properly perform social login in MASFoundation SDK.
+        </div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("application:openURL:sourceApplication:annotation:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Application</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">UIKit.UIApplication</a> application, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSUrl</a> url, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> sourceApplication, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> annotation)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -524,30 +523,21 @@
               <dt>
                 <i>url</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>NSURL object as passed in UIApplicationOpenUrlOptions.</dd>
               <dt>
                 <i>sourceApplication</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>NSDictionary as passed in UIApplicationOpenUrlOptions.</dd>
               <dt>
                 <i>annotation</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>annotation as passed in UIApplicationOpenUrlOptions.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,System.String,Foundation.NSObject):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,System.String,Foundation.NSObject):Returns">bool value whether the URL is specific for social login in MASFoundation or not..</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,System.String,Foundation.NSObject):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponse.Application(UIKit.UIApplication,Foundation.NSUrl,System.String,Foundation.NSObject):Version Information">
@@ -567,7 +557,6 @@
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:MASFoundation.MASAuthorizationResponse.ClassHandle:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:MASFoundation.MASAuthorizationResponse.ClassHandle:Version Information">
@@ -576,18 +565,13 @@
         </blockquote>
         <h3 id="P:MASFoundation.MASAuthorizationResponse.Delegate">Delegate Property</h3>
         <blockquote id="P:MASFoundation.MASAuthorizationResponse.Delegate:member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">Delegate property for delegation of MASAuthorizationResponse protocols</div>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../MASFoundation/MASAuthorizationResponseDelegate.html">MASAuthorizationResponseDelegate</a> <b>Delegate</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MASAuthorizationResponse.Delegate:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASAuthorizationResponse.Delegate:Value">MASAuthorizationResponseDelegate.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:MASFoundation.MASAuthorizationResponse.Delegate:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:MASFoundation.MASAuthorizationResponse.Delegate:Version Information">
@@ -597,7 +581,6 @@
         <h3 id="M:MASFoundation.MASAuthorizationResponse.Dispose(System.Boolean)">Dispose Method</h3>
         <blockquote id="M:MASFoundation.MASAuthorizationResponse.Dispose(System.Boolean):member">
           <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2>Syntax</h2>
           <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
@@ -608,13 +591,11 @@
                 <i>disposing</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponse.Dispose(System.Boolean):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponse.Dispose(System.Boolean):Version Information">
@@ -623,18 +604,13 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASAuthorizationResponse.SharedInstance()">SharedInstance Method</h3>
         <blockquote id="M:MASFoundation.MASAuthorizationResponse.SharedInstance():member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">Note, subclasses should override this version of the method.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("sharedInstance")]<br />public static <a href="../MASFoundation/MASAuthorizationResponse.html">MASAuthorizationResponse</a> <b>SharedInstance</b> ()</div>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASAuthorizationResponse.SharedInstance():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASAuthorizationResponse.SharedInstance():Returns">Returns the shared MASAuthorizationResponse singleton.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponse.SharedInstance():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponse.SharedInstance():Version Information">
@@ -643,18 +619,13 @@
         </blockquote>
         <h3 id="P:MASFoundation.MASAuthorizationResponse.WeakDelegate">WeakDelegate Property</h3>
         <blockquote id="P:MASFoundation.MASAuthorizationResponse.WeakDelegate:member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">Delegate property for delegation of MASAuthorizationResponse protocols</div>
           <h2>Syntax</h2>
           <div class="Signature">[get: Foundation.Export("delegate", ObjCRuntime.ArgumentSemantic.Weak)]<br />[set: Foundation.Export("setDelegate:", ObjCRuntime.ArgumentSemantic.Weak)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> <b>WeakDelegate</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MASAuthorizationResponse.WeakDelegate:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASAuthorizationResponse.WeakDelegate:Value">MASAuthorizationResponseDelegate.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:MASFoundation.MASAuthorizationResponse.WeakDelegate:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:MASFoundation.MASAuthorizationResponse.WeakDelegate:Version Information">

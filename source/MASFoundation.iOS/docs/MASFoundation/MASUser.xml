@@ -17,7 +17,8 @@
     <summary>
     The `MASUser` class is a local representation of user data.
     </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -35,7 +36,8 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -59,7 +61,8 @@
       <Docs>
         <param name="coder">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -77,7 +80,8 @@
       <Docs>
         <param name="t">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -95,7 +99,8 @@
       <Docs>
         <param name="handle">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AccessToken">
@@ -115,7 +120,8 @@
         Gets the access token of the user, if authenticated.
         </summary>
         <value>The access token.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Active">
@@ -133,7 +139,8 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Addresses">
@@ -153,7 +160,8 @@
         Gets the addresses.
         </summary>
         <value>The addresses.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AuthCredentialsType">
@@ -173,7 +181,8 @@
         Previously, or currently used authCredentialsType for the session.
         <para>If the SDK is not properly initialized, null will be returned regardless of the authentication status of the SDK.</para><para>If the SDK was never authenticated before, SDK will also return null as a result.</para></summary>
         <value>NSString of previously, or currently used authCredentialsType as in String.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -186,7 +195,8 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CurrentUser">
@@ -206,7 +216,8 @@
         GeThe authenticated user for the application, if any. null returned if none. This is a singleton object.
         </summary>
         <value>A singleton 'MASUser' object.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EmailAddresses">
@@ -226,7 +237,8 @@
         Gets the email addresses.
         </summary>
         <value>The email addresses.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FamilyName">
@@ -246,7 +258,8 @@
         Gets the string value of family name.
         </summary>
         <value>The string value of family name.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FormattedName">
@@ -266,7 +279,8 @@
         Gets the string value of formatted name.
         </summary>
         <value>The string value of formatted name.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GivenName">
@@ -286,7 +300,8 @@
         Gets the string value of given name.
         </summary>
         <value>The string value of given name.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Groups">
@@ -306,7 +321,8 @@
         Gets the groups.
         </summary>
         <value>The groups.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsAuthenticated">
@@ -326,8 +342,10 @@
         Gets a value indicating whether this <see cref="T:MASFoundation.MASUser" /> is authenticated.
         </summary>
         <value>
-          <c>true</c> if is authenticated; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+          <c>true</c> if is authenticated; otherwise, <c>false</c>.
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsCurrentUser">
@@ -348,7 +366,8 @@
         </summary>
         <value>
           <c>true</c> if is current user; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsSessionLocked">
@@ -368,8 +387,36 @@
         Gets a value indicating whether this <see cref="T:MASFoundation.MASUser" />'s session is locked.
         </summary>
         <value>
-          <c>true</c> if is session locked; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+          <c>true</c> if is session locked; otherwise, <c>false</c>.
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LockSessionAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LockSessionAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LockSessionAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Lock currently authenticated user session with device's local authentication (Device's Passcode or Biometric Authentication).
+            <para>
+            This will lock current user session and block most of operations except for MASUser.CurrentUser.LogoutWithCompletion();
+            and MASDevice.CurrentDevice().DeregisterWithCompletion().
+            Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
+            which will remove credentials from protected stroage of the device with local authentication.
+            </para><para>
+            After locking user session, MASUser.CurrentUser will still exists; 
+            however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
+            Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
+            </para></summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LockSessionWithCompletion">
@@ -396,32 +443,19 @@
       <Docs>
         <param name="completion">The MASCompletionErrorBlock block that receives the results.</param>
         <summary>
-        Lock currently authenticated user session with device's local authentication (Device's Passcode or Biometric Authentication).
-        <para>
-        This will lock current user session and block most of operations except for MASUser.CurrentUser.LogoutWithCompletion();
-        and MASDevice.CurrentDevice().DeregisterWithCompletion().
-        Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
-        which will remove credentials from protected stroage of the device with local authentication.
-        </para><para>
-        After locking user session, MASUser.CurrentUser will still exists; 
-        however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
-        Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
-        </para></summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="LockSessionWithCompletionAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LockSessionWithCompletionAsync ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LockSessionWithCompletionAsync() cil managed" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+            Lock currently authenticated user session with device's local authentication (Device's Passcode or Biometric Authentication).
+            <para>
+            This will lock current user session and block most of operations except for MASUser.CurrentUser.LogoutWithCompletion();
+            and MASDevice.CurrentDevice().DeregisterWithCompletion().
+            Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
+            which will remove credentials from protected stroage of the device with local authentication.
+            </para><para>
+            After locking user session, MASUser.CurrentUser will still exists; 
+            however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
+            Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
+            </para></summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoginWithAuthCredentials">
@@ -450,14 +484,15 @@
         <param name="authCredentials">MASAuthCredentials object that contains credentials.</param>
         <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         <summary>
-        Authenticate a user via asynchronous request with MASAuthCredentials object.
-        <para>
-        This will accept any objects that inherites from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
-        on backend services.
-        </para><para>
-        This will create an MASUser.CurrentUser upon a successful result.
-        </para></summary>
-        <remarks>To be added.</remarks>
+            Authenticate a user via asynchronous request with MASAuthCredentials object.
+            <para>
+            This will accept any objects that inherites from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
+            on backend services.
+            </para><para>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </para></summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoginWithAuthCredentialsAsync">
@@ -473,15 +508,16 @@
       <Docs>
         <param name="authCredentials">MASAuthCredentials object that contains credentials.</param>
         <summary>
-        Authenticate a user via asynchronous request with MASAuthCredentials object.
-        <para>
-        This will accept any objects that inherites from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
-        on backend services.
-        </para><para>
-        This will create an MASUser.CurrentUser upon a successful result.
-        </para></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+            Authenticate a user via asynchronous request with MASAuthCredentials object.
+            <para>
+            This will accept any objects that inherites from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
+            on backend services.
+            </para><para>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </para></summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoginWithAuthorizationCode">
@@ -510,11 +546,12 @@
         <param name="authorizationCode">The authorization code for the user.</param>
         <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         <summary>
-        Authenticate a user via asynchronous request with authorization code.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <remarks>To be added.</remarks>
+            Authenticate a user via asynchronous request with authorization code.
+            <para>
+            This will create an MASUser.CurrentUser upon a successful result.  
+            </para></summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoginWithAuthorizationCodeAsync">
@@ -530,12 +567,13 @@
       <Docs>
         <param name="authorizationCode">The authorization code for the user.</param>
         <summary>
-        Authenticate a user via asynchronous request with authorization code.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+            Authenticate a user via asynchronous request with authorization code.
+            <para>
+            This will create an MASUser.CurrentUser upon a successful result.  
+            </para></summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoginWithIdToken">
@@ -566,11 +604,12 @@
         <param name="tokenType">Token type of id_token.</param>
         <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         <summary>
-        Authenticate a user via asynchronous request with id_token.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <remarks>To be added.</remarks>
+            Authenticate a user via asynchronous request with id_token.
+            <para>
+            This will create an MASUser.CurrentUser upon a successful result.  
+            </para></summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoginWithIdTokenAsync">
@@ -588,12 +627,13 @@
         <param name="idToken">The id_token for the user.</param>
         <param name="tokenType">Token type of id_token.</param>
         <summary>
-        Authenticate a user via asynchronous request with id_token.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+            Authenticate a user via asynchronous request with id_token.
+            <para>
+            This will create an MASUser.CurrentUser upon a successful result.  
+            </para></summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoginWithUserName">
@@ -624,11 +664,12 @@
         <param name="password">The password of the user.</param>
         <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
         <summary>
-        Authenticate a user via asynchronous request with basic credentials.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <remarks>To be added.</remarks>
+            Authenticate a user via asynchronous request with basic credentials.
+            <para>
+            This will create an MASUser.CurrentUser upon a successful result.  
+            </para></summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LoginWithUserNameAsync">
@@ -646,12 +687,30 @@
         <param name="userName">The userName of the user.</param>
         <param name="password">The password of the user.</param>
         <summary>
-        Authenticate a user via asynchronous request with basic credentials.
-        <para>
-        This will create an MASUser.CurrentUser upon a successful result.  
-        </para></summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+            Authenticate a user via asynchronous request with basic credentials.
+            <para>
+            This will create an MASUser.CurrentUser upon a successful result.  
+            </para></summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogoutAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LogoutAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LogoutAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Logout an already authenticated user via asynchronous request.       
+            <para>This will return <c>true</c> upon a successful result.</para></summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LogoutWithCompletion">
@@ -679,25 +738,10 @@
         <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user 
         available via[MASUser currentUser] has been updated with the new information.</param>
         <summary>
-        Logout an already authenticated user via asynchronous request.
-        
-        This will return <c>true</c> upon a successful result.
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="LogoutWithCompletionAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LogoutWithCompletionAsync ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LogoutWithCompletionAsync() cil managed" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        Logout an already authenticated user via asynchronous request.       
+        <para>This will return <c>true</c> upon a successful result.</para></summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="PhoneNumbers">
@@ -717,7 +761,8 @@
         Gets the phone numbers.
         </summary>
         <value>The phone numbers.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Photos">
@@ -737,7 +782,8 @@
         Gets the photos.
         </summary>
         <value>The photos.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveSessionLock">
@@ -755,11 +801,29 @@
       <Parameters />
       <Docs>
         <summary>
-        Remove user session that had been protected device's local authentication.
-        <para>
-        This interface can be used when end-user chooses to not provide local authentication and clean up the session.
-        </para></summary>
-        <remarks>To be added.</remarks>
+            Remove user session that had been protected device's local authentication.
+            <para>
+            This interface can be used when end-user chooses to not provide local authentication and clean up the session.
+            </para></summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUserInfoAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;MASFoundation.MASUser&gt; RequestUserInfoAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class MASFoundation.MASUser&gt; RequestUserInfoAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.MASUser&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        Requesting userInfo for the MASUser object.
+        <para>This method will retrieve additional information on the MASUser object.</para></summary>
+        <returns>Returns MASUSer object with updated value which is also available through the current MASUser object that is making this request.</returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RequestUserInfoWithCompletion">
@@ -789,21 +853,29 @@
         Requesting userInfo for the MASUser object.
         This method will retrieve additional information on the MASUser object.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
-    <Member MemberName="RequestUserInfoWithCompletionAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;MASFoundation.MASUser&gt; RequestUserInfoWithCompletionAsync ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class MASFoundation.MASUser&gt; RequestUserInfoWithCompletionAsync() cil managed" />
+    <Member MemberName="UnlockSessionAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; UnlockSessionAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; UnlockSessionAsync() cil managed" />
       <MemberType>Method</MemberType>
       <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;MASFoundation.MASUser&gt;</ReturnType>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>
+        Unlcok currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
+        <para>
+        This will unlock current user session and unblock all of the operations through SDK.
+        </para><para>
+        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
+        </para></summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UnlockSessionWithCompletion">
@@ -836,21 +908,8 @@
         </para><para>
         After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
         </para></summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="UnlockSessionWithCompletionAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; UnlockSessionWithCompletionAsync ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; UnlockSessionWithCompletionAsync() cil managed" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UnlockSessionWithUserOperationPromptMessage">
@@ -885,7 +944,8 @@
         </para><para>
         After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
         </para></summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UnlockSessionWithUserOperationPromptMessageAsync">
@@ -899,10 +959,17 @@
         <Parameter Name="userOperationPrompt" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="userOperationPrompt">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="userOperationPrompt">NSString message that will be displayed on system local authentication dialog.</param>
+        <summary>
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication) and specified message on system local authentication dialog.
+        <para>
+        This will unlock current user session and unblock all of the operations through SDK.
+        </para><para>
+        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
+        </para></summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UserName">
@@ -922,7 +989,8 @@
         Gets the string value of the username.
         </summary>
         <value>The string value of the username.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

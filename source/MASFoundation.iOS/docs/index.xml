@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="MASFoundation.iOS" Version="1.0.6673.20520">
+    <Assembly Name="MASFoundation.iOS" Version="1.0.6675.18490">
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.LinkerSafe</AttributeName>
@@ -57,12 +57,9 @@
       <Type Name="MASAuthCredentialsJWT" Kind="Class" />
       <Type Name="MASAuthCredentialsPassword" Kind="Class" />
       <Type Name="MASAuthenticationStatus" Kind="Enumeration" />
-      <Type Name="MASAuthorizationCodeCredentialsBlock" Kind="Delegate" />
       <Type Name="MASAuthorizationResponse" Kind="Class" />
       <Type Name="MASAuthorizationResponseDelegate" Kind="Class" />
-      <Type Name="MASBasicCredentialsBlock" Kind="Delegate" />
       <Type Name="MASCompletionErrorBlock" Kind="Delegate" />
-      <Type Name="MASCompletionErrorResult" Kind="Class" />
       <Type Name="MASConfiguration" Kind="Class" />
       <Type Name="MASDevice" Kind="Class" />
       <Type Name="MASFile" Kind="Class" />
@@ -76,7 +73,6 @@
       <Type Name="MASRequestBuilder" Kind="Class" />
       <Type Name="MASRequestResponseType" Kind="Enumeration" />
       <Type Name="MASResponseInfoErrorBlock" Kind="Delegate" />
-      <Type Name="MASResponseInfoErrorResult" Kind="Class" />
       <Type Name="MASResponseObjectErrorBlock" Kind="Delegate" />
       <Type Name="MASResponseObjectErrorResult" Kind="Class" />
       <Type Name="MASSecurityConfiguration" Kind="Class" />
@@ -87,10 +83,10 @@
       <Type Name="MASState" Kind="Enumeration" />
       <Type Name="MASUser" Kind="Class" />
       <Type Name="MASUserAuthCredentialsBlock" Kind="Delegate" />
-      <Type Name="MASUserLoginWithUserCredentialsBlock" Kind="Delegate" />
       <Type Name="MASUserResponseErrorBlock" Kind="Delegate" />
-      <Type Name="MASUserResponseErrorResult" Kind="Class" />
       <Type Name="NSData_MAS" Kind="Class" />
+    </Namespace>
+    <Namespace Name="MASFoundation.iOS">
     </Namespace>
   </Types>
   <Title>MASFoundation.iOS</Title>

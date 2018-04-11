@@ -10,7 +10,8 @@
   <Interfaces />
   <Docs>
     <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="ServiceDidFailWithError">
@@ -33,7 +34,8 @@
         <param name="This">To be added.</param>
         <param name="error">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

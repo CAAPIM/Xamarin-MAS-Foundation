@@ -12,7 +12,8 @@
     <summary>
         Result of an MASResponseObjectErrorBlock block that will return the NSHTTPURLResponse object, response object which needs to perform type casting based on the object type, and NSError object when error occurs.  
     </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -27,7 +28,8 @@
         <param name="response">To be added.</param>
         <param name="responseObject">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Response">
@@ -38,9 +40,11 @@
         <ReturnType>Foundation.NSHttpUrlResponse</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>NSHTTPURLResponse response type.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>NSHTTPURLResponse response object.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ResponseObject">
@@ -51,9 +55,11 @@
         <ReturnType>Foundation.NSObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Response object containing the result of the request. It should be casted to appropriate data type when it is received.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Object containing the result of the request. It should be casted to appropriate data type when it is received.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

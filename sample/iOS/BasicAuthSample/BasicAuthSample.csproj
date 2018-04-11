@@ -126,7 +126,6 @@
   <ItemGroup>
     <BundleResource Include="msso_config.json" />
     <BundleResource Include="msso_config2.json" />
-    <BundleResource Include="msso_config_public.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\MASFoundation.iOS\MASFoundation.iOS.csproj">

@@ -17,8 +17,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+        MASAuthorizationResponseDelegate protocol is an optional protocol that may be implemented to handle the response of authorization code from social login provider's authorization.
+        These protocols may be implemented in the designated class where social login authentication is being processed.        
+    </summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -36,7 +40,8 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -54,7 +59,8 @@
       <Docs>
         <param name="t">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -72,7 +78,8 @@
       <Docs>
         <param name="handle">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DidReceiveAuthorizationCode">
@@ -91,9 +98,10 @@
         <Parameter Name="code" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="code">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="code">string of authorization code.</param>
+        <summary>Delegation method to notify with authorization code when the authentication process is done.</summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DidReceiveError">
@@ -112,9 +120,10 @@
         <Parameter Name="error" Type="Foundation.NSError" />
       </Parameters>
       <Docs>
-        <param name="error">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="error">NSError object of the encountered error.</param>
+        <summary>Delegation method to notify when an error is encountered during the authentication process.</summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

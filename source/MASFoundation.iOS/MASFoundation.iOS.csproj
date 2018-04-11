@@ -90,10 +90,8 @@
     <None Include="docs\MASFoundation\MASAuthorizationCodeCredentialsBlock.xml" />
     <None Include="docs\MASFoundation\MASAuthorizationResponse.xml" />
     <None Include="docs\MASFoundation\MASAuthorizationResponseDelegate.xml" />
-    <None Include="docs\MASFoundation\MASBLEServiceState.xml" />
     <None Include="docs\MASFoundation\MASBasicCredentialsBlock.xml" />
     <None Include="docs\MASFoundation\MASCompletionErrorBlock.xml" />
-    <None Include="docs\MASFoundation\MASCompletionErrorResult.xml" />
     <None Include="docs\MASFoundation\MASConfiguration.xml" />
     <None Include="docs\MASFoundation\MASDevice.xml" />
     <None Include="docs\MASFoundation\MASFile.xml" />
@@ -107,7 +105,6 @@
     <None Include="docs\MASFoundation\MASRequestBuilder.xml" />
     <None Include="docs\MASFoundation\MASRequestResponseType.xml" />
     <None Include="docs\MASFoundation\MASResponseInfoErrorBlock.xml" />
-    <None Include="docs\MASFoundation\MASResponseInfoErrorResult.xml" />
     <None Include="docs\MASFoundation\MASResponseObjectErrorBlock.xml" />
     <None Include="docs\MASFoundation\MASResponseObjectErrorResult.xml" />
     <None Include="docs\MASFoundation\MASSecurityConfiguration.xml" />
@@ -120,7 +117,6 @@
     <None Include="docs\MASFoundation\MASUserAuthCredentialsBlock.xml" />
     <None Include="docs\MASFoundation\MASUserLoginWithUserCredentialsBlock.xml" />
     <None Include="docs\MASFoundation\MASUserResponseErrorBlock.xml" />
-    <None Include="docs\MASFoundation\MASUserResponseErrorResult.xml" />
     <None Include="docs\MASFoundation\NSData_MAS.xml" />
     <None Include="docs\index.xml" />
     <None Include="docs\ns-MASFoundation.xml" />

@@ -19,7 +19,8 @@
      so that multiple applications with same keychain sharing group in the same device can share data between applications.
     
      <para>*Important:* MASSharedStorage will not be available if MASFoundation framework is not initialized; the framework should be initialized prior to write/read/delete any data into MASSharedStorage.</para></summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -37,7 +38,8 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -61,7 +63,8 @@
       <Docs>
         <param name="coder">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -79,7 +82,8 @@
       <Docs>
         <param name="t">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -97,7 +101,8 @@
       <Docs>
         <param name="handle">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -110,7 +115,8 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DeleteForKey">
@@ -135,7 +141,8 @@
         <summary>
         Deletes any data type with the specified key from shared keychain storage.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FindDataUsingKey">
@@ -161,7 +168,8 @@
         Finds NSData object stored with the key from shared keychain storage.
         </summary>
         <returns>NSData of data found with the key.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FindStringUsingKey">
@@ -187,7 +195,8 @@
         Finds NSString data stored with the key from shared keychain storage.
         </summary>
         <returns>The string of data found with the key.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SaveData">
@@ -217,7 +226,8 @@
         </summary>
         <returns>
           <c>true</c>, if data was saved, <c>false</c> otherwise.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SaveString">
@@ -248,7 +258,8 @@
         </summary>
         <returns>
           <c>true</c>, if string was saved, <c>false</c> otherwise.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

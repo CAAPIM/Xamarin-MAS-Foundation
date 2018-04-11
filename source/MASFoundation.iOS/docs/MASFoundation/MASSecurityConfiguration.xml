@@ -20,7 +20,8 @@
      isPublic: <c>false</c>,
      validateDomainName: <c>true</c>,
      trustPublicPKI: <c>false</c>.</para></summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -38,7 +39,8 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -62,7 +64,8 @@
       <Docs>
         <param name="coder">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -80,7 +83,8 @@
       <Docs>
         <param name="t">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -103,7 +107,8 @@
         <summary>
         Designated initializer for MASSecurityConfiguration.     
         <para>NSUrl MUST contain the port number as well.</para><para>Default values for designated initializer are: isPublic: false, trustPublicPKI: false, validateDomainName: true.</para></summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -121,7 +126,8 @@
       <Docs>
         <param name="handle">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Certificates">
@@ -144,7 +150,8 @@
         NSArray value of pinned certificates.  Certificates must be in PEM encoded CRT; each line should be an item of the certificate array.
         </summary>
         <value>NSArray of the certificates.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -157,7 +164,8 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Host">
@@ -177,7 +185,8 @@
         NSUrl value of the target host.
         </summary>
         <value>NSUrl of the host.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsPublic">
@@ -201,7 +210,8 @@
         </summary>
         <value>
           <c>true</c> if is public; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="PublicKeyHashes">
@@ -224,7 +234,8 @@
         NSArray value of pinned public key hashes.  Public key hashes must be in string format.
         </summary>
         <value>NSArray of the public key hashes.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TrustPublicPKI">
@@ -248,7 +259,8 @@
         </summary>
         <value>
           <c>true</c> if trust public pki; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ValidateDomainName">
@@ -272,7 +284,8 @@
         </summary>
         <value>
           <c>true</c> if validate domain name; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

@@ -15,7 +15,8 @@
   </ReturnValue>
   <Docs>
     <param name="status">To be added.</param>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The Gateway monitor status block that will receive a MASGatewayMonitoringStatus update when a new status value change is triggered.</summary>
+    <remarks>
+    </remarks>
   </Docs>
 </Type>

@@ -18,7 +18,8 @@
     MASRequest class is an object created by MASRequestBuilder. It contains all necessary information to invoke an API.
     The class cannot be constructed or changed directly, only through MASRequestBuilder.
     </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -36,7 +37,8 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -60,7 +62,8 @@
       <Docs>
         <param name="coder">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -78,7 +81,8 @@
       <Docs>
         <param name="t">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -96,7 +100,8 @@
       <Docs>
         <param name="handle">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Body">
@@ -116,7 +121,8 @@
         NSDictionary of type/value parameters to put into the body of a request.
         </summary>
         <value>The body.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -129,7 +135,8 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DeleteFrom">
@@ -183,7 +190,8 @@
         SDK must be configured to add add the external host as a trusted source using MASSecurityConfiguration object.
         </summary>
         <value>The end point.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetFrom">
@@ -236,7 +244,8 @@
         NSDictionary of type/value parameters to put into the header of a request.
         </summary>
         <value>The header.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="HttpMethod">
@@ -256,7 +265,8 @@
         NSString value of the HTTP Method (GET, POST, PUT, DELETE).
         </summary>
         <value>The http method.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsPublic">
@@ -277,7 +287,8 @@
         </summary>
         <value>
           <c>true</c> if is public; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="PatchTo">
@@ -363,7 +374,8 @@
         NSData value of private key.
         </summary>
         <value>The private key.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="PutTo">
@@ -416,7 +428,8 @@
         NSDictionary of type/value parameters to put into the URL of a request.
         </summary>
         <value>The query.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RequestType">
@@ -436,7 +449,8 @@
         MASRequestResponseType value that specifies what type formatting is required for request body.
         </summary>
         <value>The type of the request.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ResponseType">
@@ -456,7 +470,8 @@
         MASRequestResponseType value that specifies what type formatting is required for response body.
         </summary>
         <value>The type of the response.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>
