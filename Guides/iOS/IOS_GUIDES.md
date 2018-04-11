@@ -143,10 +143,11 @@ After your project is properly configured, you must start the SDK to establish a
 This method starts the SDK with the currently-active configuration. A currently-active configuration is: 1) the last successfully used configuration, 2) the default JSON configuration file (i.e. msso_config.json in your app bundle) or 3) the custom JSON configuration file defined in `MAS.SetConfigurationFileName("YOUR_JSON.json");`.<br>
 **Recommended for**: Most environments, including production.</br>
 
-```
+```c#
 //
 //  Initialize SDK with default or last active configuration
 //
+// Using callback
 MAS.Start(completion: (completed, error) => {
 
     if (error)
@@ -157,6 +158,12 @@ MAS.Start(completion: (completed, error) => {
     }
 });
 
+// Using async method
+try {
+	var result = await MAS.StartAsync();
+} catch(Exception ex) {
+	//  SDK initialized with an error
+}
 ```
 
 ###  Start with default configuration
@@ -164,10 +171,11 @@ MAS.Start(completion: (completed, error) => {
 This method starts the SDK with the currently-active configuration, or the default configuration (depending on the parameter). If you specify the YES parameter, this overwrites the currently-active configuration with the default configuration (if two configurations are different.). If you pass the NO parameter, this behaves the same as `MAS.Start();`. If the SDK is already started, this method: stops the SDK, then restarts it with the custom JSON object.<br>
 **Recommended for**: Development environments where configurations change often.</br>
 
-```
+```c#
 //
 //  Initialize SDK always with default configuration
 //
+// Using callback
 MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
 
     if (error)
@@ -177,6 +185,13 @@ MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
         //  SDK initialized without an error
     }
 });
+
+// Using async method
+try {
+	var result = await MAS.StartWithDefaultConfigurationAsync(true);
+} catch(Exception ex) {
+	//  SDK initialized with an error
+}
 ```
 
 #### Start with custom JSON
@@ -185,7 +200,7 @@ This method starts the SDK with the custom JSON object in jsonObject. This metho
 **Recommended for**: Using multiple MAG servers so that you can dynamically change the configuration during runtime. Note that the backend servers must have a version of the product that supports dynamic client configuration.
 
 ```c#
-//	Get NSDictionary of the configuration file
+// Using callback
 NSDictionary jsonConfiguration = ....;
 MAS.StartWithJSON(jsonConfiguration, completion: (completed, error) => {
     if (error)
@@ -196,6 +211,13 @@ MAS.StartWithJSON(jsonConfiguration, completion: (completed, error) => {
     }
 });
 
+// Using async method
+try {
+	NSDictionary jsonConfiguration = ....;
+	var result = await MAS.StartWithJSONAsync(jsonConfiguration);
+} catch(Exception ex) {
+	//  SDK initialized with an error
+}
 ```
 
 #### Start with file URL
@@ -204,7 +226,7 @@ This method starts the SDK with the custom JSON configuration file. The custom f
 **Recommended for**: Using multiple MAG servers that so you can dynamically change the configuration during runtime. Note: The backend servers must have a version of the product that supports dynamic client configuration.
 
 ```c#
-//	Get NSUrl of the configuration file
+// Using callback
 NSUrl configUrl = new NSUrl("msso_config.json", false);
 MAS.StartWithURL(configUrl, completion: (startCompletedSuccessfully, error) => {
     if (error)
@@ -215,6 +237,13 @@ MAS.StartWithURL(configUrl, completion: (startCompletedSuccessfully, error) => {
     }
 });
 
+// Using async method
+try {
+	NSUrl configUrl = new NSUrl("msso_config.json", false);
+	var result = await MAS.StartWithURLAsync(configUrl);
+} catch(Exception ex) {
+	//  SDK initialized with an error
+}
 ```
 
 #### Start with enrollment URL
@@ -222,7 +251,7 @@ MAS.StartWithURL(configUrl, completion: (startCompletedSuccessfully, error) => {
 This method dynamically initializes the SDK without having the the msso_config.json within the app bundle. This lets you dynamically update the msso_config.json file without having to reinstall the app when the file is updated. As a developer, you can easily switch between MAGs.
 
 ```c#
-//	Get the enrollment URL
+// Using callback
 NSUrl enrollmentUrl = new NSUrl("https://YOUR_GATEWAY:8443/connect/device/config?sessionData=...&subjectKeyHash=...");
 MAS.StartWithURL(enrollmentUrl, completion: (startCompletedSuccessfully, error) => {
     if (error)
@@ -232,6 +261,14 @@ MAS.StartWithURL(enrollmentUrl, completion: (startCompletedSuccessfully, error) 
         //  SDK initialized without an error
     }
 });
+
+// Using async method
+try {
+	NSUrl enrollmentUrl = new NSUrl("https://YOUR_GATEWAY:8443/connect/device/config?sessionData=...&subjectKeyHash=...");
+	var result = await MAS.StartWithURLAsync(enrollmentUrl);
+} catch(Exception ex) {
+	//  SDK initialized with an error
+}
 ```
 
 The Mobile SDK retrieves the `msso_config.json` configuration using an enrollment URL to a target MAG server. You can provide enrollment URL to the Mobile SDK through app linking with an application's custom URL scheme, or any other method. After the Mobile SDK retrieves the enrollment URL, it makes a request to the enrollment URL to download the msso_cconfig.json file, and then puts in the storage.
@@ -330,6 +367,7 @@ MAS.GrantFlow = MASGrantFlow.Password;
 //
 //  Log in with username and password
 //
+// Using callback
 MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, error) => {
 
     if (error != null)
@@ -339,6 +377,13 @@ MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, 
         Console.WriteLine("Success: User login");
     }
 });
+
+// Using async method
+try {
+	var result = await MASUser.LoginWithUserNameAsync("USER_NAME", "USER_PASSWORD");
+} catch(Exception ex) {
+	// Logged in with an error
+}
 ```
 
 
@@ -389,6 +434,7 @@ MASUser currentUser = MASUser.CurrentUser;
 //
 //  Logout currently authenticated user
 //
+// Using callback
 MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) => {
 
     if (error != null)
@@ -398,6 +444,13 @@ MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) => {
         Console.WriteLine("Success: User logout");
     }
 });
+
+// Using async method
+try {
+	var result = await MASUser.LogoutAsync(user, password);
+} catch(Exception ex) {
+	// Logged out with an error
+}
 ```
 
 
@@ -433,6 +486,7 @@ The Mobile SDK supports using fingerprint session lock with device screen lock w
 //
 //	If the local authentication is not registered and/or available, Mobile SDK will return an error
 //
+// Using callback
 MASUser.CurrentUser.LockSessionWithCompletion(completion: (completed, error) => {
 
     if (completed)
@@ -443,6 +497,13 @@ MASUser.CurrentUser.LockSessionWithCompletion(completion: (completed, error) => 
     	// an error occurred while locking the session
     }
 });
+
+// Using async method
+try {
+	var result = await MASUser.LockSessionAsync();
+} catch(Exception ex) {
+	// an error occurred while locking the session
+}
 ```
 
 #### Verify locked user session
@@ -463,6 +524,7 @@ else if (MASUser.CurrentUser.IsAuthenticated) {
 //
 //	Unlock the currently locked user session.
 //
+// Using callback
 MASUser.CurrentUser.UnlockSessionWithCompletion(completion: (completed, error) => {
 
     if (completed)
@@ -474,13 +536,27 @@ MASUser.CurrentUser.UnlockSessionWithCompletion(completion: (completed, error) =
     }
 });
 
+// Using async method
+try {
+	var result = await MASUser.CurrentUser.UnlockSessionAsync();
+} catch(Exception ex) {
+	// an error occurred while unlocking the session
+}
 
 //
 //	Unlock the currently locked user session with customizable description text which will appear on device's local authentication screen.
 //
+// Using callback
 MASUser.CurrentUser.UnlockSessionWithUserOperationPromptMessage("DESCRIPTION TEXT", completion: (completed, error) => {
      ....       
 });
+
+// Using async method
+try {
+	var result = await MASUser.CurrentUser.UnlockSessionWithUserOperationPromptMessageAsync("DESCRIPTION TEXT");
+} catch(Exception ex) {
+	// an error occurred while unlocking the session
+}
 ```
 
 #### Remove user session lock
@@ -550,7 +626,7 @@ requestBuilder.ResponseType = MASRequestResponseType.Json;
 //  Build MASRequestBuilder to convert into MASRequest object
 MASRequest request = requestBuilder.Build();
 
-//  Using MASRequest object, invoke API
+//  Using MASRequest object, invoke API with callback
 MAS.Invoke(request, completion: (response, responseObject, error) => {
     if (error != null)
     {
@@ -564,6 +640,13 @@ MAS.Invoke(request, completion: (response, responseObject, error) => {
         Console.WriteLine("Success: {0}", value);
     }
 });
+
+//  Using MASRequest object, invoke API with async method
+try {
+	MASResponseObjectErrorResult result = await MAS.InvokeAsync(request);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 #### MASRequest methods
@@ -591,7 +674,17 @@ MASRequest request = MASRequest.GetFrom((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (response, responseObject, error) => {});
+//  Using callback
+MAS.Invoke(request, completion: (response, responseObject, error) => {
+     ....  
+});
+
+//  Using async method
+try {
+	MASResponseObjectErrorResult result = await MAS.InvokeAsync(request);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Delete method
@@ -615,7 +708,17 @@ MASRequest request = MASRequest.DeleteFrom((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (response, responseObject, error) => {});
+//  Using callback
+MAS.Invoke(request, completion: (response, responseObject, error) => {
+     ....  
+});
+
+//  Using async method
+try {
+	MASResponseObjectErrorResult result = await MAS.InvokeAsync(request);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Post method
@@ -639,7 +742,17 @@ MASRequest request = MASRequest.PostTo((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (response, responseObject, error) => {});
+//  Using callback
+MAS.Invoke(request, completion: (response, responseObject, error) => {
+     ....  
+});
+
+//  Using async method
+try {
+	MASResponseObjectErrorResult result = await MAS.InvokeAsync(request);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Put method
@@ -663,7 +776,17 @@ MASRequest request = MASRequest.PutTo((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (response, responseObject, error) => {});
+//  Using callback
+MAS.Invoke(request, completion: (response, responseObject, error) => {
+     ....  
+});
+
+//  Using async method
+try {
+	MASResponseObjectErrorResult result = await MAS.InvokeAsync(request);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 #### Simplified request methods
@@ -692,12 +815,20 @@ All GET, DELETE, POST, and PUT MAS static methods also have the following set of
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
 
+// Using callback
 MAS.GetFrom(@"/protected/resource/products", param, null, MASRequestResponseType.WwwFormUrlEncoded, MASRequestResponseType.Json, completion: (responseInfo, error) =>
 {
 	//
 	//	Handle response here
 	//
 });
+
+//  Using async method
+try {
+	var responseResult = await MAS.GetFromAsync(@"/protected/resource/products", param, null, MASRequestResponseType.WwwFormUrlEncoded, MASRequestResponseType.Json);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Delete method
@@ -706,12 +837,20 @@ MAS.GetFrom(@"/protected/resource/products", param, null, MASRequestResponseType
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
 
+// Using callback
 MAS.DeleteFrom(@"/protected/resource/products", param, null, MASRequestResponseType.WwwFormUrlEncoded, MASRequestResponseType.Json, completion: (responseInfo, error) =>
 {
 	//
 	//	Handle response here
 	//
 });
+
+//  Using async method
+try {
+	var responseResult = await MAS.DeleteFromAsync(@"/protected/resource/products", param, null, MASRequestResponseType.WwwFormUrlEncoded, MASRequestResponseType.Json);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Post method
@@ -720,12 +859,20 @@ MAS.DeleteFrom(@"/protected/resource/products", param, null, MASRequestResponseT
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
 
+//Uisng callback
 MAS.PostTo(@"/protected/resource/products", param, null, MASRequestResponseType.Json, MASRequestResponseType.Json, completion: (responseInfo, error) =>
 {
 	//
 	//	Handle response here
 	//
 });
+
+//  Using async method
+try {
+	var responseResult = await MAS.PostToAsync(@"/protected/resource/products", param, null, MASRequestResponseType.Json, MASRequestResponseType.Json);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Put method
@@ -734,12 +881,20 @@ MAS.PostTo(@"/protected/resource/products", param, null, MASRequestResponseType.
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
 
+//Uisng callback
 MAS.PutTo(@"/protected/resource/products", param, null, MASRequestResponseType.Json, MASRequestResponseType.Json, completion: (responseInfo, error) =>
 {
 	//
 	//	Handle response here
 	//
 });
+
+//  Using async method
+try {
+	var responseResult = await MAS.PutToAsync(@"/protected/resource/products", param, null, MASRequestResponseType.Json, MASRequestResponseType.Json);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ### Geolocation
@@ -1050,15 +1205,23 @@ During app testing (or other administrative/devops use cases), you may need to r
 Use the following method to deregister the device and remove the record on MAG. Note that all apps associated with the device are deregistered.
 
 ```c#
+// Using callback
 MASDevice.CurrentDevice().DeregisterWithCompletion(completion: (completed, error) => {
 	if (completed && error != nil)
 	{
 		// The device is successfully deregistered.
 	}
 	else {
-		//Handle the error
+		// Handle the error
 	}
 });
+
+// Using async method
+try {
+	var result = await MASDevice.CurrentDevice().DeregisterAsync();
+} catch(Exception ex) {
+	// Handle the error
+}
 ```
 
 ### iTunes Store Operation Failed
