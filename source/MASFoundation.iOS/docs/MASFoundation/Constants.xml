@@ -262,22 +262,16 @@
       </Docs>
     </Member>
     <Member MemberName="MASFoundationVersionString">
-      <MemberSignature Language="C#" Value="public static IntPtr MASFoundationVersionString { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property native int MASFoundationVersionString" />
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASFoundationVersionString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASFoundationVersionString" />
       <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Field("MASFoundationVersionString", "__Internal")</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
-        <ReturnType>System.IntPtr</ReturnType>
+        <ReturnType>Foundation.NSString</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>
-        </remarks>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="MASGatewayMonitorStatusUpdateNotification">
