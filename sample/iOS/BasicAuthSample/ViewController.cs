@@ -43,7 +43,7 @@ namespace BasicAuthSample
         {
             var invokeResult = await SampleActions.InvokeProtectedAPIAsync();
 
-            if (invokeResult.ResponseObject != null)
+            if (invokeResult != null)
                 SampleActions.Alert("Response", invokeResult.ResponseObject.ToString());
         }
 
