@@ -141,9 +141,9 @@ namespace MASFoundation
         [Field("MASFoundationVersionNumber", "__Internal")]
         double MASFoundationVersionNumber { get; }
 
-        // extern const unsigned char [] MASFoundationVersionString;
-        [Field("MASFoundationVersionString", "__Internal")]
-        IntPtr MASFoundationVersionString { get; }
+        //// extern const unsigned char [] MASFoundationVersionString;
+        //[Field("MASFoundationVersionStringAlias", "__Internal")]
+        //IntPtr MASFoundationVersionString { get; }
 
         // MAS Errors
         // extern NSString *const _Nonnull MASFoundationErrorDomain;

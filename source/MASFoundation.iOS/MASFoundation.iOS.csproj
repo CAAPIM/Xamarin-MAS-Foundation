@@ -18,7 +18,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>  
     <CustomCommands>
       <CustomCommands>
         <Command>
@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
@@ -75,6 +76,7 @@
     <NativeReference Include="MASFoundation.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
+      <LinkerFlags></LinkerFlags>
     </NativeReference>
   </ItemGroup>
   <ItemGroup>
