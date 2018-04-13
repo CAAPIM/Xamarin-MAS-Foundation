@@ -7,8 +7,8 @@ The Mobile SDK for Xamarin provides simple and secure access to CA Mobile API Ga
 ## Documentation
 - [Mobile SDK for Xamarin Android Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
 - [Mobile SDK for Xamarin iOS Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
-- [Mobile SDK for Xamarin Android API Reference](http://mas.ca.com//xamarin-android/1.7.00/sdk/)
-- [Mobile SDK for Xamarin iOS API Reference](http://mas.ca.com//xamarin-ios/1.7.00/sdk/)
+- [Mobile SDK for Xamarin Android API Reference](https://mas.ca.com//xamarin-android/1.7.00/sdk/)
+- [Mobile SDK for Xamarin iOS API Reference](https://mas.ca.com//xamarin-ios/1.7.00/sdk/)
 
 
 ## What's in this Release
@@ -164,8 +164,8 @@ The best way to get the lastest Xamarin Mobile SDK libraries is to use the NuGet
 If you do not have Visual Studio, go to: [Get MASFoundation for Xamarin on NuGet](https://www.nuget.org/packages), and search for: **MASFoundation.Xamarin**.
 
 ## API Reference 
-- [Mobile SDK for Xamarin Android API Reference](http://mas.ca.com//xamarin-android/1.7.00/sdk/)
-- [Mobile SDK for Xamarin iOS API Reference](http://mas.ca.com//xamarin-ios/1.7.00/sdk/)
+- [Mobile SDK for Xamarin Android API Reference](https://mas.ca.com//xamarin-android/1.7.00/sdk/)
+- [Mobile SDK for Xamarin iOS API Reference](https://mas.ca.com//xamarin-ios/1.7.00/sdk/)
 
 ## License
 
