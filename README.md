@@ -150,16 +150,14 @@ This a valid msso_config.json file exported from a MAG.
 
 The best way to get the lastest Xamarin Mobile SDK libraries is to use the NuGet dependency manager, which is embedded in Visual Studio. To get started with your app:
 
-- [Android Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
-- [iOS Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
+- [Xamarin for Android Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
+- [Xamarin for iOS Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
 
-If you do not have Visual Studio, go to: [Get NuGet Packages](https://www.nuget.org/packages), and search for: **MASFoundation.Xamarin**.
+If you do not have Visual Studio, go to: [Get MASFoundation for Xamarin on NuGet](https://www.nuget.org/packages), and search for: **MASFoundation.Xamarin**.
 
 ## API Reference 
-- [Android Xamarin API Reference](http://mas.ca.com//xamarin-android/1.6.10/sdk/)
-- [iOS Xamarin API Reference](http://mas.ca.com//xamarin-ios/1.6.10/sdk/)
-
-**Note**: Although the Xamarin API Reference Guide exposes all of the Mobile SDK APIs, only the MASFoundation features noted above are supported in this release.
+- [Xamarin for Android API Reference](http://mas.ca.com//xamarin-android/1.7.00/sdk/)
+- [Xamarin for iOS API Reference](http://mas.ca.com//xamarin-ios/1.7.00/sdk/)
 
 ## License
 
