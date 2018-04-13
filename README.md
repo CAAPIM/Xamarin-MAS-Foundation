@@ -4,21 +4,29 @@
 
 The Mobile SDK for Xamarin provides simple and secure access to CA Mobile API Gateway (MAG) services. 
 
+## Documentation
+- [Mobile SDK for Xamarin Android Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
+- [Mobile SDK for Xamarin iOS Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
+- [Mobile SDK for Xamarin Android API Reference](http://mas.ca.com//xamarin-android/1.7.00/sdk/)
+- [Mobile SDK for Xamarin iOS API Reference](http://mas.ca.com//xamarin-ios/1.7.00/sdk/)
+
+
 ## What's in this Release
 
-In this release, you get **MASFoundation**, the core framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these features:
+In this release, you get **MASFoundation**, the core library that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these features:
  
-- Authenticate with:
-  - Device registration
-  - User login and registered app
+- Authentication and authorization, limited to:  
+  - Device Registration
+  - User log in and client credentials
   - Fingerprint session lock
-  - Single Sign-On
-- Securely access protected APIs that are configured with OAuth 2.0
+  - Single Sign-on 
+- Secure access to APIs
+- Send HTTP Requests to external APIs
 
 The SDK contains:
-- MASFoundation framework for iOS and Android with the above features 
+- MASFoundation llibrary for iOS and Android with the above features 
 - A sample app so you can test basic authentication flows with a CA Mobile API Gateway (MAG)
-- iOS and Android Guides and API Reference documentation  
+- iOS and Android guides and API reference documentation  
     
 ::: alert info
 **Note**:  You'll need your own UI framework for a fit and finished app.
@@ -150,14 +158,14 @@ This a valid msso_config.json file exported from a MAG.
 
 The best way to get the lastest Xamarin Mobile SDK libraries is to use the NuGet dependency manager, which is embedded in Visual Studio. To get started with your app:
 
-- [Xamarin for Android Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
-- [Xamarin for iOS Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
+- [Mobile SDK for Xamarin Android Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
+- [Mobile SDK for Xamarin iOS Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
 
 If you do not have Visual Studio, go to: [Get MASFoundation for Xamarin on NuGet](https://www.nuget.org/packages), and search for: **MASFoundation.Xamarin**.
 
 ## API Reference 
-- [Xamarin for Android API Reference](http://mas.ca.com//xamarin-android/1.7.00/sdk/)
-- [Xamarin for iOS API Reference](http://mas.ca.com//xamarin-ios/1.7.00/sdk/)
+- [Mobile SDK for Xamarin Android API Reference](http://mas.ca.com//xamarin-android/1.7.00/sdk/)
+- [Mobile SDK for Xamarin iOS API Reference](http://mas.ca.com//xamarin-ios/1.7.00/sdk/)
 
 ## License
 
