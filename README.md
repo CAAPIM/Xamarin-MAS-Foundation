@@ -5,11 +5,10 @@
 The Mobile SDK for Xamarin provides simple and secure access to CA Mobile API Gateway (MAG) services. 
 
 ## Documentation
-- [Mobile SDK for Xamarin Android Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
-- [Mobile SDK for Xamarin iOS Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
-- [Mobile SDK for Xamarin Android API Reference](https://mas.ca.com//xamarin-android/1.7.00/sdk/)
-- [Mobile SDK for Xamarin iOS API Reference](https://mas.ca.com//xamarin-ios/1.7.00/sdk/)
-
+- [Mobile SDK for Xamarin Android Guide](https://mas.ca.com/docs/xamarin-android/1.7.00/guides/)
+- [Mobile SDK for Xamarin iOS Guide](https://mas.ca.com/docs/xamarin-ios/1.7.00/sdk/)
+- [Mobile SDK for Xamarin Android API Reference](https://mas.ca.com/docs/xamarin-android/1.7.00/sdk/)
+- [Mobile SDK for Xamarin iOS API Reference](https://mas.ca.com/docs/xamarin-ios/1.7.00/guides/)
 
 ## What's in this Release
 
