@@ -39,6 +39,10 @@
           <type>AfterBuild</type>
           <command>mdoc export-html --template doctemplate.xsl -o ../../APIReference/Android/html obj/Release/docs</command>
         </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>/usr/bin/curl -X POST https://mobile-staging-androidautomation.l7tech.com:8443/transformXml -H 'content-type:application/xml' -d @bin/Release/MASFoundation.Android.xml --insecure -o bin/Release/MASFoundation.Android.xml</command>
+        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
