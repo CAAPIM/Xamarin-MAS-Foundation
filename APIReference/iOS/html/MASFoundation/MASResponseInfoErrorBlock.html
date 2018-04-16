@@ -207,7 +207,8 @@
     </div>
     <h1 class="PageTitle" id="T:MASFoundation.MASResponseInfoErrorBlock">MASResponseInfoErrorBlock  Delegate</h1>
     <p class="Summary" id="T:MASFoundation.MASResponseInfoErrorBlock:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+        A standard (NSDictionary responseInfo, NSError error) block. The response object could potentially
+        be any type of object. It is most often used to return NSString JSON responses from HTTP calls for example.
     </p>
     <div>
       <h2>Syntax</h2>
@@ -218,17 +219,13 @@
       <blockquote class="SubsectionBox" id="T:MASFoundation.MASResponseInfoErrorBlock:Docs:Parameters">
         <dl>
           <dt>
-            <i>arg0</i>
+            <i>responseInfo</i>
           </dt>
-          <dd>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </dd>
+          <dd>JSON response object.</dd>
           <dt>
-            <i>arg1</i>
+            <i>error</i>
           </dt>
-          <dd>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </dd>
+          <dd>NSError object in case any error is encountered during the process.</dd>
         </dl>
       </blockquote>
       <h2 class="Section">Remarks</h2>

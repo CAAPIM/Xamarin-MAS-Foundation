@@ -621,17 +621,6 @@
               </tr>
               <tr valign="top">
                 <td>
-                  <div>static </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MASUser.InitializeBrowserBasedAuthenticationWithCompletion(MASFoundation.MASCompletionErrorBlock)">InitializeBrowserBasedAuthenticationWithCompletion</a>
-                  </b>(<a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
-        Authenticate a user by launching a Browser which in turn loads a URL (templatized).
-        </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
                   <div>
                   </div>
                 </td>
@@ -662,6 +651,16 @@
         however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
         Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
         </p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LockSessionWithCompletionAsync()">LockSessionWithCompletionAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -782,6 +781,16 @@
                 </td>
                 <td colspan="2">
                   <b>
+                    <a href="#M:MASFoundation.MASUser.LogoutWithCompletionAsync()">LogoutWithCompletionAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
                     <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.ObjectForKey(Foundation.NSObject)">ObjectForKey</a>
                   </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a></nobr><blockquote>
         Returns the value associated with a given key.
@@ -831,6 +840,16 @@
                 </td>
                 <td colspan="2">
                   <b>
+                    <a href="#M:MASFoundation.MASUser.RequestUserInfoWithCompletionAsync()">RequestUserInfoWithCompletionAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MASUser&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
                     <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.SetObjectForKey(Foundation.NSObject,Foundation.NSCopying)">SetObjectForKey</a>
                   </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCopying</a>)<blockquote>
         Sets the object associated with a given key.
@@ -869,6 +888,16 @@
                 </td>
                 <td colspan="2">
                   <b>
+                    <a href="#M:MASFoundation.MASUser.UnlockSessionWithCompletionAsync()">UnlockSessionWithCompletionAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
                     <a href="#M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessage(System.String,MASFoundation.MASCompletionErrorBlock)">UnlockSessionWithUserOperationPromptMessage</a>
                   </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
         Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication) and specified message on system local authentication dialog.
@@ -877,6 +906,16 @@
         </p><p>
         After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
         </p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String)">UnlockSessionWithUserOperationPromptMessageAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
               </tr>
             </table>
           </div>
@@ -1185,31 +1224,6 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
-        <h3 id="M:MASFoundation.MASUser.InitializeBrowserBasedAuthenticationWithCompletion(MASFoundation.MASCompletionErrorBlock)">InitializeBrowserBasedAuthenticationWithCompletion Method</h3>
-        <blockquote id="M:MASFoundation.MASUser.InitializeBrowserBasedAuthenticationWithCompletion(MASFoundation.MASCompletionErrorBlock):member">
-          <div class="msummary">
-        Authenticate a user by launching a Browser which in turn loads a URL (templatized).
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("initializeBrowserBasedAuthenticationWithCompletion:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>InitializeBrowserBasedAuthenticationWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.InitializeBrowserBasedAuthenticationWithCompletion(MASFoundation.MASCompletionErrorBlock):Parameters">
-            <dl>
-              <dt>
-                <i>completion</i>
-              </dt>
-              <dd>The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</dd>
-            </dl>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASUser.InitializeBrowserBasedAuthenticationWithCompletion(MASFoundation.MASCompletionErrorBlock):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASUser.InitializeBrowserBasedAuthenticationWithCompletion(MASFoundation.MASCompletionErrorBlock):Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
         <h3 id="P:MASFoundation.MASUser.IsAuthenticated">IsAuthenticated Property</h3>
         <blockquote id="P:MASFoundation.MASUser.IsAuthenticated:member">
           <div class="msummary">
@@ -1298,6 +1312,26 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASUser.LockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LockSessionWithCompletionAsync()">LockSessionWithCompletionAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LockSessionWithCompletionAsync():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LockSessionWithCompletionAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LockSessionWithCompletionAsync():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LockSessionWithCompletionAsync():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LockSessionWithCompletionAsync():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
@@ -1587,6 +1621,26 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LogoutWithCompletionAsync()">LogoutWithCompletionAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LogoutWithCompletionAsync():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LogoutWithCompletionAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LogoutWithCompletionAsync():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LogoutWithCompletionAsync():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LogoutWithCompletionAsync():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
         <h3 id="P:MASFoundation.MASUser.PhoneNumbers">PhoneNumbers Property</h3>
         <blockquote id="P:MASFoundation.MASUser.PhoneNumbers:member">
           <div class="msummary">
@@ -1665,6 +1719,26 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
+        <h3 id="M:MASFoundation.MASUser.RequestUserInfoWithCompletionAsync()">RequestUserInfoWithCompletionAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.RequestUserInfoWithCompletionAsync():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MASUser&gt;</a> <b>RequestUserInfoWithCompletionAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.RequestUserInfoWithCompletionAsync():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.RequestUserInfoWithCompletionAsync():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.RequestUserInfoWithCompletionAsync():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
         <h3 id="M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock)">UnlockSessionWithCompletion Method</h3>
         <blockquote id="M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):member">
           <div class="msummary">
@@ -1691,6 +1765,26 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.UnlockSessionWithCompletionAsync()">UnlockSessionWithCompletionAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.UnlockSessionWithCompletionAsync():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>UnlockSessionWithCompletionAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithCompletionAsync():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithCompletionAsync():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithCompletionAsync():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
@@ -1724,6 +1818,37 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessage(System.String,MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String)">UnlockSessionWithUserOperationPromptMessageAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>UnlockSessionWithUserOperationPromptMessageAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userOperationPrompt)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>userOperationPrompt</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>

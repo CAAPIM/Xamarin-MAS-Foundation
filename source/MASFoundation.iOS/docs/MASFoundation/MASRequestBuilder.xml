@@ -172,26 +172,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Claims">
-      <MemberSignature Language="C#" Value="public virtual MASFoundation.MASClaims Claims { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class MASFoundation.MASClaims Claims" />
-      <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("claims", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>MASFoundation.MASClaims</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-        MASClaims object containing claims for JWT.
-        </summary>
-        <value>The claims.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="ClassHandle">
       <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
@@ -381,102 +361,6 @@
         MASRequestResponseType value that specifies what type formatting is required for response body.
         </summary>
         <value>The type of the response.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SetSignWithClaims">
-      <MemberSignature Language="C#" Value="public virtual void SetSignWithClaims (MASFoundation.MASClaims claims, out Foundation.NSError error);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSignWithClaims(class MASFoundation.MASClaims claims, class Foundation.NSError error) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("setSignWithClaims:error:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="claims" Type="MASFoundation.MASClaims" />
-        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
-      </Parameters>
-      <Docs>
-        <param name="claims">MASClaims object containing claims for JWT</param>
-        <param name="error">NSError error reference object that returns any error occurred during JWT signature.</param>
-        <summary>
-        Set to sign the request with a MASClaims object using default private key from device registration against primary gateway.
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SetSignWithClaims">
-      <MemberSignature Language="C#" Value="public virtual void SetSignWithClaims (MASFoundation.MASClaims claims, Foundation.NSData privateKey, out Foundation.NSError error);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSignWithClaims(class MASFoundation.MASClaims claims, class Foundation.NSData privateKey, class Foundation.NSError error) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("setSignWithClaims:privateKey:error:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="claims" Type="MASFoundation.MASClaims" />
-        <Parameter Name="privateKey" Type="Foundation.NSData" />
-        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
-      </Parameters>
-      <Docs>
-        <param name="claims">MASClaims object containing claims for JWT</param>
-        <param name="privateKey">Custom private key in NSData format signed using RS256 algorithm.</param>
-        <param name="error">NSError error reference object that returns any error occurred during JWT signature.</param>
-        <summary>
-        Set to sign the request with a MASClaims object using custom private key in NSData format.
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="SetSignWithError">
-      <MemberSignature Language="C#" Value="public virtual void SetSignWithError (out Foundation.NSError error);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSignWithError(class Foundation.NSError error) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("setSignWithError:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
-      </Parameters>
-      <Docs>
-        <param name="error">NSError error reference object that returns any error occurred during JWT signature.</param>
-        <summary>
-        Set to sign the body of request using default private key from device registration against primary gateway.
-        </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Sign">
-      <MemberSignature Language="C#" Value="public virtual bool Sign { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool Sign" />
-      <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("sign")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-        bool value that determines whether or not digitally sign the request parameters with JWT signature.
-        </summary>
-        <value>
-          <c>true</c> if sign; otherwise, <c>false</c>.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

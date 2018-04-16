@@ -191,6 +191,7 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+<<<<<<< HEAD
     <Member MemberName="Delegate">
       <MemberSignature Language="C#" Value="public MASFoundation.MASEnterpriseAppProtocol Delegate { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class MASFoundation.MASEnterpriseAppProtocol Delegate" />
@@ -204,6 +205,8 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+=======
+>>>>>>> develop
     <Member MemberName="DetailedDescription">
       <MemberSignature Language="C#" Value="public virtual string DetailedDescription { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DetailedDescription" />
@@ -240,6 +243,7 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+<<<<<<< HEAD
     <Member MemberName="EnterpriseIconWithImageView">
       <MemberSignature Language="C#" Value="public virtual void EnterpriseIconWithImageView (UIKit.UIImageView imageView, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnterpriseIconWithImageView(class UIKit.UIImageView imageView, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
@@ -269,6 +273,8 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+=======
+>>>>>>> develop
     <Member MemberName="Environment">
       <MemberSignature Language="C#" Value="public virtual string Environment { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Environment" />
@@ -371,6 +377,7 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+<<<<<<< HEAD
     <Member MemberName="LoadWebApp">
       <MemberSignature Language="C#" Value="public virtual void LoadWebApp (UIKit.UIWebView webView, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadWebApp(class UIKit.UIWebView webView, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
@@ -400,6 +407,8 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+=======
+>>>>>>> develop
     <Member MemberName="Name">
       <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Name" />
@@ -500,6 +509,7 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+<<<<<<< HEAD
     <Member MemberName="RetrieveEnterpriseApps">
       <MemberSignature Language="C#" Value="public virtual void RetrieveEnterpriseApps (MASFoundation.MASObjectsResponseErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RetrieveEnterpriseApps(class MASFoundation.MASObjectsResponseErrorBlock completion) cil managed" />
@@ -527,6 +537,8 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+=======
+>>>>>>> develop
     <Member MemberName="Scope">
       <MemberSignature Language="C#" Value="public virtual string[] Scope { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string[] Scope" />

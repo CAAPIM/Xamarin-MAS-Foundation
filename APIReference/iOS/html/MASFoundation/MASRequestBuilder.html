@@ -356,20 +356,6 @@
         </td>
               </tr>
               <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:MASFoundation.MASRequestBuilder.Claims">Claims</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MASFoundation/MASClaims.html">MASClaims</a>
-                  </i>. 
-        MASClaims object containing claims for JWT.
-        </td>
-              </tr>
-              <tr valign="top">
                 <td>[read-only]<div>override </div></td>
                 <td>
                   <b>
@@ -551,20 +537,6 @@
         MASRequestResponseType value that specifies what type formatting is required for response body.
         </td>
               </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:MASFoundation.MASRequestBuilder.Sign">Sign</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. 
-        bool value that determines whether or not digitally sign the request parameters with JWT signature.
-        </td>
-              </tr>
             </table>
           </div>
         </div>
@@ -661,42 +633,6 @@
                   <b>
                     <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.SetObjectForKeyedSubscript(Foundation.NSObject,Foundation.NSCopying)">SetObjectForKeyedSubscript</a>
                   </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCopying</a>)<blockquote>This method enables usage of literal syntax on `MASObject`. E.g. `object["key"] = "value";` (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSError@)">SetSignWithClaims</a>
-                  </b>(<a href="../MASFoundation/MASClaims.html">MASClaims</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<blockquote>
-        Set to sign the request with a MASClaims object using default private key from device registration against primary gateway.
-        </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@)">SetSignWithClaims</a>
-                  </b>(<a href="../MASFoundation/MASClaims.html">MASClaims</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<blockquote>
-        Set to sign the request with a MASClaims object using custom private key in NSData format.
-        </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MASFoundation.MASRequestBuilder.SetSignWithError(Foundation.NSError@)">SetSignWithError</a>
-                  </b>(<i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<blockquote>
-        Set to sign the body of request using default private key from device registration against primary gateway.
-        </blockquote></td>
               </tr>
             </table>
           </div>
@@ -864,24 +800,6 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
-        <h3 id="P:MASFoundation.MASRequestBuilder.Claims">Claims Property</h3>
-        <blockquote id="P:MASFoundation.MASRequestBuilder.Claims:member">
-          <div class="msummary">
-        MASClaims object containing claims for JWT.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("claims", ObjCRuntime.ArgumentSemantic.Strong)]<br />public virtual <a href="../MASFoundation/MASClaims.html">MASClaims</a> <b>Claims</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MASRequestBuilder.Claims:Value">The claims.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MASFoundation.MASRequestBuilder.Claims:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MASFoundation.MASRequestBuilder.Claims:Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
         <h3 id="P:MASFoundation.MASRequestBuilder.ClassHandle">ClassHandle Property</h3>
         <blockquote id="P:MASFoundation.MASRequestBuilder.ClassHandle:member">
           <div class="msummary">
@@ -1044,112 +962,6 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:MASFoundation.MASRequestBuilder.ResponseType:Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSError@)">SetSignWithClaims Method</h3>
-        <blockquote id="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSError@):member">
-          <div class="msummary">
-        Set to sign the request with a MASClaims object using default private key from device registration against primary gateway.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("setSignWithClaims:error:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetSignWithClaims</b> (<a href="../MASFoundation/MASClaims.html">MASClaims</a> claims, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSError@):Parameters">
-            <dl>
-              <dt>
-                <i>claims</i>
-              </dt>
-              <dd>MASClaims object containing claims for JWT</dd>
-              <dt>
-                <i>error</i>
-              </dt>
-              <dd>NSError error reference object that returns any error occurred during JWT signature.</dd>
-            </dl>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSError@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSError@):Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@)">SetSignWithClaims Method</h3>
-        <blockquote id="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@):member">
-          <div class="msummary">
-        Set to sign the request with a MASClaims object using custom private key in NSData format.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("setSignWithClaims:privateKey:error:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetSignWithClaims</b> (<a href="../MASFoundation/MASClaims.html">MASClaims</a> claims, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a> privateKey, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@):Parameters">
-            <dl>
-              <dt>
-                <i>claims</i>
-              </dt>
-              <dd>MASClaims object containing claims for JWT</dd>
-              <dt>
-                <i>privateKey</i>
-              </dt>
-              <dd>Custom private key in NSData format signed using RS256 algorithm.</dd>
-              <dt>
-                <i>error</i>
-              </dt>
-              <dd>NSError error reference object that returns any error occurred during JWT signature.</dd>
-            </dl>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASRequestBuilder.SetSignWithClaims(MASFoundation.MASClaims,Foundation.NSData,Foundation.NSError@):Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MASRequestBuilder.SetSignWithError(Foundation.NSError@)">SetSignWithError Method</h3>
-        <blockquote id="M:MASFoundation.MASRequestBuilder.SetSignWithError(Foundation.NSError@):member">
-          <div class="msummary">
-        Set to sign the body of request using default private key from device registration against primary gateway.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("setSignWithError:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetSignWithError</b> (<i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASRequestBuilder.SetSignWithError(Foundation.NSError@):Parameters">
-            <dl>
-              <dt>
-                <i>error</i>
-              </dt>
-              <dd>NSError error reference object that returns any error occurred during JWT signature.</dd>
-            </dl>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASRequestBuilder.SetSignWithError(Foundation.NSError@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASRequestBuilder.SetSignWithError(Foundation.NSError@):Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MASFoundation.MASRequestBuilder.Sign">Sign Property</h3>
-        <blockquote id="P:MASFoundation.MASRequestBuilder.Sign:member">
-          <div class="msummary">
-        bool value that determines whether or not digitally sign the request parameters with JWT signature.
-        </div>
-          <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("sign")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Sign</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MASRequestBuilder.Sign:Value">
-            <tt>true</tt> if sign; otherwise, <tt>false</tt>.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MASFoundation.MASRequestBuilder.Sign:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MASFoundation.MASRequestBuilder.Sign:Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
