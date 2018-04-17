@@ -41,7 +41,11 @@
         </Command>
         <Command>
           <type>AfterBuild</type>
-          <command>mono-xmltool --transform transformAndroid.xsl bin/Release/MASFoundation.Android.xml bin/Release/MASFoundation.Android.temp.xml &amp;&amp; mv -f bin/Release/MASFoundation.Android.temp.xml bin/Release/MASFoundation.Android.xml</command>
+          <command>mono-xmltool --transform transformAndroid.xsl bin/Release/MASFoundation.Android.xml bin/Release/MASFoundation.Android.temp.xml</command>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mv -f bin/Release/MASFoundation.Android.temp.xml bin/Release/MASFoundation.Android.xml</command>
         </Command>
       </CustomCommands>
     </CustomCommands>
