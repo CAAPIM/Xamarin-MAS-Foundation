@@ -12,7 +12,7 @@ using WebKit;
 namespace MASFoundation
 {
     /// 
-    /// This API includes all features available in the native iOS SDK. Howerver, in this first realease only a subset of the features are available:
+    /// This API includes all features available in the native iOS SDK. Howerver, in this first release only a subset of the features are available:
     /// 
     /// Authentication and Authorization, limited to:
     ///     Device Registration

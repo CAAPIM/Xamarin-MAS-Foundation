@@ -241,9 +241,7 @@
                       <a href="#C:MASFoundation.MASService()">MASService</a>
                     </b>()</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>Default constructor, initializes a new instance of this class.</td>
               </tr>
             </table>
           </div>
@@ -263,9 +261,7 @@
                       <a href="#C:MASFoundation.MASService(Foundation.NSObjectFlag)">MASService</a>
                     </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a>)</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>Constructor to call on derived classes to skip initialization and merely allocate the object.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -278,9 +274,7 @@
                       <a href="#C:MASFoundation.MASService(System.IntPtr)">MASService</a>
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>)</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>A constructor used when creating managed representations of unmanaged objects; Called by the runtime.</td>
               </tr>
             </table>
           </div>
@@ -299,7 +293,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. The handle for this class.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -311,7 +305,7 @@
                 <td>
                   <i>
                     <a href="../MASFoundation/MASServiceLifecycleStatus.html">MASServiceLifecycleStatus</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. The current MASServiceLifecycleStatus of the MASService.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -323,7 +317,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Retrieve a human readable string value for the current MASServiceLifecycleStatus.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div>static </div></td>
@@ -335,7 +329,12 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. 
+            Retreives the UUID assigned to a particular MASService subclass.  All subclasses MUST
+            implement this method with a unique value.  If it does not the super version will
+            return null and the services will be rejected for membership in the internal MASService
+            process.
+        </td>
               </tr>
             </table>
           </div>
@@ -351,7 +350,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASService.LifecycleStatusToString(MASFoundation.MASServiceLifecycleStatus)">LifecycleStatusToString</a>
-                  </b>(<a href="../MASFoundation/MASServiceLifecycleStatus.html">MASServiceLifecycleStatus</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="../MASFoundation/MASServiceLifecycleStatus.html">MASServiceLifecycleStatus</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Retrieve a human readable string value for the given MASServiceLifecycleStatus.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -361,7 +360,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASService.ServiceDidLoad()">ServiceDidLoad</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>The lifecycle method to indicate to the service to perform an processes or acquire any resources it requires at the MASServiceLifecycleStatusLoaded state.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -371,7 +370,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASService.ServiceDidReset()">ServiceDidReset</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>The lifecycle method to indicate the service should perform any processes or release any resources to bring the service to a default installation state.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -381,7 +380,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASService.ServiceDidStart()">ServiceDidStart</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>The lifecycle method to indicate the service should perform any processes or acquire any resources at the MASServiceLifecycleStatusDidStart state.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -391,7 +390,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASService.ServiceDidStop()">ServiceDidStop</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>The lifecycle method to indicate the service should perform any processes or release any resources at the MASServiceLifecycleStatusDidStop state.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -401,7 +400,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASService.ServiceWillStart()">ServiceWillStart</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>The lifecycle method to indicate the service should perform any processes or acquire any resources BEFORE it enters the MASServiceLifecycleStatusWillStart state.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -411,7 +410,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASService.ServiceWillStop()">ServiceWillStop</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>The lifecycle method to indicate the service should perform any processes or release any resources BEFORE it enters the MASServiceLifecycleStatusWillStop state.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -420,7 +419,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASService.SharedService()">SharedService</a>
-                  </b>()<nobr> : <a href="../MASFoundation/MASService.html">MASService</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="../MASFoundation/MASService.html">MASService</a></nobr><blockquote>Retrieve the shared MASService singleton.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -436,7 +435,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../MASFoundation/MASService_SubclassingHooks.html#M:MASFoundation.MASService_SubclassingHooks.ServiceDidFailWithError(MASFoundation.MASService,Foundation.NSError)">ServiceDidFailWithError</a>
-                  </b>(<i>this</i> <a href="../MASFoundation/MASService.html">MASService</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<i>this</i> <a href="../MASFoundation/MASService.html">MASService</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<blockquote>Call for subclasses to use to indicate an error has occurred.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -448,9 +447,7 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="C:MASFoundation.MASService()">MASService Constructor</h3>
         <blockquote id="C:MASFoundation.MASService():member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">Default constructor, initializes a new instance of this class.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("init")]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASService</b> ()</div>
           <h2 class="Section">Remarks</h2>
@@ -463,9 +460,7 @@
         </blockquote>
         <h3 id="C:MASFoundation.MASService(Foundation.NSObjectFlag)">MASService Constructor</h3>
         <blockquote id="C:MASFoundation.MASService(Foundation.NSObjectFlag):member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">Constructor to call on derived classes to skip initialization and merely allocate the object.</div>
           <h2>Syntax</h2>
           <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASService</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -474,14 +469,13 @@
               <dt>
                 <i>t</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Unused sentinel value, pass NSObjectFlag.Empty.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASService(Foundation.NSObjectFlag):Remarks">
-          </div>
+            This constructor is typically used by the binding generator to allocate the object, but prevent the actual initialization to take place. Once the allocation has taken place, the constructor has to initialize the object. With constructors generated by the binding generator this means that it manually invokes one of the "init" methods to initialize the object.
+        </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:MASFoundation.MASService(Foundation.NSObjectFlag):Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
@@ -489,9 +483,7 @@
         </blockquote>
         <h3 id="C:MASFoundation.MASService(System.IntPtr)">MASService Constructor</h3>
         <blockquote id="C:MASFoundation.MASService(System.IntPtr):member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">A constructor used when creating managed representations of unmanaged objects; Called by the runtime.</div>
           <h2>Syntax</h2>
           <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASService</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -500,14 +492,13 @@
               <dt>
                 <i>handle</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Pointer (handle) to the Objective-C class.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASService(System.IntPtr):Remarks">
-          </div>
+            This constructor is invoked by the runtime infrastructure (ObjCRuntime.GetNSObject (IntPtr)) to create a new managed representation for a pointer to an unmanaged Objective-C object. You should not invoke this method directly, instead you should call the GetNSObject method as it will prevent two instances of a managed object to point to the same native object.
+        </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:MASFoundation.MASService(System.IntPtr):Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
@@ -515,18 +506,15 @@
         </blockquote>
         <h3 id="P:MASFoundation.MASService.ClassHandle">ClassHandle Property</h3>
         <blockquote id="P:MASFoundation.MASService.ClassHandle:member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">The handle for this class.</div>
           <h2>Syntax</h2>
           <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> <b>ClassHandle</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MASService.ClassHandle:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASService.ClassHandle:Value">The pointer to the Objective-C class.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:MASFoundation.MASService.ClassHandle:Remarks">
-          </div>
+            Each Xamarin class mirrors an unmanaged Objective-C class. This value contains the pointer to the Objective-C class.
+        </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:MASFoundation.MASService.ClassHandle:Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
@@ -534,15 +522,11 @@
         </blockquote>
         <h3 id="P:MASFoundation.MASService.LifecycleStatus">LifecycleStatus Property</h3>
         <blockquote id="P:MASFoundation.MASService.LifecycleStatus:member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">The current MASServiceLifecycleStatus of the MASService.</div>
           <h2>Syntax</h2>
           <div class="Signature">[get: Foundation.Export("lifecycleStatus", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)]<br />public virtual <a href="../MASFoundation/MASServiceLifecycleStatus.html">MASServiceLifecycleStatus</a> <b>LifecycleStatus</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MASService.LifecycleStatus:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASService.LifecycleStatus:Value">The MASServiceLifecycleStatus.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:MASFoundation.MASService.LifecycleStatus:Remarks">
           </div>
@@ -553,15 +537,11 @@
         </blockquote>
         <h3 id="P:MASFoundation.MASService.LifecycleStatusAsString">LifecycleStatusAsString Property</h3>
         <blockquote id="P:MASFoundation.MASService.LifecycleStatusAsString:member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">Retrieve a human readable string value for the current MASServiceLifecycleStatus.</div>
           <h2>Syntax</h2>
           <div class="Signature">[get: Foundation.Export("lifecycleStatusAsString")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>LifecycleStatusAsString</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MASService.LifecycleStatusAsString:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASService.LifecycleStatusAsString:Value">Returns the MASServiceLifecycleStatus in a human readable string.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:MASFoundation.MASService.LifecycleStatusAsString:Remarks">
           </div>
@@ -572,9 +552,7 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASService.LifecycleStatusToString(MASFoundation.MASServiceLifecycleStatus)">LifecycleStatusToString Method</h3>
         <blockquote id="M:MASFoundation.MASService.LifecycleStatusToString(MASFoundation.MASServiceLifecycleStatus):member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">Retrieve a human readable string value for the given MASServiceLifecycleStatus.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("lifecycleStatusToString:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>LifecycleStatusToString</b> (<a href="../MASFoundation/MASServiceLifecycleStatus.html">MASServiceLifecycleStatus</a> status)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -583,15 +561,11 @@
               <dt>
                 <i>status</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The MASServiceLifecycleStatus.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASService.LifecycleStatusToString(MASFoundation.MASServiceLifecycleStatus):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASService.LifecycleStatusToString(MASFoundation.MASServiceLifecycleStatus):Returns">Returns the MASServiceLifecycleStatus in a human readable string.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.LifecycleStatusToString(MASFoundation.MASServiceLifecycleStatus):Remarks">
           </div>
@@ -602,14 +576,13 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASService.ServiceDidLoad()">ServiceDidLoad Method</h3>
         <blockquote id="M:MASFoundation.MASService.ServiceDidLoad():member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">The lifecycle method to indicate to the service to perform an processes or acquire any resources it requires at the MASServiceLifecycleStatusLoaded state.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("serviceDidLoad")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ServiceDidLoad</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceDidLoad():Remarks">
-          </div>
+            Subclasses should override this to do this for their specific requirements.
+        </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceDidLoad():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
@@ -617,14 +590,14 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASService.ServiceDidReset()">ServiceDidReset Method</h3>
         <blockquote id="M:MASFoundation.MASService.ServiceDidReset():member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">The lifecycle method to indicate the service should perform any processes or release any resources to bring the service to a default installation state.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("serviceDidReset")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ServiceDidReset</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceDidReset():Remarks">
-          </div>
+            Subclasses should override this to do this for their specific requirements.
+            They should call this super version at the start of their override.
+        </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceDidReset():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
@@ -632,14 +605,14 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASService.ServiceDidStart()">ServiceDidStart Method</h3>
         <blockquote id="M:MASFoundation.MASService.ServiceDidStart():member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">The lifecycle method to indicate the service should perform any processes or acquire any resources at the MASServiceLifecycleStatusDidStart state.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("serviceDidStart")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ServiceDidStart</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceDidStart():Remarks">
-          </div>
+            Subclasses should override this to do this for their specific requirements.
+            They should call this super version at the start of their override.
+        </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceDidStart():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
@@ -647,14 +620,14 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASService.ServiceDidStop()">ServiceDidStop Method</h3>
         <blockquote id="M:MASFoundation.MASService.ServiceDidStop():member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">The lifecycle method to indicate the service should perform any processes or release any resources at the MASServiceLifecycleStatusDidStop state.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("serviceDidStop")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ServiceDidStop</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceDidStop():Remarks">
-          </div>
+            Subclasses should override this to do this for their specific requirements.
+            They should call this super version at the start of their override.                    
+        </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceDidStop():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
@@ -663,14 +636,15 @@
         <h3 id="P:MASFoundation.MASService.ServiceUUID">ServiceUUID Property</h3>
         <blockquote id="P:MASFoundation.MASService.ServiceUUID:member">
           <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            Retreives the UUID assigned to a particular MASService subclass.  All subclasses MUST
+            implement this method with a unique value.  If it does not the super version will
+            return null and the services will be rejected for membership in the internal MASService
+            process.
+        </div>
           <h2>Syntax</h2>
           <div class="Signature">[get: Foundation.Export("serviceUUID")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ServiceUUID</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MASService.ServiceUUID:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASService.ServiceUUID:Value">Return the UUID assigned to the MASService subclass.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:MASFoundation.MASService.ServiceUUID:Remarks">
           </div>
@@ -681,14 +655,14 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASService.ServiceWillStart()">ServiceWillStart Method</h3>
         <blockquote id="M:MASFoundation.MASService.ServiceWillStart():member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">The lifecycle method to indicate the service should perform any processes or acquire any resources BEFORE it enters the MASServiceLifecycleStatusWillStart state.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("serviceWillStart")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ServiceWillStart</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceWillStart():Remarks">
-          </div>
+            Subclasses should override this to do this for their specific requirements.
+            They should call this super version at the start of their override.                    
+        </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceWillStart():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
@@ -696,14 +670,14 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASService.ServiceWillStop()">ServiceWillStop Method</h3>
         <blockquote id="M:MASFoundation.MASService.ServiceWillStop():member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">The lifecycle method to indicate the service should perform any processes or release any resources BEFORE it enters the MASServiceLifecycleStatusWillStop state.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("serviceWillStop")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ServiceWillStop</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceWillStop():Remarks">
-          </div>
+            Subclasses should override this to do this for their specific requirements.
+            They should call this super version at the start of their override.                    
+        </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.ServiceWillStop():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
@@ -711,18 +685,15 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASService.SharedService()">SharedService Method</h3>
         <blockquote id="M:MASFoundation.MASService.SharedService():member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">Retrieve the shared MASService singleton.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("sharedService")]<br />public static <a href="../MASFoundation/MASService.html">MASService</a> <b>SharedService</b> ()</div>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASService.SharedService():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASService.SharedService():Returns">Returns the shared MASService singleton.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.SharedService():Remarks">
-          </div>
+            Note, subclasses should override this version of the method.
+        </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASService.SharedService():Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>

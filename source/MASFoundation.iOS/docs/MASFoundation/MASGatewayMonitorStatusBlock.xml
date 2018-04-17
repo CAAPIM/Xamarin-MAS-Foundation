@@ -14,7 +14,7 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="status">To be added.</param>
+    <param name="status">The monitoring status enumerated type.</param>
     <summary>The Gateway monitor status block that will receive a MASGatewayMonitoringStatus update when a new status value change is triggered.</summary>
     <remarks>
     </remarks>

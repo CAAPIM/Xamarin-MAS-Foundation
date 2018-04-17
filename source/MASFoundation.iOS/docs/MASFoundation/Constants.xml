@@ -198,8 +198,8 @@
         <ReturnType>Foundation.NSString</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The NSString error domain used by all MAS server related Foundation level NSErrors.</summary>
+        <value>"com.ca.MASFoundation:ErrorDomain</value>
         <remarks>
         </remarks>
       </Docs>
@@ -217,8 +217,8 @@
         <ReturnType>Foundation.NSString</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The NSString error domain used by all MAS local level NSErrors.</summary>
+        <value>com.ca.MASFoundation.localError:ErrorDomain</value>
         <remarks>
         </remarks>
       </Docs>
@@ -236,8 +236,8 @@
         <ReturnType>Foundation.NSString</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>The NSString error domain used by all target API level NSErrors.</summary>
+        <value>com.ca.MASFoundation.targetAPI:ErrorDomain</value>
         <remarks>
         </remarks>
       </Docs>
@@ -255,8 +255,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Project version number for MASFoundation.</summary>
+        <value>MASFoundation version number.</value>
         <remarks>
         </remarks>
       </Docs>
@@ -269,9 +269,10 @@
         <ReturnType>Foundation.NSString</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Project version string for MASFoundation.</summary>
+        <value>MASFoundation version string.</value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="MASGatewayMonitorStatusUpdateNotification">
