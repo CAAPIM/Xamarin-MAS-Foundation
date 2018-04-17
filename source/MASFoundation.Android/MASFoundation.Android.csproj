@@ -41,7 +41,7 @@
         </Command>
         <Command>
           <type>AfterBuild</type>
-          <command>/usr/bin/curl -X POST https://mobile-staging-androidautomation.l7tech.com:8443/transformXml -H 'content-type:application/xml' -d @bin/Release/MASFoundation.Android.xml --insecure -o bin/Release/MASFoundation.Android.xml</command>
+          <command>mono-xmltool --transform transformAndroid.xsl bin/Release/MASFoundation.Android.xml bin/Release/MASFoundation.Android.temp.xml &amp;&amp; mv -f bin/Release/MASFoundation.Android.temp.xml bin/Release/MASFoundation.Android.xml</command>
         </Command>
       </CustomCommands>
     </CustomCommands>
@@ -66,6 +66,7 @@
     <None Include="Additions\AboutAdditions.txt" />
     <None Include="Jars\AboutJars.txt" />
     <None Include="packages.config" />
+    <None Include="transformAndroid.xsl" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />

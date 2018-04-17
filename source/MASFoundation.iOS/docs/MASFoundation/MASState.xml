@@ -3,7 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASState extends System.Enum" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-    <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
+
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -18,9 +18,7 @@
       <MemberSignature Language="C#" Value="DidLoad" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState DidLoad = int32(1)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
-      </AssemblyInfo>
+      
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
@@ -32,9 +30,7 @@
       <MemberSignature Language="C#" Value="DidStart" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState DidStart = int32(3)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
-      </AssemblyInfo>
+
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
@@ -46,9 +42,7 @@
       <MemberSignature Language="C#" Value="DidStop" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState DidStop = int32(5)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
-      </AssemblyInfo>
+
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
@@ -60,9 +54,7 @@
       <MemberSignature Language="C#" Value="IsBeingStopped" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState IsBeingStopped = int32(6)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
-      </AssemblyInfo>
+
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
@@ -74,9 +66,7 @@
       <MemberSignature Language="C#" Value="NotConfigured" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState NotConfigured = int32(-1)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
-      </AssemblyInfo>
+
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
@@ -88,9 +78,7 @@
       <MemberSignature Language="C#" Value="NotInitialized" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState NotInitialized = int32(0)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
-      </AssemblyInfo>
+
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
@@ -102,9 +90,7 @@
       <MemberSignature Language="C#" Value="WillStart" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState WillStart = int32(2)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
-      </AssemblyInfo>
+
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
@@ -116,9 +102,7 @@
       <MemberSignature Language="C#" Value="WillStop" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState WillStop = int32(4)" />
       <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.6656.20271</AssemblyVersion>
-      </AssemblyInfo>
+
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
