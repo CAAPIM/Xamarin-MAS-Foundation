@@ -9,7 +9,8 @@
   </Base>
   <Docs>
     <summary>Enumerated MASFileDirectoryType that indicates which directory to store MASFile into.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="ApplicationSupport">

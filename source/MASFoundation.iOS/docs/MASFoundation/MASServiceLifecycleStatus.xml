@@ -9,7 +9,8 @@
   </Base>
   <Docs>
     <summary>The enumerated status for the Lifecycle of the micro services.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="DidStart">

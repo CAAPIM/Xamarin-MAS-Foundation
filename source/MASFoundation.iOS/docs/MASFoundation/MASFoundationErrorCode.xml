@@ -9,7 +9,8 @@
   </Base>
   <Docs>
     <summary>The enumerated error codes for Foundation level NSErrors.</summary>
-    <remarks>The enumerated error codes for Foundation level NSErrors.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="AccessTokenDisabled">

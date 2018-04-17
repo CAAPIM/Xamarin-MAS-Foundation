@@ -14,10 +14,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>MASAuthorizationResponse class is designed to handle application’s interaction with other applications (SFSafariViewController) for social login functionality of MASFoundation SDK.
-MASAuthorizationResponse method should be properly invoked in [UIApplicationDelegate application:openURL:options:] method of AppDelegate for the application. If the method is not invoked, social login functionality may not work properly.
-    </summary>
-    <remarks>To be added.</remarks>
+    <summary>
+        MASAuthorizationResponseDelegate protocol is an optional protocol that may be implemented to handle the response of authorization code from social login provider's authorization.
+        These protocols may be implemented in the designated class where social login authentication is being processed.
+        <para> 
+        Alternatively, NSNotification can be subscribed to perform exactly the same behaviour.    
+        </para></summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -35,7 +39,8 @@ MASAuthorizationResponse method should be properly invoked in [UIApplicationDele
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -53,7 +58,8 @@ MASAuthorizationResponse method should be properly invoked in [UIApplicationDele
       <Docs>
         <param name="t">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -71,7 +77,8 @@ MASAuthorizationResponse method should be properly invoked in [UIApplicationDele
       <Docs>
         <param name="handle">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -92,12 +99,17 @@ MASAuthorizationResponse method should be properly invoked in [UIApplicationDele
         <Parameter Name="options" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="app">UIApplication object as passed in [UIApplicationDelegate application:openURL:options:].</param>
-        <param name="url">NSURL object as passed in [UIApplicationDelegate application:openURL:options:].</param>
-        <param name="options">NSDictionary as passed in [UIApplicationDelegate application:openURL:options:].</param>
-        <summary>Parse returned URL from SFSafariViewController with authorization code and OAuth state. Call this method inside [UIApplicationDelegate application:openURL:options:] of the AppDelegate for the application. This method should be invoked in order to properly perform social login in MASFoundation SDK.</summary>
-        <returns>BOOL value whether the URL is specific for social login in MASFoundation or not.</returns>
-        <remarks>To be added.</remarks>
+        <param name="app">UIApplication object as passed in UIApplicationOpenUrlOptions.</param>
+        <param name="url">NSURL object as passed in UIApplicationOpenUrlOptions.</param>
+        <param name="options">NSDictionary as passed in UIApplicationOpenUrlOptions.</param>
+        <summary>
+            Prase returned URL from SFSafariViewController with authorization code and OAuth state.
+            Call this method inside MonoTouch.UIKit.UIApplicationDelegate.OpenUrl of the AppDelegate for the application.
+            This method should be invoked in order to properly perform social login in MASFoundation SDK.
+        </summary>
+        <returns>bool value whether the URL is specific for social login in MASFoundation or not.</returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -119,13 +131,18 @@ MASAuthorizationResponse method should be properly invoked in [UIApplicationDele
         <Parameter Name="annotation" Type="Foundation.NSObject" />
       </Parameters>
       <Docs>
-        <param name="application">UIApplication object as passed in [UIApplicationDelegate application:openURL:sourceApplication:annotation:].</param>
-        <param name="url">NSURL object as passed in [UIApplicationDelegate application:openURL:sourceApplication:annotation:].</param>
-        <param name="sourceApplication">NSDictionary as passed in [UIApplicationDelegate application:openURL:sourceApplication:annotation:].</param>
-        <param name="annotation">annotation as passed in [UIApplicationDelegate application:openURL:sourceApplication:annotation:].</param>
-        <summary>Prase returned URL from SFSafariViewController with authorization code and OAuth state. Call this method inside [UIApplicationDelegate application:openURL:sourceApplication:annotation:] of the AppDelegate for the application. This method should be invoked in order to properly perform social login in MASFoundation SDK.</summary>
-        <returns>BOOL value whether the URL is specific for social login in MASFoundation or not.</returns>
-        <remarks>To be added.</remarks>
+        <param name="application">To be added.</param>
+        <param name="url">NSURL object as passed in UIApplicationOpenUrlOptions.</param>
+        <param name="sourceApplication">NSDictionary as passed in UIApplicationOpenUrlOptions.</param>
+        <param name="annotation">annotation as passed in UIApplicationOpenUrlOptions.</param>
+        <summary>
+        Prase returned URL from SFSafariViewController with authorization code and OAuth state.
+        Call this method inside MonoTouch.UIKit.UIApplicationDelegate.OpenUrl of the AppDelegate for the application.
+        This method should be invoked in order to properly perform social login in MASFoundation SDK.
+        </summary>
+        <returns>bool value whether the URL is specific for social login in MASFoundation or not..</returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -138,7 +155,8 @@ MASAuthorizationResponse method should be properly invoked in [UIApplicationDele
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Delegate">
@@ -149,9 +167,10 @@ MASAuthorizationResponse method should be properly invoked in [UIApplicationDele
         <ReturnType>MASFoundation.MASAuthorizationResponseDelegate</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>`MASAuthorizationResponseDelegate` property for delegation of MASAuthorizationResponse protocols</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Delegate property for delegation of MASAuthorizationResponse protocols</summary>
+        <value>MASAuthorizationResponseDelegate.</value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -165,9 +184,12 @@ MASAuthorizationResponse method should be properly invoked in [UIApplicationDele
         <Parameter Name="disposing" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="disposing">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="disposing">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SharedInstance">
@@ -184,9 +206,12 @@ MASAuthorizationResponse method should be properly invoked in [UIApplicationDele
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Retrieve the shared MASAuthorizationResponse singleton.</summary>
+        <summary>
+        Retrieve the shared MASAuthorizationResponse singleton.
+        <para>Note, subclasses should override this version of the method.</para></summary>
         <returns>Returns the shared MASAuthorizationResponse singleton.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="WeakDelegate">
@@ -205,9 +230,10 @@ MASAuthorizationResponse method should be properly invoked in [UIApplicationDele
         <ReturnType>Foundation.NSObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Delegate property for delegation of MASAuthorizationResponse protocols</summary>
+        <value>MASAuthorizationResponseDelegate.</value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

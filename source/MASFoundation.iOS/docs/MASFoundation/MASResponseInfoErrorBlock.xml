@@ -21,6 +21,7 @@
         A standard (NSDictionary responseInfo, NSError error) block. The response object could potentially
         be any type of object. It is most often used to return NSString JSON responses from HTTP calls for example.
     </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
 </Type>

@@ -17,7 +17,8 @@
     <summary>
     The `MASConfiguration` class is a local representation of configuration data.
     </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -35,7 +36,8 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -55,7 +57,8 @@
         <summary>
         Initializer to perform a default initialization.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -73,7 +76,8 @@
       <Docs>
         <param name="t">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -91,7 +95,8 @@
       <Docs>
         <param name="handle">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplicationClients">
@@ -113,7 +118,8 @@
         Gets the application static clients.
         </summary>
         <value>The application clients.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplicationCredentialsAreDynamic">
@@ -137,7 +143,8 @@
         </summary>
         <value>
           <c>true</c> if application credentials are dynamic; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplicationDescription">
@@ -157,7 +164,8 @@
         Gets the application description.
         </summary>
         <value>The application description.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplicationName">
@@ -177,7 +185,8 @@
         Gets the name of the application.
         </summary>
         <value>The name of the application.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplicationOrganization">
@@ -197,7 +206,8 @@
         Gets the organization name of the application.
         </summary>
         <value>The application organization.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplicationRegisteredBy">
@@ -217,7 +227,8 @@
         Gets the name of the entity that registered the application.
         </summary>
         <value>The application registered by.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplicationType">
@@ -237,7 +248,8 @@
         Gets the type of the application.
         </summary>
         <value>The type of the application.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AuthenticateOTPEndpointPath">
@@ -257,7 +269,8 @@
         Gets the authenticate OTP endpoint.
         </summary>
         <value>The authenticate OTP endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AuthorizationEndpointPath">
@@ -277,7 +290,8 @@
         Gets the authorization endpoint.
         </summary>
         <value>The authorization endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BluetoothCharacteristicUuid">
@@ -297,7 +311,8 @@
         Gets the bluetooth characteristic UUID.
         </summary>
         <value>The bluetooth characteristic UUID.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BluetoothRssi">
@@ -317,7 +332,8 @@
         Gets the bluetooth rssi.
         </summary>
         <value>The bluetooth rssi.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BluetoothServiceUuid">
@@ -337,7 +353,8 @@
         Gets the bluetooth service UUID.
         </summary>
         <value>The bluetooth service UUID.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -350,7 +367,8 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClientInitializeEndpointPath">
@@ -370,7 +388,8 @@
         Gets the client initialize endpoint.
         </summary>
         <value>The client initialize endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CompareWithCurrentConfiguration">
@@ -395,7 +414,8 @@
         </summary>
         <returns>
           <c>true</c>, if with current configuration was compared, <c>false</c> otherwise.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CurrentConfiguration">
@@ -415,7 +435,8 @@
         Gets the application's configuration object. This is a singleton object.
         </summary>
         <value>The singleton 'MASConfiguration' object.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DefaultApplicationClientIdentifier">
@@ -435,7 +456,8 @@
         Gets the default application client identifier.
         </summary>
         <value>The default application client identifier.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DefaultApplicationClientInfo">
@@ -455,7 +477,8 @@
         Gets the default application client info.
         </summary>
         <value>The default application client info.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DefaultApplicationClientSecret">
@@ -475,7 +498,8 @@
         Gets the default application client secret.
         </summary>
         <value>The default application client secret.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DetectServerChangeWithCurrentConfiguration">
@@ -500,7 +524,8 @@
         </summary>
         <returns>
           <c>true</c>, if server change with current configuration was detected, <c>false</c> otherwise.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DeviceListAllEndpointPath">
@@ -520,7 +545,8 @@
         Gets the device list endpoint.
         </summary>
         <value>The device list endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DeviceRegisterClientEndpointPath">
@@ -540,7 +566,8 @@
         Gets the device registration as client credentials endpoint.
         </summary>
         <value>The device registration as client credentials endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DeviceRegisterEndpointPath">
@@ -560,7 +587,8 @@
         Gets the device registration endpoint.
         </summary>
         <value>The device registration endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DeviceRemoveEndpointPath">
@@ -580,7 +608,8 @@
         Gets the device de-registration endpoint.
         </summary>
         <value>The device de-registration endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DeviceRenewEndpointPath">
@@ -600,7 +629,8 @@
         Gets the device client certificate renew endpoint path.
         </summary>
         <value>The device client certificate renew endpoint path.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EnabledPublicKeyPinning">
@@ -622,7 +652,8 @@
         </summary>
         <value>
           <c>true</c> if enabled public key pinning; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EnabledTrustedPublicPKI">
@@ -644,7 +675,8 @@
         </summary>
         <value>
           <c>true</c> if enabled trusted public pki; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EndpointPathForKey">
@@ -668,7 +700,8 @@
         Retrieves an endpoint path fragment for a given endpoint key.
         </summary>
         <returns>The path for key.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EnterpriseBrowserEndpointPath">
@@ -688,7 +721,8 @@
         Gets the enterprise browser endpoint.
         </summary>
         <value>The enterprise browser endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GatewayCertificates">
@@ -708,7 +742,8 @@
         Gets the public server certificate of the Gateway as obtained from the configuration.
         </summary>
         <value>The array of strings of the gateway's public certificate.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GatewayCertificatesAsDERData">
@@ -728,7 +763,8 @@
         Gets the public server certificate of the Gateway guaraneteed to be in DER format.
         </summary>
         <value>The gateway certificates as DER Data format.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GatewayCertificatesAsPEMData">
@@ -748,7 +784,8 @@
         Gets the public server certificate of the Gateway guaraneteed to be in PEM format.
         </summary>
         <value>The gateway certificates as PEM Data format.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GatewayHostName">
@@ -768,7 +805,8 @@
         Gets the name of the gateway host.
         </summary>
         <value>The name of the gateway host.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GatewayPort">
@@ -788,7 +826,8 @@
         Gets the gateway port.
         </summary>
         <value>The gateway port.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GatewayPrefix">
@@ -808,7 +847,8 @@
         Gets the gateway prefix.
         </summary>
         <value>The gateway prefix.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GatewayUrl">
@@ -828,7 +868,8 @@
         Gets the full URL of the Gateway including the prefix, hostname and port in a https://hostname:port/prefix (if exists)&gt; format.
         </summary>
         <value>The gateway URL in NSUrl object with https://hostname:port/prefix (if exists)&gt; format.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="InstanceFromStorage">
@@ -848,7 +889,8 @@
         Gets the instance from internal storage.
         </summary>
         <value>The instance from storage.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsLoaded">
@@ -869,7 +911,8 @@
         <para>true if it has succesfully loaded and is ready for use.</para><para>false if not yet loaded or perhaps an error has occurred during attempting to load.</para></summary>
         <value>
           <c>true</c> if is loaded; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LocationIsRequired">
@@ -894,7 +937,8 @@
         an error response.</para></summary>
         <value>
           <c>true</c> if location is required; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveSecurityConfigurationForDomain">
@@ -917,7 +961,8 @@
         <summary>
         Removes security configuration object based on the domain (host, and port number).
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Reset">
@@ -937,7 +982,8 @@
         <summary>
         Reset this instance.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SaveToStorage">
@@ -957,7 +1003,8 @@
         <summary>
         Saves MASConfiguration object to storage.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ScimPathEndpointPath">
@@ -977,7 +1024,8 @@
         Gets the scim endpoint.
         </summary>
         <value>The scim endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SecurityConfigurationForDomain">
@@ -1001,7 +1049,8 @@
         Returns MASSecurityConfiguration object for a specific domain.
         </summary>
         <returns>The MASSecurityConfiguration object for domain.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SecurityConfigurations">
@@ -1021,7 +1070,8 @@
         Returns an array of MASSecurityConfiguration objects for each host.
         </summary>
         <value>The array of currently active MASSecurityConfigurations.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetSecurityConfiguration">
@@ -1044,7 +1094,8 @@
         <summary>
         Sets security measure for SSL pinning, and SSL validation for specified host in MASSecurityConfiguration object.
         <para>MASSecurityConfiguration must have valid host in NSUrl object with port number(port number is mandatory), at least one pinning information(either certificates, or public key hashes), or trust public PKI.If public PKI is not trusted, and no pinning information is provided, it will fail to store the security configuration object, and eventually fail on evaluating SSL for requests.</para><para>Upon SDK initialization, MASConfiguration.CurrentConfiguration.GatewayUrl's MASSecurityConfiguration object will be overwritten. If primary gateway's security configuration has to be modified, ensure to set security configuration after SDK initialization.</para></summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
         <deprecated type="deprecate">
         This method is deprecated.  Use MASConfiguration.SetSecurityConfiguration(MASSecurityConfiguration, NSError) instead for better handling of error cases.
         </deprecated>
@@ -1074,7 +1125,8 @@
         <para>MASSecurityConfiguration must have valid host in NSUrl object with port number(port number is mandatory), at least one pinning information(either certificates, or public key hashes), or trust public PKI.If public PKI is not trusted, and no pinning information is provided, it will fail to store the security configuration object, and eventually fail on evaluating SSL for requests.</para><para>Upon SDK initialization, MASConfiguration.CurrentConfiguration.GatewayUrl's MASSecurityConfiguration object will be overwritten. If primary gateway's security configuration has to be modified, ensure to set security configuration after SDK initialization.</para></summary>
         <returns>
           <c>true</c>, if security configuration was set, <c>false</c> otherwise.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SsoEnabled">
@@ -1099,7 +1151,8 @@
         </summary>
         <value>
           <c>true</c> if sso enabled; otherwise, <c>false</c>.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StoragePathEndpointPath">
@@ -1119,7 +1172,8 @@
         Gets the storage endpoint.
         </summary>
         <value>The storage endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TokenEndpointPath">
@@ -1139,7 +1193,8 @@
         Gets the OAuth 2 token endpoint.
         </summary>
         <value>The OAuth 2 token endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TokenRevokeEndpointPath">
@@ -1159,7 +1214,8 @@
         Gets the OAuth 2 token revoke endpoint.
         </summary>
         <value>The OAuth 2 token revoke endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TrustedCertPinnedPublickKeyHashes">
@@ -1179,7 +1235,8 @@
         Gets the array of trusted public key hasehs for certificate pinning.
         </summary>
         <value>The trusted cert pinned publick key hashes.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UserInfoEndpointPath">
@@ -1199,7 +1256,8 @@
         Gets the user info endpoint.
         </summary>
         <value>The user info endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UserSessionLogoutEndpointPath">
@@ -1219,7 +1277,8 @@
         Gets the user session logout endpoint.
         </summary>
         <value>The user session logout endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UserSessionStatusEndpointPath">
@@ -1239,7 +1298,8 @@
         Gets the user session status endpoint.
         </summary>
         <value>The user session status endpoint.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ValidateJSONConfiguration">
@@ -1263,7 +1323,8 @@
         Internal function to validate the configuration.
         </summary>
         <returns>The JSONC onfiguration.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

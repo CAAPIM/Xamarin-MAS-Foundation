@@ -18,6 +18,7 @@
     <param name="user">MASUSer object with updated value which is also available through the current MASUser object that is making this request.</param>
     <param name="error">NSError object in case any error is encountered during the process.</param>
     <summary>The MASUser specific (MASUser user, NSError error) block</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    </remarks>
   </Docs>
 </Type>

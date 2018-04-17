@@ -14,8 +14,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>The MASFile class is a local representation of file data.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The `MASFile` class is a local representation of file data.</summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -33,7 +34,8 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -57,7 +59,8 @@
       <Docs>
         <param name="coder">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -75,7 +78,8 @@
       <Docs>
         <param name="t">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -93,7 +97,8 @@
       <Docs>
         <param name="handle">To be added.</param>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -106,7 +111,8 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Contents">
@@ -122,9 +128,10 @@
         <ReturnType>Foundation.NSData</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>The contents of file as NSData.</summary>
-        <value>contents</value>
-        <remarks>To be added.</remarks>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DirectoryType">
@@ -140,9 +147,10 @@
         <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>The file directory type. Default directory type is MASFileDirectoryTypeApplicationSupport.</summary>
-        <value>directoryType</value>
-        <remarks>To be added.</remarks>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FilePath">
@@ -158,9 +166,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>The full file path of the file on disk.</summary>
-        <value>filePath</value>
-        <remarks>To be added.</remarks>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FileWithName">
@@ -192,7 +201,7 @@
             
             Data stored into file will be automatically protected with </summary>
         <returns>Returns a new ‘MASFile’ object.</returns>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="FileWithName">
@@ -222,7 +231,7 @@
             
             MASFileDirectoryTypeTemporary MASFileDirectoryTypeApplicationSupport MASFileDirectoryTypeCachesDirectory MASFileDirectoryTypeDocuments MASFileDirectoryTypeLibrary</summary>
         <returns>Returns a new ‘MASFile’ object.</returns>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="FindFileWithName">
@@ -250,7 +259,7 @@
             
             MASFileDirectoryTypeTemporary MASFileDirectoryTypeApplicationSupport MASFileDirectoryTypeCachesDirectory MASFileDirectoryTypeDocuments MASFileDirectoryTypeLibrary</summary>
         <returns>Returns the MASFile that applies to the name, nil if none.</returns>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="FindFileWithName">
@@ -296,7 +305,7 @@
       <Docs>
         <summary>The name of the file.</summary>
         <value>name</value>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -315,7 +324,7 @@
       <Docs>
         <summary>Removes the MASFile locally.</summary>
         <returns>Returns YES if success or NO if failure.</returns>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveItemAtFilePath">

@@ -207,7 +207,8 @@
     </div>
     <h1 class="PageTitle" id="T:MASFoundation.MASAuthorizationResponseDelegate">MASAuthorizationResponseDelegate  Class</h1>
     <p class="Summary" id="T:MASFoundation.MASAuthorizationResponseDelegate:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+        MASAuthorizationResponseDelegate protocol is an optional protocol that may be implemented to handle the response of authorization code from social login provider's authorization.
+        These protocols may be implemented in the designated class where social login authentication is being processed.        
     </p>
     <div>
       <h2>Syntax</h2>
@@ -216,7 +217,6 @@
     <div class="Remarks" id="T:MASFoundation.MASAuthorizationResponseDelegate:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:MASFoundation.MASAuthorizationResponseDelegate:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:MASFoundation.MASAuthorizationResponseDelegate:Docs:Version Information">
@@ -290,7 +290,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASAuthorizationResponseDelegate.DidReceiveAuthorizationCode(System.String)">DidReceiveAuthorizationCode</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Delegation method to notify with authorization code when the authentication process is done.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -299,7 +299,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:MASFoundation.MASAuthorizationResponseDelegate.DidReceiveError(Foundation.NSError)">DidReceiveError</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<blockquote>Delegation method to notify when an error is encountered during the authentication process.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -318,7 +318,6 @@
           <div class="Signature">[Foundation.Export("init")]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASAuthorizationResponseDelegate</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponseDelegate():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponseDelegate():Version Information">
@@ -345,7 +344,6 @@
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponseDelegate(Foundation.NSObjectFlag):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponseDelegate(Foundation.NSObjectFlag):Version Information">
@@ -372,7 +370,6 @@
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponseDelegate(System.IntPtr):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:MASFoundation.MASAuthorizationResponseDelegate(System.IntPtr):Version Information">
@@ -381,9 +378,7 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASAuthorizationResponseDelegate.DidReceiveAuthorizationCode(System.String)">DidReceiveAuthorizationCode Method</h3>
         <blockquote id="M:MASFoundation.MASAuthorizationResponseDelegate.DidReceiveAuthorizationCode(System.String):member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">Delegation method to notify with authorization code when the authentication process is done.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("didReceiveAuthorizationCode:")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DidReceiveAuthorizationCode</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> code)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -392,14 +387,11 @@
               <dt>
                 <i>code</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>string of authorization code.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponseDelegate.DidReceiveAuthorizationCode(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponseDelegate.DidReceiveAuthorizationCode(System.String):Version Information">
@@ -408,9 +400,7 @@
         </blockquote>
         <h3 id="M:MASFoundation.MASAuthorizationResponseDelegate.DidReceiveError(Foundation.NSError)">DidReceiveError Method</h3>
         <blockquote id="M:MASFoundation.MASAuthorizationResponseDelegate.DidReceiveError(Foundation.NSError):member">
-          <div class="msummary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="msummary">Delegation method to notify when an error is encountered during the authentication process.</div>
           <h2>Syntax</h2>
           <div class="Signature">[Foundation.Export("didReceiveError:")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DidReceiveError</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -419,14 +409,11 @@
               <dt>
                 <i>error</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>NSError object of the encountered error.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponseDelegate.DidReceiveError(Foundation.NSError):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:MASFoundation.MASAuthorizationResponseDelegate.DidReceiveError(Foundation.NSError):Version Information">

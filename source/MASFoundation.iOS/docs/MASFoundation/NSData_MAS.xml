@@ -10,8 +10,9 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>This category enables encryption methods for the object</summary>
-    <remarks>To be added.</remarks>
+    <summary>This category enables encryption methods for the object.</summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="DecryptData">
