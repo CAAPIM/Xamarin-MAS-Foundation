@@ -15,7 +15,7 @@
   </Attributes>
   <Docs>
     <summary>
-        The top level MAS object represents the Mobile App Services SDK in it's entirety.  
+        The top level MAS object represents the Mobile App Services SDK in it's entirety.
         It is where the framework lifecycle begins, and ends if necessary.It is the front
         facing class where many of the configuration settings for the SDK as a whole can be
         found and utilized.
@@ -785,7 +785,7 @@
             ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
             subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
             </para>
-            When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.      
+            When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
         </summary>
         <remarks>
         </remarks>
@@ -812,7 +812,7 @@
             ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
             subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
             </para>
-            When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.      
+            When SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, SDK will cancel the request.
         </summary>
         <returns>MASResponseObjectErrorResult object that contains the NSHTTPURLResponse object and response object which needs to perform type casting based on the object type.</returns>
         <remarks>
@@ -1876,6 +1876,8 @@
         Set a user auth credential block to handle the case where SDK requires auth credentials.
         <para>When MASGrantFlow is set to MASGrantFlowPassword, and auth credentials is required, SDK will invoke this block
         to obtain MASAuthCredentials to proceed authentication process.</para></summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Start">
@@ -1905,10 +1907,10 @@
         is a failure.
         </param>
         <summary>
-            Starts the lifecycle of the MAS processes.  
+            Starts the lifecycle of the MAS processes.
             <para>
             Although an asynchronous block callback parameter is provided for response usage,
-            optionally you can set that to null and the caller can observe the lifecycle 
+            optionally you can set that to null and the caller can observe the lifecycle
             notifications instead.
             </para><para>
             This will load the last used JSON configuration from keychain storage.If there was none,
@@ -1916,13 +1918,13 @@
             or JSON file with file name set through[MAS setConfigurationFileName:].
             </para>
              The MAS lifecycle notifications are:
-            
+
              *      MASWillStartNotification
              *      MASDidFailToStartNotification
              *      MASDidStartNotification
-            
+
             The application registration notifications are:
-            
+
              *      MASApplicationWillRegisterNotification
              *      MASApplicationDidFailToRegisterNotification
              *      MASApplicationDidRegisterNotification
@@ -1941,10 +1943,10 @@
       <Parameters />
       <Docs>
         <summary>
-            Starts the lifecycle of the MAS processes.  
+            Starts the lifecycle of the MAS processes.
             <para>
             Although an asynchronous block callback parameter is provided for response usage,
-            optionally you can set that to null and the caller can observe the lifecycle 
+            optionally you can set that to null and the caller can observe the lifecycle
             notifications instead.
             </para><para>
             This will load the last used JSON configuration from keychain storage.If there was none,
@@ -1952,13 +1954,13 @@
             or JSON file with file name set through[MAS setConfigurationFileName:].
             </para>
              The MAS lifecycle notifications are:
-            
+
              *      MASWillStartNotification
              *      MASDidFailToStartNotification
              *      MASDidStartNotification
-            
+
             The application registration notifications are:
-            
+
              *      MASApplicationWillRegisterNotification
              *      MASApplicationDidFailToRegisterNotification
              *      MASApplicationDidRegisterNotification
@@ -2008,13 +2010,13 @@
             This will ignore the JSON configuration in keychain storage and replace with the default configuration.
             </para>
              The MAS lifecycle notifications are:
-            
+
              *      MASWillStartNotification
              *      MASDidFailToStartNotification
              *      MASDidStartNotification
-            
+
             The application registration notifications are:
-            
+
              *      MASApplicationWillRegisterNotification
              *      MASApplicationDidFailToRegisterNotification
              *      MASApplicationDidRegisterNotification
@@ -2047,16 +2049,16 @@
             This will ignore the JSON configuration in keychain storage and replace with the default configuration.
             </para>
              The MAS lifecycle notifications are:
-            
+
              *      MASWillStartNotification
              *      MASDidFailToStartNotification
              *      MASDidStartNotification
-            
+
             The application registration notifications are:
-            
+
              *      MASApplicationWillRegisterNotification
              *      MASApplicationDidFailToRegisterNotification
-             *      MASApplicationDidRegisterNotification            
+             *      MASApplicationDidRegisterNotification
         </summary>
         <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
         <remarks>
@@ -2098,16 +2100,16 @@
             optionally you can set that to null and the caller can observe the lifecycle
             </para>
             The MAS lifecycle notifications are:
-            
+
              *      MASWillStartNotification
              *      MASDidFailToStartNotification
              *      MASDidStartNotification
-            
+
             The application registration notifications are:
-            
+
              *      MASApplicationWillRegisterNotification
              *      MASApplicationDidFailToRegisterNotification
-             *      MASApplicationDidRegisterNotification            
+             *      MASApplicationDidRegisterNotification
         </summary>
         <remarks>
         </remarks>
@@ -2133,16 +2135,16 @@
             optionally you can set that to null and the caller can observe the lifecycle
             </para>
             The MAS lifecycle notifications are:
-            
+
              *      MASWillStartNotification
              *      MASDidFailToStartNotification
              *      MASDidStartNotification
-            
+
             The application registration notifications are:
-            
+
              *      MASApplicationWillRegisterNotification
              *      MASApplicationDidFailToRegisterNotification
-             *      MASApplicationDidRegisterNotification            
+             *      MASApplicationDidRegisterNotification
         </summary>
         <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
         <remarks>
@@ -2192,16 +2194,16 @@
             optionally you can set that to null and the caller can observe the lifecycle
             <para>
             The MAS lifecycle notifications are:
-            
+
             *      MASWillStartNotification
             *      MASDidFailToStartNotification
             *      MASDidStartNotification
-            
+
             The application registration notifications are:
-            
+
             *      MASApplicationWillRegisterNotification
             *      MASApplicationDidFailToRegisterNotification
-            *      MASApplicationDidRegisterNotification                        
+            *      MASApplicationDidRegisterNotification
             </para></summary>
         <remarks>
         </remarks>
@@ -2237,16 +2239,16 @@
             optionally you can set that to null and the caller can observe the lifecycle
             <para>
             The MAS lifecycle notifications are:
-            
+
             *      MASWillStartNotification
             *      MASDidFailToStartNotification
             *      MASDidStartNotification
-            
+
             The application registration notifications are:
-            
+
             *      MASApplicationWillRegisterNotification
             *      MASApplicationDidFailToRegisterNotification
-            *      MASApplicationDidRegisterNotification                        
+            *      MASApplicationDidRegisterNotification
             </para></summary>
         <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
         <remarks>
@@ -2283,14 +2285,14 @@
             Stops the lifecycle of all MAS processes.
             <para>
             Although an asynchronous block callback parameter is provided for response usage,
-            optionally you can set that to null and the caller can observe the lifecycle 
+            optionally you can set that to null and the caller can observe the lifecycle
             notifications instead.
             </para>
             The lifecycle notifications are:
-            
+
             *      MASWillStopNotification
             *      MASDidFailToStopNotification
-            *      MASDidStopNotification            
+            *      MASDidStopNotification
         </summary>
         <remarks>
         </remarks>
@@ -2309,14 +2311,14 @@
             Stops the lifecycle of all MAS processes.
             <para>
             Although an asynchronous block callback parameter is provided for response usage,
-            optionally you can set that to null and the caller can observe the lifecycle 
+            optionally you can set that to null and the caller can observe the lifecycle
             notifications instead.
             </para>
             The lifecycle notifications are:
-            
+
             *      MASWillStopNotification
             *      MASDidFailToStopNotification
-            *      MASDidStopNotification            
+            *      MASDidStopNotification
         </summary>
         <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
         <remarks>
