@@ -201,22 +201,6 @@
         </remarks>
       </Docs>
     </Member>
-<<<<<<< HEAD
-    <Member MemberName="Delegate">
-      <MemberSignature Language="C#" Value="public MASFoundation.MASEnterpriseAppProtocol Delegate { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class MASFoundation.MASEnterpriseAppProtocol Delegate" />
-      <MemberType>Property</MemberType>
-      <ReturnValue>
-        <ReturnType>MASFoundation.MASEnterpriseAppProtocol</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>The `MASEnterpriseAppProtocol` delegate.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-=======
->>>>>>> develop
     <Member MemberName="DetailedDescription">
       <MemberSignature Language="C#" Value="public virtual string DetailedDescription { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DetailedDescription" />
@@ -255,38 +239,6 @@
         </remarks>
       </Docs>
     </Member>
-<<<<<<< HEAD
-    <Member MemberName="EnterpriseIconWithImageView">
-      <MemberSignature Language="C#" Value="public virtual void EnterpriseIconWithImageView (UIKit.UIImageView imageView, MASFoundation.MASCompletionErrorBlock completion);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnterpriseIconWithImageView(class UIKit.UIImageView imageView, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("enterpriseIconWithImageView:completion:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="imageView" Type="UIKit.UIImageView" />
-        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
-          <Attributes>
-            <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
-            </Attribute>
-          </Attributes>
-        </Parameter>
-      </Parameters>
-      <Docs>
-        <param name="imageView">an imageView object contains the app icon.</param>
-        <param name="completion">An `MASCompletionErrorBlock` type (BOOL completed, NSError *error) that will receive a YES or NO BOOL indicating the completion state and/or an NSError object if there is a failure.</param>
-        <summary>Loads the app icon into a UIImageView to enable enterprise app funcationality.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-=======
->>>>>>> develop
     <Member MemberName="Environment">
       <MemberSignature Language="C#" Value="public virtual string Environment { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Environment" />
@@ -394,38 +346,6 @@
         </remarks>
       </Docs>
     </Member>
-<<<<<<< HEAD
-    <Member MemberName="LoadWebApp">
-      <MemberSignature Language="C#" Value="public virtual void LoadWebApp (UIKit.UIWebView webView, MASFoundation.MASCompletionErrorBlock completion);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadWebApp(class UIKit.UIWebView webView, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("loadWebApp:completion:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="webView" Type="UIKit.UIWebView" />
-        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
-          <Attributes>
-            <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
-            </Attribute>
-          </Attributes>
-        </Parameter>
-      </Parameters>
-      <Docs>
-        <param name="webView">a webView loading the web app.</param>
-        <param name="completion">An `MASCompletionErrorBlock` type (BOOL completed, NSError *error) that will receive a YES or NO BOOL indicating the completion state and/or an NSError object if there is a failure.</param>
-        <summary>Loads a web application representing this application into a `UIWebView.`</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-=======
->>>>>>> develop
     <Member MemberName="Name">
       <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Name" />
@@ -531,36 +451,6 @@
         </remarks>
       </Docs>
     </Member>
-<<<<<<< HEAD
-    <Member MemberName="RetrieveEnterpriseApps">
-      <MemberSignature Language="C#" Value="public virtual void RetrieveEnterpriseApps (MASFoundation.MASObjectsResponseErrorBlock completion);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RetrieveEnterpriseApps(class MASFoundation.MASObjectsResponseErrorBlock completion) cil managed" />
-      <MemberType>Method</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("retrieveEnterpriseApps:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="completion" Type="MASFoundation.MASObjectsResponseErrorBlock">
-          <Attributes>
-            <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASObjectsResponseErrorBlock))</AttributeName>
-            </Attribute>
-          </Attributes>
-        </Parameter>
-      </Parameters>
-      <Docs>
-        <param name="completion">The `MASObjectsResponseErrorBlock (NSArray objects, NSError error)` completion block.</param>
-        <summary>Retrieve the currently registered enterprise applications.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-=======
->>>>>>> develop
     <Member MemberName="Scope">
       <MemberSignature Language="C#" Value="public virtual string[] Scope { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string[] Scope" />
