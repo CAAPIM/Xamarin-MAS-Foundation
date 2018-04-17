@@ -1,18 +1,25 @@
 
-## iOS Mobile SDK for Xamarin
+
+## What's New for Mobile SDK
+
+For new features and bug fixes, see [Release Notes](https://github.com/CAAPIM/Releases)
+
+## Mobile SDK Libraries
 
 **MASFoundation** is the core MAS framework that handles the communication and authentication layer. Quickly build secure Xamarin apps using these built-in features:
 
 - Authenticate with:
   - Device registration
-  - User login and registered app
+  - User login and client credentials
   - Fingerprint session lock
   - Single Sign-On
 - Securely access protected APIs that are configured with OAuth 2.0
+- Send HTTP requests to external APIs
 
 ## Support and Prerequisites
 
-- [Requirements for CA Mobile API Gateway](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
+- [CA Mobile API Gateway Requirements](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)  
+  You will need an app configuration file (msso_config.json) to create an app.
 - iOS 11.0 for new apps written in C#
 - Apple account ID  
 
@@ -52,9 +59,9 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **log in**, **log out**, and **access a protected API**.
 
-## Create App from Scratch or Integrate an Existing App into the Mobile SDK
+## Create App from Scratch or Add an Existing App into the Mobile SDK
 
-If you have an existing Xamarin app that you want to integrate into the Mobile SDK, or simply want full control to set up a new app, these steps are for you.
+If you want to create an app from scratch for full control of setup, or you have existing Xamarin app, these steps are for you.
 
 ::: alert info
 **Note**: You cannot use an existing iOS Mobile SDK app. You must redo the app using c#.
@@ -63,7 +70,7 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 ### Step 1: Set Up Visual Studio for the Mobile SDK
 
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).
-2. Add the Mobile SDK (recommended) or dlls to your project.
+2. Add the Mobile SDK using NuGet (recommended) or dlls to your project.
 
     **NuGet Packages**      
       a. In Visual Studio, open your platform app, right click **Packages**, **Add Packages...**        
@@ -85,7 +92,7 @@ In Visual Studio, verify/change these settings:
 **Update Info.plist**
 
 1. Open the `Info.plist` file
-2. At the bottom, click the Source tab.
+2. At the bottom, click the **Source** tab.
 3. Add the following properties:  
     - **Location When In Use Usage Description** = "Program requires GPS"
     - **NSLocationAlwaysAndWhenInUseUsageDescription** = "Program requires GPS"
@@ -331,37 +338,41 @@ MAS.SetKeychainSynchronizable(true);
 //
 ```
 
-## Login: User Authentication and Authorization
+## Log In: Authenticate and Authorize
 
 **Library**: MASFoundation<br>
-**Description**: Authentication methods to use with the MAG and backend services.</br>
+**Description**: Authentication and authorization methods to use with the MAG and backend services.</br>
 
-### No User Authentication (default SDK flow)
+The following Mobile SDK flows are based on OAuth 2.0 grants (“methods”). Good news, you don't have to be an OAuth expert to implement these basic flows!
 
-**What**: No user authentication, just access an API. <br>
-**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
+### No Authentication, Authorize Access to an API (Default)
 
-Set the `MAS.GrantFlow` propery to `MASGrantFlow.ClientCredentials` to set the default flow to no user authentication.
+**What**: When the app starts, bypass user authentication and just authorize access to an API. <br>
+**Scenario**: You designed a mobile bank app where upon logging in, users will see descriptions of banking services. Because this is not sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authorizes access to an API.</br>
+
+Set the `MAS.GrantFlow` property to `MASGrantFlow.ClientCredentials` to set the default flow to access an API.
 
 ```c#
 //  Set grantFlow to Client Credentials
 MAS.GrantFlow = MASGrantFlow.ClientCredentials;
-
 ```
 
-### Authenticate User With Password, Change Default
+### Authenticate User and Password, App Start-Up
 
-**What**: Always start with login screen.<br>
-**Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
+**What**: When the app starts, always present a login screen with username and password.<br>
+**Scenario**: You designed a mobile bank app where users can check bank account balances. Because the data is sensitive, you want always want users to log in when the app starts. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
 
-Set the `MAS.GrantFlow` propery to `MASGrantFlow.Password` to  change the default flow to user authentication with password.
+To change the default flow to user with password, set the `MAS.GrantFlow` property to `MASGrantFlow.Password`. 
 
 ```c#
 //  Set grantFlow to Password
 MAS.GrantFlow = MASGrantFlow.Password;
 ```
 
-### Authenticate User With Password, Explicit
+### Authenticate User and Password, Specific Action
+
+**What**: Upon a specific action, authenticate username and password.<br>
+**Scenario**: You designed a mobile bank app that starts with a main page with banking services (non-sensitive data), but you also have a menu with a login link to access account balances (sensitive data). Use this method when you want to authenticate for a specific action; in this case, when the user clicks the login link. In OAuth, this is known as explicit password flow. </br>
 
 ```c#
 //
@@ -386,11 +397,10 @@ try {
 }
 ```
 
+### Authenticate User and Password, Rules-Based
 
-### Authenticate User With Password, Event-Based
-
-**What**: Event-based user authentication<br>
-**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
+**What**: Trigger username and password authentication based on rules. <br>
+**Scenario**: You designed a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that the login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens expire for the API, the MAG returns an error, triggering the SDK to display the login screen for reauthentication.</br>
 
 ```c#
 //
@@ -901,11 +911,11 @@ try {
 
 **Library**: None
 
-**Description**: Access to protected APIs can be based on the physical location of the application user. The application passes the physical location information to the MAG in the http header of an access request. Within the http header, location is expressed using latitude/longitude coordinates of the host device. SDK will prompt users to consent to access location information at runtime. Includes the location information in all requests when enabled.
+**Description**: Access protected APIs based on the physical location of the app user. The application passes the physical location information to the MAG in the http header of an access request. Within the http header, location is expressed using latitude/longitude coordinates of the host device. SDK prompts users to consent to access location information at runtime. Includes the location information in all requests when enabled.
 
 **To enable**: Add NSLocationAlwaysUsage Description (location service always in use), or NSLocationWheinUseUsageDescription (location service on demand) to the info.plist.  
 
-**Dependencies**: Admin must enable geolocation in the policy. In the msso_config.json file, the Admin must set `mag.mobile_sdk.location_enabled` to `true` to enable it from the SDK.  If the value is set to `false`, the SDK does not ask for location permission, and does not include geolocation information in header.
+**Dependencies**: Admin must enable geolocation in MAG policy. Second, the Admin must set `mag.mobile_sdk.location_enabled` to `true` in the msso_config.json file to enable geolocation for the SDK.  If the value is set to `false`, the SDK does not ask for location permission, and does not include geolocation information in header.
 
 ### SSL Pinning
 
@@ -1404,18 +1414,3 @@ The only difference between making HTTP requests to a MAG, versus to external se
 
     MAS.GetFrom("https://itunes.apple.com/search?term=red+hot+chili+peppers&entity=musicVideo", null, null, MASRequestResponseType.Json, MASRequestResponseType.Json, responseInfoErrorBlock);
 ```
-
-## Pre-release Agreement
-
-Copyright (c) 2018 CA. All rights reserved.
-This software is provided under the terms of CA’s Pre-Release Agreement. See the [AGREEMENT][agreement-link] file for details. This software is for evaluation purposes only and currently not supported by CA.
-
- [mag]: https://docops.ca.com/mag
- [mas.ca.com]: http://mas.ca.com/
- [docs]: http://mas.ca.com/docs/
- [StackOverflow]: http://stackoverflow.com/questions/tagged/massdk
- [download]: https://github.com/CAAPIM/iOS-MAS-Foundation/archive/master.zip
- [contributing]: /CONTRIBUTING
- [license-link]: /LICENSE
- [prerequisites]: http://mas.ca.com/docs/ios/1.6.00/guides/#prerequisites
- [agreement-link]: /CA-Beta-Pre-Release-Agreement
