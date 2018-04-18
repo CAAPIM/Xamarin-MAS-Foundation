@@ -928,9 +928,7 @@ SSL pinning is a feature that avoids "man in the middle" attacks where someone c
 - The SDK validates that certificates in the certificate chain exist, and that they have the correct hashing algorithm or RSA bit
 - SSL pinning failures result in the following error in the Mobile SDK: **Error Message: Invalid pinning information for security configuration.  At least one pinning information should be provided or public PKI should be trusted., Error Code: 100212**. 
 
-## Debug the SDK
-
-### Configure app for network monitoring
+## Configure Gateway for Network Monitoring
 
 MAS always monitors the network reachability status of the MAG URL. If your app needs monitoring, here's how to hook your app into monitoring.
 
@@ -983,8 +981,9 @@ To determine the current status as a string at any time:
 MAS.GatewayMonitoringStatusAsString;
 ```
 
+## Manage Devices and Apps
 
-#### Stop and reset the device
+### Stop and reset the device
 
 To stop all processes in the library, use the following method:
 
@@ -992,7 +991,7 @@ To stop all processes in the library, use the following method:
 void MAS.Stop(MASCompletionErrorBlock completion);
 ```
 
-#### Reset all app, device, and user credentials
+### Reset all app, device, and user credentials
 
 To reset all app, device, and user credentials in memory, or in the local and shared group keychains, use the following method:  
 
@@ -1012,7 +1011,7 @@ void MASDevice.ResetLocally();
 **Note:** You must restart your app to get new registration of the app, device and user authentication.
 :::
 
-#### Deregister a device
+### Deregister a device
 
 You can programmatically deregister a device to:
 
@@ -1040,59 +1039,11 @@ MASDeviceDidFailToDeregisterNotification
 MASDeviceDidDeregisterNotification
 ```
 
-#### Notifications
+## Notifications 
 
 During SDK startup, if the SDK detects the server switch from an old configuration to a new configuration, `MASWillSwitchGatewayServerNotification` and `MASDidSwitchGatewayServerNotification` are sent. You can optionally observe these notifications to handle any necessary operation that you may wish to do within your app.  
 
 The SDK determines the server switch by these configuration values: **hostname, port, and prefix**.
-
-#### Handle errors
-
-All errors that occur during SDK startup are returned in the completion block of the method.
-
-```c#
-//Initializing the SDK
-MAS.Start(completion: (completed, error) => {    
-	if (error)
-	{
-		//  Handle error here
-		if(error.Domain.Equals(MASFoundationErrorDomain))
-		{
-			//  MASFoundation error domain
-		}
-		else if(error.Domain.Equals(MASFoundationErrorDomainLocal))
-		{
-			//  MASFoundation local error domain
-		}
-});
-```
-
-All errors that are returned from the startup process should contain proper error message descriptions in `error.localizedDescription` and `error.userInfo`.
-
-##### MASFoundationErrorDomain
-
-```c#
-NSString MASFoundationErrorDomain = "com.ca.MASFoundation.Error:ErrorDomain";
-```
-This error is returned when the SDK fails during communications: app registration, device registration, or user authentication with backend services. This can be caused by invalid configuration values, or  misconfiguration on the backend services.
-
-The error should contain: 1) explanation of the error, 2) the backend services' specific error code and error response in `error.userInfo`.
-
-##### MASFoundationErrorDomainLocal
-
-```c#
-NSString MASFoundationErrorDomainLocal = "com.ca.MASFoundation.localError:ErrorDomain";
-```
-This error is returned when the SDK fails because of client SDK configuration issues. The most common issues are: invalid JSON configuration file, misconfigured device settings (i.e. geolocation or other permissions), or network issues.
-
-##### MASFoundationErrorDomainTargetAPI
-
-```c#
-NSString MASFoundationErrorDomainTargetAPI = "com.ca.MASFoundation.targetAPI:ErrorDomain";
-```
-This error is returned only when a custom endpoint on a backend service fails.
-
-#### Get notifications
 
 You can get notifications of the app registration, device registration and user authentication. These notifications are defined in MASConstants as shown below:
 
@@ -1125,6 +1076,52 @@ MASUserWillUpdateInformationNotification
 MASUserDidFailToUpdateInformationNotification
 MASUserDidUpdateInformationNotification
 ```
+
+## Error Handling
+
+All errors that occur during SDK startup are returned in the completion block of the method.
+
+```c#
+//Initializing the SDK
+MAS.Start(completion: (completed, error) => {    
+	if (error)
+	{
+		//  Handle error here
+		if(error.Domain.Equals(MASFoundationErrorDomain))
+		{
+			//  MASFoundation error domain
+		}
+		else if(error.Domain.Equals(MASFoundationErrorDomainLocal))
+		{
+			//  MASFoundation local error domain
+		}
+});
+```
+
+All errors that are returned from the startup process should contain proper error message descriptions in `error.localizedDescription` and `error.userInfo`.
+
+#### MASFoundationErrorDomain
+
+```c#
+NSString MASFoundationErrorDomain = "com.ca.MASFoundation.Error:ErrorDomain";
+```
+This error is returned when the SDK fails during communications: app registration, device registration, or user authentication with backend services. This can be caused by invalid configuration values, or  misconfiguration on the backend services.
+
+The error should contain: 1) explanation of the error, 2) the backend services' specific error code and error response in `error.userInfo`.
+
+#### MASFoundationErrorDomainLocal
+
+```c#
+NSString MASFoundationErrorDomainLocal = "com.ca.MASFoundation.localError:ErrorDomain";
+```
+This error is returned when the SDK fails because of client SDK configuration issues. The most common issues are: invalid JSON configuration file, misconfigured device settings (i.e. geolocation or other permissions), or network issues.
+
+#### MASFoundationErrorDomainTargetAPI
+
+```c#
+NSString MASFoundationErrorDomainTargetAPI = "com.ca.MASFoundation.targetAPI:ErrorDomain";
+```
+This error is returned only when a custom endpoint on a backend service fails.
 
 ## Troubleshoot Your App
 
