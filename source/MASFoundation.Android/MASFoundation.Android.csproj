@@ -39,6 +39,14 @@
           <type>AfterBuild</type>
           <command>mdoc export-html --template doctemplate.xsl -o ../../APIReference/Android/html obj/Release/docs</command>
         </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mono-xmltool --transform transformAndroid.xsl bin/Release/MASFoundation.Android.xml bin/Release/MASFoundation.Android.temp.xml</command>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mv -f bin/Release/MASFoundation.Android.temp.xml bin/Release/MASFoundation.Android.xml</command>
+        </Command>
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -62,6 +70,7 @@
     <None Include="Additions\AboutAdditions.txt" />
     <None Include="Jars\AboutJars.txt" />
     <None Include="packages.config" />
+    <None Include="transformAndroid.xsl" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
