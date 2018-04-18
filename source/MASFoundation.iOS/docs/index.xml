@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="MASFoundation.iOS" Version="1.0.6676.25185">
+    <Assembly Name="MASFoundation.iOS" Version="1.0.6682.13395">
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.LinkerSafe</AttributeName>
@@ -44,8 +44,8 @@
       </Attributes>
     </Assembly>
   </Assemblies>
-  <Remarks>To be added.</Remarks>
-  <Copyright>To be added.</Copyright>
+  <Remarks>MASFoundation is the core MAS framework that handles the communication and authentication layer.</Remarks>
+  <Copyright>Copyright (c) 2018 CA. All rights reserved.</Copyright>
   <Types>
     <Namespace Name="MASFoundation">
       <Type Name="Constants" Kind="Class" />
@@ -107,9 +107,9 @@
           <Parameter Name="error" Type="Foundation.NSError" />
         </Parameters>
         <Docs>
-          <param name="This">To be added.</param>
-          <param name="error">To be added.</param>
-          <summary>To be added.</summary>
+          <param name="This">This instance of the MASService.</param>
+          <param name="error">the NSError that the service experienced.</param>
+          <summary>Call for subclasses to use to indicate an error has occurred.</summary>
         </Docs>
         <Link Type="MASFoundation.MASService_SubclassingHooks" Member="M:MASFoundation.MASService_SubclassingHooks.ServiceDidFailWithError(MASFoundation.MASService,Foundation.NSError)" />
       </Member>
@@ -132,11 +132,11 @@
           <Parameter Name="anError" Type="Foundation.NSError&amp;" RefType="out" />
         </Parameters>
         <Docs>
-          <param name="This">To be added.</param>
-          <param name="data">To be added.</param>
-          <param name="password">To be added.</param>
-          <param name="anError">To be added.</param>
-          <summary>To be added.</summary>
+          <param name="This">This instance of the class.</param>
+          <param name="data">The NSData object to be decrypted.</param>
+          <param name="password">The NSString used as password during the decryption.</param>
+          <param name="anError">The NSError variable used for any error returned by the method.</param>
+          <summary>Decrypts data using a password passed in the parameter</summary>
         </Docs>
         <Link Type="MASFoundation.NSData_MAS" Member="M:MASFoundation.NSData_MAS.DecryptData(Foundation.NSData,Foundation.NSData,System.String,Foundation.NSError@)" />
       </Member>
@@ -159,11 +159,11 @@
           <Parameter Name="anError" Type="Foundation.NSError&amp;" RefType="out" />
         </Parameters>
         <Docs>
-          <param name="This">To be added.</param>
-          <param name="data">To be added.</param>
-          <param name="password">To be added.</param>
-          <param name="anError">To be added.</param>
-          <summary>To be added.</summary>
+          <param name="This">This instance of the class.</param>
+          <param name="data">The NSData object to be encrypted.</param>
+          <param name="password">The NSString used as password during the encryption.</param>
+          <param name="anError">The NSError variable used for any error returned by the method.</param>
+          <summary>Encrypts data using a password passed in the parameter.</summary>
         </Docs>
         <Link Type="MASFoundation.NSData_MAS" Member="M:MASFoundation.NSData_MAS.EncryptData(Foundation.NSData,Foundation.NSData,System.String,Foundation.NSError@)" />
       </Member>
