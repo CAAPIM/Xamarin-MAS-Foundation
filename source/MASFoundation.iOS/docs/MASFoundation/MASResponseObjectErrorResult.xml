@@ -25,9 +25,9 @@
         <Parameter Name="responseObject" Type="Foundation.NSObject" />
       </Parameters>
       <Docs>
-        <param name="response">To be added.</param>
-        <param name="responseObject">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="response">NSHTTPURLResponse response object.</param>
+        <param name="responseObject">Object containing the result of the request.</param>
+        <summary>Default constructor, initializes a new instance of this class.</summary>
         <remarks>
         </remarks>
       </Docs>

@@ -9,7 +9,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>MASService subclass Protected Methods.</summary>
     <remarks>
     </remarks>
   </Docs>
@@ -31,9 +31,9 @@
         <Parameter Name="error" Type="Foundation.NSError" />
       </Parameters>
       <Docs>
-        <param name="This">To be added.</param>
-        <param name="error">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="This">This instance of the MASService.</param>
+        <param name="error">the NSError that the service experienced.</param>
+        <summary>Call for subclasses to use to indicate an error has occurred.</summary>
         <remarks>
         </remarks>
       </Docs>
