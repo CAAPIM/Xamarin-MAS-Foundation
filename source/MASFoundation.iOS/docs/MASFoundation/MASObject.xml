@@ -386,7 +386,7 @@
       </Parameters>
       <Docs>
         <param name="className">A class name can be any alphanumeric string that begins with a letter. It represents an object in your app, like a 'User' or a 'Document'.</param>
-        <param name="dictionary">A disctionary that will be used as a data.</param>
+        <param name="dictionary">A dictionary that will be used as a data.</param>
         <summary>
         Creates a new MASObject with a class name and a dictionary as the data
         </summary>
@@ -412,7 +412,7 @@
         <Parameter Name="key" Type="Foundation.NSCopying" />
       </Parameters>
       <Docs>
-        <param name="object">The object for `key`. A strong reference to the object is maintaned by MASObject. Raises an `NSInvalidArgumentException` if `object` is `null`. If you need to represent a `null` value - use `NSNull`.</param>
+        <param name="object">The object for `key`. A strong reference to the object is maintained by MASObject. Raises an `NSInvalidArgumentException` if `object` is `null`. If you need to represent a `null` value - use `NSNull`.</param>
         <param name="key">The key for `object`. Raises an `NSInvalidArgumentException` if `key` is `null`.</param>
         <summary>
         Sets the object associated with a given key.
@@ -438,7 +438,7 @@
         <Parameter Name="key" Type="Foundation.NSCopying" />
       </Parameters>
       <Docs>
-        <param name="object">The object for `key`. A strong reference to the object is maintaned by PFObject. Raises an `NSInvalidArgumentException` if `object` is `null`. If you need to represent a `null` value - use `NSNull`.</param>
+        <param name="object">The object for `key`. A strong reference to the object is maintained by PFObject. Raises an `NSInvalidArgumentException` if `object` is `null`. If you need to represent a `null` value - use `NSNull`.</param>
         <param name="key">The key for `object`. Raises an `NSInvalidArgumentException` if `key` is `null`.</param>
         <summary>
         Returns the value associated with a given key.

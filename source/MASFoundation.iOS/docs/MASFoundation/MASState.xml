@@ -76,7 +76,7 @@
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>State that SDK has the active configuration either in the local file system, or keychain storage, but has not been inistialized yet.</summary>
+        <summary>State that SDK has the active configuration either in the local file system, or keychain storage, but has not been initialized yet.</summary>
       </Docs>
     </Member>
     <Member MemberName="WillStart">
@@ -87,7 +87,7 @@
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>State that SDK will start; at this state, SDK is initializing and prepareing all elements required to operate.</summary>
+        <summary>State that SDK will start; at this state, SDK is initializing and preparing all elements required to operate.</summary>
       </Docs>
     </Member>
     <Member MemberName="WillStop">

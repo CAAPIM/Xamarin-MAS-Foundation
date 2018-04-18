@@ -169,7 +169,7 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="block">MASRequestBuilder block containing all paramters to build the request.</param>
+        <param name="block">MASRequestBuilder block containing all parameters to build the request.</param>
         <summary>
         Initialize MASRequest using MASRequestBuilder block and defining the request method as a HTTP DELETE call. This type of HTTP Method type
         places its parameters within the NSURL itself as an HTTP query extension.
@@ -224,7 +224,7 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="block">MASRequestBuilder block containing all paramters to build the request.</param>
+        <param name="block">MASRequestBuilder block containing all parameters to build the request.</param>
         <summary>
         Initialize MASRequest using MASRequestBuilder block and defining the request method as a HTTP GET call. This type of HTTP Method type
         places its parameters within the NSURL itself as an HTTP query extension.
@@ -321,7 +321,7 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="block">MASRequestBuilder block containing all paramters to build the request.</param>
+        <param name="block">MASRequestBuilder block containing all parameters to build the request.</param>
         <summary>
         Initialize MASRequest using MASRequestBuilder block and defining the request method as a HTTP PATCH call. This type of HTTP Method type
         places its parameters within the NSURL itself as an HTTP query extension.
@@ -354,7 +354,7 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="block">MASRequestBuilder block containing all paramters to build the request.</param>
+        <param name="block">MASRequestBuilder block containing all parameters to build the request.</param>
         <summary>
         Initialize MASRequest using MASRequestBuilder block and defining the request method as a HTTP POST call. This type of HTTP Method type
         places its parameters within the NSURL itself as an HTTP query extension.
@@ -408,7 +408,7 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="block">MASRequestBuilder block containing all paramters to build the request.</param>
+        <param name="block">MASRequestBuilder block containing all parameters to build the request.</param>
         <summary>
         Initialize MASRequest using MASRequestBuilder block and defining the request method as a HTTP PUT call. This type of HTTP Method type
         places its parameters within the NSURL itself as an HTTP query extension.

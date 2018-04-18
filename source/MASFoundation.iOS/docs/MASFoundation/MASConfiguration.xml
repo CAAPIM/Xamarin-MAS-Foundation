@@ -911,7 +911,7 @@
       <Docs>
         <summary>
         Gets a value indicating whether this <see cref="T:MASFoundation.MASConfiguration" /> is loaded.
-        <para>true if it has succesfully loaded and is ready for use.</para><para>false if not yet loaded or perhaps an error has occurred during attempting to load.</para></summary>
+        <para>true if it has successfully loaded and is ready for use.</para><para>false if not yet loaded or perhaps an error has occurred during attempting to load.</para></summary>
         <value>
           <c>true</c> if is loaded; otherwise, <c>false</c>.</value>
         <remarks>
@@ -1235,9 +1235,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-        Gets the array of trusted public key hasehs for certificate pinning.
+        Gets the array of trusted public key hashes for certificate pinning.
         </summary>
-        <value>The trusted cert pinned publick key hashes.</value>
+        <value>The trusted cert pinned public key hashes.</value>
         <remarks>
         </remarks>
       </Docs>
@@ -1325,7 +1325,7 @@
         <summary>
         Internal function to validate the configuration.
         </summary>
-        <returns>The JSONC onfiguration.</returns>
+        <returns>The JSON configuration.</returns>
         <remarks>
         </remarks>
       </Docs>

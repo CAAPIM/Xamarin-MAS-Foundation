@@ -27,7 +27,7 @@
         <ReturnType>Foundation.NSString</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>The NSString constant for the device notification indicating that the MASDevice has successfully deregistered.</summary>
+        <summary>The NSString constant for the device notification indicating that the MASDevice has been successfully deregistered.</summary>
         <value>MASDeviceDidDeregisterNotification.</value>
         <remarks>
         </remarks>
@@ -46,7 +46,7 @@
         <ReturnType>Foundation.NSString</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>The NSString constant for the device notification indicating that the MASDevice has failed to successfully deregister.</summary>
+        <summary>The NSString constant for the device notification indicating that the MASDevice has failed deregister.</summary>
         <value>MASDeviceDidFailToDeregisterNotification.</value>
         <remarks>
         </remarks>

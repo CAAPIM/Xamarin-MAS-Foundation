@@ -417,7 +417,7 @@
             This will lock current user session and block most of operations except for MASUser.CurrentUser.LogoutWithCompletion();
             and MASDevice.CurrentDevice().DeregisterWithCompletion().
             Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
-            which will remove credentials from protected stroage of the device with local authentication.
+            which will remove credentials from protected storage of the device with local authentication.
             </para><para>
             After locking user session, MASUser.CurrentUser will still exists; 
             however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
@@ -457,7 +457,7 @@
             This will lock current user session and block most of operations except for MASUser.CurrentUser.LogoutWithCompletion();
             and MASDevice.CurrentDevice().DeregisterWithCompletion().
             Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
-            which will remove credentials from protected stroage of the device with local authentication.
+            which will remove credentials from protected storage of the device with local authentication.
             </para><para>
             After locking user session, MASUser.CurrentUser will still exists; 
             however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
@@ -495,7 +495,7 @@
         <summary>
             Authenticate a user via asynchronous request with MASAuthCredentials object.
             <para>
-            This will accept any objects that inherites from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
+            This will accept any objects that inherits from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
             on backend services.
             </para><para>
             This will create an MASUser.CurrentUser upon a successful result.
@@ -519,7 +519,7 @@
         <summary>
             Authenticate a user via asynchronous request with MASAuthCredentials object.
             <para>
-            This will accept any objects that inherites from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
+            This will accept any objects that inherits from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
             on backend services.
             </para><para>
             This will create an MASUser.CurrentUser upon a successful result.
@@ -876,7 +876,7 @@
       <Parameters />
       <Docs>
         <summary>
-        Unlcok currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
         <para>
         This will unlock current user session and unblock all of the operations through SDK.
         </para><para>
@@ -911,7 +911,7 @@
       <Docs>
         <param name="completion">MASCompletionErrorBlock block that receives the results.</param>
         <summary>
-        Unlcok currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
         <para>
         This will unlock current user session and unblock all of the operations through SDK.
         </para><para>
