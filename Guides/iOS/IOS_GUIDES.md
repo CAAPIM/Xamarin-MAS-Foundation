@@ -928,9 +928,9 @@ SSL pinning is a feature that avoids "man in the middle" attacks where someone c
 - The SDK validates that certificates in the certificate chain exist, and that they have the correct hashing algorithm or RSA bit
 - SSL pinning failures result in the following error in the Mobile SDK: **Error Message: Invalid pinning information for security configuration.  At least one pinning information should be provided or public PKI should be trusted., Error Code: 100212**. 
 
-## Configure Gateway for Network Monitoring
+## Configure MAG for Network Monitoring
 
-MAS always monitors the network reachability status of the MAG URL. If your app needs monitoring, here's how to hook your app into monitoring.
+The Mobile SDK always monitors the network reachability status of the MAG URL. Here's how to configure app monitoring.
 
 ```c#
 public class AppDelegate : UIApplicationDelegate
