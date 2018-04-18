@@ -32,7 +32,7 @@ For new features and bug fixes, see [Release Notes](https://github.com/CAAPIM/Re
 | Get Started...                 | Benefits                                 |
 | ---------------------------------------- | ---------------------------------------- |
 | [Using sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods and trying out the Mobile SDK.</li></ul> |
-| [Create app from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Add the SDK libraries using NuGet in Visual Studio, or the dynamic-link libraries (dlls).</li></ul> |                                  
+| [Create app from scratch](#create-app-from-scratch-or-add-an-existing-app-to-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Add the SDK libraries using NuGet in Visual Studio, or the dynamic-link libraries (dlls).</li></ul> |                                  
 
 ## Quick Start with Sample App
 
@@ -59,7 +59,7 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **log in**, **log out**, and **access a protected API**.
 
-## Create App from Scratch or Add an Existing App into the Mobile SDK
+## Create App from Scratch or Add an Existing App to the Mobile SDK
 
 If you want to create an app from scratch for full control of setup, or you have existing Xamarin app, these steps are for you.
 
