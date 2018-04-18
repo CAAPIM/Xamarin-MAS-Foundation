@@ -32,7 +32,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Standard JSON encoding.</summary>
+        <summary>application/json contnent type.</summary>
       </Docs>
     </Member>
     <Member MemberName="ScimJson">
@@ -43,7 +43,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>SCIM-specific JSON variant encoding.</summary>
+        <summary>application/scim+json content type.</summary>
       </Docs>
     </Member>
     <Member MemberName="TextPlain">
@@ -54,7 +54,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Plain Text.</summary>
+        <summary>Text/Plain content type.</summary>
       </Docs>
     </Member>
     <Member MemberName="Unknown">
@@ -65,7 +65,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Unknown encoding type.</summary>
+        <summary>Unknown content type.</summary>
       </Docs>
     </Member>
     <Member MemberName="WwwFormUrlEncoded">
@@ -76,7 +76,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Standard WWW Form URL encoding.</summary>
+        <summary>Standard WWW Form URL content type.</summary>
       </Docs>
     </Member>
     <Member MemberName="Xml">
@@ -87,7 +87,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Standard XML encoding.</summary>
+        <summary>Standard XML content type.</summary>
       </Docs>
     </Member>
   </Members>

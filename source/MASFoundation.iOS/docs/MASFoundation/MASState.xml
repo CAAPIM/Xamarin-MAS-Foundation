@@ -3,7 +3,6 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASState extends System.Enum" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -18,19 +17,17 @@
       <MemberSignature Language="C#" Value="DidLoad" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState DidLoad = int32(1)" />
       <MemberType>Field</MemberType>
-      
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>State that SDK did load; at this state, all services have been loaded. This state will only be invoked once for the app’s lifecycle.</summary>
+        <summary>State that SDK did load; at this state, all services have been loaded.  This state will only be invoked once for the app's lifecycle.</summary>
       </Docs>
     </Member>
     <Member MemberName="DidStart">
       <MemberSignature Language="C#" Value="DidStart" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState DidStart = int32(3)" />
       <MemberType>Field</MemberType>
-
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
@@ -42,19 +39,17 @@
       <MemberSignature Language="C#" Value="DidStop" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState DidStop = int32(5)" />
       <MemberType>Field</MemberType>
-
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>State that SDK will stop; at this state, SDK is preparing to stop the lifecycle and shutting down all elements and services for the SDK.</summary>
+        <summary>State that SDK did stop; at this state, SDK is properly stopped and should be able to re-start.</summary>
       </Docs>
     </Member>
     <Member MemberName="IsBeingStopped">
       <MemberSignature Language="C#" Value="IsBeingStopped" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState IsBeingStopped = int32(6)" />
       <MemberType>Field</MemberType>
-
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
@@ -66,7 +61,6 @@
       <MemberSignature Language="C#" Value="NotConfigured" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState NotConfigured = int32(-1)" />
       <MemberType>Field</MemberType>
-
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
@@ -78,31 +72,28 @@
       <MemberSignature Language="C#" Value="NotInitialized" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState NotInitialized = int32(0)" />
       <MemberType>Field</MemberType>
-
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>State that SDK has the active configuration either in the local file system, or keychain storage, but has not been inistialized yet.</summary>
+        <summary>State that SDK has the active configuration either in the local file system, or keychain storage, but has not been initialized yet.</summary>
       </Docs>
     </Member>
     <Member MemberName="WillStart">
       <MemberSignature Language="C#" Value="WillStart" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState WillStart = int32(2)" />
       <MemberType>Field</MemberType>
-
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>State that SDK will start; at this state, SDK is initializing and prepareing all elements required to operate.</summary>
+        <summary>State that SDK will start; at this state, SDK is initializing and preparing all elements required to operate.</summary>
       </Docs>
     </Member>
     <Member MemberName="WillStop">
       <MemberSignature Language="C#" Value="WillStop" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASState WillStop = int32(4)" />
       <MemberType>Field</MemberType>
-
       <ReturnValue>
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
