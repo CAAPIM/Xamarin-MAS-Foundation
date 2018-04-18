@@ -397,7 +397,7 @@ try {
 }
 ```
 
-### Authenticate User and Password, Rules-Based
+### Authenticate User and Password, Rule-Based
 
 **What**: Trigger username and password authentication based on rules. <br>
 **Scenario**: You designed a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that the login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens expire for the API, the MAG returns an error, triggering the SDK to display the login screen for reauthentication.</br>
@@ -962,27 +962,19 @@ public class AppDelegate : UIApplicationDelegate
 }    
 
 ```
-#### Verify network connection to MAG
+### Verify network connection to MAG
 
 ```c#
 MAS.GatewayIsReachable;
 ```
 
-#### Verify network connection as a string at any time
+**OR**
 
 ```c#
 MAS.GatewayMonitoringStatusAsString;
 ```
 
-### Network Monitoring to Other Host
-
-Use this method if your app needs to monitor network reachability for any other (non-MAG) host. 
-
-```c#
-
-```
-
-### Configure Monitoring Status Notifications
+### Monitor Status Notifications
 
 You can register `NSNotification' to monitor status updates.  The notification is defined in MASConstants as shown below:
 
@@ -1048,7 +1040,9 @@ MASDeviceDidFailToDeregisterNotification
 MASDeviceDidDeregisterNotification
 ```
 
-## Notifications 
+## Notifications and Error Handling
+
+### Notifications
 
 During SDK startup, if the SDK detects the server switch from an old configuration to a new configuration, `MASWillSwitchGatewayServerNotification` and `MASDidSwitchGatewayServerNotification` are sent. You can optionally observe these notifications to handle any necessary operation that you may wish to do within your app.  
 
@@ -1086,7 +1080,7 @@ MASUserDidFailToUpdateInformationNotification
 MASUserDidUpdateInformationNotification
 ```
 
-## Error Handling
+### Error Handling
 
 All errors that occur during SDK startup are returned in the completion block of the method.
 
