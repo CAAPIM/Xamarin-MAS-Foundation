@@ -928,9 +928,13 @@ SSL pinning is a feature that avoids "man in the middle" attacks where someone c
 - The SDK validates that certificates in the certificate chain exist, and that they have the correct hashing algorithm or RSA bit
 - SSL pinning failures result in the following error in the Mobile SDK: **Error Message: Invalid pinning information for security configuration.  At least one pinning information should be provided or public PKI should be trusted., Error Code: 100212**. 
 
-## Configure MAG for Network Monitoring
+## Configure Network Monitoring
 
-The Mobile SDK always monitors the network reachability status of the MAG URL. Here's how to configure app monitoring.
+The Mobile SDK always monitors the network reachability status of a MAG URL or other host. 
+
+### Network Monitoring to a MAG
+
+Use this method if your app needs to monitor network reachability to a MAG.
 
 ```c#
 public class AppDelegate : UIApplicationDelegate
@@ -958,27 +962,32 @@ public class AppDelegate : UIApplicationDelegate
 }    
 
 ```
-
-#### Configure status notifications
-
-You can register the MAG to monitor status update notifications.  The notification is defined in MASConstants as shown below:
-
-```c#
-MASGatewayMonitorStatusUpdateNotification
-```
-
-#### Conveniences
-
-To determine if the network connection to the MAG is currently reachable:
+#### Verify network connection to MAG
 
 ```c#
 MAS.GatewayIsReachable;
 ```
 
-To determine the current status as a string at any time:
+#### Verify network connection as a string at any time
 
 ```c#
 MAS.GatewayMonitoringStatusAsString;
+```
+
+### Network Monitoring to Other Host
+
+Use this method if your app needs to monitor network reachability for any other (non-MAG) host. 
+
+```c#
+
+```
+
+### Configure Monitoring Status Notifications
+
+You can register `NSNotification' to monitor status updates.  The notification is defined in MASConstants as shown below:
+
+```c#
+MASGatewayMonitorStatusUpdateNotification
 ```
 
 ## Manage Devices and Apps
