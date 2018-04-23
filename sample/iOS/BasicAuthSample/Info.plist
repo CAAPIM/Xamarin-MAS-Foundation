@@ -40,11 +40,13 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>CFBundleName</key>
-	<string>BasicAuthSample</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Assets.xcassets/LaunchImage.launchimage</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Program requires Bluetooth</string>
+	<key>CFBundleName</key>
+	<string>BasicAuthSample</string>
 </dict>
 </plist>
