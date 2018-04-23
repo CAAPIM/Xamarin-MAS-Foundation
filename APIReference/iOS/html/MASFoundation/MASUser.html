@@ -1,0 +1,1827 @@
+<html>
+  <head>
+    <title>MASFoundation.MASUser</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MASFoundation.iOS</a> : <a href="index.html">MASFoundation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MASFoundation.MASUser">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MASFoundation.MASUser:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MASFoundation.MASUser:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MASFoundation.MASUser:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MASFoundation.MASUser">MASUser  Class</h1>
+    <p class="Summary" id="T:MASFoundation.MASUser:Summary">
+    The `MASUser` class is a local representation of user data.
+    </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MASFoundation.MASUser:Signature">[Foundation.Register("MASUser", true)]<br />public class  <b>MASUser</b> : <a href="../MASFoundation/MASObject.html">MASObject</a></div>
+    </div>
+    <div class="Remarks" id="T:MASFoundation.MASUser:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MASFoundation.MASUser:Docs:Remarks">
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MASFoundation.MASUser:Docs:Version Information">
+        <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../MASFoundation/MASObject.html">MASObject</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MASFoundation.MASUser()">MASUser</a>
+                    </b>()</div>
+                </td>
+                <td>Default constructor, initializes a new instance of this class.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MASFoundation.MASUser(Foundation.NSCoder)">MASUser</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a>)</div>
+                </td>
+                <td>A constructor that initializes the object from the data stored in the unarchiver object.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Constructors</h2>
+        <div class="SectionBox" id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MASFoundation.MASUser(Foundation.NSObjectFlag)">MASUser</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a>)</div>
+                </td>
+                <td>Constructor to call on derived classes to skip initialization and merely allocate the object.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MASFoundation.MASUser(System.IntPtr)">MASUser</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>)</div>
+                </td>
+                <td>A constructor used when creating managed representations of unmanaged objects; Called by the runtime.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#P:MASFoundation.MASObject._attributes">_attributes</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSMutableDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a>
+                  </i>. 
+        List of attributes of the object.
+         (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.AccessToken">AccessToken</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+        Gets the access token of the user, if authenticated.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.Active">Active</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. User active status.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.Addresses">Addresses</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a>
+                  </i>. 
+        Gets the addresses.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>static </div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.AuthCredentialsType">AuthCredentialsType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+        Previously, or currently used authCredentialsType for the session.
+        <p>If the SDK is not properly initialized, null will be returned regardless of the authentication status of the SDK.</p><p>If the SDK was never authenticated before, SDK will also return null as a result.</p></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.ClassHandle">ClassHandle</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>
+                  </i>. The handle for this class.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#P:MASFoundation.MASObject.ClassHandle">ClassHandle</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>
+                  </i>. The handle for this class. (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#P:MASFoundation.MASObject.ClassName">ClassName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+        The class name of the object.
+         (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>static </div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.CurrentUser">CurrentUser</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MASFoundation/MASUser.html">MASUser</a>
+                  </i>. 
+        GeThe authenticated user for the application, if any. null returned if none. This is a singleton object.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.EmailAddresses">EmailAddresses</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a>
+                  </i>. 
+        Gets the email addresses.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.FamilyName">FamilyName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+        Gets the string value of family name.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.FormattedName">FormattedName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+        Gets the string value of formatted name.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.GivenName">GivenName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+        Gets the string value of given name.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.Groups">Groups</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[]</i>. 
+        Gets the groups.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.IsAuthenticated">IsAuthenticated</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+        Gets a value indicating whether this <a href="../MASFoundation/MASUser.html">MASFoundation.MASUser</a> is authenticated.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.IsCurrentUser">IsCurrentUser</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+        Gets a value indicating whether this <a href="../MASFoundation/MASUser.html">MASFoundation.MASUser</a> is current user.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.IsSessionLocked">IsSessionLocked</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+        Gets a value indicating whether this <a href="../MASFoundation/MASUser.html">MASFoundation.MASUser</a>'s session is locked.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#P:MASFoundation.MASObject.ObjectId">ObjectId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+        The id of the object.
+         (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.PhoneNumbers">PhoneNumbers</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a>
+                  </i>. 
+        Gets the phone numbers.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.Photos">Photos</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;</a>
+                  </i>. 
+        Gets the photos.
+        </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MASFoundation.MASUser.UserName">UserName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+        Gets the string value of the username.
+        </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.Copy(Foundation.NSZone)">Copy</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSZone</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a></nobr><blockquote>Performs a copy of the underlying Objective-C object. (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.EncodeTo(Foundation.NSCoder)">EncodeTo</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a>)<blockquote>Encodes the state of the object on the provided encoder (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.ListAttributes()">ListAttributes</a>
+                  </b>()<blockquote>
+            List all attributes from the Object.
+         (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LockSessionAsync()">LockSessionAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote>
+            Lock currently authenticated user session with device's local authentication (Device's Passcode or Biometric Authentication).
+            <p>
+            This will lock current user session and block most of operations except for MASUser.CurrentUser.LogoutWithCompletion();
+            and MASDevice.CurrentDevice().DeregisterWithCompletion().
+            Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
+            which will remove credentials from protected storage of the device with local authentication.
+            </p><p>
+            After locking user session, MASUser.CurrentUser will still exists;
+            however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
+            Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
+            </p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock)">LockSessionWithCompletion</a>
+                  </b>(<a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
+            Lock currently authenticated user session with device's local authentication (Device's Passcode or Biometric Authentication).
+            <p>
+            This will lock current user session and block most of operations except for MASUser.CurrentUser.LogoutWithCompletion();
+            and MASDevice.CurrentDevice().DeregisterWithCompletion().
+            Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
+            which will remove credentials from protected storage of the device with local authentication.
+            </p><p>
+            After locking user session, MASUser.CurrentUser will still exists;
+            however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
+            Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
+            </p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LoginWithAuthCredentials(MASFoundation.MASAuthCredentials,MASFoundation.MASCompletionErrorBlock)">LoginWithAuthCredentials</a>
+                  </b>(<a href="../MASFoundation/MASAuthCredentials.html">MASAuthCredentials</a>, <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
+            Authenticate a user via asynchronous request with MASAuthCredentials object.
+            <p>
+            This will accept any objects that inherits from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
+            on backend services.
+            </p><p>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LoginWithAuthCredentialsAsync(MASFoundation.MASAuthCredentials)">LoginWithAuthCredentialsAsync</a>
+                  </b>(<a href="../MASFoundation/MASAuthCredentials.html">MASAuthCredentials</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote>
+            Authenticate a user via asynchronous request with MASAuthCredentials object.
+            <p>
+            This will accept any objects that inherits from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
+            on backend services.
+            </p><p>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LoginWithAuthorizationCode(System.String,MASFoundation.MASCompletionErrorBlock)">LoginWithAuthorizationCode</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LoginWithAuthorizationCodeAsync(System.String)">LoginWithAuthorizationCodeAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LoginWithIdToken(System.String,System.String,MASFoundation.MASCompletionErrorBlock)">LoginWithIdToken</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LoginWithIdTokenAsync(System.String,System.String)">LoginWithIdTokenAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LoginWithUserName(System.String,System.String,MASFoundation.MASCompletionErrorBlock)">LoginWithUserName</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LoginWithUserNameAsync(System.String,System.String)">LoginWithUserNameAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LogoutAsync()">LogoutAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote>This will return <tt>true</tt> upon a successful result.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.LogoutWithCompletion(MASFoundation.MASCompletionErrorBlock)">LogoutWithCompletion</a>
+                  </b>(<a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>This will return <tt>true</tt> upon a successful result.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.ObjectForKey(Foundation.NSObject)">ObjectForKey</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a></nobr><blockquote>
+            Returns the value associated with a given key.
+         (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.ObjectForKeyedSubscript(Foundation.NSObject)">ObjectForKeyedSubscript</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a></nobr><blockquote>
+            Returns the value associated with a given key.
+         (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.RemoveSessionLock()">RemoveSessionLock</a>
+                  </b>()<blockquote>
+            This interface can be used when end-user chooses to not provide local authentication and clean up the session.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.RequestUserInfoAsync()">RequestUserInfoAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MASUser&gt;</a></nobr><blockquote>This method will retrieve additional information on the MASUser object.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.RequestUserInfoWithCompletion(MASFoundation.MASUserResponseErrorBlock)">RequestUserInfoWithCompletion</a>
+                  </b>(<a href="../MASFoundation/MASUserResponseErrorBlock.html">MASUserResponseErrorBlock</a>)<blockquote>
+        Requesting userInfo for the MASUser object.
+        This method will retrieve additional information on the MASUser object.
+        </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.SetObjectForKey(Foundation.NSObject,Foundation.NSCopying)">SetObjectForKey</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCopying</a>)<blockquote>
+        Sets the object associated with a given key.
+         (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MASFoundation/MASObject.html#M:MASFoundation.MASObject.SetObjectForKeyedSubscript(Foundation.NSObject,Foundation.NSCopying)">SetObjectForKeyedSubscript</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCopying</a>)<blockquote>This method enables usage of literal syntax on `MASObject`. E.g. `object["key"] = "value";` (<i>Inherited from <a href="../MASFoundation/MASObject.html">MASObject</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.UnlockSessionAsync()">UnlockSessionAsync</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote>
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
+        <p>
+        This will unlock current user session and unblock all of the operations through SDK.
+        </p><p>
+        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
+        </p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock)">UnlockSessionWithCompletion</a>
+                  </b>(<a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
+        <p>
+        This will unlock current user session and unblock all of the operations through SDK.
+        </p><p>
+        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
+        </p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessage(System.String,MASFoundation.MASCompletionErrorBlock)">UnlockSessionWithUserOperationPromptMessage</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a>)<blockquote>
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication) and specified message on system local authentication dialog.
+        <p>
+        This will unlock current user session and unblock all of the operations through SDK.
+        </p><p>
+        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
+        </p></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String)">UnlockSessionWithUserOperationPromptMessageAsync</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a></nobr><blockquote>
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication) and specified message on system local authentication dialog.
+        <p>
+        This will unlock current user session and unblock all of the operations through SDK.
+        </p><p>
+        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
+        </p></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MASFoundation.MASUser:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MASFoundation.MASUser()">MASUser Constructor</h3>
+        <blockquote id="C:MASFoundation.MASUser():member">
+          <div class="msummary">Default constructor, initializes a new instance of this class.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("init")]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASUser</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASUser():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASUser():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MASFoundation.MASUser(Foundation.NSCoder)">MASUser Constructor</h3>
+        <blockquote id="C:MASFoundation.MASUser(Foundation.NSCoder):member">
+          <div class="msummary">A constructor that initializes the object from the data stored in the unarchiver object.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("initWithCoder:")]<br />[ObjCRuntime.DesignatedInitializer]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASUser</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> coder)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MASFoundation.MASUser(Foundation.NSCoder):Parameters">
+            <dl>
+              <dt>
+                <i>coder</i>
+              </dt>
+              <dd>The unarchiver object.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASUser(Foundation.NSCoder):Remarks">
+            This constructor is provided to allow the class to be initialized from an unarchiver (for example, during NIB deserialization). This is part of the Foundation.NSCoding protocol.
+
+            If you want to create a subclass of this object and continue to support deserialization from an archive, you should implement a constructor with an identical signature: taking a single parameter of type Foundation.NSCoder and decorate it with the [Export("initWithCoder:"] attribute declaration.
+
+            The state of this object can also be serialized by using the companion method, EncodeTo.
+        </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASUser(Foundation.NSCoder):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MASFoundation.MASUser(Foundation.NSObjectFlag)">MASUser Constructor</h3>
+        <blockquote id="C:MASFoundation.MASUser(Foundation.NSObjectFlag):member">
+          <div class="msummary">Constructor to call on derived classes to skip initialization and merely allocate the object.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASUser</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MASFoundation.MASUser(Foundation.NSObjectFlag):Parameters">
+            <dl>
+              <dt>
+                <i>t</i>
+              </dt>
+              <dd>Unused sentinel value, pass NSObjectFlag.Empty.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASUser(Foundation.NSObjectFlag):Remarks">
+            This constructor is typically used by the binding generator to allocate the object, but prevent the actual initialization to take place. Once the allocation has taken place, the constructor has to initialize the object. With constructors generated by the binding generator this means that it manually invokes one of the "init" methods to initialize the object.
+        </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASUser(Foundation.NSObjectFlag):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MASFoundation.MASUser(System.IntPtr)">MASUser Constructor</h3>
+        <blockquote id="C:MASFoundation.MASUser(System.IntPtr):member">
+          <div class="msummary">A constructor used when creating managed representations of unmanaged objects; Called by the runtime.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASUser</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MASFoundation.MASUser(System.IntPtr):Parameters">
+            <dl>
+              <dt>
+                <i>handle</i>
+              </dt>
+              <dd>Pointer (handle) to the Objective-C class.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASUser(System.IntPtr):Remarks">
+            This constructor is invoked by the runtime infrastructure (ObjCRuntime.GetNSObject (IntPtr)) to create a new managed representation for a pointer to an unmanaged Objective-C object. You should not invoke this method directly, instead you should call the GetNSObject method as it will prevent two instances of a managed object to point to the same native object.
+        </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MASFoundation.MASUser(System.IntPtr):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.AccessToken">AccessToken Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.AccessToken:member">
+          <div class="msummary">
+        Gets the access token of the user, if authenticated.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("accessToken")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>AccessToken</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.AccessToken:Value">The access token.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.AccessToken:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.AccessToken:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.Active">Active Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.Active:member">
+          <div class="msummary">User active status.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("active")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Active</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.Active:Value">
+            <tt>true</tt> if is actived; otherwise, <tt>false</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.Active:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.Active:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.Addresses">Addresses Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.Addresses:member">
+          <div class="msummary">
+        Gets the addresses.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("addresses", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>Addresses</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.Addresses:Value">The addresses.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.Addresses:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.Addresses:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.AuthCredentialsType">AuthCredentialsType Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.AuthCredentialsType:member">
+          <div class="msummary">
+        Previously, or currently used authCredentialsType for the session.
+        <p>If the SDK is not properly initialized, null will be returned regardless of the authentication status of the SDK.</p><p>If the SDK was never authenticated before, SDK will also return null as a result.</p></div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("authCredentialsType")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>AuthCredentialsType</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.AuthCredentialsType:Value">NSString of previously, or currently used authCredentialsType as in String.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.AuthCredentialsType:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.AuthCredentialsType:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.ClassHandle">ClassHandle Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.ClassHandle:member">
+          <div class="msummary">The handle for this class.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> <b>ClassHandle</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.ClassHandle:Value">The pointer to the Objective-C class.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.ClassHandle:Remarks">
+            Each Xamarin class mirrors an unmanaged Objective-C class. This value contains the pointer to the Objective-C class.
+        </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.ClassHandle:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.CurrentUser">CurrentUser Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.CurrentUser:member">
+          <div class="msummary">
+        GeThe authenticated user for the application, if any. null returned if none. This is a singleton object.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("currentUser")]<br />public static <a href="../MASFoundation/MASUser.html">MASUser</a> <b>CurrentUser</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.CurrentUser:Value">A singleton 'MASUser' object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.CurrentUser:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.CurrentUser:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.EmailAddresses">EmailAddresses Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.EmailAddresses:member">
+          <div class="msummary">
+        Gets the email addresses.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("emailAddresses", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>EmailAddresses</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.EmailAddresses:Value">The email addresses.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.EmailAddresses:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.EmailAddresses:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.FamilyName">FamilyName Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.FamilyName:member">
+          <div class="msummary">
+        Gets the string value of family name.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("familyName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FamilyName</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.FamilyName:Value">The string value of family name.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.FamilyName:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.FamilyName:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.FormattedName">FormattedName Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.FormattedName:member">
+          <div class="msummary">
+        Gets the string value of formatted name.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("formattedName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FormattedName</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.FormattedName:Value">The string value of formatted name.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.FormattedName:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.FormattedName:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.GivenName">GivenName Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.GivenName:member">
+          <div class="msummary">
+        Gets the string value of given name.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("givenName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GivenName</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.GivenName:Value">The string value of given name.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.GivenName:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.GivenName:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.Groups">Groups Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.Groups:member">
+          <div class="msummary">
+        Gets the groups.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("groups", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[] <b>Groups</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.Groups:Value">The groups.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.Groups:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.Groups:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.IsAuthenticated">IsAuthenticated Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.IsAuthenticated:member">
+          <div class="msummary">
+        Gets a value indicating whether this <a href="../MASFoundation/MASUser.html">MASFoundation.MASUser</a> is authenticated.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("isAuthenticated")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsAuthenticated</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.IsAuthenticated:Value">
+            <tt>true</tt> if is authenticated; otherwise, <tt>false</tt>.
+        </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.IsAuthenticated:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.IsAuthenticated:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.IsCurrentUser">IsCurrentUser Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.IsCurrentUser:member">
+          <div class="msummary">
+        Gets a value indicating whether this <a href="../MASFoundation/MASUser.html">MASFoundation.MASUser</a> is current user.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("isCurrentUser")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsCurrentUser</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.IsCurrentUser:Value">
+            <tt>true</tt> if is current user; otherwise, <tt>false</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.IsCurrentUser:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.IsCurrentUser:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.IsSessionLocked">IsSessionLocked Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.IsSessionLocked:member">
+          <div class="msummary">
+        Gets a value indicating whether this <a href="../MASFoundation/MASUser.html">MASFoundation.MASUser</a>'s session is locked.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("isSessionLocked")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsSessionLocked</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.IsSessionLocked:Value">
+            <tt>true</tt> if is session locked; otherwise, <tt>false</tt>.
+        </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.IsSessionLocked:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.IsSessionLocked:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LockSessionAsync()">LockSessionAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LockSessionAsync():member">
+          <div class="msummary">
+            Lock currently authenticated user session with device's local authentication (Device's Passcode or Biometric Authentication).
+            <p>
+            This will lock current user session and block most of operations except for MASUser.CurrentUser.LogoutWithCompletion();
+            and MASDevice.CurrentDevice().DeregisterWithCompletion().
+            Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
+            which will remove credentials from protected storage of the device with local authentication.
+            </p><p>
+            After locking user session, MASUser.CurrentUser will still exists;
+            however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
+            Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
+            </p></div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LockSessionAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LockSessionAsync():Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LockSessionAsync():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LockSessionAsync():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock)">LockSessionWithCompletion Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):member">
+          <div class="msummary">
+            Lock currently authenticated user session with device's local authentication (Device's Passcode or Biometric Authentication).
+            <p>
+            This will lock current user session and block most of operations except for MASUser.CurrentUser.LogoutWithCompletion();
+            and MASDevice.CurrentDevice().DeregisterWithCompletion().
+            Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
+            which will remove credentials from protected storage of the device with local authentication.
+            </p><p>
+            After locking user session, MASUser.CurrentUser will still exists;
+            however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
+            Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
+            </p></div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("lockSessionWithCompletion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LockSessionWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):Parameters">
+            <dl>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>The MASCompletionErrorBlock block that receives the results.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LoginWithAuthCredentials(MASFoundation.MASAuthCredentials,MASFoundation.MASCompletionErrorBlock)">LoginWithAuthCredentials Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LoginWithAuthCredentials(MASFoundation.MASAuthCredentials,MASFoundation.MASCompletionErrorBlock):member">
+          <div class="msummary">
+            Authenticate a user via asynchronous request with MASAuthCredentials object.
+            <p>
+            This will accept any objects that inherits from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
+            on backend services.
+            </p><p>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </p></div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("loginWithAuthCredentials:completion:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithAuthCredentials</b> (<a href="../MASFoundation/MASAuthCredentials.html">MASAuthCredentials</a> authCredentials, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithAuthCredentials(MASFoundation.MASAuthCredentials,MASFoundation.MASCompletionErrorBlock):Parameters">
+            <dl>
+              <dt>
+                <i>authCredentials</i>
+              </dt>
+              <dd>MASAuthCredentials object that contains credentials.</dd>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithAuthCredentials(MASFoundation.MASAuthCredentials,MASFoundation.MASCompletionErrorBlock):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithAuthCredentials(MASFoundation.MASAuthCredentials,MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LoginWithAuthCredentialsAsync(MASFoundation.MASAuthCredentials)">LoginWithAuthCredentialsAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LoginWithAuthCredentialsAsync(MASFoundation.MASAuthCredentials):member">
+          <div class="msummary">
+            Authenticate a user via asynchronous request with MASAuthCredentials object.
+            <p>
+            This will accept any objects that inherits from MASAuthCredentials and all MASAuthCredentials objects that adheres device registration/user authentication logics
+            on backend services.
+            </p><p>
+            This will create an MASUser.CurrentUser upon a successful result.
+            </p></div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithAuthCredentialsAsync</b> (<a href="../MASFoundation/MASAuthCredentials.html">MASAuthCredentials</a> authCredentials)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithAuthCredentialsAsync(MASFoundation.MASAuthCredentials):Parameters">
+            <dl>
+              <dt>
+                <i>authCredentials</i>
+              </dt>
+              <dd>MASAuthCredentials object that contains credentials.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithAuthCredentialsAsync(MASFoundation.MASAuthCredentials):Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithAuthCredentialsAsync(MASFoundation.MASAuthCredentials):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithAuthCredentialsAsync(MASFoundation.MASAuthCredentials):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LoginWithAuthorizationCode(System.String,MASFoundation.MASCompletionErrorBlock)">LoginWithAuthorizationCode Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LoginWithAuthorizationCode(System.String,MASFoundation.MASCompletionErrorBlock):member">
+          <div class="msummary">
+            This will create an MASUser.CurrentUser upon a successful result.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("loginWithAuthorizationCode:completion:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithAuthorizationCode</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> authorizationCode, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithAuthorizationCode(System.String,MASFoundation.MASCompletionErrorBlock):Parameters">
+            <dl>
+              <dt>
+                <i>authorizationCode</i>
+              </dt>
+              <dd>The authorization code for the user.</dd>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithAuthorizationCode(System.String,MASFoundation.MASCompletionErrorBlock):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithAuthorizationCode(System.String,MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LoginWithAuthorizationCodeAsync(System.String)">LoginWithAuthorizationCodeAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LoginWithAuthorizationCodeAsync(System.String):member">
+          <div class="msummary">
+            This will create an MASUser.CurrentUser upon a successful result.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithAuthorizationCodeAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> authorizationCode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithAuthorizationCodeAsync(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>authorizationCode</i>
+              </dt>
+              <dd>The authorization code for the user.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithAuthorizationCodeAsync(System.String):Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithAuthorizationCodeAsync(System.String):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithAuthorizationCodeAsync(System.String):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LoginWithIdToken(System.String,System.String,MASFoundation.MASCompletionErrorBlock)">LoginWithIdToken Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LoginWithIdToken(System.String,System.String,MASFoundation.MASCompletionErrorBlock):member">
+          <div class="msummary">
+            This will create an MASUser.CurrentUser upon a successful result.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("loginWithIdToken:tokenType:completion:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithIdToken</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> idToken, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> tokenType, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithIdToken(System.String,System.String,MASFoundation.MASCompletionErrorBlock):Parameters">
+            <dl>
+              <dt>
+                <i>idToken</i>
+              </dt>
+              <dd>The id_token for the user.</dd>
+              <dt>
+                <i>tokenType</i>
+              </dt>
+              <dd>Token type of id_token.</dd>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithIdToken(System.String,System.String,MASFoundation.MASCompletionErrorBlock):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithIdToken(System.String,System.String,MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LoginWithIdTokenAsync(System.String,System.String)">LoginWithIdTokenAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LoginWithIdTokenAsync(System.String,System.String):member">
+          <div class="msummary">
+            This will create an MASUser.CurrentUser upon a successful result.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithIdTokenAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> idToken, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> tokenType)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithIdTokenAsync(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>idToken</i>
+              </dt>
+              <dd>The id_token for the user.</dd>
+              <dt>
+                <i>tokenType</i>
+              </dt>
+              <dd>Token type of id_token.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithIdTokenAsync(System.String,System.String):Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithIdTokenAsync(System.String,System.String):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithIdTokenAsync(System.String,System.String):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LoginWithUserName(System.String,System.String,MASFoundation.MASCompletionErrorBlock)">LoginWithUserName Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LoginWithUserName(System.String,System.String,MASFoundation.MASCompletionErrorBlock):member">
+          <div class="msummary">
+            This will create an MASUser.CurrentUser upon a successful result.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("loginWithUserName:password:completion:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithUserName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithUserName(System.String,System.String,MASFoundation.MASCompletionErrorBlock):Parameters">
+            <dl>
+              <dt>
+                <i>userName</i>
+              </dt>
+              <dd>The userName of the user.</dd>
+              <dt>
+                <i>password</i>
+              </dt>
+              <dd>The password of the user.</dd>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithUserName(System.String,System.String,MASFoundation.MASCompletionErrorBlock):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithUserName(System.String,System.String,MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LoginWithUserNameAsync(System.String,System.String)">LoginWithUserNameAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LoginWithUserNameAsync(System.String,System.String):member">
+          <div class="msummary">
+            This will create an MASUser.CurrentUser upon a successful result.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithUserNameAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithUserNameAsync(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>userName</i>
+              </dt>
+              <dd>The userName of the user.</dd>
+              <dt>
+                <i>password</i>
+              </dt>
+              <dd>The password of the user.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithUserNameAsync(System.String,System.String):Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithUserNameAsync(System.String,System.String):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LoginWithUserNameAsync(System.String,System.String):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LogoutAsync()">LogoutAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LogoutAsync():member">
+          <div class="msummary">This will return <tt>true</tt> upon a successful result.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LogoutAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LogoutAsync():Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LogoutAsync():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LogoutAsync():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.LogoutWithCompletion(MASFoundation.MASCompletionErrorBlock)">LogoutWithCompletion Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.LogoutWithCompletion(MASFoundation.MASCompletionErrorBlock):member">
+          <div class="msummary">This will return <tt>true</tt> upon a successful result.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("logoutWithCompletion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LogoutWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LogoutWithCompletion(MASFoundation.MASCompletionErrorBlock):Parameters">
+            <dl>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user
+        available via[MASUser currentUser] has been updated with the new information.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LogoutWithCompletion(MASFoundation.MASCompletionErrorBlock):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.LogoutWithCompletion(MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.PhoneNumbers">PhoneNumbers Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.PhoneNumbers:member">
+          <div class="msummary">
+        Gets the phone numbers.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("phoneNumbers", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>PhoneNumbers</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.PhoneNumbers:Value">The phone numbers.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.PhoneNumbers:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.PhoneNumbers:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.Photos">Photos Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.Photos:member">
+          <div class="msummary">
+        Gets the photos.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("photos", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;</a> <b>Photos</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.Photos:Value">The photos.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.Photos:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.Photos:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.RemoveSessionLock()">RemoveSessionLock Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.RemoveSessionLock():member">
+          <div class="msummary">
+            This interface can be used when end-user chooses to not provide local authentication and clean up the session.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("removeSessionLock")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveSessionLock</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.RemoveSessionLock():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.RemoveSessionLock():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.RequestUserInfoAsync()">RequestUserInfoAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.RequestUserInfoAsync():member">
+          <div class="msummary">This method will retrieve additional information on the MASUser object.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MASUser&gt;</a> <b>RequestUserInfoAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.RequestUserInfoAsync():Returns">Returns MASUSer object with updated value which is also available through the current MASUser object that is making this request.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.RequestUserInfoAsync():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.RequestUserInfoAsync():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.RequestUserInfoWithCompletion(MASFoundation.MASUserResponseErrorBlock)">RequestUserInfoWithCompletion Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.RequestUserInfoWithCompletion(MASFoundation.MASUserResponseErrorBlock):member">
+          <div class="msummary">
+        Requesting userInfo for the MASUser object.
+        This method will retrieve additional information on the MASUser object.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("requestUserInfoWithCompletion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RequestUserInfoWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASUserResponseErrorBlock))] <a href="../MASFoundation/MASUserResponseErrorBlock.html">MASUserResponseErrorBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.RequestUserInfoWithCompletion(MASFoundation.MASUserResponseErrorBlock):Parameters">
+            <dl>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>The MASUserResponseErrorBlock block that returns MASUSer object with updated value which is also available through the current MASUser object that is making this request, and NSError object in case any error is encountered during the process.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.RequestUserInfoWithCompletion(MASFoundation.MASUserResponseErrorBlock):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.RequestUserInfoWithCompletion(MASFoundation.MASUserResponseErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.UnlockSessionAsync()">UnlockSessionAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.UnlockSessionAsync():member">
+          <div class="msummary">
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
+        <p>
+        This will unlock current user session and unblock all of the operations through SDK.
+        </p><p>
+        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
+        </p></div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>UnlockSessionAsync</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionAsync():Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionAsync():Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionAsync():Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock)">UnlockSessionWithCompletion Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):member">
+          <div class="msummary">
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication).
+        <p>
+        This will unlock current user session and unblock all of the operations through SDK.
+        </p><p>
+        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
+        </p></div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("unlockSessionWithCompletion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UnlockSessionWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):Parameters">
+            <dl>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>MASCompletionErrorBlock block that receives the results.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessage(System.String,MASFoundation.MASCompletionErrorBlock)">UnlockSessionWithUserOperationPromptMessage Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessage(System.String,MASFoundation.MASCompletionErrorBlock):member">
+          <div class="msummary">
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication) and specified message on system local authentication dialog.
+        <p>
+        This will unlock current user session and unblock all of the operations through SDK.
+        </p><p>
+        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
+        </p></div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Foundation.Export("unlockSessionWithUserOperationPromptMessage:completion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UnlockSessionWithUserOperationPromptMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userOperationPrompt, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessage(System.String,MASFoundation.MASCompletionErrorBlock):Parameters">
+            <dl>
+              <dt>
+                <i>userOperationPrompt</i>
+              </dt>
+              <dd>NSString message that will be displayed on system local authentication dialog.</dd>
+              <dt>
+                <i>completion</i>
+              </dt>
+              <dd>MASCompletionErrorBlock block that receives the results.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessage(System.String,MASFoundation.MASCompletionErrorBlock):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessage(System.String,MASFoundation.MASCompletionErrorBlock):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String)">UnlockSessionWithUserOperationPromptMessageAsync Method</h3>
+        <blockquote id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):member">
+          <div class="msummary">
+        Unlock currently locked user session with device's local authentication (Device's Passcode or Biometric Authentication) and specified message on system local authentication dialog.
+        <p>
+        This will unlock current user session and unblock all of the operations through SDK.
+        </p><p>
+        After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
+        </p></div>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>UnlockSessionWithUserOperationPromptMessageAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userOperationPrompt)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>userOperationPrompt</i>
+              </dt>
+              <dd>NSString message that will be displayed on system local authentication dialog.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MASFoundation.MASUser.UserName">UserName Property</h3>
+        <blockquote id="P:MASFoundation.MASUser.UserName:member">
+          <div class="msummary">
+        Gets the string value of the username.
+        </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Foundation.Export("userName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>UserName</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.UserName:Value">The string value of the username.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.UserName:Remarks">
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MASFoundation.MASUser.UserName:Version Information">
+            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
