@@ -18,15 +18,24 @@
 
     <remove-node path="/api/package[@name='com.ca.mas.core']" />
         
-     <!--
+    <!--    
     <remove-node path="/api/package[@name='com.ca.mas.core.auth']" />
+    -->
+    <remove-node path="/api/package[@name='com.ca.mas.core.auth']/class[@name='MASApplication']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.auth']/interface[@name='AuthRenderer']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.auth']/interface[@name='AuthResultReceiver']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.auth']/interface[@name='NFCRenderer']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.auth']/interface[@name='NfcResultReceiver']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.auth']/interface[@name='PollingRenderer']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.auth']/interface[@name='QRCode']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.auth']/interface[@name='QRCodeRenderer']" />
+
+
     <remove-node path="/api/package[@name='com.ca.mas.core.auth.ble']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.auth.otp']" />
-     -->
+    <remove-node path="/api/package[@name='com.ca.mas.core.auth.otp.model']" />
 
-    <!--
     <remove-node path="/api/package[@name='com.ca.mas.core.cert']" />
-    -->
     <remove-node path="/api/package[@name='com.ca.mas.core.client']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.clientcredentials']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.conf']" />
@@ -82,5 +91,79 @@
     <attr  path="/api/package[@name='com.ca.mas.identity.group']/interface[@name='MASGroupRepository']/method[@name='getGroupsByFilter' and count(parameter)=2 and parameter[1][@type='com.ca.mas.identity.common.MASFilteredRequest'] and parameter[2][@type='com.ca.mas.foundation.MASCallback&lt;java.util.List&lt;com.ca.mas.foundation.MASGroup&gt;&gt;']]/parameter[@name='p1']" name="name">callback</attr>
 
     <!-- <remove-node path="/api/package[@name='com.ca.mas.identity.user']/class[@name='User.X509Cert']" /> -->
+
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASDevice']/method[@name='startAsBluetoothPeripheral' and count(parameter)=1 and parameter[1][@type='com.ca.mas.foundation.auth.MASProximityLoginBLEPeripheralListener']]" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASDevice']/method[@name='stopAsBluetoothPeripheral' and count(parameter)=0]" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/class[@name='MASApplication']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/interface[@name='MASProximityLogin']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/class[@name='MASProximityLoginBLE']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/class[@name='MASProximityLoginBLECentralListener']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/class[@name='MASProximityLoginBLEPeripheralListener']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/class[@name='MASProximityLoginBLEUserConsentHandler']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/class[@name='MASProximityLoginNFC']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/class[@name='MASProximityLoginQRCode']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/class[@name='MASWebApplication']" />
+
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='sign' and count(parameter)=1 and parameter[1][@type='com.ca.mas.foundation.MASClaims']]" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='sign' and count(parameter)=2 and parameter[1][@type='com.ca.mas.foundation.MASClaims'] and parameter[2][@type='java.security.PrivateKey']]" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='enableBrowserBasedAuthentication' and count(parameter)=0]" />
+    <remove-node  path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='enablePKCE' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+    <remove-node  path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='isBrowserBasedAuthenticationEnabled' and count(parameter)=0]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='isPKCEEnabled' and count(parameter)=0]" />
+
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/interface[@name='MASClaims']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASClaimsBuilder']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASClaimsConstants']" />
+
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASFoundationStrings']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASTokenRequest']" />
+
+
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASMessenger']/method[@name='sendMessage' and count(parameter)=3 and parameter[1][@type='com.ca.mas.messaging.MASMessage'] and parameter[2][@type='com.ca.mas.foundation.MASGroup'] and parameter[3][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASMessenger']/method[@name='sendMessage' and count(parameter)=4 and parameter[1][@type='com.ca.mas.messaging.MASMessage'] and parameter[2][@type='com.ca.mas.foundation.MASGroup'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASMessenger']/method[@name='sendMessage' and count(parameter)=3 and parameter[1][@type='com.ca.mas.messaging.MASMessage'] and parameter[2][@type='com.ca.mas.foundation.MASUser'] and parameter[3][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASMessenger']/method[@name='sendMessage' and count(parameter)=4 and parameter[1][@type='com.ca.mas.messaging.MASMessage'] and parameter[2][@type='com.ca.mas.foundation.MASUser'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASMessenger']/method[@name='sendMessage' and count(parameter)=3 and parameter[1][@type='com.ca.mas.messaging.topic.MASTopic'] and parameter[2][@type='com.ca.mas.messaging.MASMessage'] and parameter[3][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASMessenger']/method[@name='startListeningToMyMessages' and count(parameter)=1 and parameter[1][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASMessenger']/method[@name='stopListeningToMyMessages' and count(parameter)=1 and parameter[1][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASPayload']" />
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASMessenger']" />
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/class[@name='MASMessage']" />
+    <remove-node path="/api/package[@name='com.ca.mas.messaging']/class[@name='MASMessageException']" />
+    
+
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASUser']/method[@name='sendMessage' and count(parameter)=3 and parameter[1][@type='com.ca.mas.messaging.MASMessage'] and parameter[2][@type='com.ca.mas.foundation.MASGroup'] and parameter[3][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASUser']/method[@name='sendMessage' and count(parameter)=4 and parameter[1][@type='com.ca.mas.messaging.MASMessage'] and parameter[2][@type='com.ca.mas.foundation.MASGroup'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASUser']/method[@name='sendMessage' and count(parameter)=3 and parameter[1][@type='com.ca.mas.messaging.MASMessage'] and parameter[2][@type='com.ca.mas.foundation.MASUser'] and parameter[3][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASUser']/method[@name='sendMessage' and count(parameter)=4 and parameter[1][@type='com.ca.mas.messaging.MASMessage'] and parameter[2][@type='com.ca.mas.foundation.MASUser'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASUser']/method[@name='sendMessage' and count(parameter)=3 and parameter[1][@type='com.ca.mas.messaging.topic.MASTopic'] and parameter[2][@type='com.ca.mas.messaging.MASMessage'] and parameter[3][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASUser']/method[@name='startListeningToMyMessages' and count(parameter)=1 and parameter[1][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASUser']/method[@name='stopListeningToMyMessages' and count(parameter)=1 and parameter[1][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
+
+    
+    <remove-node path="/api/package[@name='com.ca.mas.identity.user']/interface[@name='ScimUser']/method[@name='getGroupList' and count(parameter)=0]"/>
+    
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASGroup']" />
+    <remove-node path="/api/package[@name='com.ca.mas.messaging.topic']" />
+    <remove-node path="/api/package[@name='com.ca.mas.identity.common']" />
+    <remove-node path="/api/package[@name='com.ca.mas.identity.group']" />
+    <!-- <remove-node path="/api/package[@name='com.ca.mas.identity.user']" /> -->
+    <remove-node path="/api/package[@name='com.ca.mas.identity.util']" />
+
+
+    <!--
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/interface[@name='MASTransformable']" />
+    -->
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='BuildConfig']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='AuthenticateRequestEventArgs']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='ConnectedEventArgs']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='FoundationConsts']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='Extension']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/interface[@name='Xamarin']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/interface[@name='Internal']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/interface[@name='MASExtension']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/interface[@name='MASGrantFlow']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/interface[@name='UserRepository']" />
+        
 </metadata>
 

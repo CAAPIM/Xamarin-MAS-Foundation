@@ -8,6 +8,20 @@ using ObjCRuntime;
 
 namespace MASFoundation
 {
+    /// 
+    /// This API includes all features available in the native iOS SDK. Howerver, in this first realease only a subset of the features are available:
+    /// 
+    /// Authentication and Authorization, limited to:
+    ///     Device Registration
+    ///     User login and client credentials
+    ///     Fingerprint session lock
+    ///     Single Sign-on
+    /// Securely access to APIs
+    /// Shared Storage
+    /// 
+    /// All non-supported features are commented out. If you decide to uncomment and use those fetures, do it at your own risk
+    /// 
+
     //[Native]
     public enum MASAuthenticationStatus //: nint
     {
@@ -174,27 +188,27 @@ namespace MASFoundation
         Count
     }
 
-    //[Native]
-    public enum MASBLEServiceState //: nint
-    {
-        Unknown = -1,
-        CentralStarted,
-        CentralStopped,
-        CentralDeviceDetected,
-        CentralDeviceConnected,
-        CentralDeviceDisconnected,
-        CentralServiceDiscovered,
-        CentralCharacteristicDiscovered,
-        CentralCharacteristicWritten,
-        CentralAuthorizationSucceeded,
-        CentralAuthorizationFailed,
-        PeripheralSubscribed,
-        PeripheralUnsubscribed,
-        PeripheralStarted,
-        PeripheralStopped,
-        PeripheralSessionAuthorized,
-        PeripheralSessionNotified
-    }
+    ////[Native]
+    //public enum MASBLEServiceState //: nint
+    //{
+    //    Unknown = -1,
+    //    CentralStarted,
+    //    CentralStopped,
+    //    CentralDeviceDetected,
+    //    CentralDeviceConnected,
+    //    CentralDeviceDisconnected,
+    //    CentralServiceDiscovered,
+    //    CentralCharacteristicDiscovered,
+    //    CentralCharacteristicWritten,
+    //    CentralAuthorizationSucceeded,
+    //    CentralAuthorizationFailed,
+    //    PeripheralSubscribed,
+    //    PeripheralUnsubscribed,
+    //    PeripheralStarted,
+    //    PeripheralStopped,
+    //    PeripheralSessionAuthorized,
+    //    PeripheralSessionNotified
+    //}
 
     //[Native]
     public enum MASServiceLifecycleStatus //: nint
@@ -209,22 +223,22 @@ namespace MASFoundation
         StateCount
     }
 
-    //[Native]
-    public enum MQTTConnectionReturnCode //: nuint
-    {
-        Accepted,
-        RefusedUnacceptableProtocolVersion,
-        RefusedIdentifierRejected,
-        RefusedServerUnavailable,
-        RefusedBadUserNameOrPassword,
-        RefusedNotAuthorized
-    }
+    ////[Native]
+    //public enum MQTTConnectionReturnCode //: nuint
+    //{
+    //    Accepted,
+    //    RefusedUnacceptableProtocolVersion,
+    //    RefusedIdentifierRejected,
+    //    RefusedServerUnavailable,
+    //    RefusedBadUserNameOrPassword,
+    //    RefusedNotAuthorized
+    //}
 
-    //[Native]
-    public enum MQTTQualityOfService //: nint
-    {
-        AtMostOnce,
-        AtLeastOnce,
-        ExactlyOnce
-    }
+    ////[Native]
+    //public enum MQTTQualityOfService //: nint
+    //{
+    //    AtMostOnce,
+    //    AtLeastOnce,
+    //    ExactlyOnce
+    //}
 }

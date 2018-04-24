@@ -1,0 +1,380 @@
+<html>
+  <head>
+    <title>Com.CA.Mas.Identity.IScimIdentifiable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MASFoundation.Android</a> : <a href="index.html">Com.CA.Mas.Identity Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Com.CA.Mas.Identity.IScimIdentifiable">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Identity.IScimIdentifiable:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Identity.IScimIdentifiable:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Identity.IScimIdentifiable:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Com.CA.Mas.Identity.IScimIdentifiable">IScimIdentifiable  Interface</h1>
+    <p class="Summary" id="T:Com.CA.Mas.Identity.IScimIdentifiable:Summary">
+      <b>ScimIdentifiable</b> is an interface that should be implemented by any class that requires uniqueness within the system.</p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Com.CA.Mas.Identity.IScimIdentifiable:Signature">[Android.Runtime.Register("com/ca/mas/identity/ScimIdentifiable", "", "Com.CA.Mas.Identity.IScimIdentifiableInvoker")]<br />public interface  <b>IScimIdentifiable</b> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.IJavaObject</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+    </div>
+    <div class="Remarks" id="T:Com.CA.Mas.Identity.IScimIdentifiable:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Identity.IScimIdentifiable:Docs:Remarks">
+        <p>
+          <b>ScimIdentifiable</b> is an interface that should be implemented by any class that requires uniqueness within the system. A ScimIdentifiable
+ object can be a user, a message, a device, or any other entity that needs to be managed and categorized. The <i>id</i> value must be unique
+ within the system regardless of where this unique value originates. This could be a unique key in a database, a GUID generated in the application
+ using the MAS SDK, or a timestamp that is granular enough to guarantee uniqueness. The <i>displayName</i> is unconstrained and can be anything, or null.
+ The <i>externalId</i> is added to satisfy the </p>
+        <p>
+          <a href="http://developer.android.com/reference/com/ca/mas/identity/ScimIdentifiable.html" target="_blank">[Android Documentation]</a>
+        </p>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Identity.IScimIdentifiable:Docs:Version Information">
+        <b>Namespace: </b>Com.CA.Mas.Identity<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Identity.IScimIdentifiable.Cardinality">Cardinality</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                  </i>.  Get the previous set value of the default value for the long data type (0).</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Identity.IScimIdentifiable.DisplayName">DisplayName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>.  The string value set by the application developer.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Identity.IScimIdentifiable.ExternalId">ExternalId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>.  The value returned is based on the </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Identity.IScimIdentifiable.Id">Id</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>.  Return the unique id that has been previously set through the call to setId.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Com.CA.Mas.Identity.IScimIdentifiable:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="P:Com.CA.Mas.Identity.IScimIdentifiable.Cardinality">Cardinality Property</h3>
+        <blockquote id="P:Com.CA.Mas.Identity.IScimIdentifiable.Cardinality:member">
+          <div class="msummary"> Get the previous set value of the default value for the long data type (0).</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getCardinality", "()J", "GetGetCardinalityHandler:Com.CA.Mas.Identity.IScimIdentifiableInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Cardinality</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.Cardinality:Value">long the value that is used for ordering this <i>ScimIdentifiable</i></blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.Cardinality:Remarks">
+            <b>Description:</b>
+            <p> Get the previous set value of the default value for the long data type (0).</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/identity/ScimIdentifiable.html#getCardinality()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.Cardinality:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Identity<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Identity.IScimIdentifiable.DisplayName">DisplayName Property</h3>
+        <blockquote id="P:Com.CA.Mas.Identity.IScimIdentifiable.DisplayName:member">
+          <div class="msummary"> The string value set by the application developer.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getDisplayName", "()Ljava/lang/String;", "GetGetDisplayNameHandler:Com.CA.Mas.Identity.IScimIdentifiableInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DisplayName</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.DisplayName:Value">String the free-form display name. Can be null.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.DisplayName:Remarks">
+            <b>Description:</b>
+            <p> The string value set by the application developer.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/identity/ScimIdentifiable.html#getDisplayName()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.DisplayName:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Identity<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Identity.IScimIdentifiable.ExternalId">ExternalId Property</h3>
+        <blockquote id="P:Com.CA.Mas.Identity.IScimIdentifiable.ExternalId:member">
+          <div class="msummary"> The value returned is based on the </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getExternalId", "()Ljava/lang/String;", "GetGetExternalIdHandler:Com.CA.Mas.Identity.IScimIdentifiableInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ExternalId</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.ExternalId:Value">String representing the externalId. Can be null.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.ExternalId:Remarks">
+            <b>Description:</b>
+            <p> The value returned is based on the </p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/identity/ScimIdentifiable.html#getExternalId()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.ExternalId:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Identity<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Identity.IScimIdentifiable.Id">Id Property</h3>
+        <blockquote id="P:Com.CA.Mas.Identity.IScimIdentifiable.Id:member">
+          <div class="msummary"> Return the unique id that has been previously set through the call to setId.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getId", "()Ljava/lang/String;", "GetGetIdHandler:Com.CA.Mas.Identity.IScimIdentifiableInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Id</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.Id:Value">String representing the unique id. Can be null.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.Id:Remarks">
+            <b>Description:</b>
+            <p> Return the unique id that has been previously set through the call to setId. If no value has been
+ set for the id then this value could be null.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/identity/ScimIdentifiable.html#getId()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.IScimIdentifiable.Id:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Identity<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

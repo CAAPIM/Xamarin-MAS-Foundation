@@ -56,11 +56,17 @@ namespace BasicAuthSample
             alert.SetTitle("Login");
             alert.SetCancelable(true);
 
-            alert.SetButton("Login", (c, ev) =>
+            alert.SetButton("Login", async (c, ev) =>
             {
                 if (username.Text.Length > 0 && password.Text.Length > 0)
                 {
-                    MASUser.Login(username.Text, password.Text.ToCharArray(), new LoginCallback((MainActivity)context));
+                    try
+                    {
+                        var user = await MASUser.LoginAsync(username.Text, password.Text.ToCharArray());
+                        ((MainActivity)context).Alert(user.DisplayName, user.AsJSONObject.ToString(4));
+                    } catch (Java.Lang.Throwable exception) {
+                        ((MainActivity)context).Alert("MAS", exception.LocalizedMessage);
+                    }
                 }
                 else
                 {

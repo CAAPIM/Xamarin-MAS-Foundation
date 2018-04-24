@@ -8,8 +8,9 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The enumerated MASState that can indicate what state of SDK currently is at.</summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="DidLoad">
@@ -20,7 +21,7 @@
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>State that SDK did load; at this state, all services have been loaded.  This state will only be invoked once for the app's lifecycle.</summary>
       </Docs>
     </Member>
     <Member MemberName="DidStart">
@@ -31,7 +32,7 @@
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>State that SDK did start; at this state, SDK should be fully functional.</summary>
       </Docs>
     </Member>
     <Member MemberName="DidStop">
@@ -42,7 +43,7 @@
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>State that SDK did stop; at this state, SDK is properly stopped and should be able to re-start.</summary>
       </Docs>
     </Member>
     <Member MemberName="IsBeingStopped">
@@ -53,7 +54,7 @@
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>State that SDK is being forced to stop.</summary>
       </Docs>
     </Member>
     <Member MemberName="NotConfigured">
@@ -64,7 +65,7 @@
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>State that SDK has not been initialized and does not have configuration file either in local file system based on the default configuration file name, nor in the keychain storage.</summary>
       </Docs>
     </Member>
     <Member MemberName="NotInitialized">
@@ -75,7 +76,7 @@
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>State that SDK has the active configuration either in the local file system, or keychain storage, but has not been initialized yet.</summary>
       </Docs>
     </Member>
     <Member MemberName="WillStart">
@@ -86,7 +87,7 @@
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>State that SDK will start; at this state, SDK is initializing and preparing all elements required to operate.</summary>
       </Docs>
     </Member>
     <Member MemberName="WillStop">
@@ -97,7 +98,7 @@
         <ReturnType>MASFoundation.MASState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>State that SDK will stop; at this state, SDK is preparing to stop the lifecycle and shutting down all elements and services for the SDK.</summary>
       </Docs>
     </Member>
   </Members>

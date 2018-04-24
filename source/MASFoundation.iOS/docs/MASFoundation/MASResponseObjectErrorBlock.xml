@@ -1,5 +1,5 @@
 <Type Name="MASResponseObjectErrorBlock" FullName="MASFoundation.MASResponseObjectErrorBlock">
-  <TypeSignature Language="C#" Value="public delegate void MASResponseObjectErrorBlock(NSHttpUrlResponse arg0, NSObject arg1, NSError arg2);" />
+  <TypeSignature Language="C#" Value="public delegate void MASResponseObjectErrorBlock(NSHttpUrlResponse response, NSObject responseObject, NSError error);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASResponseObjectErrorBlock extends System.MulticastDelegate" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
@@ -16,10 +16,14 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="arg0">To be added.</param>
-    <param name="arg1">To be added.</param>
-    <param name="arg2">To be added.</param>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <param name="response">NSHTTPURLResponse response object.</param>
+    <param name="responseObject">Object containing the result of the request.</param>
+    <param name="error">NSError object in case any error is encountered during the process</param>
+    <summary>A standard (NSHTTPURLResponse response, Object responseObject, NSError error) block.
+  The block will be executed when a request finishes the task unsuccessfully, or successfully.
+  All of three arguments in the block can be null depends on the result of the request, 
+  and response object should be casted to appropriate data type when it is received.</summary>
+    <remarks>
+    </remarks>
   </Docs>
 </Type>

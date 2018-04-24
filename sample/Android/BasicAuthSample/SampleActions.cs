@@ -131,7 +131,7 @@ namespace BasicAuthSample
         //
         // Start SDK with an enrolment URL
         //
-        public static void startSDKEnrolmentURL(MainActivity activity)
+        public static async void startSDKEnrolmentURL(MainActivity activity)
         {
 
             if (!checkSDKAlreadyInitialized(activity))
@@ -142,7 +142,7 @@ namespace BasicAuthSample
                                                                                    "65437eae-a3fb-4c9c-843c-16a876064e07"));
 
                 // MAS.Start(Context context, URL enrolmentUrl, MASCallback callback);
-                MAS.Start(activity, enrolmentUrl, new StartWithEnrollmentCallback(activity));
+                await MAS.StartAsync(activity, enrolmentUrl);
             }
         }
 
@@ -210,114 +210,5 @@ namespace BasicAuthSample
             return responseString;
         }
 
-        //
-        // Log in button action. See MyAuthenticationListener.cs for details on MASUser.Login();
-        //
-        public static void login(MainActivity activity)
-        {
-            // Check if user is already authenticated
-            if (MASUser.CurrentUser != null)
-            {
-                activity.Alert("MAS", "User already authenticated as " + MASUser.CurrentUser.UserName);
-            }
-            else
-            {
-                // Used only to trigger authentication with no callback
-                MASUser.Login(null);
-            }
-        }
-
-        //
-        // Invoke a sample protected endpoint in the Gateway and display the returned JSON in a dialog
-        //
-        public static async Task<IMASResponse> InvokeApi()
-        {
-
-            MAS.Debug();
-
-            //Use Uri.Builder() to build the Uri and pass it into a MASRequestBuilder.
-            Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
-
-            //Append path
-            uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
-
-            //Create MASRequestBuilder
-            MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
-
-            //Add Response type
-            builder.ResponseBody(MASResponseBody.JsonBody());
-
-            //Invoke the API with builder
-            return await MAS.Invoke(builder.Build());
-        }
-
-        //
-        // Logs out current user
-        //
-        public static void logout(MainActivity activity)
-        {
-            // Check if user is already authenticated
-            if (MASUser.CurrentUser != null)
-            {
-                MASUser.CurrentUser.Logout(null);
-
-                activity.Alert("MAS", "User logged out");
-            }
-            else
-            {
-                activity.Alert("MAS", "User is not authenticated");
-            }
-        }
-
-        //
-        // Lock current user session with device's local authentication
-        // This will block most of operations except for MASUser.CurrentUser.Logout()
-        // and MASDevice.CurrentDevice().Deregister()
-        //
-        public static void lockSession(MainActivity activity)
-        {
-            //Check that a user is logged in
-            if (MASUser.CurrentUser != null)
-            {
-                //Lock session
-                MASUser.CurrentUser.LockSession(new LockSessionCallback(activity));
-            }
-            else
-            {
-                activity.Alert("MAS", "User is not authenticated");
-            }
-        }
-
-        //
-        // Unlock current user session and unblock all of the operations through SDK
-        //
-        public static void unLockSession(MainActivity activity)
-        {
-            if (MASUser.CurrentUser != null)
-            {
-                if (MASUser.CurrentUser.IsSessionLocked)
-                {
-                    //Unlock session
-                    MASUser.CurrentUser.UnlockSession(new UnlockCallback(activity));
-                }
-                else
-                {
-                    activity.Alert("MAS", "Session not locked!");
-                }
-            }
-            else
-            {
-                activity.Alert("MAS", "User not authenticated");
-            }
-        }
-
-        //
-        //  Deregister the device is an advanced feature available available in MASDevice. 
-        //  It will remove the device's registered record in the Gateway and then clear all credentials
-        //
-        public static void deregister(MainActivity activity)
-        {
-            MASDevice.CurrentDevice.Deregister(new DeregisterCallback(activity));
-        }
     }
 }

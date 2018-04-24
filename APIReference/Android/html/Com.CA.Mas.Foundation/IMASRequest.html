@@ -1,0 +1,560 @@
+<html>
+  <head>
+    <title>Com.CA.Mas.Foundation.IMASRequest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MASFoundation.Android</a> : <a href="index.html">Com.CA.Mas.Foundation Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.IMASRequest">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.IMASRequest:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.IMASRequest:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Foundation.IMASRequest:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Com.CA.Mas.Foundation.IMASRequest">IMASRequest  Interface</h1>
+    <p class="Summary" id="T:Com.CA.Mas.Foundation.IMASRequest:Summary">
+      <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html" target="_blank">[Android Documentation]</a>
+    </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Com.CA.Mas.Foundation.IMASRequest:Signature">[Android.Runtime.Register("com/ca/mas/foundation/MASRequest", "", "Com.CA.Mas.Foundation.IMASRequestInvoker")]<br />public interface  <b>IMASRequest</b> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.IJavaObject</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+    </div>
+    <div class="Remarks" id="T:Com.CA.Mas.Foundation.IMASRequest:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Foundation.IMASRequest:Docs:Remarks">
+        <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html" target="_blank">[Android Documentation]</a>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Foundation.IMASRequest:Docs:Version Information">
+        <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.IMASRequest.Body">Body</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Com.CA.Mas.Foundation/MASRequestBody.html">MASRequestBody</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getBody()" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.IMASRequest.ConnectionListener">ConnectionListener</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Com.CA.Mas.Foundation/IMASConnectionListener.html">IMASConnectionListener</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getConnectionListener()" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.IMASRequest.GrantProvider">GrantProvider</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Com.CA.Mas.Foundation/MASGrantProvider.html">MASGrantProvider</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getGrantProvider()" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.IMASRequest.Headers">Headers</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IDictionary`2">IDictionary&lt;string, IList&lt;string&gt;&gt;</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getHeaders()" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.IMASRequest.IsPublic">IsPublic</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#isPublic()" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.IMASRequest.Method">Method</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getMethod()" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.IMASRequest.ResponseBody">ResponseBody</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Com.CA.Mas.Foundation/MASResponseBody.html">MASResponseBody</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getResponseBody()" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.IMASRequest.Scope">Scope</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getScope()" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Foundation.IMASRequest.URL">URL</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Net.URL</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getURL()" target="_blank">[Android Documentation]</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Foundation.IMASRequest.NotifyOnCancel()">NotifyOnCancel</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Notify the <a href="javascript:alert(&quot;Documentation not found.&quot;)">Com.CA.Mas.Foundation.MASCallback.onError-java.lang.Throwable-</a></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Com.CA.Mas.Foundation.IMASRequest:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="P:Com.CA.Mas.Foundation.IMASRequest.Body">Body Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.IMASRequest.Body:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getBody()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getBody", "()Lcom/ca/mas/foundation/MASRequestBody;", "GetGetBodyHandler:Com.CA.Mas.Foundation.IMASRequestInvoker, MASFoundation.Android")]<br />public <a href="../Com.CA.Mas.Foundation/MASRequestBody.html">MASRequestBody</a> <b>Body</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Body:Value">The body to be sent with this request</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Body:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getBody()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Body:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.IMASRequest.ConnectionListener">ConnectionListener Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.IMASRequest.ConnectionListener:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getConnectionListener()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getConnectionListener", "()Lcom/ca/mas/foundation/MASConnectionListener;", "GetGetConnectionListenerHandler:Com.CA.Mas.Foundation.IMASRequestInvoker, MASFoundation.Android")]<br />public <a href="../Com.CA.Mas.Foundation/IMASConnectionListener.html">IMASConnectionListener</a> <b>ConnectionListener</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.ConnectionListener:Value">The <tt>HttpURLConnection</tt> listener.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.ConnectionListener:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getConnectionListener()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.ConnectionListener:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.IMASRequest.GrantProvider">GrantProvider Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.IMASRequest.GrantProvider:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getGrantProvider()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getGrantProvider", "()Lcom/ca/mas/foundation/MASGrantProvider;", "GetGetGrantProviderHandler:Com.CA.Mas.Foundation.IMASRequestInvoker, MASFoundation.Android")]<br />public <a href="../Com.CA.Mas.Foundation/MASGrantProvider.html">MASGrantProvider</a> <b>GrantProvider</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.GrantProvider:Value">The grant provider for this request. Please refer to <a href="../Com.CA.Mas.Foundation/MASGrantProvider.html">Com.CA.Mas.Foundation.MASGrantProvider</a> for
+ supporting grant provider.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.GrantProvider:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getGrantProvider()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.GrantProvider:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.IMASRequest.Headers">Headers Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.IMASRequest.Headers:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getHeaders()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getHeaders", "()Ljava/util/Map;", "GetGetHeadersHandler:Com.CA.Mas.Foundation.IMASRequestInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IDictionary`2">IDictionary&lt;string, IList&lt;string&gt;&gt;</a> <b>Headers</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Headers:Value">A list of HTTP headers for this request</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Headers:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getHeaders()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Headers:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.IMASRequest.IsPublic">IsPublic Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.IMASRequest.IsPublic:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#isPublic()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("isPublic", "()Z", "GetIsPublicHandler:Com.CA.Mas.Foundation.IMASRequestInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsPublic</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.IsPublic:Value">whether the request is being made outside of primary gateway.
+ When the value is set to true, all automatically injected credentials in SDK will be excluded in the request.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.IsPublic:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#isPublic()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.IsPublic:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.IMASRequest.Method">Method Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.IMASRequest.Method:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getMethod()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getMethod", "()Ljava/lang/String;", "GetGetMethodHandler:Com.CA.Mas.Foundation.IMASRequestInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Method</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Method:Value">Request method of this request. Please refer to
+ <a href="../Com.CA.Mas.Foundation/MASRequestMethod.html">Com.CA.Mas.Foundation.MASRequestMethod</a> for supporting method</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Method:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getMethod()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Method:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Foundation.IMASRequest.NotifyOnCancel()">NotifyOnCancel Method</h3>
+        <blockquote id="M:Com.CA.Mas.Foundation.IMASRequest.NotifyOnCancel():member">
+          <div class="msummary">Notify the <a href="javascript:alert(&quot;Documentation not found.&quot;)">Com.CA.Mas.Foundation.MASCallback.onError-java.lang.Throwable-</a></div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("notifyOnCancel", "()Z", "GetNotifyOnCancelHandler:Com.CA.Mas.Foundation.IMASRequestInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>NotifyOnCancel</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Foundation.IMASRequest.NotifyOnCancel():Returns">True to invoke <a href="javascript:alert(&quot;Documentation not found.&quot;)">Com.CA.Mas.Foundation.MASCallback.onError-java.lang.Throwable-</a> with <a href="../Com.CA.Mas.Foundation/MAS+RequestCancelledException.html">Com.CA.Mas.Foundation.MAS.RequestCancelledException</a> when the request is cancelled by
+ <a href="../Com.CA.Mas.Foundation/MAS.html#!:Com.CA.Mas.Foundation.MAS.cancelRequest-long-">MAS.cancelRequest-long-</a>. Default is false.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.IMASRequest.NotifyOnCancel():Remarks">
+            <p>Notify the <a href="javascript:alert(&quot;Documentation not found.&quot;)">Com.CA.Mas.Foundation.MASCallback.onError-java.lang.Throwable-</a></p>
+            <p> when the request is cancelled by <a href="../Com.CA.Mas.Foundation/MAS.html#!:Com.CA.Mas.Foundation.MAS.cancelRequest-long-">MAS.cancelRequest-long-</a></p>
+            <p>.</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#notifyOnCancel()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Foundation.IMASRequest.NotifyOnCancel():Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.IMASRequest.ResponseBody">ResponseBody Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.IMASRequest.ResponseBody:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getResponseBody()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getResponseBody", "()Lcom/ca/mas/foundation/MASResponseBody;", "GetGetResponseBodyHandler:Com.CA.Mas.Foundation.IMASRequestInvoker, MASFoundation.Android")]<br />public <a href="../Com.CA.Mas.Foundation/MASResponseBody.html">MASResponseBody</a> <b>ResponseBody</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.ResponseBody:Value">The response body for this request. The default response body is set to
+ <a href="../Com.CA.Mas.Foundation/MASResponseBody.html#!:Com.CA.Mas.Foundation.MASResponseBody.byteArrayBody--">MASResponseBody.byteArrayBody--</a>, you can change the response body to
+ <a href="../Com.CA.Mas.Foundation/MASResponseBody.html#!:Com.CA.Mas.Foundation.MASResponseBody.jsonBody--">MASResponseBody.jsonBody--</a>, and <a href="../Com.CA.Mas.Foundation/MASResponseBody.html#!:Com.CA.Mas.Foundation.MASResponseBody.stringBody--">MASResponseBody.stringBody--</a> or you can
+ implement your own type of response body type.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.ResponseBody:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getResponseBody()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.ResponseBody:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.IMASRequest.Scope">Scope Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.IMASRequest.Scope:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getScope()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getScope", "()Ljava/lang/String;", "GetGetScopeHandler:Com.CA.Mas.Foundation.IMASRequestInvoker, MASFoundation.Android")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Scope</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Scope:Value">The scope for this request. When return null, default scope set (defined in the
+ configuration) will be used.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Scope:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getScope()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.Scope:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Foundation.IMASRequest.URL">URL Property</h3>
+        <blockquote id="P:Com.CA.Mas.Foundation.IMASRequest.URL:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getURL()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[get: Android.Runtime.Register("getURL", "()Ljava/net/URL;", "GetGetURLHandler:Com.CA.Mas.Foundation.IMASRequestInvoker, MASFoundation.Android")]<br />public <a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Net.URL</a> <b>URL</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.URL:Value">URL of this request</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.URL:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/foundation/MASRequest.html#getURL()" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Foundation.IMASRequest.URL:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Foundation<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

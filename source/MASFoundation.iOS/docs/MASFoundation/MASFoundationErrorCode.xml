@@ -8,8 +8,9 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The enumerated error codes for Foundation level NSErrors.</summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="AccessTokenDisabled">
@@ -20,7 +21,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Access Token is disabled on the Gateway.</summary>
       </Docs>
     </Member>
     <Member MemberName="AccessTokenInvalid">
@@ -31,7 +32,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Access Token is invalid.</summary>
       </Docs>
     </Member>
     <Member MemberName="AccessTokenNotGrantedScope">
@@ -42,7 +43,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Access Token does not contains expected Scope</summary>
       </Docs>
     </Member>
     <Member MemberName="ApplicationAlreadyRegistered">
@@ -53,7 +54,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Application is already registered</summary>
       </Docs>
     </Member>
     <Member MemberName="ApplicationInvalid">
@@ -64,7 +65,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Application is Invalid.</summary>
       </Docs>
     </Member>
     <Member MemberName="ApplicationInvalidMagIdentifer">
@@ -75,7 +76,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Application has ab Invalid MagIdentifer.</summary>
       </Docs>
     </Member>
     <Member MemberName="ApplicationNotRegistered">
@@ -86,7 +87,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Application is not registered.</summary>
       </Docs>
     </Member>
     <Member MemberName="ApplicationRedirectUriInvalid">
@@ -97,7 +98,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Application RedirectUri is Invalid.</summary>
       </Docs>
     </Member>
     <Member MemberName="BBANotEnabled">
@@ -108,7 +109,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Browser Based Login is not Enabled.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEAuthorizationFailed">
@@ -119,7 +120,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE authorization failed.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEAuthorizationPollingFailed">
@@ -130,7 +131,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE authorization polling failed.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLECentral">
@@ -141,7 +142,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Central.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLECentralDeviceNotFound">
@@ -152,7 +153,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Central device not found.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEDelegateNotDefined">
@@ -163,7 +164,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Delegate not defined.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEInvalidAuthenticationProvider">
@@ -174,7 +175,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE invalid authentication provider.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEPeripheral">
@@ -185,7 +186,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Peripheral.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEPeripheralCharacteristics">
@@ -196,7 +197,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Peripheral characteristics.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEPeripheralServices">
@@ -207,7 +208,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Peripheral services.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEPoweredOff">
@@ -218,7 +219,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE powered Off.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLERestting">
@@ -229,7 +230,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE restting.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLERSSINotInRange">
@@ -240,7 +241,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE RSS is not in range.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEUnauthorized">
@@ -251,7 +252,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE unauthorized.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEUnknownState">
@@ -262,7 +263,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE Unknown state.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEUnSupported">
@@ -273,7 +274,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE UnSupported.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLEUserDeclined">
@@ -284,7 +285,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>BLE User declined.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationInvalidEndpoint">
@@ -295,7 +296,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Endpoint configuration invalid.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationInvalidHostForSecurityConfiguration">
@@ -306,7 +307,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid Host for Security Configuration.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationInvalidPinningInfoForSecurityConfiguration">
@@ -317,7 +318,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid pinning information for Security Configuration.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationLoadingFailedFileNotFound">
@@ -328,7 +329,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Could not load the configuration. File not found.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationLoadingFailedJsonSerialization">
@@ -339,7 +340,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Could not load the configuration. JSON serialization failed.</summary>
       </Docs>
     </Member>
     <Member MemberName="ConfigurationLoadingFailedJsonValidation">
@@ -350,7 +351,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Could not load the configuration. JSON validation failed.</summary>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -361,7 +362,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Convenience to tell how many errors type exist.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceAlreadyRegistered">
@@ -372,7 +373,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Device is already registered.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceAlreadyRegisteredWithDifferentFlow">
@@ -383,7 +384,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Device is already registered with different flow.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceCouldNotBeDeregistered">
@@ -394,7 +395,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Device could not be deregistered.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceDoesNotSupportLocalAuthentication">
@@ -405,7 +406,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Device does not support local authentication.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceInvalidAuthCredentialsForDeviceRegistration">
@@ -416,7 +417,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid Auth Credentials for Device registration.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceNotLoggedIn">
@@ -427,7 +428,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Device not logged in.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceNotRegistered">
@@ -438,7 +439,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Device not registered.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceRecordIsNotValid">
@@ -449,7 +450,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Device record is not valid.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceRegistrationAttemptedWithUnregisteredScope">
@@ -460,7 +461,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Device registration attempted with unregistered Scope.</summary>
       </Docs>
     </Member>
     <Member MemberName="DeviceRegistrationWithoutRequiredParameters">
@@ -471,7 +472,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Device registration without required parameters.</summary>
       </Docs>
     </Member>
     <Member MemberName="EnterpriseBrowserAppDoesNotExist">
@@ -482,7 +483,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Enterprise Browser App does not exist.</summary>
       </Docs>
     </Member>
     <Member MemberName="EnterpriseBrowserNativeAppCannotOpen">
@@ -493,7 +494,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Enterprise Browser native App cannot Open.</summary>
       </Docs>
     </Member>
     <Member MemberName="EnterpriseBrowserNativeAppDoesNotExist">
@@ -504,7 +505,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Enterprise Browser native App does not exist.</summary>
       </Docs>
     </Member>
     <Member MemberName="EnterpriseBrowserWebAppInvalidURL">
@@ -515,7 +516,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Enterprise Browser WebApp invalid URL.</summary>
       </Docs>
     </Member>
     <Member MemberName="FlowIsNotActive">
@@ -526,7 +527,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Flow is not Active.</summary>
       </Docs>
     </Member>
     <Member MemberName="FlowIsNotImplemented">
@@ -537,7 +538,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Flow is not implemented.</summary>
       </Docs>
     </Member>
     <Member MemberName="FlowTypeUnsupported">
@@ -548,7 +549,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Flow Type unsupported.</summary>
       </Docs>
     </Member>
     <Member MemberName="GeolocationIsInvalid">
@@ -559,7 +560,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Geolocation is invalid.</summary>
       </Docs>
     </Member>
     <Member MemberName="GeolocationIsMissing">
@@ -570,7 +571,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Geolocation is missing.</summary>
       </Docs>
     </Member>
     <Member MemberName="GeolocationIsNotConfigured">
@@ -581,7 +582,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Geolocation is not configured.</summary>
       </Docs>
     </Member>
     <Member MemberName="GeolocationServicesAreUnauthorized">
@@ -592,7 +593,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Geolocation services are unauthorized.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidAuthorization">
@@ -603,7 +604,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid authorization.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidEnrollmentURL">
@@ -614,7 +615,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid enrollment URL.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidNSDictionary">
@@ -625,7 +626,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid NSDictionary.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidNSURL">
@@ -636,7 +637,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid NSURL.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidOTPChannelSelectionBlock">
@@ -647,7 +648,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid OTPChannelSelectionBlock.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidOTPCredentialsBlock">
@@ -658,7 +659,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid OTPCredentialsBlock.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidOTPProvided">
@@ -669,7 +670,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid OTP provided.</summary>
       </Docs>
     </Member>
     <Member MemberName="InvalidUserLoginBlock">
@@ -680,7 +681,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid UserLoginBlock.</summary>
       </Docs>
     </Member>
     <Member MemberName="JWTInvalidClaims">
@@ -691,7 +692,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>JWT Invalid Claims.</summary>
       </Docs>
     </Member>
     <Member MemberName="JWTSerializationError">
@@ -702,7 +703,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>JWT serialization error.</summary>
       </Docs>
     </Member>
     <Member MemberName="JWTUnexpectedClassType">
@@ -713,7 +714,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>JWT unexpected class type.</summary>
       </Docs>
     </Member>
     <Member MemberName="LoginProcessCancel">
@@ -724,7 +725,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Login process canceled.</summary>
       </Docs>
     </Member>
     <Member MemberName="MASIsNotStarted">
@@ -735,7 +736,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>MAS is not Started.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkIsOffline">
@@ -746,7 +747,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Network is Offline.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkNotReachable">
@@ -757,7 +758,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Network not reachable.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkNotStarted">
@@ -768,7 +769,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Network not Started.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkRequestTimedOut">
@@ -779,7 +780,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Network request Timed Out.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkSSLAuthenticationChallengeFailure">
@@ -790,7 +791,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Network SSL authentication challenge failure.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkSSLConnectionCannotBeMade">
@@ -801,7 +802,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Network SSL connection cannot be made.</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkUnacceptableContentType">
@@ -812,7 +813,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Network unacceptable content type.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPAuthenticationCancelled">
@@ -823,7 +824,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>OTP authentication canceled.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPChannelSelectionCancelled">
@@ -834,7 +835,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>OTP channel selection canceled.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPExpired">
@@ -845,7 +846,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>OTP expired.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPNotProvided">
@@ -856,7 +857,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>OTP not provided.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPRetryBarred">
@@ -867,7 +868,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>OTP retry Barred.</summary>
       </Docs>
     </Member>
     <Member MemberName="OTPRetryLimitExceeded">
@@ -878,7 +879,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>OTP retry limit exceeded.</summary>
       </Docs>
     </Member>
     <Member MemberName="ProximityLoginAuthorizationInProgress">
@@ -889,7 +890,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Proximity Login authorization in progress.</summary>
       </Docs>
     </Member>
     <Member MemberName="ProximityLoginInvalidAuthenticationURL">
@@ -900,7 +901,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Proximity Login invalid authentication URL.</summary>
       </Docs>
     </Member>
     <Member MemberName="ProximityLoginInvalidAuthorizeURL">
@@ -911,7 +912,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Proximity Login invalid authorize URL.</summary>
       </Docs>
     </Member>
     <Member MemberName="QRCodeProximityLoginAuthorizationPollingFailed">
@@ -922,7 +923,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>QRCode Proximity Login authorization polling failed.</summary>
       </Docs>
     </Member>
     <Member MemberName="ResponseSerializationFailedToParseResponse">
@@ -933,7 +934,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Response serialization failed to parse Response.</summary>
       </Docs>
     </Member>
     <Member MemberName="SharedStorageNotNilKey">
@@ -944,7 +945,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Shared Storage not nil Key.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenIdTokenExpired">
@@ -955,7 +956,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>IdToken expired.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenIdTokenInvalidAud">
@@ -966,7 +967,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>IdToken contains invalid Aud.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenIdTokenInvalidAzp">
@@ -977,7 +978,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>IdToken contains invalid Azp.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenIdTokenInvalidSignature">
@@ -988,7 +989,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>IdToken contains invalid Signature.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenIdTokenNotExistForLockingUserSession">
@@ -999,7 +1000,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>IdToken does not exist for the locked user session.</summary>
       </Docs>
     </Member>
     <Member MemberName="TokenInvalidIdToken">
@@ -1010,7 +1011,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Invalid IdToken.</summary>
       </Docs>
     </Member>
     <Member MemberName="Unknown">
@@ -1021,7 +1022,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Unknown error.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserAlreadyAuthenticated">
@@ -1032,7 +1033,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>User is already authenticated.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserBasicCredentialsNotValid">
@@ -1043,7 +1044,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>User Basic credentials are not valid.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserDoesNotExist">
@@ -1054,7 +1055,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>User does not exist.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserNotAuthenticated">
@@ -1065,7 +1066,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>User is not authenticated.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserSessionIsAlreadyLocked">
@@ -1076,7 +1077,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>User session is already Locked.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserSessionIsAlreadyUnlocked">
@@ -1087,7 +1088,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>User session is already Unlocked.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserSessionIsCurrentlyLocked">
@@ -1098,7 +1099,7 @@
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>User session is currently Locked.</summary>
       </Docs>
     </Member>
   </Members>

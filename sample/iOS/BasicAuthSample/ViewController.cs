@@ -28,48 +28,29 @@ namespace BasicAuthSample
         }
 
 
-        partial void StartSDKButton_TouchUpInside(UIButton sender)
+        async partial void StartSDKButton_TouchUpInside(UIButton sender)
         {
             // Comment/Uncomment desired start method (One uncommented at a time)
-            //SampleActions.StartSDK();
-            SampleActions.StartSDKChangeDefaultConfig();
-            //SampleActions.StartSDKCustomJson();
-            //SampleActions.StartSDKFileUrl();
-            //SampleActions.StartSDKEnrolmentURL();
+            await SampleActions.StartSDKAsync();
+            //await SampleActions.StartSDKChangeDefaultConfigAsync();
+            //await SampleActions.StartSDKCustomJsonAsync();
+            //await SampleActions.StartSDKFileUrlAsync();
+            //await SampleActions.StartSDKEnrolmentURLAsync();
         }
 
 
         async partial void InvokeAPIButton_TouchUpInside(UIButton sender)
         {
-            var invokeResult = await InvokeProtectedApiAsync();
+            var invokeResult = await SampleActions.InvokeProtectedAPIAsync();
 
-            SampleActions.Alert("Response", invokeResult.Arg1.ToString());
+            if (invokeResult != null)
+                SampleActions.Alert("Response", invokeResult.ResponseObject.ToString());
         }
 
-        private async Task<InvokeResult> InvokeProtectedApiAsync()
+
+        async partial void LogoutButton_TouchUpInside(UIButton sender)
         {
-            MAS.GrantFlow = MASGrantFlow.ClientCredentials;
-            MAS.SetConfigurationFileName("msso_config_public");
-
-            var defaultConfigurationsResult = await MAS.StartWithDefaultConfigurationAsync(true);
-
-            MASRequestBuilder requestBuilder = new MASRequestBuilder("GET");
-
-            //
-            //  Specify an endpoint path, any parameters or headers, and request/response type
-            //
-            requestBuilder.EndPoint = "/protected/resource/products";
-            requestBuilder.Body = new NSDictionary("operation", "listProducts");
-
-            //  Build MASRequestBuilder to convert into MASRequest object
-            MASRequest request = requestBuilder.Build();
-
-            return await MAS.InvokeAsync(request);
-        }
-
-        partial void LogoutButton_TouchUpInside(UIButton sender)
-        {
-            SampleActions.Logout();
+            await SampleActions.LogoutAsync();
         }
 
 
@@ -79,21 +60,21 @@ namespace BasicAuthSample
         }
 
 
-        partial void LockButton_TouchUpInside(UIButton sender)
+        async partial void LockButton_TouchUpInside(UIButton sender)
         {
-            SampleActions.LockSession();
+            await SampleActions.LockSessionAsync();
         }
 
 
-        partial void UnlockButton_TouchUpInside(UIButton sender)
+        async partial void UnlockButton_TouchUpInside(UIButton sender)
         {
-            SampleActions.UnlockSession();
+            await SampleActions.UnlockSessionAsync();
         }
 
 
-        partial void DeregisterButton_TouchUpInside(UIButton sender)
+        async partial void DeregisterButton_TouchUpInside(UIButton sender)
         {
-            SampleActions.DeregisterDevice();
+            await SampleActions.DeregisterDeviceAsync();
         }
 
 

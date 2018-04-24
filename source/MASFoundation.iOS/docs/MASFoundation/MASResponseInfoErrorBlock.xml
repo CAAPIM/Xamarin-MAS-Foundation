@@ -1,5 +1,5 @@
 <Type Name="MASResponseInfoErrorBlock" FullName="MASFoundation.MASResponseInfoErrorBlock">
-  <TypeSignature Language="C#" Value="public delegate void MASResponseInfoErrorBlock(NSDictionary&lt;NSString,NSObject&gt; arg0, NSError arg1);" />
+  <TypeSignature Language="C#" Value="public delegate void MASResponseInfoErrorBlock(NSDictionary&lt;NSString,NSObject&gt; responseInfo, NSError error);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASResponseInfoErrorBlock extends System.MulticastDelegate" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
@@ -15,9 +15,13 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="arg0">To be added.</param>
-    <param name="arg1">To be added.</param>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <param name="responseInfo">JSON response object.</param>
+    <param name="error">NSError object in case any error is encountered during the process.</param>
+    <summary>
+        A standard (NSDictionary responseInfo, NSError error) block. The response object could potentially
+        be any type of object. It is most often used to return NSString JSON responses from HTTP calls for example.
+    </summary>
+    <remarks>
+    </remarks>
   </Docs>
 </Type>

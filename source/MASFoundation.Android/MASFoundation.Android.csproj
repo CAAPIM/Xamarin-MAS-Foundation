@@ -12,7 +12,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <AndroidClassParser>jar2xml</AndroidClassParser>
+    <AndroidClassParser>class-parse</AndroidClassParser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +33,22 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mdoc export-html --template doctemplate.xsl -o ../../APIReference/Android/html obj/Release/docs</command>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mono-xmltool --transform transformAndroid.xsl bin/Release/MASFoundation.Android.xml bin/Release/MASFoundation.Android.temp.xml</command>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mv -f bin/Release/MASFoundation.Android.temp.xml bin/Release/MASFoundation.Android.xml</command>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup>
      <JavaDocPaths>JavaDocs/</JavaDocPaths>
@@ -47,11 +63,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Additions\MAS.cs" />
     <Compile Include="Additions\MASUser.cs" />
+    <Compile Include="Additions\MASDevice.cs" />
+    <Compile Include="Additions\MASCompletion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />
     <None Include="Jars\AboutJars.txt" />
     <None Include="packages.config" />
+    <None Include="transformAndroid.xsl" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
@@ -62,7 +81,7 @@
     <Folder Include="JavaDocs\" />
   </ItemGroup>
   <ItemGroup>
-    <JavaDocIndex Include="JavaDocs\index.html" />
+    <JavaDocIndex Include="JavaDocs\" />
   </ItemGroup>
   <ItemGroup>
     <LibraryProjectZip Include="Jars\mas-foundation-release.aar" />

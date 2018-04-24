@@ -1,5 +1,5 @@
 <Type Name="MASGatewayMonitorStatusBlock" FullName="MASFoundation.MASGatewayMonitorStatusBlock">
-  <TypeSignature Language="C#" Value="public delegate void MASGatewayMonitorStatusBlock(MASGatewayMonitoringStatus arg0);" />
+  <TypeSignature Language="C#" Value="public delegate void MASGatewayMonitorStatusBlock(MASGatewayMonitoringStatus status);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASGatewayMonitorStatusBlock extends System.MulticastDelegate" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
@@ -14,8 +14,9 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="arg0">To be added.</param>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <param name="status">The monitoring status enumerated type.</param>
+    <summary>The Gateway monitor status block that will receive a MASGatewayMonitoringStatus update when a new status value change is triggered.</summary>
+    <remarks>
+    </remarks>
   </Docs>
 </Type>

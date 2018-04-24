@@ -9,8 +9,9 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>This category enables encryption methods for the object.</summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="DecryptData">
@@ -32,13 +33,14 @@
         <Parameter Name="anError" Type="Foundation.NSError&amp;" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="This">To be added.</param>
-        <param name="data">To be added.</param>
-        <param name="password">To be added.</param>
-        <param name="anError">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="This">This instance of the class.</param>
+        <param name="data">The NSData object to be decrypted.</param>
+        <param name="password">The NSString used as password during the decryption.</param>
+        <param name="anError">The NSError variable used for any error returned by the method.</param>
+        <summary>Decrypts data using a password passed in the parameter</summary>
+        <returns>Return the NSData decrypted object</returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EncryptData">
@@ -60,13 +62,14 @@
         <Parameter Name="anError" Type="Foundation.NSError&amp;" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="This">To be added.</param>
-        <param name="data">To be added.</param>
-        <param name="password">To be added.</param>
-        <param name="anError">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="This">This instance of the class.</param>
+        <param name="data">The NSData object to be encrypted.</param>
+        <param name="password">The NSString used as password during the encryption.</param>
+        <param name="anError">The NSError variable used for any error returned by the method.</param>
+        <summary>Encrypts data using a password passed in the parameter.</summary>
+        <returns>Return the NSData encrypted object.</returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsEncrypted">
@@ -82,9 +85,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Simple, convenient method to determine if the object is encrypted.</summary>
+        <value>
+          <c>true</c> if object is encrypted, <c>false</c>  if otherwise.</value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

@@ -8,8 +8,9 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The enumerated MASGrantFlow.</summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="ClientCredentials">
@@ -20,7 +21,7 @@
         <ReturnType>MASFoundation.MASGrantFlow</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The client credentials grant flow.</summary>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -31,7 +32,7 @@
         <ReturnType>MASFoundation.MASGrantFlow</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The total number of supported types.</summary>
       </Docs>
     </Member>
     <Member MemberName="Password">
@@ -42,7 +43,7 @@
         <ReturnType>MASFoundation.MASGrantFlow</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The user credentials grant flow.</summary>
       </Docs>
     </Member>
     <Member MemberName="Unknown">
@@ -53,7 +54,7 @@
         <ReturnType>MASFoundation.MASGrantFlow</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Unknown encoding type.</summary>
       </Docs>
     </Member>
   </Members>

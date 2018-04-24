@@ -8,8 +8,9 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The enumerated MASGatewayMonitoringStatus types.</summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Count">
@@ -20,7 +21,7 @@
         <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Convenience to tell how many status type exist.</summary>
       </Docs>
     </Member>
     <Member MemberName="NotReachable">
@@ -31,7 +32,7 @@
         <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The network cannot reach the assigned base network url.</summary>
       </Docs>
     </Member>
     <Member MemberName="ReachableViaWiFi">
@@ -42,7 +43,7 @@
         <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The network can reach the assigned base network url via WiFi.</summary>
       </Docs>
     </Member>
     <Member MemberName="ReachableViaWWAN">
@@ -53,7 +54,7 @@
         <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The network can reach the assigned base network url via WWAN.</summary>
       </Docs>
     </Member>
     <Member MemberName="Unknown">
@@ -64,7 +65,7 @@
         <ReturnType>MASFoundation.MASGatewayMonitoringStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Unknown Status.</summary>
       </Docs>
     </Member>
   </Members>
