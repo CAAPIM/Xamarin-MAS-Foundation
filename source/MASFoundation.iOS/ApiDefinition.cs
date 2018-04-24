@@ -754,7 +754,7 @@ namespace MASFoundation
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificates;
         [NullAllowed, Export("gatewayCertificates", ArgumentSemantic.Copy)]
-        string[] GatewayCertificates { get; }
+        NSArray<NSString> GatewayCertificates { get; }
 
         // @property (readonly, copy, nonatomic) NSArray * _Nullable trustedCertPinnedPublickKeyHashes;
         [NullAllowed, Export("trustedCertPinnedPublickKeyHashes", ArgumentSemantic.Copy)]
@@ -763,11 +763,11 @@ namespace MASFoundation
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificatesAsDERData;
         [NullAllowed, Export("gatewayCertificatesAsDERData", ArgumentSemantic.Copy)]
-        string[] GatewayCertificatesAsDERData { get; }
+        NSArray<NSString> GatewayCertificatesAsDERData { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificatesAsPEMData;
         [NullAllowed, Export("gatewayCertificatesAsPEMData", ArgumentSemantic.Copy)]
-        string[] GatewayCertificatesAsPEMData { get; }
+        NSArray<NSString> GatewayCertificatesAsPEMData { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull gatewayHostName;
         [Export("gatewayHostName", ArgumentSemantic.Strong)]
@@ -1325,7 +1325,7 @@ namespace MASFoundation
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable groups;
         [NullAllowed, Export("groups", ArgumentSemantic.Copy)]
-        string[] Groups { get; }
+        NSArray<NSString> Groups { get; }
 
         // @property (readonly, assign, nonatomic) BOOL active;
         [Export("active")]
@@ -1936,7 +1936,7 @@ namespace MASFoundation
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable scope;
         [NullAllowed, Export("scope", ArgumentSemantic.Copy)]
-        string[] Scope { get; }
+        NSArray<NSString> Scope { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable scopeAsString;
         [NullAllowed, Export("scopeAsString")]

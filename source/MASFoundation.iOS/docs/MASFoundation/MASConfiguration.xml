@@ -729,8 +729,8 @@
       </Docs>
     </Member>
     <Member MemberName="GatewayCertificates">
-      <MemberSignature Language="C#" Value="public virtual string[] GatewayCertificates { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string[] GatewayCertificates" />
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray&lt;Foundation.NSString&gt; GatewayCertificates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray`1&lt;class Foundation.NSString&gt; GatewayCertificates" />
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
@@ -738,7 +738,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.String[]</ReturnType>
+        <ReturnType>Foundation.NSArray&lt;Foundation.NSString&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -750,8 +750,8 @@
       </Docs>
     </Member>
     <Member MemberName="GatewayCertificatesAsDERData">
-      <MemberSignature Language="C#" Value="public virtual string[] GatewayCertificatesAsDERData { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string[] GatewayCertificatesAsDERData" />
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray&lt;Foundation.NSString&gt; GatewayCertificatesAsDERData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray`1&lt;class Foundation.NSString&gt; GatewayCertificatesAsDERData" />
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
@@ -759,7 +759,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.String[]</ReturnType>
+        <ReturnType>Foundation.NSArray&lt;Foundation.NSString&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -771,8 +771,8 @@
       </Docs>
     </Member>
     <Member MemberName="GatewayCertificatesAsPEMData">
-      <MemberSignature Language="C#" Value="public virtual string[] GatewayCertificatesAsPEMData { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string[] GatewayCertificatesAsPEMData" />
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray&lt;Foundation.NSString&gt; GatewayCertificatesAsPEMData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray`1&lt;class Foundation.NSString&gt; GatewayCertificatesAsPEMData" />
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
@@ -780,7 +780,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.String[]</ReturnType>
+        <ReturnType>Foundation.NSArray&lt;Foundation.NSString&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>

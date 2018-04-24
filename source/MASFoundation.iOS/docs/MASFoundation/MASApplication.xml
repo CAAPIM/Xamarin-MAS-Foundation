@@ -461,8 +461,8 @@
       </Docs>
     </Member>
     <Member MemberName="Scope">
-      <MemberSignature Language="C#" Value="public virtual string[] Scope { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string[] Scope" />
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray&lt;Foundation.NSString&gt; Scope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray`1&lt;class Foundation.NSString&gt; Scope" />
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
@@ -470,7 +470,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.String[]</ReturnType>
+        <ReturnType>Foundation.NSArray&lt;Foundation.NSString&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>

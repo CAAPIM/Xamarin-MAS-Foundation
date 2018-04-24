@@ -4090,7 +4090,7 @@
             Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
             which will remove credentials from protected storage of the device with local authentication.
             </para><para>
-            After locking user session, MASUser.CurrentUser will still exists; 
+            After locking user session, MASUser.CurrentUser will still exists;
             however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
             Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
             </para></summary>
@@ -4107,7 +4107,7 @@
             Alternatively, locked user session can be removed by MASUser.CurrentUser.RemoveSessionLock()
             which will remove credentials from protected storage of the device with local authentication.
             </para><para>
-            After locking user session, MASUser.CurrentUser will still exists; 
+            After locking user session, MASUser.CurrentUser will still exists;
             however, MASUser.CurrentUser.IsAuthenticated property will reflect the lock status and will return false until it's unlocked.
             Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
             </para></summary>
@@ -4145,7 +4145,7 @@
             <summary>
             Authenticate a user via asynchronous request with authorization code.
             <para>
-            This will create an MASUser.CurrentUser upon a successful result.  
+            This will create an MASUser.CurrentUser upon a successful result.
             </para></summary>
             <remarks />
         </member>
@@ -4154,7 +4154,7 @@
             <summary>
             Authenticate a user via asynchronous request with authorization code.
             <para>
-            This will create an MASUser.CurrentUser upon a successful result.  
+            This will create an MASUser.CurrentUser upon a successful result.
             </para></summary>
             <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
             <remarks />
@@ -4166,7 +4166,7 @@
             <summary>
             Authenticate a user via asynchronous request with id_token.
             <para>
-            This will create an MASUser.CurrentUser upon a successful result.  
+            This will create an MASUser.CurrentUser upon a successful result.
             </para></summary>
             <remarks />
         </member>
@@ -4176,7 +4176,7 @@
             <summary>
             Authenticate a user via asynchronous request with id_token.
             <para>
-            This will create an MASUser.CurrentUser upon a successful result.  
+            This will create an MASUser.CurrentUser upon a successful result.
             </para></summary>
             <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
             <remarks />
@@ -4188,7 +4188,7 @@
             <summary>
             Authenticate a user via asynchronous request with basic credentials.
             <para>
-            This will create an MASUser.CurrentUser upon a successful result.  
+            This will create an MASUser.CurrentUser upon a successful result.
             </para></summary>
             <remarks />
         </member>
@@ -4198,23 +4198,23 @@
             <summary>
             Authenticate a user via asynchronous request with basic credentials.
             <para>
-            This will create an MASUser.CurrentUser upon a successful result.  
+            This will create an MASUser.CurrentUser upon a successful result.
             </para></summary>
             <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
             <remarks />
         </member>
         <member name="M:MASFoundation.MASUser.LogoutAsync">
             <summary>
-            Logout an already authenticated user via asynchronous request.       
+            Logout an already authenticated user via asynchronous request.
             <para>This will return <c>true</c> upon a successful result.</para></summary>
             <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
             <remarks />
         </member>
         <member name="M:MASFoundation.MASUser.LogoutWithCompletion(MASFoundation.MASCompletionErrorBlock)">
-            <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user 
+            <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user
         available via[MASUser currentUser] has been updated with the new information.</param>
             <summary>
-        Logout an already authenticated user via asynchronous request.       
+        Logout an already authenticated user via asynchronous request.
         <para>This will return <c>true</c> upon a successful result.</para></summary>
             <remarks />
         </member>
