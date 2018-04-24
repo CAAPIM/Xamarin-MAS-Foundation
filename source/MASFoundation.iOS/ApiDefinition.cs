@@ -2001,21 +2001,49 @@ namespace MASFoundation
     [BaseType(typeof(MASObject))]
     interface MASAuthCredentials
     {
-        // @property (readonly, assign, nonatomic) NSString * credentialsType;
-        [Export("credentialsType")]
+        // @property (nonatomic, strong, readonly, nonnull) NSString *credentialsType;
+        [Export("credentialsType", ArgumentSemantic.Strong)]
         string CredentialsType { get; }
+
+        // @property (nonatomic, strong, readonly, nonnull) NSString *csrUsername;
+        [Export("csrUsername", ArgumentSemantic.Strong)]
+        string CsrUsername { get; }
+
+        // @property (nonatomic, strong, readonly, nonnull) NSString *registerEndpoint;
+        [Export("registerEndpoint", ArgumentSemantic.Strong)]
+        string RegisterEndpoint { get; }
+
+        // @property (nonatomic, strong, readonly, nonnull) NSString *tokenEndpoint;
+        [Export("tokenEndpoint", ArgumentSemantic.Strong)]
+        string TokenEndpoint { get; }
 
         // @property (readonly, assign, nonatomic) BOOL canRegisterDevice;
         [Export("canRegisterDevice")]
         bool CanRegisterDevice { get; }
 
-        // @property (readonly, assign, nonatomic) BOOL isReuseable;
-        [Export("isReuseable")]
-        bool IsReuseable { get; }
+        // @property (nonatomic, assign, readonly) BOOL isReusable;
+        [Export("isReusable")]
+        bool IsReusable { get; }
 
         // -(void)clearCredentials;
         [Export("clearCredentials")]
         void ClearCredentials();
+
+        // (instancetype _Nullable)initWithCredentialsType:(NSString * _Nonnull)credentialsType csrUsername:(NSString * _Nonnull)csrUsername canRegisterDevice:(BOOL)canRegisterDevice isReusable:(BOOL)isReusable;
+        [Export("initWithCredentialsType:csrUsername:canRegisterDevice:isReusable:")]
+        IntPtr Constructor(string credentialsType, string csrUsername, bool canRegisterDevice, bool isReusable);
+
+        // - (instancetype _Nullable)initWithCredentialsType:(NSString * _Nonnull)credentialsType csrUsername:(NSString * _Nonnull)csrUsername canRegisterDevice:(BOOL)canRegisterDevice isReusable:(BOOL)isReusable registerEndpoint:(NSString * _Nonnull)registerEndpoint tokenEndpoint:(NSString * _Nonnull)tokenEndpoint;
+        [Export("initWithCredentialsType:csrUsername:canRegisterDevice:isReusable:registerEndpoint:tokenEndpoint:")]
+        IntPtr Constructor(string credentialsType, string csrUsername, bool canRegisterDevice, bool isReusable, string registerEndpoint, string tokenEndpoint);
+
+        // -(id)getHeaders;
+        [Export("getHeaders")]
+        NSDictionary Headers { get; }
+
+        // -(id)getParameters;
+        [Export("getParameters")]
+        NSDictionary Parameters { get; }
     }
 
     // @interface MASAuthCredentialsAuthorizationCode : MASAuthCredentials
