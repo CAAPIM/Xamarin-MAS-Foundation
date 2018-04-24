@@ -2029,13 +2029,13 @@ namespace MASFoundation
         [Export("clearCredentials")]
         void ClearCredentials();
 
-        // -(instancetype _Nullable)initWithCredentialsType:(id)credentialsType csrUsername:(id)csrUsername canRegisterDevice:(id)canRegisterDevice isReusable:(id)isReusable;
+        // (instancetype _Nullable)initWithCredentialsType:(NSString * _Nonnull)credentialsType csrUsername:(NSString * _Nonnull)csrUsername canRegisterDevice:(BOOL)canRegisterDevice isReusable:(BOOL)isReusable;
         [Export("initWithCredentialsType:csrUsername:canRegisterDevice:isReusable:")]
-        IntPtr Constructor(NSObject credentialsType, NSObject csrUsername, NSObject canRegisterDevice, NSObject isReusable);
+        IntPtr Constructor(string credentialsType, string csrUsername, bool canRegisterDevice, bool isReusable);
 
-        // -(instancetype _Nullable)initWithCredentialsType:(id)credentialsType csrUsername:(id)csrUsername canRegisterDevice:(id)canRegisterDevice isReusable:(id)isReusable registerEndpoint:(id)registerEndpoint tokenEndpoint:(id)tokenEndpoint;
+        // - (instancetype _Nullable)initWithCredentialsType:(NSString * _Nonnull)credentialsType csrUsername:(NSString * _Nonnull)csrUsername canRegisterDevice:(BOOL)canRegisterDevice isReusable:(BOOL)isReusable registerEndpoint:(NSString * _Nonnull)registerEndpoint tokenEndpoint:(NSString * _Nonnull)tokenEndpoint;
         [Export("initWithCredentialsType:csrUsername:canRegisterDevice:isReusable:registerEndpoint:tokenEndpoint:")]
-        IntPtr Constructor(NSObject credentialsType, NSObject csrUsername, NSObject canRegisterDevice, NSObject isReusable, NSObject registerEndpoint, NSObject tokenEndpoint);
+        IntPtr Constructor(string credentialsType, string csrUsername, bool canRegisterDevice, bool isReusable, string registerEndpoint, string tokenEndpoint);
 
         // -(id)getHeaders;
         [Export("getHeaders")]

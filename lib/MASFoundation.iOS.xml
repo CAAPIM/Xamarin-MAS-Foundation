@@ -1624,9 +1624,9 @@
             This constructor is invoked by the runtime infrastructure (ObjCRuntime.GetNSObject (IntPtr)) to create a new managed representation for a pointer to an unmanaged Objective-C object. You should not invoke this method directly, instead you should call the GetNSObject method as it will prevent two instances of a managed object to point to the same native object.
         </remarks>
         </member>
-        <member name="C:MASFoundation.MASAuthCredentials(Foundation.NSObject,Foundation.NSObject,Foundation.NSObject,Foundation.NSObject)">
-            <param name="credentialsType">NSString value of unique identifier for auth credentials type such as OAuth2 grant type.</param>
-            <param name="csrUsername">NSString value of username registering the device against MAG.</param>
+        <member name="C:MASFoundation.MASAuthCredentials(System.String,System.String,System.Boolean,System.Boolean)">
+            <param name="credentialsType">string value of unique identifier for auth credentials type such as OAuth2 grant type.</param>
+            <param name="csrUsername">string value of username registering the device against MAG.</param>
             <param name="canRegisterDevice">bool value indicating whether auth credentials type can be used for device registration against MAG.</param>
             <param name="isReusable">bool value indicating whether auth credentials type can be re-used multiple times.</param>
             <summary>
@@ -1637,13 +1637,13 @@
             </para></summary>
             <remarks>Make sure to initialize custom MASAuthCredentials object within custom MASAuthCredentials' init method.</remarks>
         </member>
-        <member name="C:MASFoundation.MASAuthCredentials(Foundation.NSObject,Foundation.NSObject,Foundation.NSObject,Foundation.NSObject,Foundation.NSObject,Foundation.NSObject)">
-            <param name="credentialsType">NSString value of unique identifier for auth credentials type such as OAuth2 grant type.</param>
-            <param name="csrUsername">NSString value of username registering the device against MAG.</param>
+        <member name="C:MASFoundation.MASAuthCredentials(System.String,System.String,System.Boolean,System.Boolean,System.String,System.String)">
+            <param name="credentialsType">string value of unique identifier for auth credentials type such as OAuth2 grant type.</param>
+            <param name="csrUsername">string value of username registering the device against MAG.</param>
             <param name="canRegisterDevice">bool value indicating whether auth credentials type can be used for device registration against MAG.</param>
             <param name="isReusable">bool value indicating whether auth credentials type can be re-used multiple times.</param>
-            <param name="registerEndpoint">NSString value of MAG device registration endpoint.</param>
-            <param name="tokenEndpoint">NSString value of OTK token endpoint.</param>
+            <param name="registerEndpoint">string value of MAG device registration endpoint.</param>
+            <param name="tokenEndpoint">string value of OTK token endpoint.</param>
             <summary>
             Initializes MASAuthCredentials object.
             <para>
