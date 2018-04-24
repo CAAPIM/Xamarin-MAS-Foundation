@@ -1,0 +1,96 @@
+<Type Name="NSData_MAS" FullName="MASFoundation.NSData_MAS">
+  <TypeSignature Language="C#" Value="public static class NSData_MAS" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit NSData_MAS extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>This category enables encryption methods for the object.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DecryptData">
+      <MemberSignature Language="C#" Value="public static Foundation.NSData DecryptData (this Foundation.NSData This, Foundation.NSData data, string password, out Foundation.NSError anError);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Foundation.NSData DecryptData(class Foundation.NSData This, class Foundation.NSData data, string password, class Foundation.NSError anError) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("decryptData:password:error:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="This" Type="Foundation.NSData" RefType="this" />
+        <Parameter Name="data" Type="Foundation.NSData" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="anError" Type="Foundation.NSError&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="This">This instance of the class.</param>
+        <param name="data">The NSData object to be decrypted.</param>
+        <param name="password">The NSString used as password during the decryption.</param>
+        <param name="anError">The NSError variable used for any error returned by the method.</param>
+        <summary>Decrypts data using a password passed in the parameter</summary>
+        <returns>Return the NSData decrypted object</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptData">
+      <MemberSignature Language="C#" Value="public static Foundation.NSData EncryptData (this Foundation.NSData This, Foundation.NSData data, string password, out Foundation.NSError anError);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Foundation.NSData EncryptData(class Foundation.NSData This, class Foundation.NSData data, string password, class Foundation.NSError anError) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("encryptData:password:error:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="This" Type="Foundation.NSData" RefType="this" />
+        <Parameter Name="data" Type="Foundation.NSData" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="anError" Type="Foundation.NSError&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="This">This instance of the class.</param>
+        <param name="data">The NSData object to be encrypted.</param>
+        <param name="password">The NSString used as password during the encryption.</param>
+        <param name="anError">The NSError variable used for any error returned by the method.</param>
+        <summary>Encrypts data using a password passed in the parameter.</summary>
+        <returns>Return the NSData encrypted object.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEncrypted">
+      <MemberSignature Language="C#" Value="public static bool IsEncrypted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsEncrypted" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("isEncrypted")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Simple, convenient method to determine if the object is encrypted.</summary>
+        <value>
+          <c>true</c> if object is encrypted, <c>false</c>  if otherwise.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

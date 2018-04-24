@@ -17,21 +17,22 @@
 
 ## Create an App: Choose a Method
 
-| Create your app using...                 | Benefits                                 |
+| Get Started...                 | Benefits                                 |
 | ---------------------------------------- | ---------------------------------------- |
-| [Sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods, or building a real app.</li></ul> |
-| [No sample app, from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Just download the dynamic-link library (.dll) and add your app configuration file.</li></ul> |                             
+| [Using sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods and trying out the Mobile SDK.</li></ul> |
+| [Create app from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Add the SDK libraries using NuGet in Visual Studio, or the dynamic-link libraries (dlls).</li></ul> |                             
 
 ## Quick Start with Sample App
 
-The Android **BasicAuthSample** app:
-
-- Lets you test the following with a CA Mobile API Gateway:  
-  - Define authentication flow
+The Android **BasicAuthSample** app works with a CA Mobile API Gateway so you can:  
+  - Define an authentication flow
   - Start the SDK
   - Log in
   - Access a protected API
   - Log out
+
+The sample app:
+
 - Was created using Visual Studio Community 2017 build 7.3.3
 - Requires Android 4.4 or later to run the app
 
@@ -47,41 +48,46 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **log in**, **log out**, and **access a protected API**.
 
-[TBD - Will we improve sample or use slick demo by Microsoft consultant?]
-[Sample app improvements: spelling errors Log in/Log out, human error messages, human text for grant flows, sample app should be something useful and interesting for enterprise.]
-
 ## Create App from Scratch or Integrate an Existing App into the Mobile SDK
 
 If you have an existing Xamarin app that you want to integrate into the Mobile SDK, or simply want full control to set up a new app, these steps are for you.
 
 ::: alert info
-**Note**: You cannot use an existing Android Mobile SDK app. You must redo the app using c#.
+**Note**: You cannot use an existing Android Mobile SDK app. You must rewrite the app using c#.
 :::
 
-### Step 1: Set Up Project in Visual Studio
+### Set Up Visual Studio for the Mobile SDK
 
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).
-2. Open a terminal window in a directory of your choice and copy and paste the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**     
-Verify that you have both "Android" and "iOS" source directories.
-3. Open your app in Visual Studio.
-4. Right-click the **References** folder and select **Edit References**.
-5. Select the **.Net Assembly** tab, and click the **Browse** button.
-6. Go to: `Xamarin-MAS-Foundation/lib` directory, select the `MASFoundation.Android.dll` file, click Open and then OK.
-7. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
+2. Add the Mobile SDK (recommended) or dlls to your project.
+
+    **NuGet Packages**  
+  a. In Visual Studio, open your platform app, right click **Packages**, **Add Packages...**      
+  b. Search for "MASFoundation.Xamarin", and click the button, **Add Package**.    
+  c. Repeat the steps for the other platform.    
+
+    **Dlls**   
+  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/    Xamarin-MAS-Foundation.git**        
+  Verify that you have both "Android" and "iOS" source directories.    
+  b. In Visual Studio, right-click the **References** folder and select **Edit References**.    
+  c. Select the **.Net Assembly** tab, and click the **Browse** button.    
+  d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.Android.dll` file, click **Open** and then **OK**.    
+
+3. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
 If you have multiple MAGs, you will have more than one file.
 
-::: alert danger
-**Important**: The msso_config.json file must use a valid JSON format with the required data. If the file is not found, you'll get an error message and your app will not run. Do not change any of the contents without assistance from your Admin; if you remove or alter required values, your app may not be able to connect or interact with the MAG.
-:::
+    ::: alert danger
+    **Important**: The msso_config.json file must use a valid JSON format with the required data. If the file is not found, you'll get an error message and your app will not run. Do not change any of the contents without assistance from your Admin; if you remove or alter required values, your app may not be able to connect or interact with the MAG.
+    :::
 
-::: alert note
-**Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes.
-:::
+    ::: alert note
+    **Note**: You can rename the msso_config.json configuration file. Just make sure that you use the .json extension, and you change the name before you start the library processes.
+    :::
 
-8. In the manifests folder, open the file, `AndroidManifest.xml`.  
+4. In the manifests folder, open the file, `AndroidManifest.xml`.  
 Before the application definition, add the permission, **android.permission.INTERNET** so your app can access the internet. For example:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.BabsTestApp">
     <uses-permission android:name="android.permission.INTERNET" />
@@ -90,19 +96,19 @@ Before the application definition, add the permission, **android.permission.INTE
     </application>
 </manifest>
 ```
-9. Select **Build/Rebuild All**.  
+
+5. Select **Build/Rebuild All**.  
 Verify that you get "Build successful" confirmation.
 
 That's it! You can now start building out your app.
 
-### Step 2: Start the SDK
+### Start the SDK
 
 After your project is properly configured, you must start the SDK to establish a secure connection with the backend services. The method that starts the SDK is **MAS.start**. Note the following:
 
 - You can put MAS.Start anywhere in your app
 - MAS.Start should be processed before app startup (during the splash/loading screen of your app).
 - We recommended that you process any communication with the backend services after successful completion of the startup method, or the secure communication is not guaranteed and may fail.
-
 
 #### Start with standard method
 
@@ -677,6 +683,603 @@ builder.Post(form);
 IMASRequest postRequest = builder.Build();
 ```
 
+### Geolocation
+
+**Description**: Access to protected APIs can be based on the physical location of the application user. The application passes the physical location information to the MAG in the http header of an access request. Within the http header, location is expressed using either the latitude/longitude coordinates of the host device or the phone number associated with the device.
+
+The MAG extracts the location, validates the data, then returns it to the application with a success or error message.
+
+**To enable**: The following permission are required:
+
+For MSISDN:
+
+```xml
+<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+```
+For Location:
+
+To allow an app to access an approximate location derived from network location sources such as cell towers and Wi-Fi:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+```
+
+To allow an app to access a precise location from location sources such as GPS, cell towers, and Wi-Fi:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+```
+
+**Dependencies**: Your MAG Admin must customize policies to enable and configure geolocation, and customize the msso_config.json configuration file for MSISDN.
+
+#### Coding Runtime Permissions
+For runtime permissions, the application displays a dialog to the user requesting permission when needed. The user can decide whether or not to grant access.
+
+##### MSISDN Permission
+The following code requests access to the device phone number which is required by the geolocation service.
+
+```c#
+if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
+{
+    if (CheckSelfPermission(Manifest.Permission.ReadSms)
+            != Android.Content.PM.Permission.Granted)
+    {
+        RequestPermissions(new string[] { Manifest.Permission.ReadSms }, 0);
+    }
+}
+
+```
+##### Location Permission
+The following code requests access to the location information. The  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> permission is set in the manifest file.
+
+```c#
+if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
+{
+    if (CheckSelfPermission(Manifest.Permission.AccessFineLocation)
+            != Android.Content.PM.Permission.Granted)
+    {
+        RequestPermissions(new string[] { Manifest.Permission.AccessFineLocation }, 0);
+    }
+}
+
+```
+
+##### Error Handling
+
+This error occurs if the client fails to provide the geolocation header required by the server.
+
+```c#
+public class GeolocationCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is LocationRequiredException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+This error occurs when the location sent from the client is not authorized to access the protected endpoint on the MAG.
+
+```c#
+public class GeolocationCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is LocationInvalidException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+This error occurs if the MAG requires an MSISDN value in the header, and the client fails to supply one.
+
+```c#
+public class MsisdnCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is MobileNumberRequiredException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+
+This error occurs if the MSISDN value sent from the client is unauthorized to access the protected endpoint on the MAG.
+
+```c#
+public class MsisdnCallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // Handle Success
+    }
+    public override void OnError(Throwable e)
+    {
+        if (e.Cause is MobileNumberInvalidException) {
+            // Handle Error
+        }
+    }
+}
+```
+
+
+## Debug the SDK
+
+### Enable Debug Before App is Running
+
+  Run the following command in a terminal window:
+```c#
+adb shell setprop log.tag.MAS VERBOSE
+```
+**Note:** Whenever you restart the device or emulator, you must rerun the command to enable debug.
+
+### Enable Debug During Runtime
+
+```c#
+// Enable debug mode
+MAS.Debug();
+```
+
+### Configure app for network monitoring
+
+If your application needs monitoring, here's how to hook up your application into monitoring the network call:
+
+```c#
+MAS.SetConnectionListener(new MASConnectionListener());
+
+private class MASConnectionListener : Java.Lang.Object,  IMASConnectionListener
+{
+    public void OnConnected(HttpURLConnection connection)
+    {
+        // On connection connected
+    }
+
+    public void OnObtained(HttpURLConnection connection)
+    {
+        // On connection obtained
+    }
+}
+```
+
+**Note:** You should not dump sensitive information to Production.
+
+#### Conveniences
+
+To determine if the network connection to the MAG is currently reachable:
+
+```c#
+MAS.GatewayIsReachable(new GatewayIsReachableCallback());
+
+private class GatewayIsReachableCallback : MASCallback
+{
+    public override void OnError(Throwable p0)
+    {
+        // Handle error
+        Console.WriteLine(p0);
+    }
+
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+        // GatewayIsReachable success result
+        Console.WriteLine(result);
+    }
+}
+```
+
+#### Rename the msso_config.json file
+
+You can rename the msso_config.json configuration file, as long as you use the .json extension, and you change the filename before you start the library processes.
+
+```c#
+MAS.SetConfigurationFileName("custom_msso.json");
+```
+
+
+#### Stop and reset the device
+
+To stop all processes in the library:
+
+```c#
+MAS.Stop();
+```
+
+#### Reset all app, device, and user credentials
+
+To reset all application, device, and user credentials in memory, or in the local and shared group keychains, use the following method:
+
+```c#
+MASDevice.CurrentDevice.ResetLocally();
+```
+
+::: alert info
+**Note:** We recommend that you add a warning UI component to indicate to the user exactly what they are doing, with a confirmation before proceeding with this action.
+:::
+
+::: alert info
+**Note:** This only resets the credentials on the device. To reset and deregister the device record on the MAG, call `MASDevice.CurrentDevice.Deregister()`.
+:::
+
+#### Handle errors
+Extract more information from the `onError` callback:
+
+```c#
+OnError(Throwable t)
+{
+    if (t.Cause is TargetApiException) {
+        TargetApiException exception = (TargetApiException)t.Cause;
+        Console.WriteLine("Response Message: {0}", exception.Response.ResponseMessage); // Server resposne message
+        Console.WriteLine("Response Body: {0}", exception.Response.Body.Content.ToString()); // Server response content
+        Console.WriteLine("Response Code: {0}", exception.Response.ResponseCode);// Server response http code
+    }
+}
+```
+
+## Troubleshoot Your App
+
+### Issues Between Your App and the MAG Server
+
+This section describes some of the issues that can occur between your app and the MAG server.
+
+#### msso_config.json file
+
+The msso_config.json file is how the Mobile SDK communicates with the MAG server. It contains OAuth scope values that provide permissions to operations and access to resources for your app. If the file has missing or incorrect scopes, this can cause errors.
+
+**Scope help for Admins:**
+
+- [Create a Client App for the Mobile SDK](https://docops.ca.com/mag)
+- [Manage Permissions With Scopes](https://docops.ca.com/mag)  
+
+#### Apps and Backend Policies
+
+[Mobile Policies](https://docops.ca.com/mag
+[Error Codes](https://docops.ca.com/mag)
+
+### SDK Exceptions
+
+**MAGException**
+
+MAGException is the base exception class for MAG. It is thrown when an error occurs while processing the endpoint request.
+
+```
+com.ca.mas.core.error.MAGException
+```
+
+| SubClasses of MAGException               | Notes                                    |
+| ---------------------------------------- | ---------------------------------------- |
+| ClientCredentialsException               | An error occurred while initializing the dynamic client id and client credentials. |
+| DeviceRegistrationAwaitingActivationException | Device is registered but is awaiting approval and activation by an administrator. |
+| MSISDNRequiredException                  | Missing phone number.                    |
+| LocationInvalidException                 | Unknown location.                        |
+| OAuthException                           | An error occurred while processing the OAuth Request. |
+| LocationRequiredException                | Missing location.                        |
+| RegistrationException                    | And error occurred while processing the device registration. |
+| MSISDNInvalidException                   | Invalid phone number.                    |
+
+
+**MAGServerException**
+```
+com.ca.mas.core.error.MAGServerException
+```
+
+MAGServerException is the base exception class for MAG Server endpoint errors. These errors are related to registering the client, registering the device, and authenticating the user. An errorCode attribute in the exception maps to the **x-ca-err** code.
+
+The following Subclasses provide more details.
+
+| Subclass                         | Serialized Form                   | Notes                                    |
+| -------------------------------- | --------------------------------- | ---------------------------------------- |
+| ClientCredentialsServerException | com.ca.mas.core.clientcredentials | Occurs when initializing the dynamic client id and client credentials. |
+| OAuthServerException             | com.ca.mas.core.oauth             | Occurs while accessing the OAuth endpoint. |
+| RegistrationServerException      | com.ca.mas.core.registration      | Occurs when accessing the register endpoint. |
+| AuthenticationException          | com.ca.mas.core.auth              | Occurs when accessing the MAG Server register or token endpoint. |      |
+
+To capture the result of an AuthenticationException when the user enters the wrong password:
+
+```c#
+MASUser.Login("username", "password".ToCharArray(), new LoginCallback());
+
+private class LoginCallback : MASCallback
+{
+    public override void OnError(Throwable e) {
+        if (e.Cause is AuthenticationException) {
+            // Invalid username or password
+        }
+        else {
+            // Handle other failure
+            MAS.CancelAllRequests();
+        }
+    }
+
+    public override void OnSuccess(Java.Lang.Object user) {
+        // Successful login
+    }
+}
+```
+
+**MASException**
+```
+com.ca.mas.foundation.MASException
+```
+
+MASException represents a general error from the Mobile SDK. The MASException is provided to the `MASCallback#OnError` interface.
+
+```c#
+MAS.Invoke(request, new InvokeAPICallback());
+
+private class InvokeAPICallback : MASCallback
+{
+    public override void OnSuccess(Java.Lang.Object result) {
+        // Handle successful invocation
+    }
+
+    public override void OnError(Throwable t) {
+        MASException exception = (MASException) t.Cause;
+        Console.WriteLine("Root cause: {0}", exception.RootCause); // retrieve the root cause of the exception
+
+    }
+}
+```
+
+**Reserved x-ca-err Error Codes:**
+
+- **xxxx990 Access Token Expired**
+  Although the access_token is accepted by the MAG server, the application server considers the token expired. This can occur when the MAG server and the application server are not synchronized. In this case the Access Token is expired, the token is removed from the keychain and the process flow repeated, this time without an access token. With no access token, a refresh token is issued.
+- **xxxx991 Access Token Not Granted**
+  The API requires a SCOPE value that the request does not contain.
+- **xxxx992 No Access Token**
+  The access_token was not included in the request, or the same access_token was included more than once in the same request. Not testable from client SDK.
+- **xxxx993 Token is disabled**
+  The associated client is disabled.
+- **xxxx000 Unknown**
+  Not testable from the client SDK.
+
+**TargetAPIException**
+
+The TargetAPIException is used to capture errors originating from the application. The error is thrown when the target application API returns an http status code that is not within the range 200 - 299. These errors are primarily defined by the application developer.
+
+To receive the response from the API, use the request: `Com.CA.Mas.Core.Error.TargetApiException#Response`
+
+The following code shows how to capture the result of the request with TargetApiException interface:
+
+```c#
+MAS.Invoke(request, new InvokeAPICallback());
+
+private class InvokeAPICallback : MASCallback
+{
+    OnError(Throwable t)
+    {
+        if (t.Cause is TargetApiException) {
+            TargetApiException exception = (TargetApiException)t.Cause;
+
+            if(exception.Response.ResponseCode == 404) {
+                // Do something
+            }
+            Console.WriteLine("Response Headers: {0}", exception.Response.Headers); // Server resposne headers
+            Console.WriteLine("Response Message: {0}", exception.Response.ResponseMessage); // Server resposne message
+            Console.WriteLine("Response Body: {0}", exception.Response.Body.Content); // Server response content
+            Console.WriteLine("Response Code: {0}", exception.Response.ResponseCode);// Server response http code
+        }
+    }
+    .....
+}
+```
+
+
+### Reset the App
+
+During app testing (or other administrative/devops use cases), you may need to reset the app and clean up the local cache on the device. Conditions that can lead to resetting the app include:
+- You get a 'Device Unknown' error message
+- The device record has been removed on the MAG
+- You get an error message that the device is already registered
+
+Use the following method to deregister the device and remove the record on MAG. Note that all apps associated with the device are deregistered.
+
+### Deregister a device
+
+You can programmatically deregister a device to:
+
+- Revoke access to a device identified as risky
+- Use the device again for test runs
+- Troubleshoot an app if there is a "device already registered" error
+
+Deregistration removes the device record from MAG. Use this feature with caution because it may not be easy for end users to use if you make it publicly available. We suggest a warning UI component or similar to indicate to the user exactly what they are doing, with a confirmation before proceeding with this action.
+
+:::alert info **Note**: You must restart your app to get new registration of the app, device and user authentication. :::
+
+
+```c#
+MASDevice.CurrentDevice.Deregister(new DeregisterCallback());
+
+// Deregister Callback
+public class DeregisterCallback : MASCallback
+{
+  public override void OnSuccess(Java.Lang.Object result)
+  {
+      // The device is successfully deregistered
+  }
+  public override void OnError(Throwable e)
+  {
+      // Handle the error
+  }
+}
+
+```
+
+### SSL Pinning Validation Failed
+
+`javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.`
+
+This error means that the server security configuration in the MASSecurityConfiguration object for the hostname:portnumber is not valid or is missing. See [Create the MASSecurityConfiguration object](#create-the-massecurityconfiguration-object).
+
+### General Problems
+
+#### Authentication errors
+
+If you get invalid token, unauthorized, or other authentication errors, it may be due to a MAG server change.  Your Admin must change a client parameter (documented in the 4.0 Release Notes) to allow more than one token per user/client (default). Without making the server changes, the Mobile SDK will not allow the same user to log in to multiple apps instances.
+
+#### Disable PKCE
+
+Proof Key for Code Exchange (PKCE) provides an extra layer of security for your app. It is enabled by default and works with proximity login. Your Admin does not need to enable the feature on the MAG server. In the enabled state, the Mobile SDK responds to authentication requests or not, based on the policy that is configured by your Admin using OAuth Toolkit. We recommend leaving this feature enabled. However, if you have a specific use case to disable it, go to Reference documentation and change the state: `MAS.enablePKCE(true);`
+
+#### SDK sample app fails
+
+**Error: MAGException: Unable to post to <url>: Trust anchor for certification path not found**
+
+This error occurs when the sample app fails to connect to the MAG server. It is a MAG certificate configuration issue that must be resolved by your Admin. You may need an updated msso_config.json file.
+
+#### Cannot log in due to invalid mag-identifier
+This is a common issue that is caused by the following conditions:
+* The registration for the client Id already exists on the MAG Manager.
+* There is an application already installed with a different msso_config file.
+
+To resolve this issue, try the following;
+1. Deregister the application from the MAG Manager by issuing a deregister request.
+2. Uninstall the applications from your device that have conflicting registrations.
+3. Log into the MAG Manager and remove the client registration for your application.
+
+### Device is already registered error
+
+The MAG server secures device registration and re-registration with this simple logic: only the previously-registered user or client can perform the re-registration. This logic (which resides in policy), is perfect for production environments. However, in Mobile SDK 1.5 and earlier, this caused "device already registered" errors during app testing with multiple users and uninstalling/reinstalling the app.
+
+In this release, the Mobile SDK generates a new device identifier after uninstall/reinstall, which reduces the likelihood that you'll get this error.
+
+But if you get this error, follow these steps to delete unwanted registered device entries in MAG Manager. If you don't have experience with MAG Manager, work with your Admin.
+1. Log into the MAG Manager. For example: `https://your_hostname/instanceModifier/mag/manager`
+2. Find your registered device.    
+If you don’t know the device user, enter “*” in the “Lookup values for user” field.
+3. Find your device identifier by calling this method in the Mobile SDK: MASDevice.getCurrentDevice().getIdentifier().
+4. Map the device identifier to the OU attribute in MAG Manager (for example: OU=08f8ce12096fcf9d1a1779e4f9dc5fe15519fa2b4ace2af904cf954cc5f5c4e5), Registered Name (DN) column.
+4. Click “Delete Device” to delete the device.
+
+::: alert info
+**Note**: It's not likely, but it's possible that the policy for device registration is incorrectly configured, so check with your Admin if you continue to get "device already registered" errors. See [Configure Device Registration](https://docops.ca.com/mag)
+:::
+
+:::alert info
+**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG server.
+:::
+
+#### Requests are failing
+
+If you see this error: 'ERROR: Could not subscribe to the topic '/1.0/organization/CA Technologies/client/dd0ce313-0683-4fab-b35c-f538789c28d3/users/null/custom/Ha#h''
+
+Check the server-side message topic format for unsupported characters (+ and #).
+
+#### Could not connect to server
+
+This issue occurs when using an emulator on an internal network or over a VPN. To fix the issue, place a reference to the server in the hosts file of your computer - not in the emulator. After that is in place, it may take some time before this mapping propagates and the host resolution takes place.
+
+#### Registered device is invalid error
+
+Any of the following:
+- The device is already registered (mag-identifier and username match an existing registration)
+- MAG server is not configured to accept registration updates
+- Existing registration was found but could not be updated
+- Certificate DN is already registered
+- Certificate DN is too long and exceeds the maximum length
+
+::: alert danger
+**Note**: If you are using the default client credential registration, multiuser mode must be enabled on the MAG Server.
+:::
+
+### Platform Limitations During App Development
+
+The following limitations exist only during development.
+
+- Only Android M+ devices can act as peripheral devices.
+- Only the Nexus 6 device has been tested as a peripheral device.
+
+
+## ADVANCED USE CASES
+
+This section provides solutions that solve specific and immediate customer requests. They may not have the tight coupling between backend and the SDK that we normally provide, but they work. They just require more collaboration between Admins and developers to implement. Hope you find them useful!
+
+### Send HTTP Requests to External APIs
+
+You can send HTTP requests to APIs hosted in others servers (another MAG or other public server). The MASSecurityConfiguration object registers the external server as a trusted source.
+
+For how to use this feature, see [Blog: How to Make Secure Calls to APIs from External Servers](https://www.ca.com/us/developers/mas/blog.html?id=2)
+
+#### Support
+
+The Mobile SDK supports:
+- Sending requests to external APIs with these security features: SSL pinning method, evaluate the certificate against root certificates on device, default credentials injection on API calls
+- Only certificate signature algorithm SHA256 with RSA 2048 bits  
+(SSL pinning will fail if you use other algorithms.)
+
+#### Create the MASSecurityConfiguration object
+
+To send HTTP requests to another MAG or public server, you must configure the MASSecurityConfiguration object. The following security settings are per hostname and port number. The only required attribute is the host; if the host is not set, the request fails with an [SSL pinning error](#ssl-pinning-validation-failed).
+
+| Attribute          | Description                                                                                                              | Required? | Default     |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------|-----------|-------------|
+| host               | Uri object containing the hostname, and port number.                                                                     | Yes       |    null     |
+| isPublic           | Boolean value that includes (or not), credentials from the primary gateway to the target host for network communication. | No        |    false    |
+| certificates       | The list of certificates that contains the pinned certificate.                                                           | No        |    null     |
+| publicKeyHashes    | The list of strings that contains pinned public key hashes in base64 format.                                             | No        |    null     |
+| trustPublicPKI     | Boolean value for whether or not to validate the trusted server against the Android trusted root certificates.           | No        |    false    |
+
+**Example**
+
+```c#
+Java.Security.Cert.X509Certificate certificate = ...;
+string pkHash1 = "H9hoBtopEPatTn ... ="; //Base64 string
+
+IMASSecurityConfiguration configuration = new MASSecurityConfigurationBuilder()
+  .Host(new Android.Net.Uri.Builder().EncodedAuthority(HOST).Build())
+  .Add(certificate)
+  .Add(pkHash1)
+  .Build();
+
+MASConfiguration.CurrentConfiguration.AddSecurityConfiguration(configuration);
+```
+
+#### Invoke an API from external server
+
+The only difference between making HTTP requests to a MAG compared to external servers, is that you must provide the full URL instead of the relative path. For example, if your full URL is https://somegatewayhost:port/some/endpoint, you would pass this value as endPointPath parameter in the SDK CRUD methods (for example, MAS.getFrom / MAS.postTo / MAS.deleteFrom).
+
+**Example**
+```c#
+Android.Net.Uri uri = new Android.Net.Uri.Builder()
+  .EncodedAuthority("swapi.co:443")
+  .Scheme("https")
+  .AppendPath("api").AppendPath("people").AppendPath("1")
+  .Build();
+
+IMASRequest request = new MASRequestBuilder(uri).Build();
+MAS.Invoke(request, new ProtectAPICallback());
+
+// Callback class
+public class ProtectAPICallback : MASCallback
+{
+    public override void OnError(Throwable e)
+    {
+      // Handle Error
+    }
+
+    public override void OnSuccess(Java.Lang.Object result)
+    {
+      // Handle Success
+    }
+}
+
+```
 
 ## Pre-release Agreement
 

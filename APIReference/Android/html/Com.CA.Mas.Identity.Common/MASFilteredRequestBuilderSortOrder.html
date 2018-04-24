@@ -1,0 +1,453 @@
+<html>
+  <head>
+    <title>Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MASFoundation.Android</a> : <a href="index.html">Com.CA.Mas.Identity.Common Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder">Overview</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder">MASFilteredRequestBuilderSortOrder  Class</h1>
+    <p class="Summary" id="T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder:Summary">
+      <a href="http://developer.android.com/reference/com/ca/mas/identity/common/MASFilteredRequestBuilder.SortOrder.html" target="_blank">[Android Documentation]</a>
+    </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder:Signature">[Android.Runtime.Register("com/ca/mas/identity/common/MASFilteredRequestBuilder$SortOrder", DoNotGenerateAcw=true)]<br />public sealed class  <b>MASFilteredRequestBuilderSortOrder</b> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Enum</a></div>
+    </div>
+    <div class="Remarks" id="T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder:Docs:Remarks">
+        <b>Description:</b> The <b>SortOrder</b> enum contains the sorting directives as described in the
+ SCIM Schema reference section {}.
+ The default order, if <i>sortBy</i> is used without a sortOrder is ascending.<p><a href="http://developer.android.com/reference/com/ca/mas/identity/common/MASFilteredRequestBuilder.SortOrder.html" target="_blank">[Android Documentation]</a></p></div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder:Docs:Version Information">
+        <b>Namespace: </b>Com.CA.Mas.Identity.Common<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="javascript:alert(&quot;Documentation not found.&quot;)">Java.Lang.Enum</a>.
+							</p>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div>static </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Ascending">Ascending</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Com.CA.Mas.Identity.Common/MASFilteredRequestBuilderSortOrder.html">MASFilteredRequestBuilderSortOrder</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/identity/common/MASFilteredRequestBuilder.SortOrder.html#ascending" target="_blank">[Android Documentation]</a></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>static </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Descending">Descending</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../Com.CA.Mas.Identity.Common/MASFilteredRequestBuilderSortOrder.html">MASFilteredRequestBuilderSortOrder</a>
+                  </i>. <a href="http://developer.android.com/reference/com/ca/mas/identity/common/MASFilteredRequestBuilder.SortOrder.html#descending" target="_blank">[Android Documentation]</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Properties</h2>
+        <div class="SectionBox" id="Protected Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdClass">ThresholdClass</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>
+                  </i>. This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>override </div></td>
+                <td>
+                  <b>
+                    <a href="#P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdType">ThresholdType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>
+                  </i>. This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ValueOf(System.String)">ValueOf</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../Com.CA.Mas.Identity.Common/MASFilteredRequestBuilderSortOrder.html">MASFilteredRequestBuilderSortOrder</a></nobr><blockquote>Returns the enum constant of this type with the specified name.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Values()">Values</a>
+                  </b>()<nobr> : <a href="../Com.CA.Mas.Identity.Common/MASFilteredRequestBuilderSortOrder.html">MASFilteredRequestBuilderSortOrder</a>[]</nobr><blockquote>Returns an array containing the constants of this enum type, in
+the order they are declared.</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Ascending">Ascending Property</h3>
+        <blockquote id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Ascending:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/identity/common/MASFilteredRequestBuilder.SortOrder.html#ascending" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("ascending")]<br />public static <a href="../Com.CA.Mas.Identity.Common/MASFilteredRequestBuilderSortOrder.html">MASFilteredRequestBuilderSortOrder</a> <b>Ascending</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Ascending:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Ascending:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/identity/common/MASFilteredRequestBuilder.SortOrder.html#ascending" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Ascending:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Identity.Common<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Descending">Descending Property</h3>
+        <blockquote id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Descending:member">
+          <div class="msummary">
+            <a href="http://developer.android.com/reference/com/ca/mas/identity/common/MASFilteredRequestBuilder.SortOrder.html#descending" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("descending")]<br />public static <a href="../Com.CA.Mas.Identity.Common/MASFilteredRequestBuilderSortOrder.html">MASFilteredRequestBuilderSortOrder</a> <b>Descending</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Descending:Value">
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Descending:Remarks">
+            <a href="http://developer.android.com/reference/com/ca/mas/identity/common/MASFilteredRequestBuilder.SortOrder.html#descending" target="_blank">[Android Documentation]</a>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Descending:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Identity.Common<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdClass">ThresholdClass Property</h3>
+        <blockquote id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdClass:member">
+          <div class="msummary">This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> <b>ThresholdClass</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdClass:Value">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> which contains the <tt>java.lang.Class</tt> JNI value corresponding to this type.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdClass:Remarks">This property is used to control which <tt>jclass</tt> is provided to methods like <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Runtime.JNIEnv.CallNonVirtualVoidMethod</a>.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdClass:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Identity.Common<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdType">ThresholdType Property</h3>
+        <blockquote id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdType:member">
+          <div class="msummary">This API supports the Mono for Android infrastructure and is not intended to be used directly from your code.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> <b>ThresholdType</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdType:Value">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> which provides the declaring type.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdType:Remarks">This property is used to control virtual vs. non virtual method dispatch against the underlying JNI object. When this property is equal to the declaring type, then virtual method invocation against the JNI object is performed; otherwise, we assume that the method was overridden by a derived type, and perform non-virtual methdo invocation.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ThresholdType:Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Identity.Common<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ValueOf(System.String)">ValueOf Method</h3>
+        <blockquote id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ValueOf(System.String):member">
+          <div class="msummary">Returns the enum constant of this type with the specified name.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("valueOf", "(Ljava/lang/String;)Lcom/ca/mas/identity/common/MASFilteredRequestBuilder$SortOrder;", "")]<br />public static <a href="../Com.CA.Mas.Identity.Common/MASFilteredRequestBuilderSortOrder.html">MASFilteredRequestBuilderSortOrder</a> <b>ValueOf</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> p0)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ValueOf(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>p0</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ValueOf(System.String):Returns">the enum constant with the specified name</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ValueOf(System.String):Remarks">
+            <p>Returns the enum constant of this type with the specified name.
+The string must match <i>exactly</i></p>
+            <p> an identifier used to declare an
+enum constant in this type.  (Extraneous whitespace characters are 
+not permitted.)</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/identity/common/MASFilteredRequestBuilder.SortOrder.html#valueOf(java.lang.String)" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.ValueOf(System.String):Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Identity.Common<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Values()">Values Method</h3>
+        <blockquote id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Values():member">
+          <div class="msummary">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Android.Runtime.Register("values", "()[Lcom/ca/mas/identity/common/MASFilteredRequestBuilder$SortOrder;", "")]<br />public static <a href="../Com.CA.Mas.Identity.Common/MASFilteredRequestBuilderSortOrder.html">MASFilteredRequestBuilderSortOrder</a>[] <b>Values</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Values():Returns">an array containing the constants of this enum type, in the order they are declared</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Values():Remarks">
+            <p>Returns an array containing the constants of this enum type, in
+the order they are declared.  This method may be used to iterate
+over the constants as follows:
+</p>
+            <p>
+              <a href="http://developer.android.com/reference/com/ca/mas/identity/common/MASFilteredRequestBuilder.SortOrder.html#values()" target="_blank">[Android Documentation]</a>
+            </p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:Com.CA.Mas.Identity.Common.MASFilteredRequestBuilderSortOrder.Values():Version Information">
+            <b>Namespace: </b>Com.CA.Mas.Identity.Common<br /><b>Assembly: </b>MASFoundation.Android (in MASFoundation.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

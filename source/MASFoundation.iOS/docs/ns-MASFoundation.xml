@@ -1,0 +1,7 @@
+<Namespace Name="MASFoundation">
+  <Docs>
+    <summary>MASFoundation is the core MAS framework that handles the communication and authentication layer.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+</Namespace>

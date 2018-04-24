@@ -15,6 +15,10 @@ namespace BasicAuthSample
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton DeregisterButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton GrantFlowToClientCredentials { get; set; }
 
         [Outlet]
@@ -44,6 +48,10 @@ namespace BasicAuthSample
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton UnlockButton { get; set; }
+
+        [Action ("DeregisterButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void DeregisterButton_TouchUpInside (UIKit.UIButton sender);
 
         [Action ("GrantFlowToClientCredentials_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -79,6 +87,11 @@ namespace BasicAuthSample
 
         void ReleaseDesignerOutlets ()
         {
+            if (DeregisterButton != null) {
+                DeregisterButton.Dispose ();
+                DeregisterButton = null;
+            }
+
             if (GrantFlowToClientCredentials != null) {
                 GrantFlowToClientCredentials.Dispose ();
                 GrantFlowToClientCredentials = null;

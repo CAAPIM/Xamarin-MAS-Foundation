@@ -26,6 +26,8 @@ FOUNDATION_EXPORT const unsigned char MASFoundationVersionString[];
 #import <MASFoundation/MASProximityLoginDelegate.h>
 #import <MASFoundation/MASService.h>
 #import <MASFoundation/MASSecurityConfiguration.h>
+#import <MASFoundation/MASError.h>
+#import <MASFoundation/MASNotifications.h>
 
 //
 // MQTT
@@ -52,7 +54,6 @@ FOUNDATION_EXPORT const unsigned char MASFoundationVersionString[];
 #import <MASFoundation/MASRequestBuilder.h>
 #import <MASFoundation/MASRequest.h>
 #import <MASFoundation/MASSharedStorage.h>
-#import <MASFoundation/MASSocialLogin.h>
 #import <MASFoundation/MASUser.h>
 
 //

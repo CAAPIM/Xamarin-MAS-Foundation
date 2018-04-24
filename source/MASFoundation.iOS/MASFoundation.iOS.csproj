@@ -18,7 +18,19 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>  
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mdoc update --delete -fno-assembly-versions -L /Developer/MonoTouch/usr/lib/mono/2.1/ -L /Developer/MonoTouch/usr/lib/mono/Xamarin.iOS/ --out docs bin/Debug/MASFoundation.iOS.dll</command>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mdoc export-msxdoc --out bin/Debug/MASFoundation.iOS.xml docs</command>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -26,6 +38,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mdoc export-msxdoc --out bin/Release/MASFoundation.iOS.xml docs</command>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp -f bin/Release/MASFoundation.iOS.dll bin/Release/MASFoundation.iOS.xml ../../lib</command>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>mdoc export-html --template doctemplate.xsl -o ../../APIReference/iOS/html docs</command>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -33,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
@@ -47,7 +76,49 @@
     <NativeReference Include="MASFoundation.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
+      <LinkerFlags></LinkerFlags>
     </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\MASFoundation\Constants.xml" />
+    <None Include="docs\MASFoundation\MAS.xml" />
+    <None Include="docs\MASFoundation\MASApplication.xml" />
+    <None Include="docs\MASFoundation\MASAuthCredentials.xml" />
+    <None Include="docs\MASFoundation\MASAuthCredentialsAuthorizationCode.xml" />
+    <None Include="docs\MASFoundation\MASAuthCredentialsBlock.xml" />
+    <None Include="docs\MASFoundation\MASAuthCredentialsJWT.xml" />
+    <None Include="docs\MASFoundation\MASAuthCredentialsPassword.xml" />
+    <None Include="docs\MASFoundation\MASAuthenticationStatus.xml" />
+    <None Include="docs\MASFoundation\MASAuthorizationResponse.xml" />
+    <None Include="docs\MASFoundation\MASAuthorizationResponseDelegate.xml" />
+    <None Include="docs\MASFoundation\MASCompletionErrorBlock.xml" />
+    <None Include="docs\MASFoundation\MASConfiguration.xml" />
+    <None Include="docs\MASFoundation\MASDevice.xml" />
+    <None Include="docs\MASFoundation\MASFile.xml" />
+    <None Include="docs\MASFoundation\MASFileDirectoryType.xml" />
+    <None Include="docs\MASFoundation\MASFoundationErrorCode.xml" />
+    <None Include="docs\MASFoundation\MASGatewayMonitorStatusBlock.xml" />
+    <None Include="docs\MASFoundation\MASGatewayMonitoringStatus.xml" />
+    <None Include="docs\MASFoundation\MASGrantFlow.xml" />
+    <None Include="docs\MASFoundation\MASObject.xml" />
+    <None Include="docs\MASFoundation\MASRequest.xml" />
+    <None Include="docs\MASFoundation\MASRequestBuilder.xml" />
+    <None Include="docs\MASFoundation\MASRequestResponseType.xml" />
+    <None Include="docs\MASFoundation\MASResponseInfoErrorBlock.xml" />
+    <None Include="docs\MASFoundation\MASResponseObjectErrorBlock.xml" />
+    <None Include="docs\MASFoundation\MASResponseObjectErrorResult.xml" />
+    <None Include="docs\MASFoundation\MASSecurityConfiguration.xml" />
+    <None Include="docs\MASFoundation\MASService.xml" />
+    <None Include="docs\MASFoundation\MASServiceLifecycleStatus.xml" />
+    <None Include="docs\MASFoundation\MASService_SubclassingHooks.xml" />
+    <None Include="docs\MASFoundation\MASSharedStorage.xml" />
+    <None Include="docs\MASFoundation\MASState.xml" />
+    <None Include="docs\MASFoundation\MASUser.xml" />
+    <None Include="docs\MASFoundation\MASUserAuthCredentialsBlock.xml" />
+    <None Include="docs\MASFoundation\MASUserResponseErrorBlock.xml" />
+    <None Include="docs\MASFoundation\NSData_MAS.xml" />
+    <None Include="docs\index.xml" />
+    <None Include="docs\ns-MASFoundation.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>

@@ -1,0 +1,302 @@
+<Type Name="MASSecurityConfiguration" FullName="MASFoundation.MASSecurityConfiguration">
+  <TypeSignature Language="C#" Value="public class MASSecurityConfiguration : MASFoundation.MASObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASSecurityConfiguration extends MASFoundation.MASObject" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>MASFoundation.MASObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("MASSecurityConfiguration", true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+        MASSecurityConfiguration class is an object that determines security measures for communication between the target host.
+        <para>
+        The class is mainly responsible for SSL pinning mechanism, as well as for including/excluding credentials from primary gateway in the network communication to the target host.</para><para>Default configuration value for designated initializer, new MASSecurityConfiguration(new NSUrl("https://your_gateway_hostname:port")), would be:
+        isPublic: <c>false</c>,
+        validateDomainName: <c>true</c>,
+        trustPublicPKI: <c>false</c>.
+        </para></summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MASSecurityConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("init")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Default constructor, initializes a new instance of this class.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MASSecurityConfiguration (Foundation.NSCoder coder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSCoder coder) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("initWithCoder:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="coder" Type="Foundation.NSCoder" />
+      </Parameters>
+      <Docs>
+        <param name="coder">The unarchiver object.</param>
+        <summary>A constructor that initializes the object from the data stored in the unarchiver object.</summary>
+        <remarks>
+            This constructor is provided to allow the class to be initialized from an unarchiver (for example, during NIB deserialization). This is part of the Foundation.NSCoding protocol.
+
+            If you want to create a subclass of this object and continue to support deserialization from an archive, you should implement a constructor with an identical signature: taking a single parameter of type Foundation.NSCoder and decorate it with the [Export("initWithCoder:"] attribute declaration.
+
+            The state of this object can also be serialized by using the companion method, EncodeTo.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASSecurityConfiguration (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">Unused sentinel value, pass NSObjectFlag.Empty.</param>
+        <summary>Constructor to call on derived classes to skip initialization and merely allocate the object.</summary>
+        <remarks>
+            This constructor is typically used by the binding generator to allocate the object, but prevent the actual initialization to take place. Once the allocation has taken place, the constructor has to initialize the object. With constructors generated by the binding generator this means that it manually invokes one of the "init" methods to initialize the object.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MASSecurityConfiguration (Foundation.NSUrl url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSUrl url) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("initWithURL:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="url" Type="Foundation.NSUrl" />
+      </Parameters>
+      <Docs>
+        <param name="url">NSUrl of the targeted host including HTTP scheme, hostname and port number in http://hostname:port format.</param>
+        <summary>
+        Designated initializer for MASSecurityConfiguration.     
+        <para>NSUrl MUST contain the port number as well.</para><para>Default values for designated initializer are: isPublic: false, trustPublicPKI: false, validateDomainName: true.</para></summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MASSecurityConfiguration (IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Pointer (handle) to the Objective-C class.</param>
+        <summary>A constructor used when creating managed representations of unmanaged objects; Called by the runtime.</summary>
+        <remarks>
+            This constructor is invoked by the runtime infrastructure (ObjCRuntime.GetNSObject (IntPtr)) to create a new managed representation for a pointer to an unmanaged Objective-C object. You should not invoke this method directly, instead you should call the GetNSObject method as it will prevent two instances of a managed object to point to the same native object.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificates">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray Certificates { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray Certificates" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("certificates", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setCertificates:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSArray</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        NSArray value of pinned certificates.  Certificates must be in PEM encoded CRT; each line should be an item of the certificate array.
+        </summary>
+        <value>NSArray of the certificates.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The handle for this class.</summary>
+        <value>The pointer to the Objective-C class.</value>
+        <remarks>
+            Each Xamarin class mirrors an unmanaged Objective-C class. This value contains the pointer to the Objective-C class.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSUrl Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSUrl Host" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("host", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSUrl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        NSUrl value of the target host.
+        </summary>
+        <value>NSUrl of the host.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPublic">
+      <MemberSignature Language="C#" Value="public virtual bool IsPublic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPublic" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("isPublic")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setIsPublic:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets or sets a value determining whether this <see cref="T:MASFoundation.MASSecurityConfiguration" /> to include sensitive credentials from primary gateway in the network communication with the target host.
+        </summary>
+        <value>
+          <c>true</c> if is public; otherwise, <c>false</c>.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKeyHashes">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray PublicKeyHashes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray PublicKeyHashes" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("publicKeyHashes", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setPublicKeyHashes:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSArray</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        NSArray value of pinned public key hashes.  Public key hashes must be in string format.
+        </summary>
+        <value>NSArray of the public key hashes.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustPublicPKI">
+      <MemberSignature Language="C#" Value="public virtual bool TrustPublicPKI { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrustPublicPKI" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("trustPublicPKI")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTrustPublicPKI:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets or sets a value determining whether this <see cref="T:MASFoundation.MASSecurityConfiguration" /> to validate the server trust against iOS' trusted root certificates.
+        </summary>
+        <value>
+          <c>true</c> if trust public pki; otherwise, <c>false</c>.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateDomainName">
+      <MemberSignature Language="C#" Value="public virtual bool ValidateDomainName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateDomainName" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("validateDomainName")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setValidateDomainName:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Gets or sets a value determining whether this <see cref="T:MASFoundation.MASSecurityConfiguration" /> to validate validate the domain name of the certificate on the server trust.
+        </summary>
+        <value>
+          <c>true</c> if validate domain name; otherwise, <c>false</c>.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

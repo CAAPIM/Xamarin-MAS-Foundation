@@ -1,0 +1,24 @@
+<Type Name="MASCompletionErrorBlock" FullName="MASFoundation.MASCompletionErrorBlock">
+  <TypeSignature Language="C#" Value="public delegate void MASCompletionErrorBlock(bool completed, NSError error);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASCompletionErrorBlock extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="arg0" Type="System.Boolean" />
+    <Parameter Name="arg1" Type="Foundation.NSError" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="completed">Indicates if the operation was completed successfully.</param>
+    <param name="error">NSError object in case any error is encountered during the process.</param>
+    <summary>A standard (bool completed, NSError error) block</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+</Type>

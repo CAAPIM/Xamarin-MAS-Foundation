@@ -1,0 +1,72 @@
+<Type Name="MASFileDirectoryType" FullName="MASFoundation.MASFileDirectoryType">
+  <TypeSignature Language="C#" Value="public enum MASFileDirectoryType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASFileDirectoryType extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumerated MASFileDirectoryType that indicates which directory to store MASFile into.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationSupport">
+      <MemberSignature Language="C#" Value="ApplicationSupport" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFileDirectoryType ApplicationSupport = int32(0)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Application Support directory in the application package.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CachesDirectory">
+      <MemberSignature Language="C#" Value="CachesDirectory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFileDirectoryType CachesDirectory = int32(1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cache directory in the application package.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Documents">
+      <MemberSignature Language="C#" Value="Documents" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFileDirectoryType Documents = int32(2)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Documents directory in the application package.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Library">
+      <MemberSignature Language="C#" Value="Library" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFileDirectoryType Library = int32(3)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Library directory in the application package.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Temporary">
+      <MemberSignature Language="C#" Value="Temporary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFileDirectoryType Temporary = int32(-1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFileDirectoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Temporary directory in the application package.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

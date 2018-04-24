@@ -6,55 +6,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:background="#ff3f3f3f">
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
         android:id="@+id/setClientCredentialsFlow"
         android:backgroundTint="#ff000000"
         android:text="Set Grant Flow to Client Credentials"
-        android:autoText="true" />
+        android:autoText="true"
+        android:textColor="#ffffffff" />
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
         android:id="@+id/setPasswordFlow"
         android:backgroundTint="#ff000000"
         android:text="Set Grant Flow to Password"
-        android:autoText="true" />
+        android:autoText="true"
+        android:textColor="#ffffffff" />
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/startSDKButton"
+        android:id="@+id/startSDK"
         android:backgroundTint="#ff000000"
-        android:text="Start SDK" />
+        android:text="Start SDK"
+        android:textColor="#ffffffff" />
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
         android:id="@+id/login"
         android:text="Login"
-        android:backgroundTint="#ff000000" />
+        android:backgroundTint="#ff000000"
+        android:textColor="#ffffffff" />
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
         android:id="@+id/invokeApi"
         android:text="Invoke Protected API"
-        android:backgroundTint="#ff000000" />
+        android:backgroundTint="#ff000000"
+        android:textColor="#ffffffff" />
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
         android:id="@+id/logout"
         android:text="Logout"
-        android:backgroundTint="#ff000000" />
+        android:backgroundTint="#ff000000"
+        android:textColor="#ffffffff" />
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
         android:id="@+id/lockSession"
         android:text="Lock Session"
-        android:backgroundTint="#ff000000" />
+        android:backgroundTint="#ff000000"
+        android:textColor="#ffffffff" />
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
         android:id="@+id/unlockSession"
         android:text="Unlock Session"
-        android:backgroundTint="#ff000000" />
+        android:backgroundTint="#ff000000"
+        android:textColor="#ffffffff" />
+    <Button
+        android:layout_width="250.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/deregister"
+        android:backgroundTint="#ff000000"
+        android:text="Deregister Device"
+        android:textColor="#ffffffff" />
 </LinearLayout>

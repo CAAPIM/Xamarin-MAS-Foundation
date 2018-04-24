@@ -151,10 +151,21 @@ This a valid msso_config.json file exported from a MAG.
 
 ```
                                                  
-## Start Your App
+## Get Started Using the Xamarin Mobile SDK
 
-- [Android Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/master/Guides/Android/ANDROID_GUIDES.md)
-- [iOS Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/master/Guides/iOS/IOS_GUIDES.md)
+The best way to get the lastest Xamarin Mobile SDK libraries is to use the NuGet dependency manager, which is embedded in Visual Studio. 
+
+To add the libraries and set up your project, see:
+
+- [Android Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
+- [iOS Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
+
+If you do not have Visual Studio, go to: [Get NuGet Packages](https://www.nuget.org/packages), and search for: **MASFoundation.Xamarin**.
+
+## API Reference 
+
+- [Android Xamarin API Reference](http://mas.ca.com//xamarin-android/1.6.10/sdk/)
+- [iOS Xamarin API Reference](http://mas.ca.com//xamarin-ios/1.6.10/sdk/)
 
 ## Pre-release Agreement
 
