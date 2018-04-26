@@ -1906,21 +1906,21 @@ namespace MASFoundation
         [NullAllowed, Export("detailedDescription")]
         string DetailedDescription { get; }
 
-        // @property (readonly, copy, nonatomic) NSString * _Nullable iconUrl;
-        [NullAllowed, Export("iconUrl")]
-        string IconUrl { get; }
+        //// @property (readonly, copy, nonatomic) NSString * _Nullable iconUrl;
+        //[NullAllowed, Export("iconUrl")]
+        //string IconUrl { get; }
 
-        // @property (readonly, copy, nonatomic) NSString * _Nullable authUrl;
-        [NullAllowed, Export("authUrl")]
-        string AuthUrl { get; }
+        //// @property (readonly, copy, nonatomic) NSString * _Nullable authUrl;
+        //[NullAllowed, Export("authUrl")]
+        //string AuthUrl { get; }
 
-        // @property (readonly, copy, nonatomic) NSString * _Nullable nativeUrl;
-        [NullAllowed, Export("nativeUrl")]
-        string NativeUrl { get; }
+        //// @property (readonly, copy, nonatomic) NSString * _Nullable nativeUrl;
+        //[NullAllowed, Export("nativeUrl")]
+        //string NativeUrl { get; }
 
-        // @property (readonly, copy, nonatomic) NSDictionary * _Nullable customProperties;
-        [NullAllowed, Export("customProperties", ArgumentSemantic.Copy)]
-        NSDictionary CustomProperties { get; }
+        //// @property (readonly, copy, nonatomic) NSDictionary * _Nullable customProperties;
+        //[NullAllowed, Export("customProperties", ArgumentSemantic.Copy)]
+        //NSDictionary CustomProperties { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable environment;
         [NullAllowed, Export("environment")]

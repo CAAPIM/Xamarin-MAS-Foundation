@@ -131,27 +131,6 @@
         </remarks>
       </Docs>
     </Member>
-    <Member MemberName="AuthUrl">
-      <MemberSignature Language="C#" Value="public virtual string AuthUrl { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string AuthUrl" />
-      <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("authUrl")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-        Gets the auth URL.
-        </summary>
-        <value>The auth URL.</value>
-        <remarks>
-        </remarks>
-      </Docs>
-    </Member>
     <Member MemberName="ClassHandle">
       <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
@@ -184,27 +163,6 @@
         Gets the current application as in singleton MASApplication object.
         </summary>
         <value>The current application as in singleton MASApplication object.</value>
-        <remarks>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="CustomProperties">
-      <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary CustomProperties { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary CustomProperties" />
-      <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("customProperties", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Foundation.NSDictionary</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-        Gets the custom properties of the application.
-        </summary>
-        <value>The custom properties of the application.</value>
         <remarks>
         </remarks>
       </Docs>
@@ -265,27 +223,6 @@
             Gets the environment of the application.
         </summary>
         <value>The environment of the application.</value>
-        <remarks>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="IconUrl">
-      <MemberSignature Language="C#" Value="public virtual string IconUrl { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string IconUrl" />
-      <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("iconUrl")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-        Gets the icon URL.
-        </summary>
-        <value>The icon URL.</value>
         <remarks>
         </remarks>
       </Docs>
@@ -372,27 +309,6 @@
         Gets the name of the application.
         </summary>
         <value>The name of the application.</value>
-        <remarks>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="NativeUrl">
-      <MemberSignature Language="C#" Value="public virtual string NativeUrl { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string NativeUrl" />
-      <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("nativeUrl")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-        Gets the native URL.
-        </summary>
-        <value>The native URL.</value>
         <remarks>
         </remarks>
       </Docs>
