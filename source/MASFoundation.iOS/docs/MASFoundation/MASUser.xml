@@ -3,7 +3,6 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MASUser extends MASFoundation.MASObject" />
   <AssemblyInfo>
     <AssemblyName>MASFoundation.iOS</AssemblyName>
-
   </AssemblyInfo>
   <Base>
     <BaseTypeName>MASFoundation.MASObject</BaseTypeName>
@@ -26,13 +25,9 @@
       <MemberSignature Language="C#" Value="public MASUser ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
       <MemberType>Constructor</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("init")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
@@ -49,13 +44,9 @@
       <MemberSignature Language="C#" Value="public MASUser (Foundation.NSCoder coder);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Foundation.NSCoder coder) cil managed" />
       <MemberType>Constructor</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("initWithCoder:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
@@ -83,11 +74,7 @@
       <MemberSignature Language="C#" Value="protected MASUser (Foundation.NSObjectFlag t);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
       <MemberType>Constructor</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
         </Attribute>
@@ -107,11 +94,7 @@
       <MemberSignature Language="C#" Value="protected MASUser (IntPtr handle);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(native int handle) cil managed" />
       <MemberType>Constructor</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
         </Attribute>
@@ -131,11 +114,7 @@
       <MemberSignature Language="C#" Value="public virtual string AccessToken { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string AccessToken" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("accessToken")</AttributeName>
         </Attribute>
@@ -156,11 +135,7 @@
       <MemberSignature Language="C#" Value="public virtual bool Active { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool Active" />
       <MemberType>Property</MemberType>
-      
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("active")</AttributeName>
         </Attribute>
@@ -180,11 +155,7 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt; Addresses { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSString&gt; Addresses" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("addresses", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -205,11 +176,7 @@
       <MemberSignature Language="C#" Value="public static string AuthCredentialsType { get; }" />
       <MemberSignature Language="ILAsm" Value=".property string AuthCredentialsType" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("authCredentialsType")</AttributeName>
         </Attribute>
@@ -230,7 +197,6 @@
       <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
       <MemberType>Property</MemberType>
-
       <ReturnValue>
         <ReturnType>System.IntPtr</ReturnType>
       </ReturnValue>
@@ -246,11 +212,7 @@
       <MemberSignature Language="C#" Value="public static MASFoundation.MASUser CurrentUser { get; }" />
       <MemberSignature Language="ILAsm" Value=".property class MASFoundation.MASUser CurrentUser" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("currentUser")</AttributeName>
         </Attribute>
@@ -271,11 +233,7 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt; EmailAddresses { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSString&gt; EmailAddresses" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("emailAddresses", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -296,11 +254,7 @@
       <MemberSignature Language="C#" Value="public virtual string FamilyName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string FamilyName" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("familyName")</AttributeName>
         </Attribute>
@@ -321,11 +275,7 @@
       <MemberSignature Language="C#" Value="public virtual string FormattedName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string FormattedName" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("formattedName")</AttributeName>
         </Attribute>
@@ -346,11 +296,7 @@
       <MemberSignature Language="C#" Value="public virtual string GivenName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string GivenName" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("givenName")</AttributeName>
         </Attribute>
@@ -368,20 +314,16 @@
       </Docs>
     </Member>
     <Member MemberName="Groups">
-      <MemberSignature Language="C#" Value="public virtual string[] Groups { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance string[] Groups" />
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray&lt;Foundation.NSString&gt; Groups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray`1&lt;class Foundation.NSString&gt; Groups" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("groups", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>System.String[]</ReturnType>
+        <ReturnType>Foundation.NSArray&lt;Foundation.NSString&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -396,11 +338,7 @@
       <MemberSignature Language="C#" Value="public virtual bool IsAuthenticated { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("isAuthenticated")</AttributeName>
         </Attribute>
@@ -423,11 +361,7 @@
       <MemberSignature Language="C#" Value="public virtual bool IsCurrentUser { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsCurrentUser" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("isCurrentUser")</AttributeName>
         </Attribute>
@@ -449,11 +383,7 @@
       <MemberSignature Language="C#" Value="public virtual bool IsSessionLocked { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsSessionLocked" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("isSessionLocked")</AttributeName>
         </Attribute>
@@ -502,13 +432,9 @@
       <MemberSignature Language="C#" Value="public virtual void LockSessionWithCompletion (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LockSessionWithCompletion(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("lockSessionWithCompletion:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -545,13 +471,9 @@
       <MemberSignature Language="C#" Value="public static void LoginWithAuthCredentials (MASFoundation.MASAuthCredentials authCredentials, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LoginWithAuthCredentials(class MASFoundation.MASAuthCredentials authCredentials, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("loginWithAuthCredentials:completion:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -611,13 +533,9 @@
       <MemberSignature Language="C#" Value="public static void LoginWithAuthorizationCode (string authorizationCode, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LoginWithAuthorizationCode(string authorizationCode, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("loginWithAuthorizationCode:completion:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -671,13 +589,9 @@
       <MemberSignature Language="C#" Value="public static void LoginWithIdToken (string idToken, string tokenType, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LoginWithIdToken(string idToken, string tokenType, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("loginWithIdToken:tokenType:completion:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -735,13 +649,9 @@
       <MemberSignature Language="C#" Value="public static void LoginWithUserName (string userName, string password, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LoginWithUserName(string userName, string password, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("loginWithUserName:password:completion:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -816,13 +726,9 @@
       <MemberSignature Language="C#" Value="public virtual void LogoutWithCompletion (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LogoutWithCompletion(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("logoutWithCompletion:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -851,11 +757,7 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt; PhoneNumbers { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSString&gt; PhoneNumbers" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("phoneNumbers", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -876,11 +778,7 @@
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; Photos { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; Photos" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("photos", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -901,13 +799,9 @@
       <MemberSignature Language="C#" Value="public virtual void RemoveSessionLock ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveSessionLock() cil managed" />
       <MemberType>Method</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("removeSessionLock")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -945,13 +839,9 @@
       <MemberSignature Language="C#" Value="public virtual void RequestUserInfoWithCompletion (MASFoundation.MASUserResponseErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RequestUserInfoWithCompletion(class MASFoundation.MASUserResponseErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("requestUserInfoWithCompletion:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1001,13 +891,9 @@
       <MemberSignature Language="C#" Value="public virtual void UnlockSessionWithCompletion (MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnlockSessionWithCompletion(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("unlockSessionWithCompletion:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1039,13 +925,9 @@
       <MemberSignature Language="C#" Value="public virtual void UnlockSessionWithUserOperationPromptMessage (string userOperationPrompt, MASFoundation.MASCompletionErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnlockSessionWithUserOperationPromptMessage(string userOperationPrompt, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
-
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("unlockSessionWithUserOperationPromptMessage:completion:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1103,11 +985,7 @@
       <MemberSignature Language="C#" Value="public virtual string UserName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
       <MemberType>Property</MemberType>
-
       <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("userName")</AttributeName>
         </Attribute>

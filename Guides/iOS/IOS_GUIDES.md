@@ -1,27 +1,38 @@
 
-## iOS Guides MASFoundation for Xamarin
+
+## What's New for Mobile SDK
+
+For new features and bug fixes, see [Release Notes](https://github.com/CAAPIM/Releases)
+
+## Mobile SDK Libraries
 
 **MASFoundation** is the core MAS framework that handles the communication and authentication layer. Quickly build secure Xamarin apps using these built-in features:
 
 - Authenticate with:
   - Device registration
-  - User login and registered app
+  - User login and client credentials
   - Fingerprint session lock
   - Single Sign-On
 - Securely access protected APIs that are configured with OAuth 2.0
+- Send HTTP requests to external APIs
 
 ## Support and Prerequisites
 
-- [Requirements for CA Mobile API Gateway](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
+- [CA Mobile API Gateway Requirements](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)  
+  You will need an app configuration file (msso_config.json) to create an app.
 - iOS 11.0 for new apps written in C#
 - Apple account ID  
+
+::: alert info 
+**Note**: Our Mobile SDK is tested only on devices using an official iOS version. For example, if iOS app users jailbreak or unlock the OS (rooting the device), the SDK may not work as expected. 
+:::
 
 ## Create an App: Choose a Method
 
 | Get Started...                 | Benefits                                 |
 | ---------------------------------------- | ---------------------------------------- |
 | [Using sample app](#quick-start-with-sample-app) | <ul><li>Use a sample app with features to securely log in, log out, and invoke a protected API on a CA Mobile API Gateway.<li>Ideal for exploring the methods and trying out the Mobile SDK.</li></ul> |
-| [Create app from scratch](#create-app-from-scratch-or-integrate-an-existing-app-into-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Add the SDK libraries using NuGet in Visual Studio, or the dynamic-link libraries (dlls).</li></ul> |                                  
+| [Create app from scratch](#create-app-from-scratch-or-add-an-existing-app-to-the-mobile-sdk) | <ul><li>Create a Xamarin app from scratch (or integrate an existing Xamarin app) for maximum project set up control. Add the SDK libraries using NuGet in Visual Studio, or the dynamic-link libraries (dlls).</li></ul> |                                  
 
 ## Quick Start with Sample App
 
@@ -40,7 +51,7 @@ The sample app:
 After cloning, you will have /sample and /source directories for "Android" and "iOS".
 2. In Visual Studio, select File, Open.
 3. Go to:`Xamarin-MAS-Foundation/sample/iOS/BasicAuthSample`, select **BasicAuthSample.csproj**, and click **Open**.
-4. Open the Assets folder and add your `msso_config.json` app configuration file.
+4. Add your `msso_config.json` app configuration file to the root level of the project.
 5. Select **Build, Build All**, and verify "Build successful".
 6. Deploy and install the application on an emulator.
 7. In your emulator, launch the **BasicAuthSample** app.  
@@ -48,9 +59,9 @@ You should get the confirmation: **MAS SDK started successfully**.
 If you get an error, the most likely cause is an invalid app configuration file. See your Admin for help.
 8. Now you can **log in**, **log out**, and **access a protected API**.
 
-## Create App from Scratch or Integrate an Existing App into the Mobile SDK
+## Create App from Scratch or Add an Existing App to the Mobile SDK
 
-If you have an existing Xamarin app that you want to integrate into the Mobile SDK, or simply want full control to set up a new app, these steps are for you.
+If you want to create an app from scratch for full control of setup, or you have existing Xamarin app, these steps are for you.
 
 ::: alert info
 **Note**: You cannot use an existing iOS Mobile SDK app. You must redo the app using c#.
@@ -59,7 +70,7 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
 ### Step 1: Set Up Visual Studio for the Mobile SDK
 
 1. Verify that you have a CA Mobile API Gateway and an app configuration file (`msso_config.json`).
-2. Add the Mobile SDK (recommended) or dlls to your project.
+2. Add the Mobile SDK using NuGet (recommended) or dlls to your project.
 
     **NuGet Packages**      
       a. In Visual Studio, open your platform app, right click **Packages**, **Add Packages...**        
@@ -71,7 +82,8 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
       Verify that you have both "Android" and "iOS" source directories.    
       b. In Visual Studio, right-click the **References** folder and select **Edit References**.    
       c. Select the **.Net Assembly** tab, and click the **Browse** button.    
-      d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.iOS.dll` file, click **Open** and then **OK**.    
+      d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.iOS.dll` file, click **Open** and then **OK**.   
+         **Important!** Do not move or remove the XML files from this directory; they are required to build your app.    
 
 ### Step 2: Update the Information Property List File
 
@@ -80,7 +92,7 @@ In Visual Studio, verify/change these settings:
 **Update Info.plist**
 
 1. Open the `Info.plist` file
-2. At the bottom, click the Source tab.
+2. At the bottom, click the **Source** tab.
 3. Add the following properties:  
     - **Location When In Use Usage Description** = "Program requires GPS"
     - **NSLocationAlwaysAndWhenInUseUsageDescription** = "Program requires GPS"
@@ -138,10 +150,11 @@ After your project is properly configured, you must start the SDK to establish a
 This method starts the SDK with the currently-active configuration. A currently-active configuration is: 1) the last successfully used configuration, 2) the default JSON configuration file (i.e. msso_config.json in your app bundle) or 3) the custom JSON configuration file defined in `MAS.SetConfigurationFileName("YOUR_JSON.json");`.<br>
 **Recommended for**: Most environments, including production.</br>
 
-```
+```c#
 //
 //  Initialize SDK with default or last active configuration
 //
+// Using callback
 MAS.Start(completion: (completed, error) => {
 
     if (error)
@@ -152,6 +165,12 @@ MAS.Start(completion: (completed, error) => {
     }
 });
 
+// Using async method
+try {
+	var result = await MAS.StartAsync();
+} catch(Exception ex) {
+	//  SDK initialized with an error
+}
 ```
 
 ###  Start with default configuration
@@ -159,10 +178,11 @@ MAS.Start(completion: (completed, error) => {
 This method starts the SDK with the currently-active configuration, or the default configuration (depending on the parameter). If you specify the YES parameter, this overwrites the currently-active configuration with the default configuration (if two configurations are different.). If you pass the NO parameter, this behaves the same as `MAS.Start();`. If the SDK is already started, this method: stops the SDK, then restarts it with the custom JSON object.<br>
 **Recommended for**: Development environments where configurations change often.</br>
 
-```
+```c#
 //
 //  Initialize SDK always with default configuration
 //
+// Using callback
 MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
 
     if (error)
@@ -172,6 +192,13 @@ MAS.StartWithDefaultConfiguration(true, completion: (completed, error) => {
         //  SDK initialized without an error
     }
 });
+
+// Using async method
+try {
+	var result = await MAS.StartWithDefaultConfigurationAsync(true);
+} catch(Exception ex) {
+	//  SDK initialized with an error
+}
 ```
 
 #### Start with custom JSON
@@ -180,7 +207,7 @@ This method starts the SDK with the custom JSON object in jsonObject. This metho
 **Recommended for**: Using multiple MAG servers so that you can dynamically change the configuration during runtime. Note that the backend servers must have a version of the product that supports dynamic client configuration.
 
 ```c#
-//	Get NSDictionary of the configuration file
+// Using callback
 NSDictionary jsonConfiguration = ....;
 MAS.StartWithJSON(jsonConfiguration, completion: (completed, error) => {
     if (error)
@@ -191,6 +218,13 @@ MAS.StartWithJSON(jsonConfiguration, completion: (completed, error) => {
     }
 });
 
+// Using async method
+try {
+	NSDictionary jsonConfiguration = ....;
+	var result = await MAS.StartWithJSONAsync(jsonConfiguration);
+} catch(Exception ex) {
+	//  SDK initialized with an error
+}
 ```
 
 #### Start with file URL
@@ -199,7 +233,7 @@ This method starts the SDK with the custom JSON configuration file. The custom f
 **Recommended for**: Using multiple MAG servers that so you can dynamically change the configuration during runtime. Note: The backend servers must have a version of the product that supports dynamic client configuration.
 
 ```c#
-//	Get NSUrl of the configuration file
+// Using callback
 NSUrl configUrl = new NSUrl("msso_config.json", false);
 MAS.StartWithURL(configUrl, completion: (startCompletedSuccessfully, error) => {
     if (error)
@@ -210,6 +244,13 @@ MAS.StartWithURL(configUrl, completion: (startCompletedSuccessfully, error) => {
     }
 });
 
+// Using async method
+try {
+	NSUrl configUrl = new NSUrl("msso_config.json", false);
+	var result = await MAS.StartWithURLAsync(configUrl);
+} catch(Exception ex) {
+	//  SDK initialized with an error
+}
 ```
 
 #### Start with enrollment URL
@@ -217,7 +258,7 @@ MAS.StartWithURL(configUrl, completion: (startCompletedSuccessfully, error) => {
 This method dynamically initializes the SDK without having the the msso_config.json within the app bundle. This lets you dynamically update the msso_config.json file without having to reinstall the app when the file is updated. As a developer, you can easily switch between MAGs.
 
 ```c#
-//	Get the enrollment URL
+// Using callback
 NSUrl enrollmentUrl = new NSUrl("https://YOUR_GATEWAY:8443/connect/device/config?sessionData=...&subjectKeyHash=...");
 MAS.StartWithURL(enrollmentUrl, completion: (startCompletedSuccessfully, error) => {
     if (error)
@@ -227,6 +268,14 @@ MAS.StartWithURL(enrollmentUrl, completion: (startCompletedSuccessfully, error) 
         //  SDK initialized without an error
     }
 });
+
+// Using async method
+try {
+	NSUrl enrollmentUrl = new NSUrl("https://YOUR_GATEWAY:8443/connect/device/config?sessionData=...&subjectKeyHash=...");
+	var result = await MAS.StartWithURLAsync(enrollmentUrl);
+} catch(Exception ex) {
+	//  SDK initialized with an error
+}
 ```
 
 The Mobile SDK retrieves the `msso_config.json` configuration using an enrollment URL to a target MAG server. You can provide enrollment URL to the Mobile SDK through app linking with an application's custom URL scheme, or any other method. After the Mobile SDK retrieves the enrollment URL, it makes a request to the enrollment URL to download the msso_cconfig.json file, and then puts in the storage.
@@ -289,42 +338,47 @@ MAS.SetKeychainSynchronizable(true);
 //
 ```
 
-## Login: User Authentication and Authorization
+## Log In: Authenticate and Authorize
 
 **Library**: MASFoundation<br>
-**Description**: Authentication methods to use with the MAG and backend services.</br>
+**Description**: Authentication and authorization methods to use with the MAG and backend services.</br>
 
-### No user authentication (default SDK flow)
+The following Mobile SDK flows are based on OAuth 2.0 grants (“methods”). Good news, you don't have to be an OAuth expert to implement these basic flows!
 
-**What**: No user authentication, just access an API. <br>
-**Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
+### No Authentication, Authorize Access to an API (Default)
 
-Set the `MAS.GrantFlow` propery to `MASGrantFlow.ClientCredentials` to set the default flow to no user authentication.
+**What**: When the app starts, bypass user authentication and just authorize access to an API. <br>
+**Scenario**: You designed a mobile bank app where upon logging in, users will see descriptions of banking services. Because this is not sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authorizes access to an API.</br>
+
+Set the `MAS.GrantFlow` property to `MASGrantFlow.ClientCredentials` to set the default flow to access an API.
 
 ```c#
 //  Set grantFlow to Client Credentials
 MAS.GrantFlow = MASGrantFlow.ClientCredentials;
-
 ```
 
-### Authenticate user with password, change default
+### Authenticate User and Password, App Start-Up
 
-**What**: Always start with login screen.<br>
-**Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
+**What**: When the app starts, always present a login screen with username and password.<br>
+**Scenario**: You designed a mobile bank app where users can check bank account balances. Because the data is sensitive, you want always want users to log in when the app starts. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
 
-Set the `MAS.GrantFlow` propery to `MASGrantFlow.Password` to  change the default flow to user authentication with password.
+To change the default flow to user with password, set the `MAS.GrantFlow` property to `MASGrantFlow.Password`. 
 
 ```c#
 //  Set grantFlow to Password
 MAS.GrantFlow = MASGrantFlow.Password;
 ```
 
-### Authenticate user with password method
+### Authenticate User and Password, Specific Action
+
+**What**: Upon a specific action, authenticate username and password.<br>
+**Scenario**: You designed a mobile bank app that starts with a main page with banking services (non-sensitive data), but you also have a menu with a login link to access account balances (sensitive data). Use this method when you want to authenticate for a specific action; in this case, when the user clicks the login link. In OAuth, this is known as explicit password flow. </br>
 
 ```c#
 //
 //  Log in with username and password
 //
+// Using callback
 MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, error) => {
 
     if (error != null)
@@ -334,13 +388,19 @@ MASUser.LoginWithUserName("USER_NAME", "USER_PASSWORD", completion: (completed, 
         Console.WriteLine("Success: User login");
     }
 });
+
+// Using async method
+try {
+	var result = await MASUser.LoginWithUserNameAsync("USER_NAME", "USER_PASSWORD");
+} catch(Exception ex) {
+	// Logged in with an error
+}
 ```
 
+### Authenticate User and Password, Rule-Based
 
-### Authenticate user with password, event-based
-
-**What**: Event-based user authentication<br>
-**Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
+**What**: Trigger username and password authentication based on rules. <br>
+**Scenario**: You designed a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that the login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens expire for the API, the MAG returns an error, triggering the SDK to display the login screen for reauthentication.</br>
 
 ```c#
 //
@@ -384,6 +444,7 @@ MASUser currentUser = MASUser.CurrentUser;
 //
 //  Logout currently authenticated user
 //
+// Using callback
 MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) => {
 
     if (error != null)
@@ -393,6 +454,13 @@ MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) => {
         Console.WriteLine("Success: User logout");
     }
 });
+
+// Using async method
+try {
+	var result = await MASUser.LogoutAsync(user, password);
+} catch(Exception ex) {
+	// Logged out with an error
+}
 ```
 
 
@@ -428,6 +496,7 @@ The Mobile SDK supports using fingerprint session lock with device screen lock w
 //
 //	If the local authentication is not registered and/or available, Mobile SDK will return an error
 //
+// Using callback
 MASUser.CurrentUser.LockSessionWithCompletion(completion: (completed, error) => {
 
     if (completed)
@@ -438,6 +507,13 @@ MASUser.CurrentUser.LockSessionWithCompletion(completion: (completed, error) => 
     	// an error occurred while locking the session
     }
 });
+
+// Using async method
+try {
+	var result = await MASUser.LockSessionAsync();
+} catch(Exception ex) {
+	// an error occurred while locking the session
+}
 ```
 
 #### Verify locked user session
@@ -458,6 +534,7 @@ else if (MASUser.CurrentUser.IsAuthenticated) {
 //
 //	Unlock the currently locked user session.
 //
+// Using callback
 MASUser.CurrentUser.UnlockSessionWithCompletion(completion: (completed, error) => {
 
     if (completed)
@@ -469,13 +546,27 @@ MASUser.CurrentUser.UnlockSessionWithCompletion(completion: (completed, error) =
     }
 });
 
+// Using async method
+try {
+	var result = await MASUser.CurrentUser.UnlockSessionAsync();
+} catch(Exception ex) {
+	// an error occurred while unlocking the session
+}
 
 //
 //	Unlock the currently locked user session with customizable description text which will appear on device's local authentication screen.
 //
+// Using callback
 MASUser.CurrentUser.UnlockSessionWithUserOperationPromptMessage("DESCRIPTION TEXT", completion: (completed, error) => {
      ....       
 });
+
+// Using async method
+try {
+	var result = await MASUser.CurrentUser.UnlockSessionWithUserOperationPromptMessageAsync("DESCRIPTION TEXT");
+} catch(Exception ex) {
+	// an error occurred while unlocking the session
+}
 ```
 
 #### Remove user session lock
@@ -545,7 +636,7 @@ requestBuilder.ResponseType = MASRequestResponseType.Json;
 //  Build MASRequestBuilder to convert into MASRequest object
 MASRequest request = requestBuilder.Build();
 
-//  Using MASRequest object, invoke API
+//  Using MASRequest object, invoke API with callback
 MAS.Invoke(request, completion: (response, responseObject, error) => {
     if (error != null)
     {
@@ -559,6 +650,13 @@ MAS.Invoke(request, completion: (response, responseObject, error) => {
         Console.WriteLine("Success: {0}", value);
     }
 });
+
+//  Using MASRequest object, invoke API with async method
+try {
+	MASResponseObjectErrorResult result = await MAS.InvokeAsync(request);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 #### MASRequest methods
@@ -586,7 +684,17 @@ MASRequest request = MASRequest.GetFrom((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (response, responseObject, error) => {});
+//  Using callback
+MAS.Invoke(request, completion: (response, responseObject, error) => {
+     ....  
+});
+
+//  Using async method
+try {
+	MASResponseObjectErrorResult result = await MAS.InvokeAsync(request);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Delete method
@@ -610,7 +718,17 @@ MASRequest request = MASRequest.DeleteFrom((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (response, responseObject, error) => {});
+//  Using callback
+MAS.Invoke(request, completion: (response, responseObject, error) => {
+     ....  
+});
+
+//  Using async method
+try {
+	MASResponseObjectErrorResult result = await MAS.InvokeAsync(request);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Post method
@@ -634,7 +752,17 @@ MASRequest request = MASRequest.PostTo((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (response, responseObject, error) => {});
+//  Using callback
+MAS.Invoke(request, completion: (response, responseObject, error) => {
+     ....  
+});
+
+//  Using async method
+try {
+	MASResponseObjectErrorResult result = await MAS.InvokeAsync(request);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Put method
@@ -658,7 +786,17 @@ MASRequest request = MASRequest.PutTo((requestBuilder) => {
 //
 //	Use the request object to invoke an API
 //
-MAS.Invoke(request, completion: (response, responseObject, error) => {});
+//  Using callback
+MAS.Invoke(request, completion: (response, responseObject, error) => {
+     ....  
+});
+
+//  Using async method
+try {
+	MASResponseObjectErrorResult result = await MAS.InvokeAsync(request);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 #### Simplified request methods
@@ -687,12 +825,20 @@ All GET, DELETE, POST, and PUT MAS static methods also have the following set of
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
 
+// Using callback
 MAS.GetFrom(@"/protected/resource/products", param, null, MASRequestResponseType.WwwFormUrlEncoded, MASRequestResponseType.Json, completion: (responseInfo, error) =>
 {
 	//
 	//	Handle response here
 	//
 });
+
+//  Using async method
+try {
+	var responseResult = await MAS.GetFromAsync(@"/protected/resource/products", param, null, MASRequestResponseType.WwwFormUrlEncoded, MASRequestResponseType.Json);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Delete method
@@ -701,12 +847,20 @@ MAS.GetFrom(@"/protected/resource/products", param, null, MASRequestResponseType
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
 
+// Using callback
 MAS.DeleteFrom(@"/protected/resource/products", param, null, MASRequestResponseType.WwwFormUrlEncoded, MASRequestResponseType.Json, completion: (responseInfo, error) =>
 {
 	//
 	//	Handle response here
 	//
 });
+
+//  Using async method
+try {
+	var responseResult = await MAS.DeleteFromAsync(@"/protected/resource/products", param, null, MASRequestResponseType.WwwFormUrlEncoded, MASRequestResponseType.Json);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Post method
@@ -715,12 +869,20 @@ MAS.DeleteFrom(@"/protected/resource/products", param, null, MASRequestResponseT
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
 
+//Uisng callback
 MAS.PostTo(@"/protected/resource/products", param, null, MASRequestResponseType.Json, MASRequestResponseType.Json, completion: (responseInfo, error) =>
 {
 	//
 	//	Handle response here
 	//
 });
+
+//  Using async method
+try {
+	var responseResult = await MAS.PostToAsync(@"/protected/resource/products", param, null, MASRequestResponseType.Json, MASRequestResponseType.Json);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ##### Put method
@@ -729,23 +891,31 @@ MAS.PostTo(@"/protected/resource/products", param, null, MASRequestResponseType.
 NSMutableDictionary<NSString, NSString> param = new NSMutableDictionary<NSString, NSString>();
 param.Add(new NSString("operation"), new NSString("listProducts"));
 
+//Uisng callback
 MAS.PutTo(@"/protected/resource/products", param, null, MASRequestResponseType.Json, MASRequestResponseType.Json, completion: (responseInfo, error) =>
 {
 	//
 	//	Handle response here
 	//
 });
+
+//  Using async method
+try {
+	var responseResult = await MAS.PutToAsync(@"/protected/resource/products", param, null, MASRequestResponseType.Json, MASRequestResponseType.Json);
+} catch(Exception ex) {
+	// an error occurred while invoking API
+}
 ```
 
 ### Geolocation
 
 **Library**: None
 
-**Description**: Access to protected APIs can be based on the physical location of the application user. The application passes the physical location information to the MAG in the http header of an access request. Within the http header, location is expressed using latitude/longitude coordinates of the host device. SDK will prompt users to consent to access location information at runtime. Includes the location information in all requests when enabled.
+**Description**: Access protected APIs based on the physical location of the app user. The application passes the physical location information to the MAG in the http header of an access request. Within the http header, location is expressed using latitude/longitude coordinates of the host device. SDK prompts users to consent to access location information at runtime. Includes the location information in all requests when enabled.
 
 **To enable**: Add NSLocationAlwaysUsage Description (location service always in use), or NSLocationWheinUseUsageDescription (location service on demand) to the info.plist.  
 
-**Dependencies**: Admin must enable geolocation in the policy. In the msso_config.json file, the Admin must set `mag.mobile_sdk.location_enabled` to `true` to enable it from the SDK.  If the value is set to `false`, the SDK does not ask for location permission, and does not include geolocation information in header.
+**Dependencies**: Admin must enable geolocation in MAG policy. Second, the Admin must set `mag.mobile_sdk.location_enabled` to `true` in the msso_config.json file to enable geolocation for the SDK.  If the value is set to `false`, the SDK does not ask for location permission, and does not include geolocation information in header.
 
 ### SSL Pinning
 
@@ -758,11 +928,13 @@ SSL pinning is a feature that avoids "man in the middle" attacks where someone c
 - The SDK validates that certificates in the certificate chain exist, and that they have the correct hashing algorithm or RSA bit
 - SSL pinning failures result in the following error in the Mobile SDK: **Error Message: Invalid pinning information for security configuration.  At least one pinning information should be provided or public PKI should be trusted., Error Code: 100212**. 
 
-## Debug the SDK
+## Configure Network Monitoring
 
-### Configure app for network monitoring
+The Mobile SDK always monitors the network reachability status of a MAG URL or other host. 
 
-MAS always monitors the network reachability status of the MAG URL. If your app needs monitoring, here's how to hook your app into monitoring.
+### Network Monitoring to a MAG
+
+Use this method if your app needs to monitor network reachability to a MAG.
 
 ```c#
 public class AppDelegate : UIApplicationDelegate
@@ -790,31 +962,29 @@ public class AppDelegate : UIApplicationDelegate
 }    
 
 ```
-
-#### Configure status notifications
-
-You can register the MAG to monitor status update notifications.  The notification is defined in MASConstants as shown below:
-
-```c#
-MASGatewayMonitorStatusUpdateNotification
-```
-
-#### Conveniences
-
-To determine if the network connection to the MAG is currently reachable:
+### Verify network connection to MAG
 
 ```c#
 MAS.GatewayIsReachable;
 ```
 
-To determine the current status as a string at any time:
+**OR**
 
 ```c#
 MAS.GatewayMonitoringStatusAsString;
 ```
 
+### Monitor Status Notifications
 
-#### Stop and reset the device
+You can register `NSNotification' to monitor status updates.  The notification is defined in MASConstants as shown below:
+
+```c#
+MASGatewayMonitorStatusUpdateNotification
+```
+
+## Manage Devices and Apps
+
+### Stop and reset the device
 
 To stop all processes in the library, use the following method:
 
@@ -822,7 +992,7 @@ To stop all processes in the library, use the following method:
 void MAS.Stop(MASCompletionErrorBlock completion);
 ```
 
-#### Reset all app, device, and user credentials
+### Reset all app, device, and user credentials
 
 To reset all app, device, and user credentials in memory, or in the local and shared group keychains, use the following method:  
 
@@ -842,7 +1012,7 @@ void MASDevice.ResetLocally();
 **Note:** You must restart your app to get new registration of the app, device and user authentication.
 :::
 
-#### Deregister a device
+### Deregister a device
 
 You can programmatically deregister a device to:
 
@@ -870,59 +1040,13 @@ MASDeviceDidFailToDeregisterNotification
 MASDeviceDidDeregisterNotification
 ```
 
-#### Notifications
+## Notifications and Error Handling
+
+### Notifications
 
 During SDK startup, if the SDK detects the server switch from an old configuration to a new configuration, `MASWillSwitchGatewayServerNotification` and `MASDidSwitchGatewayServerNotification` are sent. You can optionally observe these notifications to handle any necessary operation that you may wish to do within your app.  
 
 The SDK determines the server switch by these configuration values: **hostname, port, and prefix**.
-
-#### Handle errors
-
-All errors that occur during SDK startup are returned in the completion block of the method.
-
-```c#
-//Initializing the SDK
-MAS.Start(completion: (completed, error) => {    
-	if (error)
-	{
-		//  Handle error here
-		if(error.Domain.Equals(MASFoundationErrorDomain))
-		{
-			//  MASFoundation error domain
-		}
-		else if(error.Domain.Equals(MASFoundationErrorDomainLocal))
-		{
-			//  MASFoundation local error domain
-		}
-});
-```
-
-All errors that are returned from the startup process should contain proper error message descriptions in `error.localizedDescription` and `error.userInfo`.
-
-##### MASFoundationErrorDomain
-
-```c#
-NSString MASFoundationErrorDomain = "com.ca.MASFoundation.Error:ErrorDomain";
-```
-This error is returned when the SDK fails during communications: app registration, device registration, or user authentication with backend services. This can be caused by invalid configuration values, or  misconfiguration on the backend services.
-
-The error should contain: 1) explanation of the error, 2) the backend services' specific error code and error response in `error.userInfo`.
-
-##### MASFoundationErrorDomainLocal
-
-```c#
-NSString MASFoundationErrorDomainLocal = "com.ca.MASFoundation.localError:ErrorDomain";
-```
-This error is returned when the SDK fails because of client SDK configuration issues. The most common issues are: invalid JSON configuration file, misconfigured device settings (i.e. geolocation or other permissions), or network issues.
-
-##### MASFoundationErrorDomainTargetAPI
-
-```c#
-NSString MASFoundationErrorDomainTargetAPI = "com.ca.MASFoundation.targetAPI:ErrorDomain";
-```
-This error is returned only when a custom endpoint on a backend service fails.
-
-#### Get notifications
 
 You can get notifications of the app registration, device registration and user authentication. These notifications are defined in MASConstants as shown below:
 
@@ -955,6 +1079,52 @@ MASUserWillUpdateInformationNotification
 MASUserDidFailToUpdateInformationNotification
 MASUserDidUpdateInformationNotification
 ```
+
+### Error Handling
+
+All errors that occur during SDK startup are returned in the completion block of the method.
+
+```c#
+//Initializing the SDK
+MAS.Start(completion: (completed, error) => {    
+	if (error)
+	{
+		//  Handle error here
+		if(error.Domain.Equals(MASFoundationErrorDomain))
+		{
+			//  MASFoundation error domain
+		}
+		else if(error.Domain.Equals(MASFoundationErrorDomainLocal))
+		{
+			//  MASFoundation local error domain
+		}
+});
+```
+
+All errors that are returned from the startup process should contain proper error message descriptions in `error.localizedDescription` and `error.userInfo`.
+
+#### MASFoundationErrorDomain
+
+```c#
+NSString MASFoundationErrorDomain = "com.ca.MASFoundation.Error:ErrorDomain";
+```
+This error is returned when the SDK fails during communications: app registration, device registration, or user authentication with backend services. This can be caused by invalid configuration values, or  misconfiguration on the backend services.
+
+The error should contain: 1) explanation of the error, 2) the backend services' specific error code and error response in `error.userInfo`.
+
+#### MASFoundationErrorDomainLocal
+
+```c#
+NSString MASFoundationErrorDomainLocal = "com.ca.MASFoundation.localError:ErrorDomain";
+```
+This error is returned when the SDK fails because of client SDK configuration issues. The most common issues are: invalid JSON configuration file, misconfigured device settings (i.e. geolocation or other permissions), or network issues.
+
+#### MASFoundationErrorDomainTargetAPI
+
+```c#
+NSString MASFoundationErrorDomainTargetAPI = "com.ca.MASFoundation.targetAPI:ErrorDomain";
+```
+This error is returned only when a custom endpoint on a backend service fails.
 
 ## Troubleshoot Your App
 
@@ -1045,15 +1215,23 @@ During app testing (or other administrative/devops use cases), you may need to r
 Use the following method to deregister the device and remove the record on MAG. Note that all apps associated with the device are deregistered.
 
 ```c#
+// Using callback
 MASDevice.CurrentDevice().DeregisterWithCompletion(completion: (completed, error) => {
 	if (completed && error != nil)
 	{
 		// The device is successfully deregistered.
 	}
 	else {
-		//Handle the error
+		// Handle the error
 	}
 });
+
+// Using async method
+try {
+	var result = await MASDevice.CurrentDevice().DeregisterAsync();
+} catch(Exception ex) {
+	// Handle the error
+}
 ```
 
 ### iTunes Store Operation Failed
@@ -1069,6 +1247,10 @@ To fix this, [follow steps 7-10 to remove the simulator file](#binaries), recomp
 `ErrorDomain Code=100212"SSL pinning validation failed: ensure the target domain’s MASSecurityConfiguration is correctly configured."`
 
 This error means that the server security configuration in the MASSecurityConfiguration object for the hostname:portnumber is not valid or is missing. See [Create the MASSecurityConfiguration object](#create-the-massecurityconfiguration-object).
+
+### Errors on Specific iOS Devices
+
+If you have SDK errors that are only occurring on specific iOS devices, environments or settings, verify that the device users have a supported version of the platform. The Mobile SDK is tested only on devices using official iOS platform versions. Next, verify that users have not jailbroken or unlocked the OS (rooted the device). When users tamper with the device in these ways, the SDK can behave in unexpected ways. If either condition is true, users should upgrade to [Support and Prerequisites](#support-and-prerequisites).
 
 ### General Errors
 
@@ -1232,18 +1414,3 @@ The only difference between making HTTP requests to a MAG, versus to external se
 
     MAS.GetFrom("https://itunes.apple.com/search?term=red+hot+chili+peppers&entity=musicVideo", null, null, MASRequestResponseType.Json, MASRequestResponseType.Json, responseInfoErrorBlock);
 ```
-
-## Pre-release Agreement
-
-Copyright (c) 2018 CA. All rights reserved.
-This software is provided under the terms of CA’s Pre-Release Agreement. See the [AGREEMENT][agreement-link] file for details. This software is for evaluation purposes only and currently not supported by CA.
-
- [mag]: https://docops.ca.com/mag
- [mas.ca.com]: http://mas.ca.com/
- [docs]: http://mas.ca.com/docs/
- [StackOverflow]: http://stackoverflow.com/questions/tagged/massdk
- [download]: https://github.com/CAAPIM/iOS-MAS-Foundation/archive/master.zip
- [contributing]: /CONTRIBUTING
- [license-link]: /LICENSE
- [prerequisites]: http://mas.ca.com/docs/ios/1.6.00/guides/#prerequisites
- [agreement-link]: /CA-Beta-Pre-Release-Agreement

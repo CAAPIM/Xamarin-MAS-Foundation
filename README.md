@@ -4,26 +4,29 @@
 
 The Mobile SDK for Xamarin provides simple and secure access to CA Mobile API Gateway (MAG) services. 
 
+## Documentation
+- [Mobile SDK for Xamarin Android Guide](https://mas.ca.com/docs/xamarin-android/1.7.00/guides/)
+- [Mobile SDK for Xamarin iOS Guide](https://mas.ca.com/docs/xamarin-ios/1.7.00/sdk/)
+- [Mobile SDK for Xamarin Android API Reference](https://mas.ca.com/docs/xamarin-android/1.7.00/sdk/)
+- [Mobile SDK for Xamarin iOS API Reference](https://mas.ca.com/docs/xamarin-ios/1.7.00/guides/)
+
 ## What's in this Release
 
-**NOTE**: This version is for **evaluation purposes only** and is not supported by CA Technologies. Documentation is a work in progress.
-
-In this release, you get **MASFoundation** -- the core MAS framework that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these built-in features:
+In this release, you get **MASFoundation**, the core library that handles the communication and authentication layer. With MASFoundation you can quickly build secure Xamarin apps using these features:
  
-- Authenticate with:
-  - Device registration
-  - User login and registered app
+- Authentication and authorization, limited to:  
+  - Device Registration
+  - User log in and client credentials
   - Fingerprint session lock
-  - Single Sign-On
-- Securely access protected APIs that are configured with OAuth 2.0
+  - Single Sign-on 
+- Secure access to APIs
+- Send HTTP Requests to external APIs
 
 The SDK contains:
-
-- MASFoundation framework for iOS and Android with the above features 
+- MASFoundation llibrary for iOS and Android with the above features 
 - A sample app so you can test basic authentication flows with a CA Mobile API Gateway (MAG)
-- Steps to add MASFoundation an existing app
-- API reference documentation
-
+- iOS and Android guides and API reference documentation  
+    
 ::: alert info
 **Note**:  You'll need your own UI framework for a fit and finished app.
 :::
@@ -33,7 +36,6 @@ The SDK contains:
 ### CA Mobile API Gateway
 
 To test your app with the MAG server, you need:
-
    - CA API Gateway 9.3 
    - OTK 4.2
    - CA Mobile API Gateway 4.1 
@@ -151,27 +153,27 @@ This a valid msso_config.json file exported from a MAG.
 
 ```
                                                  
-## Get Started Using the Xamarin Mobile SDK
+## Get Started Documentation
 
-The best way to get the lastest Xamarin Mobile SDK libraries is to use the NuGet dependency manager, which is embedded in Visual Studio. 
+The best way to get the lastest Xamarin Mobile SDK libraries is to use the NuGet dependency manager, which is embedded in Visual Studio. To get started with your app:
 
-To add the libraries and set up your project, see:
+- [Mobile SDK for Xamarin Android Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
+- [Mobile SDK for Xamarin iOS Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
 
-- [Android Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/Android/ANDROID_GUIDES.md)
-- [iOS Xamarin Guide](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/iOS/IOS_GUIDES.md)
-
-If you do not have Visual Studio, go to: [Get NuGet Packages](https://www.nuget.org/packages), and search for: **MASFoundation.Xamarin**.
+If you do not have Visual Studio, go to: [Get MASFoundation for Xamarin on NuGet](https://www.nuget.org/packages), and search for: **MASFoundation.Xamarin**.
 
 ## API Reference 
+- [Mobile SDK for Xamarin Android API Reference](https://mas.ca.com//xamarin-android/1.7.00/sdk/)
+- [Mobile SDK for Xamarin iOS API Reference](https://mas.ca.com//xamarin-ios/1.7.00/sdk/)
 
-- [Android Xamarin API Reference](http://mas.ca.com//xamarin-android/1.6.10/sdk/)
-- [iOS Xamarin API Reference](http://mas.ca.com//xamarin-ios/1.6.10/sdk/)
+## License
 
-## Pre-release Agreement
+Copyright (c) 2016 CA. All rights reserved.
 
-Copyright (c) 2018 CA. All rights reserved.
-This software is provided under the terms of CA’s Pre-Release Agreement. See the [AGREEMENT][agreement-link] file for details. This software is for evaluation purposes only and currently not supported by CA.
+This software may be modified and distributed under the terms
+of the MIT license. See the [LICENSE][license-link] file for details.
 
+ [license-link]: /LICENSE
  [mag]: https://docops.ca.com/mag
  [mas.ca.com]: http://mas.ca.com/
  [docs]: http://mas.ca.com/docs/

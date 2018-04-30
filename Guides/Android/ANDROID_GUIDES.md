@@ -10,10 +10,14 @@
   - Single Sign-On
 - Securely access protected APIs that are configured with OAuth 2.0
 
-## Prerequisites
+## Support and Prerequisites
 
 - [Requirements for CA Mobile API Gateway](https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/DocEdits/Guides/COMMON_GUIDES.md)
 - Android 8.1.0 for new apps written in C#   
+
+::: alert info 
+**Note**: Our Mobile SDK is tested only on devices using an Android official version. If app users customize the device ROM, the SDK may not work as expected. 
+:::
 
 ## Create an App: Choose a Method
 
@@ -67,11 +71,11 @@ If you have an existing Xamarin app that you want to integrate into the Mobile S
   c. Repeat the steps for the other platform.    
 
     **Dlls**   
-  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/    Xamarin-MAS-Foundation.git**        
+  a. Open a terminal window in a directory of your choice, and copy and paste the following: **git clone https://github.com/CAAPIM/Xamarin-MAS-Foundation.git**        
   Verify that you have both "Android" and "iOS" source directories.    
   b. In Visual Studio, right-click the **References** folder and select **Edit References**.    
   c. Select the **.Net Assembly** tab, and click the **Browse** button.    
-  d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.Android.dll` file, click **Open** and then **OK**.    
+  d. Go to this directory: `Xamarin-MAS-Foundation/lib`, select the `MASFoundation.Android.dll` file, click **Open** and then **OK**.        **Important!** Do not move or remove the XML files from this directory; they are required to build your app.
 
 3. Select the `Assets` folder and add your `msso_config.json` app configuration file.  
 If you have multiple MAGs, you will have more than one file.
@@ -209,7 +213,7 @@ Use the new msso_config.json by calling one of the following MAS.start interface
 **Library**: MASFoundation<br>
 **Description**: Authentication methods to use with the MAG and backend services.</br>
 
-### Authenticate user with password, default SDK flow
+### Authenticate User With Password (Default Flow)
 
 **What**: Always start with login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive. Under the covers, the Mobile SDK requests an access token from the MAG. If the username and password are valid, the MAG authenticates and grants access.</br>
@@ -221,7 +225,7 @@ Use the `MAS.SetGrantFlow` method to set the default flow to user authentication
 MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
 ```
 
-### No user authentication
+### No User Authentication
 
 **What**: No user authentication, just access an API. <br>
 **Scenario**: Upon opening your mobile bank app, you want to show your users a few bank services. Because there is no sensitive data, user login is not required. Under the covers, the Mobile SDK requests access to the API using client ID and client secret for the registered app. If the app credentials are valid, the MAG returns an access token. In OAuth, this flow is called **client credential** and it is the default flow of the Mobile SDK. In a nutshell, client credentials authenticates access to an API.</br>
@@ -233,7 +237,7 @@ Use the `MAS.SetGrantFlow` method to set the default flow to no user authenticat
 MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
 ```
 
-### Authenticate user with password method
+### Authenticate User With Password, Explicit
 
 **What**: Always start with user login screen.<br>
 **Scenario**: You created a mobile bank app that checks bank account balances. In this case, you want users to always log in because the data is sensitive.<br>
@@ -257,7 +261,7 @@ private class LoginCallback : MASCallback
 }
  ```
 
-### Authenticate user with password, event-based
+### Authenticate User With Password, Event-Based
 
 **What**: Event-based user authentication<br>
 **Scenario**: You are designing a chat app with single sign-on. If a user has not signed into the app for days (or other rules-based logic), you want your app to ensure that a login screen is redisplayed. The following method is a listener that sits on the MAG. When tokens have expired for the API, the MAG returns an error, triggering the SDK to display the login screen for user reauthentication.</br>
@@ -1133,6 +1137,10 @@ This error means that the server security configuration in the MASSecurityConfig
 
 If you get invalid token, unauthorized, or other authentication errors, it may be due to a MAG server change.  Your Admin must change a client parameter (documented in the 4.0 Release Notes) to allow more than one token per user/client (default). Without making the server changes, the Mobile SDK will not allow the same user to log in to multiple apps instances.
 
+#### Errors on Specific Devices
+
+If you have SDK errors that are only occurring on specific devices, environments or settings, verify that the device users have a supported version of the platform. The Mobile SDK is tested only on devices using an official Android version. Next, verify that users have not customized the device ROM. When users customize the device ROM, the SDK can behave in unexpected ways. If either condition is true, users should upgrade to a supported version [Support and Prerequisites](#support-and-prerequisites).
+
 #### Disable PKCE
 
 Proof Key for Code Exchange (PKCE) provides an extra layer of security for your app. It is enabled by default and works with proximity login. Your Admin does not need to enable the feature on the MAG server. In the enabled state, the Mobile SDK responds to authentication requests or not, based on the policy that is configured by your Admin using OAuth Toolkit. We recommend leaving this feature enabled. However, if you have a specific use case to disable it, go to Reference documentation and change the state: `MAS.enablePKCE(true);`
@@ -1144,6 +1152,7 @@ Proof Key for Code Exchange (PKCE) provides an extra layer of security for your 
 This error occurs when the sample app fails to connect to the MAG server. It is a MAG certificate configuration issue that must be resolved by your Admin. You may need an updated msso_config.json file.
 
 #### Cannot log in due to invalid mag-identifier
+
 This is a common issue that is caused by the following conditions:
 * The registration for the client Id already exists on the MAG Manager.
 * There is an application already installed with a different msso_config file.
