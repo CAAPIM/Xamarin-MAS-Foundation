@@ -754,7 +754,7 @@ namespace MASFoundation
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificates;
         [NullAllowed, Export("gatewayCertificates", ArgumentSemantic.Copy)]
-        NSArray<NSString> GatewayCertificates { get; }
+        string[] GatewayCertificates { get; }
 
         // @property (readonly, copy, nonatomic) NSArray * _Nullable trustedCertPinnedPublickKeyHashes;
         [NullAllowed, Export("trustedCertPinnedPublickKeyHashes", ArgumentSemantic.Copy)]
@@ -763,11 +763,11 @@ namespace MASFoundation
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificatesAsDERData;
         [NullAllowed, Export("gatewayCertificatesAsDERData", ArgumentSemantic.Copy)]
-        NSArray<NSString> GatewayCertificatesAsDERData { get; }
+        string[] GatewayCertificatesAsDERData { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificatesAsPEMData;
         [NullAllowed, Export("gatewayCertificatesAsPEMData", ArgumentSemantic.Copy)]
-        NSArray<NSString> GatewayCertificatesAsPEMData { get; }
+        string[] GatewayCertificatesAsPEMData { get; }
 
         // @property (readonly, nonatomic, strong) NSString * _Nonnull gatewayHostName;
         [Export("gatewayHostName", ArgumentSemantic.Strong)]
@@ -966,9 +966,9 @@ namespace MASFoundation
         NSError ValidateJSONConfiguration(NSDictionary configuration);
 
         // +(void)setSecurityConfiguration:(MASSecurityConfiguration * _Nonnull)securityConfiguration __attribute__((deprecated("[MASConfiguration setSecurityConfiguration:] is deprecated.  Use [MASConfiguration setSecurityConfiguration:error:] instead for better handling of error cases.")));
-        //[Static]
-        //[Export("setSecurityConfiguration:")]
-        //void SetSecurityConfiguration(MASSecurityConfiguration securityConfiguration);
+        [Static]
+        [Export("setSecurityConfiguration:")]
+        void SetSecurityConfiguration(MASSecurityConfiguration securityConfiguration);
     }
 
     // @interface MASDevice : MASObject
@@ -1325,7 +1325,7 @@ namespace MASFoundation
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable groups;
         [NullAllowed, Export("groups", ArgumentSemantic.Copy)]
-        NSArray<NSString> Groups { get; }
+        string[] Groups { get; }
 
         // @property (readonly, assign, nonatomic) BOOL active;
         [Export("active")]
@@ -1906,21 +1906,21 @@ namespace MASFoundation
         [NullAllowed, Export("detailedDescription")]
         string DetailedDescription { get; }
 
-        //// @property (readonly, copy, nonatomic) NSString * _Nullable iconUrl;
-        //[NullAllowed, Export("iconUrl")]
-        //string IconUrl { get; }
+        // @property (readonly, copy, nonatomic) NSString * _Nullable iconUrl;
+        [NullAllowed, Export("iconUrl")]
+        string IconUrl { get; }
 
-        //// @property (readonly, copy, nonatomic) NSString * _Nullable authUrl;
-        //[NullAllowed, Export("authUrl")]
-        //string AuthUrl { get; }
+        // @property (readonly, copy, nonatomic) NSString * _Nullable authUrl;
+        [NullAllowed, Export("authUrl")]
+        string AuthUrl { get; }
 
-        //// @property (readonly, copy, nonatomic) NSString * _Nullable nativeUrl;
-        //[NullAllowed, Export("nativeUrl")]
-        //string NativeUrl { get; }
+        // @property (readonly, copy, nonatomic) NSString * _Nullable nativeUrl;
+        [NullAllowed, Export("nativeUrl")]
+        string NativeUrl { get; }
 
-        //// @property (readonly, copy, nonatomic) NSDictionary * _Nullable customProperties;
-        //[NullAllowed, Export("customProperties", ArgumentSemantic.Copy)]
-        //NSDictionary CustomProperties { get; }
+        // @property (readonly, copy, nonatomic) NSDictionary * _Nullable customProperties;
+        [NullAllowed, Export("customProperties", ArgumentSemantic.Copy)]
+        NSDictionary CustomProperties { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable environment;
         [NullAllowed, Export("environment")]
@@ -1936,7 +1936,7 @@ namespace MASFoundation
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable scope;
         [NullAllowed, Export("scope", ArgumentSemantic.Copy)]
-        NSArray<NSString> Scope { get; }
+        string[] Scope { get; }
 
         // @property (readonly, copy, nonatomic) NSString * _Nullable scopeAsString;
         [NullAllowed, Export("scopeAsString")]
@@ -2001,49 +2001,21 @@ namespace MASFoundation
     [BaseType(typeof(MASObject))]
     interface MASAuthCredentials
     {
-        // @property (nonatomic, strong, readonly, nonnull) NSString *credentialsType;
-        [Export("credentialsType", ArgumentSemantic.Strong)]
+        // @property (readonly, assign, nonatomic) NSString * credentialsType;
+        [Export("credentialsType")]
         string CredentialsType { get; }
-
-        // @property (nonatomic, strong, readonly, nonnull) NSString *csrUsername;
-        [Export("csrUsername", ArgumentSemantic.Strong)]
-        string CsrUsername { get; }
-
-        // @property (nonatomic, strong, readonly, nonnull) NSString *registerEndpoint;
-        [Export("registerEndpoint", ArgumentSemantic.Strong)]
-        string RegisterEndpoint { get; }
-
-        // @property (nonatomic, strong, readonly, nonnull) NSString *tokenEndpoint;
-        [Export("tokenEndpoint", ArgumentSemantic.Strong)]
-        string TokenEndpoint { get; }
 
         // @property (readonly, assign, nonatomic) BOOL canRegisterDevice;
         [Export("canRegisterDevice")]
         bool CanRegisterDevice { get; }
 
-        // @property (nonatomic, assign, readonly) BOOL isReusable;
-        [Export("isReusable")]
-        bool IsReusable { get; }
+        // @property (readonly, assign, nonatomic) BOOL isReuseable;
+        [Export("isReuseable")]
+        bool IsReuseable { get; }
 
         // -(void)clearCredentials;
         [Export("clearCredentials")]
         void ClearCredentials();
-
-        // (instancetype _Nullable)initWithCredentialsType:(NSString * _Nonnull)credentialsType csrUsername:(NSString * _Nonnull)csrUsername canRegisterDevice:(BOOL)canRegisterDevice isReusable:(BOOL)isReusable;
-        [Export("initWithCredentialsType:csrUsername:canRegisterDevice:isReusable:")]
-        IntPtr Constructor(string credentialsType, string csrUsername, bool canRegisterDevice, bool isReusable);
-
-        // - (instancetype _Nullable)initWithCredentialsType:(NSString * _Nonnull)credentialsType csrUsername:(NSString * _Nonnull)csrUsername canRegisterDevice:(BOOL)canRegisterDevice isReusable:(BOOL)isReusable registerEndpoint:(NSString * _Nonnull)registerEndpoint tokenEndpoint:(NSString * _Nonnull)tokenEndpoint;
-        [Export("initWithCredentialsType:csrUsername:canRegisterDevice:isReusable:registerEndpoint:tokenEndpoint:")]
-        IntPtr Constructor(string credentialsType, string csrUsername, bool canRegisterDevice, bool isReusable, string registerEndpoint, string tokenEndpoint);
-
-        // -(id)getHeaders;
-        [Export("getHeaders")]
-        NSDictionary Headers { get; }
-
-        // -(id)getParameters;
-        [Export("getParameters")]
-        NSDictionary Parameters { get; }
     }
 
     // @interface MASAuthCredentialsAuthorizationCode : MASAuthCredentials
