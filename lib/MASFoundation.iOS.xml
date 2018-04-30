@@ -1420,13 +1420,6 @@
             <value>The authentication status.</value>
             <remarks />
         </member>
-        <member name="P:MASFoundation.MASApplication.AuthUrl">
-            <summary>
-        Gets the auth URL.
-        </summary>
-            <value>The auth URL.</value>
-            <remarks />
-        </member>
         <member name="P:MASFoundation.MASApplication.ClassHandle">
             <summary>The handle for this class.</summary>
             <value>The pointer to the Objective-C class.</value>
@@ -1439,13 +1432,6 @@
         Gets the current application as in singleton MASApplication object.
         </summary>
             <value>The current application as in singleton MASApplication object.</value>
-            <remarks />
-        </member>
-        <member name="P:MASFoundation.MASApplication.CustomProperties">
-            <summary>
-        Gets the custom properties of the application.
-        </summary>
-            <value>The custom properties of the application.</value>
             <remarks />
         </member>
         <member name="P:MASFoundation.MASApplication.DetailedDescription">
@@ -1467,13 +1453,6 @@
             Gets the environment of the application.
         </summary>
             <value>The environment of the application.</value>
-            <remarks />
-        </member>
-        <member name="P:MASFoundation.MASApplication.IconUrl">
-            <summary>
-        Gets the icon URL.
-        </summary>
-            <value>The icon URL.</value>
             <remarks />
         </member>
         <member name="P:MASFoundation.MASApplication.Identifier">
@@ -1504,13 +1483,6 @@
         Gets the name of the application.
         </summary>
             <value>The name of the application.</value>
-            <remarks />
-        </member>
-        <member name="P:MASFoundation.MASApplication.NativeUrl">
-            <summary>
-        Gets the native URL.
-        </summary>
-            <value>The native URL.</value>
             <remarks />
         </member>
         <member name="P:MASFoundation.MASApplication.Organization">
@@ -2445,16 +2417,6 @@
         </summary>
             <value>The array of currently active MASSecurityConfigurations.</value>
             <remarks />
-        </member>
-        <member name="M:MASFoundation.MASConfiguration.SetSecurityConfiguration(MASFoundation.MASSecurityConfiguration)">
-            <param name="securityConfiguration">MASSecurityConfiguration object with host, and security measure configuration values.</param>
-            <summary>
-        Sets security measure for SSL pinning, and SSL validation for specified host in MASSecurityConfiguration object.
-        <para>MASSecurityConfiguration must have valid host in NSUrl object with port number(port number is mandatory), at least one pinning information(either certificates, or public key hashes), or trust public PKI.If public PKI is not trusted, and no pinning information is provided, it will fail to store the security configuration object, and eventually fail on evaluating SSL for requests.</para><para>Upon SDK initialization, MASConfiguration.CurrentConfiguration.GatewayUrl's MASSecurityConfiguration object will be overwritten. If primary gateway's security configuration has to be modified, ensure to set security configuration after SDK initialization.</para></summary>
-            <remarks />
-            <deprecated type="deprecate">
-        This method is deprecated.  Use MASConfiguration.SetSecurityConfiguration(MASSecurityConfiguration, NSError) instead for better handling of error cases.
-        </deprecated>
         </member>
         <member name="M:MASFoundation.MASConfiguration.SetSecurityConfiguration(MASFoundation.MASSecurityConfiguration,Foundation.NSError@)">
             <param name="securityConfiguration">MASSecurityConfiguration object with host, and security measure configuration values.</param>

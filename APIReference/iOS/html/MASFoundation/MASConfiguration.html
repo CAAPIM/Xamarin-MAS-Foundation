@@ -1044,17 +1044,6 @@
                 </td>
                 <td colspan="2">
                   <b>
-                    <a href="#M:MASFoundation.MASConfiguration.SetSecurityConfiguration(MASFoundation.MASSecurityConfiguration)">SetSecurityConfiguration</a>
-                  </b>(<a href="../MASFoundation/MASSecurityConfiguration.html">MASSecurityConfiguration</a>)<blockquote>
-        Sets security measure for SSL pinning, and SSL validation for specified host in MASSecurityConfiguration object.
-        <p>MASSecurityConfiguration must have valid host in NSUrl object with port number(port number is mandatory), at least one pinning information(either certificates, or public key hashes), or trust public PKI.If public PKI is not trusted, and no pinning information is provided, it will fail to store the security configuration object, and eventually fail on evaluating SSL for requests.</p><p>Upon SDK initialization, MASConfiguration.CurrentConfiguration.GatewayUrl's MASSecurityConfiguration object will be overwritten. If primary gateway's security configuration has to be modified, ensure to set security configuration after SDK initialization.</p></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static </div>
-                </td>
-                <td colspan="2">
-                  <b>
                     <a href="#M:MASFoundation.MASConfiguration.SetSecurityConfiguration(MASFoundation.MASSecurityConfiguration,Foundation.NSError@)">SetSecurityConfiguration</a>
                   </b>(<a href="../MASFoundation/MASSecurityConfiguration.html">MASSecurityConfiguration</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
         Sets security measure for SSL pinning, and SSL validation for specified host in MASSecurityConfiguration object.     
@@ -1975,30 +1964,6 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:MASFoundation.MASConfiguration.SecurityConfigurations:Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MASFoundation.MASConfiguration.SetSecurityConfiguration(MASFoundation.MASSecurityConfiguration)">SetSecurityConfiguration Method</h3>
-        <blockquote id="M:MASFoundation.MASConfiguration.SetSecurityConfiguration(MASFoundation.MASSecurityConfiguration):member">
-          <div class="msummary">
-        Sets security measure for SSL pinning, and SSL validation for specified host in MASSecurityConfiguration object.
-        <p>MASSecurityConfiguration must have valid host in NSUrl object with port number(port number is mandatory), at least one pinning information(either certificates, or public key hashes), or trust public PKI.If public PKI is not trusted, and no pinning information is provided, it will fail to store the security configuration object, and eventually fail on evaluating SSL for requests.</p><p>Upon SDK initialization, MASConfiguration.CurrentConfiguration.GatewayUrl's MASSecurityConfiguration object will be overwritten. If primary gateway's security configuration has to be modified, ensure to set security configuration after SDK initialization.</p></div>
-          <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("setSecurityConfiguration:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetSecurityConfiguration</b> (<a href="../MASFoundation/MASSecurityConfiguration.html">MASSecurityConfiguration</a> securityConfiguration)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MASFoundation.MASConfiguration.SetSecurityConfiguration(MASFoundation.MASSecurityConfiguration):Parameters">
-            <dl>
-              <dt>
-                <i>securityConfiguration</i>
-              </dt>
-              <dd>MASSecurityConfiguration object with host, and security measure configuration values.</dd>
-            </dl>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASConfiguration.SetSecurityConfiguration(MASFoundation.MASSecurityConfiguration):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MASFoundation.MASConfiguration.SetSecurityConfiguration(MASFoundation.MASSecurityConfiguration):Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
