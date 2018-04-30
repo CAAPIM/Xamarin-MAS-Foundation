@@ -966,9 +966,9 @@ namespace MASFoundation
         NSError ValidateJSONConfiguration(NSDictionary configuration);
 
         // +(void)setSecurityConfiguration:(MASSecurityConfiguration * _Nonnull)securityConfiguration __attribute__((deprecated("[MASConfiguration setSecurityConfiguration:] is deprecated.  Use [MASConfiguration setSecurityConfiguration:error:] instead for better handling of error cases.")));
-        [Static]
-        [Export("setSecurityConfiguration:")]
-        void SetSecurityConfiguration(MASSecurityConfiguration securityConfiguration);
+        //[Static]
+        //[Export("setSecurityConfiguration:")]
+        //void SetSecurityConfiguration(MASSecurityConfiguration securityConfiguration);
     }
 
     // @interface MASDevice : MASObject
