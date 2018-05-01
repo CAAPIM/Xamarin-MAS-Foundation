@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="MASFoundation.iOS" Version="1.0.6694.17194">
+    <Assembly Name="MASFoundation.iOS" Version="1.0.6695.21898">
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.LinkerSafe</AttributeName>
@@ -76,9 +76,6 @@
       <Type Name="MASResponseObjectErrorBlock" Kind="Delegate" />
       <Type Name="MASResponseObjectErrorResult" Kind="Class" />
       <Type Name="MASSecurityConfiguration" Kind="Class" />
-      <Type Name="MASService" Kind="Class" />
-      <Type Name="MASService_SubclassingHooks" Kind="Class" />
-      <Type Name="MASServiceLifecycleStatus" Kind="Enumeration" />
       <Type Name="MASSharedStorage" Kind="Class" />
       <Type Name="MASState" Kind="Enumeration" />
       <Type Name="MASUser" Kind="Class" />
@@ -91,29 +88,6 @@
   </Types>
   <Title>MASFoundation.iOS</Title>
   <ExtensionMethods>
-    <ExtensionMethod>
-      <Targets>
-        <Target Type="T:MASFoundation.MASService" />
-      </Targets>
-      <Member MemberName="ServiceDidFailWithError">
-        <MemberSignature Language="C#" Value="public static void ServiceDidFailWithError (this MASFoundation.MASService This, Foundation.NSError error);" />
-        <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ServiceDidFailWithError(class MASFoundation.MASService This, class Foundation.NSError error) cil managed" />
-        <MemberType>ExtensionMethod</MemberType>
-        <ReturnValue>
-          <ReturnType>System.Void</ReturnType>
-        </ReturnValue>
-        <Parameters>
-          <Parameter Name="This" Type="MASFoundation.MASService" RefType="this" />
-          <Parameter Name="error" Type="Foundation.NSError" />
-        </Parameters>
-        <Docs>
-          <param name="This">This instance of the MASService.</param>
-          <param name="error">the NSError that the service experienced.</param>
-          <summary>Call for subclasses to use to indicate an error has occurred.</summary>
-        </Docs>
-        <Link Type="MASFoundation.MASService_SubclassingHooks" Member="M:MASFoundation.MASService_SubclassingHooks.ServiceDidFailWithError(MASFoundation.MASService,Foundation.NSError)" />
-      </Member>
-    </ExtensionMethod>
     <ExtensionMethod>
       <Targets>
         <Target Type="T:Foundation.NSData" />
