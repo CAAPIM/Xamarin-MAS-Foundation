@@ -2458,7 +2458,7 @@
             <value>The OAuth 2 token revoke endpoint.</value>
             <remarks />
         </member>
-        <member name="P:MASFoundation.MASConfiguration.TrustedCertPinnedPublickKeyHashes">
+        <member name="P:MASFoundation.MASConfiguration.TrustedCertPinnedPublicKeyHashes">
             <summary>
         Gets the array of trusted public key hashes for certificate pinning.
         </summary>
@@ -2872,8 +2872,8 @@
         <member name="F:MASFoundation.MASFoundationErrorCode.BLEPoweredOff">
             <summary>BLE powered Off.</summary>
         </member>
-        <member name="F:MASFoundation.MASFoundationErrorCode.BLERestting">
-            <summary>BLE restting.</summary>
+        <member name="F:MASFoundation.MASFoundationErrorCode.BLEResetting">
+            <summary>BLE resetting.</summary>
         </member>
         <member name="F:MASFoundation.MASFoundationErrorCode.BLERSSINotInRange">
             <summary>BLE RSS is not in range.</summary>

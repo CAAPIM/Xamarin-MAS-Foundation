@@ -73,13 +73,6 @@
     <BundleResource Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="MASFoundation.framework">
-      <Kind>Framework</Kind>
-      <SmartLink>False</SmartLink>
-      <LinkerFlags></LinkerFlags>
-    </NativeReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="docs\MASFoundation\Constants.xml" />
     <None Include="docs\MASFoundation\MAS.xml" />
     <None Include="docs\MASFoundation\MASApplication.xml" />
@@ -108,9 +101,6 @@
     <None Include="docs\MASFoundation\MASResponseObjectErrorBlock.xml" />
     <None Include="docs\MASFoundation\MASResponseObjectErrorResult.xml" />
     <None Include="docs\MASFoundation\MASSecurityConfiguration.xml" />
-    <None Include="docs\MASFoundation\MASService.xml" />
-    <None Include="docs\MASFoundation\MASServiceLifecycleStatus.xml" />
-    <None Include="docs\MASFoundation\MASService_SubclassingHooks.xml" />
     <None Include="docs\MASFoundation\MASSharedStorage.xml" />
     <None Include="docs\MASFoundation\MASState.xml" />
     <None Include="docs\MASFoundation\MASUser.xml" />
@@ -119,6 +109,12 @@
     <None Include="docs\MASFoundation\NSData_MAS.xml" />
     <None Include="docs\index.xml" />
     <None Include="docs\ns-MASFoundation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="MASFoundation.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>

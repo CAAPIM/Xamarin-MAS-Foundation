@@ -757,9 +757,9 @@ namespace MASFoundation
         NSArray<NSString> GatewayCertificates { get; }
 
         // @property (readonly, copy, nonatomic) NSArray * _Nullable trustedCertPinnedPublickKeyHashes;
-        [NullAllowed, Export("trustedCertPinnedPublickKeyHashes", ArgumentSemantic.Copy)]
+        [NullAllowed, Export("trustedCertPinnedPublicKeyHashes", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray TrustedCertPinnedPublickKeyHashes { get; }
+        NSArray TrustedCertPinnedPublicKeyHashes { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificatesAsDERData;
         [NullAllowed, Export("gatewayCertificatesAsDERData", ArgumentSemantic.Copy)]
