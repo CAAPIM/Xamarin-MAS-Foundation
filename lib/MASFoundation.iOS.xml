@@ -3416,13 +3416,6 @@
         default values for designated initializer are: isPublic: NO, sign: NO, requestType:MASRequestResponseTypeJson, responseType:MASRequestResponseTypeJson.
         </remarks>
         </member>
-        <member name="P:MASFoundation.MASRequest.PrivateKey">
-            <summary>
-        NSData value of private key.
-        </summary>
-            <value>The private key.</value>
-            <remarks />
-        </member>
         <member name="M:MASFoundation.MASRequest.PutTo(System.Action{MASFoundation.MASRequestBuilder})">
             <param name="block">MASRequestBuilder block containing all parameters to build the request.</param>
             <summary>
@@ -3552,13 +3545,6 @@
         </summary>
             <value>
                 <c>true</c> if is public; otherwise, <c>false</c>.</value>
-            <remarks />
-        </member>
-        <member name="P:MASFoundation.MASRequestBuilder.PrivateKey">
-            <summary>
-        NSData value of private key.
-        </summary>
-            <value>The private key.</value>
             <remarks />
         </member>
         <member name="P:MASFoundation.MASRequestBuilder.Query">

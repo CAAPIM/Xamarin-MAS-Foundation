@@ -1415,7 +1415,7 @@ namespace MASFoundation
 
     // @interface MAS (NSData)
     [BaseType(typeof(NSData))]
-    [Category]
+    [Category (allowStaticMembers: true)]
     interface NSData_MAS
     {
         // +(NSData * _Nullable)encryptData:(NSData * _Nonnull)data password:(NSString * _Nonnull)password error:(NSError * _Nullable * _Nullable)anError;
@@ -1516,9 +1516,9 @@ namespace MASFoundation
         //[NullAllowed, Export("claims", ArgumentSemantic.Strong)]
         //MASClaims Claims { get; }
 
-        // @property (readonly, nonatomic, strong) NSData * _Nullable privateKey;
-        [NullAllowed, Export("privateKey", ArgumentSemantic.Strong)]
-        NSData PrivateKey { get; }
+        //// @property (readonly, nonatomic, strong) NSData * _Nullable privateKey;
+        //[NullAllowed, Export("privateKey", ArgumentSemantic.Strong)]
+        //NSData PrivateKey { get; }
 
         // @property (nonatomic, strong) NSDictionary * _Nullable header;
         [NullAllowed, Export("header", ArgumentSemantic.Strong)]
@@ -1584,9 +1584,9 @@ namespace MASFoundation
         [NullAllowed, Export("endPoint", ArgumentSemantic.Strong)]
         string EndPoint { get; }
 
-        // @property (readonly, nonatomic, strong) NSData * _Nullable privateKey;
-        [NullAllowed, Export("privateKey", ArgumentSemantic.Strong)]
-        NSData PrivateKey { get; }
+        //// @property (readonly, nonatomic, strong) NSData * _Nullable privateKey;
+        //[NullAllowed, Export("privateKey", ArgumentSemantic.Strong)]
+        //NSData PrivateKey { get; }
 
         // @property (readonly, nonatomic, strong) NSDictionary * _Nullable header;
         [NullAllowed, Export("header", ArgumentSemantic.Strong)]
