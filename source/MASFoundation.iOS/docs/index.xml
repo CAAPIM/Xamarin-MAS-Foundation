@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="MASFoundation.iOS" Version="1.0.6695.21898">
+    <Assembly Name="MASFoundation.iOS" Version="1.0.6695.24130">
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.LinkerSafe</AttributeName>
