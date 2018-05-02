@@ -1194,13 +1194,13 @@
         </remarks>
       </Docs>
     </Member>
-    <Member MemberName="TrustedCertPinnedPublickKeyHashes">
-      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray TrustedCertPinnedPublickKeyHashes { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray TrustedCertPinnedPublickKeyHashes" />
+    <Member MemberName="TrustedCertPinnedPublicKeyHashes">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSArray TrustedCertPinnedPublicKeyHashes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray TrustedCertPinnedPublicKeyHashes" />
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
-          <AttributeName>get: Foundation.Export("trustedCertPinnedPublickKeyHashes", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+          <AttributeName>get: Foundation.Export("trustedCertPinnedPublicKeyHashes", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

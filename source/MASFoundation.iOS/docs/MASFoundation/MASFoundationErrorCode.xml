@@ -222,15 +222,15 @@
         <summary>BLE powered Off.</summary>
       </Docs>
     </Member>
-    <Member MemberName="BLERestting">
-      <MemberSignature Language="C#" Value="BLERestting" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLERestting = int32(150008)" />
+    <Member MemberName="BLEResetting">
+      <MemberSignature Language="C#" Value="BLEResetting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode BLEResetting = int32(150008)" />
       <MemberType>Field</MemberType>
       <ReturnValue>
         <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>BLE restting.</summary>
+        <summary>BLE resetting.</summary>
       </Docs>
     </Member>
     <Member MemberName="BLERSSINotInRange">

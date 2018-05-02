@@ -148,7 +148,7 @@ namespace MASFoundation
         BLEDelegateNotDefined = 150005,
         BLEInvalidAuthenticationProvider = 150006,
         BLEPoweredOff = 150007,
-        BLERestting = 150008,
+        BLEResetting = 150008,
         BLERSSINotInRange = 150009,
         BLEUnSupported = 150010,
         BLEUnauthorized = 150011,
