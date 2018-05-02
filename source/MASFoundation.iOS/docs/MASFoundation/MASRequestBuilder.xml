@@ -296,27 +296,6 @@
         </remarks>
       </Docs>
     </Member>
-    <Member MemberName="PrivateKey">
-      <MemberSignature Language="C#" Value="public virtual Foundation.NSData PrivateKey { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSData PrivateKey" />
-      <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("privateKey", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Foundation.NSData</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-        NSData value of private key.
-        </summary>
-        <value>The private key.</value>
-        <remarks>
-        </remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Query">
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary Query { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary Query" />

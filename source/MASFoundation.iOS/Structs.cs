@@ -210,18 +210,18 @@ namespace MASFoundation
     //    PeripheralSessionNotified
     //}
 
-    //[Native]
-    public enum MASServiceLifecycleStatus //: nint
-    {
-        Unknown = -1,
-        Initialized,
-        Loaded,
-        WillStart,
-        DidStart,
-        WillStop,
-        DidStop,
-        StateCount
-    }
+    ////[Native]
+    //public enum MASServiceLifecycleStatus //: nint
+    //{
+    //    Unknown = -1,
+    //    Initialized,
+    //    Loaded,
+    //    WillStart,
+    //    DidStart,
+    //    WillStop,
+    //    DidStop,
+    //    StateCount
+    //}
 
     ////[Native]
     //public enum MQTTConnectionReturnCode //: nuint

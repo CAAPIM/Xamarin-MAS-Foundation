@@ -301,70 +301,70 @@ namespace MASFoundation
     //    void DidReceiveProximityLoginError(NSError error);
     //}
 
-    // @interface MASService : NSObject
-    [BaseType(typeof(NSObject))]
-    interface MASService
-    {
-        // @property (readonly, assign, nonatomic) MASServiceLifecycleStatus lifecycleStatus;
-        [Export("lifecycleStatus", ArgumentSemantic.Assign)]
-        MASServiceLifecycleStatus LifecycleStatus { get; }
+    //// @interface MASService : NSObject
+    //[BaseType(typeof(NSObject))]
+    //interface MASService
+    //{
+    //    // @property (readonly, assign, nonatomic) MASServiceLifecycleStatus lifecycleStatus;
+    //    [Export("lifecycleStatus", ArgumentSemantic.Assign)]
+    //    MASServiceLifecycleStatus LifecycleStatus { get; }
 
-        // +(instancetype _Nullable)sharedService;
-        [Static]
-        [Export("sharedService")]
-        [return: NullAllowed]
-        MASService SharedService();
+    //    // +(instancetype _Nullable)sharedService;
+    //    [Static]
+    //    [Export("sharedService")]
+    //    [return: NullAllowed]
+    //    MASService SharedService();
 
-        // +(NSString * _Nullable)serviceUUID;
-        [Static]
-        [NullAllowed, Export("serviceUUID")]
-        //[Verify(MethodToProperty)]
-        string ServiceUUID { get; }
+    //    // +(NSString * _Nullable)serviceUUID;
+    //    [Static]
+    //    [NullAllowed, Export("serviceUUID")]
+    //    //[Verify(MethodToProperty)]
+    //    string ServiceUUID { get; }
 
-        // -(void)serviceDidLoad;
-        [Export("serviceDidLoad")]
-        void ServiceDidLoad();
+    //    // -(void)serviceDidLoad;
+    //    [Export("serviceDidLoad")]
+    //    void ServiceDidLoad();
 
-        // -(void)serviceWillStart;
-        [Export("serviceWillStart")]
-        void ServiceWillStart();
+    //    // -(void)serviceWillStart;
+    //    [Export("serviceWillStart")]
+    //    void ServiceWillStart();
 
-        // -(void)serviceDidStart;
-        [Export("serviceDidStart")]
-        void ServiceDidStart();
+    //    // -(void)serviceDidStart;
+    //    [Export("serviceDidStart")]
+    //    void ServiceDidStart();
 
-        // -(void)serviceWillStop;
-        [Export("serviceWillStop")]
-        void ServiceWillStop();
+    //    // -(void)serviceWillStop;
+    //    [Export("serviceWillStop")]
+    //    void ServiceWillStop();
 
-        // -(void)serviceDidStop;
-        [Export("serviceDidStop")]
-        void ServiceDidStop();
+    //    // -(void)serviceDidStop;
+    //    [Export("serviceDidStop")]
+    //    void ServiceDidStop();
 
-        // -(void)serviceDidReset;
-        [Export("serviceDidReset")]
-        void ServiceDidReset();
+    //    // -(void)serviceDidReset;
+    //    [Export("serviceDidReset")]
+    //    void ServiceDidReset();
 
-        // -(NSString * _Nonnull)lifecycleStatusAsString;
-        [Export("lifecycleStatusAsString")]
-        //[Verify(MethodToProperty)]
-        string LifecycleStatusAsString { get; }
+    //    // -(NSString * _Nonnull)lifecycleStatusAsString;
+    //    [Export("lifecycleStatusAsString")]
+    //    //[Verify(MethodToProperty)]
+    //    string LifecycleStatusAsString { get; }
 
-        // +(NSString * _Nonnull)lifecycleStatusToString:(MASServiceLifecycleStatus)status;
-        [Static]
-        [Export("lifecycleStatusToString:")]
-        string LifecycleStatusToString(MASServiceLifecycleStatus status);
-    }
+    //    // +(NSString * _Nonnull)lifecycleStatusToString:(MASServiceLifecycleStatus)status;
+    //    [Static]
+    //    [Export("lifecycleStatusToString:")]
+    //    string LifecycleStatusToString(MASServiceLifecycleStatus status);
+    //}
 
-    // @interface SubclassingHooks (MASService)
-    [Category]
-    [BaseType(typeof(MASService))]
-    interface MASService_SubclassingHooks
-    {
-        // -(void)serviceDidFailWithError:(NSError * _Nullable)error;
-        [Export("serviceDidFailWithError:")]
-        void ServiceDidFailWithError([NullAllowed] NSError error);
-    }
+    //// @interface SubclassingHooks (MASService)
+    //[Category]
+    //[BaseType(typeof(MASService))]
+    //interface MASService_SubclassingHooks
+    //{
+    //    // -(void)serviceDidFailWithError:(NSError * _Nullable)error;
+    //    [Export("serviceDidFailWithError:")]
+    //    void ServiceDidFailWithError([NullAllowed] NSError error);
+    //}
 
     // @interface MASSecurityConfiguration : MASObject
     [BaseType(typeof(MASObject))]
@@ -1415,7 +1415,7 @@ namespace MASFoundation
 
     // @interface MAS (NSData)
     [BaseType(typeof(NSData))]
-    [Category]
+    [Category (allowStaticMembers: true)]
     interface NSData_MAS
     {
         // +(NSData * _Nullable)encryptData:(NSData * _Nonnull)data password:(NSString * _Nonnull)password error:(NSError * _Nullable * _Nullable)anError;
@@ -1516,9 +1516,9 @@ namespace MASFoundation
         //[NullAllowed, Export("claims", ArgumentSemantic.Strong)]
         //MASClaims Claims { get; }
 
-        // @property (readonly, nonatomic, strong) NSData * _Nullable privateKey;
-        [NullAllowed, Export("privateKey", ArgumentSemantic.Strong)]
-        NSData PrivateKey { get; }
+        //// @property (readonly, nonatomic, strong) NSData * _Nullable privateKey;
+        //[NullAllowed, Export("privateKey", ArgumentSemantic.Strong)]
+        //NSData PrivateKey { get; }
 
         // @property (nonatomic, strong) NSDictionary * _Nullable header;
         [NullAllowed, Export("header", ArgumentSemantic.Strong)]
@@ -1584,9 +1584,9 @@ namespace MASFoundation
         [NullAllowed, Export("endPoint", ArgumentSemantic.Strong)]
         string EndPoint { get; }
 
-        // @property (readonly, nonatomic, strong) NSData * _Nullable privateKey;
-        [NullAllowed, Export("privateKey", ArgumentSemantic.Strong)]
-        NSData PrivateKey { get; }
+        //// @property (readonly, nonatomic, strong) NSData * _Nullable privateKey;
+        //[NullAllowed, Export("privateKey", ArgumentSemantic.Strong)]
+        //NSData PrivateKey { get; }
 
         // @property (readonly, nonatomic, strong) NSDictionary * _Nullable header;
         [NullAllowed, Export("header", ArgumentSemantic.Strong)]
