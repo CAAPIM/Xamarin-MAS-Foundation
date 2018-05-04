@@ -12,7 +12,7 @@ MASFoundation is the core Xamarin service to handle user authentication, device 
 ## Communication
 - *Have general questions or need help?*, use [Stack Overflow][StackOverflow]. (Tag 'massdk')
 - *Find a bug?*, open an issue with the steps to reproduce it.
-- *Request a feature or have an idea?*, open an issue.
+- *Request a feature or have an idea?*, open an [issue][issues].
 
 ## How You Can Contribute
 Contributions are welcome and much appreciated. To learn more, see the [Contribution Guidelines][contributing].
