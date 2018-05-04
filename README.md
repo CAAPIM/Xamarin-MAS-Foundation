@@ -35,6 +35,6 @@ of the MIT license. See the [LICENSE][license-link] file for details.
 [issues]: https://github.com/CAAPIM/Xamarin-MAS-Foundation/issues
 [releases]: ../../releases
 [contributing]: /CONTRIBUTING.md
-[license-link]: /LICENSE.md
+[license-link]: /LICENSE
 [video]: https://www.ca.com/us/developers/mas/videos.html
 [documentation]: https://www.ca.com/us/developers/mas/docs.html
