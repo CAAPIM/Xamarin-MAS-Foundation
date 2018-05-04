@@ -21,7 +21,6 @@
     <!--    
     <remove-node path="/api/package[@name='com.ca.mas.core.auth']" />
     -->
-    <remove-node path="/api/package[@name='com.ca.mas.core.auth']/class[@name='MASApplication']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.auth']/interface[@name='AuthRenderer']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.auth']/interface[@name='AuthResultReceiver']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.auth']/interface[@name='NFCRenderer']" />
@@ -53,15 +52,28 @@
     <remove-node path="/api/package[@name='com.ca.mas.core.io.ssl']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.io.http']" />
 
-    <remove-node path="/api/package[@name='com.ca.mas.core.oauth']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.oauth']/class[@name='CodeVerifierCache']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.oauth']/class[@name='OAuthClient']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.oauth']/class[@name='OAuthClientUtil']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.oauth']/class[@name='OAuthTokenClient']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.oauth']/class[@name='OAuthTokenResponse']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.oauth']/class[@name='PKCE']" />
+    
     <remove-node path="/api/package[@name='com.ca.mas.core.policy']" />
 
     <!-- Exception to MAS Foundation is required -->
     <!--
     <remove-node path="/api/package[@name='com.ca.mas.core.policy.exceptions']" />
     -->
+    <remove-node path="/api/package[@name='com.ca.mas.core.policy.exceptions']/class[@name='CertificateExpiredException']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.policy.exceptions']/class[@name='CredentialRequiredException']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.policy.exceptions']/class[@name='InvalidClientCredentialException']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.policy.exceptions']/class[@name='InvalidIdentifierException']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.policy.exceptions']/class[@name='TokenStoreUnavailableException']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.policy.exceptions']/class[@name='RetryRequestException']" />
 
-    <remove-node path="/api/package[@name='com.ca.mas.core.registration']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.registration']/class[@name='RegistrationClient']" />
+    
     <remove-node path="/api/package[@name='com.ca.mas.core.request']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.request.internal']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.security']" />
@@ -118,6 +130,8 @@
     <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASFoundationStrings']" />
     <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASTokenRequest']" />
 
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASOtpMultiFactorAuthenticator']" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MASMultiFactorAuthenticator']" />
 
     <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASMessenger']/method[@name='sendMessage' and count(parameter)=3 and parameter[1][@type='com.ca.mas.messaging.MASMessage'] and parameter[2][@type='com.ca.mas.foundation.MASGroup'] and parameter[3][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
     <remove-node path="/api/package[@name='com.ca.mas.messaging']/interface[@name='MASMessenger']/method[@name='sendMessage' and count(parameter)=4 and parameter[1][@type='com.ca.mas.messaging.MASMessage'] and parameter[2][@type='com.ca.mas.foundation.MASGroup'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='com.ca.mas.foundation.MASCallback&lt;java.lang.Void&gt;']]"/>
