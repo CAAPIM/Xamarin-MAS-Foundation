@@ -1,8 +1,8 @@
-# Contribute to CA Mobile API Gateway SDK for Xamarin
+# Contribute to CA Mobile SDK
 Contributions are welcome and much appreciated. Just follow these easy steps to contribute.
 
 ## Code Standard and Guideline
-For consistency, we ask that you adhere to some basic code guidelines when contributing to the iOS Mobile SDK. See the [Code Standard and Guideline][guidelines] for details.
+For consistency, we ask that you adhere to some basic code guidelines when contributing to the Mobile SDK. See the [Code Standard and Guideline][guidelines] for details.
 
 ## Our Development Process
 To continue improving the SDK, our development team will work on the same GitHub repos as you. The `develop branch` is used for development, and the `master branch` is used only for stable releases.
@@ -15,7 +15,7 @@ Follow these steps for pull requests:
 
 1. Fork the repo and create your branch from `master`.
 2. For any new code, add unit tests.
-3. If you've changed APIs, update code comments for AppleDocs.
+3. If you've changed APIs, update code comments for API reference documentation.
 4. Verify that the test suite passes.
 5. Verify that your code follows the [Code Standard Guideline][guidelines]
 6. If you haven't already, complete the [Contributor License Agreement ("CLA")][cla].
@@ -43,15 +43,11 @@ Before filing a new issue, check Known Issues to see if your problem already exi
 * What version are you running when reproducing issue? What was the last version that the feature worked?
 * Anything else that seems relevant. 
 
-### Pre-release Agreement
-
-Copyright (c) 2018 CA. All rights reserved.
-This software is provided under the terms of CA’s Pre-Release Agreement. See the [AGREEMENT][agreement-link] file for details. This software is for evaluation purposes only and currently not supported by CA.
-
-
+## License
+By contributing to iOS Mobile SDK, you agree that your contributions will be licensed under its [license][license-link].
 
 [guidelines]: /GUIDELINES.md
 [community]: https://communities.ca.com/community/ca-api-management-community/content?filterID=contentstatus%5Bpublished%5D~category%5Bca-mobile-api-gateway%5D
 [cla]: https://www.clahub.com/agreements/CAAPIM/Xamarin-MAS-Foundation
 [casupport]: https://support.ca.com/irj/portal/implsvcnewcase
-[agreement-link]: /CA-Beta-Pre-Release-Agreement
+[license-link]: /LICENSE.md
