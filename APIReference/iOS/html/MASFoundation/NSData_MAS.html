@@ -224,25 +224,6 @@
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div>static </div></td>
-                <td>
-                  <b>
-                    <a href="#P:MASFoundation.NSData_MAS.IsEncrypted">IsEncrypted</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. Simple, convenient method to determine if the object is encrypted.</td>
-              </tr>
-            </table>
-          </div>
-        </div>
         <h2 class="Section">Public Methods</h2>
         <div class="SectionBox" id="Public Methods">
           <div class="SubsectionBox">
@@ -264,6 +245,15 @@
                   <b>
                     <a href="#M:MASFoundation.NSData_MAS.EncryptData(Foundation.NSData,Foundation.NSData,System.String,Foundation.NSError@)">EncryptData</a>
                   </b>(<i>this</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a></nobr><blockquote>Encrypts data using a password passed in the parameter.</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData)">IsEncrypted</a>
+                  </b>(<i>this</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Simple, convenient method to determine if the object is encrypted.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -345,19 +335,28 @@
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
-        <h3 id="P:MASFoundation.NSData_MAS.IsEncrypted">IsEncrypted Property</h3>
-        <blockquote id="P:MASFoundation.NSData_MAS.IsEncrypted:member">
+        <h3 id="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData)">IsEncrypted Method</h3>
+        <blockquote id="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData):member">
           <div class="msummary">Simple, convenient method to determine if the object is encrypted.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("isEncrypted")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsEncrypted</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.NSData_MAS.IsEncrypted:Value">
+          <div class="Signature">[Foundation.Export("isEncrypted")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsEncrypted</b> (<i>this</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a> This)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData):Parameters">
+            <dl>
+              <dt>
+                <i>This</i>
+              </dt>
+              <dd>This instance of the class.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData):Returns">
             <tt>true</tt> if object is encrypted, <tt>false</tt>  if otherwise.</blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MASFoundation.NSData_MAS.IsEncrypted:Remarks">
+          <div class="SectionBox" id="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData):Remarks">
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MASFoundation.NSData_MAS.IsEncrypted:Version Information">
+          <div class="SectionBox" id="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData):Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>

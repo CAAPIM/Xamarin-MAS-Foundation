@@ -1431,10 +1431,9 @@ namespace MASFoundation
         NSData DecryptData(NSData data, string password, [NullAllowed] out NSError anError);
 
         // -(BOOL)isEncrypted;
-        [Static]
         [Export("isEncrypted")]
         //[Verify(MethodToProperty)]
-        bool IsEncrypted { get; }
+        bool IsEncrypted();
     }
 
     //// @interface MASClaims : MASObject
