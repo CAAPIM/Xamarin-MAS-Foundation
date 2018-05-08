@@ -4128,11 +4128,12 @@
             <returns>Return the NSData encrypted object.</returns>
             <remarks />
         </member>
-        <member name="P:MASFoundation.NSData_MAS.IsEncrypted">
+        <member name="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData)">
+            <param name="This">This instance of the class.</param>
             <summary>Simple, convenient method to determine if the object is encrypted.</summary>
-            <value>
-                <c>true</c> if object is encrypted, <c>false</c>  if otherwise.</value>
             <remarks />
+            <returns>
+                <c>true</c> if object is encrypted, <c>false</c>  if otherwise.</returns>
         </member>
     </members>
 </doc>

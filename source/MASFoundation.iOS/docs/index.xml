@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="MASFoundation.iOS" Version="1.0.6697.18203">
+    <Assembly Name="MASFoundation.iOS" Version="1.0.6702.16237">
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.LinkerSafe</AttributeName>
@@ -138,6 +138,27 @@
           <summary>Encrypts data using a password passed in the parameter.</summary>
         </Docs>
         <Link Type="MASFoundation.NSData_MAS" Member="M:MASFoundation.NSData_MAS.EncryptData(Foundation.NSData,Foundation.NSData,System.String,Foundation.NSError@)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:Foundation.NSData" />
+      </Targets>
+      <Member MemberName="IsEncrypted">
+        <MemberSignature Language="C#" Value="public static bool IsEncrypted (this Foundation.NSData This);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsEncrypted(class Foundation.NSData This) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>System.Boolean</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="This" Type="Foundation.NSData" RefType="this" />
+        </Parameters>
+        <Docs>
+          <param name="This">To be added.</param>
+          <summary>To be added.</summary>
+        </Docs>
+        <Link Type="MASFoundation.NSData_MAS" Member="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData)" />
       </Member>
     </ExtensionMethod>
   </ExtensionMethods>
