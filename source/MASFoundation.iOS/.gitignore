@@ -2,6 +2,7 @@
 *.user
 *.userprefs
 _ReSharper.*
-bin
-obj
-packages
+bin/
+obj/
+packages/
+.vs/
