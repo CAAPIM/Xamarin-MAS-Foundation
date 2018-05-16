@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="packages.config" />
+    <BundleResource Include="docs\MASFoundation\MASNetworkReachabilityStatus.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="docs\MASFoundation\Constants.xml" />

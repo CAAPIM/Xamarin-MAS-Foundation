@@ -604,7 +604,7 @@
         <blockquote id="C:MASFoundation.MASDevice():member">
           <div class="msummary">Default constructor, initializes a new instance of this class.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("init")]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASDevice</b> ()</div>
+          <div class="Signature">[Foundation.Export("init")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASDevice</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASDevice():Remarks">
           </div>
@@ -617,7 +617,7 @@
         <blockquote id="C:MASFoundation.MASDevice(Foundation.NSCoder):member">
           <div class="msummary">A constructor that initializes the object from the data stored in the unarchiver object.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("initWithCoder:")]<br />[ObjCRuntime.DesignatedInitializer]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASDevice</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> coder)</div>
+          <div class="Signature">[Foundation.Export("initWithCoder:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[ObjCRuntime.DesignatedInitializer]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASDevice</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> coder)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASDevice(Foundation.NSCoder):Parameters">
             <dl>
@@ -644,7 +644,7 @@
         <blockquote id="C:MASFoundation.MASDevice(Foundation.NSObjectFlag):member">
           <div class="msummary">Constructor to call on derived classes to skip initialization and merely allocate the object.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASDevice</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASDevice</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASDevice(Foundation.NSObjectFlag):Parameters">
             <dl>
@@ -667,7 +667,7 @@
         <blockquote id="C:MASFoundation.MASDevice(System.IntPtr):member">
           <div class="msummary">A constructor used when creating managed representations of unmanaged objects; Called by the runtime.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASDevice</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASDevice</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASDevice(System.IntPtr):Parameters">
             <dl>
@@ -708,7 +708,7 @@
         The device the application is running on. This is a singleton object.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("currentDevice")]<br />public static <a href="../MASFoundation/MASDevice.html">MASDevice</a> <b>CurrentDevice</b> ()</div>
+          <div class="Signature">[Foundation.Export("currentDevice")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="../MASFoundation/MASDevice.html">MASDevice</a> <b>CurrentDevice</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASDevice.CurrentDevice():Returns">A singleton 'MASDevice' object.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -738,7 +738,7 @@
         the user what will occur and allow them to cancel the operation or proceed.</p><p>Although an asynchronous block callback parameter is provided for detecting the response,
         optionally you can set that to null and the caller can observe the lifecycle notifications instead.</p></div>
           <h2>Syntax</h2>
-          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>DeregisterAsync</b> ()</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>DeregisterAsync</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASDevice.DeregisterAsync():Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -768,7 +768,7 @@
         the user what will occur and allow them to cancel the operation or proceed.</p><p>Although an asynchronous block callback parameter is provided for detecting the response,
         optionally you can set that to null and the caller can observe the lifecycle notifications instead.</p></div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("deregisterWithCompletion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DeregisterWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <div class="Signature">[Foundation.Export("deregisterWithCompletion:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DeregisterWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASDevice.DeregisterWithCompletion(MASFoundation.MASCompletionErrorBlock):Parameters">
             <dl>
@@ -792,7 +792,7 @@
         The MASDevice identifier.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("identifier")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Identifier</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("identifier")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Identifier</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASDevice.Identifier:Value">The device identifier.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -809,7 +809,7 @@
         Gets or sets a value indicating whether this <a href="../MASFoundation/MASDevice.html">MASFoundation.MASDevice</a> is being authorized with other devices through proximity login.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("isBeingAuthorized")]<br />[set: Foundation.Export("setIsBeingAuthorized:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsBeingAuthorized</b>  { get; set; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("isBeingAuthorized")]<br />[set: Foundation.Export("setIsBeingAuthorized:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsBeingAuthorized</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASDevice.IsBeingAuthorized:Value">
             <tt>true</tt> if is being authorized; otherwise, <tt>false</tt>.</blockquote>
@@ -827,7 +827,7 @@
         Gets a value indicating whether this <a href="../MASFoundation/MASDevice.html">MASFoundation.MASDevice</a> is registered.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("isRegistered")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsRegistered</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("isRegistered")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsRegistered</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASDevice.IsRegistered:Value">
             <tt>true</tt> if is registered; otherwise, <tt>false</tt>.</blockquote>
@@ -845,7 +845,7 @@
         Gets the MASDevice name.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("name")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("name")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASDevice.Name:Value">The MASDevice name.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -861,7 +861,7 @@
           <div class="msummary">WARNING: if you call this method, all access credentials and locally stored configuration related to the application will be removed.
         Re-authentication proccess will be triggered whenever you are trying to access the gateway.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("resetLocally")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ResetLocally</b> ()</div>
+          <div class="Signature">[Foundation.Export("resetLocally")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ResetLocally</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASDevice.ResetLocally():Remarks">
           </div>
@@ -876,7 +876,7 @@
         Gets the MASDevice status.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("status")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Status</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("status")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Status</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASDevice.Status:Value">The MASDevice status.</blockquote>
           <h2 class="Section">Remarks</h2>

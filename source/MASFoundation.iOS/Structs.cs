@@ -23,7 +23,7 @@ namespace MASFoundation
     /// 
 
     //[Native]
-    public enum MASAuthenticationStatus //: nint
+    public enum MASAuthenticationStatus
     {
         NotLoggedIn = -1,
         LoginWithUser,
@@ -31,7 +31,7 @@ namespace MASFoundation
     }
 
     //[Native]
-    public enum MASGrantFlow //: nint
+    public enum MASGrantFlow
     {
         Unknown = -1,
         ClientCredentials,
@@ -40,7 +40,7 @@ namespace MASFoundation
     }
 
     //[Native]
-    public enum MASRequestResponseType //: nint
+    public enum MASRequestResponseType
     {
         Unknown = -1,
         Json,
@@ -52,7 +52,7 @@ namespace MASFoundation
     }
 
     //[Native]
-    public enum MASState //: nint
+    public enum MASState
     {
         NotConfigured = -1,
         NotInitialized,
@@ -65,7 +65,7 @@ namespace MASFoundation
     }
 
     //[Native]
-    public enum MASFileDirectoryType //: nint
+    public enum MASFileDirectoryType
     {
         Temporary = -1,
         ApplicationSupport,
@@ -75,7 +75,7 @@ namespace MASFoundation
     }
 
     //[Native]
-    public enum MASFoundationErrorCode //: nint
+    public enum MASFoundationErrorCode
     {
         Unknown = -1,
         InvalidNSURL = 100001,
@@ -175,11 +175,13 @@ namespace MASFoundation
         JWTSerializationError = 170003,
         BBANotEnabled = 180000,
         SharedStorageNotNilKey = 180001,
+		MultiFactorAuthenticationCancelled = 180002,
+        MultiFactorAuthenticationInvalidRequest = 180003,
         Count = -999999
     }
 
     //[Native]
-    public enum MASGatewayMonitoringStatus //: nint
+    public enum MASGatewayMonitoringStatus
     {
         Unknown = -1,
         NotReachable,
@@ -188,8 +190,18 @@ namespace MASFoundation
         Count
     }
 
+	//[Native]
+    public enum MASNetworkReachabilityStatus
+    {
+        Unknown = -1,
+        NotReachable = 1,
+        ReachableViaWWAN = 2,
+        ReachableViaWiFi = 3,
+        Initializing = 4
+    }
+
     ////[Native]
-    //public enum MASBLEServiceState //: nint
+    //public enum MASBLEServiceState
     //{
     //    Unknown = -1,
     //    CentralStarted,
@@ -211,7 +223,7 @@ namespace MASFoundation
     //}
 
     ////[Native]
-    //public enum MASServiceLifecycleStatus //: nint
+    //public enum MASServiceLifecycleStatus
     //{
     //    Unknown = -1,
     //    Initialized,
@@ -224,7 +236,7 @@ namespace MASFoundation
     //}
 
     ////[Native]
-    //public enum MQTTConnectionReturnCode //: nuint
+    //public enum MQTTConnectionReturnCode
     //{
     //    Accepted,
     //    RefusedUnacceptableProtocolVersion,
@@ -235,7 +247,7 @@ namespace MASFoundation
     //}
 
     ////[Native]
-    //public enum MQTTQualityOfService //: nint
+    //public enum MQTTQualityOfService
     //{
     //    AtMostOnce,
     //    AtLeastOnce,

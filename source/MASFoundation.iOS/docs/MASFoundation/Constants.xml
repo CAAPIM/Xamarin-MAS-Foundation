@@ -294,6 +294,24 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="MASNetworkReachabilityStatusUpdateNotification">
+      <MemberSignature Language="C#" Value="public static Foundation.NSString MASNetworkReachabilityStatusUpdateNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASNetworkReachabilityStatusUpdateNotification" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Field("MASNetworkReachabilityStatusUpdateNotification", "__Internal")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSString</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The NSString constant for the network reachability monitor notification indicating that the monitor status has updated to a new value.</summary>
+        <value>MASNetworkReachabilityStatusUpdateNotification.</value>
+        <remarks></remarks>
+      </Docs>
+    </Member>
     <Member MemberName="MASUserDidAuthenticateNotification">
       <MemberSignature Language="C#" Value="public static Foundation.NSString MASUserDidAuthenticateNotification { get; }" />
       <MemberSignature Language="ILAsm" Value=".property class Foundation.NSString MASUserDidAuthenticateNotification" />

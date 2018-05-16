@@ -82,6 +82,11 @@
             <value>MASGatewayMonitorStatusUpdateNotification.</value>
             <remarks />
         </member>
+        <member name="P:MASFoundation.Constants.MASNetworkReachabilityStatusUpdateNotification">
+            <summary>The NSString constant for the network reachability monitor notification indicating that the monitor status has updated to a new value.</summary>
+            <value>MASNetworkReachabilityStatusUpdateNotification.</value>
+            <remarks />
+        </member>
         <member name="P:MASFoundation.Constants.MASUserDidAuthenticateNotification">
             <summary>The NSString constant for the user notification indicating that a MASUser has successfully authenticated.</summary>
             <value>MASUserDidAuthenticateNotification.</value>
@@ -2889,6 +2894,12 @@
         <member name="F:MASFoundation.MASFoundationErrorCode.MASIsNotStarted">
             <summary>MAS is not Started.</summary>
         </member>
+        <member name="F:MASFoundation.MASFoundationErrorCode.MultiFactorAuthenticationCancelled">
+            <summary>Cancelled.</summary>
+        </member>
+        <member name="F:MASFoundation.MASFoundationErrorCode.MultiFactorAuthenticationInvalidRequest">
+            <summary>Invalid Request.</summary>
+        </member>
         <member name="F:MASFoundation.MASFoundationErrorCode.NetworkIsOffline">
             <summary>Network is Offline.</summary>
         </member>
@@ -3027,6 +3038,25 @@
         </member>
         <member name="F:MASFoundation.MASGrantFlow.Unknown">
             <summary>Unknown encoding type.</summary>
+        </member>
+        <member name="T:MASFoundation.MASNetworkReachabilityStatus">
+            <summary>Enumerated values for MASNetworkReachabilityStatus</summary>
+            <remarks />
+        </member>
+        <member name="F:MASFoundation.MASNetworkReachabilityStatus.Initializing">
+            <summary>Network manager is being initialized and monitoring process is starting up.</summary>
+        </member>
+        <member name="F:MASFoundation.MASNetworkReachabilityStatus.NotReachable">
+            <summary>Network is not reachable.</summary>
+        </member>
+        <member name="F:MASFoundation.MASNetworkReachabilityStatus.ReachableViaWiFi">
+            <summary>Network is reachable via WiFi.</summary>
+        </member>
+        <member name="F:MASFoundation.MASNetworkReachabilityStatus.ReachableViaWWAN">
+            <summary>Network is reachable via cellular network.</summary>
+        </member>
+        <member name="F:MASFoundation.MASNetworkReachabilityStatus.Unknown">
+            <summary>Network reachability status unknown.</summary>
         </member>
         <member name="T:MASFoundation.MASObject">
             <summary>
@@ -3786,13 +3816,6 @@
             <value>The addresses.</value>
             <remarks />
         </member>
-        <member name="P:MASFoundation.MASUser.AuthCredentialsType">
-            <summary>
-        Previously, or currently used authCredentialsType for the session.
-        <para>If the SDK is not properly initialized, null will be returned regardless of the authentication status of the SDK.</para><para>If the SDK was never authenticated before, SDK will also return null as a result.</para></summary>
-            <value>NSString of previously, or currently used authCredentialsType as in String.</value>
-            <remarks />
-        </member>
         <member name="P:MASFoundation.MASUser.ClassHandle">
             <summary>The handle for this class.</summary>
             <value>The pointer to the Objective-C class.</value>
@@ -4131,9 +4154,9 @@
         <member name="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData)">
             <param name="This">This instance of the class.</param>
             <summary>Simple, convenient method to determine if the object is encrypted.</summary>
-            <remarks />
             <returns>
                 <c>true</c> if object is encrypted, <c>false</c>  if otherwise.</returns>
+            <remarks />
         </member>
     </members>
 </doc>
