@@ -19,18 +19,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>  
-    <CustomCommands>
-      <CustomCommands>
-        <Command>
-          <type>AfterBuild</type>
-          <command>mdoc update --delete -fno-assembly-versions -L /Developer/MonoTouch/usr/lib/mono/2.1/ -L /Developer/MonoTouch/usr/lib/mono/Xamarin.iOS/ --out docs bin/Debug/MASFoundation.iOS.dll</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>mdoc export-msxdoc --out bin/Debug/MASFoundation.iOS.xml docs</command>
-        </Command>
-      </CustomCommands>
-    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -42,15 +30,11 @@
       <CustomCommands>
         <Command>
           <type>AfterBuild</type>
+          <command>mdoc update --delete -fno-assembly-versions -L /Developer/MonoTouch/usr/lib/mono/2.1/ -L /Developer/MonoTouch/usr/lib/mono/Xamarin.iOS/ --out docs bin/Release/MASFoundation.iOS.dll</command>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
           <command>mdoc export-msxdoc --out bin/Release/MASFoundation.iOS.xml docs</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp -f bin/Release/MASFoundation.iOS.dll bin/Release/MASFoundation.iOS.xml ../../lib</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>mdoc export-html --template doctemplate.xsl -o ../../APIReference/iOS/html docs</command>
         </Command>
       </CustomCommands>
     </CustomCommands>
