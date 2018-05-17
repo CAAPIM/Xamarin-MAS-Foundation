@@ -9,7 +9,8 @@
   </Base>
   <Docs>
     <summary>Enumerated values for MASNetworkReachabilityStatus</summary>
-    <remarks></remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Initializing">

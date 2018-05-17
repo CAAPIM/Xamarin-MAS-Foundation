@@ -55,45 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="packages.config" />
-    <BundleResource Include="docs\MASFoundation\MASNetworkReachabilityStatus.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="docs\MASFoundation\Constants.xml" />
-    <None Include="docs\MASFoundation\MAS.xml" />
-    <None Include="docs\MASFoundation\MASApplication.xml" />
-    <None Include="docs\MASFoundation\MASAuthCredentials.xml" />
-    <None Include="docs\MASFoundation\MASAuthCredentialsAuthorizationCode.xml" />
-    <None Include="docs\MASFoundation\MASAuthCredentialsBlock.xml" />
-    <None Include="docs\MASFoundation\MASAuthCredentialsJWT.xml" />
-    <None Include="docs\MASFoundation\MASAuthCredentialsPassword.xml" />
-    <None Include="docs\MASFoundation\MASAuthenticationStatus.xml" />
-    <None Include="docs\MASFoundation\MASAuthorizationResponse.xml" />
-    <None Include="docs\MASFoundation\MASAuthorizationResponseDelegate.xml" />
-    <None Include="docs\MASFoundation\MASCompletionErrorBlock.xml" />
-    <None Include="docs\MASFoundation\MASConfiguration.xml" />
-    <None Include="docs\MASFoundation\MASDevice.xml" />
-    <None Include="docs\MASFoundation\MASFile.xml" />
-    <None Include="docs\MASFoundation\MASFileDirectoryType.xml" />
-    <None Include="docs\MASFoundation\MASFoundationErrorCode.xml" />
-    <None Include="docs\MASFoundation\MASGatewayMonitorStatusBlock.xml" />
-    <None Include="docs\MASFoundation\MASGatewayMonitoringStatus.xml" />
-    <None Include="docs\MASFoundation\MASGrantFlow.xml" />
-    <None Include="docs\MASFoundation\MASObject.xml" />
-    <None Include="docs\MASFoundation\MASRequest.xml" />
-    <None Include="docs\MASFoundation\MASRequestBuilder.xml" />
-    <None Include="docs\MASFoundation\MASRequestResponseType.xml" />
-    <None Include="docs\MASFoundation\MASResponseInfoErrorBlock.xml" />
-    <None Include="docs\MASFoundation\MASResponseObjectErrorBlock.xml" />
-    <None Include="docs\MASFoundation\MASResponseObjectErrorResult.xml" />
-    <None Include="docs\MASFoundation\MASSecurityConfiguration.xml" />
-    <None Include="docs\MASFoundation\MASSharedStorage.xml" />
-    <None Include="docs\MASFoundation\MASState.xml" />
-    <None Include="docs\MASFoundation\MASUser.xml" />
-    <None Include="docs\MASFoundation\MASUserAuthCredentialsBlock.xml" />
-    <None Include="docs\MASFoundation\MASUserResponseErrorBlock.xml" />
-    <None Include="docs\MASFoundation\NSData_MAS.xml" />
-    <None Include="docs\index.xml" />
-    <None Include="docs\ns-MASFoundation.xml" />
   </ItemGroup>
   <ItemGroup>
     <NativeReference Include="MASFoundation.framework">
