@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="MASFoundation.iOS" Version="1.0.6702.16237">
+    <Assembly Name="MASFoundation.iOS" Version="1.0.6710.22972">
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.LinkerSafe</AttributeName>
@@ -66,6 +66,7 @@
       <Type Name="MASGatewayMonitoringStatus" Kind="Enumeration" />
       <Type Name="MASGatewayMonitorStatusBlock" Kind="Delegate" />
       <Type Name="MASGrantFlow" Kind="Enumeration" />
+      <Type Name="MASNetworkReachabilityStatus" Kind="Enumeration" />
       <Type Name="MASObject" Kind="Class" />
       <Type Name="MASRequest" Kind="Class" />
       <Type Name="MASRequestBuilder" Kind="Class" />
@@ -155,8 +156,8 @@
           <Parameter Name="This" Type="Foundation.NSData" RefType="this" />
         </Parameters>
         <Docs>
-          <param name="This">To be added.</param>
-          <summary>To be added.</summary>
+          <param name="This">This instance of the class.</param>
+          <summary>Simple, convenient method to determine if the object is encrypted.</summary>
         </Docs>
         <Link Type="MASFoundation.NSData_MAS" Member="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData)" />
       </Member>

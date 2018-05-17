@@ -31,6 +31,9 @@
           <AttributeName>Foundation.Export("init")</AttributeName>
         </Attribute>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
         </Attribute>
       </Attributes>
@@ -48,6 +51,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("initWithCoder:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
@@ -77,6 +83,9 @@
       <MemberType>Constructor</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
         </Attribute>
       </Attributes>
@@ -97,6 +106,9 @@
       <MemberType>Constructor</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
         </Attribute>
       </Attributes>
@@ -116,6 +128,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary Body" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("body", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
@@ -155,6 +170,9 @@
         <Attribute>
           <AttributeName>Foundation.Export("deleteFrom:")</AttributeName>
         </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>MASFoundation.MASRequest</ReturnType>
@@ -186,6 +204,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("endPoint", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
@@ -209,6 +230,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("getFrom:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -241,6 +265,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("header", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
@@ -262,6 +289,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("httpMethod", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
@@ -282,6 +312,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsPublic" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("isPublic")</AttributeName>
         </Attribute>
@@ -306,6 +339,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("patchTo:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -340,6 +376,9 @@
         <Attribute>
           <AttributeName>Foundation.Export("postTo:")</AttributeName>
         </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>MASFoundation.MASRequest</ReturnType>
@@ -373,6 +412,9 @@
         <Attribute>
           <AttributeName>Foundation.Export("putTo:")</AttributeName>
         </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>MASFoundation.MASRequest</ReturnType>
@@ -404,6 +446,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("query", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
@@ -425,6 +470,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("requestType", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
         </Attribute>
       </Attributes>
@@ -445,6 +493,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype MASFoundation.MASRequestResponseType ResponseType" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("responseType", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
         </Attribute>

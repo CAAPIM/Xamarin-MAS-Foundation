@@ -484,7 +484,7 @@
         <blockquote id="C:MASFoundation.MASObject():member">
           <div class="msummary">Default constructor, initializes a new instance of this class.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("init")]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASObject</b> ()</div>
+          <div class="Signature">[Foundation.Export("init")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASObject</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASObject():Remarks">
           </div>
@@ -497,7 +497,7 @@
         <blockquote id="C:MASFoundation.MASObject(Foundation.NSCoder):member">
           <div class="msummary">A constructor that initializes the object from the data stored in the unarchiver object.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("initWithCoder:")]<br />[ObjCRuntime.DesignatedInitializer]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASObject</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> coder)</div>
+          <div class="Signature">[Foundation.Export("initWithCoder:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[ObjCRuntime.DesignatedInitializer]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASObject</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> coder)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASObject(Foundation.NSCoder):Parameters">
             <dl>
@@ -526,7 +526,7 @@
         Init the object with passed attributes in a form of NSDictionary
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("initWithAttributes:")]<br />public  <b>MASObject</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> attributes)</div>
+          <div class="Signature">[Foundation.Export("initWithAttributes:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public  <b>MASObject</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> attributes)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASObject(Foundation.NSDictionary{Foundation.NSString,Foundation.NSString}):Parameters">
             <dl>
@@ -548,7 +548,7 @@
         <blockquote id="C:MASFoundation.MASObject(Foundation.NSObjectFlag):member">
           <div class="msummary">Constructor to call on derived classes to skip initialization and merely allocate the object.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASObject</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASObject</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASObject(Foundation.NSObjectFlag):Parameters">
             <dl>
@@ -571,7 +571,7 @@
         <blockquote id="C:MASFoundation.MASObject(System.IntPtr):member">
           <div class="msummary">A constructor used when creating managed representations of unmanaged objects; Called by the runtime.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASObject</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASObject</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASObject(System.IntPtr):Parameters">
             <dl>
@@ -596,7 +596,7 @@
         List of attributes of the object.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("_attributes", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSMutableDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>_attributes</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("_attributes", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSMutableDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>_attributes</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASObject._attributes:Value">The attributes.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -629,7 +629,7 @@
         The class name of the object.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("className")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ClassName</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("className")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ClassName</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASObject.ClassName:Value">The name of the class.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -644,7 +644,7 @@
         <blockquote id="M:MASFoundation.MASObject.Copy(Foundation.NSZone):member">
           <div class="msummary">Performs a copy of the underlying Objective-C object.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("copyWithZone:")]<br />[Foundation.Preserve(Conditional=true)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> <b>Copy</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSZone</a> zone)</div>
+          <div class="Signature">[Foundation.Export("copyWithZone:")]<br />[Foundation.Preserve(Conditional=true)]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> <b>Copy</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSZone</a> zone)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASObject.Copy(Foundation.NSZone):Parameters">
             <dl>
@@ -669,7 +669,7 @@
         <blockquote id="M:MASFoundation.MASObject.EncodeTo(Foundation.NSCoder):member">
           <div class="msummary">Encodes the state of the object on the provided encoder</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("encodeWithCoder:")]<br />[Foundation.Preserve(Conditional=true)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EncodeTo</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> encoder)</div>
+          <div class="Signature">[Foundation.Export("encodeWithCoder:")]<br />[Foundation.Preserve(Conditional=true)]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EncodeTo</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> encoder)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASObject.EncodeTo(Foundation.NSCoder):Parameters">
             <dl>
@@ -694,7 +694,7 @@
             List all attributes from the Object.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("listAttributes")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ListAttributes</b> ()</div>
+          <div class="Signature">[Foundation.Export("listAttributes")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ListAttributes</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASObject.ListAttributes():Remarks">
           </div>
@@ -709,7 +709,7 @@
             Returns the value associated with a given key.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("objectForKey:")]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> <b>ObjectForKey</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> key)</div>
+          <div class="Signature">[Foundation.Export("objectForKey:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> <b>ObjectForKey</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> key)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASObject.ObjectForKey(Foundation.NSObject):Parameters">
             <dl>
@@ -735,7 +735,7 @@
             Returns the value associated with a given key.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("objectForKeyedSubscript:")]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> <b>ObjectForKeyedSubscript</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> key)</div>
+          <div class="Signature">[Foundation.Export("objectForKeyedSubscript:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> <b>ObjectForKeyedSubscript</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> key)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASObject.ObjectForKeyedSubscript(Foundation.NSObject):Parameters">
             <dl>
@@ -761,7 +761,7 @@
         The id of the object.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("objectId")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ObjectId</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("objectId")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ObjectId</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASObject.ObjectId:Value">The object identifier.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -778,7 +778,7 @@
         Creates a new MASObject with a class name
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("objectWithClassName:")]<br />public static <a href="../MASFoundation/MASObject.html">MASObject</a> <b>ObjectWithClassName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> className)</div>
+          <div class="Signature">[Foundation.Export("objectWithClassName:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="../MASFoundation/MASObject.html">MASObject</a> <b>ObjectWithClassName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> className)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASObject.ObjectWithClassName(System.String):Parameters">
             <dl>
@@ -804,7 +804,7 @@
         Creates a new MASObject with a class name and a dictionary as the data
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("objectWithClassName:withData:")]<br />public static <a href="../MASFoundation/MASObject.html">MASObject</a> <b>ObjectWithClassName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> className, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> dictionary)</div>
+          <div class="Signature">[Foundation.Export("objectWithClassName:withData:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="../MASFoundation/MASObject.html">MASObject</a> <b>ObjectWithClassName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> className, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> dictionary)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASObject.ObjectWithClassName(System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSString}):Parameters">
             <dl>
@@ -834,7 +834,7 @@
         Sets the object associated with a given key.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("setObject:forKey:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetObjectForKey</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> object, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCopying</a> key)</div>
+          <div class="Signature">[Foundation.Export("setObject:forKey:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetObjectForKey</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> object, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCopying</a> key)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASObject.SetObjectForKey(Foundation.NSObject,Foundation.NSCopying):Parameters">
             <dl>
@@ -860,7 +860,7 @@
         <blockquote id="M:MASFoundation.MASObject.SetObjectForKeyedSubscript(Foundation.NSObject,Foundation.NSCopying):member">
           <div class="msummary">This method enables usage of literal syntax on `MASObject`. E.g. `object["key"] = "value";`</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("setObject:forKeyedSubscript:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetObjectForKeyedSubscript</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> object, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCopying</a> key)</div>
+          <div class="Signature">[Foundation.Export("setObject:forKeyedSubscript:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetObjectForKeyedSubscript</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObject</a> object, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCopying</a> key)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASObject.SetObjectForKeyedSubscript(Foundation.NSObject,Foundation.NSCopying):Parameters">
             <dl>

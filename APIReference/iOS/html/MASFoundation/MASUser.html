@@ -351,20 +351,6 @@
         </td>
               </tr>
               <tr valign="top">
-                <td>[read-only]<div>static </div></td>
-                <td>
-                  <b>
-                    <a href="#P:MASFoundation.MASUser.AuthCredentialsType">AuthCredentialsType</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
-        Previously, or currently used authCredentialsType for the session.
-        <p>If the SDK is not properly initialized, null will be returned regardless of the authentication status of the SDK.</p><p>If the SDK was never authenticated before, SDK will also return null as a result.</p></td>
-              </tr>
-              <tr valign="top">
                 <td>[read-only]<div>override </div></td>
                 <td>
                   <b>
@@ -940,7 +926,7 @@
         <blockquote id="C:MASFoundation.MASUser():member">
           <div class="msummary">Default constructor, initializes a new instance of this class.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("init")]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASUser</b> ()</div>
+          <div class="Signature">[Foundation.Export("init")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASUser</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASUser():Remarks">
           </div>
@@ -953,7 +939,7 @@
         <blockquote id="C:MASFoundation.MASUser(Foundation.NSCoder):member">
           <div class="msummary">A constructor that initializes the object from the data stored in the unarchiver object.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("initWithCoder:")]<br />[ObjCRuntime.DesignatedInitializer]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASUser</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> coder)</div>
+          <div class="Signature">[Foundation.Export("initWithCoder:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[ObjCRuntime.DesignatedInitializer]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASUser</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> coder)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASUser(Foundation.NSCoder):Parameters">
             <dl>
@@ -980,7 +966,7 @@
         <blockquote id="C:MASFoundation.MASUser(Foundation.NSObjectFlag):member">
           <div class="msummary">Constructor to call on derived classes to skip initialization and merely allocate the object.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASUser</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASUser</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASUser(Foundation.NSObjectFlag):Parameters">
             <dl>
@@ -1003,7 +989,7 @@
         <blockquote id="C:MASFoundation.MASUser(System.IntPtr):member">
           <div class="msummary">A constructor used when creating managed representations of unmanaged objects; Called by the runtime.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASUser</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASUser</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASUser(System.IntPtr):Parameters">
             <dl>
@@ -1028,7 +1014,7 @@
         Gets the access token of the user, if authenticated.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("accessToken")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>AccessToken</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("accessToken")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>AccessToken</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.AccessToken:Value">The access token.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1043,7 +1029,7 @@
         <blockquote id="P:MASFoundation.MASUser.Active:member">
           <div class="msummary">User active status.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("active")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Active</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("active")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Active</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.Active:Value">
             <tt>true</tt> if is actived; otherwise, <tt>false</tt>.</blockquote>
@@ -1061,7 +1047,7 @@
         Gets the addresses.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("addresses", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>Addresses</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("addresses", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>Addresses</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.Addresses:Value">The addresses.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1069,23 +1055,6 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:MASFoundation.MASUser.Addresses:Version Information">
-            <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MASFoundation.MASUser.AuthCredentialsType">AuthCredentialsType Property</h3>
-        <blockquote id="P:MASFoundation.MASUser.AuthCredentialsType:member">
-          <div class="msummary">
-        Previously, or currently used authCredentialsType for the session.
-        <p>If the SDK is not properly initialized, null will be returned regardless of the authentication status of the SDK.</p><p>If the SDK was never authenticated before, SDK will also return null as a result.</p></div>
-          <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("authCredentialsType")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>AuthCredentialsType</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.AuthCredentialsType:Value">NSString of previously, or currently used authCredentialsType as in String.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MASFoundation.MASUser.AuthCredentialsType:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MASFoundation.MASUser.AuthCredentialsType:Version Information">
             <b>Namespace: </b>MASFoundation<br /><b>Assembly: </b>MASFoundation.iOS (in MASFoundation.iOS.dll)</div>
           <hr size="1" />
         </blockquote>
@@ -1111,7 +1080,7 @@
         GeThe authenticated user for the application, if any. null returned if none. This is a singleton object.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("currentUser")]<br />public static <a href="../MASFoundation/MASUser.html">MASUser</a> <b>CurrentUser</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("currentUser")]<br />public static <a href="../MASFoundation/MASUser.html">MASUser</a> <b>CurrentUser</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.CurrentUser:Value">A singleton 'MASUser' object.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1128,7 +1097,7 @@
         Gets the email addresses.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("emailAddresses", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>EmailAddresses</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("emailAddresses", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>EmailAddresses</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.EmailAddresses:Value">The email addresses.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1145,7 +1114,7 @@
         Gets the string value of family name.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("familyName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FamilyName</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("familyName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FamilyName</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.FamilyName:Value">The string value of family name.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1162,7 +1131,7 @@
         Gets the string value of formatted name.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("formattedName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FormattedName</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("formattedName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FormattedName</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.FormattedName:Value">The string value of formatted name.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1179,7 +1148,7 @@
         Gets the string value of given name.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("givenName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GivenName</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("givenName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GivenName</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.GivenName:Value">The string value of given name.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1196,7 +1165,7 @@
         Gets the groups.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("groups", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSArray&lt;Foundation.NSString&gt;</a> <b>Groups</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("groups", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSArray&lt;Foundation.NSString&gt;</a> <b>Groups</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.Groups:Value">The groups.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1213,7 +1182,7 @@
         Gets a value indicating whether this <a href="../MASFoundation/MASUser.html">MASFoundation.MASUser</a> is authenticated.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("isAuthenticated")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsAuthenticated</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("isAuthenticated")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsAuthenticated</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.IsAuthenticated:Value">
             <tt>true</tt> if is authenticated; otherwise, <tt>false</tt>.
@@ -1232,7 +1201,7 @@
         Gets a value indicating whether this <a href="../MASFoundation/MASUser.html">MASFoundation.MASUser</a> is current user.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("isCurrentUser")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsCurrentUser</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("isCurrentUser")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsCurrentUser</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.IsCurrentUser:Value">
             <tt>true</tt> if is current user; otherwise, <tt>false</tt>.</blockquote>
@@ -1250,7 +1219,7 @@
         Gets a value indicating whether this <a href="../MASFoundation/MASUser.html">MASFoundation.MASUser</a>'s session is locked.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("isSessionLocked")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsSessionLocked</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("isSessionLocked")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsSessionLocked</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.IsSessionLocked:Value">
             <tt>true</tt> if is session locked; otherwise, <tt>false</tt>.
@@ -1278,7 +1247,7 @@
             Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
             </p></div>
           <h2>Syntax</h2>
-          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LockSessionAsync</b> ()</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LockSessionAsync</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LockSessionAsync():Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1304,7 +1273,7 @@
             Session lock status can also be checked through MASUser.CurrentUser.isSessionLocked property.
             </p></div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("lockSessionWithCompletion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LockSessionWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <div class="Signature">[Foundation.Export("lockSessionWithCompletion:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LockSessionWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):Parameters">
             <dl>
@@ -1333,7 +1302,7 @@
             This will create an MASUser.CurrentUser upon a successful result.
             </p></div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("loginWithAuthCredentials:completion:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithAuthCredentials</b> (<a href="../MASFoundation/MASAuthCredentials.html">MASAuthCredentials</a> authCredentials, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <div class="Signature">[Foundation.Export("loginWithAuthCredentials:completion:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithAuthCredentials</b> (<a href="../MASFoundation/MASAuthCredentials.html">MASAuthCredentials</a> authCredentials, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithAuthCredentials(MASFoundation.MASAuthCredentials,MASFoundation.MASCompletionErrorBlock):Parameters">
             <dl>
@@ -1366,7 +1335,7 @@
             This will create an MASUser.CurrentUser upon a successful result.
             </p></div>
           <h2>Syntax</h2>
-          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithAuthCredentialsAsync</b> (<a href="../MASFoundation/MASAuthCredentials.html">MASAuthCredentials</a> authCredentials)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithAuthCredentialsAsync</b> (<a href="../MASFoundation/MASAuthCredentials.html">MASAuthCredentials</a> authCredentials)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithAuthCredentialsAsync(MASFoundation.MASAuthCredentials):Parameters">
             <dl>
@@ -1392,7 +1361,7 @@
             This will create an MASUser.CurrentUser upon a successful result.
             </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("loginWithAuthorizationCode:completion:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithAuthorizationCode</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> authorizationCode, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <div class="Signature">[Foundation.Export("loginWithAuthorizationCode:completion:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithAuthorizationCode</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> authorizationCode, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithAuthorizationCode(System.String,MASFoundation.MASCompletionErrorBlock):Parameters">
             <dl>
@@ -1420,7 +1389,7 @@
             This will create an MASUser.CurrentUser upon a successful result.
             </div>
           <h2>Syntax</h2>
-          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithAuthorizationCodeAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> authorizationCode)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithAuthorizationCodeAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> authorizationCode)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithAuthorizationCodeAsync(System.String):Parameters">
             <dl>
@@ -1446,7 +1415,7 @@
             This will create an MASUser.CurrentUser upon a successful result.
             </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("loginWithIdToken:tokenType:completion:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithIdToken</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> idToken, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> tokenType, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <div class="Signature">[Foundation.Export("loginWithIdToken:tokenType:completion:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithIdToken</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> idToken, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> tokenType, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithIdToken(System.String,System.String,MASFoundation.MASCompletionErrorBlock):Parameters">
             <dl>
@@ -1478,7 +1447,7 @@
             This will create an MASUser.CurrentUser upon a successful result.
             </div>
           <h2>Syntax</h2>
-          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithIdTokenAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> idToken, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> tokenType)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithIdTokenAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> idToken, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> tokenType)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithIdTokenAsync(System.String,System.String):Parameters">
             <dl>
@@ -1508,7 +1477,7 @@
             This will create an MASUser.CurrentUser upon a successful result.
             </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("loginWithUserName:password:completion:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithUserName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <div class="Signature">[Foundation.Export("loginWithUserName:password:completion:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoginWithUserName</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithUserName(System.String,System.String,MASFoundation.MASCompletionErrorBlock):Parameters">
             <dl>
@@ -1540,7 +1509,7 @@
             This will create an MASUser.CurrentUser upon a successful result.
             </div>
           <h2>Syntax</h2>
-          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithUserNameAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LoginWithUserNameAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LoginWithUserNameAsync(System.String,System.String):Parameters">
             <dl>
@@ -1568,7 +1537,7 @@
         <blockquote id="M:MASFoundation.MASUser.LogoutAsync():member">
           <div class="msummary">This will return <tt>true</tt> upon a successful result.</div>
           <h2>Syntax</h2>
-          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LogoutAsync</b> ()</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>LogoutAsync</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LogoutAsync():Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1583,7 +1552,7 @@
         <blockquote id="M:MASFoundation.MASUser.LogoutWithCompletion(MASFoundation.MASCompletionErrorBlock):member">
           <div class="msummary">This will return <tt>true</tt> upon a successful result.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("logoutWithCompletion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LogoutWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <div class="Signature">[Foundation.Export("logoutWithCompletion:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LogoutWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.LogoutWithCompletion(MASFoundation.MASCompletionErrorBlock):Parameters">
             <dl>
@@ -1608,7 +1577,7 @@
         Gets the phone numbers.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("phoneNumbers", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>PhoneNumbers</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("phoneNumbers", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSString&gt;</a> <b>PhoneNumbers</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.PhoneNumbers:Value">The phone numbers.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1625,7 +1594,7 @@
         Gets the photos.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("photos", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;</a> <b>Photos</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("photos", ObjCRuntime.ArgumentSemantic.Copy)]<br />public virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSDictionary&lt;Foundation.NSString, Foundation.NSObject&gt;</a> <b>Photos</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.Photos:Value">The photos.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1642,7 +1611,7 @@
             This interface can be used when end-user chooses to not provide local authentication and clean up the session.
             </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("removeSessionLock")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveSessionLock</b> ()</div>
+          <div class="Signature">[Foundation.Export("removeSessionLock")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveSessionLock</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:MASFoundation.MASUser.RemoveSessionLock():Remarks">
           </div>
@@ -1655,7 +1624,7 @@
         <blockquote id="M:MASFoundation.MASUser.RequestUserInfoAsync():member">
           <div class="msummary">This method will retrieve additional information on the MASUser object.</div>
           <h2>Syntax</h2>
-          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MASUser&gt;</a> <b>RequestUserInfoAsync</b> ()</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MASUser&gt;</a> <b>RequestUserInfoAsync</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.RequestUserInfoAsync():Returns">Returns MASUSer object with updated value which is also available through the current MASUser object that is making this request.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1673,7 +1642,7 @@
         This method will retrieve additional information on the MASUser object.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("requestUserInfoWithCompletion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RequestUserInfoWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASUserResponseErrorBlock))] <a href="../MASFoundation/MASUserResponseErrorBlock.html">MASUserResponseErrorBlock</a> completion)</div>
+          <div class="Signature">[Foundation.Export("requestUserInfoWithCompletion:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RequestUserInfoWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASUserResponseErrorBlock))] <a href="../MASFoundation/MASUserResponseErrorBlock.html">MASUserResponseErrorBlock</a> completion)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.RequestUserInfoWithCompletion(MASFoundation.MASUserResponseErrorBlock):Parameters">
             <dl>
@@ -1701,7 +1670,7 @@
         After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
         </p></div>
           <h2>Syntax</h2>
-          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>UnlockSessionAsync</b> ()</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>UnlockSessionAsync</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionAsync():Returns">Tuple&lt;bool, NSError&gt;, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.</blockquote>
           <h2 class="Section">Remarks</h2>
@@ -1722,7 +1691,7 @@
         After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
         </p></div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("unlockSessionWithCompletion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UnlockSessionWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <div class="Signature">[Foundation.Export("unlockSessionWithCompletion:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UnlockSessionWithCompletion</b> ([ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithCompletion(MASFoundation.MASCompletionErrorBlock):Parameters">
             <dl>
@@ -1750,7 +1719,7 @@
         After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
         </p></div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("unlockSessionWithUserOperationPromptMessage:completion:")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UnlockSessionWithUserOperationPromptMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userOperationPrompt, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
+          <div class="Signature">[Foundation.Export("unlockSessionWithUserOperationPromptMessage:completion:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UnlockSessionWithUserOperationPromptMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userOperationPrompt, [ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))] <a href="../MASFoundation/MASCompletionErrorBlock.html">MASCompletionErrorBlock</a> completion)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessage(System.String,MASFoundation.MASCompletionErrorBlock):Parameters">
             <dl>
@@ -1782,7 +1751,7 @@
         After unlocking user session, MASUser.CurrentUser will reflect correct authentication and lock status.
         </p></div>
           <h2>Syntax</h2>
-          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>UnlockSessionWithUserOperationPromptMessageAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userOperationPrompt)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;Tuple&lt;bool, Foundation.NSError&gt;&gt;</a> <b>UnlockSessionWithUserOperationPromptMessageAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userOperationPrompt)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASUser.UnlockSessionWithUserOperationPromptMessageAsync(System.String):Parameters">
             <dl>
@@ -1808,7 +1777,7 @@
         Gets the string value of the username.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[get: Foundation.Export("userName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>UserName</b>  { get; }</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[get: Foundation.Export("userName")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>UserName</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:MASFoundation.MASUser.UserName:Value">The string value of the username.</blockquote>
           <h2 class="Section">Remarks</h2>

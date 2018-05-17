@@ -30,6 +30,9 @@
           <AttributeName>Foundation.Export("init")</AttributeName>
         </Attribute>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
         </Attribute>
       </Attributes>
@@ -47,6 +50,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("initWithConfigurationInfo:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <Parameters>
@@ -66,6 +72,9 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Foundation.NSObjectFlag t) cil managed" />
       <MemberType>Constructor</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
         </Attribute>
@@ -87,6 +96,9 @@
       <MemberType>Constructor</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
         </Attribute>
       </Attributes>
@@ -106,6 +118,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary[] ApplicationClients" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationClients", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -129,6 +144,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool ApplicationCredentialsAreDynamic" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationCredentialsAreDynamic")</AttributeName>
         </Attribute>
@@ -155,6 +173,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("applicationDescription", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
@@ -175,6 +196,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationName", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
@@ -197,6 +221,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("applicationOrganization", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
@@ -217,6 +244,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string ApplicationRegisteredBy" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("applicationRegisteredBy", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
@@ -239,6 +269,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("applicationType", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
@@ -259,6 +292,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string AuthenticateOTPEndpointPath" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("authenticateOTPEndpointPath")</AttributeName>
         </Attribute>
@@ -281,6 +317,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("authorizationEndpointPath")</AttributeName>
         </Attribute>
       </Attributes>
@@ -301,6 +340,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string BluetoothCharacteristicUuid" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("bluetoothCharacteristicUuid")</AttributeName>
         </Attribute>
@@ -323,6 +365,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("bluetoothRssi")</AttributeName>
         </Attribute>
       </Attributes>
@@ -343,6 +388,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string BluetoothServiceUuid" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("bluetoothServiceUuid")</AttributeName>
         </Attribute>
@@ -380,6 +428,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("clientInitializeEndpointPath")</AttributeName>
         </Attribute>
       </Attributes>
@@ -402,6 +453,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("compareWithCurrentConfiguration:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -427,6 +481,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("currentConfiguration")</AttributeName>
         </Attribute>
       </Attributes>
@@ -447,6 +504,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string DefaultApplicationClientIdentifier" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("defaultApplicationClientIdentifier")</AttributeName>
         </Attribute>
@@ -469,6 +529,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("defaultApplicationClientInfo")</AttributeName>
         </Attribute>
       </Attributes>
@@ -489,6 +552,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string DefaultApplicationClientSecret" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("defaultApplicationClientSecret")</AttributeName>
         </Attribute>
@@ -512,6 +578,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("detectServerChangeWithCurrentConfiguration:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -537,6 +606,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("deviceListAllEndpointPath")</AttributeName>
         </Attribute>
       </Attributes>
@@ -557,6 +629,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string DeviceRegisterClientEndpointPath" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("deviceRegisterClientEndpointPath")</AttributeName>
         </Attribute>
@@ -579,6 +654,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("deviceRegisterEndpointPath")</AttributeName>
         </Attribute>
       </Attributes>
@@ -599,6 +677,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string DeviceRemoveEndpointPath" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("deviceRemoveEndpointPath")</AttributeName>
         </Attribute>
@@ -621,6 +702,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("deviceRenewEndpointPath")</AttributeName>
         </Attribute>
       </Attributes>
@@ -641,6 +725,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool EnabledPublicKeyPinning" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("enabledPublicKeyPinning")</AttributeName>
         </Attribute>
@@ -664,6 +751,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool EnabledTrustedPublicPKI" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("enabledTrustedPublicPKI")</AttributeName>
         </Attribute>
@@ -690,6 +780,9 @@
         <Attribute>
           <AttributeName>Foundation.Export("endpointPathForKey:")</AttributeName>
         </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -713,6 +806,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("enterpriseBrowserEndpointPath")</AttributeName>
         </Attribute>
       </Attributes>
@@ -733,6 +829,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray`1&lt;class Foundation.NSString&gt; GatewayCertificates" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayCertificates", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -755,6 +854,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("gatewayCertificatesAsDERData", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
       </Attributes>
@@ -775,6 +877,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray`1&lt;class Foundation.NSString&gt; GatewayCertificatesAsPEMData" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayCertificatesAsPEMData", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -797,6 +902,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("gatewayHostName", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
@@ -817,6 +925,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber GatewayPort" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayPort", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
@@ -839,6 +950,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("gatewayPrefix", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
@@ -859,6 +973,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSUrl GatewayUrl" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("gatewayUrl", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
@@ -881,6 +998,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("instanceFromStorage")</AttributeName>
         </Attribute>
       </Attributes>
@@ -901,6 +1021,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsLoaded" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("isLoaded")</AttributeName>
         </Attribute>
@@ -923,6 +1046,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool LocationIsRequired" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("locationIsRequired")</AttributeName>
         </Attribute>
@@ -952,6 +1078,9 @@
         <Attribute>
           <AttributeName>Foundation.Export("removeSecurityConfigurationForDomain:")</AttributeName>
         </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -976,6 +1105,9 @@
         <Attribute>
           <AttributeName>Foundation.Export("reset")</AttributeName>
         </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -997,6 +1129,9 @@
         <Attribute>
           <AttributeName>Foundation.Export("saveToStorage")</AttributeName>
         </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1015,6 +1150,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string ScimPathEndpointPath" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("scimPathEndpointPath")</AttributeName>
         </Attribute>
@@ -1039,6 +1177,9 @@
         <Attribute>
           <AttributeName>Foundation.Export("securityConfigurationForDomain:")</AttributeName>
         </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>MASFoundation.MASSecurityConfiguration</ReturnType>
@@ -1062,6 +1203,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("securityConfigurations")</AttributeName>
         </Attribute>
       </Attributes>
@@ -1084,6 +1228,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("setSecurityConfiguration:error:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1111,6 +1258,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("ssoEnabled")</AttributeName>
         </Attribute>
         <Attribute>
@@ -1137,6 +1287,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("storagePathEndpointPath")</AttributeName>
         </Attribute>
       </Attributes>
@@ -1157,6 +1310,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string TokenEndpointPath" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("tokenEndpointPath")</AttributeName>
         </Attribute>
@@ -1179,6 +1335,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("tokenRevokeEndpointPath")</AttributeName>
         </Attribute>
       </Attributes>
@@ -1199,6 +1358,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray TrustedCertPinnedPublicKeyHashes" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("trustedCertPinnedPublicKeyHashes", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
         </Attribute>
@@ -1221,6 +1383,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("userInfoEndpointPath")</AttributeName>
         </Attribute>
       </Attributes>
@@ -1242,6 +1407,9 @@
       <MemberType>Property</MemberType>
       <Attributes>
         <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>get: Foundation.Export("userSessionLogoutEndpointPath")</AttributeName>
         </Attribute>
       </Attributes>
@@ -1262,6 +1430,9 @@
       <MemberSignature Language="ILAsm" Value=".property instance string UserSessionStatusEndpointPath" />
       <MemberType>Property</MemberType>
       <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("userSessionStatusEndpointPath")</AttributeName>
         </Attribute>
@@ -1285,6 +1456,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.Export("validateJSONConfiguration:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

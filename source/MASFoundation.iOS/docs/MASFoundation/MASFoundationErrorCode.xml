@@ -739,6 +739,28 @@
         <summary>MAS is not Started.</summary>
       </Docs>
     </Member>
+    <Member MemberName="MultiFactorAuthenticationCancelled">
+      <MemberSignature Language="C#" Value="MultiFactorAuthenticationCancelled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode MultiFactorAuthenticationCancelled = int32(180002)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cancelled.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiFactorAuthenticationInvalidRequest">
+      <MemberSignature Language="C#" Value="MultiFactorAuthenticationInvalidRequest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode MultiFactorAuthenticationInvalidRequest = int32(180003)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Invalid Request.</summary>
+      </Docs>
+    </Member>
     <Member MemberName="NetworkIsOffline">
       <MemberSignature Language="C#" Value="NetworkIsOffline" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode NetworkIsOffline = int32(100402)" />

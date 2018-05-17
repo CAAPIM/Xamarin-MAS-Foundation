@@ -171,7 +171,7 @@ typedef NS_ENUM(NSInteger, MASFoundationErrorCode)
     MASFoundationErrorCodeBLEDelegateNotDefined = 150005,
     MASFoundationErrorCodeBLEInvalidAuthenticationProvider = 150006,
     MASFoundationErrorCodeBLEPoweredOff = 150007,
-    MASFoundationErrorCodeBLERestting = 150008,
+    MASFoundationErrorCodeBLEResetting = 150008,
     MASFoundationErrorCodeBLERSSINotInRange = 150009,
     MASFoundationErrorCodeBLEUnSupported = 150010,
     MASFoundationErrorCodeBLEUnauthorized = 150011,
@@ -213,10 +213,17 @@ typedef NS_ENUM(NSInteger, MASFoundationErrorCode)
     // Browser Based Login
     //
     MASFoundationErrorCodeBBANotEnabled = 180000,
+    
     //
     //  SharedStorage
     //
     MASFoundationErrorCodeSharedStorageNotNilKey = 180001,
+    
+    //
+    //  Multi Factor Authentication
+    //
+    MASFoundationErrorCodeMultiFactorAuthenticationCancelled = 180002,
+    MASFoundationErrorCodeMultiFactorAuthenticationInvalidRequest = 180003,
     
     MASFoundationErrorCodeCount = -999999
 };

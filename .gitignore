@@ -7,3 +7,4 @@ packages
 sample/iOS/BasicAuthSample/.vs/BasicAuthSample/xs/UserPrefs.xml
 source/MASFoundation.Android/.vs/MASFoundation.Android/xs/UserPrefs.xml
 source/MASFoundation.iOS/.vs/MASFoundation.iOS/xs/UserPrefs.xml
+source/MASFoundation.iOS/.vs/MASFoundation.iOS/xs/sqlite3/db.lock

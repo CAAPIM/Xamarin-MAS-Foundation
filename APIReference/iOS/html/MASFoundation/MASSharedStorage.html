@@ -514,7 +514,7 @@
         <blockquote id="C:MASFoundation.MASSharedStorage():member">
           <div class="msummary">Default constructor, initializes a new instance of this class.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("init")]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASSharedStorage</b> ()</div>
+          <div class="Signature">[Foundation.Export("init")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASSharedStorage</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:MASFoundation.MASSharedStorage():Remarks">
           </div>
@@ -527,7 +527,7 @@
         <blockquote id="C:MASFoundation.MASSharedStorage(Foundation.NSCoder):member">
           <div class="msummary">A constructor that initializes the object from the data stored in the unarchiver object.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("initWithCoder:")]<br />[ObjCRuntime.DesignatedInitializer]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASSharedStorage</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> coder)</div>
+          <div class="Signature">[Foundation.Export("initWithCoder:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[ObjCRuntime.DesignatedInitializer]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />public  <b>MASSharedStorage</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSCoder</a> coder)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASSharedStorage(Foundation.NSCoder):Parameters">
             <dl>
@@ -554,7 +554,7 @@
         <blockquote id="C:MASFoundation.MASSharedStorage(Foundation.NSObjectFlag):member">
           <div class="msummary">Constructor to call on derived classes to skip initialization and merely allocate the object.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASSharedStorage</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASSharedStorage</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSObjectFlag</a> t)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASSharedStorage(Foundation.NSObjectFlag):Parameters">
             <dl>
@@ -577,7 +577,7 @@
         <blockquote id="C:MASFoundation.MASSharedStorage(System.IntPtr):member">
           <div class="msummary">A constructor used when creating managed representations of unmanaged objects; Called by the runtime.</div>
           <h2>Syntax</h2>
-          <div class="Signature">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASSharedStorage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
+          <div class="Signature">[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]<br />protected  <b>MASSharedStorage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> handle)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:MASFoundation.MASSharedStorage(System.IntPtr):Parameters">
             <dl>
@@ -618,7 +618,7 @@
         Deletes any data type with the specified key from shared keychain storage.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("deleteForKey:error:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DeleteForKey</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
+          <div class="Signature">[Foundation.Export("deleteForKey:error:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DeleteForKey</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASSharedStorage.DeleteForKey(System.String,Foundation.NSError@):Parameters">
             <dl>
@@ -646,7 +646,7 @@
         Finds NSData object stored with the key from shared keychain storage.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("findDataUsingKey:error:")]<br />public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a> <b>FindDataUsingKey</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
+          <div class="Signature">[Foundation.Export("findDataUsingKey:error:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a> <b>FindDataUsingKey</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASSharedStorage.FindDataUsingKey(System.String,Foundation.NSError@):Parameters">
             <dl>
@@ -676,7 +676,7 @@
         Finds NSString data stored with the key from shared keychain storage.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("findStringUsingKey:error:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FindStringUsingKey</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
+          <div class="Signature">[Foundation.Export("findStringUsingKey:error:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FindStringUsingKey</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASSharedStorage.FindStringUsingKey(System.String,Foundation.NSError@):Parameters">
             <dl>
@@ -707,7 +707,7 @@
         Save method can also be used to delete the data from the shared keychain storage by passing nil in data parameter with the key.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("saveData:key:error:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>SaveData</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a> data, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
+          <div class="Signature">[Foundation.Export("saveData:key:error:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>SaveData</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSData</a> data, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASSharedStorage.SaveData(Foundation.NSData,System.String,Foundation.NSError@):Parameters">
             <dl>
@@ -743,7 +743,7 @@
         Save method can also be used to delete the data from the shared keychain storage by passing nil in string parameter with the key.
         </div>
           <h2>Syntax</h2>
-          <div class="Signature">[Foundation.Export("saveString:key:error:")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>SaveString</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> string, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
+          <div class="Signature">[Foundation.Export("saveString:key:error:")]<br />[ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>SaveString</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> string, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">Foundation.NSError</a> error)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:MASFoundation.MASSharedStorage.SaveString(System.String,System.String,Foundation.NSError@):Parameters">
             <dl>
