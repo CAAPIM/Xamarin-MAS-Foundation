@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAuthSample", "BasicAuthSample.csproj", "{235A4381-47F2-442D-9846-D7C52A21C6E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MASFoundation.iOS", "..\..\..\source\MASFoundation.iOS\MASFoundation.iOS.csproj", "{DBB0B1DC-6E45-4C48-92A6-249B13AB60CB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -21,13 +19,5 @@ Global
 		{235A4381-47F2-442D-9846-D7C52A21C6E9}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{235A4381-47F2-442D-9846-D7C52A21C6E9}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{235A4381-47F2-442D-9846-D7C52A21C6E9}.Debug|iPhone.Build.0 = Debug|iPhone
-		{DBB0B1DC-6E45-4C48-92A6-249B13AB60CB}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{DBB0B1DC-6E45-4C48-92A6-249B13AB60CB}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{DBB0B1DC-6E45-4C48-92A6-249B13AB60CB}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{DBB0B1DC-6E45-4C48-92A6-249B13AB60CB}.Release|iPhone.Build.0 = Release|Any CPU
-		{DBB0B1DC-6E45-4C48-92A6-249B13AB60CB}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{DBB0B1DC-6E45-4C48-92A6-249B13AB60CB}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{DBB0B1DC-6E45-4C48-92A6-249B13AB60CB}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{DBB0B1DC-6E45-4C48-92A6-249B13AB60CB}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
