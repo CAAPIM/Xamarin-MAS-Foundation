@@ -43,43 +43,44 @@ namespace BasicAuthSample
         //
         // Start the SDK with default configuration
         //
-        public static void startSDK(MainActivity activity)
+        public static void StartSDK(MainActivity activity)
         {
-            if (!checkSDKAlreadyInitialized(activity))
+            if (!CheckSDKAlreadyInitialized(activity))
             {
                 // MAS.Start(Context context, bool shouldUseDefault);
                 MAS.Start(activity, true);
 
-                checkSDKInitialized(activity);
+                CheckSDKInitialized(activity);
             }
         }
+
         //
         // Start SDK with default after changing the default configuration file
         //
-        public static void startSDKChangeDefaultConfig(MainActivity activity)
+        public static void StartSDKChangeDefaultConfig(MainActivity activity)
         {
 
-            if (!checkSDKAlreadyInitialized(activity))
+            if (!CheckSDKAlreadyInitialized(activity))
             {
 
                 // Change the default Configuration
                 //MAS.SetConfigurationFileName("custom.json");
                 MAS.SetConfigurationFileName("msso_config_public.json");
-
+                
                 // MAS.Start(Context context, bool shouldUseDefault);
                 MAS.Start(activity, true);
 
-                checkSDKInitialized(activity);
+                CheckSDKInitialized(activity);
             }
         }
 
         //
         // Start SDK with a custom JSON Object
         //
-        public static void startSDKCustomJson(MainActivity activity)
+        public static void StartSDKCustomJson(MainActivity activity)
         {
 
-            if (!checkSDKAlreadyInitialized(activity))
+            if (!CheckSDKAlreadyInitialized(activity))
             {
                 //Reads existing msso config file and saves as a JSONObject
                 string mssoString = "";
@@ -93,17 +94,17 @@ namespace BasicAuthSample
                 // MAS.Start(Context context, JSONObject mssoJSON);
                 MAS.Start(activity, mssoJson);
 
-                checkSDKInitialized(activity);
+                CheckSDKInitialized(activity);
             }
         }
 
         //
         // Start SDK with a File URL
         //
-        public static void startSDKFileUrl(MainActivity activity)
+        public static void StartSDKFileUrl(MainActivity activity)
         {
 
-            if (!checkSDKAlreadyInitialized(activity))
+            if (!CheckSDKAlreadyInitialized(activity))
             {
                 //Reads existing msso config and saves as a JSONObject
                 string mssoString = "";
@@ -124,17 +125,17 @@ namespace BasicAuthSample
                 // MAS.Start(Context context, URL fileUrl);
                 MAS.Start(activity, new Java.Net.URL("file:" + path));
 
-                checkSDKInitialized(activity);
+                CheckSDKInitialized(activity);
             }
         }
 
         //
         // Start SDK with an enrolment URL
         //
-        public static async void startSDKEnrolmentURL(MainActivity activity)
+        public static async void StartSDKEnrolmentURL(MainActivity activity)
         {
 
-            if (!checkSDKAlreadyInitialized(activity))
+            if (!CheckSDKAlreadyInitialized(activity))
             {
                 // Get Enrolment URL
                 Java.Net.URL enrolmentUrl = new Java.Net.URL(GetEnrollmentURLAsync("https://mobile-staging-xamarinautomation.l7tech.com:8443", 
@@ -149,9 +150,9 @@ namespace BasicAuthSample
         //
         // Display a dialog showing if SDK Initialized
         //
-        public static void checkSDKInitialized(MainActivity activity)
+        public static void CheckSDKInitialized(MainActivity activity)
         {
-            if (MAS.GetState(Application.Context) == MASConstants.MasStateStarted)
+			if (IsMASStarted())
                 activity.Alert("MAS", "CA Mobile SDK started successfully!!");
             else
                 activity.Alert("MAS", "CA Mobile SDK did not start!!");
@@ -160,9 +161,9 @@ namespace BasicAuthSample
         //
         // Display a dialog showing if SDK is already initialized
         //
-        public static bool checkSDKAlreadyInitialized(MainActivity activity)
+        public static bool CheckSDKAlreadyInitialized(MainActivity activity)
         {
-            bool isInitialized = MAS.GetState(Application.Context) == MASConstants.MasStateStarted;
+			bool isInitialized = IsMASStarted();
             if (isInitialized)
             {
                 activity.Alert("MAS", "CA Mobile SDK has already been started.");
@@ -210,5 +211,191 @@ namespace BasicAuthSample
             return responseString;
         }
 
+		//
+		// Log in button action. See MyAuthenticationListener.cs for details on MASUser.LoginAsync();
+        //
+		public static async Task LoginAsync(MainActivity activity)
+        {
+			if (IsMASStarted())
+            {
+    			// Check if user is already authenticated
+                if (MASUser.CurrentUser != null)
+                {
+    				activity.Alert("MAS", "User already authenticated as " + MASUser.CurrentUser.UserName);
+                }
+                else
+                {
+
+    					// Used only to trigger authentication with no callback
+                        try
+                        {
+                            var user = await MASUser.LoginAsync();
+
+                        }
+                        catch (Java.Lang.Throwable exception)
+                        {
+    						activity.Alert("Error", exception.ToString());
+                            MAS.CancelAllRequests();
+                        }
+
+                }
+			}
+            else
+            {
+                activity.Alert("MAS", "CA Mobile SDK did not start!!");
+            }
+        }
+
+        //
+        // Invoke a sample protected endpoint in the Gateway and display the returned JSON in a dialog
+        //
+        public static async Task InvokeApiAsync(MainActivity activity)
+        {         
+			if (IsMASStarted())
+            {
+    			try
+                {
+                    //Use Uri.Builder() to build the Uri and pass it into a MASRequestBuilder.
+                    Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
+
+                    //Append path
+                    uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
+
+                    //Create MASRequestBuilder
+                    MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
+
+                    //Add Response type
+                    builder.ResponseBody(MASResponseBody.JsonBody());
+
+                    //Invoke the API with builder
+                    var response = await MAS.InvokeAsync(builder.Build());
+
+                    JSONObject jsonObject = (JSONObject)response.Body.Content;
+    				activity.Alert("Response", jsonObject.ToString(4));
+
+                }
+                catch (Java.Lang.Throwable exception)
+                {
+    				activity.Alert("MAS", exception.LocalizedMessage);
+                }    
+			}
+            else
+            {
+                activity.Alert("MAS", "CA Mobile SDK did not start!!");
+            }
+        }
+        
+        //
+        // Logs out current user
+        //
+		public static async Task LogoutAsync(MainActivity activity)
+        {
+			if (IsMASStarted())
+			{
+				// Check if user is already authenticated
+				if (MASUser.CurrentUser != null)
+				{
+					try
+					{
+						await MASUser.CurrentUser.LogoutAsync();
+						activity.Alert("MAS", "User Logout");
+					}
+					catch (Java.Lang.Throwable)
+					{
+						activity.Alert("MAS", "User Logout Failed");
+					}
+				}
+				else
+				{
+					activity.Alert("MAS", "User is not authenticated");
+				}
+			}
+			else
+            {
+                activity.Alert("MAS", "CA Mobile SDK did not start!!");
+            }
+        }
+
+        //
+        // Lock current user session with device's local authentication
+        // This will block most of operations except for MASUser.CurrentUser.Logout()
+        // and MASDevice.CurrentDevice().Deregister()
+        //
+        public static async Task LockSessionAsync(MainActivity activity)
+        {
+			if (IsMASStarted())
+            {
+				if (MASUser.CurrentUser != null)
+                {
+                    try
+                    {
+                        await MASUser.CurrentUser.LockSessionAsync();
+						activity.Alert("Session Lock", "Session Locked!");
+                    }
+                    catch (Java.Lang.Throwable)
+                    {
+						activity.Alert("Session Lock", "Session Locked Failed!");
+                    }
+                }
+                else
+                {
+					activity.Alert("MAS", "User is not authenticated");
+                }
+            }
+            else
+            {
+                activity.Alert("MAS", "CA Mobile SDK did not start!!");
+            }
+        }
+
+        //
+        // Unlock current user session and unblock all of the operations through SDK
+        //
+        public static async Task UnLockSessionAsync(MainActivity activity)
+        {
+			if (IsMASStarted())
+            {
+				if (MASUser.CurrentUser != null)
+                {
+                    if (MASUser.CurrentUser.IsSessionLocked)
+                    {
+                        //Unlock session
+                        try
+                        {
+                            await MASUser.CurrentUser.UnlockSessionAsync();
+                        }
+                        catch (MASUser.UserAuthenticationRequiredException)
+                        {
+							activity.ConfirmCredential();
+                        }
+                        catch (Java.Lang.Throwable)
+                        {
+							activity.Alert("Session Unlock", "Session Unlocked Failed!");
+
+                        }
+                    }
+                    else
+                    {
+						activity.Alert("Session Unlock", "Session not locked!");
+                    }
+                }
+                else
+                {
+					activity.Alert("Session Unlock", "User not authenticated");
+                }
+            }
+            else
+            {
+                activity.Alert("MAS", "CA Mobile SDK did not start!!");
+            }
+        }
+
+		//
+        // Check if MAS is started
+        //
+		public static bool IsMASStarted()
+		{
+			return MAS.GetState(Application.Context) == MASConstants.MasStateStarted;
+		}
     }
 }
