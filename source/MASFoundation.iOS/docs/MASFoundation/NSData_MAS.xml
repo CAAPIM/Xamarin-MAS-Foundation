@@ -22,6 +22,9 @@
         <Attribute>
           <AttributeName>Foundation.Export("decryptData:password:error:")</AttributeName>
         </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Foundation.NSData</ReturnType>
@@ -51,6 +54,9 @@
         <Attribute>
           <AttributeName>Foundation.Export("encryptData:password:error:")</AttributeName>
         </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Foundation.NSData</ReturnType>
@@ -73,21 +79,28 @@
       </Docs>
     </Member>
     <Member MemberName="IsEncrypted">
-      <MemberSignature Language="C#" Value="public static bool IsEncrypted { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property bool IsEncrypted" />
-      <MemberType>Property</MemberType>
+      <MemberSignature Language="C#" Value="public static bool IsEncrypted (this Foundation.NSData This);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsEncrypted(class Foundation.NSData This) cil managed" />
+      <MemberType>Method</MemberType>
       <Attributes>
         <Attribute>
-          <AttributeName>get: Foundation.Export("isEncrypted")</AttributeName>
+          <AttributeName>Foundation.Export("isEncrypted")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
+      <Parameters>
+        <Parameter Name="This" Type="Foundation.NSData" RefType="this" />
+      </Parameters>
       <Docs>
+        <param name="This">This instance of the class.</param>
         <summary>Simple, convenient method to determine if the object is encrypted.</summary>
-        <value>
-          <c>true</c> if object is encrypted, <c>false</c>  if otherwise.</value>
+        <returns>
+          <c>true</c> if object is encrypted, <c>false</c>  if otherwise.</returns>
         <remarks>
         </remarks>
       </Docs>

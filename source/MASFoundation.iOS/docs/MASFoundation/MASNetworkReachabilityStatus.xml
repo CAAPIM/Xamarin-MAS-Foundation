@@ -1,0 +1,72 @@
+<Type Name="MASNetworkReachabilityStatus" FullName="MASFoundation.MASNetworkReachabilityStatus">
+  <TypeSignature Language="C#" Value="public enum MASNetworkReachabilityStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MASNetworkReachabilityStatus extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumerated values for MASNetworkReachabilityStatus</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Initializing">
+      <MemberSignature Language="C#" Value="Initializing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASNetworkReachabilityStatus Initializing = int32(4)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASNetworkReachabilityStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Network manager is being initialized and monitoring process is starting up.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotReachable">
+      <MemberSignature Language="C#" Value="NotReachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASNetworkReachabilityStatus NotReachable = int32(1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASNetworkReachabilityStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Network is not reachable.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReachableViaWiFi">
+      <MemberSignature Language="C#" Value="ReachableViaWiFi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASNetworkReachabilityStatus ReachableViaWiFi = int32(3)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASNetworkReachabilityStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Network is reachable via WiFi.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReachableViaWWAN">
+      <MemberSignature Language="C#" Value="ReachableViaWWAN" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASNetworkReachabilityStatus ReachableViaWWAN = int32(2)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASNetworkReachabilityStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Network is reachable via cellular network.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASNetworkReachabilityStatus Unknown = int32(-1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASNetworkReachabilityStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Network reachability status unknown.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

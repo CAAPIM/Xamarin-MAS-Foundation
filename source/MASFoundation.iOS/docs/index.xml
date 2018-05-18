@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="MASFoundation.iOS" Version="1.0.6695.24130">
+    <Assembly Name="MASFoundation.iOS" Version="1.7.0.0">
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.LinkerSafe</AttributeName>
@@ -9,10 +9,10 @@
           <AttributeName>ObjCRuntime.LinkWith("MASFoundation.framework")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.Default | System.Diagnostics.DebuggableAttribute+DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints | System.Diagnostics.DebuggableAttribute+DebuggingModes.EnableEditAndContinue)</AttributeName>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Reflection.AssemblyCompany("")</AttributeName>
+          <AttributeName>System.Reflection.AssemblyCompany("CA Technologies")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Reflection.AssemblyConfiguration("")</AttributeName>
@@ -21,10 +21,10 @@
           <AttributeName>System.Reflection.AssemblyCopyright("${AuthorCopyright}")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Reflection.AssemblyDescription("")</AttributeName>
+          <AttributeName>System.Reflection.AssemblyDescription("The core library that handles the communication and authentication layer")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Reflection.AssemblyProduct("")</AttributeName>
+          <AttributeName>System.Reflection.AssemblyProduct("CA Mobile SDK")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Reflection.AssemblyTitle("MASFoundation.iOS")</AttributeName>
@@ -57,8 +57,6 @@
       <Type Name="MASAuthCredentialsJWT" Kind="Class" />
       <Type Name="MASAuthCredentialsPassword" Kind="Class" />
       <Type Name="MASAuthenticationStatus" Kind="Enumeration" />
-      <Type Name="MASAuthorizationResponse" Kind="Class" />
-      <Type Name="MASAuthorizationResponseDelegate" Kind="Class" />
       <Type Name="MASCompletionErrorBlock" Kind="Delegate" />
       <Type Name="MASConfiguration" Kind="Class" />
       <Type Name="MASDevice" Kind="Class" />
@@ -68,6 +66,7 @@
       <Type Name="MASGatewayMonitoringStatus" Kind="Enumeration" />
       <Type Name="MASGatewayMonitorStatusBlock" Kind="Delegate" />
       <Type Name="MASGrantFlow" Kind="Enumeration" />
+      <Type Name="MASNetworkReachabilityStatus" Kind="Enumeration" />
       <Type Name="MASObject" Kind="Class" />
       <Type Name="MASRequest" Kind="Class" />
       <Type Name="MASRequestBuilder" Kind="Class" />
@@ -140,6 +139,27 @@
           <summary>Encrypts data using a password passed in the parameter.</summary>
         </Docs>
         <Link Type="MASFoundation.NSData_MAS" Member="M:MASFoundation.NSData_MAS.EncryptData(Foundation.NSData,Foundation.NSData,System.String,Foundation.NSError@)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:Foundation.NSData" />
+      </Targets>
+      <Member MemberName="IsEncrypted">
+        <MemberSignature Language="C#" Value="public static bool IsEncrypted (this Foundation.NSData This);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsEncrypted(class Foundation.NSData This) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>System.Boolean</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="This" Type="Foundation.NSData" RefType="this" />
+        </Parameters>
+        <Docs>
+          <param name="This">This instance of the class.</param>
+          <summary>Simple, convenient method to determine if the object is encrypted.</summary>
+        </Docs>
+        <Link Type="MASFoundation.NSData_MAS" Member="M:MASFoundation.NSData_MAS.IsEncrypted(Foundation.NSData)" />
       </Member>
     </ExtensionMethod>
   </ExtensionMethods>

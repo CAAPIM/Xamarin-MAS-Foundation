@@ -79,6 +79,9 @@ namespace MASFoundation
     // typedef void (^MASAuthorizationCodeCredentialsBlock)(NSString * _Nonnull, BOOL, MASCompletionErrorBlock _Nullable);
     delegate void MASAuthorizationCodeCredentialsBlock(string authorizationCode, bool cancel, [BlockCallback, NullAllowed] MASCompletionErrorBlock completionBlock);
 
+	// typedef void (^MASNetworkReachabilityStatusBlock)(MASNetworkReachabilityStatus);
+	delegate void MASNetworkReachabilityStatusBlock(MASNetworkReachabilityStatus status);
+
     // @interface MASObject : NSObject <NSCopying, NSCoding>
     [BaseType(typeof(NSObject))]
     interface MASObject : INSCopying, INSCoding
@@ -271,6 +274,10 @@ namespace MASFoundation
         //[Field("MASProximityLoginQRCodeDidStopDisplayingQRCodeImage", "__Internal")]
         //NSString MASProximityLoginQRCodeDidStopDisplayingQRCodeImage { get; }
 
+		// extern NSString *const _Nonnull MASNetworkReachabilityStatusUpdateNotification;
+        [Field("MASNetworkReachabilityStatusUpdateNotification", "__Internal")]
+        NSString MASNetworkReachabilityStatusUpdateNotification { get; }
+
         //Gateway Monitor Notifications
         // extern NSString* const _Nonnull MASGatewayMonitorStatusUpdateNotification;
         [Field("MASGatewayMonitorStatusUpdateNotification", "__Internal")]
@@ -354,6 +361,17 @@ namespace MASFoundation
     //    [Static]
     //    [Export("lifecycleStatusToString:")]
     //    string LifecycleStatusToString(MASServiceLifecycleStatus status);
+
+	//// +(NSArray * _Nullable)getSubclasses;
+    //[Static]
+    //[NullAllowed, Export("getSubclasses")]
+    ////[Verify(MethodToProperty), Verify(StronglyTypedNSArray)]
+    //NSObject[] Subclasses { get; }
+
+    //// +(void)registerSubclass:(Class _Nonnull)subclass serviceUUID:(NSString * _Nonnull)serviceUUID;
+    //[Static]
+    //[Export("registerSubclass:serviceUUID:")]
+    //void RegisterSubclass(Class subclass, string serviceUUID);
     //}
 
     //// @interface SubclassingHooks (MASService)
@@ -680,49 +698,49 @@ namespace MASFoundation
     //    MASAuthenticationProvider RetrieveAuthenticationProviderForProximityLogin { get; }
     //}
 
-    // @protocol MASAuthorizationResponseDelegate <NSObject>
-    //[Protocol, Model]
-    [BaseType(typeof(NSObject))]
-    [Model]
-    interface MASAuthorizationResponseDelegate
-    {
-        // @required -(void)didReceiveAuthorizationCode:(NSString * _Nonnull)code;
-        [Abstract]
-        [Export("didReceiveAuthorizationCode:")]
-        void DidReceiveAuthorizationCode(string code);
+    //// @protocol MASAuthorizationResponseDelegate <NSObject>
+    ////[Protocol, Model]
+    //[BaseType(typeof(NSObject))]
+    //[Model]
+    //interface MASAuthorizationResponseDelegate
+    //{
+    //    // @required -(void)didReceiveAuthorizationCode:(NSString * _Nonnull)code;
+    //    [Abstract]
+    //    [Export("didReceiveAuthorizationCode:")]
+    //    void DidReceiveAuthorizationCode(string code);
 
-        // @required -(void)didReceiveError:(NSError * _Nonnull)error;
-        [Abstract]
-        [Export("didReceiveError:")]
-        void DidReceiveError(NSError error);
-    }
+    //    // @required -(void)didReceiveError:(NSError * _Nonnull)error;
+    //    [Abstract]
+    //    [Export("didReceiveError:")]
+    //    void DidReceiveError(NSError error);
+    //}
 
-    // @interface MASAuthorizationResponse : NSObject
-    [BaseType(typeof(NSObject))]
-    interface MASAuthorizationResponse
-    {
-        [Wrap("WeakDelegate")]
-        [NullAllowed]
-        MASAuthorizationResponseDelegate Delegate { get; set; }
+    //// @interface MASAuthorizationResponse : NSObject
+    //[BaseType(typeof(NSObject))]
+    //interface MASAuthorizationResponse
+    //{
+    //    [Wrap("WeakDelegate")]
+    //    [NullAllowed]
+    //    MASAuthorizationResponseDelegate Delegate { get; set; }
 
-        // @property (nonatomic, weak) id<MASAuthorizationResponseDelegate> _Nullable delegate;
-        [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
-        NSObject WeakDelegate { get; set; }
+    //    // @property (nonatomic, weak) id<MASAuthorizationResponseDelegate> _Nullable delegate;
+    //    [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
+    //    NSObject WeakDelegate { get; set; }
 
-        // +(instancetype _Nullable)sharedInstance;
-        [Static]
-        [Export("sharedInstance")]
-        [return: NullAllowed]
-        MASAuthorizationResponse SharedInstance();
+    //    // +(instancetype _Nullable)sharedInstance;
+    //    [Static]
+    //    [Export("sharedInstance")]
+    //    [return: NullAllowed]
+    //    MASAuthorizationResponse SharedInstance();
 
-        // -(BOOL)application:(UIApplication * _Nonnull)app openURL:(NSURL * _Nonnull)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> * _Nonnull)options;
-        [Export("application:openURL:options:")]
-        bool Application(UIApplication app, NSUrl url, NSDictionary<NSString, NSObject> options);
+    //    // -(BOOL)application:(UIApplication * _Nonnull)app openURL:(NSURL * _Nonnull)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> * _Nonnull)options;
+    //    [Export("application:openURL:options:")]
+    //    bool Application(UIApplication app, NSUrl url, NSDictionary<NSString, NSObject> options);
 
-        // -(BOOL)application:(UIApplication * _Nonnull)application openURL:(NSURL * _Nonnull)url sourceApplication:(NSString * _Nonnull)sourceApplication annotation:(id _Nonnull)annotation;
-        [Export("application:openURL:sourceApplication:annotation:")]
-        bool Application(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation);
-    }
+    //    // -(BOOL)application:(UIApplication * _Nonnull)application openURL:(NSURL * _Nonnull)url sourceApplication:(NSString * _Nonnull)sourceApplication annotation:(id _Nonnull)annotation;
+    //    [Export("application:openURL:sourceApplication:annotation:")]
+    //    bool Application(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation);
+    //}
 
     // @interface MASConfiguration : NSObject
     [BaseType(typeof(NSObject))]
@@ -757,9 +775,9 @@ namespace MASFoundation
         string[] GatewayCertificates { get; }
 
         // @property (readonly, copy, nonatomic) NSArray * _Nullable trustedCertPinnedPublickKeyHashes;
-        [NullAllowed, Export("trustedCertPinnedPublickKeyHashes", ArgumentSemantic.Copy)]
+        [NullAllowed, Export("trustedCertPinnedPublicKeyHashes", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
-        NSArray TrustedCertPinnedPublickKeyHashes { get; }
+        NSArray TrustedCertPinnedPublicKeyHashes { get; }
 
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificatesAsDERData;
         [NullAllowed, Export("gatewayCertificatesAsDERData", ArgumentSemantic.Copy)]
@@ -1340,11 +1358,6 @@ namespace MASFoundation
         [NullAllowed, Export("currentUser")]
         MASUser CurrentUser { get; }
 
-        // +(NSString * _Nullable)authCredentialsType;
-        [Static]
-        [NullAllowed, Export("authCredentialsType")]
-        string AuthCredentialsType { get; }
-
         // -(void)lockSessionWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
         //[Async(ResultTypeName = "MASCompletionErrorResult")]
         [Async(MethodName = "LockSessionAsync")]
@@ -1431,10 +1444,9 @@ namespace MASFoundation
         NSData DecryptData(NSData data, string password, [NullAllowed] out NSError anError);
 
         // -(BOOL)isEncrypted;
-        [Static]
         [Export("isEncrypted")]
         //[Verify(MethodToProperty)]
-        bool IsEncrypted { get; }
+        bool IsEncrypted();
     }
 
     //// @interface MASClaims : MASObject
@@ -1869,6 +1881,11 @@ namespace MASFoundation
         [Export("invoke:completion:")]
         void Invoke(MASRequest request, [NullAllowed] MASResponseObjectErrorBlock completion);
 
+		//// +(void)registerMultiFactorAuthenticator:(MASObject<MASMultiFactorAuthenticator> * _Nonnull)multiFactorAuthenticator;
+        //[Static]
+        //[Export("registerMultiFactorAuthenticator:")]
+        //void RegisterMultiFactorAuthenticator(MASMultiFactorAuthenticator multiFactorAuthenticator);
+
         //// +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
         //[Static]
         //[Export("signWithClaims:error:")]
@@ -2071,5 +2088,50 @@ namespace MASFoundation
         MASAuthCredentialsPassword InitWithUsername(string username, string password);
     }
 
+	//// @protocol MASMultiFactorAuthenticator
+    //[Protocol, Model]
+    //interface MASMultiFactorAuthenticator
+    //{
+    //    // @required -(MASMultiFactorHandler * _Nullable)getMultiFactorHandler:(MASRequest * _Nonnull)request response:(id)response;
+    //    [Abstract]
+    //    [Export("getMultiFactorHandler:response:")]
+    //    [return: NullAllowed]
+    //    MASMultiFactorHandler GetMultiFactorHandler(MASRequest request, NSObject response);
+
+    //    // @required -(void)onMultiFactorAuthenticationRequest:(MASRequest * _Nonnull)request response:(id)response handler:(MASMultiFactorHandler * _Nonnull)handler;
+    //    [Abstract]
+    //    [Export("onMultiFactorAuthenticationRequest:response:handler:")]
+    //    void OnMultiFactorAuthenticationRequest(MASRequest request, NSObject response, MASMultiFactorHandler handler);
+    //}
+
+	//// @interface MASMultiFactorHandler
+    //interface MASMultiFactorHandler
+    //{
+    //    // @property (nonatomic, strong) MASRequest * _Nonnull request;
+    //    [Export("request", ArgumentSemantic.Strong)]
+    //    MASRequest Request { get; set; }
+
+    //    // -(instancetype _Nullable)initWithRequest:(MASRequest * _Nonnull)request;
+    //    [Export("initWithRequest:")]
+    //    IntPtr Constructor(MASRequest request);
+
+    //    // +(instancetype _Nullable)new;
+    //    [Static]
+    //    [Export("new")]
+    //    [return: NullAllowed]
+    //    MASMultiFactorHandler New();
+
+    //    // -(void)proceedWithHeaders:(id)headers;
+    //    [Export("proceedWithHeaders:")]
+    //    void ProceedWithHeaders(NSObject headers);
+
+    //    // -(void)cancelWithError:(id)error;
+    //    [Export("cancelWithError:")]
+    //    void CancelWithError(NSObject error);
+
+    //    // -(void)cancel;
+    //    [Export("cancel")]
+    //    void Cancel();
+    //}
 
 }

@@ -39,26 +39,22 @@ namespace BasicAuthSample
 
             setClientCredentialsFlowButton.Click += (sender, e) =>
             {
-                // MAS.SetGrantFlow(int type)
-                MAS.SetGrantFlow(MASConstants.MasGrantFlowClientCredentials);
-                Alert("MAS", "Grant flow set to Client Credentials Flow!");
+				SampleActions.SetGrantFlowToClientCredential(this);
             };
 
             setPasswordFlowButton.Click += (sender, e) =>
             {
-                // MAS.SetGrantFlow(int type)
-                MAS.SetGrantFlow(MASConstants.MasGrantFlowPassword);
-                Alert("MAS", "Grant flow set to Password Flow!");
+				SampleActions.SetGrantFlowToPassword(this);
             };
 
             startSDKButton.Click += (sender, e) =>
             {
                 // Comment/Uncomment desired start method (One uncommented at a time)
-                SampleActions.startSDK(this);
-                //SampleActions.startSDKChangeDefaultConfig(this);
-                //SampleActions.startSDKCustomJson(this);
-                //SampleActions.startSDKFileUrl(this);
-                //SampleActions.startSDKEnrolmentURL(this);
+                SampleActions.StartSDK(this);
+                //SampleActions.StartSDKChangeDefaultConfig(this);
+                //SampleActions.StartSDKCustomJson(this);
+                //SampleActions.StartSDKFileUrl(this);
+                //SampleActions.StartSDKEnrolmentURL(this);
             };
 
             //
@@ -66,23 +62,7 @@ namespace BasicAuthSample
             //
             loginButton.Click += async (sender, e) =>
             {
-                // Check if user is already authenticated
-                if (MASUser.CurrentUser != null)
-                {
-                    Alert("MAS", "User already authenticated as " + MASUser.CurrentUser.UserName);
-                }
-                else
-                {
-                    // Used only to trigger authentication with no callback
-                    try
-                    {
-                        var user = await MASUser.LoginAsync();
-
-                    } catch (Java.Lang.Throwable exception) {
-                        Alert("Error", exception.ToString());
-                        MAS.CancelAllRequests();
-                    }
-                }
+				await SampleActions.LoginAsync(this);
             };
 
             //
@@ -90,28 +70,7 @@ namespace BasicAuthSample
             //
             invokeApiButton.Click += async (sender, e) =>
             {
-                try { 
-                    //Use Uri.Builder() to build the Uri and pass it into a MASRequestBuilder.
-                    Android.Net.Uri.Builder uriBuilder = new Android.Net.Uri.Builder();
-
-                    //Append path
-                    uriBuilder.AppendEncodedPath("protected/resource/products?operation=listProducts");
-
-                    //Create MASRequestBuilder
-                    MASRequestBuilder builder = new MASRequestBuilder(uriBuilder.Build());
-
-                    //Add Response type
-                    builder.ResponseBody(MASResponseBody.JsonBody());
-
-                    //Invoke the API with builder
-                    var response = await MAS.InvokeAsync(builder.Build());
-
-                    JSONObject jsonObject = (JSONObject)response.Body.Content;
-                    Alert("Response", jsonObject.ToString(4));
-
-                } catch (Java.Lang.Throwable exception) {
-                    Alert("MAS", exception.LocalizedMessage);
-                }
+				await SampleActions.InvokeApiAsync(this);
             };
 
             //
@@ -119,22 +78,7 @@ namespace BasicAuthSample
             //
             logoutButton.Click += async (sender, e) =>
             {
-                if (MASUser.CurrentUser != null)
-                {
-                    try
-                    {
-                        await MASUser.CurrentUser.LogoutAsync();
-                        Alert("MAS", "User Logout");
-                    }
-                    catch (Java.Lang.Throwable)
-                    {
-                        Alert("MAS", "User Logout Failed");
-                    }
-                }
-                else
-                {
-                    Alert("MAS", "User is not authenticated");
-                }
+				await SampleActions.LogoutAsync(this);
             };
 
             //
@@ -144,20 +88,7 @@ namespace BasicAuthSample
             //
             lockSessionButton.Click += async (sender, e) =>
             {
-                if (MASUser.CurrentUser != null)
-                {
-                    try
-                    {
-                        await MASUser.CurrentUser.LockSessionAsync();
-                        Alert("Session Lock", "Session Locked!");
-                    } catch (Java.Lang.Throwable) {
-                        Alert("Session Lock", "Session Locked Failed!");
-                    }
-                }
-                else
-                {
-                    Alert("MAS", "User is not authenticated");
-                }
+				await SampleActions.LockSessionAsync(this);
             };
 
             //
@@ -165,31 +96,7 @@ namespace BasicAuthSample
             //
             unlockSessionButton.Click += async (sender, e) =>
             {
-                if (MASUser.CurrentUser != null)
-                {
-                    if (MASUser.CurrentUser.IsSessionLocked)
-                    {
-                        //Unlock session
-                        try
-                        {
-                            await MASUser.CurrentUser.UnlockSessionAsync();
-                        } catch (MASUser.UserAuthenticationRequiredException) {
-                            KeyguardManager keyguardManager = (KeyguardManager)Application.Context.GetSystemService(Context.KeyguardService);
-                            Intent intent = keyguardManager.CreateConfirmDeviceCredentialIntent("Session Unlock", "Provide PIN or FingerPrint to unlock session.");
-                            StartActivityForResult(intent, 1);
-                        } catch (Java.Lang.Throwable) {
-                            Alert("Session Unlock", "Session Unlocked Failed!");
-                        }
-                    }
-                    else
-                    {
-                        Alert("Session Unlock", "Session not locked!");
-                    }
-                }
-                else
-                {
-                    Alert("Session Unlock", "User not authenticated");
-                }
+				await SampleActions.UnLockSessionAsync(this);
             };
 
             //
@@ -222,6 +129,13 @@ namespace BasicAuthSample
             });
             alert.Show();
         }
+
+        public void ConfirmCredential()
+		{
+			KeyguardManager keyguardManager = (KeyguardManager)Application.Context.GetSystemService(Context.KeyguardService);
+            Intent intent = keyguardManager.CreateConfirmDeviceCredentialIntent("Session Unlock", "Provide PIN or FingerPrint to unlock session.");
+            StartActivityForResult(intent, 1);			
+		}
 
         protected override async void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
