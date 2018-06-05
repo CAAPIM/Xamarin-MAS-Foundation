@@ -50,4 +50,4 @@ By contributing to iOS Mobile SDK, you agree that your contributions will be lic
 [community]: https://communities.ca.com/community/ca-api-management-community/content?filterID=contentstatus%5Bpublished%5D~category%5Bca-mobile-api-gateway%5D
 [cla]: https://www.clahub.com/agreements/CAAPIM/Xamarin-MAS-Foundation
 [casupport]: https://support.ca.com/irj/portal/implsvcnewcase
-[license-link]: /LICENSE.md
+[license-link]: /LICENSE
