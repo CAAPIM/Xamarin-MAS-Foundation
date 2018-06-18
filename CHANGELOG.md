@@ -1,13 +1,13 @@
 # Version X.X.XX
 
 ### Bug fixes
--
+None.
 
 ### New features
-- 
+Initial Release of Xamarin MASFoundation
 
 ### Deprecated methods
-- 
+None. 
 
  [mag]: https://docops.ca.com/mag
  [mas.ca.com]: http://mas.ca.com/
