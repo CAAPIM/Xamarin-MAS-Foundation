@@ -4,7 +4,7 @@
 None.
 
 ### New features
-Initial Release of Xamarin MASFoundation
+Initial Release of Xamarin MASFoundation.
 
 ### Deprecated methods
 None. 
