@@ -1,4 +1,4 @@
-# Version X.X.XX
+# Version 1.7.00
 
 ### Bug fixes
 None.
