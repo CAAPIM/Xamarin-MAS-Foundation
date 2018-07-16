@@ -540,24 +540,24 @@ namespace BasicAuthSample
         {
             if (MASUser.CurrentUser != null)
             {
-                MASUser.CurrentUser.LogoutWithCompletion(completion: (completed, error) =>
+                MASUser.CurrentUser.Logout(false, completion: (completed, error) =>
                 {
                     if (error != null)
                     {
                         // Logged out with an error
-                        Alert("MAS.LogoutWithCompletion", "ERROR: " + error.LocalizedDescription);
+                        Alert("MAS.Logout", "ERROR: " + error.LocalizedDescription);
                     }
                     else if (completed)
                     {
                         // Logged out without an error
-                        Alert("MAS.LogoutWithCompletion", "Logout completed successfully");
+                        Alert("MAS.Logout", "Logout completed successfully");
                     }
                 });
             }
             else
             {
                 // Logged out without an error
-                Alert("MAS.LogoutWithCompletion", "No user logged in");
+                Alert("MAS.Logout", "No user logged in");
             }
 
         }
@@ -572,8 +572,8 @@ namespace BasicAuthSample
             {
                 try
                 {
-                    var result = await MASUser.CurrentUser.LogoutAsync();
-                
+                    var result = await MASUser.CurrentUser.LogoutAsync(false);
+
                     if (result.Item2 != null)
                     {
                         // Logged out with an error
