@@ -297,7 +297,7 @@ namespace BasicAuthSample
 				{
 					try
 					{
-						await MASUser.CurrentUser.LogoutAsync();
+						await MASUser.CurrentUser.LogoutAsync(false);
 						activity.Alert("MAS", "User Logout");
 					}
 					catch (Java.Lang.Throwable)

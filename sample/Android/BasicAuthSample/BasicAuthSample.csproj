@@ -43,7 +43,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="MASFoundation.Android">
-      <HintPath>packages\MASFoundation.Xamarin.1.7.0-RC54\lib\monoandroid\MASFoundation.Android.dll</HintPath>
+      <HintPath>packages\MASFoundation.Xamarin.1.7.10\lib\monoandroid\MASFoundation.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

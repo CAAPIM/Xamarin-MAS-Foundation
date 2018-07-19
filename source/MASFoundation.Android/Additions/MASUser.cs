@@ -47,10 +47,23 @@ namespace Com.CA.Mas.Foundation
         /// <summary>
         /// Logs off an already authenticated user via an asynchronous request.
         /// </summary>
+        [Obsolete("MASUser.CurrentUser.LogoutAsync() is deprecated. Use MASUser.CurrentUser.LogoutAsync(bool) instead.")]
         public Task<Java.Lang.Void> LogoutAsync()
         {
             var tcs = new TaskCompletionSource<Java.Lang.Void>();
-            Logout(new MASCompletion<Java.Lang.Void>(tcs));
+            Logout(true, new MASCompletion<Java.Lang.Void>(tcs));
+
+            return tcs.Task;
+        }
+
+        /// <summary>
+        /// Logs off an already authenticated user via an asynchronous request.
+        /// </summary>
+        /// <param name="force">If set to true, clear local tokens no matter the logout call to the server success or not.</param>
+        public Task<Java.Lang.Void> LogoutAsync(bool force)
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Void>();
+            Logout(force, new MASCompletion<Java.Lang.Void>(tcs));
 
             return tcs.Task;
         }
