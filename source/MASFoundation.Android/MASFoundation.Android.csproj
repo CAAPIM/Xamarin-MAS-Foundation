@@ -80,7 +80,7 @@
     <JavaDocIndex Include="JavaDocs\" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\mas-foundation-release.aar" />
+    <LibraryProjectZip Include="Jars\mas-foundation-debug.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>

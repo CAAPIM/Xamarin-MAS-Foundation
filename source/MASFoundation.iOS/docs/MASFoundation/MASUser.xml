@@ -772,9 +772,72 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="Logout">
+      <MemberSignature Language="C#" Value="public virtual void Logout (bool force, MASFoundation.MASCompletionErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Logout(bool force, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("logout:completion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="force">If set to <c>true</c>, clear local tokens no matter the logout call to the server success or not.</param>
+        <param name="completion">The MASCompletionErrorBlock block that receives the results.  On a successful completion, the user available via MASUser.CurrentUser has been updated with the new information.</param>
+        <summary>
+            Logout an already authenticated user via asynchronous request.
+            <para>This will return <c>true</c> upon a successful result.</para></summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="LogoutAsync">
       <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LogoutAsync ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LogoutAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("MASUser.CurrentUser.LogoutWithCompletion() and MASUser.CurrentUser.LogoutAsync() are deprecated. Use MASUser.CurrentUser.Logout(bool, MASCompletionErrorBlock) or MASUser.CurrentUser.LogoutAsync(bool) instead.", false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Logout an already authenticated user via asynchronous request.
+            <para>This will return <c>true</c> upon a successful result.</para></summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogoutAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; LogoutAsync (bool force);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; LogoutAsync(bool force) cil managed" />
       <MemberType>Method</MemberType>
       <Attributes>
         <Attribute>
@@ -784,8 +847,11 @@
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
       </ReturnValue>
-      <Parameters />
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
       <Docs>
+        <param name="force">If set to <c>true</c>, clear local tokens no matter the logout call to the server success or not.</param>
         <summary>
             Logout an already authenticated user via asynchronous request.
             <para>This will return <c>true</c> upon a successful result.</para></summary>
@@ -804,6 +870,12 @@
         </Attribute>
         <Attribute>
           <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("MASUser.CurrentUser.LogoutWithCompletion() and MASUser.CurrentUser.LogoutAsync() are deprecated. Use MASUser.CurrentUser.Logout(bool, MASCompletionErrorBlock) or MASUser.CurrentUser.LogoutAsync(bool) instead.", false)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
