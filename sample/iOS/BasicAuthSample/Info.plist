@@ -48,5 +48,7 @@
 	<string>Program requires Bluetooth</string>
 	<key>CFBundleName</key>
 	<string>BasicAuthSample</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>The application needs an access to FaceID to unlock user&apos;s session with FaceID enabled devices.</string>
 </dict>
 </plist>
