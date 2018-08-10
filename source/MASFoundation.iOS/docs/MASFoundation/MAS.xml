@@ -423,6 +423,38 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="EnableIdTokenValidation">
+      <MemberSignature Language="C#" Value="public static void EnableIdTokenValidation (bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableIdTokenValidation(bool enable) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("enableIdTokenValidation:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enable">bool value of indicating whether id_token validation is enabled or not.</param>
+        <summary>
+ Sets boolean indicator of enforcing id_token validation upon device registration/user authentication. id_token is being validated as part of authentication/registration process against known signing algorithm.
+ Mobile SDK currently supports following algorithm(s):
+ - HS256
+        </summary>
+        <remarks>
+ Any other signing algorithm will cause authentication/registration failure due to unknown signing algorithm.  If the server side is configured to return a different or custom algorithm, ensure to disable id_token validation to avoid any failure on Mobile SDK.
+ 
+ By default, id_token validation is enabled and enforced in authentication and/or registration process; it can be opted-out.                    
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GatewayIsReachable">
       <MemberSignature Language="C#" Value="public static bool GatewayIsReachable { get; }" />
       <MemberSignature Language="ILAsm" Value=".property bool GatewayIsReachable" />
@@ -893,6 +925,35 @@
         </summary>
         <returns>MASResponseObjectErrorResult object that contains the NSHTTPURLResponse object and response object which needs to perform type casting based on the object type.</returns>
         <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdTokenValidationEnabled">
+      <MemberSignature Language="C#" Value="public static bool IsIdTokenValidationEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsIdTokenValidationEnabled" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("isIdTokenValidationEnabled")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+ Gets boolean indicator of enforcing id_token validation upon device registration/user authentication. id_token is being validated as part of authentication/registration process against known signing algorithm.
+ Mobile SDK currently supports following algorithm(s):
+ - HS256
+        </summary>
+        <value>bool value of indicating whether id_token validation is enabled or not.</value>
+        <remarks>
+ Any other signing algorithm will cause authentication/registration failure due to unknown signing algorithm.  If the server side is configured to return a different or custom algorithm, ensure to disable id_token validation to avoid any failure on Mobile SDK.
+ 
+ By default, id_token validation is enabled and enforced in authentication and/or registration process; it can be opted-out.                    
         </remarks>
       </Docs>
     </Member>

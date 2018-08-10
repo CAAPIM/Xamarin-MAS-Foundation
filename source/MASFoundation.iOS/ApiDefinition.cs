@@ -1673,6 +1673,16 @@ namespace MASFoundation
         //[Verify(MethodToProperty)]
         MASGrantFlow GrantFlow { get; set; }
 
+        // +(void)enableIdTokenValidation:(BOOL)enable;
+        [Static]
+        [Export("enableIdTokenValidation:")]
+        void EnableIdTokenValidation(bool enable);
+
+        // +(BOOL)isIdTokenValidationEnabled;
+        [Static]
+        [Export("isIdTokenValidationEnabled")]
+        bool IsIdTokenValidationEnabled { get; }
+
         //// +(void)enablePKCE:(BOOL)enable;
         //[Static]
         //[Export("enablePKCE:")]
