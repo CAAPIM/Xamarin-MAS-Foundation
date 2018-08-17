@@ -1422,8 +1422,14 @@ namespace MASFoundation
         // -(void)logoutWithCompletion:(MASCompletionErrorBlock _Nullable)completion;
         //[Async(ResultTypeName = "MASCompletionErrorResult")]
         [Async(MethodName = "LogoutAsync")]
+        [Obsolete("MASUser.CurrentUser.LogoutWithCompletion() and MASUser.CurrentUser.LogoutAsync() are deprecated. Use MASUser.CurrentUser.Logout(bool, MASCompletionErrorBlock) or MASUser.CurrentUser.LogoutAsync(bool) instead.")]
         [Export("logoutWithCompletion:")]
         void LogoutWithCompletion([NullAllowed] MASCompletionErrorBlock completion);
+
+        // -(void)logout:(BOOL)force completion:(MASCompletionErrorBlock _Nullable)completion;
+        [Async(MethodName = "LogoutAsync")]
+        [Export("logout:completion:")]
+        void Logout(bool force, [NullAllowed] MASCompletionErrorBlock completion);
     }
 
     // @interface MAS (NSData)
@@ -1666,6 +1672,16 @@ namespace MASFoundation
         [Export("grantFlow")]
         //[Verify(MethodToProperty)]
         MASGrantFlow GrantFlow { get; set; }
+
+        // +(void)enableIdTokenValidation:(BOOL)enable;
+        [Static]
+        [Export("enableIdTokenValidation:")]
+        void EnableIdTokenValidation(bool enable);
+
+        // +(BOOL)isIdTokenValidationEnabled;
+        [Static]
+        [Export("isIdTokenValidationEnabled")]
+        bool IsIdTokenValidationEnabled { get; }
 
         //// +(void)enablePKCE:(BOOL)enable;
         //[Static]
