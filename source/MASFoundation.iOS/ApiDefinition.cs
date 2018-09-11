@@ -1054,6 +1054,31 @@ namespace MASFoundation
         //// -(void)stopAsBluetoothCentral;
         //[Export("stopAsBluetoothCentral")]
         //void StopAsBluetoothCentral();
+
+        // -(void)addAttribute:(id)name value:(id)value completion:(MASObjectResponseErrorBlock _Nullable)completion;
+        [Async]
+        [Export("addAttribute:value:completion:")]
+        void AddAttribute(NSObject name, NSObject value, [NullAllowed] MASObjectResponseErrorBlock completion);
+
+        // -(void)removeAttribute:(id)name completion:(MASCompletionErrorBlock _Nullable)completion;
+        [Async]
+        [Export("removeAttribute:completion:")]
+        void RemoveAttribute(NSObject name, [NullAllowed] MASCompletionErrorBlock completion);
+
+        // -(void)removeAllAttributes:(MASCompletionErrorBlock _Nullable)completion;
+        [Async]
+        [Export("removeAllAttributes:")]
+        void RemoveAllAttributes([NullAllowed] MASCompletionErrorBlock completion);
+
+        // -(void)getAttribute:(id)name completion:(MASObjectResponseErrorBlock _Nullable)completion;
+        [Async]
+        [Export("getAttribute:completion:")]
+        void GetAttribute(NSObject name, [NullAllowed] MASObjectResponseErrorBlock completion);
+
+        // -(void)getAttributes:(MASObjectResponseErrorBlock _Nullable)completion;
+        [Async]
+        [Export("getAttributes:")]
+        void GetAttributes([NullAllowed] MASObjectResponseErrorBlock completion);
     }
 
     // @interface MASFile : MASObject

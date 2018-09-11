@@ -122,6 +122,66 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="AddAttribute">
+      <MemberSignature Language="C#" Value="public virtual void AddAttribute (Foundation.NSObject name, Foundation.NSObject value, MASFoundation.MASObjectResponseErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAttribute(class Foundation.NSObject name, class Foundation.NSObject value, class MASFoundation.MASObjectResponseErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("addAttribute:value:completion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="Foundation.NSObject" />
+        <Parameter Name="value" Type="Foundation.NSObject" />
+        <Parameter Name="completion" Type="MASFoundation.MASObjectResponseErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASObjectResponseErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="name">Key of the attribute to be associated with the device.</param>
+        <param name="value">Value of the attribute to be associated with the device.</param>
+        <param name="completion">The MASCompletionErrorBlock block that receives the results.</param>
+        <summary>Create or update a new attribute for the current device, return an error when exceed ${mag-device-max-metadata} configuration in the server.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributeAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Foundation.NSObject&gt; AddAttributeAsync (Foundation.NSObject name, Foundation.NSObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Foundation.NSObject&gt; AddAttributeAsync(class Foundation.NSObject name, class Foundation.NSObject value) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="Foundation.NSObject" />
+        <Parameter Name="value" Type="Foundation.NSObject" />
+      </Parameters>
+      <Docs>
+        <param name="name">Key of the attribute to be associated with the device.</param>
+        <param name="value">Value of the attribute to be associated with the device.</param>
+        <summary>Create or update a new attribute for the current device, return an error when exceed ${mag-device-max-metadata} configuration in the server.</summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ClassHandle">
       <MemberSignature Language="C#" Value="public override IntPtr ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance native int ClassHandle" />
@@ -243,6 +303,113 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetAttribute">
+      <MemberSignature Language="C#" Value="public virtual void GetAttribute (Foundation.NSObject name, MASFoundation.MASObjectResponseErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetAttribute(class Foundation.NSObject name, class MASFoundation.MASObjectResponseErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("getAttribute:completion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="Foundation.NSObject" />
+        <Parameter Name="completion" Type="MASFoundation.MASObjectResponseErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASObjectResponseErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="name">Key of the attribute to be retrieved for the current device.</param>
+        <param name="completion">A standard MASObjectResponseErrorBlock block that will receive the response object which needs to perform type casting based on the object type, and NSError object when error occurs.</param>
+        <summary>Get attribute by name, return empty NSDictionary if no attribute is found</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributeAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Foundation.NSObject&gt; GetAttributeAsync (Foundation.NSObject name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Foundation.NSObject&gt; GetAttributeAsync(class Foundation.NSObject name) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="Foundation.NSObject" />
+      </Parameters>
+      <Docs>
+        <param name="name">Key of the attribute to be retrieved for the current device.</param>
+        <summary>Get attribute by name, return empty NSDictionary if no attribute is found</summary>
+        <returns><![CDATA[Tuple<NSObject, NSError>, object that contains the response object which needs to perform type casting based on the object type, and NSError object when error occurs.]]></returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributes">
+      <MemberSignature Language="C#" Value="public virtual void GetAttributes (MASFoundation.MASObjectResponseErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetAttributes(class MASFoundation.MASObjectResponseErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("getAttributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="completion" Type="MASFoundation.MASObjectResponseErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASObjectResponseErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="completion">A standard MASObjectResponseErrorBlock block that will receive the response object which needs to perform type casting based on the object type, and NSError object when error occurs.</param>
+        <summary>Get all attributes for the current device, return empty NSDictionary if no attributes found.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributesAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Foundation.NSObject&gt; GetAttributesAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Foundation.NSObject&gt; GetAttributesAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSObject&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Get all attributes for the current device, return empty NSDictionary if no attributes found.</summary>
+        <returns><![CDATA[Tuple<NSObject, NSError>, object that contains the response object which needs to perform type casting based on the object type, and NSError object when error occurs.]]></returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Identifier">
       <MemberSignature Language="C#" Value="public virtual string Identifier { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Identifier" />
@@ -340,6 +507,113 @@
         Gets the MASDevice name.
         </summary>
         <value>The MASDevice name.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllAttributes">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAllAttributes (MASFoundation.MASCompletionErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAllAttributes(class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("removeAllAttributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="completion">The MASCompletionErrorBlock block that receives the results.</param>
+        <summary>Remove all attributes for the current device.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllAttributesAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; RemoveAllAttributesAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; RemoveAllAttributesAsync() cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove all attributes for the current device.</summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAttribute">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAttribute (Foundation.NSObject name, MASFoundation.MASCompletionErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAttribute(class Foundation.NSObject name, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("removeAttribute:completion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="Foundation.NSObject" />
+        <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASCompletionErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="name">Key of the attribute to be removed for the current device.</param>
+        <param name="completion">The MASCompletionErrorBlock block that receives the results.</param>
+        <summary>Remove attribute by name, fails if the device attribute does not exist.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAttributeAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; RemoveAttributeAsync (Foundation.NSObject name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; RemoveAttributeAsync(class Foundation.NSObject name) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="Foundation.NSObject" />
+      </Parameters>
+      <Docs>
+        <param name="name">Key of the attribute to be removed for the current device.</param>
+        <summary>Remove attribute by name, fails if the device attribute does not exist.</summary>
+        <returns><![CDATA[Tuple<bool, NSError>, the first item indicates if the operation was completed successfully, the second item may contain an NSError object in case any error is encountered.]]></returns>
         <remarks>
         </remarks>
       </Docs>
