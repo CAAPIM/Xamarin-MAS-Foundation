@@ -1055,25 +1055,25 @@ namespace MASFoundation
         //[Export("stopAsBluetoothCentral")]
         //void StopAsBluetoothCentral();
 
-        // -(void)addAttribute:(id)name value:(id)value completion:(MASObjectResponseErrorBlock _Nullable)completion;
+        // -(void)addAttribute:(NSString)name value:(NSString)value completion:(MASObjectResponseErrorBlock _Nullable)completion;
         [Async]
         [Export("addAttribute:value:completion:")]
-        void AddAttribute(NSObject name, NSObject value, [NullAllowed] MASObjectResponseErrorBlock completion);
+        void AddAttribute(string name, string value, [NullAllowed] MASObjectResponseErrorBlock completion);
 
-        // -(void)removeAttribute:(id)name completion:(MASCompletionErrorBlock _Nullable)completion;
+        // -(void)removeAttribute:(NSString)name completion:(MASCompletionErrorBlock _Nullable)completion;
         [Async]
         [Export("removeAttribute:completion:")]
-        void RemoveAttribute(NSObject name, [NullAllowed] MASCompletionErrorBlock completion);
+        void RemoveAttribute(string name, [NullAllowed] MASCompletionErrorBlock completion);
 
         // -(void)removeAllAttributes:(MASCompletionErrorBlock _Nullable)completion;
         [Async]
         [Export("removeAllAttributes:")]
         void RemoveAllAttributes([NullAllowed] MASCompletionErrorBlock completion);
 
-        // -(void)getAttribute:(id)name completion:(MASObjectResponseErrorBlock _Nullable)completion;
+        // -(void)getAttribute:(NSString)name completion:(MASObjectResponseErrorBlock _Nullable)completion;
         [Async]
         [Export("getAttribute:completion:")]
-        void GetAttribute(NSObject name, [NullAllowed] MASObjectResponseErrorBlock completion);
+        void GetAttribute(string name, [NullAllowed] MASObjectResponseErrorBlock completion);
 
         // -(void)getAttributes:(MASObjectResponseErrorBlock _Nullable)completion;
         [Async]

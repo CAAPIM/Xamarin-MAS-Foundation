@@ -123,8 +123,8 @@
       </Docs>
     </Member>
     <Member MemberName="AddAttribute">
-      <MemberSignature Language="C#" Value="public virtual void AddAttribute (Foundation.NSObject name, Foundation.NSObject value, MASFoundation.MASObjectResponseErrorBlock completion);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAttribute(class Foundation.NSObject name, class Foundation.NSObject value, class MASFoundation.MASObjectResponseErrorBlock completion) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual void AddAttribute (string name, string value, MASFoundation.MASObjectResponseErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAttribute(string name, string value, class MASFoundation.MASObjectResponseErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
       <Attributes>
         <Attribute>
@@ -138,8 +138,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="Foundation.NSObject" />
-        <Parameter Name="value" Type="Foundation.NSObject" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
         <Parameter Name="completion" Type="MASFoundation.MASObjectResponseErrorBlock">
           <Attributes>
             <Attribute>
@@ -158,8 +158,8 @@
       </Docs>
     </Member>
     <Member MemberName="AddAttributeAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Foundation.NSObject&gt; AddAttributeAsync (Foundation.NSObject name, Foundation.NSObject value);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Foundation.NSObject&gt; AddAttributeAsync(class Foundation.NSObject name, class Foundation.NSObject value) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Foundation.NSObject&gt; AddAttributeAsync (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Foundation.NSObject&gt; AddAttributeAsync(string name, string value) cil managed" />
       <MemberType>Method</MemberType>
       <Attributes>
         <Attribute>
@@ -170,8 +170,8 @@
         <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSObject&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="Foundation.NSObject" />
-        <Parameter Name="value" Type="Foundation.NSObject" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="name">Key of the attribute to be associated with the device.</param>
@@ -304,8 +304,8 @@
       </Docs>
     </Member>
     <Member MemberName="GetAttribute">
-      <MemberSignature Language="C#" Value="public virtual void GetAttribute (Foundation.NSObject name, MASFoundation.MASObjectResponseErrorBlock completion);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetAttribute(class Foundation.NSObject name, class MASFoundation.MASObjectResponseErrorBlock completion) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual void GetAttribute (string name, MASFoundation.MASObjectResponseErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetAttribute(string name, class MASFoundation.MASObjectResponseErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
       <Attributes>
         <Attribute>
@@ -319,7 +319,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="Foundation.NSObject" />
+        <Parameter Name="name" Type="System.String" />
         <Parameter Name="completion" Type="MASFoundation.MASObjectResponseErrorBlock">
           <Attributes>
             <Attribute>
@@ -337,8 +337,8 @@
       </Docs>
     </Member>
     <Member MemberName="GetAttributeAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Foundation.NSObject&gt; GetAttributeAsync (Foundation.NSObject name);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Foundation.NSObject&gt; GetAttributeAsync(class Foundation.NSObject name) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Foundation.NSObject&gt; GetAttributeAsync (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Foundation.NSObject&gt; GetAttributeAsync(string name) cil managed" />
       <MemberType>Method</MemberType>
       <Attributes>
         <Attribute>
@@ -349,7 +349,7 @@
         <ReturnType>System.Threading.Tasks.Task&lt;Foundation.NSObject&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="Foundation.NSObject" />
+        <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="name">Key of the attribute to be retrieved for the current device.</param>
@@ -563,8 +563,8 @@
       </Docs>
     </Member>
     <Member MemberName="RemoveAttribute">
-      <MemberSignature Language="C#" Value="public virtual void RemoveAttribute (Foundation.NSObject name, MASFoundation.MASCompletionErrorBlock completion);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAttribute(class Foundation.NSObject name, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual void RemoveAttribute (string name, MASFoundation.MASCompletionErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAttribute(string name, class MASFoundation.MASCompletionErrorBlock completion) cil managed" />
       <MemberType>Method</MemberType>
       <Attributes>
         <Attribute>
@@ -578,7 +578,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="Foundation.NSObject" />
+        <Parameter Name="name" Type="System.String" />
         <Parameter Name="completion" Type="MASFoundation.MASCompletionErrorBlock">
           <Attributes>
             <Attribute>
@@ -596,8 +596,8 @@
       </Docs>
     </Member>
     <Member MemberName="RemoveAttributeAsync">
-      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; RemoveAttributeAsync (Foundation.NSObject name);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; RemoveAttributeAsync(class Foundation.NSObject name) cil managed" />
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Tuple&lt;bool,Foundation.NSError&gt;&gt; RemoveAttributeAsync (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Tuple`2&lt;bool, class Foundation.NSError&gt;&gt; RemoveAttributeAsync(string name) cil managed" />
       <MemberType>Method</MemberType>
       <Attributes>
         <Attribute>
@@ -608,7 +608,7 @@
         <ReturnType>System.Threading.Tasks.Task&lt;System.Tuple&lt;System.Boolean,Foundation.NSError&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="Foundation.NSObject" />
+        <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
         <param name="name">Key of the attribute to be removed for the current device.</param>
