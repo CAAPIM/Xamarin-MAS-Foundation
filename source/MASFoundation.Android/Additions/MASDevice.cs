@@ -52,10 +52,10 @@ namespace Com.CA.Mas.Foundation
         /// </summary>
         /// <param name="attr">Key of the attribute to be retrieved with the device.</param>
         /// <returns>The async task</returns>
-        public Task<Java.Lang.Void> GetAttributeAsync(string name)
+        public Task<Org.Json.JSONObject> GetAttributeAsync(string name)
         {
-            var tcs = new TaskCompletionSource<Java.Lang.Void>();
-            GetAttribute(name, new MASCompletion<Java.Lang.Void>(tcs));
+            var tcs = new TaskCompletionSource<Org.Json.JSONObject> ();
+            GetAttribute(name, new MASCompletion<Org.Json.JSONObject> (tcs));
 
             return tcs.Task;
         }
@@ -64,10 +64,10 @@ namespace Com.CA.Mas.Foundation
         /// Get all attributes, return empty JSONArray if no attributes found.
         /// </summary>
         /// <returns>The async task</returns>
-        public Task<Java.Lang.Void> GetAttributesAsync()
+        public Task<Org.Json.JSONArray> GetAttributesAsync()
         {
-            var tcs = new TaskCompletionSource<Java.Lang.Void>();
-            GetAttributes(new MASCompletion<Java.Lang.Void>(tcs));
+            var tcs = new TaskCompletionSource<Org.Json.JSONArray>();
+            GetAttributes(new MASCompletion<Org.Json.JSONArray>(tcs));
 
             return tcs.Task;
         }
