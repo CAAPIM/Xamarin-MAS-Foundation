@@ -31,5 +31,70 @@ namespace Com.CA.Mas.Foundation
 
             return tcs.Task;
         }
+
+        /// <summary>
+        /// Create or update a new attribute for the current device,
+        /// throw MASDeviceAttributeOverflowException when exceed maximum attribute allowed.
+        /// </summary>
+        /// <param name="attr">Key of the attribute to be associated with the device.</param>
+        /// <param name="value">Value of the attribute to be associated with the device.</param>
+        /// <returns>The async task</returns>
+        public Task<Java.Lang.Void> AddAttributeAsync(string name, string value)
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Void>();
+            AddAttribute(name, value, new MASCompletion<Java.Lang.Void>(tcs));
+
+            return tcs.Task;
+        }
+
+        /// <summary>
+        /// Get attribute by name, return empty JSONObject if no attribute is found.
+        /// </summary>
+        /// <param name="attr">Key of the attribute to be retrieved with the device.</param>
+        /// <returns>The async task</returns>
+        public Task<Org.Json.JSONObject> GetAttributeAsync(string name)
+        {
+            var tcs = new TaskCompletionSource<Org.Json.JSONObject> ();
+            GetAttribute(name, new MASCompletion<Org.Json.JSONObject> (tcs));
+
+            return tcs.Task;
+        }
+
+        /// <summary>
+        /// Get all attributes, return empty JSONArray if no attributes found.
+        /// </summary>
+        /// <returns>The async task</returns>
+        public Task<Org.Json.JSONArray> GetAttributesAsync()
+        {
+            var tcs = new TaskCompletionSource<Org.Json.JSONArray>();
+            GetAttributes(new MASCompletion<Org.Json.JSONArray>(tcs));
+
+            return tcs.Task;
+        }
+
+        /// <summary>
+        /// Remove attribute by name, succeed even device attribute does not exists
+        /// </summary>
+        /// <param name="attr">Key of the attribute to be removed for the current device</param>
+        /// <returns>The async task</returns>
+        public Task<Java.Lang.Void> RemoveAttributeAsync(string name)
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Void>();
+            RemoveAttribute(name, new MASCompletion<Java.Lang.Void>(tcs));
+
+            return tcs.Task;
+        }
+
+        /// <summary>
+        /// Remove all attributes for the current device
+        /// </summary>
+        /// <returns>The async task</returns>
+        public Task<Java.Lang.Void> RemoveAllAttributesAsync()
+        {
+            var tcs = new TaskCompletionSource<Java.Lang.Void>();
+            RemoveAllAttributes(new MASCompletion<Java.Lang.Void>(tcs));
+
+            return tcs.Task;
+        }
     }
 }
