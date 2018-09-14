@@ -68,6 +68,7 @@
       <Type Name="MASGrantFlow" Kind="Enumeration" />
       <Type Name="MASNetworkReachabilityStatus" Kind="Enumeration" />
       <Type Name="MASObject" Kind="Class" />
+      <Type Name="MASObjectResponseErrorBlock" Kind="Delegate" />
       <Type Name="MASRequest" Kind="Class" />
       <Type Name="MASRequestBuilder" Kind="Class" />
       <Type Name="MASRequestResponseType" Kind="Enumeration" />
