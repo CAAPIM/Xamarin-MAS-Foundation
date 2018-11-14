@@ -455,6 +455,38 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="EnableJWKSetLoading">
+      <MemberSignature Language="C#" Value="public static void EnableJWKSetLoading (bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableJWKSetLoading(bool enable) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("enableJWKSetLoading:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enable">Boolean value of indicating whether JWKSet loading is enabled or not.</param>
+        <summary>
+          Sets boolean indicator of enforcing JWKS loading upon MAS Start.
+          JWK Set - A JSON object that represents a set of JWKs.
+          JWK -  A JSON object that represents a cryptographic key.
+                  The members of the object represent properties of the key, including its value.
+          
+          By default, JWKSet loading is disabled.        
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GatewayIsReachable">
       <MemberSignature Language="C#" Value="public static bool GatewayIsReachable { get; }" />
       <MemberSignature Language="ILAsm" Value=".property bool GatewayIsReachable" />
@@ -954,6 +986,35 @@
  Any other signing algorithm will cause authentication/registration failure due to unknown signing algorithm.  If the server side is configured to return a different or custom algorithm, ensure to disable id_token validation to avoid any failure on Mobile SDK.
  
  By default, id_token validation is enabled and enforced in authentication and/or registration process; it can be opted-out.                    
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsJWKSetLoadingEnabled">
+      <MemberSignature Language="C#" Value="public static bool IsJWKSetLoadingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsJWKSetLoadingEnabled" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("isJWKSetLoadingEnabled")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          Gets boolean indicator of enforcing JWKS loading upon MAS Start.
+          JWK Set - A JSON object that represents a set of JWKs.
+          JWK -  A JSON object that represents a cryptographic key.
+          The members of the object represent properties of the key, including its value.
+          
+          By default, JWKSet loading is disabled.        
+        </summary>
+        <value>Boolean value of indicating whether JWKSet loading is enabled or not.</value>
+        <remarks>
         </remarks>
       </Docs>
     </Member>
