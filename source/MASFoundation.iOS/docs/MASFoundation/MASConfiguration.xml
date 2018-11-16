@@ -992,6 +992,28 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="IdTokenSignedResponseAlgo">
+      <MemberSignature Language="C#" Value="public virtual string IdTokenSignedResponseAlgo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IdTokenSignedResponseAlgo" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("idTokenSignedResponseAlgo", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The name of the algorithm that was used to sign the idToken.</summary>
+        <value>The algorithm used to sign the idToken.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="InstanceFromStorage">
       <MemberSignature Language="C#" Value="public static MASFoundation.MASConfiguration InstanceFromStorage { get; }" />
       <MemberSignature Language="ILAsm" Value=".property class MASFoundation.MASConfiguration InstanceFromStorage" />

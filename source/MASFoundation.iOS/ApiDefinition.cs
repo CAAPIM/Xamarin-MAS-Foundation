@@ -770,6 +770,10 @@ namespace MASFoundation
         [Export("applicationRegisteredBy", ArgumentSemantic.Strong)]
         string ApplicationRegisteredBy { get; }
 
+        // @property (readonly, nonatomic, strong) NSString * _Nonnull idTokenSignedResponseAlgo;
+        [Export("idTokenSignedResponseAlgo", ArgumentSemantic.Strong)]
+        string IdTokenSignedResponseAlgo { get; }
+
         // @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable gatewayCertificates;
         [NullAllowed, Export("gatewayCertificates", ArgumentSemantic.Copy)]
         NSArray<NSString> GatewayCertificates { get; }
@@ -1707,6 +1711,16 @@ namespace MASFoundation
         [Static]
         [Export("isIdTokenValidationEnabled")]
         bool IsIdTokenValidationEnabled { get; }
+
+        // +(void)enableJWKSetLoading:(BOOL)enable;
+        [Static]
+        [Export("enableJWKSetLoading:")]
+        void EnableJWKSetLoading(bool enable);
+
+        // +(BOOL)isJWKSetLoadingEnabled;
+        [Static]
+        [Export("isJWKSetLoadingEnabled")]
+        bool IsJWKSetLoadingEnabled { get; }
 
         //// +(void)enablePKCE:(BOOL)enable;
         //[Static]
