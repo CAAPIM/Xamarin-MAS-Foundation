@@ -1,3 +1,20 @@
+# Version 1.9.00
+
+### Bug fixes
+None.
+
+See list of bug fixes for native platforms:
+
+* iOS Mobile SDK for CA Mobile API Gateway [Change Log](https://github.com/CAAPIM/iOS-MAS-Foundation/blob/Stable/CHANGELOG.md#version-1900)
+* Android™ Mobile SDK for CA Mobile API Gateway [Change Log](https://github.com/CAAPIM/Android-MAS-SDK/blob/Stable/ChangeLog.md#version-1900)
+
+### Enhancement
+* Allow end users to store additional data about the device. [US507853]
+* Addind client-side validation of ID Token signed with RS256 [US542357]
+* iOS/Android Mobile SDK's login behaviour alignment. Previously, when the user session was already authenticated, iOS SDK was returning an error saying "User is already authenticated", whereas in Android SDK, it was internally revoking previous set of tokens and invokes "/token" endpoint to retrieve new set of tokens associated with new credentials. Now, both SDKs are NOT returning any error or performing revoke for already authenticated session, and proceeding the authentication with new credentials. [US554077]
+* MASFoundation.iOS is updated with latest iOS 1.9.00 native version
+* MASFoundation.Android is updated with latest Android 1.9.00 native version
+
 # Version 1.8.00
 
 ### Bug fixes
