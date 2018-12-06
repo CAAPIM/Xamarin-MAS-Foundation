@@ -1,6 +1,6 @@
 <Overview>
   <Assemblies>
-    <Assembly Name="MASFoundation.iOS" Version="1.8.0.0">
+    <Assembly Name="MASFoundation.iOS" Version="1.9.0.0">
       <Attributes>
         <Attribute>
           <AttributeName>Foundation.LinkerSafe</AttributeName>
@@ -68,6 +68,7 @@
       <Type Name="MASGrantFlow" Kind="Enumeration" />
       <Type Name="MASNetworkReachabilityStatus" Kind="Enumeration" />
       <Type Name="MASObject" Kind="Class" />
+      <Type Name="MASObjectResponseErrorBlock" Kind="Delegate" />
       <Type Name="MASRequest" Kind="Class" />
       <Type Name="MASRequestBuilder" Kind="Class" />
       <Type Name="MASRequestResponseType" Kind="Enumeration" />

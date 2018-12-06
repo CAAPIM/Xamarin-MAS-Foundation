@@ -11,7 +11,6 @@
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidClassParser>class-parse</AndroidClassParser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -82,5 +81,11 @@
   <ItemGroup>
     <LibraryProjectZip Include="Jars\mas-foundation-release.aar" />
   </ItemGroup>  
+  <ItemGroup>
+    <EmbeddedReferenceJar Include="Jars\accessors-smart-1.2.jar" />
+    <EmbeddedReferenceJar Include="Jars\asm-5.0.4.jar" />
+    <EmbeddedReferenceJar Include="Jars\json-smart-2.3.jar" />
+    <EmbeddedReferenceJar Include="Jars\nimbus-jose-jwt-6.0.2.jar" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
