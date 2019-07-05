@@ -141,26 +141,6 @@ namespace MASFoundation
         EnterpriseBrowserNativeAppDoesNotExist = 140002,
         EnterpriseBrowserNativeAppCannotOpen = 140003,
         EnterpriseBrowserAppDoesNotExist = 140004,
-        BLEUnknownState = 150001,
-        BLEAuthorizationFailed = 150002,
-        BLEAuthorizationPollingFailed = 150003,
-        BLECentralDeviceNotFound = 150004,
-        BLEDelegateNotDefined = 150005,
-        BLEInvalidAuthenticationProvider = 150006,
-        BLEPoweredOff = 150007,
-        BLEResetting = 150008,
-        BLERSSINotInRange = 150009,
-        BLEUnSupported = 150010,
-        BLEUnauthorized = 150011,
-        BLEUserDeclined = 150012,
-        BLECentral = 150013,
-        BLEPeripheral = 150014,
-        BLEPeripheralServices = 150015,
-        BLEPeripheralCharacteristics = 150016,
-        ProximityLoginAuthorizationInProgress = 150101,
-        ProximityLoginInvalidAuthenticationURL = 150102,
-        QRCodeProximityLoginAuthorizationPollingFailed = 150103,
-        ProximityLoginInvalidAuthorizeURL = 150104,
         InvalidOTPChannelSelectionBlock = 160101,
         InvalidOTPCredentialsBlock = 160102,
         InvalidOTPProvided = 160103,
@@ -198,6 +178,13 @@ namespace MASFoundation
         ReachableViaWWAN = 2,
         ReachableViaWiFi = 3,
         Initializing = 4
+    }
+
+    public enum MASSecuritySSLPinningMode
+    {
+        PublicKeyHash,
+        Certificate,
+        IntermediateCertifcate
     }
 
     ////[Native]
