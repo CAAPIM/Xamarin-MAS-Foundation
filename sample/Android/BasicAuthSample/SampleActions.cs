@@ -3,17 +3,24 @@
 // See the LICENSE [https://github.com/CAAPIM/Xamarin-MAS-Foundation/blob/LICENSE.md] file for details. 
 // This software is for evaluation purposes only and currently not supported by CA.
 
+using System;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using Android.App;
+using Com.CA.Mas.Core.Error;
 using Com.CA.Mas.Foundation;
+using Java.Net;
 using Org.Json;
+using Plugin.FilePicker;
+using Plugin.FilePicker.Abstractions;
 
 namespace BasicAuthSample
 {
     public class SampleActions
     {
+        [Obsolete]
+        private static ProgressDialog progressDialog;
 
         //
         // Set Grant Flow to Client Credentials
@@ -284,11 +291,66 @@ namespace BasicAuthSample
                 activity.Alert("MAS", "CA Mobile SDK did not start!!");
             }
         }
-        
+
+        //
+        // Invoke a sample multipart upload endpoint in the Gateway
+        //
+        [System.Obsolete]
+        public static async Task PostMultiPartFormAsync(MainActivity activity)
+        {
+            if (IsMASStarted())
+            {
+                try
+                {
+                    MASFileObject filePart = new MASFileObject();
+                    MultiPart multiPart = new MultiPart();
+
+                    multiPart.AddFormField("key1", "value1");
+
+                    FileData fileData = await CrossFilePicker.Current.PickFile();
+                    if (fileData == null)
+                        return; // user canceled file picking
+
+                    string fileName = fileData.FileName;
+                    string contents = System.Text.Encoding.UTF8.GetString(fileData.DataArray);
+
+                    System.Console.WriteLine("File name chosen: " + fileName);
+                    System.Console.WriteLine("File path: " + fileData.FilePath);
+
+                    filePart.FieldName = "file1";
+                    filePart.FileName = "sample.jpg";
+                    filePart.FilePath = fileData.FilePath;
+
+                    multiPart.AddFilePart(filePart);
+                    progressDialog= new ProgressDialog(activity);
+                    progressDialog.SetProgressStyle(ProgressDialogStyle.Spinner);
+                    progressDialog.SetMessage("0%");
+                    progressDialog.Show();
+
+                    ProgressListener progressListener = new ProgressListener();
+
+                    IMASRequest request = new MASRequestBuilder(new URI("/test/multipart/")).Build();
+
+                    var response = await MAS.PostMultiPartFormAsync(request, multiPart, progressListener);
+                    System.Console.WriteLine("Response from server: " + response.Body.Content);
+                    activity.Alert("Response", (string)response.Body.Content);
+
+                }
+                catch (Java.Lang.Throwable exception)
+                {
+                    activity.Alert("MAS", exception.LocalizedMessage);
+                }
+            }
+            else
+            {
+                activity.Alert("MAS", "CA Mobile SDK did not start!!");
+            }
+        }
+
         //
         // Logs out current user
         //
-		public static async Task LogoutAsync(MainActivity activity)
+        public static async Task LogoutAsync(MainActivity activity)
         {
 			if (IsMASStarted())
 			{
@@ -397,5 +459,26 @@ namespace BasicAuthSample
 		{
 			return MAS.GetState(Application.Context) == MASConstants.MasStateStarted;
 		}
+
+        //Progress Listener Class
+        class ProgressListener : Java.Lang.Object , IMASProgressListener
+        {
+            [Obsolete]
+            public void OnComplete()
+            {
+                progressDialog.Cancel();
+            }
+
+            public void OnError(MAGError p0)
+            {
+                throw new NotImplementedException();
+            }
+
+            [Obsolete]
+            public void OnProgress(string p0)
+            {
+                progressDialog.SetMessage(p0 + "%");
+            }
+        }
     }
 }
