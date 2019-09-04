@@ -71,13 +71,13 @@
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>packages\Xamarin.Android.Support.v4.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
-    <Reference Include="MASFoundation.Android">
-      <HintPath>..\..\..\source\MASFoundation.Android\bin\Debug\MASFoundation.Android.dll</HintPath>
-    </Reference>
     <Reference Include="Plugin.FilePicker">
       <HintPath>packages\Xamarin.Plugin.FilePicker.2.1.18\lib\monoandroid81\Plugin.FilePicker.dll</HintPath>
     </Reference>
     <Reference Include="Java.Interop" />
+    <Reference Include="MASFoundation.Android">
+      <HintPath>..\..\..\source\MASFoundation.Android\bin\Debug\MASFoundation.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
