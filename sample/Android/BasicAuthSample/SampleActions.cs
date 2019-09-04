@@ -319,7 +319,8 @@ namespace BasicAuthSample
 
                     filePart.FieldName = "file1";
                     filePart.FileName = fileName;
-                    filePart.FilePath = fileData.FilePath;
+                    filePart.SetFileBytes(fileData.DataArray);
+                    //filePart.FilePath = fileData.FilePath;
 
                     multiPart.AddFilePart(filePart);
                     progressDialog= new ProgressDialog(activity);
