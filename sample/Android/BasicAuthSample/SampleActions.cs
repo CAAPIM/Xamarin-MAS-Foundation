@@ -318,7 +318,7 @@ namespace BasicAuthSample
                     System.Console.WriteLine("File path: " + fileData.FilePath);
 
                     filePart.FieldName = "file1";
-                    filePart.FileName = "sample.jpg";
+                    filePart.FileName = fileName;
                     filePart.FilePath = fileData.FilePath;
 
                     multiPart.AddFilePart(filePart);
@@ -471,7 +471,8 @@ namespace BasicAuthSample
 
             public void OnError(MAGError p0)
             {
-                throw new NotImplementedException();
+                System.Console.WriteLine("Error: " + p0.Message);
+                progressDialog.Cancel();
             }
 
             [Obsolete]
