@@ -47,6 +47,12 @@ namespace BasicAuthSample
                 SampleActions.Alert("Response", invokeResult.ResponseObject.ToString());
         }
 
+        partial void MultiPartFormButton_TouchUpInside(UIButton sender)
+        {
+
+            SampleActions.PostMultiPartForm();
+        }
+
 
         async partial void LogoutButton_TouchUpInside(UIButton sender)
         {

@@ -43,6 +43,10 @@ namespace BasicAuthSample
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton MultiPartFormButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton StartSDKButton { get; set; }
 
         [Outlet]
@@ -76,6 +80,10 @@ namespace BasicAuthSample
         [Action ("LogoutButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void LogoutButton_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("MultiPartFormButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void MultiPartFormButton_TouchUpInside (UIKit.UIButton sender);
 
         [Action ("StartSDKButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -120,6 +128,11 @@ namespace BasicAuthSample
             if (LogoutButton != null) {
                 LogoutButton.Dispose ();
                 LogoutButton = null;
+            }
+
+            if (MultiPartFormButton != null) {
+                MultiPartFormButton.Dispose ();
+                MultiPartFormButton = null;
             }
 
             if (StartSDKButton != null) {
