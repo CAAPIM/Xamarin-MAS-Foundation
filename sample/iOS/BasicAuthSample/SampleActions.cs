@@ -532,7 +532,7 @@ namespace BasicAuthSample
             return result;
         }
 
-
+       
         //
         //  Logout currently authenticated user
         //
