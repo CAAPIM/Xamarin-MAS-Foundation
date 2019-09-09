@@ -133,8 +133,8 @@
                                     <action selector="DeregisterButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="11643"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" fixedFrame="YES" progress="0.5f" translatesAutoresizingMaskIntoConstraints="NO" id="mDO-xd-Bqn">
-                                <rect key="frame" x="71" y="300" width="233" height="2"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mDO-xd-Bqn">
+                                <rect key="frame" x="71" y="345" width="233" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                         </subviews>
@@ -151,6 +151,7 @@
                         <outlet property="MultiPartFormButton" destination="3344" id="name-outlet-3344"/>
                         <outlet property="StartSDKButton" destination="4035" id="name-outlet-4035"/>
                         <outlet property="UnlockButton" destination="11403" id="name-outlet-11403"/>
+                        <outlet property="progressBar" destination="mDO-xd-Bqn" id="x1P-b8-6Bp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
