@@ -67,6 +67,7 @@ namespace BasicAuthSample
                     requestBuilder.EndPoint = "/test/multipart/";
                     requestBuilder.RequestType = MASRequestResponseType.FormData;
                     requestBuilder.Header = new NSDictionary("test", "test");
+                    requestBuilder.Body = new NSDictionary("name", "aditya");
                     requestBuilder.ResponseType = MASRequestResponseType.TextPlain;
                     //  Build MASRequestBuilder to convert into MASRequest object
                     MASRequest request = requestBuilder.Build();

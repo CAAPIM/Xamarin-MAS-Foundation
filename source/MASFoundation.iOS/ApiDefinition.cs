@@ -2194,6 +2194,10 @@ namespace MASFoundation
         // @required -(BOOL)appendPartWithFileURL:(NSURL * _Nonnull)fileURL name:(NSString * _Nonnull)name fileName:(NSString * _Nonnull)fileName mimeType:(NSString * _Nonnull)mimeType error:(NSError * _Nullable * _Nullable)error;
         [Export("appendPartWithFileURL:name:fileName:mimeType:error:")]
         bool appendPartWithFileURL(NSUrl fileURL, string name, string fileName, string mimeType, [NullAllowed] out NSError error);
+
+        // @required -(BOOL)appendPartWithFileData:(NSData * _Nonnull)data name:(NSString * _Nonnull)name fileName:(NSString * _Nonnull)fileName mimeType:(NSString * _Nonnull)mimeType;
+        [Export("appendPartWithFileData:name:fileName:mimeType:")]
+        bool appendPartWithFileData(NSData data, string name, string fileName, string mimeType);
     }
 
     //// @protocol MASMultiFactorAuthenticator
