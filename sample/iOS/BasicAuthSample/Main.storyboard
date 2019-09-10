@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,10 +19,11 @@
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3334" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3334">
                                 <rect key="frame" x="70" y="242" width="235" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -29,10 +31,21 @@
                                 <connections>
                                     <action selector="LoginButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3341"/>
                                 </connections>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3335" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3344">
+                                <rect key="frame" x="70" y="294" width="234" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Upload Multipart file">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MultiPartFormButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3345"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3335">
                                 <rect key="frame" x="71" y="348" width="233" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,10 +53,10 @@
                                 <connections>
                                     <action selector="LogoutButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3342"/>
                                 </connections>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3336" fixedFrame="YES">
-                                <rect key="frame" x="70" y="294" width="234" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3336">
+                                <rect key="frame" x="70" y="402" width="234" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Invoke Protected API">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,98 +64,94 @@
                                 <connections>
                                     <action selector="InvokeAPIButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3343"/>
                                 </connections>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3556" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3556">
                                 <rect key="frame" x="70" y="141" width="235" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Set Grant Flow to Password">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="InvokeAPIButton_TouchUpInside:" destination="3558" eventType="touchUpInside" id="3557"/>
-                                    <action selector="GrantFlowToPassword_TouchUpInside:" destination="BYZ-38-t0r" id="11190" eventType="touchUpInside"/>
+                                    <action selector="GrantFlowToPassword_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="11190"/>
                                 </connections>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4035" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4035">
                                 <rect key="frame" x="70" y="191" width="235" height="34"/>
-                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Start SDK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="InvokeAPIButton_TouchUpInside:" destination="4037" eventType="touchUpInside" id="4036"/>
-                                    <action selector="UIButton3556_TouchUpInside:" destination="4039" id="4038" eventType="touchUpInside"/>
-                                    <action selector="StartSDKButton_TouchUpInside:" destination="BYZ-38-t0r" id="11187" eventType="touchUpInside"/>
+                                    <action selector="StartSDKButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="11187"/>
                                 </connections>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="10140" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="10140">
                                 <rect key="frame" x="70" y="87" width="235" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <connections>
-                                    <action selector="InvokeAPIButton_TouchUpInside:" destination="10142" eventType="touchUpInside" id="10141"/>
-                                    <action selector="UIButton3556_TouchUpInside:" destination="10144" id="10143" eventType="touchUpInside"/>
-                                    <action selector="GrantFlowToClientCredentials_TouchUpInside:" destination="BYZ-38-t0r" id="11189" eventType="touchUpInside"/>
-                                </connections>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Set Grant Flow to Client Credentials">
-                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="GrantFlowToClientCredentials_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="11189"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11400" fixedFrame="YES">
-                                <rect key="frame" x="71" y="402" width="233" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11400">
+                                <rect key="frame" x="71" y="455" width="233" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Lock Session">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="LogoutButton_TouchUpInside:" destination="11402" eventType="touchUpInside" id="11401"/>
-                                    <action selector="LockButton_TouchUpInside:" destination="BYZ-38-t0r" id="11406" eventType="touchUpInside"/>
+                                    <action selector="LockButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="11406"/>
                                 </connections>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11403" fixedFrame="YES">
-                                <rect key="frame" x="71" y="455" width="233" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11403">
+                                <rect key="frame" x="71" y="506" width="233" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Unlock Session">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="LogoutButton_TouchUpInside:" destination="11405" eventType="touchUpInside" id="11404"/>
-                                    <action selector="UnlockButton_TouchUpInside:" destination="BYZ-38-t0r" id="11407" eventType="touchUpInside"/>
+                                    <action selector="UnlockButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="11407"/>
                                 </connections>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11637" fixedFrame="YES">
-                                <rect key="frame" x="71" y="506" width="233" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11637">
+                                <rect key="frame" x="71" y="556" width="233" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Deregister Device">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="LogoutButton_TouchUpInside:" destination="11639" eventType="touchUpInside" id="11638"/>
-                                    <action selector="UnlockButton_TouchUpInside:" destination="11641" id="11640" eventType="touchUpInside"/>
-                                    <action selector="DeregisterButton_TouchUpInside:" destination="BYZ-38-t0r" id="11643" eventType="touchUpInside"/>
+                                    <action selector="DeregisterButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="11643"/>
                                 </connections>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mDO-xd-Bqn">
+                                <rect key="frame" x="71" y="345" width="233" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
                         </subviews>
-                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1"/>
+                        <color key="backgroundColor" red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="InvokeAPIButton" destination="3336" id="name-outlet-3336"/>
-                        <outlet property="LoginButton" destination="3334" id="name-outlet-3334"/>
-                        <outlet property="LogoutButton" destination="3335" id="name-outlet-3335"/>
-                        <outlet property="StartSDKButton" destination="4035" id="name-outlet-4035"/>
+                        <outlet property="DeregisterButton" destination="11637" id="name-outlet-11637"/>
                         <outlet property="GrantFlowToClientCredentials" destination="10140" id="name-outlet-10140"/>
                         <outlet property="GrantFlowToPassword" destination="3556" id="name-outlet-3556"/>
+                        <outlet property="InvokeAPIButton" destination="3336" id="name-outlet-3336"/>
                         <outlet property="LockButton" destination="11400" id="name-outlet-11400"/>
+                        <outlet property="LoginButton" destination="3334" id="name-outlet-3334"/>
+                        <outlet property="LogoutButton" destination="3335" id="name-outlet-3335"/>
+                        <outlet property="MultiPartFormButton" destination="3344" id="name-outlet-3344"/>
+                        <outlet property="StartSDKButton" destination="4035" id="name-outlet-4035"/>
                         <outlet property="UnlockButton" destination="11403" id="name-outlet-11403"/>
-                        <outlet property="DeregisterButton" destination="11637" id="name-outlet-11637"/>
+                        <outlet property="progressBar" destination="mDO-xd-Bqn" id="x1P-b8-6Bp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -150,7 +159,4 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="LoginBackgroundImage" width="414" height="736"/>
-    </resources>
 </document>

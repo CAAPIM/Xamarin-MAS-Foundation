@@ -48,6 +48,7 @@ namespace MASFoundation
         TextPlain,
         WwwFormUrlEncoded,
         Xml,
+        FormData,
         Count
     }
 

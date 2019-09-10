@@ -43,8 +43,14 @@ namespace MASFoundation
     // typedef void (^MASUserResponseErrorBlock)(MASUser * _Nullable, NSError * _Nullable);
     delegate void MASUserResponseErrorBlock([NullAllowed] MASUser user, [NullAllowed] NSError error);
 
-    // typedef void (^MASAuthCredentialsBlock)(MASAuthCredentials * _Nullable, BOOL, MASCompletionErrorBlock _Nullable);
-    delegate void MASAuthCredentialsBlock([NullAllowed] MASAuthCredentials authCredentials, bool cancel, [BlockCallback, NullAllowed] MASCompletionErrorBlock completionBlock);
+	// typedef void (^MASFileRequestProgressBlock)(NSProgress * _Nullable);
+	delegate void MASFileRequestProgressBlock([NullAllowed] NSProgress arg0);
+
+	// typedef void (^MASMultiPartFormDataBlock)(id<MASMultiPartFormData> _Nonnull);
+	delegate void MASMultiPartFormDataBlock(MASMultiPartFormData arg0);
+
+	// typedef void (^MASAuthCredentialsBlock)(MASAuthCredentials * _Nullable, BOOL, MASCompletionErrorBlock _Nullable);
+	delegate void MASAuthCredentialsBlock([NullAllowed] MASAuthCredentials authCredentials, bool cancel, [BlockCallback, NullAllowed] MASCompletionErrorBlock completionBlock);
 
     // typedef void (^MASUserAuthCredentialsBlock)(MASAuthCredentialsBlock _Nonnull);
     delegate void MASUserAuthCredentialsBlock([BlockCallback] MASAuthCredentialsBlock authCredentialBlock);
@@ -1833,23 +1839,28 @@ namespace MASFoundation
         [Export("invoke:completion:")]
         void Invoke(MASRequest request, [NullAllowed] MASResponseObjectErrorBlock completion);
 
+		// +(void)postMultiPartForm:(MASRequest * _Nonnull)request constructingBodyWithBlock:(MASMultiPartFormDataBlock _Nonnull)formDataBlock progress:(MASFileRequestProgressBlock _Nullable)progressBlock completion:(MASResponseObjectErrorBlock _Nullable)completion;
+		[Static]
+		[Export("postMultiPartForm:constructingBodyWithBlock:progress:completion:")]
+		void PostMultiPartForm(MASRequest request, MASMultiPartFormDataBlock formDataBlock, [NullAllowed] MASFileRequestProgressBlock progressBlock, [NullAllowed] MASResponseObjectErrorBlock completion);
+
 		//// +(void)registerMultiFactorAuthenticator:(MASObject<MASMultiFactorAuthenticator> * _Nonnull)multiFactorAuthenticator;
-        //[Static]
-        //[Export("registerMultiFactorAuthenticator:")]
-        //void RegisterMultiFactorAuthenticator(MASMultiFactorAuthenticator multiFactorAuthenticator);
+		//[Static]
+		//[Export("registerMultiFactorAuthenticator:")]
+		//void RegisterMultiFactorAuthenticator(MASMultiFactorAuthenticator multiFactorAuthenticator);
 
-        //// +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
-        //[Static]
-        //[Export("signWithClaims:error:")]
-        //[return: NullAllowed]
-        //string SignWithClaims(MASClaims claims, [NullAllowed] out NSError error);
+		//// +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims error:(NSError * _Nullable * _Nullable)error;
+		//[Static]
+		//[Export("signWithClaims:error:")]
+		//[return: NullAllowed]
+		//string SignWithClaims(MASClaims claims, [NullAllowed] out NSError error);
 
-        //// +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims privateKey:(NSData * _Nonnull)privateKey error:(NSError * _Nullable * _Nullable)error;
-        //[Static]
-        //[Export("signWithClaims:privateKey:error:")]
-        //[return: NullAllowed]
-        //string SignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
-    }
+		//// +(NSString * _Nullable)signWithClaims:(MASClaims * _Nonnull)claims privateKey:(NSData * _Nonnull)privateKey error:(NSError * _Nullable * _Nullable)error;
+		//[Static]
+		//[Export("signWithClaims:privateKey:error:")]
+		//[return: NullAllowed]
+		//string SignWithClaims(MASClaims claims, NSData privateKey, [NullAllowed] out NSError error);
+	}
 
     // @interface MASApplication : MASObject
     [BaseType(typeof(MASObject))]
@@ -2068,7 +2079,25 @@ namespace MASFoundation
         MASAuthCredentialsPassword InitWithUsername(string username, string password);
     }
 
-	//// @protocol MASMultiFactorAuthenticator
+    // @protocol MASMultiPartFormData <NSObject>
+    [Protocol]
+    [BaseType(typeof(NSObject))]
+    interface MASMultiPartFormData
+    {
+        // @required -(BOOL)appendPartWithFileURL:(NSURL * _Nonnull)fileURL name:(NSString * _Nonnull)name error:(NSError * _Nullable * _Nullable)error;
+        [Export("appendPartWithFileURL:name:error:")]
+        bool appendPartWithFileURL(NSUrl fileURL, string name, [NullAllowed] out NSError error);
+
+        // @required -(BOOL)appendPartWithFileURL:(NSURL * _Nonnull)fileURL name:(NSString * _Nonnull)name fileName:(NSString * _Nonnull)fileName mimeType:(NSString * _Nonnull)mimeType error:(NSError * _Nullable * _Nullable)error;
+        [Export("appendPartWithFileURL:name:fileName:mimeType:error:")]
+        bool appendPartWithFileURL(NSUrl fileURL, string name, string fileName, string mimeType, [NullAllowed] out NSError error);
+
+        // @required -(BOOL)appendPartWithFileData:(NSData * _Nonnull)data name:(NSString * _Nonnull)name fileName:(NSString * _Nonnull)fileName mimeType:(NSString * _Nonnull)mimeType;
+        [Export("appendPartWithFileData:name:fileName:mimeType:")]
+        bool appendPartWithFileData(NSData data, string name, string fileName, string mimeType);
+    }
+
+    //// @protocol MASMultiFactorAuthenticator
     //[Protocol, Model]
     //interface MASMultiFactorAuthenticator
     //{
@@ -2084,7 +2113,7 @@ namespace MASFoundation
     //    void OnMultiFactorAuthenticationRequest(MASRequest request, NSObject response, MASMultiFactorHandler handler);
     //}
 
-	//// @interface MASMultiFactorHandler
+    //// @interface MASMultiFactorHandler
     //interface MASMultiFactorHandler
     //{
     //    // @property (nonatomic, strong) MASRequest * _Nonnull request;

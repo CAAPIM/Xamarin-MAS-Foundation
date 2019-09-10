@@ -48,6 +48,13 @@
     <Button
         android:layout_width="250.0dp"
         android:layout_height="wrap_content"
+        android:id="@+id/uploadFile"
+        android:text="Upload Multipart File"
+        android:backgroundTint="#ff000000"
+        android:textColor="#ffffffff" />
+    <Button
+        android:layout_width="250.0dp"
+        android:layout_height="wrap_content"
         android:id="@+id/logout"
         android:text="Logout"
         android:backgroundTint="#ff000000"
