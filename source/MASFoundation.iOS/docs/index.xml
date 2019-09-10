@@ -76,6 +76,7 @@
       <Type Name="MASResponseObjectErrorBlock" Kind="Delegate" />
       <Type Name="MASResponseObjectErrorResult" Kind="Class" />
       <Type Name="MASSecurityConfiguration" Kind="Class" />
+      <Type Name="MASSecuritySSLPinningMode" Kind="Enumeration" />
       <Type Name="MASSharedStorage" Kind="Class" />
       <Type Name="MASState" Kind="Enumeration" />
       <Type Name="MASUser" Kind="Class" />

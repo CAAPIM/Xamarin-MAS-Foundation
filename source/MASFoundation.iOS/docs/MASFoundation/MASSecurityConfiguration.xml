@@ -248,6 +248,32 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="PinningMode">
+      <MemberSignature Language="C#" Value="public virtual int PinningMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinningMode" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("pinningMode")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setPinningMode:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The Certifcates array needs to be set accordingly with the certificates that needs to be pinned. If MASSecuritySSLPinningModeIntermediateCertifcate is chosen, then the certificates array should contain intermediate certificate.
+        </summary>
+        <value>enum value that determines the SSL pinning mode.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="PublicKeyHashes">
       <MemberSignature Language="C#" Value="public virtual Foundation.NSArray PublicKeyHashes { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSArray PublicKeyHashes" />

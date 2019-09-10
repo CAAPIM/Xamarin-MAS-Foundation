@@ -290,30 +290,6 @@ namespace MASFoundation
         NSString MASGatewayMonitorStatusUpdateNotification { get; }
     }
 
-    //// @protocol MASProximityLoginDelegate <NSObject>
-    ////[Protocol, Model]
-    //[BaseType(typeof(NSObject))]
-    //[Model]
-    //interface MASProximityLoginDelegate
-    //{
-    //    // @required -(void)handleBLEProximityLoginUserConsent:(MASCompletionErrorBlock _Nullable)completion deviceName:(NSString * _Nonnull)deviceName;
-    //    [Abstract]
-    //    [Export("handleBLEProximityLoginUserConsent:deviceName:")]
-    //    void HandleBLEProximityLoginUserConsent([NullAllowed] MASCompletionErrorBlock completion, string deviceName);
-
-    //    // @optional -(void)didReceiveAuthorizationCode:(NSString * _Nonnull)authorizationCode;
-    //    [Export("didReceiveAuthorizationCode:")]
-    //    void DidReceiveAuthorizationCode(string authorizationCode);
-
-    //    // @optional -(void)didReceiveBLEProximityLoginStateUpdate:(MASBLEServiceState)state;
-    //    [Export("didReceiveBLEProximityLoginStateUpdate:")]
-    //    void DidReceiveBLEProximityLoginStateUpdate(MASBLEServiceState state);
-
-    //    // @optional -(void)didReceiveProximityLoginError:(NSError * _Nonnull)error;
-    //    [Export("didReceiveProximityLoginError:")]
-    //    void DidReceiveProximityLoginError(NSError error);
-    //}
-
     //// @interface MASService : NSObject
     //[BaseType(typeof(NSObject))]
     //interface MASService
@@ -405,6 +381,10 @@ namespace MASFoundation
         // @property (assign) BOOL trustPublicPKI;
         [Export("trustPublicPKI")]
         bool TrustPublicPKI { get; set; }
+
+        // @property (assign) int pinningMode;
+        [Export("pinningMode")]
+        int PinningMode { get; set; }
 
         // @property (nonatomic, strong) NSArray * _Nullable certificates;
         [NullAllowed, Export("certificates", ArgumentSemantic.Strong)]
@@ -686,6 +666,10 @@ namespace MASFoundation
     //    // @property (readonly, copy, nonatomic) NSString * _Nullable idp;
     //    [NullAllowed, Export("idp")]
     //    string Idp { get; }
+
+    //    // @property (nonatomic, copy, readonly, nullable) NSString *PKCEstate;
+    //    [NullAllowed, Export("pkcEstate")]
+    //    string PKCEstate { get; }
 
     //    // +(MASAuthenticationProviders * _Nullable)currentProviders;
     //    [Static]
@@ -1023,12 +1007,6 @@ namespace MASFoundation
         [Export("isBeingAuthorized")]
         bool IsBeingAuthorized { get; set; }
 
-        //// +(id<MASProximityLoginDelegate> _Nullable)proximityLoginDelegate;
-        //// +(void)setProximityLoginDelegate:(id<MASProximityLoginDelegate> _Nonnull)delegate;
-        //[Static]
-        //[NullAllowed, Export("proximityLoginDelegate")]
-        //MASProximityLoginDelegate ProximityLoginDelegate { get; set; }
-
         // +(MASDevice * _Nullable)currentDevice;
         [Static]
         [Export("currentDevice")]
@@ -1044,26 +1022,6 @@ namespace MASFoundation
         // -(void)resetLocally;
         [Export("resetLocally")]
         void ResetLocally();
-
-        //// -(void)startAsBluetoothPeripheral;
-        //[Export("startAsBluetoothPeripheral")]
-        //void StartAsBluetoothPeripheral();
-
-        //// -(void)stopAsBluetoothPeripheral;
-        //[Export("stopAsBluetoothPeripheral")]
-        //void StopAsBluetoothPeripheral();
-
-        //// -(void)startAsBluetoothCentral;
-        //[Export("startAsBluetoothCentral")]
-        //void StartAsBluetoothCentral();
-
-        //// -(void)startAsBluetoothCentralWithAuthenticationProvider:(MASAuthenticationProvider * _Nonnull)provider;
-        //[Export("startAsBluetoothCentralWithAuthenticationProvider:")]
-        //void StartAsBluetoothCentralWithAuthenticationProvider(MASAuthenticationProvider provider);
-
-        //// -(void)stopAsBluetoothCentral;
-        //[Export("stopAsBluetoothCentral")]
-        //void StopAsBluetoothCentral();
 
         // -(void)addAttribute:(NSString)name value:(NSString)value completion:(MASObjectResponseErrorBlock _Nullable)completion;
         [Async]
@@ -1190,67 +1148,6 @@ namespace MASFoundation
     //    MASGroup Group { get; }
     //}
 
-    //// @interface MASProximityLogin : MASObject
-    //[BaseType(typeof(MASObject))]
-    //interface MASProximityLogin
-    //{
-    //}
-
-    //// @interface MASProximityLoginQRCode : MASProximityLogin
-    //[BaseType(typeof(MASProximityLogin))]
-    //interface MASProximityLoginQRCode
-    //{
-    //    // @property (readonly, assign, nonatomic) NSNumber * _Nonnull pollingInterval;
-    //    [Export("pollingInterval", ArgumentSemantic.Assign)]
-    //    NSNumber PollingInterval { get; }
-
-    //    // @property (readonly, assign, nonatomic) NSNumber * _Nonnull pollingDelay;
-    //    [Export("pollingDelay", ArgumentSemantic.Assign)]
-    //    NSNumber PollingDelay { get; }
-
-    //    // @property (readonly, assign, nonatomic) NSNumber * _Nonnull pollingLimit;
-    //    [Export("pollingLimit", ArgumentSemantic.Assign)]
-    //    NSNumber PollingLimit { get; }
-
-    //    // @property (readonly, assign, nonatomic) int currentPollingCounter;
-    //    [Export("currentPollingCounter")]
-    //    int CurrentPollingCounter { get; }
-
-    //    // @property (readonly, assign, nonatomic) BOOL isPolling;
-    //    [Export("isPolling")]
-    //    bool IsPolling { get; }
-
-    //    // @property (readonly, copy, nonatomic) NSString * _Nonnull authenticationUrl;
-    //    [Export("authenticationUrl")]
-    //    string AuthenticationUrl { get; }
-
-    //    // @property (readonly, copy, nonatomic) NSString * _Nonnull pollUrl;
-    //    [Export("pollUrl")]
-    //    string PollUrl { get; }
-
-    //    // -(instancetype _Nullable)initWithAuthenticationProvider:(MASAuthenticationProvider * _Nonnull)provider initialDelay:(NSNumber * _Nonnull)initDelay pollingInterval:(NSNumber * _Nonnull)pollingInterval pollingLimit:(NSNumber * _Nonnull)pollingLimit;
-    //    [Export("initWithAuthenticationProvider:initialDelay:pollingInterval:pollingLimit:")]
-    //    IntPtr Constructor(MASAuthenticationProvider provider, NSNumber initDelay, NSNumber pollingInterval, NSNumber pollingLimit);
-
-    //    // -(instancetype _Nullable)initWithAuthenticationProvider:(MASAuthenticationProvider * _Nonnull)provider;
-    //    [Export("initWithAuthenticationProvider:")]
-    //    IntPtr Constructor(MASAuthenticationProvider provider);
-
-    //    // -(UIImage * _Nullable)startDisplayingQRCodeImageForProximityLogin;
-    //    [NullAllowed, Export("startDisplayingQRCodeImageForProximityLogin")]
-    //    //[Verify(MethodToProperty)]
-    //    //UIImage StartDisplayingQRCodeImageForProximityLogin { get; }
-    //    UIImage StartDisplayingQRCodeImageForProximityLogin();
-
-    //    // -(void)stopDisplayingQRCodeImageForProximityLogin;
-    //    [Export("stopDisplayingQRCodeImageForProximityLogin")]
-    //    void StopDisplayingQRCodeImageForProximityLogin();
-
-    //    // +(void)authorizeAuthenticateUrl:(NSString * _Nonnull)authenticateUrl completion:(MASCompletionErrorBlock _Nullable)completion;
-    //    [Static]
-    //    [Export("authorizeAuthenticateUrl:completion:")]
-    //    void AuthorizeAuthenticateUrl(string authenticateUrl, [NullAllowed] MASCompletionErrorBlock completion);
-    //}
 
     // @interface MASSharedStorage : MASObject
     [BaseType(typeof(MASObject))]
