@@ -300,6 +300,7 @@ namespace BasicAuthSample
         {
             if (IsMASStarted())
             {
+                progressDialog = new ProgressDialog(activity);
                 try
                 {
                     MASFileObject filePart = new MASFileObject();
@@ -323,7 +324,7 @@ namespace BasicAuthSample
                     //filePart.FilePath = fileData.FilePath;
 
                     multiPart.AddFilePart(filePart);
-                    progressDialog= new ProgressDialog(activity);
+                    
                     progressDialog.SetProgressStyle(ProgressDialogStyle.Spinner);
                     progressDialog.SetMessage("0%");
                     progressDialog.Show();
@@ -340,6 +341,7 @@ namespace BasicAuthSample
                 catch (Java.Lang.Throwable exception)
                 {
                     activity.Alert("MAS", exception.LocalizedMessage);
+                    progressDialog.Cancel();
                 }
             }
             else
