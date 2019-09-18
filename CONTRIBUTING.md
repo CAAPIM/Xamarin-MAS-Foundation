@@ -27,7 +27,7 @@ Complete your CLA here: <https://www.clahub.com/agreements/CAAPIM/Xamarin-MAS-Fo
 
 ## Bugs
 We work hard to avoid them, but they still happen. If you're a Broadcom customer, open an issue in our [Support Page][casupport], otherwise use GitHub issues.
-To share ideas or ask product-related questions go to [CA Communities][community].
+To share ideas or ask product-related questions go to [Broadcom Communities][community].
 
 ### Known Issues
 We also use GitHub issues for updates to known issues, including alerts when fixes are in progress. 

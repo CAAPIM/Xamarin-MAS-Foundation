@@ -22,6 +22,7 @@ For more documentation and API references, go to our [main website][documentatio
 
 ## License
 Copyright (c) 2019 Broadcom. All rights reserved.
+The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.
 
 This software may be modified and distributed under the terms
 of the MIT license. See the [LICENSE][license-link] file for details.
