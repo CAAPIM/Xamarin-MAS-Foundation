@@ -158,6 +158,7 @@ namespace MASFoundation
         SharedStorageNotNilKey = 180001,
 		MultiFactorAuthenticationCancelled = 180002,
         MultiFactorAuthenticationInvalidRequest = 180003,
+        InvalidRequestForFileUpload = 180100,
         Count = -999999
     }
 
