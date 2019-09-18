@@ -1,4 +1,4 @@
-# CA Technologies C# Style Guide
+# Broadcom C# Style Guide
 
 This document describes the C# coding style of Mobile SDK for Xamarin team. This guideline is recommended to comply with all C# implementations of our products.
 
@@ -640,7 +640,7 @@ The following copyright statement should be included at the top of every source 
 
 ```c#
 //
-//  Copyright (c) 2018 CA. All rights reserved.
+//  Copyright (c) 2019 Broadcom. All rights reserved.
 //
 //  This software may be modified and distributed under the terms
 //  of the MIT license. See the LICENSE file for details.
