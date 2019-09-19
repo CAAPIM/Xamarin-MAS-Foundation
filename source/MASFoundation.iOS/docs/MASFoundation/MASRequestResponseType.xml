@@ -15,13 +15,24 @@
   <Members>
     <Member MemberName="Count">
       <MemberSignature Language="C#" Value="Count" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASRequestResponseType Count = int32(5)" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASRequestResponseType Count = int32(6)" />
       <MemberType>Field</MemberType>
       <ReturnValue>
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>The total number of supported types.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FormData">
+      <MemberSignature Language="C#" Value="FormData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASRequestResponseType FormData = int32(5)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Multi-part form data</summary>
       </Docs>
     </Member>
     <Member MemberName="Json">
@@ -32,7 +43,7 @@
         <ReturnType>MASFoundation.MASRequestResponseType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>application/json contnent type.</summary>
+        <summary>application/json content type.</summary>
       </Docs>
     </Member>
     <Member MemberName="ScimJson">
