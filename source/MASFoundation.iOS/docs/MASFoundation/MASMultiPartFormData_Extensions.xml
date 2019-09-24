@@ -1,0 +1,107 @@
+<Type Name="MASMultiPartFormData_Extensions" FullName="MASFoundation.MASMultiPartFormData_Extensions">
+  <TypeSignature Language="C#" Value="public static class MASMultiPartFormData_Extensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit MASMultiPartFormData_Extensions extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>MASFoundation.iOS</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Multipart form data extention</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="appendPartWithFileData">
+      <MemberSignature Language="C#" Value="public static bool appendPartWithFileData (this MASFoundation.IMASMultiPartFormData This, Foundation.NSData data, string name, string fileName, string mimeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool appendPartWithFileData(class MASFoundation.IMASMultiPartFormData This, class Foundation.NSData data, string name, string fileName, string mimeType) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="This" Type="MASFoundation.IMASMultiPartFormData" RefType="this" />
+        <Parameter Name="data" Type="Foundation.NSData" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="mimeType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="This">This instance of the interface</param>
+        <param name="data">The data to be encoded and appended to the form data.</param>
+        <param name="name">The name to be associated with the specified data. This parameter must not be `nil`.</param>
+        <param name="fileName">The filename to be associated with the specified data. This parameter must not be `nil`.</param>
+        <param name="mimeType">The MIME type of the specified data. (For example, the MIME type for a JPEG image is image/jpeg.) For a list of valid MIME types, see http://www.iana.org/assignments/media-types/. This parameter must not be `nil`.</param>
+        <summary>Appends the HTTP header `Content-Disposition: file; data=#{data};filename=#{filename}; name=#{name}"` and `Content-Type: #{mimeType}`, followed by the encoded file data and the multipart form boundary.</summary>
+        <returns>return `YES` if the file data was successfully appended otherwise `NO`.</returns>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="appendPartWithFileURL">
+      <MemberSignature Language="C#" Value="public static bool appendPartWithFileURL (this MASFoundation.IMASMultiPartFormData This, Foundation.NSUrl fileURL, string name, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool appendPartWithFileURL(class MASFoundation.IMASMultiPartFormData This, class Foundation.NSUrl fileURL, string name, class Foundation.NSError error) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="This" Type="MASFoundation.IMASMultiPartFormData" RefType="this" />
+        <Parameter Name="fileURL" Type="Foundation.NSUrl" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="This">This instance of the interface</param>
+        <param name="fileURL">The URL corresponding to the file whose content will be appended to the form. This parameter must not be `nil`.</param>
+        <param name="name">The name to be associated with the specified data. This parameter must not be `nil`.</param>
+        <param name="error">If an error occurs, upon return contains an `NSError` object that describes the problem.</param>
+        <summary>Appends the HTTP header `Content-Disposition: file; filename=#{generated filename}; name=#{name}"` and `Content-Type: #{generated mimeType}`, followed by the encoded file data and the multipart form boundary.</summary>
+        <returns>return `YES` if the file data was successfully appended otherwise `NO`.</returns>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="appendPartWithFileURL">
+      <MemberSignature Language="C#" Value="public static bool appendPartWithFileURL (this MASFoundation.IMASMultiPartFormData This, Foundation.NSUrl fileURL, string name, string fileName, string mimeType, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool appendPartWithFileURL(class MASFoundation.IMASMultiPartFormData This, class Foundation.NSUrl fileURL, string name, string fileName, string mimeType, class Foundation.NSError error) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="This" Type="MASFoundation.IMASMultiPartFormData" RefType="this" />
+        <Parameter Name="fileURL" Type="Foundation.NSUrl" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="mimeType" Type="System.String" />
+        <Parameter Name="error" Type="Foundation.NSError&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="This">This instance of the interface.</param>
+        <param name="fileURL">The URL corresponding to the file whose content will be appended to the form. This parameter must not be `nil`.</param>
+        <param name="name">The name to be associated with the specified data. This parameter must not be `nil`.</param>
+        <param name="fileName">The file name to be used in the `Content-Disposition` header. This parameter must not be `nil`.</param>
+        <param name="mimeType">The declared MIME type of the file data. This parameter must not be `nil`.</param>
+        <param name="error">If an error occurs, upon return contains an `NSError` object that describes the problem.</param>
+        <summary>Appends the HTTP header `Content-Disposition: file; filename=#{filename}; name=#{name}"` and `Content-Type: #{mimeType}`, followed by the encoded file data and the multipart form boundary.</summary>
+        <returns>return `YES` if the file data was successfully appended otherwise `NO`.</returns>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

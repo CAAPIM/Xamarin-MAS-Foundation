@@ -497,6 +497,17 @@
         <summary>Invalid OTP provided.</summary>
       </Docs>
     </Member>
+    <Member MemberName="InvalidRequestForFileUpload">
+      <MemberSignature Language="C#" Value="InvalidRequestForFileUpload" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode InvalidRequestForFileUpload = int32(180100)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>MASFoundation.MASFoundationErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Invalid Request for File Upload</summary>
+      </Docs>
+    </Member>
     <Member MemberName="InvalidUserLoginBlock">
       <MemberSignature Language="C#" Value="InvalidUserLoginBlock" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype MASFoundation.MASFoundationErrorCode InvalidUserLoginBlock = int32(100003)" />

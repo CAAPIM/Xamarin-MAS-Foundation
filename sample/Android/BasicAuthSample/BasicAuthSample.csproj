@@ -35,12 +35,16 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi-v7a;arm64-v8a;x86_64;x86</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="MASFoundation.Android">
+      <HintPath>packages\MASFoundation.Xamarin.2.0.0\lib\monoandroid\MASFoundation.Android.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Android.Support.Annotations">
       <HintPath>packages\Xamarin.Android.Support.Annotations.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Annotations.dll</HintPath>
     </Reference>
@@ -75,9 +79,6 @@
       <HintPath>packages\Xamarin.Plugin.FilePicker.2.1.18\lib\monoandroid81\Plugin.FilePicker.dll</HintPath>
     </Reference>
     <Reference Include="Java.Interop" />
-    <Reference Include="MASFoundation.Android">
-      <HintPath>..\..\..\source\MASFoundation.Android\bin\Debug\MASFoundation.Android.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
