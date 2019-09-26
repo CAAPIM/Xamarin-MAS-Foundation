@@ -8,7 +8,7 @@ Beyond the guidelines defined in this document, we also recommend reviewing the 
 
 ### Mobile SDK
 
-For more information, see [developer website](http://mas.ca.com).
+For more information, see [developer website](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/ca-enterprise-software/layer7-api-management/mobile-sdk-for-ca-mobile-api-gateway/2-0.html).
 
 The Mobile SDK for Xamarin consists of multiple functional products separated into individual frameworks.
 
