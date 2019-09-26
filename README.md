@@ -28,14 +28,9 @@ This software may be modified and distributed under the terms
 of the MIT license. See the [LICENSE][license-link] file for details.
 
 [mag]: https://docops.ca.com/mag
-[mas.ca.com]: http://mas.ca.com/
-[docs]: http://mas.ca.com/docs/
-[blog]: http://mas.ca.com/blog/
-[get-started]: http://mas.ca.com/get-started
 [StackOverflow]: http://stackoverflow.com/questions/tagged/massdk
 [issues]: https://github.com/CAAPIM/Xamarin-MAS-Foundation/issues
 [releases]: ../../releases
 [contributing]: /CONTRIBUTING.md
 [license-link]: /LICENSE
-[video]: https://www.ca.com/us/developers/mas/videos.html
-[documentation]: https://www.ca.com/us/developers/mas/docs.html
+[documentation]: http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/ca-enterprise-software/layer7-api-management/mobile-sdk-for-ca-mobile-api-gateway/2-0.html
