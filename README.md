@@ -5,6 +5,8 @@ MASFoundation is the core Xamarin service to handle user authentication, device 
 * **Authentication** - Implement authentication with username/password, Facebook, Google, Twitter sign-in.
 * **Single Sign-On** - Share user credentials between your apps.
 * **Fingerprint Sessions Lock** - Support phone unlocking using fingerprint recognition.
+* **Multipart Form Upload** - Ability to upload Files using Multipart Form.
+
 
 ## Get Started
 * Check out our [documentation][documentation] for sample code, video tutorials, and more.  
