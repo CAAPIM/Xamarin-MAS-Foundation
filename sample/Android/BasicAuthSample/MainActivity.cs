@@ -28,6 +28,7 @@ namespace BasicAuthSample
             Button startSDKButton = FindViewById<Button>(Resource.Id.startSDK);
             Button loginButton = FindViewById<Button>(Resource.Id.login);
             Button invokeApiButton = FindViewById<Button>(Resource.Id.invokeApi);
+            Button uploadFile = FindViewById<Button>(Resource.Id.uploadFile);
             Button logoutButton = FindViewById<Button>(Resource.Id.logout);
             Button lockSessionButton = FindViewById<Button>(Resource.Id.lockSession);
             Button unlockSessionButton = FindViewById<Button>(Resource.Id.unlockSession);
@@ -71,6 +72,14 @@ namespace BasicAuthSample
             invokeApiButton.Click += async (sender, e) =>
             {
 				await SampleActions.InvokeApiAsync(this);
+            };
+
+            //
+            // Upload multi-part form data
+            //
+            uploadFile.Click += async (sender, e) =>
+            {
+                await SampleActions.PostMultiPartFormAsync(this);
             };
 
             //

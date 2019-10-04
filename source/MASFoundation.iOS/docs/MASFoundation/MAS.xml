@@ -1383,6 +1383,69 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="PostMultiPartForm">
+      <MemberSignature Language="C#" Value="public static void PostMultiPartForm (MASFoundation.MASRequest request, MASFoundation.MASMultiPartFormDataBlock formDataBlock, MASFoundation.MASFileRequestProgressBlock progressBlock, MASFoundation.MASResponseObjectErrorBlock completion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PostMultiPartForm(class MASFoundation.MASRequest request, class MASFoundation.MASMultiPartFormDataBlock formDataBlock, class MASFoundation.MASFileRequestProgressBlock progressBlock, class MASFoundation.MASResponseObjectErrorBlock completion) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("postMultiPartForm:constructingBodyWithBlock:progress:completion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="MASFoundation.MASRequest" />
+        <Parameter Name="formDataBlock" Type="MASFoundation.MASMultiPartFormDataBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASMultiPartFormDataBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="progressBlock" Type="MASFoundation.MASFileRequestProgressBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASFileRequestProgressBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="completion" Type="MASFoundation.MASResponseObjectErrorBlock">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDMASResponseObjectErrorBlock))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="request">MASRequest An object containing all parameters to call the endpoint</param>
+        <param name="formDataBlock">This is a block that gets called while constructing the body of the multi-part form request. Typically files can be added to the body by calling various APIs available in MASMultiPartFormData</param>
+        <param name="progressBlock">Block which gives back the NSProgress of the task that is going on. Different values can be read from the progress object to present a meaningful progress updates in the UI. Recommend to use progress.fractioncompleted for progress bar updates.</param>
+        <param name="completion">An MASResponseObjectErrorBlock (NSHTTPURLResponse *response, id responseObject, NSError *error) that will receive the NSHTTPURLResponse object, response object which needs to perform type casting based on the object type, and NSError object when error occurs.</param>
+        <summary>
+            Post a multi-part form with the parameters defined in the MASRequest object
+            <para>
+            If endPointPath is full URL format(including port number and http protocol), the SDK will validate the server from the client side through SSL pinning(authentication challenge) with
+            provided subjectKeyHash(also known as public key hash) in configuration in mag.mobile_sdk.trusted_cert_pinned_public_key_hashes and mag.mobile_sdk.enable_public_key_pinning.
+            </para><para>
+            ALL of servers' public key hashes in certificate chain must be defined in the list.  This means when it is configured to use public key hash pinning for SSL pinning,
+            subjectKeyHash(public key hash) of the gateway must be also present within the list.The list can contain multiple hash values in array for multiple servers.
+            </para><para>
+            When the SDK fails to validate SSL with certificate or subjectKeyHash pinning for communication to HTTPs, the SDK will cancel the request.
+            </para><para>
+            If endPointPath is full URL format, upon successful SSL pinning validation, SDK will also validate the user session against primary gateway regardless the request is being made to the primary gateway or not.  To ensure bypass the user session validation for public API, use [MAS deleteFrom:withParameters:requestType:responseType:isPublic:completion:] method with isPublic being YES.
+            </para><para>
+            The API appends the file data and any other parameters to the body and follows the standards defined for Content-Type = multipart/form-data
+            </para>
+        </summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
     <Member MemberName="PostTo">
       <MemberSignature Language="C#" Value="public static void PostTo (string endPointPath, Foundation.NSDictionary parameterInfo, Foundation.NSDictionary headerInfo, MASFoundation.MASResponseInfoErrorBlock completion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PostTo(string endPointPath, class Foundation.NSDictionary parameterInfo, class Foundation.NSDictionary headerInfo, class MASFoundation.MASResponseInfoErrorBlock completion) cil managed" />
