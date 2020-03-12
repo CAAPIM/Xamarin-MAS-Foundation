@@ -99,6 +99,10 @@ typedef NS_ENUM(NSInteger, MASFoundationErrorCode)
     MASFoundationErrorCodeResponseSerializationFailedToParseResponse = 100407,
     MASFoundationErrorCodeNetworkSSLAuthenticationChallengeFailure = 100408,
     
+    //
+    //  Network Configuration
+    //
+    MASFoundationErrorCodeConfigurationInvalidHostForNetworkConfiguration = 100501,
     
     //
     // Application
@@ -203,6 +207,21 @@ typedef NS_ENUM(NSInteger, MASFoundationErrorCode)
     // File Request Errors
     //
     MASFoundationErrorCodeInvalidRequestForFileUpload = 180100,
+    
+    //
+    // Data Task Cancelled
+    //
+    MASFoundationErrorCodeTaskCancelled = 180102,
+    
+    //
+    // Data task not found
+    //
+    MASFoundationErrorCodeDataTaskNotFound = 180103,
+    
+    //
+    // Data task not cancellable
+    //
+    MASFoundationErrorCodeDataTaskNotCancellable = 180104,
     
     MASFoundationErrorCodeCount = -999999
 };

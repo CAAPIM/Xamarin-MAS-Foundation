@@ -24,6 +24,7 @@ FOUNDATION_EXPORT const unsigned char MASFoundationVersionString[];
 #import <MASFoundation/MAS.h>
 #import <MASFoundation/MASConstants.h>
 #import <MASFoundation/MASService.h>
+#import <MASFoundation/MASNetworkConfiguration.h>
 #import <MASFoundation/MASSecurityConfiguration.h>
 #import <MASFoundation/MASError.h>
 #import <MASFoundation/MASNotifications.h>
@@ -52,6 +53,7 @@ FOUNDATION_EXPORT const unsigned char MASFoundationVersionString[];
 #import <MASFoundation/MASRequest.h>
 #import <MASFoundation/MASSharedStorage.h>
 #import <MASFoundation/MASUser.h>
+#import <MASFoundation/MASDataTask.h>
 
 //
 //  AuthCredentials Models
