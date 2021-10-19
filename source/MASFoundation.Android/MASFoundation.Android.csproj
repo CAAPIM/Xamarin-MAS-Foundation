@@ -60,6 +60,7 @@
     <Compile Include="Additions\MASUser.cs" />
     <Compile Include="Additions\MASDevice.cs" />
     <Compile Include="Additions\MASCompletion.cs" />
+    <Compile Include="Additions\LocalStoreDataSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />

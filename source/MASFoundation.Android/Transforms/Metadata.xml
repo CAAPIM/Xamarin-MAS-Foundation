@@ -38,9 +38,13 @@
     <remove-node path="/api/package[@name='com.ca.mas.core.client']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.clientcredentials']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.conf']" />
-    <remove-node path="/api/package[@name='com.ca.mas.core.context']" />
-    <remove-node path="/api/package[@name='com.ca.mas.core.datasource']" />
+    <remove-node path="/api/package[@name='com.ca.mas.core.context']" />    
     <remove-node path="/api/package[@name='com.ca.mas.core.ent']" />
+
+    <!-- Required by TokenManager method definition -->
+    <!--
+    <remove-node path="/api/package[@name='com.ca.mas.core.datasource']" />
+    -->
 
     <!-- Exception to MAS Foundation is required -->
     <!--
@@ -52,7 +56,10 @@
     <remove-node path="/api/package[@name='com.ca.mas.core.io.ssl']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.io.http']" />
 
+    <!-- PKCE for browser based login -->
+    <!--
     <remove-node path="/api/package[@name='com.ca.mas.core.oauth']/class[@name='CodeVerifierCache']" />
+    -->
     <remove-node path="/api/package[@name='com.ca.mas.core.oauth']/class[@name='OAuthClient']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.oauth']/class[@name='OAuthClientUtil']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.oauth']/class[@name='OAuthTokenClient']" />
@@ -83,8 +90,12 @@
     <!--
     <remove-node path="/api/package[@name='com.ca.mas.core.storage.sharedstorage']" />
     -->
+
+    <!-- Required packages for StorageProvider & TokenManager -->
+    <!--
     <remove-node path="/api/package[@name='com.ca.mas.core.store']" />
     <remove-node path="/api/package[@name='com.ca.mas.core.token']" />
+    -->
     <remove-node path="/api/package[@name='com.ca.mas.core.util']" />
 
     
@@ -116,11 +127,15 @@
     <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/class[@name='MASProximityLoginQRCode']" />
     <remove-node path="/api/package[@name='com.ca.mas.foundation.auth']/class[@name='MASWebApplication']" />
 
-    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='sign' and count(parameter)=1 and parameter[1][@type='com.ca.mas.foundation.MASClaims']]" />
-    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='sign' and count(parameter)=2 and parameter[1][@type='com.ca.mas.foundation.MASClaims'] and parameter[2][@type='java.security.PrivateKey']]" />
+    <!-- Required for enabling browser based login flags -->
+    <!--
     <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='enableBrowserBasedAuthentication' and count(parameter)=0]" />
-    <remove-node  path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='enablePKCE' and count(parameter)=1 and parameter[1][@type='boolean']]" />
     <remove-node  path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='isBrowserBasedAuthenticationEnabled' and count(parameter)=0]"/>
+    -->
+
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='sign' and count(parameter)=1 and parameter[1][@type='com.ca.mas.foundation.MASClaims']]" />
+    <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='sign' and count(parameter)=2 and parameter[1][@type='com.ca.mas.foundation.MASClaims'] and parameter[2][@type='java.security.PrivateKey']]" />    
+    <remove-node  path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='enablePKCE' and count(parameter)=1 and parameter[1][@type='boolean']]" />    
     <remove-node path="/api/package[@name='com.ca.mas.foundation']/class[@name='MAS']/method[@name='isPKCEEnabled' and count(parameter)=0]" />
 
     <remove-node path="/api/package[@name='com.ca.mas.foundation']/interface[@name='MASClaims']" />
